@@ -3,7 +3,7 @@
 ## 注意事项
 
 - 默认登录用户`ubuntukylin`的用户密码是`ubuntukylin`
-- `root`用户密码可在登录后通过`passwd`自行设置
+- `root`用户密码可在登录后通过`sudo passwd`自行设置
 
 ## 使用Qemu安装ubuntukylin RISC-V 20.04 
 
