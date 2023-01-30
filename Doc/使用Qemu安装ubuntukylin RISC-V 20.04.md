@@ -178,7 +178,7 @@ remote-viewer spice://localhost:12057   #使用spice连接虚拟机
 #### ssh连接
 在虚拟机中`vi /etc/ssh/sshd_config`
 
-修改sshd_config ，找到#PermitRootLogin一行将后面那个改为yes并取消注释,即PermitRootLogin yes 然后重启sshd
+修改sshd_config ，找到#PermitRootLogin一行将后面那个改为yes并取消注释，PermitRootLogin yes 然后重启sshd
 
 `systemctl restart sshd`
 
