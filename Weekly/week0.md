@@ -1,4 +1,4 @@
-# Week0
+# Week0 (2023.1.13-2023.1.18)
 ## 本周工作
 这周的工作主要是熟悉Riscv架构的openEuler以及对[该仓库](https://gitee.com/yunxiangluo/openeuler-riscv-2203-v2-test/tree/master)Manual_Testing下软件进行缺陷样例的测试，并提交相关issue至https://gitee.com/openeuler/RISC-V/issues
 
