@@ -182,4 +182,4 @@ remote-viewer spice://localhost:12057   #使用spice连接虚拟机
 
 `systemctl restart sshd`
 
-在宿主机中直接执行`ssh -p 12055 ubuntu@127.0.0.1`即可连接
+在宿主机中直接执行`ssh -p 12055 ubuntukylin@127.0.0.1`即可连接
