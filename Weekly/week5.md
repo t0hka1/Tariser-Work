@@ -110,3 +110,6 @@
     oe_test_target_emergency
     oe_test_target_first-boot-complete
     ```
+## 下周工作
+- 协助完成autopkgtest的测试（分担部分测试包）
+- 完成cli-test套的测试和初步的结果整理
