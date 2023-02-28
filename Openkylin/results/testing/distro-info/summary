@@ -1,0 +1,9 @@
+test-debian-distro-info FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+test-ubuntu-distro-info FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+python3-unittest     FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.

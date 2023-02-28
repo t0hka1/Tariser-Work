@@ -1,0 +1,9 @@
+Module actions already disabled
+Module cgi already disabled
+Module proxy_fcgi already disabled
+Considering dependency mpm_prefork for php8.1:
+Considering conflict mpm_event for mpm_prefork:
+Considering conflict mpm_worker for mpm_prefork:
+Module mpm_prefork already enabled
+Considering conflict php5 for php8.1:
+Module php8.1 already enabled

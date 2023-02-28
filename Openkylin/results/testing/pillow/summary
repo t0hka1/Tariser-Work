@@ -1,0 +1,4 @@
+selftest-py3         FAIL badpkg
+blame: ./src/pillow_7.0.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-pil.imagetk-dbg 相匹配的软件包
+ (exit code 1)

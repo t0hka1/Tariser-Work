@@ -1,0 +1,4 @@
+check-service        FAIL badpkg
+blame: ./src/gpsd_3.22-4.1ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 gpsd 相匹配的软件包
+ (exit code 1)

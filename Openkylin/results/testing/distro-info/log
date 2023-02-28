@@ -1,0 +1,490 @@
+autopkgtest: DBG: testbed init
+autopkgtest [11:49:04]: starting date: 2023-02-28
+autopkgtest [11:49:04]: version 5.20ubuntu1
+autopkgtest [11:49:04]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/distro-info_0.23-ok1.dsc -o ./testing/distro-info -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.acoqyf4c/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.acoqyf4c/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.acoqyf4c/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.acoqyf4c/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.acoqyf4c/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.acoqyf4c/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.acoqyf4c/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.acoqyf4c/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.acoqyf4c/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'5b95dcaa-fcf2-4902-856d-8c69278a73cd[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.acoqyf4c/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.acoqyf4c/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.acoqyf4c/runcmd chmod 1777 /tmp/autopkgtest.T4UAyG
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.T4UAyG
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.acoqyf4c/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [11:50:14]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.T4UAyG/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.T4UAyG/testbed-packages ./testing/distro-info/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.T4UAyG/testbed-packages ./testing/distro-info/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.T4UAyG/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/distro-info/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cat </tmp/autopkgtest.T4UAyG/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [11:50:22]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [11:50:24]: @@@@@@@@@@@@@@@@@@@@ source ./src/distro-info_0.23-ok1.dsc
+autopkgtest: DBG: blame += ./src/distro-info_0.23-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T4UAyG'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/distro-info_0.23-ok1.dsc /tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/distro-info_0.23-ok1.dsc /tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/distro-info_0.23-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cat >/tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T4UAyG'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/distro-info_0.23.orig.tar.gz /tmp/autopkgtest.T4UAyG/distro-info_0.23.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/distro-info_0.23.orig.tar.gz /tmp/autopkgtest.T4UAyG/distro-info_0.23.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T4UAyG/distro-info_0.23.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/distro-info_0.23.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cat >/tmp/autopkgtest.T4UAyG/distro-info_0.23.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T4UAyG/distro-info_0.23.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T4UAyG'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/distro-info_0.23-ok1.debian.tar.xz /tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/distro-info_0.23-ok1.debian.tar.xz /tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/distro-info_0.23-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cat >/tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.T4UAyG/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.T4UAyG/build.XXX
++ builddir=/tmp/autopkgtest.T4UAyG/build.mxr
++ cd /tmp/autopkgtest.T4UAyG/build.mxr
++ dpkg-source -x /tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.HzHW8H83/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年05月16日 星期一 09时24分03秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.T4UAyG/distro-info_0.23-ok1.dsc
+dpkg-source: info: extracting distro-info in src
+dpkg-source: info: unpacking distro-info_0.23.orig.tar.gz
+dpkg-source: info: unpacking distro-info_0.23-ok1.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [11:50:39]: testing package distro-info version 0.23-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.T4UAyG/build.mxr/src/debian/ ./testing/distro-info/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.T4UAyG/build.mxr/src/debian/ ./testing/distro-info/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.T4UAyG/build.mxr/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/distro-info/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cd /tmp/autopkgtest.T4UAyG/build.mxr/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/distro-info/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency distro-info
+autopkgtest: DBG: marked alternatives ['distro-info'] as a synthesised dependency
+autopkgtest: DBG: processing dependency shunit2 (>= 2.1.6)
+autopkgtest: DBG: Test defined: name test-debian-distro-info path None command "COMMAND=/usr/bin/debian-distro-info ./test-debian-distro-info" restrictions [] features ['test-name=test-debian-distro-info'] depends ['distro-info', 'shunit2 (>= 2.1.6)'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency distro-info
+autopkgtest: DBG: marked alternatives ['distro-info'] as a synthesised dependency
+autopkgtest: DBG: processing dependency shunit2 (>= 2.1.6)
+autopkgtest: DBG: Test defined: name test-ubuntu-distro-info path None command "COMMAND=/usr/bin/ubuntu-distro-info ./test-ubuntu-distro-info" restrictions [] features ['test-name=test-ubuntu-distro-info'] depends ['distro-info', 'shunit2 (>= 2.1.6)'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency pylint (>= 2.2.2-2~) | pylint3
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-distro-info
+autopkgtest: DBG: marked alternatives ['python3-distro-info'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-flake8
+autopkgtest: DBG: Test defined: name python3-unittest path None command "cp -r python/distro_info_test python/*-distro-info python/setup.py "$AUTOPKGTEST_TMP"; for py in $(py3versions -r 2>/dev/null); do cd "$AUTOPKGTEST_TMP"; echo "Testing with $py:"; $py -m unittest discover -v; done" restrictions ['allow-stderr'] features ['test-name=python3-unittest'] depends ['pylint (>= 2.2.2-2~) | pylint3', 'python3-all', 'python3-distro-info', 'python3-flake8'] clicks [] installed clicks []
+autopkgtest [11:50:40]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.T4UAyG/build.mxr/src/ ./testing/distro-info/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.T4UAyG/build.mxr/src/ ./testing/distro-info/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.T4UAyG/build.mxr/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/distro-info/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cd /tmp/autopkgtest.T4UAyG/build.mxr/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/distro-info/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency distro-info
+autopkgtest: DBG: marked alternatives ['distro-info'] as a synthesised dependency
+autopkgtest: DBG: processing dependency shunit2 (>= 2.1.6)
+autopkgtest: DBG: Test defined: name test-debian-distro-info path None command "COMMAND=/usr/bin/debian-distro-info ./test-debian-distro-info" restrictions [] features ['test-name=test-debian-distro-info'] depends ['distro-info', 'shunit2 (>= 2.1.6)'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency distro-info
+autopkgtest: DBG: marked alternatives ['distro-info'] as a synthesised dependency
+autopkgtest: DBG: processing dependency shunit2 (>= 2.1.6)
+autopkgtest: DBG: Test defined: name test-ubuntu-distro-info path None command "COMMAND=/usr/bin/ubuntu-distro-info ./test-ubuntu-distro-info" restrictions [] features ['test-name=test-ubuntu-distro-info'] depends ['distro-info', 'shunit2 (>= 2.1.6)'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency pylint (>= 2.2.2-2~) | pylint3
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-distro-info
+autopkgtest: DBG: marked alternatives ['python3-distro-info'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-flake8
+autopkgtest: DBG: Test defined: name python3-unittest path None command "cp -r python/distro_info_test python/*-distro-info python/setup.py "$AUTOPKGTEST_TMP"; for py in $(py3versions -r 2>/dev/null); do cd "$AUTOPKGTEST_TMP"; echo "Testing with $py:"; $py -m unittest discover -v; done" restrictions ['allow-stderr'] features ['test-name=python3-unittest'] depends ['pylint (>= 2.2.2-2~) | pylint3', 'python3-all', 'python3-distro-info', 'python3-flake8'] clicks [] installed clicks []
+autopkgtest [11:50:41]: test test-debian-distro-info: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['distro-info', 'shunit2 (>= 2.1.6)']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['distro-info', 'shunit2 (>= 2.1.6)']
+autopkgtest: DBG: install-deps: satisfying distro-info, shunit2 (>= 2.1.6)
+autopkgtest: DBG: install-deps: architecture resolved: distro-info, shunit2 (>= 2.1.6)
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T4UAyG'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/distro-info/1-autopkgtest-satdep.deb /tmp/autopkgtest.T4UAyG/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/distro-info/1-autopkgtest-satdep.deb /tmp/autopkgtest.T4UAyG/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T4UAyG/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/distro-info/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cat >/tmp/autopkgtest.T4UAyG/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T4UAyG/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.T4UAyG/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on shunit2:riscv64 < none @un H > (>= 2.1.6)
+  Removing autopkgtest-satdep:riscv64 because I can't find shunit2:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'distro-info'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status} ${Provides}\n', '*'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: WARNING: package distro-info is not installed though it should be
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: WARNING: Test dependencies are unsatisfiable - calling apt install on test deps directly for further data about failing dependencies in test logs
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --simulate distro-info shunit2 (>= 2.1.6) -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+autopkgtest: DBG: testbed command exited with code 2
+autopkgtest: DBG: BadPackageError Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+test-debian-distro-info FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest [11:51:04]: test test-ubuntu-distro-info: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['distro-info', 'shunit2 (>= 2.1.6)'], deps_new=['distro-info', 'shunit2 (>= 2.1.6)']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['distro-info', 'shunit2 (>= 2.1.6)']
+autopkgtest: DBG: install-deps: satisfying distro-info, shunit2 (>= 2.1.6)
+autopkgtest: DBG: install-deps: architecture resolved: distro-info, shunit2 (>= 2.1.6)
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T4UAyG'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/distro-info/2-autopkgtest-satdep.deb /tmp/autopkgtest.T4UAyG/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/distro-info/2-autopkgtest-satdep.deb /tmp/autopkgtest.T4UAyG/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.acoqyf4c/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T4UAyG/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/distro-info/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.acoqyf4c/runcmd sh -ec cat >/tmp/autopkgtest.T4UAyG/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T4UAyG/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.T4UAyG/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on shunit2:riscv64 < none @un H > (>= 2.1.6)
+  Removing autopkgtest-satdep:riscv64 because I can't find shunit2:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'distro-info'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status} ${Provides}\n', '*'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: WARNING: package distro-info is not installed though it should be
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: WARNING: Test dependencies are unsatisfiable - calling apt install on test deps directly for further data about failing dependencies in test logs
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --simulate distro-info shunit2 (>= 2.1.6) -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+autopkgtest: DBG: testbed command exited with code 2
+autopkgtest: DBG: BadPackageError Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+test-ubuntu-distro-info FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest [11:51:25]: test python3-unittest: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['distro-info', 'shunit2 (>= 2.1.6)'], deps_new=['pylint (>= 2.2.2-2~) | pylint3', 'python3-all', 'python3-distro-info', 'python3-flake8']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.acoqyf4c/runcmd rm -rf -- /tmp/autopkgtest.T4UAyG
+qemu-system-riscv64: terminating on signal 15 from pid 487459 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.pb3ure8t/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.pb3ure8t/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.pb3ure8t/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.pb3ure8t/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.pb3ure8t/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.pb3ure8t/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.pb3ure8t/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.pb3ure8t/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'6d3eb187-09af-4074-9c06-686341f3b913[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6d3eb187-09af-4074-9c06-686341f3b913[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'6d3eb187-09af-4074-9c06-686341f3b913[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6d3eb187-09af-4074-9c06-686341f3b913[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'6d3eb187-09af-4074-9c06-686341f3b913[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6d3eb187-09af-4074-9c06-686341f3b913[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'6d3eb187-09af-4074-9c06-686341f3b913[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6d3eb187-09af-4074-9c06-686341f3b913[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'6d3eb187-09af-4074-9c06-686341f3b913[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6d3eb187-09af-4074-9c06-686341f3b913[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.pb3ure8t/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'6d3eb187-09af-4074-9c06-686341f3b913[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6d3eb187-09af-4074-9c06-686341f3b913[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.pb3ure8t/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.T4UAyG
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.pb3ure8t/runcmd'], downtmp = /tmp/autopkgtest.T4UAyG
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.T4UAyG
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.pb3ure8t/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [11:52:34]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.T4UAyG/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.T4UAyG/testbed-packages ./testing/distro-info/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.T4UAyG/testbed-packages ./testing/distro-info/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.pb3ure8t/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.T4UAyG/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/distro-info/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.pb3ure8t/runcmd sh -ec cat </tmp/autopkgtest.T4UAyG/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['pylint (>= 2.2.2-2~) | pylint3', 'python3-all', 'python3-distro-info', 'python3-flake8']
+autopkgtest: DBG: install-deps: satisfying pylint (>= 2.2.2-2~) | pylint3, python3-all, python3-distro-info, python3-flake8
+autopkgtest: DBG: install-deps: architecture resolved: pylint (>= 2.2.2-2~) | pylint3, python3-all, python3-distro-info, python3-flake8
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T4UAyG'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/distro-info/3-autopkgtest-satdep.deb /tmp/autopkgtest.T4UAyG/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/distro-info/3-autopkgtest-satdep.deb /tmp/autopkgtest.T4UAyG/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.pb3ure8t/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T4UAyG/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/distro-info/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.pb3ure8t/runcmd sh -ec cat >/tmp/autopkgtest.T4UAyG/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T4UAyG/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.T4UAyG/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on pylint:riscv64 < none @un H > (>= 2.2.2-2~)
+  Removing autopkgtest-satdep:riscv64 because I can't find pylint:riscv64
+Broken autopkgtest-satdep:riscv64 依赖 on pylint3:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find pylint3:riscv64
+  Or group remove for autopkgtest-satdep:riscv64
+Broken autopkgtest-satdep:riscv64 依赖 on python3-flake8:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find python3-flake8:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-distro-info'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: WARNING: Test dependencies are unsatisfiable - calling apt install on test deps directly for further data about failing dependencies in test logs
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --simulate pylint (>= 2.2.2-2~) | pylint3 python3-all python3-distro-info python3-flake8 -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+autopkgtest: DBG: testbed command exited with code 2
+autopkgtest: DBG: BadPackageError Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+python3-unittest     FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [11:53:04]: @@@@@@@@@@@@@@@@@@@@ summary
+test-debian-distro-info FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+test-ubuntu-distro-info FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+python3-unittest     FAIL badpkg
+blame: ./src/distro-info_0.23-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.T4UAyG
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 487459 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

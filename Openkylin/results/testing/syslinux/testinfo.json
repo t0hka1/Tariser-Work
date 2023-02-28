@@ -1,0 +1,5 @@
+{
+  "virt_server": "autopkgtest-virt-qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2",
+  "kernel_version": "Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022",
+  "nproc": "8"
+}

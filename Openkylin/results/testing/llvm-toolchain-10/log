@@ -1,0 +1,1132 @@
+autopkgtest: DBG: testbed init
+autopkgtest [10:25:52]: starting date: 2023-02-28
+autopkgtest [10:25:52]: version 5.20ubuntu1
+autopkgtest [10:25:52]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/llvm-toolchain-10_10.0.0-ok3.dsc -o ./testing/llvm-toolchain-10 -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.ma3jgakb/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.ma3jgakb/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.ma3jgakb/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.ma3jgakb/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.ma3jgakb/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.ma3jgakb/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.ma3jgakb/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.ma3jgakb/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'14158856-f486-4b99-b3f4-c1d558c7c930[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'14158856-f486-4b99-b3f4-c1d558c7c930[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'14158856-f486-4b99-b3f4-c1d558c7c930[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'14158856-f486-4b99-b3f4-c1d558c7c930[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'14158856-f486-4b99-b3f4-c1d558c7c930[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'14158856-f486-4b99-b3f4-c1d558c7c930[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'14158856-f486-4b99-b3f4-c1d558c7c930[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'14158856-f486-4b99-b3f4-c1d558c7c930[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'14158856-f486-4b99-b3f4-c1d558c7c930[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'14158856-f486-4b99-b3f4-c1d558c7c930[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ma3jgakb/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'14158856-f486-4b99-b3f4-c1d558c7c930[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'14158856-f486-4b99-b3f4-c1d558c7c930[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.ma3jgakb/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ma3jgakb/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ma3jgakb/runcmd chmod 1777 /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.ma3jgakb/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [10:26:56]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ssGFg6/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ma3jgakb/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ssGFg6/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/llvm-toolchain-10/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ma3jgakb/runcmd sh -ec cat </tmp/autopkgtest.ssGFg6/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [10:27:02]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [10:27:03]: @@@@@@@@@@@@@@@@@@@@ source ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+autopkgtest: DBG: blame += ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/llvm-toolchain-10_10.0.0-ok3.dsc /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/llvm-toolchain-10_10.0.0-ok3.dsc /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.ma3jgakb/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/llvm-toolchain-10_10.0.0-ok3.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ma3jgakb/runcmd sh -ec cat >/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/llvm-toolchain-10_10.0.0.orig.tar.xz /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0.orig.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/llvm-toolchain-10_10.0.0.orig.tar.xz /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0.orig.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.ma3jgakb/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0.orig.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/llvm-toolchain-10_10.0.0.orig.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ma3jgakb/runcmd sh -ec cat >/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0.orig.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0.orig.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.ma3jgakb/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ma3jgakb/runcmd sh -ec cat >/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.ssGFg6/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.ssGFg6/build.XXX
++ builddir=/tmp/autopkgtest.ssGFg6/build.e8J
++ cd /tmp/autopkgtest.ssGFg6/build.e8J
++ dpkg-source -x /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.KbnTwulr/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年08月22日 星期一 09时19分21秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.ssGFg6/llvm-toolchain-10_10.0.0-ok3.dsc
+dpkg-source: info: extracting llvm-toolchain-10 in src
+dpkg-source: info: unpacking llvm-toolchain-10_10.0.0.orig.tar.xz
+dpkg-source: info: unpacking llvm-toolchain-10_10.0.0-ok3.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 19-clang_debian_version.patch
+dpkg-source: info: applying 0003-Debian-version-info-and-bugreport.patch
+dpkg-source: info: applying clang-format-version.diff
+dpkg-source: info: applying clang-analyzer-force-version.diff
+dpkg-source: info: applying 23-strlcpy_strlcat_warning_removed.diff
+dpkg-source: info: applying declare_clear_cache.diff
+dpkg-source: info: applying unwind-chain-inclusion.diff
+dpkg-source: info: applying atomic_library_1.diff
+dpkg-source: info: applying python-clangpath.diff
+dpkg-source: info: applying fix-clang-path-and-build.diff
+dpkg-source: info: applying 0048-Set-html_static_path-_static-everywhere.patch
+dpkg-source: info: applying symbolizer-path.diff
+dpkg-source: info: applying clang-tidy-run-bin.diff
+dpkg-source: info: applying 0001-tools-clang-cmake-resolve-symlinks-in-ClangConfig.cmake.patch
+dpkg-source: info: applying debug-jit-path.diff
+dpkg-source: info: applying do-not-fail-on-unexpected-pass.diff
+dpkg-source: info: applying disable-display-PASS-UNSUPPORTED-XFAIL.diff
+dpkg-source: info: applying fix-llvm-config-obj-src-root.patch
+dpkg-source: info: applying 0001-llvm-cmake-resolve-symlinks-in-LLVMConfig.cmake.patch
+dpkg-source: info: applying 0044-soname.diff
+dpkg-source: info: applying lldb-soname.diff
+dpkg-source: info: applying openmp-soname.diff
+dpkg-source: info: applying silent-gold-test.diff
+dpkg-source: info: applying silent-more-tests.diff
+dpkg-source: info: applying silent-MCJIIT-tests.diff
+dpkg-source: info: applying silent-gold-utils.diff
+dpkg-source: info: applying silent-test-failing-codeverage.diff
+dpkg-source: info: applying silent-amd-tet.diff
+dpkg-source: info: applying silent-test-macho.diff
+dpkg-source: info: applying silent-llvm-isel-fuzzer.diff
+dpkg-source: info: applying remove-test-freezing.diff
+dpkg-source: info: applying disable-llvm-symbolizer-test.diff
+dpkg-source: info: applying disable-path-test-failing.diff
+dpkg-source: info: applying test-keep-alive.diff
+dpkg-source: info: applying scan-build-clang-path.diff
+dpkg-source: info: applying install-scan-build-py.diff
+dpkg-source: info: applying scan-view-fix-path.diff
+dpkg-source: info: applying fix-scan-view-path.diff
+dpkg-source: info: applying lldb/lldb-link-atomic-cmake.patch
+dpkg-source: info: applying lldb/lldb-addversion-suffix-to-llvm-server-exec.patch
+dpkg-source: info: applying lldb/lldb-missing-install.diff
+dpkg-source: info: applying lldb/lldb-disable-swig-error.diff
+dpkg-source: info: applying disable-error-xray.diff
+dpkg-source: info: applying openmp/openmp-check-execstack.diff
+dpkg-source: info: applying openmp/openmp-mips-affinity.patch
+dpkg-source: info: applying openmp/bootstrap-with-openmp-version-export-missing.diff
+dpkg-source: info: applying libcxx/libcxxabi-test-don-t-fail-extended-long-double.patch
+dpkg-source: info: applying libcxx/libcxx-test-fix-lockfree-test-for-i386.patch
+dpkg-source: info: applying libcxx/libcxxabi-arm-ehabi-fix.patch
+dpkg-source: info: applying libcxx/libcxx-test-atomics-set-compare-exchange-to-be-expected-fails-on-arm.patch
+dpkg-source: info: applying libcxx/libcxx-silent-test-libcxx.diff
+dpkg-source: info: applying libcxx/libcxx-silent-failure-ppc64el.diff
+dpkg-source: info: applying libcxx/libcxx-silent-failure-arm64.diff
+dpkg-source: info: applying mips-fpxx-enable.diff
+dpkg-source: info: applying 26-set-correct-float-abi.diff
+dpkg-source: info: applying clang-baseline-fix-i386.patch
+dpkg-source: info: applying disable-sse2-old-x86.diff
+dpkg-source: info: applying clang-arm-default-vfp3-on-armv7a.patch
+dpkg-source: info: applying clangd-atomic-cmake.patch
+dpkg-source: info: applying remove-apple-clang-manpage.diff
+dpkg-source: info: applying 0049-Use-Debian-provided-MathJax-everywhere.patch
+dpkg-source: info: applying hurd/hurd-cxx-paths.diff
+dpkg-source: info: applying hurd/hurd-pathmax.diff
+dpkg-source: info: applying 930008-arm.diff
+dpkg-source: info: applying bootstrap-fix-include-next.diff
+dpkg-source: info: applying clang-riscv64-multiarch.diff
+dpkg-source: info: applying D74453-riscv-atomic_cmp_xchg.diff
+dpkg-source: info: applying workaround-bug-42994-use-linker.diff
+dpkg-source: info: applying D67877.patch
+dpkg-source: info: applying disable-fuzzer-compiler-rt-x86.diff
+dpkg-source: info: applying no-z3.patch
+dpkg-source: info: applying python3-shebang.patch
+dpkg-source: info: applying print-lldb-path.patch
+dpkg-source: info: applying no-cgi.patch
+dpkg-source: info: applying d21664cce1db8debe2528f36b1fbd2b8af9c9401.patch
+dpkg-source: info: applying 0001-systemz-allow-configuring-default-SYSTEMZ_DEFAULT_AR.patch
+dpkg-source: info: applying D76596.diff
+dpkg-source: info: applying riscv64-multilib-empty.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [10:34:09]: testing package llvm-toolchain-10 version 1:10.0.0-ok3
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ssGFg6/build.e8J/src/debian/ ./testing/llvm-toolchain-10/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ssGFg6/build.e8J/src/debian/ ./testing/llvm-toolchain-10/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ma3jgakb/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ssGFg6/build.e8J/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/llvm-toolchain-10/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ma3jgakb/runcmd sh -ec cd /tmp/autopkgtest.ssGFg6/build.e8J/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/llvm-toolchain-10/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency clang-10
+autopkgtest: DBG: synthesised dependency clang-tools-10
+autopkgtest: DBG: synthesised dependency clang-format-10
+autopkgtest: DBG: synthesised dependency clang-tidy-10
+autopkgtest: DBG: synthesised dependency clangd-10
+autopkgtest: DBG: synthesised dependency clang-10-doc
+autopkgtest: DBG: synthesised dependency libclang1-10
+autopkgtest: DBG: synthesised dependency libclang-10-dev
+autopkgtest: DBG: synthesised dependency libclang-common-10-dev
+autopkgtest: DBG: synthesised dependency libclang-cpp10
+autopkgtest: DBG: synthesised dependency libclang-cpp10-dev
+autopkgtest: DBG: synthesised dependency libfuzzer-10-dev [linux-any]
+autopkgtest: DBG: synthesised dependency python3-clang-10
+autopkgtest: DBG: synthesised dependency clang-10-examples
+autopkgtest: DBG: synthesised dependency libllvm10
+autopkgtest: DBG: synthesised dependency llvm-10
+autopkgtest: DBG: synthesised dependency llvm-10-runtime
+autopkgtest: DBG: synthesised dependency llvm-10-dev
+autopkgtest: DBG: synthesised dependency llvm-10-tools
+autopkgtest: DBG: synthesised dependency libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x]
+autopkgtest: DBG: synthesised dependency llvm-10-doc
+autopkgtest: DBG: synthesised dependency llvm-10-examples
+autopkgtest: DBG: synthesised dependency lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]
+autopkgtest: DBG: synthesised dependency liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]
+autopkgtest: DBG: synthesised dependency liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]
+autopkgtest: DBG: synthesised dependency lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64]
+autopkgtest: DBG: synthesised dependency libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64]
+autopkgtest: DBG: synthesised dependency libomp-10-doc
+autopkgtest: DBG: synthesised dependency libc++1-10
+autopkgtest: DBG: synthesised dependency libc++-10-dev
+autopkgtest: DBG: synthesised dependency libc++abi1-10
+autopkgtest: DBG: synthesised dependency libc++abi-10-dev
+autopkgtest: DBG: processing dependency cmake
+autopkgtest: DBG: processing dependency g++
+autopkgtest: DBG: processing dependency file
+autopkgtest: DBG: processing dependency dpkg-dev
+autopkgtest: DBG: Test defined: name command1 path None command "bash -v ./debian/qualify-clang.sh" restrictions ['allow-stderr'] features [] depends ['clang-10', 'clang-tools-10', 'clang-format-10', 'clang-tidy-10', 'clangd-10', 'clang-10-doc', 'libclang1-10', 'libclang-10-dev', 'libclang-common-10-dev', 'libclang-cpp10', 'libclang-cpp10-dev', 'libfuzzer-10-dev [linux-any]', 'python3-clang-10', 'clang-10-examples', 'libllvm10', 'llvm-10', 'llvm-10-runtime', 'llvm-10-dev', 'llvm-10-tools', 'libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x]', 'llvm-10-doc', 'llvm-10-examples', 'lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp-10-doc', 'libc++1-10', 'libc++-10-dev', 'libc++abi1-10', 'libc++abi-10-dev', 'cmake', 'g++', 'file', 'dpkg-dev'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency gcc
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency cmake
+autopkgtest: DBG: processing dependency llvm-10-dev
+autopkgtest: DBG: marked alternatives ['llvm-10-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libclang-common-10-dev
+autopkgtest: DBG: marked alternatives ['libclang-common-10-dev'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name cmake-test path debian/tests/cmake-test command "None" restrictions [] features [] depends ['gcc', 'build-essential', 'cmake', 'llvm-10-dev', 'libclang-common-10-dev'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-lldb-10
+autopkgtest: DBG: marked alternatives ['python3-lldb-10'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name command2 path None command "python3 -c "import lldb; print(lldb.__file__); print(lldb)"" restrictions [] features [] depends ['python3-lldb-10'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-clang-10
+autopkgtest: DBG: marked alternatives ['python3-clang-10'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name command3 path None command "python3 -c "import clang; print(clang.__file__); print(clang)"" restrictions [] features [] depends ['python3-clang-10'] clicks [] installed clicks []
+autopkgtest [10:34:10]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ssGFg6/build.e8J/src/ ./testing/llvm-toolchain-10/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ssGFg6/build.e8J/src/ ./testing/llvm-toolchain-10/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ma3jgakb/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ssGFg6/build.e8J/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/llvm-toolchain-10/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ma3jgakb/runcmd sh -ec cd /tmp/autopkgtest.ssGFg6/build.e8J/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/llvm-toolchain-10/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency clang-10
+autopkgtest: DBG: synthesised dependency clang-tools-10
+autopkgtest: DBG: synthesised dependency clang-format-10
+autopkgtest: DBG: synthesised dependency clang-tidy-10
+autopkgtest: DBG: synthesised dependency clangd-10
+autopkgtest: DBG: synthesised dependency clang-10-doc
+autopkgtest: DBG: synthesised dependency libclang1-10
+autopkgtest: DBG: synthesised dependency libclang-10-dev
+autopkgtest: DBG: synthesised dependency libclang-common-10-dev
+autopkgtest: DBG: synthesised dependency libclang-cpp10
+autopkgtest: DBG: synthesised dependency libclang-cpp10-dev
+autopkgtest: DBG: synthesised dependency libfuzzer-10-dev [linux-any]
+autopkgtest: DBG: synthesised dependency python3-clang-10
+autopkgtest: DBG: synthesised dependency clang-10-examples
+autopkgtest: DBG: synthesised dependency libllvm10
+autopkgtest: DBG: synthesised dependency llvm-10
+autopkgtest: DBG: synthesised dependency llvm-10-runtime
+autopkgtest: DBG: synthesised dependency llvm-10-dev
+autopkgtest: DBG: synthesised dependency llvm-10-tools
+autopkgtest: DBG: synthesised dependency libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x]
+autopkgtest: DBG: synthesised dependency llvm-10-doc
+autopkgtest: DBG: synthesised dependency llvm-10-examples
+autopkgtest: DBG: synthesised dependency lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]
+autopkgtest: DBG: synthesised dependency liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]
+autopkgtest: DBG: synthesised dependency liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]
+autopkgtest: DBG: synthesised dependency lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]
+autopkgtest: DBG: synthesised dependency libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64]
+autopkgtest: DBG: synthesised dependency libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64]
+autopkgtest: DBG: synthesised dependency libomp-10-doc
+autopkgtest: DBG: synthesised dependency libc++1-10
+autopkgtest: DBG: synthesised dependency libc++-10-dev
+autopkgtest: DBG: synthesised dependency libc++abi1-10
+autopkgtest: DBG: synthesised dependency libc++abi-10-dev
+autopkgtest: DBG: processing dependency cmake
+autopkgtest: DBG: processing dependency g++
+autopkgtest: DBG: processing dependency file
+autopkgtest: DBG: processing dependency dpkg-dev
+autopkgtest: DBG: Test defined: name command1 path None command "bash -v ./debian/qualify-clang.sh" restrictions ['allow-stderr'] features [] depends ['clang-10', 'clang-tools-10', 'clang-format-10', 'clang-tidy-10', 'clangd-10', 'clang-10-doc', 'libclang1-10', 'libclang-10-dev', 'libclang-common-10-dev', 'libclang-cpp10', 'libclang-cpp10-dev', 'libfuzzer-10-dev [linux-any]', 'python3-clang-10', 'clang-10-examples', 'libllvm10', 'llvm-10', 'llvm-10-runtime', 'llvm-10-dev', 'llvm-10-tools', 'libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x]', 'llvm-10-doc', 'llvm-10-examples', 'lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp-10-doc', 'libc++1-10', 'libc++-10-dev', 'libc++abi1-10', 'libc++abi-10-dev', 'cmake', 'g++', 'file', 'dpkg-dev'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency gcc
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency cmake
+autopkgtest: DBG: processing dependency llvm-10-dev
+autopkgtest: DBG: marked alternatives ['llvm-10-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libclang-common-10-dev
+autopkgtest: DBG: marked alternatives ['libclang-common-10-dev'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name cmake-test path debian/tests/cmake-test command "None" restrictions [] features [] depends ['gcc', 'build-essential', 'cmake', 'llvm-10-dev', 'libclang-common-10-dev'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-lldb-10
+autopkgtest: DBG: marked alternatives ['python3-lldb-10'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name command2 path None command "python3 -c "import lldb; print(lldb.__file__); print(lldb)"" restrictions [] features [] depends ['python3-lldb-10'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-clang-10
+autopkgtest: DBG: marked alternatives ['python3-clang-10'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name command3 path None command "python3 -c "import clang; print(clang.__file__); print(clang)"" restrictions [] features [] depends ['python3-clang-10'] clicks [] installed clicks []
+autopkgtest [10:36:38]: test command1: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['clang-10', 'clang-tools-10', 'clang-format-10', 'clang-tidy-10', 'clangd-10', 'clang-10-doc', 'libclang1-10', 'libclang-10-dev', 'libclang-common-10-dev', 'libclang-cpp10', 'libclang-cpp10-dev', 'libfuzzer-10-dev [linux-any]', 'python3-clang-10', 'clang-10-examples', 'libllvm10', 'llvm-10', 'llvm-10-runtime', 'llvm-10-dev', 'llvm-10-tools', 'libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x]', 'llvm-10-doc', 'llvm-10-examples', 'lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp-10-doc', 'libc++1-10', 'libc++-10-dev', 'libc++abi1-10', 'libc++abi-10-dev', 'cmake', 'g++', 'file', 'dpkg-dev']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['clang-10', 'clang-tools-10', 'clang-format-10', 'clang-tidy-10', 'clangd-10', 'clang-10-doc', 'libclang1-10', 'libclang-10-dev', 'libclang-common-10-dev', 'libclang-cpp10', 'libclang-cpp10-dev', 'libfuzzer-10-dev [linux-any]', 'python3-clang-10', 'clang-10-examples', 'libllvm10', 'llvm-10', 'llvm-10-runtime', 'llvm-10-dev', 'llvm-10-tools', 'libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x]', 'llvm-10-doc', 'llvm-10-examples', 'lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp-10-doc', 'libc++1-10', 'libc++-10-dev', 'libc++abi1-10', 'libc++abi-10-dev', 'cmake', 'g++', 'file', 'dpkg-dev']
+autopkgtest: DBG: install-deps: satisfying clang-10, clang-tools-10, clang-format-10, clang-tidy-10, clangd-10, clang-10-doc, libclang1-10, libclang-10-dev, libclang-common-10-dev, libclang-cpp10, libclang-cpp10-dev, libfuzzer-10-dev [linux-any], python3-clang-10, clang-10-examples, libllvm10, llvm-10, llvm-10-runtime, llvm-10-dev, llvm-10-tools, libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x], llvm-10-doc, llvm-10-examples, lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32], liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32], liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32], lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32], liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32], python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32], liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32], libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64], libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64], libomp-10-doc, libc++1-10, libc++-10-dev, libc++abi1-10, libc++abi-10-dev, cmake, g++, file, dpkg-dev
+autopkgtest: DBG: install-deps: architecture resolved: clang-10, clang-tools-10, clang-format-10, clang-tidy-10, clangd-10, clang-10-doc, libclang1-10, libclang-10-dev, libclang-common-10-dev, libclang-cpp10, libclang-cpp10-dev, libfuzzer-10-dev, python3-clang-10, clang-10-examples, libllvm10, llvm-10, llvm-10-runtime, llvm-10-dev, llvm-10-tools, llvm-10-doc, llvm-10-examples, libomp-10-doc, libc++1-10, libc++-10-dev, libc++abi1-10, libc++abi-10-dev, cmake, g++, file, dpkg-dev
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/llvm-toolchain-10/1-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/llvm-toolchain-10/1-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.ma3jgakb/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ssGFg6/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/llvm-toolchain-10/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ma3jgakb/runcmd sh -ec cat >/tmp/autopkgtest.ssGFg6/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ssGFg6/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ssGFg6/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 2
+Starting 2 pkgProblemResolver with broken count: 2
+Investigating (0) llvm-10-dev:riscv64 < none -> 1:10.0.0-ok3 @un uN Ib >
+Broken llvm-10-dev:riscv64 依赖 on llvm-10:riscv64 < none | 1:10.0.0-ok3 @un uH > (= 1:10.0.0-ok3)
+  Considering llvm-10:riscv64 1 as a solution to llvm-10-dev:riscv64 5
+  Holding Back llvm-10-dev:riscv64 rather than change llvm-10:riscv64
+Investigating (0) llvm-10-examples:riscv64 < none -> 1:10.0.0-ok3 @un uN Ib >
+Broken llvm-10-examples:riscv64 依赖 on llvm-10-dev:riscv64 < none | 1:10.0.0-ok3 @un uH > (>= 1:10.0.0-ok3)
+  Considering llvm-10-dev:riscv64 5 as a solution to llvm-10-examples:riscv64 0
+  Holding Back llvm-10-examples:riscv64 rather than change llvm-10-dev:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on llvm-10:riscv64 < none | 1:10.0.0-ok3 @un uH >
+  Considering llvm-10:riscv64 1 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change llvm-10:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  binfmt-support clang-10 clang-10-doc cpp fonts-mathjax gcc gcc-9 libcc1-0
+  libclang-common-10-dev libclang-cpp10 libclang1-10 libgc1c2 libgcc-9-dev
+  libjs-mathjax libllvm10 libobjc-9-dev libobjc4 libstdc++-9-dev libz3-4
+建议安装：
+  cpp-doc autoconf automake bison flex gcc-doc gcc-multilib gdb libtool
+  manpages-dev gcc-9-doc gcc-9-locales fonts-mathjax-extras fonts-stix
+  libjs-mathjax-doc libstdc++-9-doc
+推荐安装：
+  llvm-10-dev libomp-10-dev
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  binfmt-support clang-10 clang-10-doc fonts-mathjax gcc gcc-9 libcc1-0
+  libclang-common-10-dev libclang-cpp10 libclang1-10 libgc1c2 libgcc-9-dev
+  libjs-mathjax libllvm10 libobjc-9-dev libobjc4 libstdc++-9-dev libz3-4
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 18 个软件包，要卸载 1 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 67.2 MB 的归档。
+解压缩后会消耗 320 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgc1c2 riscv64 1:7.6.4-ok2 [82.0 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 binfmt-support riscv64 2.2.0-ok2 [53.4 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libz3-4 riscv64 4.8.7-ok1 [7,162 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libllvm10 riscv64 1:10.0.0-ok3 [16.2 MB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libclang-cpp10 riscv64 1:10.0.0-ok3 [10.3 MB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libobjc4 riscv64 10-20200411-ok5 [46.0 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libobjc-9-dev riscv64 9.3.0-ok4 [513 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libclang-common-10-dev riscv64 1:10.0.0-ok3 [3,790 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libclang1-10 riscv64 1:10.0.0-ok3 [7,594 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 clang-10 riscv64 1:10.0.0-ok3 [75.1 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 fonts-mathjax all 2.7.4+dfsg-ok1 [2,206 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libjs-mathjax all 2.7.4+dfsg-ok1 [5,654 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 clang-10-doc all 1:10.0.0-ok3 [1,120 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:18 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:19 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+已下载 67.2 MB，耗时 49秒 (1,365 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+正在选中未选择的软件包 libgc1c2:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libgc1c2_1%3a7.6.4-ok2_riscv64.deb  ...
+正在解压 libgc1c2:riscv64 (1:7.6.4-ok2) ...
+正在选中未选择的软件包 binfmt-support。
+准备解压 .../01-binfmt-support_2.2.0-ok2_riscv64.deb  ...
+正在解压 binfmt-support (2.2.0-ok2) ...
+正在选中未选择的软件包 libz3-4:riscv64。
+准备解压 .../02-libz3-4_4.8.7-ok1_riscv64.deb  ...
+正在解压 libz3-4:riscv64 (4.8.7-ok1) ...
+正在选中未选择的软件包 libllvm10:riscv64。
+准备解压 .../03-libllvm10_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libllvm10:riscv64 (1:10.0.0-ok3) ...
+正在选中未选择的软件包 libclang-cpp10。
+准备解压 .../04-libclang-cpp10_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libclang-cpp10 (1:10.0.0-ok3) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../05-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../06-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 libobjc4:riscv64。
+准备解压 .../07-libobjc4_10-20200411-ok5_riscv64.deb  ...
+正在解压 libobjc4:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libobjc-9-dev:riscv64。
+准备解压 .../08-libobjc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libobjc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 libclang-common-10-dev。
+准备解压 .../09-libclang-common-10-dev_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libclang-common-10-dev (1:10.0.0-ok3) ...
+正在选中未选择的软件包 libclang1-10。
+准备解压 .../10-libclang1-10_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libclang1-10 (1:10.0.0-ok3) ...
+正在选中未选择的软件包 clang-10。
+准备解压 .../11-clang-10_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 clang-10 (1:10.0.0-ok3) ...
+正在选中未选择的软件包 fonts-mathjax。
+准备解压 .../12-fonts-mathjax_2.7.4+dfsg-ok1_all.deb  ...
+正在解压 fonts-mathjax (2.7.4+dfsg-ok1) ...
+正在选中未选择的软件包 libjs-mathjax。
+准备解压 .../13-libjs-mathjax_2.7.4+dfsg-ok1_all.deb  ...
+正在解压 libjs-mathjax (2.7.4+dfsg-ok1) ...
+正在选中未选择的软件包 clang-10-doc。
+准备解压 .../14-clang-10-doc_1%3a10.0.0-ok3_all.deb  ...
+正在解压 clang-10-doc (1:10.0.0-ok3) ...
+准备解压 .../15-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../16-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../17-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../18-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在设置 fonts-mathjax (2.7.4+dfsg-ok1) ...
+正在设置 libjs-mathjax (2.7.4+dfsg-ok1) ...
+正在设置 libgc1c2:riscv64 (1:7.6.4-ok2) ...
+正在设置 libobjc4:riscv64 (10-20200411-ok5) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 clang-10-doc (1:10.0.0-ok3) ...
+正在设置 libz3-4:riscv64 (4.8.7-ok1) ...
+正在设置 binfmt-support (2.2.0-ok2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/binfmt-support.service → /lib/systemd/system/binfmt-support.service.
+正在设置 libobjc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 libllvm10:riscv64 (1:10.0.0-ok3) ...
+正在设置 libclang1-10 (1:10.0.0-ok3) ...
+正在设置 libclang-common-10-dev (1:10.0.0-ok3) ...
+正在设置 libclang-cpp10 (1:10.0.0-ok3) ...
+正在设置 clang-10 (1:10.0.0-ok3) ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 systemd (245.4-ok4~0716) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+/usr/bin/mandb: 无法对 /var/cache/man/2854 写入: 设备上没有空间
+/usr/bin/mandb: 无法创建索引缓存 /var/cache/man/2854: 设备上没有空间
+正在处理用于 fontconfig (2.13.1-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'clang-10'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'clang-tools-10'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 clang-tools-10 相匹配的软件包
+ (exit code 1)
+command1             FAIL badpkg
+blame: ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 clang-tools-10 相匹配的软件包
+ (exit code 1)
+autopkgtest [10:58:58]: test cmake-test: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['clang-10', 'clang-tools-10', 'clang-format-10', 'clang-tidy-10', 'clangd-10', 'clang-10-doc', 'libclang1-10', 'libclang-10-dev', 'libclang-common-10-dev', 'libclang-cpp10', 'libclang-cpp10-dev', 'libfuzzer-10-dev [linux-any]', 'python3-clang-10', 'clang-10-examples', 'libllvm10', 'llvm-10', 'llvm-10-runtime', 'llvm-10-dev', 'llvm-10-tools', 'libllvm-10-ocaml-dev [amd64 arm64 armhf i386 ppc64el s390x]', 'llvm-10-doc', 'llvm-10-examples', 'lld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'liblld-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 sparc alpha hppa m68k powerpcspe ppc64 sh4 sparc64 x32]', 'lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'python3-lldb-10 [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'liblldb-10-dev [amd64 arm64 armel armhf i386 mips mipsel mips64el ppc64el kfreebsd-amd64 kfreebsd-i386 s390 s390x sparc hppa m68k sh4 x32]', 'libomp-10-dev [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp5-10 [amd64 arm64 armhf i386 mips64el ppc64el ppc64]', 'libomp-10-doc', 'libc++1-10', 'libc++-10-dev', 'libc++abi1-10', 'libc++abi-10-dev', 'cmake', 'g++', 'file', 'dpkg-dev'], deps_new=['gcc', 'build-essential', 'cmake', 'llvm-10-dev', 'libclang-common-10-dev']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ma3jgakb/runcmd rm -rf -- /tmp/autopkgtest.ssGFg6
+qemu-system-riscv64: terminating on signal 15 from pid 471585 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.b2w9p_74/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.b2w9p_74/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.b2w9p_74/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.b2w9p_74/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.b2w9p_74/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.b2w9p_74/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.b2w9p_74/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.b2w9p_74/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.b2w9p_74/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ce9ce089-1d8f-4485-96db-e2bbd5d2cee4[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.b2w9p_74/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.ssGFg6
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.b2w9p_74/runcmd'], downtmp = /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.b2w9p_74/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [11:00:59]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ssGFg6/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.b2w9p_74/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ssGFg6/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/llvm-toolchain-10/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.b2w9p_74/runcmd sh -ec cat </tmp/autopkgtest.ssGFg6/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['gcc', 'build-essential', 'cmake', 'llvm-10-dev', 'libclang-common-10-dev']
+autopkgtest: DBG: install-deps: satisfying gcc, build-essential, cmake, llvm-10-dev, libclang-common-10-dev
+autopkgtest: DBG: install-deps: architecture resolved: gcc, build-essential, cmake, llvm-10-dev, libclang-common-10-dev
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/llvm-toolchain-10/2-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/llvm-toolchain-10/2-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.b2w9p_74/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ssGFg6/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/llvm-toolchain-10/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.b2w9p_74/runcmd sh -ec cat >/tmp/autopkgtest.ssGFg6/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ssGFg6/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ssGFg6/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) llvm-10-dev:riscv64 < none -> 1:10.0.0-ok3 @un uN Ib >
+Broken llvm-10-dev:riscv64 依赖 on llvm-10:riscv64 < none | 1:10.0.0-ok3 @un uH > (= 1:10.0.0-ok3)
+  Considering llvm-10:riscv64 0 as a solution to llvm-10-dev:riscv64 0
+  Holding Back llvm-10-dev:riscv64 rather than change llvm-10:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on llvm-10-dev:riscv64 < none | 1:10.0.0-ok3 @un uH >
+  Considering llvm-10-dev:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change llvm-10-dev:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev
+  libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libstdc++-9-dev
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 8 个软件包，要卸载 1 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.1 MB 的归档。
+解压缩后会消耗 80.2 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+已下载 20.1 MB，耗时 16秒 (1,292 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../1-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../2-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../3-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../4-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../5-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../6-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../7-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../8-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'llvm-10-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 llvm-10-dev 相匹配的软件包
+ (exit code 1)
+cmake-test           FAIL badpkg
+blame: ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 llvm-10-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest [11:02:16]: test command2: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['gcc', 'build-essential', 'cmake', 'llvm-10-dev', 'libclang-common-10-dev'], deps_new=['python3-lldb-10']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.b2w9p_74/runcmd rm -rf -- /tmp/autopkgtest.ssGFg6
+qemu-system-riscv64: terminating on signal 15 from pid 471585 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.fah2bca3/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.fah2bca3/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.fah2bca3/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.fah2bca3/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.fah2bca3/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.fah2bca3/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.fah2bca3/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.fah2bca3/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.fah2bca3/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9d53a3fd-9b4a-4f76-8f34-8319be7eb1d5[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.fah2bca3/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.ssGFg6
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.fah2bca3/runcmd'], downtmp = /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.fah2bca3/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [11:03:21]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ssGFg6/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.fah2bca3/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ssGFg6/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/llvm-toolchain-10/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.fah2bca3/runcmd sh -ec cat </tmp/autopkgtest.ssGFg6/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-lldb-10']
+autopkgtest: DBG: install-deps: satisfying python3-lldb-10
+autopkgtest: DBG: install-deps: architecture resolved: python3-lldb-10
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/llvm-toolchain-10/3-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/llvm-toolchain-10/3-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.fah2bca3/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ssGFg6/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/llvm-toolchain-10/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.fah2bca3/runcmd sh -ec cat >/tmp/autopkgtest.ssGFg6/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ssGFg6/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ssGFg6/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python3-lldb-10:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find python3-lldb-10:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-lldb-10'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python3-lldb-10 相匹配的软件包
+ (exit code 1)
+command2             FAIL badpkg
+blame: ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-lldb-10 相匹配的软件包
+ (exit code 1)
+autopkgtest [11:03:47]: test command3: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['python3-lldb-10'], deps_new=['python3-clang-10']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.fah2bca3/runcmd rm -rf -- /tmp/autopkgtest.ssGFg6
+qemu-system-riscv64: terminating on signal 15 from pid 471585 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.3j4wabal/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.3j4wabal/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.3j4wabal/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.3j4wabal/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.3j4wabal/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.3j4wabal/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.3j4wabal/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.3j4wabal/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'3cad7a21-33d1-45dc-befa-3874d219e247[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3cad7a21-33d1-45dc-befa-3874d219e247[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'3cad7a21-33d1-45dc-befa-3874d219e247[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3cad7a21-33d1-45dc-befa-3874d219e247[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'3cad7a21-33d1-45dc-befa-3874d219e247[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3cad7a21-33d1-45dc-befa-3874d219e247[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'3cad7a21-33d1-45dc-befa-3874d219e247[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3cad7a21-33d1-45dc-befa-3874d219e247[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'3cad7a21-33d1-45dc-befa-3874d219e247[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3cad7a21-33d1-45dc-befa-3874d219e247[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.3j4wabal/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'3cad7a21-33d1-45dc-befa-3874d219e247[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3cad7a21-33d1-45dc-befa-3874d219e247[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.3j4wabal/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.ssGFg6
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.3j4wabal/runcmd'], downtmp = /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.3j4wabal/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [11:04:52]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ssGFg6/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ssGFg6/testbed-packages ./testing/llvm-toolchain-10/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.3j4wabal/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ssGFg6/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/llvm-toolchain-10/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.3j4wabal/runcmd sh -ec cat </tmp/autopkgtest.ssGFg6/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-clang-10']
+autopkgtest: DBG: install-deps: satisfying python3-clang-10
+autopkgtest: DBG: install-deps: architecture resolved: python3-clang-10
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/llvm-toolchain-10/4-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/llvm-toolchain-10/4-autopkgtest-satdep.deb /tmp/autopkgtest.ssGFg6/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.3j4wabal/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ssGFg6/4-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/llvm-toolchain-10/4-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.3j4wabal/runcmd sh -ec cat >/tmp/autopkgtest.ssGFg6/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ssGFg6/4-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ssGFg6/4-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  libclang-10-dev libclang-common-10-dev libclang1-10 libgc1c2 libgcc-9-dev
+  libllvm10 libobjc-9-dev libobjc4 libstdc++-9-dev libz3-4 python3-clang-10
+建议安装：
+  libstdc++-9-doc
+下列【新】软件包将被安装：
+  libclang-10-dev libclang-common-10-dev libclang1-10 libgc1c2 libgcc-9-dev
+  libllvm10 libobjc-9-dev libobjc4 libstdc++-9-dev libz3-4 python3-clang-10
+升级了 0 个软件包，新安装了 11 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 85.1 MB 的归档。
+解压缩后会消耗 741 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgc1c2 riscv64 1:7.6.4-ok2 [82.0 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libobjc4 riscv64 10-20200411-ok5 [46.0 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libobjc-9-dev riscv64 9.3.0-ok4 [513 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libz3-4 riscv64 4.8.7-ok1 [7,162 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libllvm10 riscv64 1:10.0.0-ok3 [16.2 MB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libclang1-10 riscv64 1:10.0.0-ok3 [7,594 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libclang-common-10-dev riscv64 1:10.0.0-ok3 [3,790 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libclang-10-dev riscv64 1:10.0.0-ok3 [44.7 MB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 python3-clang-10 riscv64 1:10.0.0-ok3 [29.5 kB]
+已下载 85.1 MB，耗时 1分 6秒 (1,290 kB/s)
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../01-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 libgc1c2:riscv64。
+准备解压 .../02-libgc1c2_1%3a7.6.4-ok2_riscv64.deb  ...
+正在解压 libgc1c2:riscv64 (1:7.6.4-ok2) ...
+正在选中未选择的软件包 libobjc4:riscv64。
+准备解压 .../03-libobjc4_10-20200411-ok5_riscv64.deb  ...
+正在解压 libobjc4:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libobjc-9-dev:riscv64。
+准备解压 .../04-libobjc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libobjc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 libz3-4:riscv64。
+准备解压 .../05-libz3-4_4.8.7-ok1_riscv64.deb  ...
+正在解压 libz3-4:riscv64 (4.8.7-ok1) ...
+正在选中未选择的软件包 libllvm10:riscv64。
+准备解压 .../06-libllvm10_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libllvm10:riscv64 (1:10.0.0-ok3) ...
+正在选中未选择的软件包 libclang1-10。
+准备解压 .../07-libclang1-10_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libclang1-10 (1:10.0.0-ok3) ...
+正在选中未选择的软件包 libclang-common-10-dev。
+准备解压 .../08-libclang-common-10-dev_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libclang-common-10-dev (1:10.0.0-ok3) ...
+正在选中未选择的软件包 libclang-10-dev。
+准备解压 .../09-libclang-10-dev_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 libclang-10-dev (1:10.0.0-ok3) ...
+正在选中未选择的软件包 python3-clang-10。
+准备解压 .../10-python3-clang-10_1%3a10.0.0-ok3_riscv64.deb  ...
+正在解压 python3-clang-10 (1:10.0.0-ok3) ...
+正在设置 libgc1c2:riscv64 (1:7.6.4-ok2) ...
+正在设置 libobjc4:riscv64 (10-20200411-ok5) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libz3-4:riscv64 (4.8.7-ok1) ...
+正在设置 libobjc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libllvm10:riscv64 (1:10.0.0-ok3) ...
+正在设置 libclang1-10 (1:10.0.0-ok3) ...
+正在设置 libclang-common-10-dev (1:10.0.0-ok3) ...
+正在设置 libclang-10-dev (1:10.0.0-ok3) ...
+正在设置 python3-clang-10 (1:10.0.0-ok3) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-clang-10'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 python3-clang-10 libclang-10-dev libclang-common-10-dev libclang1-10 libdebian-installer4 libdevmapper-event1.02.1 libobjc-9-dev libobjc4 libgc1c2 libstdc++-9-dev libgcc-9-dev libllvm10 libz3-4
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'python3-clang-10', 'libclang-10-dev', 'libclang-common-10-dev', 'libclang1-10', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libobjc-9-dev', 'libobjc4', 'libgc1c2', 'libstdc++-9-dev', 'libgcc-9-dev'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'libllvm10', 'libz3-4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 157961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ssGFg6/command3-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ssGFg6/command3-packages.all ./testing/llvm-toolchain-10/command3-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ssGFg6/command3-packages.all ./testing/llvm-toolchain-10/command3-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.3j4wabal/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ssGFg6/command3-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/llvm-toolchain-10/command3-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.3j4wabal/runcmd sh -ec cat </tmp/autopkgtest.ssGFg6/command3-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.ssGFg6/build.e8J/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ssGFg6/build.e8J'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/llvm-toolchain-10/tests-tree/ /tmp/autopkgtest.ssGFg6/build.e8J/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/llvm-toolchain-10/tests-tree/ /tmp/autopkgtest.ssGFg6/build.e8J/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/llvm-toolchain-10/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.3j4wabal/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.ssGFg6/build.e8J/src/; then mkdir -- /tmp/autopkgtest.ssGFg6/build.e8J/src/; fi; cd /tmp/autopkgtest.ssGFg6/build.e8J/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/llvm-toolchain-10/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.3j4wabal/runcmd sh -ec if ! test -d /tmp/autopkgtest.ssGFg6/build.e8J/src/; then mkdir -- /tmp/autopkgtest.ssGFg6/build.e8J/src/; fi; cd /tmp/autopkgtest.ssGFg6/build.e8J/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest: DBG: got reply from testbed: timeout
+autopkgtest: DBG: sending command to testbed: auxverb_debug_fail
+autopkgtest-virt-qemu: DBG: executing auxverb_debug_fail
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: TestbedFailure sent `auxverb_debug_fail', got `timeout', expected `ok...'
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.ssGFg6
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 471585 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...
+autopkgtest [11:13:10]: ERROR: testbed failure: sent `auxverb_debug_fail', got `timeout', expected `ok...'
+autopkgtest: DBG: testbed stop

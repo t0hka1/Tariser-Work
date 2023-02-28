@@ -1,0 +1,76 @@
++ + grep \.hpp$
++ sed s%/usr/include/%%
+dpkg -L opencl-clhpp-headers
++ + echo #include <CL/cl2.hpp>
+g++ -x c++ -c -
+In file included from /usr/include/CL/cl2.hpp:17,
+                 from <stdin>:1:
+/usr/include/CL/opencl.hpp:437:112: note: #pragma message: opencl.hpp: CL_HPP_TARGET_OPENCL_VERSION is not defined. It will default to 300 (OpenCL 3.0)
+  437 | # pragma message("opencl.hpp: CL_HPP_TARGET_OPENCL_VERSION is not defined. It will default to 300 (OpenCL 3.0)")
+      |                                                                                                                ^
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ echo #include <CL/cl2.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=100 -DCL_HPP_MINIMUM_OPENCL_VERSION=100 -c -
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ + echo #include <CL/cl2.hpp>g++
+ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=110 -DCL_HPP_MINIMUM_OPENCL_VERSION=110 -c -
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ + g++ -xecho c++ #include <CL/cl2.hpp> -DCL_HPP_TARGET_OPENCL_VERSION=120
+ -DCL_HPP_MINIMUM_OPENCL_VERSION=120 -c -
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ + g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=200 -DCL_HPP_MINIMUM_OPENCL_VERSION=200 -c -
+echo #include <CL/cl2.hpp>
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ + echo #include <CL/cl2.hpp>
+g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=210 -DCL_HPP_MINIMUM_OPENCL_VERSION=210 -c -
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ echo #include <CL/cl2.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=220 -DCL_HPP_MINIMUM_OPENCL_VERSION=220 -c -
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ echo #include <CL/cl2.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=300 -DCL_HPP_MINIMUM_OPENCL_VERSION=300 -c -
+In file included from <stdin>:1:
+/usr/include/CL/cl2.hpp:18:151: note: #pragma message: cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.
+   18 | #pragma message("cl2.hpp has been renamed to opencl.hpp to make it clear that it supports all versions of OpenCL. Please include opencl.hpp directly.")
+      |                                                                                                                                                       ^
++ echo #include <CL/opencl.hpp>
++ g++ -x c++ -c -
+In file included from <stdin>:1:
+/usr/include/CL/opencl.hpp:437:112: note: #pragma message: opencl.hpp: CL_HPP_TARGET_OPENCL_VERSION is not defined. It will default to 300 (OpenCL 3.0)
+  437 | # pragma message("opencl.hpp: CL_HPP_TARGET_OPENCL_VERSION is not defined. It will default to 300 (OpenCL 3.0)")
+      |                                                                                                                ^
++ echo #include <CL/opencl.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=100 -DCL_HPP_MINIMUM_OPENCL_VERSION=100 -c -
++ + g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=110 -DCL_HPP_MINIMUM_OPENCL_VERSION=110 -c -
+echo #include <CL/opencl.hpp>
++ echo #include <CL/opencl.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=120 -DCL_HPP_MINIMUM_OPENCL_VERSION=120 -c -
++ echo #include <CL/opencl.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=200 -DCL_HPP_MINIMUM_OPENCL_VERSION=200 -c -
++ echo #include <CL/opencl.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=210 -DCL_HPP_MINIMUM_OPENCL_VERSION=210 -c -
++ echo #include <CL/opencl.hpp>
++ g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=220 -DCL_HPP_MINIMUM_OPENCL_VERSION=220 -c -
++ echo+  #include <CL/opencl.hpp>
+g++ -x c++ -DCL_HPP_TARGET_OPENCL_VERSION=300 -DCL_HPP_MINIMUM_OPENCL_VERSION=300 -c -

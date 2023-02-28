@@ -1,0 +1,260 @@
+autopkgtest: DBG: testbed init
+autopkgtest [00:52:29]: starting date: 2023-02-28
+autopkgtest [00:52:29]: version 5.20ubuntu1
+autopkgtest [00:52:29]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/libpsl_0.21.0-ok2.dsc -o ./testing/libpsl -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.j2iu7fqr/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.j2iu7fqr/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.j2iu7fqr/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.j2iu7fqr/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.j2iu7fqr/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.j2iu7fqr/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.j2iu7fqr/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.j2iu7fqr/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'977c6f3c-6948-4080-8ebc-f56f705126fd[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'977c6f3c-6948-4080-8ebc-f56f705126fd[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'977c6f3c-6948-4080-8ebc-f56f705126fd[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'977c6f3c-6948-4080-8ebc-f56f705126fd[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'977c6f3c-6948-4080-8ebc-f56f705126fd[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'977c6f3c-6948-4080-8ebc-f56f705126fd[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'977c6f3c-6948-4080-8ebc-f56f705126fd[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'977c6f3c-6948-4080-8ebc-f56f705126fd[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'977c6f3c-6948-4080-8ebc-f56f705126fd[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'977c6f3c-6948-4080-8ebc-f56f705126fd[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.j2iu7fqr/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'977c6f3c-6948-4080-8ebc-f56f705126fd[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'977c6f3c-6948-4080-8ebc-f56f705126fd[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.j2iu7fqr/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.j2iu7fqr/runcmd chmod 1777 /tmp/autopkgtest.T6uMgx
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.T6uMgx
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.j2iu7fqr/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:53:32]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.T6uMgx/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.T6uMgx/testbed-packages ./testing/libpsl/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.T6uMgx/testbed-packages ./testing/libpsl/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.T6uMgx/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libpsl/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.j2iu7fqr/runcmd sh -ec cat </tmp/autopkgtest.T6uMgx/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:53:37]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [00:53:38]: @@@@@@@@@@@@@@@@@@@@ source ./src/libpsl_0.21.0-ok2.dsc
+autopkgtest: DBG: blame += ./src/libpsl_0.21.0-ok2.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T6uMgx'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/libpsl_0.21.0-ok2.dsc /tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/libpsl_0.21.0-ok2.dsc /tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/libpsl_0.21.0-ok2.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.j2iu7fqr/runcmd sh -ec cat >/tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T6uMgx'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/libpsl_0.21.0.orig.tar.gz /tmp/autopkgtest.T6uMgx/libpsl_0.21.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/libpsl_0.21.0.orig.tar.gz /tmp/autopkgtest.T6uMgx/libpsl_0.21.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T6uMgx/libpsl_0.21.0.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/libpsl_0.21.0.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.j2iu7fqr/runcmd sh -ec cat >/tmp/autopkgtest.T6uMgx/libpsl_0.21.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T6uMgx/libpsl_0.21.0.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T6uMgx'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/libpsl_0.21.0-ok2.debian.tar.xz /tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/libpsl_0.21.0-ok2.debian.tar.xz /tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/libpsl_0.21.0-ok2.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.j2iu7fqr/runcmd sh -ec cat >/tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.T6uMgx/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.T6uMgx/build.XXX
++ builddir=/tmp/autopkgtest.T6uMgx/build.Nze
++ cd /tmp/autopkgtest.T6uMgx/build.Nze
++ dpkg-source -x /tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.4VGo0H4D/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年08月22日 星期一 08时52分04秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.T6uMgx/libpsl_0.21.0-ok2.dsc
+dpkg-source: info: extracting libpsl in src
+dpkg-source: info: unpacking libpsl_0.21.0.orig.tar.gz
+dpkg-source: info: unpacking libpsl_0.21.0-ok2.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 0001-remove-git-submodules.patch
+dpkg-source: info: applying 0002-make-psl-make-dafsa-py3-based.patch
+dpkg-source: info: applying 0003-Fix-build-when-configured-with-with-psl-file.patch
+dpkg-source: info: applying 0004-Add-PSL_API-to-libpsl-sections.txt.patch
+dpkg-source: info: applying 0005-Add-missing-api-indeces-for-gtk-doc.patch
+dpkg-source: info: applying 0006-Use-NULL-and-FILE-overall-in-gtk-docs.patch
+dpkg-source: info: applying 0007-gtk-doc-do-not-include-tree_index.sgml.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:54:04]: testing package libpsl version 0.21.0-ok2
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.T6uMgx/build.Nze/src/debian/ ./testing/libpsl/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.T6uMgx/build.Nze/src/debian/ ./testing/libpsl/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.T6uMgx/build.Nze/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/libpsl/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.j2iu7fqr/runcmd sh -ec cd /tmp/autopkgtest.T6uMgx/build.Nze/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/libpsl/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency psl
+autopkgtest: DBG: marked alternatives ['psl'] as a synthesised dependency
+autopkgtest: DBG: processing dependency publicsuffix
+autopkgtest: DBG: Test defined: name psl-test path debian/tests/psl-test command "None" restrictions [] features [] depends ['psl', 'publicsuffix'] clicks [] installed clicks []
+autopkgtest [00:54:05]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.T6uMgx/build.Nze/src/ ./testing/libpsl/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.T6uMgx/build.Nze/src/ ./testing/libpsl/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.T6uMgx/build.Nze/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/libpsl/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.j2iu7fqr/runcmd sh -ec cd /tmp/autopkgtest.T6uMgx/build.Nze/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/libpsl/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency psl
+autopkgtest: DBG: marked alternatives ['psl'] as a synthesised dependency
+autopkgtest: DBG: processing dependency publicsuffix
+autopkgtest: DBG: Test defined: name psl-test path debian/tests/psl-test command "None" restrictions [] features [] depends ['psl', 'publicsuffix'] clicks [] installed clicks []
+autopkgtest [00:54:12]: test psl-test: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['psl', 'publicsuffix']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['psl', 'publicsuffix']
+autopkgtest: DBG: install-deps: satisfying psl, publicsuffix
+autopkgtest: DBG: install-deps: architecture resolved: psl, publicsuffix
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.T6uMgx'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/libpsl/1-autopkgtest-satdep.deb /tmp/autopkgtest.T6uMgx/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/libpsl/1-autopkgtest-satdep.deb /tmp/autopkgtest.T6uMgx/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.j2iu7fqr/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.T6uMgx/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/libpsl/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.j2iu7fqr/runcmd sh -ec cat >/tmp/autopkgtest.T6uMgx/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.T6uMgx/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.T6uMgx/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on publicsuffix:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find publicsuffix:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'psl'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 psl 相匹配的软件包
+ (exit code 1)
+psl-test             FAIL badpkg
+blame: ./src/libpsl_0.21.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 psl 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [00:54:31]: @@@@@@@@@@@@@@@@@@@@ summary
+psl-test             FAIL badpkg
+blame: ./src/libpsl_0.21.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 psl 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.T6uMgx
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 335925 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

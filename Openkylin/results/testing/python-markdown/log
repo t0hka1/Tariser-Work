@@ -1,0 +1,304 @@
+autopkgtest: DBG: testbed init
+autopkgtest [06:04:11]: starting date: 2023-02-28
+autopkgtest [06:04:11]: version 5.20ubuntu1
+autopkgtest [06:04:11]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/python-markdown_3.4.1-ok2.dsc -o ./testing/python-markdown -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.yrkk2aou/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.yrkk2aou/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.yrkk2aou/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.yrkk2aou/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.yrkk2aou/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.yrkk2aou/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.yrkk2aou/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.yrkk2aou/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'1167ad86-9ac4-4f79-b11e-35843be6fd98[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'1167ad86-9ac4-4f79-b11e-35843be6fd98[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'1167ad86-9ac4-4f79-b11e-35843be6fd98[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'1167ad86-9ac4-4f79-b11e-35843be6fd98[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'1167ad86-9ac4-4f79-b11e-35843be6fd98[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'1167ad86-9ac4-4f79-b11e-35843be6fd98[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'1167ad86-9ac4-4f79-b11e-35843be6fd98[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'1167ad86-9ac4-4f79-b11e-35843be6fd98[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'1167ad86-9ac4-4f79-b11e-35843be6fd98[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'1167ad86-9ac4-4f79-b11e-35843be6fd98[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.yrkk2aou/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'1167ad86-9ac4-4f79-b11e-35843be6fd98[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'1167ad86-9ac4-4f79-b11e-35843be6fd98[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.yrkk2aou/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.yrkk2aou/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.yrkk2aou/runcmd chmod 1777 /tmp/autopkgtest.uD8ONL
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.uD8ONL
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.yrkk2aou/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [06:05:14]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.uD8ONL/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.uD8ONL/testbed-packages ./testing/python-markdown/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.uD8ONL/testbed-packages ./testing/python-markdown/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.yrkk2aou/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.uD8ONL/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-markdown/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.yrkk2aou/runcmd sh -ec cat </tmp/autopkgtest.uD8ONL/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [06:05:20]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [06:05:21]: @@@@@@@@@@@@@@@@@@@@ source ./src/python-markdown_3.4.1-ok2.dsc
+autopkgtest: DBG: blame += ./src/python-markdown_3.4.1-ok2.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.uD8ONL'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-markdown_3.4.1-ok2.dsc /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-markdown_3.4.1-ok2.dsc /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.yrkk2aou/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-markdown_3.4.1-ok2.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.yrkk2aou/runcmd sh -ec cat >/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.uD8ONL'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-markdown_3.4.1.orig.tar.gz /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-markdown_3.4.1.orig.tar.gz /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.yrkk2aou/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-markdown_3.4.1.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.yrkk2aou/runcmd sh -ec cat >/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.uD8ONL'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-markdown_3.4.1-ok2.debian.tar.xz /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-markdown_3.4.1-ok2.debian.tar.xz /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.yrkk2aou/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-markdown_3.4.1-ok2.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.yrkk2aou/runcmd sh -ec cat >/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.uD8ONL/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.uD8ONL/build.XXX
++ builddir=/tmp/autopkgtest.uD8ONL/build.9s6
++ cd /tmp/autopkgtest.uD8ONL/build.9s6
++ dpkg-source -x /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.PgIXbynY/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年09月09日 星期五 08时41分20秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.uD8ONL/python-markdown_3.4.1-ok2.dsc
+dpkg-source: info: extracting python-markdown in src
+dpkg-source: info: unpacking python-markdown_3.4.1.orig.tar.gz
+dpkg-source: info: unpacking python-markdown_3.4.1-ok2.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [06:05:36]: testing package python-markdown version 3.4.1-ok2
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.uD8ONL/build.9s6/src/debian/ ./testing/python-markdown/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.uD8ONL/build.9s6/src/debian/ ./testing/python-markdown/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.yrkk2aou/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.uD8ONL/build.9s6/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-markdown/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.yrkk2aou/runcmd sh -ec cd /tmp/autopkgtest.uD8ONL/build.9s6/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-markdown/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-markdown
+autopkgtest: DBG: marked alternatives ['python3-markdown'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-packaging
+autopkgtest: DBG: processing dependency python3-pygments
+autopkgtest: DBG: processing dependency python3-tidylib
+autopkgtest: DBG: processing dependency python3-yaml
+autopkgtest: DBG: Test defined: name python3-markdown path debian/tests/python3-markdown command "None" restrictions [] features [] depends ['python3-all', 'python3-markdown', 'python3-packaging', 'python3-pygments', 'python3-tidylib', 'python3-yaml'] clicks [] installed clicks []
+autopkgtest [06:05:37]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.uD8ONL/build.9s6/src/ ./testing/python-markdown/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.uD8ONL/build.9s6/src/ ./testing/python-markdown/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.yrkk2aou/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.uD8ONL/build.9s6/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-markdown/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.yrkk2aou/runcmd sh -ec cd /tmp/autopkgtest.uD8ONL/build.9s6/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-markdown/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-markdown
+autopkgtest: DBG: marked alternatives ['python3-markdown'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-packaging
+autopkgtest: DBG: processing dependency python3-pygments
+autopkgtest: DBG: processing dependency python3-tidylib
+autopkgtest: DBG: processing dependency python3-yaml
+autopkgtest: DBG: Test defined: name python3-markdown path debian/tests/python3-markdown command "None" restrictions [] features [] depends ['python3-all', 'python3-markdown', 'python3-packaging', 'python3-pygments', 'python3-tidylib', 'python3-yaml'] clicks [] installed clicks []
+autopkgtest [06:05:38]: test python3-markdown: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['python3-all', 'python3-markdown', 'python3-packaging', 'python3-pygments', 'python3-tidylib', 'python3-yaml']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-all', 'python3-markdown', 'python3-packaging', 'python3-pygments', 'python3-tidylib', 'python3-yaml']
+autopkgtest: DBG: install-deps: satisfying python3-all, python3-markdown, python3-packaging, python3-pygments, python3-tidylib, python3-yaml
+autopkgtest: DBG: install-deps: architecture resolved: python3-all, python3-markdown, python3-packaging, python3-pygments, python3-tidylib, python3-yaml
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.uD8ONL'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-markdown/1-autopkgtest-satdep.deb /tmp/autopkgtest.uD8ONL/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-markdown/1-autopkgtest-satdep.deb /tmp/autopkgtest.uD8ONL/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.yrkk2aou/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.uD8ONL/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-markdown/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.yrkk2aou/runcmd sh -ec cat >/tmp/autopkgtest.uD8ONL/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.uD8ONL/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.uD8ONL/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python3-pygments:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find python3-pygments:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  python3-importlib-metadata python3-markdown python3-more-itertools
+  python3-zipp
+建议安装：
+  python-markdown-doc
+推荐安装：
+  python3-pygments
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  python3-importlib-metadata python3-markdown python3-more-itertools
+  python3-zipp
+升级了 0 个软件包，新安装了 4 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 128 kB 的归档。
+解压缩后会消耗 624 kB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-more-itertools all 4.2.0-ok2 [39.6 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-zipp all 1.0.0-ok2 [5,020 B]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-importlib-metadata all 4.12.0-ok3 [20.6 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-markdown all 3.4.1-ok2 [63.2 kB]
+已下载 128 kB，耗时 1秒 (219 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+正在选中未选择的软件包 python3-more-itertools。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../python3-more-itertools_4.2.0-ok2_all.deb  ...
+正在解压 python3-more-itertools (4.2.0-ok2) ...
+正在选中未选择的软件包 python3-zipp。
+准备解压 .../python3-zipp_1.0.0-ok2_all.deb  ...
+正在解压 python3-zipp (1.0.0-ok2) ...
+正在选中未选择的软件包 python3-importlib-metadata。
+准备解压 .../python3-importlib-metadata_4.12.0-ok3_all.deb  ...
+正在解压 python3-importlib-metadata (4.12.0-ok3) ...
+正在选中未选择的软件包 python3-markdown。
+准备解压 .../python3-markdown_3.4.1-ok2_all.deb  ...
+正在解压 python3-markdown (3.4.1-ok2) ...
+正在设置 python3-more-itertools (4.2.0-ok2) ...
+正在设置 python3-zipp (1.0.0-ok2) ...
+正在设置 python3-importlib-metadata (4.12.0-ok3) ...
+正在设置 python3-markdown (3.4.1-ok2) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-markdown'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: WARNING: Test dependencies are unsatisfiable - calling apt install on test deps directly for further data about failing dependencies in test logs
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --simulate python3-all python3-markdown python3-packaging python3-pygments python3-tidylib python3-yaml -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+没有可用的软件包 python3-pygments，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+E: 软件包 python3-pygments 没有可安装候选
+E: 无法定位软件包 python3-tidylib
+autopkgtest: DBG: testbed command exited with code 100
+autopkgtest: DBG: BadPackageError Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+python3-markdown     FAIL badpkg
+blame: ./src/python-markdown_3.4.1-ok2.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [06:06:23]: @@@@@@@@@@@@@@@@@@@@ summary
+python3-markdown     FAIL badpkg
+blame: ./src/python-markdown_3.4.1-ok2.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.uD8ONL
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 404593 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

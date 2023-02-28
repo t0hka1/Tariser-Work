@@ -1,0 +1,261 @@
+	./configure --build=riscv64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-option-checking --disable-silent-rules --libdir=\${prefix}/lib/riscv64-linux-gnu --runstatedir=/run --disable-maintainer-mode --disable-dependency-tracking
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... none
+checking for gcc option to accept ISO C99... none needed
+checking for gcc option to accept ISO Standard C... (cached) none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking whether ln -s works... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether make supports nested variables... (cached) yes
+checking build system type... riscv64-unknown-linux-gnu
+checking host system type... riscv64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert riscv64-unknown-linux-gnu file names to riscv64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert riscv64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether C compiler accepts "-Wc99-c11-compat"... yes
+checking whether C compiler accepts "-Werror=incompatible-pointer-types"... yes
+checking whether C compiler accepts "-Werror=int-conversion"... yes
+checking whether C compiler accepts "-Wnull-dereference"... yes
+checking for doxygen... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether g++ supports C++11 features with -std=c++11... yes
+checking for protobuf... yes
+checking google/protobuf/compiler/command_line_interface.h usability... yes
+checking google/protobuf/compiler/command_line_interface.h presence... yes
+checking for google/protobuf/compiler/command_line_interface.h... yes
+checking for protoc... /usr/bin/protoc
+checking if LD -Wl,--version-script works... yes
+checking whether self tests are run under valgrind... no
+checking whether to build with code coverage support... no
+checking whether byte ordering is bigendian... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating protobuf-c/libprotobuf-c.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+    protobuf-c 1.3.3
+
+        CC:                     gcc
+        CFLAGS:                 -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security
+        CXX:                    g++ -std=c++11
+        CXXFLAGS:               -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security
+        LDFLAGS:                -Wl,-Bsymbolic-functions -Wl,-z,relro
+        LIBS:                   
+
+        prefix:                 /usr
+        sysconfdir:             /etc
+        libdir:                 ${prefix}/lib/riscv64-linux-gnu
+        includedir:             ${prefix}/include
+        pkgconfigdir:           ${libdir}/pkgconfig
+
+        bigendian:              no
+        protobuf version:       libprotoc 3.6.1
+
+	make -j8
+/usr/bin/protoc -I. --cpp_out=. ./t/test-full.proto
+/usr/bin/protoc -I. --cpp_out=. ./t/test-full.proto
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_bytes_field.o `test -f 'protoc-c/c_bytes_field.cc' || echo './'`protoc-c/c_bytes_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_enum.o `test -f 'protoc-c/c_enum.cc' || echo './'`protoc-c/c_enum.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_enum_field.o `test -f 'protoc-c/c_enum_field.cc' || echo './'`protoc-c/c_enum_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_extension.o `test -f 'protoc-c/c_extension.cc' || echo './'`protoc-c/c_extension.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_field.o `test -f 'protoc-c/c_field.cc' || echo './'`protoc-c/c_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_file.o `test -f 'protoc-c/c_file.cc' || echo './'`protoc-c/c_file.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_generator.o `test -f 'protoc-c/c_generator.cc' || echo './'`protoc-c/c_generator.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_helpers.o `test -f 'protoc-c/c_helpers.cc' || echo './'`protoc-c/c_helpers.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_message.o `test -f 'protoc-c/c_message.cc' || echo './'`protoc-c/c_message.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_message_field.o `test -f 'protoc-c/c_message_field.cc' || echo './'`protoc-c/c_message_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_primitive_field.o `test -f 'protoc-c/c_primitive_field.cc' || echo './'`protoc-c/c_primitive_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_service.o `test -f 'protoc-c/c_service.cc' || echo './'`protoc-c/c_service.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_string_field.o `test -f 'protoc-c/c_string_field.cc' || echo './'`protoc-c/c_string_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-main.o `test -f 'protoc-c/main.cc' || echo './'`protoc-c/main.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code2/cxx_generate_packed_data-cxx-generate-packed-data.o `test -f 't/generated-code2/cxx-generate-packed-data.cc' || echo './'`t/generated-code2/cxx-generate-packed-data.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated_code2_cxx_generate_packed_data-test-full.pb.o `test -f 't/test-full.pb.cc' || echo './'`t/test-full.pb.cc
+/bin/bash ./libtool  --tag=CXX   --mode=link g++ -std=c++11  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o protoc-c/protoc-gen-c protoc-c/protoc_gen_c-c_bytes_field.o protoc-c/protoc_gen_c-c_enum.o protoc-c/protoc_gen_c-c_enum_field.o protoc-c/protoc_gen_c-c_extension.o protoc-c/protoc_gen_c-c_field.o protoc-c/protoc_gen_c-c_file.o protoc-c/protoc_gen_c-c_generator.o protoc-c/protoc_gen_c-c_helpers.o protoc-c/protoc_gen_c-c_message.o protoc-c/protoc_gen_c-c_message_field.o protoc-c/protoc_gen_c-c_primitive_field.o protoc-c/protoc_gen_c-c_service.o protoc-c/protoc_gen_c-c_string_field.o protoc-c/protoc_gen_c-main.o -lprotobuf -pthread -lprotoc 
+libtool: link: g++ -std=c++11 -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o protoc-c/protoc-gen-c protoc-c/protoc_gen_c-c_bytes_field.o protoc-c/protoc_gen_c-c_enum.o protoc-c/protoc_gen_c-c_enum_field.o protoc-c/protoc_gen_c-c_extension.o protoc-c/protoc_gen_c-c_field.o protoc-c/protoc_gen_c-c_file.o protoc-c/protoc_gen_c-c_generator.o protoc-c/protoc_gen_c-c_helpers.o protoc-c/protoc_gen_c-c_message.o protoc-c/protoc_gen_c-c_message_field.o protoc-c/protoc_gen_c-c_primitive_field.o protoc-c/protoc_gen_c-c_service.o protoc-c/protoc_gen_c-c_string_field.o protoc-c/protoc_gen_c-main.o -pthread  -lprotobuf -lprotoc -pthread
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-full.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-full.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-optimized.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-optimized.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-proto3.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-proto3.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue220/issue220.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue220/issue220.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue251/issue251.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue251/issue251.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue330/issue330.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue330/issue330.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue375/issue375.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue375/issue375.proto
+/bin/bash ./libtool  --tag=CXX   --mode=link g++ -std=c++11  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code2/cxx-generate-packed-data t/generated-code2/cxx_generate_packed_data-cxx-generate-packed-data.o t/generated_code2_cxx_generate_packed_data-test-full.pb.o -lprotobuf -pthread 
+libtool: link: g++ -std=c++11 -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code2/cxx-generate-packed-data t/generated-code2/cxx_generate_packed_data-cxx-generate-packed-data.o t/generated_code2_cxx_generate_packed_data-test-full.pb.o -pthread  -lprotobuf -pthread
+./t/generated-code2/cxx-generate-packed-data > ./t/generated-code2/test-full-cxx-output.inc
+make  all-am
+make[1]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protobuf-c/protobuf-c.lo protobuf-c/protobuf-c.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c protobuf-c/protobuf-c.c  -fPIC -DPIC -o protobuf-c/.libs/protobuf-c.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c protobuf-c/protobuf-c.c -o protobuf-c/protobuf-c.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -version-info 1:0:0 -no-undefined -Wl,--version-script=./protobuf-c/libprotobuf-c.sym  -Wl,-Bsymbolic-functions -Wl,-z,relro -o protobuf-c/libprotobuf-c.la -rpath /usr/lib/riscv64-linux-gnu protobuf-c/protobuf-c.lo  
+libtool: link: gcc -shared  -fPIC -DPIC  protobuf-c/.libs/protobuf-c.o    -g -O2 -fstack-protector-strong -Wl,--version-script=./protobuf-c/libprotobuf-c.sym -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro   -Wl,-soname -Wl,libprotobuf-c.so.1 -o protobuf-c/.libs/libprotobuf-c.so.1.0.0
+libtool: link: (cd "protobuf-c/.libs" && rm -f "libprotobuf-c.so.1" && ln -s "libprotobuf-c.so.1.0.0" "libprotobuf-c.so.1")
+libtool: link: (cd "protobuf-c/.libs" && rm -f "libprotobuf-c.so" && ln -s "libprotobuf-c.so.1.0.0" "libprotobuf-c.so")
+libtool: link: ar cr protobuf-c/.libs/libprotobuf-c.a  protobuf-c/protobuf-c.o
+libtool: link: ranlib protobuf-c/.libs/libprotobuf-c.a
+libtool: link: ( cd "protobuf-c/.libs" && rm -f "libprotobuf-c.la" && ln -s "../libprotobuf-c.la" "libprotobuf-c.la" )
+make[1]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+	make -j8 check "TESTSUITEFLAGS=-j8 --verbose" VERBOSE=1
+make  check-am
+make[1]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make  t/generated-code/test-generated-code t/generated-code2/test-generated-code2 t/version/version t/generated-code3/test-generated-code3 t/issue220/issue220 t/issue251/issue251 t/issue330/issue330 t/issue375/issue375
+make[2]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/test.pb-c.o t/test.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code2/test-generated-code2.o t/generated-code2/test-generated-code2.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/test-full.pb-c.o t/test-full.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/test-optimized.pb-c.o t/test-optimized.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -DPROTO3 -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated_code3_test_generated_code3-test-proto3.pb-c.o `test -f 't/test-proto3.pb-c.c' || echo './'`t/test-proto3.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code/test-generated-code.o t/generated-code/test-generated-code.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/version/version.o t/version/version.c
+gcc -DHAVE_CONFIG_H -I.  -DPROTO3 -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code/generated_code3_test_generated_code3-test-generated-code.o `test -f 't/generated-code/test-generated-code.c' || echo './'`t/generated-code/test-generated-code.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue220/issue220.o t/issue220/issue220.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue220/issue220.pb-c.o t/issue220/issue220.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue251/issue251.o t/issue251/issue251.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue251/issue251.pb-c.o t/issue251/issue251.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue330/issue330.o t/issue330/issue330.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue330/issue330.pb-c.o t/issue330/issue330.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue375/issue375.o t/issue375/issue375.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue375/issue375.pb-c.o t/issue375/issue375.pb-c.c
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code/test-generated-code t/generated-code/test-generated-code.o t/test.pb-c.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/version/version t/version/version.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code3/test-generated-code3 t/generated-code/generated_code3_test_generated_code3-test-generated-code.o t/generated_code3_test_generated_code3-test-proto3.pb-c.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue220/issue220 t/issue220/issue220.o t/issue220/issue220.pb-c.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue251/issue251 t/issue251/issue251.o t/issue251/issue251.pb-c.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue330/issue330 t/issue330/issue330.o t/issue330/issue330.pb-c.o protobuf-c/libprotobuf-c.la 
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code3/.libs/test-generated-code3 t/generated-code/generated_code3_test_generated_code3-test-generated-code.o t/generated_code3_test_generated_code3-test-proto3.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code/.libs/test-generated-code t/generated-code/test-generated-code.o t/test.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/version/.libs/version t/version/version.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue220/.libs/issue220 t/issue220/issue220.o t/issue220/issue220.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue251/.libs/issue251 t/issue251/issue251.o t/issue251/issue251.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue330/.libs/issue330 t/issue330/issue330.o t/issue330/issue330.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue375/issue375 t/issue375/issue375.o t/issue375/issue375.pb-c.o protobuf-c/libprotobuf-c.la 
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue375/.libs/issue375 t/issue375/issue375.o t/issue375/issue375.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code2/test-generated-code2 t/generated-code2/test-generated-code2.o t/test-full.pb-c.o t/test-optimized.pb-c.o protobuf-c/libprotobuf-c.la 
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code2/.libs/test-generated-code2 t/generated-code2/test-generated-code2.o t/test-full.pb-c.o t/test-optimized.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+make[2]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make  check-TESTS
+make[2]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make[3]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+PASS: t/issue330/issue330
+PASS: t/version/version
+PASS: t/issue220/issue220
+PASS: t/generated-code2/test-generated-code2
+PASS: t/issue251/issue251
+PASS: t/generated-code3/test-generated-code3
+PASS: t/generated-code/test-generated-code
+PASS: t/issue375/issue375
+============================================================================
+Testsuite summary for protobuf-c 1.3.3
+============================================================================
+# TOTAL: 8
+# PASS:  8
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[3]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make[2]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make[1]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'

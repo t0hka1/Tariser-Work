@@ -1,0 +1,4 @@
+nose-tests           FAIL badpkg
+blame: ./src/ubuntu-release-upgrader_20.04.18-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 ubuntu-release-upgrader-core 相匹配的软件包
+ (exit code 1)

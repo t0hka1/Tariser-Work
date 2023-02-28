@@ -1,0 +1,10 @@
+Module actions already disabled
+Module cgi already disabled
+Considering dependency proxy for proxy_fcgi:
+Enabling module proxy.
+Enabling module proxy_fcgi.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+Enabling conf php8.1-fpm.
+To activate the new configuration, you need to run:
+  systemctl reload apache2

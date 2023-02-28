@@ -1,0 +1,15 @@
+build-essential	12.8-ok1
+g++	4:9.3.0-ok7
+g++-9	9.3.0-ok4
+gcc	4:9.3.0-ok7
+gcc-9	9.3.0-ok4
+libcc1-0	10-20200411-ok5
+libexpat1-dev	2.2.9-ok3
+libffi8	3.4.4-ok3
+libgcc-9-dev	9.3.0-ok4
+libpython3-dev	3.8.2-ok2
+libpython3.8-dev	3.8.2-ok4
+libstdc++-9-dev	9.3.0-ok4
+python-gi-dev	3.36.0-ok1
+python3-dev	3.8.2-ok2
+python3.8-dev	3.8.2-ok4

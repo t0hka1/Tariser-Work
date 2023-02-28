@@ -1,0 +1,1217 @@
+autopkgtest: DBG: testbed init
+autopkgtest [02:44:19]: starting date: 2023-02-28
+autopkgtest [02:44:19]: version 5.20ubuntu1
+autopkgtest [02:44:19]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/more-itertools_4.2.0-ok2.dsc -o ./testing/more-itertools -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.z39b0fks/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.z39b0fks/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.z39b0fks/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.z39b0fks/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.z39b0fks/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.z39b0fks/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.z39b0fks/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.z39b0fks/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'0acdbad9-729b-4541-acd1-c3ff51458a39[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0acdbad9-729b-4541-acd1-c3ff51458a39[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'0acdbad9-729b-4541-acd1-c3ff51458a39[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0acdbad9-729b-4541-acd1-c3ff51458a39[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'0acdbad9-729b-4541-acd1-c3ff51458a39[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0acdbad9-729b-4541-acd1-c3ff51458a39[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'0acdbad9-729b-4541-acd1-c3ff51458a39[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0acdbad9-729b-4541-acd1-c3ff51458a39[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'0acdbad9-729b-4541-acd1-c3ff51458a39[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0acdbad9-729b-4541-acd1-c3ff51458a39[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.z39b0fks/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'0acdbad9-729b-4541-acd1-c3ff51458a39[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0acdbad9-729b-4541-acd1-c3ff51458a39[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.z39b0fks/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.z39b0fks/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.z39b0fks/runcmd chmod 1777 /tmp/autopkgtest.5GMy19
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.5GMy19
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.z39b0fks/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [02:45:22]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.5GMy19/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/testbed-packages ./testing/more-itertools/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/testbed-packages ./testing/more-itertools/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.z39b0fks/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.5GMy19/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/more-itertools/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.z39b0fks/runcmd sh -ec cat </tmp/autopkgtest.5GMy19/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [02:45:28]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [02:45:29]: @@@@@@@@@@@@@@@@@@@@ source ./src/more-itertools_4.2.0-ok2.dsc
+autopkgtest: DBG: blame += ./src/more-itertools_4.2.0-ok2.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.5GMy19'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/more-itertools_4.2.0-ok2.dsc /tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/more-itertools_4.2.0-ok2.dsc /tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.z39b0fks/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/more-itertools_4.2.0-ok2.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.z39b0fks/runcmd sh -ec cat >/tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.5GMy19'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/more-itertools_4.2.0.orig.tar.gz /tmp/autopkgtest.5GMy19/more-itertools_4.2.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/more-itertools_4.2.0.orig.tar.gz /tmp/autopkgtest.5GMy19/more-itertools_4.2.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.z39b0fks/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.5GMy19/more-itertools_4.2.0.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/more-itertools_4.2.0.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.z39b0fks/runcmd sh -ec cat >/tmp/autopkgtest.5GMy19/more-itertools_4.2.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.5GMy19/more-itertools_4.2.0.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.5GMy19'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/more-itertools_4.2.0-ok2.debian.tar.xz /tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/more-itertools_4.2.0-ok2.debian.tar.xz /tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.z39b0fks/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/more-itertools_4.2.0-ok2.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.z39b0fks/runcmd sh -ec cat >/tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.5GMy19/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.5GMy19/build.XXX
++ builddir=/tmp/autopkgtest.5GMy19/build.h5U
++ cd /tmp/autopkgtest.5GMy19/build.h5U
++ dpkg-source -x /tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.EuLapDcQ/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年09月21日 星期三 09时25分50秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.5GMy19/more-itertools_4.2.0-ok2.dsc
+dpkg-source: info: extracting more-itertools in src
+dpkg-source: info: unpacking more-itertools_4.2.0.orig.tar.gz
+dpkg-source: info: unpacking more-itertools_4.2.0-ok2.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [02:45:44]: testing package more-itertools version 4.2.0-ok2
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/build.h5U/src/debian/ ./testing/more-itertools/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/build.h5U/src/debian/ ./testing/more-itertools/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.z39b0fks/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.5GMy19/build.h5U/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/more-itertools/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.z39b0fks/runcmd sh -ec cd /tmp/autopkgtest.5GMy19/build.h5U/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/more-itertools/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency pypy
+autopkgtest: DBG: processing dependency pypy-more-itertools
+autopkgtest: DBG: marked alternatives ['pypy-more-itertools'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pypy-setuptools
+autopkgtest: DBG: Test defined: name command1 path None command "set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in pypy ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done" restrictions ['allow-stderr'] features [] depends ['pypy', 'pypy-more-itertools', 'pypy-setuptools'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python-all
+autopkgtest: DBG: processing dependency python-more-itertools
+autopkgtest: DBG: marked alternatives ['python-more-itertools'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-setuptools
+autopkgtest: DBG: Test defined: name command2 path None command "set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in $(pyversions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done" restrictions ['allow-stderr'] features [] depends ['python-all', 'python-more-itertools', 'python-setuptools'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-more-itertools
+autopkgtest: DBG: marked alternatives ['python3-more-itertools'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-setuptools
+autopkgtest: DBG: Test defined: name command3 path None command "set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done" restrictions ['allow-stderr'] features [] depends ['python3-all', 'python3-more-itertools', 'python3-setuptools'] clicks [] installed clicks []
+autopkgtest [02:45:45]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/build.h5U/src/ ./testing/more-itertools/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/build.h5U/src/ ./testing/more-itertools/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.z39b0fks/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.5GMy19/build.h5U/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/more-itertools/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.z39b0fks/runcmd sh -ec cd /tmp/autopkgtest.5GMy19/build.h5U/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/more-itertools/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency pypy
+autopkgtest: DBG: processing dependency pypy-more-itertools
+autopkgtest: DBG: marked alternatives ['pypy-more-itertools'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pypy-setuptools
+autopkgtest: DBG: Test defined: name command1 path None command "set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in pypy ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done" restrictions ['allow-stderr'] features [] depends ['pypy', 'pypy-more-itertools', 'pypy-setuptools'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python-all
+autopkgtest: DBG: processing dependency python-more-itertools
+autopkgtest: DBG: marked alternatives ['python-more-itertools'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-setuptools
+autopkgtest: DBG: Test defined: name command2 path None command "set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in $(pyversions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done" restrictions ['allow-stderr'] features [] depends ['python-all', 'python-more-itertools', 'python-setuptools'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-more-itertools
+autopkgtest: DBG: marked alternatives ['python3-more-itertools'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-setuptools
+autopkgtest: DBG: Test defined: name command3 path None command "set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done" restrictions ['allow-stderr'] features [] depends ['python3-all', 'python3-more-itertools', 'python3-setuptools'] clicks [] installed clicks []
+autopkgtest [02:45:46]: test command1: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['pypy', 'pypy-more-itertools', 'pypy-setuptools']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['pypy', 'pypy-more-itertools', 'pypy-setuptools']
+autopkgtest: DBG: install-deps: satisfying pypy, pypy-more-itertools, pypy-setuptools
+autopkgtest: DBG: install-deps: architecture resolved: pypy, pypy-more-itertools, pypy-setuptools
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.5GMy19'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/more-itertools/1-autopkgtest-satdep.deb /tmp/autopkgtest.5GMy19/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/more-itertools/1-autopkgtest-satdep.deb /tmp/autopkgtest.5GMy19/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.z39b0fks/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.5GMy19/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/more-itertools/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.z39b0fks/runcmd sh -ec cat >/tmp/autopkgtest.5GMy19/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.5GMy19/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.5GMy19/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 3
+Starting 2 pkgProblemResolver with broken count: 3
+Investigating (0) pypy-more-itertools:riscv64 < none -> 4.2.0-ok2 @un uN Ib >
+Broken pypy-more-itertools:riscv64 依赖 on pypy:riscv64 < none | 7.3.9-ok1 @un uH >
+  Considering pypy:riscv64 3 as a solution to pypy-more-itertools:riscv64 0
+  Holding Back pypy-more-itertools:riscv64 rather than change pypy:riscv64
+Investigating (0) pypy-six:riscv64 < none -> 1.14.0-ok1 @un uN Ib >
+Broken pypy-six:riscv64 依赖 on pypy:riscv64 < none | 7.3.9-ok1 @un uH >
+  Considering pypy:riscv64 3 as a solution to pypy-six:riscv64 0
+  Holding Back pypy-six:riscv64 rather than change pypy:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on pypy:riscv64 < none | 7.3.9-ok1 @un uH >
+  Considering pypy:riscv64 3 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change pypy:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pypy-more-itertools'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 pypy-more-itertools 相匹配的软件包
+ (exit code 1)
+command1             FAIL badpkg
+blame: ./src/more-itertools_4.2.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy-more-itertools 相匹配的软件包
+ (exit code 1)
+autopkgtest [02:46:05]: test command2: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['pypy', 'pypy-more-itertools', 'pypy-setuptools'], deps_new=['python-all', 'python-more-itertools', 'python-setuptools']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.z39b0fks/runcmd rm -rf -- /tmp/autopkgtest.5GMy19
+qemu-system-riscv64: terminating on signal 15 from pid 357739 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.rrzmf71h/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.rrzmf71h/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.rrzmf71h/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.rrzmf71h/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.rrzmf71h/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.rrzmf71h/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.rrzmf71h/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.rrzmf71h/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.rrzmf71h/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'26a4de2c-aebb-4bfb-86d8-3823e65f6186[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.rrzmf71h/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.5GMy19
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.rrzmf71h/runcmd'], downtmp = /tmp/autopkgtest.5GMy19
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.5GMy19
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.rrzmf71h/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [02:47:07]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.5GMy19/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/testbed-packages ./testing/more-itertools/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/testbed-packages ./testing/more-itertools/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.rrzmf71h/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.5GMy19/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/more-itertools/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.rrzmf71h/runcmd sh -ec cat </tmp/autopkgtest.5GMy19/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python-all', 'python-more-itertools', 'python-setuptools']
+autopkgtest: DBG: install-deps: satisfying python-all, python-more-itertools, python-setuptools
+autopkgtest: DBG: install-deps: architecture resolved: python-all, python-more-itertools, python-setuptools
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.5GMy19'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/more-itertools/2-autopkgtest-satdep.deb /tmp/autopkgtest.5GMy19/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/more-itertools/2-autopkgtest-satdep.deb /tmp/autopkgtest.5GMy19/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.rrzmf71h/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.5GMy19/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/more-itertools/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.rrzmf71h/runcmd sh -ec cat >/tmp/autopkgtest.5GMy19/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.5GMy19/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.5GMy19/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 3
+Starting 2 pkgProblemResolver with broken count: 3
+Investigating (0) python2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to python2.7:riscv64 4
+  Holding Back python2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2-stdlib:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-stdlib:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2-stdlib:riscv64 1
+  Holding Back libpython2-stdlib:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering python2.7:riscv64 4 as a solution to python2:riscv64 1
+  Holding Back python2:riscv64 rather than change python2.7:riscv64
+Investigating (0) python-more-itertools:riscv64 < none -> 4.2.0-ok2 @un uN Ib >
+Broken python-more-itertools:riscv64 依赖 on python2:any:any < none @un H > (< 2.8)
+  Considering python2:riscv64 1 as a solution to python-more-itertools:riscv64 0
+  Holding Back python-more-itertools:riscv64 rather than change python2:any:any
+Investigating (0) python-all:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-all:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (= 2.7.18-ok1)
+  Considering python2:riscv64 1 as a solution to python-all:riscv64 0
+  Holding Back python-all:riscv64 rather than change python2:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python-all:riscv64 < none | 2.7.18-ok1 @un uH >
+  Considering python-all:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python-all:riscv64
+Investigating (1) python-six:riscv64 < none -> 1.14.0-ok1 @un uN Ib >
+Broken python-six:riscv64 依赖 on python2:any:any < none @un H > (< 2.8)
+  Considering python2:riscv64 1 as a solution to python-six:riscv64 1
+  Holding Back python-six:riscv64 rather than change python2:any:any
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python-more-itertools'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python-more-itertools 相匹配的软件包
+ (exit code 1)
+command2             FAIL badpkg
+blame: ./src/more-itertools_4.2.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-more-itertools 相匹配的软件包
+ (exit code 1)
+autopkgtest [02:47:32]: test command3: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['python-all', 'python-more-itertools', 'python-setuptools'], deps_new=['python3-all', 'python3-more-itertools', 'python3-setuptools']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.rrzmf71h/runcmd rm -rf -- /tmp/autopkgtest.5GMy19
+qemu-system-riscv64: terminating on signal 15 from pid 357739 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.ilmodzcf/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.ilmodzcf/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.ilmodzcf/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.ilmodzcf/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.ilmodzcf/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.ilmodzcf/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.ilmodzcf/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.ilmodzcf/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ilmodzcf/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a0aa8d95-69ec-45ab-bbdc-5761aec7a156[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ilmodzcf/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.5GMy19
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.ilmodzcf/runcmd'], downtmp = /tmp/autopkgtest.5GMy19
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.5GMy19
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.ilmodzcf/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [02:48:34]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.5GMy19/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/testbed-packages ./testing/more-itertools/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/testbed-packages ./testing/more-itertools/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ilmodzcf/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.5GMy19/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/more-itertools/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ilmodzcf/runcmd sh -ec cat </tmp/autopkgtest.5GMy19/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-all', 'python3-more-itertools', 'python3-setuptools']
+autopkgtest: DBG: install-deps: satisfying python3-all, python3-more-itertools, python3-setuptools
+autopkgtest: DBG: install-deps: architecture resolved: python3-all, python3-more-itertools, python3-setuptools
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.5GMy19'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/more-itertools/3-autopkgtest-satdep.deb /tmp/autopkgtest.5GMy19/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/more-itertools/3-autopkgtest-satdep.deb /tmp/autopkgtest.5GMy19/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.ilmodzcf/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.5GMy19/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/more-itertools/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ilmodzcf/runcmd sh -ec cat >/tmp/autopkgtest.5GMy19/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.5GMy19/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.5GMy19/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  python3-all python3-more-itertools python3-setuptools
+建议安装：
+  python-setuptools-doc
+下列【新】软件包将被安装：
+  python3-all python3-more-itertools python3-setuptools
+升级了 0 个软件包，新安装了 3 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 494 kB 的归档。
+解压缩后会消耗 2,818 kB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all riscv64 3.8.2-ok2 [916 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-more-itertools all 4.2.0-ok2 [39.6 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-setuptools all 65.3.0-ok5 [454 kB]
+已下载 494 kB，耗时 1秒 (569 kB/s)
+正在选中未选择的软件包 python3-all。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../python3-all_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-more-itertools。
+准备解压 .../python3-more-itertools_4.2.0-ok2_all.deb  ...
+正在解压 python3-more-itertools (4.2.0-ok2) ...
+正在选中未选择的软件包 python3-setuptools。
+准备解压 .../python3-setuptools_65.3.0-ok5_all.deb  ...
+正在解压 python3-setuptools (65.3.0-ok5) ...
+正在设置 python3-more-itertools (4.2.0-ok2) ...
+正在设置 python3-setuptools (65.3.0-ok5) ...
+正在设置 python3-all (3.8.2-ok2) ...
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-more-itertools'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 python3-all python3-more-itertools
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'python3-all', 'python3-more-itertools'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156195 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.5GMy19/command3-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/command3-packages.all ./testing/more-itertools/command3-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/command3-packages.all ./testing/more-itertools/command3-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ilmodzcf/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.5GMy19/command3-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/more-itertools/command3-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ilmodzcf/runcmd sh -ec cat </tmp/autopkgtest.5GMy19/command3-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.5GMy19/build.h5U/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.5GMy19/build.h5U'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/more-itertools/tests-tree/ /tmp/autopkgtest.5GMy19/build.h5U/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/more-itertools/tests-tree/ /tmp/autopkgtest.5GMy19/build.h5U/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/more-itertools/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.ilmodzcf/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.5GMy19/build.h5U/src/; then mkdir -- /tmp/autopkgtest.5GMy19/build.h5U/src/; fi; cd /tmp/autopkgtest.5GMy19/build.h5U/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/more-itertools/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ilmodzcf/runcmd sh -ec if ! test -d /tmp/autopkgtest.5GMy19/build.h5U/src/; then mkdir -- /tmp/autopkgtest.5GMy19/build.h5U/src/; fi; cd /tmp/autopkgtest.5GMy19/build.h5U/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.5GMy19/build.h5U/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [02:49:31]: test command3: set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done
+autopkgtest [02:49:31]: test command3: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.5GMy19/build.h5U/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.5GMy19/command3-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.5GMy19/command3-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.5GMy19/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.5GMy19/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; touch /tmp/autopkgtest.5GMy19/command3-stdout /tmp/autopkgtest.5GMy19/command3-stderr; bash -ec \'set -e ; cp -r setup.* README.rst docs/ more_itertools/tests "$AUTOPKGTEST_TMP" ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py setup.py test ; done\' 2> >(tee -a /tmp/autopkgtest.5GMy19/command3-stderr >&2) > >(tee -a /tmp/autopkgtest.5GMy19/command3-stdout);'], kind test, sout raw, serr raw, env []
+Testing with python3.8:
+WARNING: Testing via this command is deprecated and will be removed in a future version. Users looking for a generic test entry point independent of test runner are encouraged to use tox.
+running test
+running egg_info
+creating more_itertools.egg-info
+writing more_itertools.egg-info/PKG-INFO
+writing dependency_links to more_itertools.egg-info/dependency_links.txt
+writing requirements to more_itertools.egg-info/requires.txt
+writing top-level names to more_itertools.egg-info/top_level.txt
+writing manifest file 'more_itertools.egg-info/SOURCES.txt'
+reading manifest file 'more_itertools.egg-info/SOURCES.txt'
+writing manifest file 'more_itertools.egg-info/SOURCES.txt'
+running build_ext
+test_call_once (more_itertools.tests.test_more.AdjacentTests)
+Test that the predicate is only called once per item. ... ok
+test_consecutive_true (more_itertools.tests.test_more.AdjacentTests)
+Test that when the predicate matches multiple consecutive elements ... ok
+test_distance (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_empty_iterable (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_grouping (more_itertools.tests.test_more.AdjacentTests)
+Test interaction of adjacent() with groupby_transform() ... ok
+test_large_distance (more_itertools.tests.test_more.AdjacentTests)
+Test distance larger than the length of the iterable ... ok
+test_length_one (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_negative_distance (more_itertools.tests.test_more.AdjacentTests)
+Test that adjacent() raises an error with negative distance ... ok
+test_typical (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_zero_distance (more_itertools.tests.test_more.AdjacentTests)
+Test that adjacent() reduces to zip+map when distance is 0 ... ok
+test_nonseq_reversed (more_itertools.tests.test_more.AlwaysReversibleTests) ... ok
+test_regular_reversed (more_itertools.tests.test_more.AlwaysReversibleTests) ... ok
+test_basic (more_itertools.tests.test_more.BucketTests) ... ok
+test_in (more_itertools.tests.test_more.BucketTests) ... ok
+test_validator (more_itertools.tests.test_more.BucketTests) ... ok
+test_even (more_itertools.tests.test_more.ChunkedTests)
+Test when ``n`` divides evenly into the length of the iterable. ... ok
+test_odd (more_itertools.tests.test_more.ChunkedTests)
+Test when ``n`` does not divide evenly into the length of the ... ok
+test_duplicates (more_itertools.tests.test_more.CircularShiftsTests) ... ok
+test_empty (more_itertools.tests.test_more.CircularShiftsTests) ... ok
+test_simple_circular_shifts (more_itertools.tests.test_more.CircularShiftsTests) ... ok
+test_alias (more_itertools.tests.test_more.CollateTests) ... ok
+test_default (more_itertools.tests.test_more.CollateTests)
+Test with the default `key` function. ... ok
+test_empty (more_itertools.tests.test_more.CollateTests)
+Be nice if passed an empty list of iterables. ... ok
+test_key (more_itertools.tests.test_more.CollateTests)
+Test using a custom `key` function. ... ok
+test_one (more_itertools.tests.test_more.CollateTests)
+Work when only 1 iterable is passed. ... ok
+test_reverse (more_itertools.tests.test_more.CollateTests)
+Test the `reverse` kwarg. ... ok
+test_custom_ordering (more_itertools.tests.test_more.ConsecutiveGroupsTest) ... ok
+test_exotic_ordering (more_itertools.tests.test_more.ConsecutiveGroupsTest) ... ok
+test_numbers (more_itertools.tests.test_more.ConsecutiveGroupsTest) ... ok
+test_consumer (more_itertools.tests.test_more.ConsumerTests) ... ok
+test_basic (more_itertools.tests.test_more.CountCycleTests) ... ok
+test_empty (more_itertools.tests.test_more.CountCycleTests) ... ok
+test_negative (more_itertools.tests.test_more.CountCycleTests) ... ok
+test_custom (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_empty (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_normal (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_one (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_roundtrip (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_distinct_permutations (more_itertools.tests.test_more.DistinctPermutationsTests)
+Make sure the output for ``distinct_permutations()`` is the same as ... ok
+test_other_iterables (more_itertools.tests.test_more.DistinctPermutationsTests)
+Make sure ``distinct_permutations()`` accepts a different type of ... ok
+test_basic (more_itertools.tests.test_more.DistributeTest) ... ok
+test_invalid_n (more_itertools.tests.test_more.DistributeTest) ... ok
+test_large_n (more_itertools.tests.test_more.DistributeTest) ... ok
+test_basic (more_itertools.tests.test_more.DivideTest) ... ok
+test_invalid_n (more_itertools.tests.test_more.DivideTest) ... ok
+test_large_n (more_itertools.tests.test_more.DivideTest) ... ok
+test_empty (more_itertools.tests.test_more.ExactlyNTests)
+Return ``True`` if the iterable is empty and ``n`` is 0 ... ok
+test_false (more_itertools.tests.test_more.ExactlyNTests)
+Iterable does not have ``n`` ``True`` elements ... ok
+test_true (more_itertools.tests.test_more.ExactlyNTests)
+Iterable has ``n`` ``True`` elements ... ok
+test_default (more_itertools.tests.test_more.FirstTests)
+It should return the provided default arg for empty iterables. ... ok
+test_empty_stop_iteration (more_itertools.tests.test_more.FirstTests)
+It should raise StopIteration for empty iterables. ... ok
+test_many (more_itertools.tests.test_more.FirstTests)
+Test that it works on many-item iterables. ... ok
+test_one (more_itertools.tests.test_more.FirstTests)
+Test that it doesn't raise StopIteration prematurely. ... ok
+test_default_funcs (more_itertools.tests.test_more.GroupByTransformTests)
+Test that groupby_transform() with default args mimics groupby() ... ok
+test_no_valuefunc (more_itertools.tests.test_more.GroupByTransformTests) ... ok
+test_valuefunc (more_itertools.tests.test_more.GroupByTransformTests) ... ok
+test_ilen (more_itertools.tests.test_more.IlenTests)
+Sanity-checks for ``ilen()``. ... ok
+test_even (more_itertools.tests.test_more.InterleaveLongestTests) ... ok
+test_mixed_types (more_itertools.tests.test_more.InterleaveLongestTests) ... ok
+test_short (more_itertools.tests.test_more.InterleaveLongestTests) ... ok
+test_even (more_itertools.tests.test_more.InterleaveTests) ... ok
+test_mixed_types (more_itertools.tests.test_more.InterleaveTests) ... ok
+test_short (more_itertools.tests.test_more.InterleaveTests) ... ok
+test_even (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_n (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_n_zero (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_nested (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_not_iterable (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_odd (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_all (more_itertools.tests.test_more.IsliceExtendedTests) ... ok
+test_zero_step (more_itertools.tests.test_more.IsliceExtendedTests) ... ok
+test_custom_pred (more_itertools.tests.test_more.LocateTests) ... ok
+test_default_pred (more_itertools.tests.test_more.LocateTests) ... ok
+test_no_matches (more_itertools.tests.test_more.LocateTests) ... ok
+test_basic (more_itertools.tests.test_more.MakeDecoratorTests) ... ok
+test_result_index (more_itertools.tests.test_more.MakeDecoratorTests) ... ok
+test_wrap_class (more_itertools.tests.test_more.MakeDecoratorTests) ... ok
+test_default (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_reducefunc (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_ret (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_valuefunc (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_arg_count (more_itertools.tests.test_more.NumericRangeTests) ... ok
+test_basic (more_itertools.tests.test_more.NumericRangeTests) ... ok
+test_zero_step (more_itertools.tests.test_more.NumericRangeTests) ... ok
+test_basic (more_itertools.tests.test_more.OneTests) ... ok
+test_too_long (more_itertools.tests.test_more.OneTests) ... ok
+test_too_short (more_itertools.tests.test_more.OneTests) ... ok
+test_invalid_n (more_itertools.tests.test_more.PaddedTest) ... ok
+test_next_multiple (more_itertools.tests.test_more.PaddedTest) ... ok
+test_no_n (more_itertools.tests.test_more.PaddedTest) ... ok
+test_valid_n (more_itertools.tests.test_more.PaddedTest) ... ok
+test_empty (more_itertools.tests.test_more.PeekableTests)
+Tests prepending in front of an empty iterable ... ok
+test_indexing (more_itertools.tests.test_more.PeekableTests)
+Indexing into the peekable shouldn't advance the iterator. ... ok
+test_multi_prepend (more_itertools.tests.test_more.PeekableTests)
+Tests prepending multiple items and getting them in proper order ... ok
+test_multi_prepend_peek (more_itertools.tests.test_more.PeekableTests)
+Tests prepending multiple elements and getting them in reverse order ... ok
+test_passthrough (more_itertools.tests.test_more.PeekableTests)
+Iterating a peekable without using ``peek()`` or ``prepend()`` ... ok
+test_peek_default (more_itertools.tests.test_more.PeekableTests)
+Make sure passing a default into ``peek()`` works. ... ok
+test_prepend (more_itertools.tests.test_more.PeekableTests)
+Tests intersperesed ``prepend()`` and ``next()`` calls ... ok
+test_prepend_after_stop (more_itertools.tests.test_more.PeekableTests)
+Test resuming iteration after a previous exhaustion ... ok
+test_prepend_indexing (more_itertools.tests.test_more.PeekableTests)
+Tests interaction between prepending and indexing ... ok
+test_prepend_iterable (more_itertools.tests.test_more.PeekableTests)
+Tests prepending from an iterable ... ok
+test_prepend_many (more_itertools.tests.test_more.PeekableTests)
+Tests that prepending a huge number of elements works ... ok
+test_prepend_reversed (more_itertools.tests.test_more.PeekableTests)
+Tests prepending from a reversed iterable ... ok
+test_prepend_slicing (more_itertools.tests.test_more.PeekableTests)
+Tests interaction between prepending and slicing ... ok
+test_prepend_truthiness (more_itertools.tests.test_more.PeekableTests)
+Tests that ``__bool__()`` or ``__nonzero__()`` works properly ... ok
+test_simple_peeking (more_itertools.tests.test_more.PeekableTests)
+Make sure ``next`` and ``peek`` advance and don't advance the ... ok
+test_slicing (more_itertools.tests.test_more.PeekableTests)
+Slicing the peekable shouldn't advance the iterator. ... ok
+test_slicing_error (more_itertools.tests.test_more.PeekableTests) ... ok
+test_slicing_reset (more_itertools.tests.test_more.PeekableTests)
+Test slicing on a fresh iterable each time ... ok
+test_truthiness (more_itertools.tests.test_more.PeekableTests)
+Make sure a ``peekable`` tests true iff there are items remaining in ... ok
+test_decode (more_itertools.tests.test_more.RunLengthTest) ... ok
+test_encode (more_itertools.tests.test_more.RunLengthTest) ... ok
+test_elements (more_itertools.tests.test_more.SeekableTest) ... ok
+test_exhaustion_reset (more_itertools.tests.test_more.SeekableTest) ... ok
+test_forward (more_itertools.tests.test_more.SeekableTest) ... ok
+test_partial_reset (more_itertools.tests.test_more.SeekableTest) ... ok
+test_past_end (more_itertools.tests.test_more.SeekableTest) ... ok
+test_abc_methods (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_indexing (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_init (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_slicing (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_update (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_before_after (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_before_fails (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_chunked (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_individual (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_even (more_itertools.tests.test_more.SlicedTests)
+Test when the length of the sequence is divisible by *n* ... ok
+test_not_sliceable (more_itertools.tests.test_more.SlicedTests) ... ok
+test_odd (more_itertools.tests.test_more.SlicedTests)
+Test when the length of the sequence is not divisible by *n* ... ok
+test_invalid_key_list (more_itertools.tests.test_more.SortTogetherTest)
+tests `key_list` for indexes not available in `iterables` ... ok
+test_key_list (more_itertools.tests.test_more.SortTogetherTest)
+tests `key_list` including default, iterables include duplicates ... ok
+test_reverse (more_itertools.tests.test_more.SortTogetherTest)
+tests `reverse` to ensure a reverse sort for `key_list` iterables ... ok
+test_uneven_iterables (more_itertools.tests.test_more.SortTogetherTest)
+tests trimming of iterables to the shortest length before sorting ... ok
+test_ends_with_sep (more_itertools.tests.test_more.SplitAfterTest) ... ok
+test_no_sep (more_itertools.tests.test_more.SplitAfterTest) ... ok
+test_starts_with_sep (more_itertools.tests.test_more.SplitAfterTest) ... ok
+test_seperators (more_itertools.tests.test_more.SplitAtTests) ... ok
+test_ends_with_sep (more_itertools.tests.test_more.SplitBeforeTest) ... ok
+test_no_sep (more_itertools.tests.test_more.SplitBeforeTest) ... ok
+test_starts_with_sep (more_itertools.tests.test_more.SplitBeforeTest) ... ok
+test_basic (more_itertools.tests.test_more.SpyTests) ... ok
+test_too_many (more_itertools.tests.test_more.SpyTests) ... ok
+test_unpacking (more_itertools.tests.test_more.SpyTests) ... ok
+test_zero (more_itertools.tests.test_more.SpyTests) ... ok
+test_default (more_itertools.tests.test_more.StaggerTest) ... ok
+test_longest (more_itertools.tests.test_more.StaggerTest) ... ok
+test_offsets (more_itertools.tests.test_more.StaggerTest) ... ok
+test_hashable (more_itertools.tests.test_more.StripFunctionTests) ... ok
+test_math (more_itertools.tests.test_more.StripFunctionTests) ... ok
+test_not_hashable (more_itertools.tests.test_more.StripFunctionTests) ... ok
+test_base_type (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_generator (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_iterables (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_none (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_single (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_strings (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_collapse (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_flatten (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_to_level (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_to_list (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_to_string (more_itertools.tests.test_more.TestCollapse) ... ok
+test_all_unique (more_itertools.tests.test_more.UniqueToEachTests)
+When all the input iterables are unique the output should match ... ok
+test_duplicates (more_itertools.tests.test_more.UniqueToEachTests)
+When there are duplicates in any of the input iterables that aren't ... ok
+test_mixed (more_itertools.tests.test_more.UniqueToEachTests)
+When the input iterables contain different types the function should ... ok
+test_basic (more_itertools.tests.test_more.WindowedTests) ... ok
+test_fillvalue (more_itertools.tests.test_more.WindowedTests)
+When sizes don't match evenly, the given fill value should be used. ... ok
+test_large_size (more_itertools.tests.test_more.WindowedTests)
+When the window size is larger than the iterable, and no fill value is ... ok
+test_negative (more_itertools.tests.test_more.WindowedTests)
+When the window size is negative, ValueError should be raised. ... ok
+test_step (more_itertools.tests.test_more.WindowedTests)
+The window should advance by the number of steps provided ... ok
+test_zero (more_itertools.tests.test_more.WindowedTests)
+When the window size is zero, an empty tuple should be emitted. ... ok
+test_with_iter (more_itertools.tests.test_more.WithIterTests) ... ok
+test_longest (more_itertools.tests.test_more.ZipOffsetTest) ... ok
+test_mismatch (more_itertools.tests.test_more.ZipOffsetTest) ... ok
+test_shortest (more_itertools.tests.test_more.ZipOffsetTest) ... ok
+SequenceView (more_itertools.more)
+Doctest: more_itertools.more.SequenceView ... ok
+adjacent (more_itertools.more)
+Doctest: more_itertools.more.adjacent ... ok
+always_iterable (more_itertools.more)
+Doctest: more_itertools.more.always_iterable ... ok
+always_reversible (more_itertools.more)
+Doctest: more_itertools.more.always_reversible ... ok
+bucket (more_itertools.more)
+Doctest: more_itertools.more.bucket ... ok
+chunked (more_itertools.more)
+Doctest: more_itertools.more.chunked ... ok
+circular_shifts (more_itertools.more)
+Doctest: more_itertools.more.circular_shifts ... ok
+collapse (more_itertools.more)
+Doctest: more_itertools.more.collapse ... ok
+consecutive_groups (more_itertools.more)
+Doctest: more_itertools.more.consecutive_groups ... ok
+consumer (more_itertools.more)
+Doctest: more_itertools.more.consumer ... ok
+count_cycle (more_itertools.more)
+Doctest: more_itertools.more.count_cycle ... ok
+difference (more_itertools.more)
+Doctest: more_itertools.more.difference ... ok
+distinct_permutations (more_itertools.more)
+Doctest: more_itertools.more.distinct_permutations ... ok
+distribute (more_itertools.more)
+Doctest: more_itertools.more.distribute ... ok
+divide (more_itertools.more)
+Doctest: more_itertools.more.divide ... ok
+exactly_n (more_itertools.more)
+Doctest: more_itertools.more.exactly_n ... ok
+first (more_itertools.more)
+Doctest: more_itertools.more.first ... ok
+groupby_transform (more_itertools.more)
+Doctest: more_itertools.more.groupby_transform ... ok
+ilen (more_itertools.more)
+Doctest: more_itertools.more.ilen ... ok
+interleave (more_itertools.more)
+Doctest: more_itertools.more.interleave ... ok
+interleave_longest (more_itertools.more)
+Doctest: more_itertools.more.interleave_longest ... ok
+intersperse (more_itertools.more)
+Doctest: more_itertools.more.intersperse ... ok
+islice_extended (more_itertools.more)
+Doctest: more_itertools.more.islice_extended ... ok
+iterate (more_itertools.more)
+Doctest: more_itertools.more.iterate ... ok
+locate (more_itertools.more)
+Doctest: more_itertools.more.locate ... ok
+lstrip (more_itertools.more)
+Doctest: more_itertools.more.lstrip ... ok
+make_decorator (more_itertools.more)
+Doctest: more_itertools.more.make_decorator ... ok
+map_reduce (more_itertools.more)
+Doctest: more_itertools.more.map_reduce ... ok
+numeric_range (more_itertools.more)
+Doctest: more_itertools.more.numeric_range ... ok
+one (more_itertools.more)
+Doctest: more_itertools.more.one ... ok
+padded (more_itertools.more)
+Doctest: more_itertools.more.padded ... ok
+peekable (more_itertools.more)
+Doctest: more_itertools.more.peekable ... ok
+prepend (more_itertools.more.peekable)
+Doctest: more_itertools.more.peekable.prepend ... ok
+rstrip (more_itertools.more)
+Doctest: more_itertools.more.rstrip ... ok
+run_length (more_itertools.more)
+Doctest: more_itertools.more.run_length ... ok
+seekable (more_itertools.more)
+Doctest: more_itertools.more.seekable ... ok
+side_effect (more_itertools.more)
+Doctest: more_itertools.more.side_effect ... ok
+sliced (more_itertools.more)
+Doctest: more_itertools.more.sliced ... ok
+sort_together (more_itertools.more)
+Doctest: more_itertools.more.sort_together ... ok
+split_after (more_itertools.more)
+Doctest: more_itertools.more.split_after ... ok
+split_at (more_itertools.more)
+Doctest: more_itertools.more.split_at ... ok
+split_before (more_itertools.more)
+Doctest: more_itertools.more.split_before ... ok
+spy (more_itertools.more)
+Doctest: more_itertools.more.spy ... ok
+stagger (more_itertools.more)
+Doctest: more_itertools.more.stagger ... ok
+strip (more_itertools.more)
+Doctest: more_itertools.more.strip ... ok
+unique_to_each (more_itertools.more)
+Doctest: more_itertools.more.unique_to_each ... ok
+windowed (more_itertools.more)
+Doctest: more_itertools.more.windowed ... ok
+zip_offset (more_itertools.more)
+Doctest: more_itertools.more.zip_offset ... ok
+test_bogus_function (more_itertools.tests.test_recipes.AccumulateTests)
+Test accumulate with an invalid function ... ok
+test_custom_function (more_itertools.tests.test_recipes.AccumulateTests)
+Test accumulate with a custom function ... ok
+test_default (more_itertools.tests.test_recipes.AccumulateTests)
+Test accumulate with the default function (addition) ... ok
+test_empty (more_itertools.tests.test_recipes.AccumulateTests)
+Test that an empty input returns an empty output ... ok
+test_empty (more_itertools.tests.test_recipes.AllEqualTests)
+Return True if the iterable is empty ... ok
+test_false (more_itertools.tests.test_recipes.AllEqualTests)
+Not everything is equal ... ok
+test_one (more_itertools.tests.test_recipes.AllEqualTests)
+Return True if the iterable is singular ... ok
+test_tricky (more_itertools.tests.test_recipes.AllEqualTests)
+Not everything is identical, but everything is equal ... ok
+test_true (more_itertools.tests.test_recipes.AllEqualTests)
+Everything is equal ... ok
+test_negative_consume (more_itertools.tests.test_recipes.ConsumeTests)
+Check that negative consumsion throws an error ... ok
+test_null_consume (more_itertools.tests.test_recipes.ConsumeTests)
+Check the null case ... ok
+test_sanity (more_itertools.tests.test_recipes.ConsumeTests)
+Test basic functionality ... ok
+test_total_consume (more_itertools.tests.test_recipes.ConsumeTests)
+Check that iterator is totally consumed by default ... ok
+test_happy_path (more_itertools.tests.test_recipes.DotproductTests)
+simple dotproduct example ... ok
+test_default (more_itertools.tests.test_recipes.FirstTrueTests)
+Test with a default keyword ... ok
+test_nothing_true (more_itertools.tests.test_recipes.FirstTrueTests)
+Test default return value. ... ok
+test_pred (more_itertools.tests.test_recipes.FirstTrueTests)
+Test with a custom predicate ... ok
+test_something_true (more_itertools.tests.test_recipes.FirstTrueTests)
+Test with no keywords ... ok
+test_basic_usage (more_itertools.tests.test_recipes.FlattenTests)
+ensure list of lists is flattened one level ... ok
+test_single_level (more_itertools.tests.test_recipes.FlattenTests)
+ensure list of lists is flattened only one level ... ok
+test_even (more_itertools.tests.test_recipes.GrouperTests)
+Test when group size divides evenly into the length of ... ok
+test_fill_value (more_itertools.tests.test_recipes.GrouperTests)
+Test that the fill value is used to pad the final group ... ok
+test_odd (more_itertools.tests.test_recipes.GrouperTests)
+Test when group size does not divide evenly into the length of the ... ok
+test_exact_exception (more_itertools.tests.test_recipes.IterExceptTests)
+ensure the exact specified exception is caught ... ok
+test_first (more_itertools.tests.test_recipes.IterExceptTests)
+ensure first is run before the function ... ok
+test_generic_exception (more_itertools.tests.test_recipes.IterExceptTests)
+ensure the generic exception can be caught ... ok
+test_uncaught_exception_is_raised (more_itertools.tests.test_recipes.IterExceptTests)
+ensure a non-specified exception is raised ... ok
+test_happy_path (more_itertools.tests.test_recipes.NcyclesTests)
+cycle a sequence three times ... ok
+test_null_case (more_itertools.tests.test_recipes.NcyclesTests)
+asking for 0 cycles should return an empty iterator ... ok
+test_pathalogical_case (more_itertools.tests.test_recipes.NcyclesTests)
+asking for negative cycles should return an empty iterator ... ok
+test_basic (more_itertools.tests.test_recipes.NthCombinationTests) ... ok
+test_long (more_itertools.tests.test_recipes.NthCombinationTests) ... ok
+test_basic (more_itertools.tests.test_recipes.NthTests)
+Make sure the nth item is returned ... ok
+test_default (more_itertools.tests.test_recipes.NthTests)
+Ensure a default value is returned when nth item not found ... ok
+test_negative_item_raises (more_itertools.tests.test_recipes.NthTests)
+Ensure asking for a negative item raises an exception ... ok
+test_happy_path (more_itertools.tests.test_recipes.PadnoneTests)
+wrapper iterator should return None indefinitely ... ok
+test_base_case (more_itertools.tests.test_recipes.PairwiseTests)
+ensure an iterable will return pairwise ... ok
+test_short_case (more_itertools.tests.test_recipes.PairwiseTests)
+ensure an empty iterator if there's not enough values to pair ... ok
+test_arbitrary (more_itertools.tests.test_recipes.PartitionTests)
+Test when pred() returns an integer ... ok
+test_bool (more_itertools.tests.test_recipes.PartitionTests)
+Test when pred() returns a boolean ... ok
+test_combinatorics (more_itertools.tests.test_recipes.PowersetTests)
+Ensure a proper enumeration ... ok
+test_basic (more_itertools.tests.test_recipes.PrependTests) ... ok
+test_multiple (more_itertools.tests.test_recipes.PrependTests) ... ok
+test_custom_predicate (more_itertools.tests.test_recipes.QuantifyTests)
+Ensure non-default predicates return as expected ... ok
+test_happy_path (more_itertools.tests.test_recipes.QuantifyTests)
+Make sure True count is returned ... ok
+test_no_replacement (more_itertools.tests.test_recipes.RandomCombinationTests)
+ensure that elements are sampled without replacement ... ok
+test_psuedorandomness (more_itertools.tests.test_recipes.RandomCombinationTests)
+ensure different subsets of the iterable get returned over many ... ok
+test_pseudorandomness (more_itertools.tests.test_recipes.RandomCombinationWithReplacementTests)
+ensure different subsets of the iterable get returned over many ... ok
+test_replacement (more_itertools.tests.test_recipes.RandomCombinationWithReplacementTests)
+ensure that elements are sampled with replacement ... ok
+test_full_permutation (more_itertools.tests.test_recipes.RandomPermutationTests)
+ensure every item from the iterable is returned in a new ordering ... ok
+test_partial_permutation (more_itertools.tests.test_recipes.RandomPermutationTests)
+ensure all returned items are from the iterable, that the returned ... ok
+test_list_with_repeat (more_itertools.tests.test_recipes.RandomProductTests)
+ensure multiple items are chosen, and that they appear to be chosen ... ok
+test_simple_lists (more_itertools.tests.test_recipes.RandomProductTests)
+Ensure that one item is chosen from each list in each pair. ... ok
+test_added_arguments (more_itertools.tests.test_recipes.RepeatfuncTests)
+ensure arguments are applied to the function ... ok
+test_finite_repeat (more_itertools.tests.test_recipes.RepeatfuncTests)
+ensure limited repeat when times is provided ... ok
+test_null_times (more_itertools.tests.test_recipes.RepeatfuncTests)
+repeat 0 should return an empty iterator ... ok
+test_simple_repeat (more_itertools.tests.test_recipes.RepeatfuncTests)
+test simple repeated functions ... ok
+test_even_groups (more_itertools.tests.test_recipes.RoundrobinTests)
+Ensure ordered output from evenly populated iterables ... ok
+test_uneven_groups (more_itertools.tests.test_recipes.RoundrobinTests)
+Ensure ordered output from unevenly populated iterables ... ok
+test_count (more_itertools.tests.test_recipes.TabulateTests)
+Ensure tabulate accepts specific count ... ok
+test_simple_tabulate (more_itertools.tests.test_recipes.TabulateTests)
+Test the happy path ... ok
+test_equal (more_itertools.tests.test_recipes.TailTests)
+Length of iterable is equal to the requested tail ... ok
+test_greater (more_itertools.tests.test_recipes.TailTests)
+Length of iterable is greather than requested tail ... ok
+test_less (more_itertools.tests.test_recipes.TailTests)
+Length of iterable is less than requested tail ... ok
+test_negative_take (more_itertools.tests.test_recipes.TakeTests)
+Make sure taking negative items results in a ValueError ... ok
+test_null_take (more_itertools.tests.test_recipes.TakeTests)
+Check the null case ... ok
+test_simple_take (more_itertools.tests.test_recipes.TakeTests)
+Test basic usage ... ok
+test_take_too_much (more_itertools.tests.test_recipes.TakeTests)
+Taking more than an iterator has remaining should return what the ... ok
+test_custom_key (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure the custom key comparison works ... ok
+test_everseen (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure duplicate elements are ignored ... ok
+test_unhashable (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure things work for unhashable items ... ok
+test_unhashable_key (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure things work for unhashable items with a custom key ... ok
+test_custom_key (more_itertools.tests.test_recipes.UniqueJustseenTests)
+ensure the custom key comparison works ... ok
+test_justseen (more_itertools.tests.test_recipes.UniqueJustseenTests)
+ensure only last item is remembered ... ok
+accumulate (more_itertools.recipes)
+Doctest: more_itertools.recipes.accumulate ... ok
+all_equal (more_itertools.recipes)
+Doctest: more_itertools.recipes.all_equal ... ok
+consume (more_itertools.recipes)
+Doctest: more_itertools.recipes.consume ... ok
+dotproduct (more_itertools.recipes)
+Doctest: more_itertools.recipes.dotproduct ... ok
+first_true (more_itertools.recipes)
+Doctest: more_itertools.recipes.first_true ... ok
+flatten (more_itertools.recipes)
+Doctest: more_itertools.recipes.flatten ... ok
+grouper (more_itertools.recipes)
+Doctest: more_itertools.recipes.grouper ... ok
+iter_except (more_itertools.recipes)
+Doctest: more_itertools.recipes.iter_except ... ok
+ncycles (more_itertools.recipes)
+Doctest: more_itertools.recipes.ncycles ... ok
+nth (more_itertools.recipes)
+Doctest: more_itertools.recipes.nth ... ok
+padnone (more_itertools.recipes)
+Doctest: more_itertools.recipes.padnone ... ok
+pairwise (more_itertools.recipes)
+Doctest: more_itertools.recipes.pairwise ... ok
+partition (more_itertools.recipes)
+Doctest: more_itertools.recipes.partition ... ok
+powerset (more_itertools.recipes)
+Doctest: more_itertools.recipes.powerset ... ok
+prepend (more_itertools.recipes)
+Doctest: more_itertools.recipes.prepend ... ok
+quantify (more_itertools.recipes)
+Doctest: more_itertools.recipes.quantify ... ok
+random_combination (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_combination ... ok
+random_combination_with_replacement (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_combination_with_replacement ... ok
+random_permutation (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_permutation ... ok
+random_product (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_product ... ok
+repeatfunc (more_itertools.recipes)
+Doctest: more_itertools.recipes.repeatfunc ... ok
+roundrobin (more_itertools.recipes)
+Doctest: more_itertools.recipes.roundrobin ... ok
+tabulate (more_itertools.recipes)
+Doctest: more_itertools.recipes.tabulate ... ok
+tail (more_itertools.recipes)
+Doctest: more_itertools.recipes.tail ... ok
+take (more_itertools.recipes)
+Doctest: more_itertools.recipes.take ... ok
+unique_everseen (more_itertools.recipes)
+Doctest: more_itertools.recipes.unique_everseen ... ok
+unique_justseen (more_itertools.recipes)
+Doctest: more_itertools.recipes.unique_justseen ... ok
+
+----------------------------------------------------------------------
+Ran 323 tests in 2.883s
+
+OK
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [02:49:48]: test command3: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/command3-stdout ./testing/more-itertools/command3-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/command3-stdout ./testing/more-itertools/command3-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ilmodzcf/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.5GMy19/command3-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/more-itertools/command3-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ilmodzcf/runcmd sh -ec cat </tmp/autopkgtest.5GMy19/command3-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/command3-stderr ./testing/more-itertools/command3-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/command3-stderr ./testing/more-itertools/command3-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ilmodzcf/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.5GMy19/command3-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/more-itertools/command3-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ilmodzcf/runcmd sh -ec cat </tmp/autopkgtest.5GMy19/command3-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [02:49:49]: test command3:  - - - - - - - - - - results - - - - - - - - - -
+command3             PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.5GMy19/command3-artifacts/ ./testing/more-itertools/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.5GMy19/command3-artifacts/ ./testing/more-itertools/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ilmodzcf/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.5GMy19/command3-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/more-itertools/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ilmodzcf/runcmd sh -ec cd /tmp/autopkgtest.5GMy19/command3-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/more-itertools/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.5GMy19/command3-artifacts', '/tmp/autopkgtest.5GMy19/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [02:49:51]: @@@@@@@@@@@@@@@@@@@@ summary
+command1             FAIL badpkg
+blame: ./src/more-itertools_4.2.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy-more-itertools 相匹配的软件包
+ (exit code 1)
+command2             FAIL badpkg
+blame: ./src/more-itertools_4.2.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-more-itertools 相匹配的软件包
+ (exit code 1)
+command3             PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.5GMy19
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 357739 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

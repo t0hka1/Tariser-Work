@@ -1,0 +1,7 @@
+testing DB_File reading...
+current DB file read OK
+buster OK
+jessie OK
+stretch OK
+testing DB_File writing...
+ DB file written OK

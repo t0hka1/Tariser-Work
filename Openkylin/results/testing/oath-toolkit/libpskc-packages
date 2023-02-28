@@ -1,0 +1,16 @@
+build-essential	12.8-ok1
+g++	4:9.3.0-ok7
+g++-9	9.3.0-ok4
+gcc	4:9.3.0-ok7
+gcc-9	9.3.0-ok4
+libcc1-0	10-20200411-ok5
+libgcc-9-dev	9.3.0-ok4
+liboath-dev	2.6.7-ok3
+liboath0	2.6.7-ok3
+libpskc-dev	2.6.7-ok3
+libpskc0	2.6.7-ok3
+libstdc++-9-dev	9.3.0-ok4
+libxmlsec1	1.2.33-ok1
+libxmlsec1-openssl	1.2.33-ok1
+oathtool	2.6.7-ok3
+pskctool	2.6.7-ok3

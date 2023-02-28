@@ -1,0 +1,4 @@
+debian/t/control.t .. ok
+All tests successful.
+Files=1, Tests=542,  8 wallclock secs ( 1.08 usr  0.23 sys +  5.63 cusr  1.86 csys =  8.80 CPU)
+Result: PASS

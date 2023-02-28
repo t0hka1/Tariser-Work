@@ -1,0 +1,602 @@
+autopkgtest: DBG: testbed init
+autopkgtest [22:57:44]: starting date: 2023-02-27
+autopkgtest [22:57:44]: version 5.20ubuntu1
+autopkgtest [22:57:44]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/po4a_0.66-ok1.dsc -o ./testing/po4a -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.7enu7ex1/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.7enu7ex1/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.7enu7ex1/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.7enu7ex1/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.7enu7ex1/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.7enu7ex1/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.7enu7ex1/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.7enu7ex1/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'168b8451-4bff-4a2b-9ad4-071c5066f267[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'168b8451-4bff-4a2b-9ad4-071c5066f267[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'168b8451-4bff-4a2b-9ad4-071c5066f267[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'168b8451-4bff-4a2b-9ad4-071c5066f267[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'168b8451-4bff-4a2b-9ad4-071c5066f267[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'168b8451-4bff-4a2b-9ad4-071c5066f267[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'168b8451-4bff-4a2b-9ad4-071c5066f267[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'168b8451-4bff-4a2b-9ad4-071c5066f267[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'168b8451-4bff-4a2b-9ad4-071c5066f267[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'168b8451-4bff-4a2b-9ad4-071c5066f267[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.7enu7ex1/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'168b8451-4bff-4a2b-9ad4-071c5066f267[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'168b8451-4bff-4a2b-9ad4-071c5066f267[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.7enu7ex1/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.7enu7ex1/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.7enu7ex1/runcmd chmod 1777 /tmp/autopkgtest.WC6dXC
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.WC6dXC
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.7enu7ex1/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [22:58:48]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.WC6dXC/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.WC6dXC/testbed-packages ./testing/po4a/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.WC6dXC/testbed-packages ./testing/po4a/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.7enu7ex1/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.WC6dXC/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/po4a/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.7enu7ex1/runcmd sh -ec cat </tmp/autopkgtest.WC6dXC/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [22:58:54]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [22:58:54]: @@@@@@@@@@@@@@@@@@@@ source ./src/po4a_0.66-ok1.dsc
+autopkgtest: DBG: blame += ./src/po4a_0.66-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.WC6dXC'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/po4a_0.66-ok1.dsc /tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/po4a_0.66-ok1.dsc /tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.7enu7ex1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/po4a_0.66-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.7enu7ex1/runcmd sh -ec cat >/tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.WC6dXC'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/po4a_0.66.orig.tar.gz /tmp/autopkgtest.WC6dXC/po4a_0.66.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/po4a_0.66.orig.tar.gz /tmp/autopkgtest.WC6dXC/po4a_0.66.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.7enu7ex1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.WC6dXC/po4a_0.66.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/po4a_0.66.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.7enu7ex1/runcmd sh -ec cat >/tmp/autopkgtest.WC6dXC/po4a_0.66.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.WC6dXC/po4a_0.66.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.WC6dXC'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/po4a_0.66-ok1.debian.tar.xz /tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/po4a_0.66-ok1.debian.tar.xz /tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.7enu7ex1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/po4a_0.66-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.7enu7ex1/runcmd sh -ec cat >/tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.WC6dXC/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.WC6dXC/build.XXX
++ builddir=/tmp/autopkgtest.WC6dXC/build.gIn
++ cd /tmp/autopkgtest.WC6dXC/build.gIn
++ dpkg-source -x /tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.eSdQul5v/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年05月16日 星期一 08时49分17秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.WC6dXC/po4a_0.66-ok1.dsc
+dpkg-source: info: extracting po4a in src
+dpkg-source: info: unpacking po4a_0.66.orig.tar.gz
+dpkg-source: info: unpacking po4a_0.66-ok1.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [22:59:14]: testing package po4a version 0.66-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.WC6dXC/build.gIn/src/debian/ ./testing/po4a/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.WC6dXC/build.gIn/src/debian/ ./testing/po4a/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.7enu7ex1/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.WC6dXC/build.gIn/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/po4a/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.7enu7ex1/runcmd sh -ec cd /tmp/autopkgtest.WC6dXC/build.gIn/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/po4a/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: autodep8 failed to generate control (exit status 1): 
+autopkgtest [22:59:14]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.WC6dXC/build.gIn/src/ ./testing/po4a/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.WC6dXC/build.gIn/src/ ./testing/po4a/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.7enu7ex1/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.WC6dXC/build.gIn/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/po4a/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.7enu7ex1/runcmd sh -ec cd /tmp/autopkgtest.WC6dXC/build.gIn/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/po4a/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: autodep8 generated control: -----
+Test-Command: /usr/share/pkg-perl-autopkgtest/runner build-deps
+Depends: @, @builddeps@, pkg-perl-autopkgtest, 
+Restrictions: skippable, 
+Features: test-name=autodep8-perl-build-deps
+
+Test-Command: /usr/share/pkg-perl-autopkgtest/runner runtime-deps
+Depends: @, pkg-perl-autopkgtest, 
+Restrictions: skippable, superficial, 
+Features: test-name=autodep8-perl
+
+Test-Command: /usr/share/pkg-perl-autopkgtest/runner runtime-deps-and-recommends
+Depends: @, pkg-perl-autopkgtest, 
+Restrictions: needs-recommends, skippable, superficial, 
+Features: test-name=autodep8-perl-recommends
+
+-------
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency po4a
+autopkgtest: DBG: processing dependency @builddeps@
+autopkgtest: DBG: synthesised dependency debhelper-compat (= 13)
+autopkgtest: DBG: synthesised dependency libmodule-build-perl
+autopkgtest: DBG: synthesised dependency docbook
+autopkgtest: DBG: synthesised dependency docbook-xml
+autopkgtest: DBG: synthesised dependency docbook-xsl
+autopkgtest: DBG: synthesised dependency gettext
+autopkgtest: DBG: synthesised dependency libpod-parser-perl
+autopkgtest: DBG: synthesised dependency libsgmls-perl
+autopkgtest: DBG: synthesised dependency libterm-readkey-perl
+autopkgtest: DBG: synthesised dependency libunicode-linebreak-perl
+autopkgtest: DBG: synthesised dependency libyaml-tiny-perl
+autopkgtest: DBG: synthesised dependency opensp
+autopkgtest: DBG: synthesised dependency perl
+autopkgtest: DBG: synthesised dependency texlive-binaries
+autopkgtest: DBG: synthesised dependency texlive-latex-base
+autopkgtest: DBG: synthesised dependency xsltproc
+autopkgtest: DBG: synthesised dependency build-essential
+autopkgtest: DBG: processing dependency pkg-perl-autopkgtest
+autopkgtest: DBG: Test defined: name autodep8-perl-build-deps path None command "/usr/share/pkg-perl-autopkgtest/runner build-deps" restrictions ['skippable'] features ['test-name=autodep8-perl-build-deps'] depends ['po4a', 'debhelper-compat (= 13)', 'libmodule-build-perl', 'docbook', 'docbook-xml', 'docbook-xsl', 'gettext', 'libpod-parser-perl', 'libsgmls-perl', 'libterm-readkey-perl', 'libunicode-linebreak-perl', 'libyaml-tiny-perl', 'opensp', 'perl', 'texlive-binaries', 'texlive-latex-base', 'xsltproc', 'build-essential', 'pkg-perl-autopkgtest'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency po4a
+autopkgtest: DBG: processing dependency pkg-perl-autopkgtest
+autopkgtest: DBG: Test defined: name autodep8-perl path None command "/usr/share/pkg-perl-autopkgtest/runner runtime-deps" restrictions ['skippable', 'superficial'] features ['test-name=autodep8-perl'] depends ['po4a', 'pkg-perl-autopkgtest'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency po4a
+autopkgtest: DBG: processing dependency pkg-perl-autopkgtest
+autopkgtest: DBG: processing dependency @recommends@
+autopkgtest: DBG: synthesised dependency liblocale-gettext-perl
+autopkgtest: DBG: synthesised dependency libterm-readkey-perl
+autopkgtest: DBG: synthesised dependency libtext-wrapi18n-perl
+autopkgtest: DBG: synthesised dependency libunicode-linebreak-perl
+autopkgtest: DBG: Test defined: name autodep8-perl-recommends path None command "/usr/share/pkg-perl-autopkgtest/runner runtime-deps-and-recommends" restrictions ['needs-recommends', 'skippable', 'superficial'] features ['test-name=autodep8-perl-recommends'] depends ['po4a', 'pkg-perl-autopkgtest', 'liblocale-gettext-perl', 'libterm-readkey-perl', 'libtext-wrapi18n-perl', 'libunicode-linebreak-perl'] clicks [] installed clicks []
+autopkgtest [22:59:17]: test autodep8-perl-build-deps: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['po4a', 'debhelper-compat (= 13)', 'libmodule-build-perl', 'docbook', 'docbook-xml', 'docbook-xsl', 'gettext', 'libpod-parser-perl', 'libsgmls-perl', 'libterm-readkey-perl', 'libunicode-linebreak-perl', 'libyaml-tiny-perl', 'opensp', 'perl', 'texlive-binaries', 'texlive-latex-base', 'xsltproc', 'build-essential', 'pkg-perl-autopkgtest']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['po4a', 'debhelper-compat (= 13)', 'libmodule-build-perl', 'docbook', 'docbook-xml', 'docbook-xsl', 'gettext', 'libpod-parser-perl', 'libsgmls-perl', 'libterm-readkey-perl', 'libunicode-linebreak-perl', 'libyaml-tiny-perl', 'opensp', 'perl', 'texlive-binaries', 'texlive-latex-base', 'xsltproc', 'build-essential', 'pkg-perl-autopkgtest']
+autopkgtest: DBG: install-deps: satisfying po4a, debhelper-compat (= 13), libmodule-build-perl, docbook, docbook-xml, docbook-xsl, gettext, libpod-parser-perl, libsgmls-perl, libterm-readkey-perl, libunicode-linebreak-perl, libyaml-tiny-perl, opensp, perl, texlive-binaries, texlive-latex-base, xsltproc, build-essential, pkg-perl-autopkgtest
+autopkgtest: DBG: install-deps: architecture resolved: po4a, debhelper-compat (= 13), libmodule-build-perl, docbook, docbook-xml, docbook-xsl, gettext, libpod-parser-perl, libsgmls-perl, libterm-readkey-perl, libunicode-linebreak-perl, libyaml-tiny-perl, opensp, perl, texlive-binaries, texlive-latex-base, xsltproc, build-essential, pkg-perl-autopkgtest
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.WC6dXC'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/po4a/1-autopkgtest-satdep.deb /tmp/autopkgtest.WC6dXC/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/po4a/1-autopkgtest-satdep.deb /tmp/autopkgtest.WC6dXC/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.7enu7ex1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.WC6dXC/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/po4a/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.7enu7ex1/runcmd sh -ec cat >/tmp/autopkgtest.WC6dXC/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.WC6dXC/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.WC6dXC/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on po4a:riscv64 < none | 0.66-ok1 @un uH >
+  Considering po4a:riscv64 1 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change po4a:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  autoconf automake autopoint autotools-dev build-essential cpp g++ g++-9 gcc
+  gcc-9 libcc1-0 libgcc-9-dev libsigsegv2 libstdc++-9-dev libtool m4
+建议安装：
+  autoconf-archive gnu-standards autoconf-doc cpp-doc gcc-9-doc bison flex
+  gcc-doc gcc-multilib gdb manpages-dev gcc-9-locales libstdc++-9-doc
+  libtool-doc gfortran | fortran95-compiler gcj-jdk m4-doc
+推荐安装：
+  libltdl-dev
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  autoconf automake autopoint autotools-dev build-essential g++ g++-9 gcc
+  gcc-9 libcc1-0 libgcc-9-dev libsigsegv2 libstdc++-9-dev libtool m4
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 15 个软件包，要卸载 1 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 21.8 MB 的归档。
+解压缩后会消耗 86.2 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libsigsegv2 riscv64 2.12-ok1 [11.5 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 m4 riscv64 1.4.18-ok2 [191 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autoconf all 2.71-ok2 [390 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autotools-dev all 20220506-ok1 [41.6 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 automake all 1:1.16.5-ok1 [557 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autopoint all 0.19.8.1-ok1 [410 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libtool all 2.4.6-ok1 [159 kB]
+已下载 21.8 MB，耗时 15秒 (1,468 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+正在选中未选择的软件包 libsigsegv2:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libsigsegv2_2.12-ok1_riscv64.deb  ...
+正在解压 libsigsegv2:riscv64 (2.12-ok1) ...
+正在选中未选择的软件包 m4。
+准备解压 .../01-m4_1.4.18-ok2_riscv64.deb  ...
+正在解压 m4 (1.4.18-ok2) ...
+正在选中未选择的软件包 autoconf。
+准备解压 .../02-autoconf_2.71-ok2_all.deb  ...
+正在解压 autoconf (2.71-ok2) ...
+正在选中未选择的软件包 autotools-dev。
+准备解压 .../03-autotools-dev_20220506-ok1_all.deb  ...
+正在解压 autotools-dev (20220506-ok1) ...
+正在选中未选择的软件包 automake。
+准备解压 .../04-automake_1%3a1.16.5-ok1_all.deb  ...
+正在解压 automake (1:1.16.5-ok1) ...
+正在选中未选择的软件包 autopoint。
+准备解压 .../05-autopoint_0.19.8.1-ok1_all.deb  ...
+正在解压 autopoint (0.19.8.1-ok1) ...
+准备解压 .../06-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../07-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../08-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../09-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../10-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../11-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../12-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../13-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../14-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在选中未选择的软件包 libtool。
+准备解压 .../15-libtool_2.4.6-ok1_all.deb  ...
+正在解压 libtool (2.4.6-ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 autotools-dev (20220506-ok1) ...
+正在设置 libsigsegv2:riscv64 (2.12-ok1) ...
+正在设置 autopoint (0.19.8.1-ok1) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libtool (2.4.6-ok1) ...
+正在设置 m4 (1.4.18-ok2) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 autoconf (2.71-ok2) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 automake (1:1.16.5-ok1) ...
+update-alternatives: 使用 /usr/bin/automake-1.16 来在自动模式中提供 /usr/bin/automake (automake)
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 install-info (6.7.0.dfsg.2-ok1) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'po4a'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autodep8-perl-build-deps FAIL badpkg
+blame: ./src/po4a_0.66-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autopkgtest [23:00:42]: test autodep8-perl: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['po4a', 'debhelper-compat (= 13)', 'libmodule-build-perl', 'docbook', 'docbook-xml', 'docbook-xsl', 'gettext', 'libpod-parser-perl', 'libsgmls-perl', 'libterm-readkey-perl', 'libunicode-linebreak-perl', 'libyaml-tiny-perl', 'opensp', 'perl', 'texlive-binaries', 'texlive-latex-base', 'xsltproc', 'build-essential', 'pkg-perl-autopkgtest'], deps_new=['po4a', 'pkg-perl-autopkgtest']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.7enu7ex1/runcmd rm -rf -- /tmp/autopkgtest.WC6dXC
+qemu-system-riscv64: terminating on signal 15 from pid 304007 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.nsi4r6m1/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.nsi4r6m1/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.nsi4r6m1/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.nsi4r6m1/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.nsi4r6m1/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.nsi4r6m1/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.nsi4r6m1/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.nsi4r6m1/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.nsi4r6m1/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'cdfd46ba-73f4-469b-b0ef-3e31e1b751a0[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.nsi4r6m1/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.WC6dXC
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.nsi4r6m1/runcmd'], downtmp = /tmp/autopkgtest.WC6dXC
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.WC6dXC
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.nsi4r6m1/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [23:01:49]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.WC6dXC/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.WC6dXC/testbed-packages ./testing/po4a/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.WC6dXC/testbed-packages ./testing/po4a/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.nsi4r6m1/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.WC6dXC/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/po4a/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.nsi4r6m1/runcmd sh -ec cat </tmp/autopkgtest.WC6dXC/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['po4a', 'pkg-perl-autopkgtest']
+autopkgtest: DBG: install-deps: satisfying po4a, pkg-perl-autopkgtest
+autopkgtest: DBG: install-deps: architecture resolved: po4a, pkg-perl-autopkgtest
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.WC6dXC'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/po4a/2-autopkgtest-satdep.deb /tmp/autopkgtest.WC6dXC/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/po4a/2-autopkgtest-satdep.deb /tmp/autopkgtest.WC6dXC/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.nsi4r6m1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.WC6dXC/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/po4a/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.nsi4r6m1/runcmd sh -ec cat >/tmp/autopkgtest.WC6dXC/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.WC6dXC/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.WC6dXC/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on po4a:riscv64 < none | 0.66-ok1 @un uH >
+  Considering po4a:riscv64 1 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change po4a:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'po4a'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autodep8-perl        FAIL badpkg
+blame: ./src/po4a_0.66-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autopkgtest [23:02:16]: test autodep8-perl-recommends: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['po4a', 'pkg-perl-autopkgtest'], deps_new=['po4a', 'pkg-perl-autopkgtest', 'liblocale-gettext-perl', 'libterm-readkey-perl', 'libtext-wrapi18n-perl', 'libunicode-linebreak-perl']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['po4a', 'pkg-perl-autopkgtest', 'liblocale-gettext-perl', 'libterm-readkey-perl', 'libtext-wrapi18n-perl', 'libunicode-linebreak-perl']
+autopkgtest: DBG: install-deps: satisfying po4a, pkg-perl-autopkgtest, liblocale-gettext-perl, libterm-readkey-perl, libtext-wrapi18n-perl, libunicode-linebreak-perl
+autopkgtest: DBG: install-deps: architecture resolved: po4a, pkg-perl-autopkgtest, liblocale-gettext-perl, libterm-readkey-perl, libtext-wrapi18n-perl, libunicode-linebreak-perl
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.WC6dXC'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/po4a/3-autopkgtest-satdep.deb /tmp/autopkgtest.WC6dXC/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/po4a/3-autopkgtest-satdep.deb /tmp/autopkgtest.WC6dXC/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.nsi4r6m1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.WC6dXC/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/po4a/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.nsi4r6m1/runcmd sh -ec cat >/tmp/autopkgtest.WC6dXC/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.WC6dXC/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.WC6dXC/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on po4a:riscv64 < none | 0.66-ok1 @un uH >
+  Considering po4a:riscv64 1 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change po4a:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'po4a'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autodep8-perl-recommends FAIL badpkg
+blame: ./src/po4a_0.66-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [23:02:33]: @@@@@@@@@@@@@@@@@@@@ summary
+autodep8-perl-build-deps FAIL badpkg
+blame: ./src/po4a_0.66-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autodep8-perl        FAIL badpkg
+blame: ./src/po4a_0.66-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autodep8-perl-recommends FAIL badpkg
+blame: ./src/po4a_0.66-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 po4a 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.WC6dXC
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 304007 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

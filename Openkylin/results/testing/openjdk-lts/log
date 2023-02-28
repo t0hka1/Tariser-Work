@@ -1,0 +1,714 @@
+autopkgtest: DBG: testbed init
+autopkgtest [14:34:09]: starting date: 2023-02-27
+autopkgtest [14:34:09]: version 5.20ubuntu1
+autopkgtest [14:34:09]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/openjdk-lts_11.0.16+8-ok2.dsc -o ./testing/openjdk-lts -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.714v2hg9/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.714v2hg9/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.714v2hg9/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.714v2hg9/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.714v2hg9/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.714v2hg9/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.714v2hg9/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.714v2hg9/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.714v2hg9/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'24e97e3b-9fdd-4ea7-a65b-59f501b9d224[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.714v2hg9/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.714v2hg9/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.714v2hg9/runcmd chmod 1777 /tmp/autopkgtest.Prk9PE
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.Prk9PE
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.714v2hg9/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [14:35:10]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Prk9PE/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Prk9PE/testbed-packages ./testing/openjdk-lts/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Prk9PE/testbed-packages ./testing/openjdk-lts/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Prk9PE/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/openjdk-lts/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat </tmp/autopkgtest.Prk9PE/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [14:35:16]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [14:35:16]: @@@@@@@@@@@@@@@@@@@@ source ./src/openjdk-lts_11.0.16+8-ok2.dsc
+autopkgtest: DBG: blame += ./src/openjdk-lts_11.0.16+8-ok2.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Prk9PE'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/openjdk-lts_11.0.16%2B8-ok2.dsc /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16%2B8-ok2.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/openjdk-lts_11.0.16%2B8-ok2.dsc /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16%2B8-ok2.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/openjdk-lts_11.0.16+8-ok2.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat >/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Prk9PE'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/openjdk-lts_11.0.16%2B8.orig.tar.gz /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16%2B8.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/openjdk-lts_11.0.16%2B8.orig.tar.gz /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16%2B8.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/openjdk-lts_11.0.16+8.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat >/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Prk9PE'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/openjdk-lts_11.0.16%2B8-ok2.debian.tar.xz /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16%2B8-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/openjdk-lts_11.0.16%2B8-ok2.debian.tar.xz /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16%2B8-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/openjdk-lts_11.0.16+8-ok2.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat >/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.Prk9PE/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.Prk9PE/build.XXX
++ builddir=/tmp/autopkgtest.Prk9PE/build.i2g
++ cd /tmp/autopkgtest.Prk9PE/build.i2g
++ dpkg-source -x /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.l2LTU3T7/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年11月18日 星期五 03时20分06秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.Prk9PE/openjdk-lts_11.0.16+8-ok2.dsc
+dpkg-source: info: extracting openjdk-lts in src
+dpkg-source: info: unpacking openjdk-lts_11.0.16+8.orig.tar.gz
+dpkg-source: info: unpacking openjdk-lts_11.0.16+8-ok2.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 0001-Add-system-pcsclite.diff.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [14:39:23]: testing package openjdk-lts version 11.0.16+8-ok2
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Prk9PE/build.i2g/src/debian/ ./testing/openjdk-lts/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Prk9PE/build.i2g/src/debian/ ./testing/openjdk-lts/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Prk9PE/build.i2g/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/openjdk-lts/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cd /tmp/autopkgtest.Prk9PE/build.i2g/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/openjdk-lts/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-source
+autopkgtest: DBG: synthesised dependency openjdk-11-doc
+autopkgtest: DBG: synthesised dependency openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]
+autopkgtest: DBG: processing dependency default-jre-headless
+autopkgtest: DBG: processing dependency jtreg:native (>= 5.1-b1-0~)
+autopkgtest: DBG: processing dependency testng:native
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: Test defined: name hotspot path debian/tests/hotspot command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name jaxp path debian/tests/jaxp command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name langtools path debian/tests/langtools command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-source
+autopkgtest: DBG: synthesised dependency openjdk-11-doc
+autopkgtest: DBG: synthesised dependency openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]
+autopkgtest: DBG: processing dependency default-jre-headless
+autopkgtest: DBG: processing dependency jtreg:native (>= 5.1-b1-0~)
+autopkgtest: DBG: processing dependency testng:native
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency xfwm4:native
+autopkgtest: DBG: processing dependency xvfb
+autopkgtest: DBG: processing dependency dbus-x11
+autopkgtest: DBG: processing dependency zip
+autopkgtest: DBG: Test defined: name jdk path debian/tests/jdk command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential', 'xfwm4:native', 'xvfb', 'dbus-x11', 'zip'] clicks [] installed clicks []
+autopkgtest [14:39:24]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Prk9PE/build.i2g/src/ ./testing/openjdk-lts/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Prk9PE/build.i2g/src/ ./testing/openjdk-lts/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Prk9PE/build.i2g/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/openjdk-lts/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cd /tmp/autopkgtest.Prk9PE/build.i2g/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/openjdk-lts/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-source
+autopkgtest: DBG: synthesised dependency openjdk-11-doc
+autopkgtest: DBG: synthesised dependency openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]
+autopkgtest: DBG: processing dependency default-jre-headless
+autopkgtest: DBG: processing dependency jtreg:native (>= 5.1-b1-0~)
+autopkgtest: DBG: processing dependency testng:native
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: Test defined: name hotspot path debian/tests/hotspot command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name jaxp path debian/tests/jaxp command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name langtools path debian/tests/langtools command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-source
+autopkgtest: DBG: synthesised dependency openjdk-11-doc
+autopkgtest: DBG: synthesised dependency openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]
+autopkgtest: DBG: synthesised dependency openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]
+autopkgtest: DBG: processing dependency default-jre-headless
+autopkgtest: DBG: processing dependency jtreg:native (>= 5.1-b1-0~)
+autopkgtest: DBG: processing dependency testng:native
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency xfwm4:native
+autopkgtest: DBG: processing dependency xvfb
+autopkgtest: DBG: processing dependency dbus-x11
+autopkgtest: DBG: processing dependency zip
+autopkgtest: DBG: Test defined: name jdk path debian/tests/jdk command "None" restrictions ['allow-stderr', 'skippable', 'flaky'] features [] depends ['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential', 'xfwm4:native', 'xvfb', 'dbus-x11', 'zip'] clicks [] installed clicks []
+autopkgtest [14:41:25]: test hotspot: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential']
+autopkgtest: DBG: install-deps: satisfying openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-source, openjdk-11-doc, openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x], default-jre-headless, jtreg:native (>= 5.1-b1-0~), testng:native, build-essential
+autopkgtest: DBG: install-deps: architecture resolved: openjdk-11-jdk-headless, openjdk-11-jre-headless, openjdk-11-jdk, openjdk-11-jre, openjdk-11-demo, openjdk-11-source, openjdk-11-doc, openjdk-11-dbg, default-jre-headless, jtreg (>= 5.1-b1-0~), testng, build-essential
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Prk9PE'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/openjdk-lts/1-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/openjdk-lts/1-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Prk9PE/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/openjdk-lts/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat >/tmp/autopkgtest.Prk9PE/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Prk9PE/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Prk9PE/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on openjdk-11-jdk-headless:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find openjdk-11-jdk-headless:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev
+  libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libstdc++-9-dev
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 8 个软件包，要卸载 1 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.1 MB 的归档。
+解压缩后会消耗 80.2 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+已下载 20.1 MB，耗时 16秒 (1,249 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../1-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../2-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../3-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../4-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../5-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../6-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../7-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../8-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'openjdk-11-jdk-headless'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+hotspot              FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+autopkgtest [14:42:39]: test jaxp: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'], deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential']
+autopkgtest: DBG: install-deps: satisfying openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-source, openjdk-11-doc, openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x], default-jre-headless, jtreg:native (>= 5.1-b1-0~), testng:native, build-essential
+autopkgtest: DBG: install-deps: architecture resolved: openjdk-11-jdk-headless, openjdk-11-jre-headless, openjdk-11-jdk, openjdk-11-jre, openjdk-11-demo, openjdk-11-source, openjdk-11-doc, openjdk-11-dbg, default-jre-headless, jtreg (>= 5.1-b1-0~), testng, build-essential
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Prk9PE'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/openjdk-lts/2-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/openjdk-lts/2-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Prk9PE/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/openjdk-lts/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat >/tmp/autopkgtest.Prk9PE/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Prk9PE/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Prk9PE/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on openjdk-11-jdk-headless:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find openjdk-11-jdk-headless:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 156946 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'openjdk-11-jdk-headless'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+jaxp                 FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+autopkgtest [14:42:57]: test langtools: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'], deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential']
+autopkgtest: DBG: install-deps: satisfying openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-source, openjdk-11-doc, openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x], default-jre-headless, jtreg:native (>= 5.1-b1-0~), testng:native, build-essential
+autopkgtest: DBG: install-deps: architecture resolved: openjdk-11-jdk-headless, openjdk-11-jre-headless, openjdk-11-jdk, openjdk-11-jre, openjdk-11-demo, openjdk-11-source, openjdk-11-doc, openjdk-11-dbg, default-jre-headless, jtreg (>= 5.1-b1-0~), testng, build-essential
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Prk9PE'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/openjdk-lts/3-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/openjdk-lts/3-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Prk9PE/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/openjdk-lts/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat >/tmp/autopkgtest.Prk9PE/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Prk9PE/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Prk9PE/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on openjdk-11-jdk-headless:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find openjdk-11-jdk-headless:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 156946 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'openjdk-11-jdk-headless'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+langtools            FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+autopkgtest [14:43:15]: test jdk: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential'], deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential', 'xfwm4:native', 'xvfb', 'dbus-x11', 'zip']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-source', 'openjdk-11-doc', 'openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32]', 'openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x]', 'default-jre-headless', 'jtreg:native (>= 5.1-b1-0~)', 'testng:native', 'build-essential', 'xfwm4:native', 'xvfb', 'dbus-x11', 'zip']
+autopkgtest: DBG: install-deps: satisfying openjdk-11-jdk-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-headless [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jdk [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-demo [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-source, openjdk-11-doc, openjdk-11-dbg [alpha amd64 armel armhf arm64 i386 ia64 mips mipsel mips64 mips64el powerpc powerpcspe ppc64 ppc64el m68k riscv64 sh4 sparc sparc64 s390x x32], openjdk-11-jre-zero [amd64 i386 arm64 ppc64 ppc64el s390x], default-jre-headless, jtreg:native (>= 5.1-b1-0~), testng:native, build-essential, xfwm4:native, xvfb, dbus-x11, zip
+autopkgtest: DBG: install-deps: architecture resolved: openjdk-11-jdk-headless, openjdk-11-jre-headless, openjdk-11-jdk, openjdk-11-jre, openjdk-11-demo, openjdk-11-source, openjdk-11-doc, openjdk-11-dbg, default-jre-headless, jtreg (>= 5.1-b1-0~), testng, build-essential, xfwm4, xvfb, dbus-x11, zip
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Prk9PE'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/openjdk-lts/4-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/openjdk-lts/4-autopkgtest-satdep.deb /tmp/autopkgtest.Prk9PE/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.714v2hg9/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Prk9PE/4-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/openjdk-lts/4-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.714v2hg9/runcmd sh -ec cat >/tmp/autopkgtest.Prk9PE/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Prk9PE/4-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Prk9PE/4-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 2
+Starting 2 pkgProblemResolver with broken count: 2
+Investigating (0) libselinux1-dev:riscv64 < 3.0-ok1 -> 3.4-ok1 @ii umU Ib >
+Broken libselinux1-dev:riscv64 依赖 on libsepol-dev:riscv64 < none | 3.4-ok2 @un uH > (>= 3.4)
+  Considering libsepol-dev:riscv64 -1 as a solution to libselinux1-dev:riscv64 2
+  Re-Instated libsepol2:riscv64
+  Re-Instated libsepol-dev:riscv64
+  Re-Instated libselinux1-dev:riscv64
+Investigating (0) libsepol1-dev:riscv64 < 3.0-ok1 @ii mK Ib >
+Broken libsepol1-dev:riscv64 冲突 on libsepol-dev:riscv64 < none -> 3.4-ok2 @un uN Ib >
+  Considering libsepol-dev:riscv64 -1 as a solution to libsepol1-dev:riscv64 0
+  Added libsepol-dev:riscv64 to the remove list
+  Fixing libsepol1-dev:riscv64 via keep of libsepol-dev:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on openjdk-11-jdk-headless:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find openjdk-11-jdk-headless:riscv64
+Investigating (1) libselinux1-dev:riscv64 < 3.0-ok1 -> 3.4-ok1 @ii umU Ib >
+Broken libselinux1-dev:riscv64 依赖 on libsepol-dev:riscv64 < none | 3.4-ok2 @un uH > (>= 3.4)
+  Considering libsepol-dev:riscv64 -1 as a solution to libselinux1-dev:riscv64 2
+  Removing libselinux1-dev:riscv64 rather than change libsepol-dev:riscv64
+Investigating (1) libglib2.0-dev:riscv64 < 2.64.2-ok2 @ii mK Ib >
+Broken libglib2.0-dev:riscv64 依赖 on libselinux1-dev:riscv64 < 3.0-ok1 | 3.4-ok1 @ii umR >
+  Considering libselinux1-dev:riscv64 2 as a solution to libglib2.0-dev:riscv64 2
+  Removing libglib2.0-dev:riscv64 rather than change libselinux1-dev:riscv64
+Investigating (2) libukui-appwidget-qmlplugin0:riscv64 < 1.0.0.0-0k0.5 @ii mK Ib >
+Broken libukui-appwidget-qmlplugin0:riscv64 依赖 on libglib2.0-dev:riscv64 < 2.64.2-ok2 @ii mR >
+  Considering libglib2.0-dev:riscv64 2 as a solution to libukui-appwidget-qmlplugin0:riscv64 2
+  Removing libukui-appwidget-qmlplugin0:riscv64 rather than change libglib2.0-dev:riscv64
+Investigating (2) ukui-system-appwidget:riscv64 < 1.0.0.0-ok1.4 @ii mK Ib >
+Broken ukui-system-appwidget:riscv64 依赖 on libukui-appwidget-qmlplugin0:riscv64 < 1.0.0.0-0k0.5 @ii mR >
+  Considering libukui-appwidget-qmlplugin0:riscv64 2 as a solution to ukui-system-appwidget:riscv64 1
+  Removing ukui-system-appwidget:riscv64 rather than change libukui-appwidget-qmlplugin0:riscv64
+Investigating (2) ukui-desktop-environment:riscv64 < 2.0.2-ok7~1104 | 2.0.2-ok8 @ii umH Ib >
+Broken ukui-desktop-environment:riscv64 依赖 on ukui-system-appwidget:riscv64 < 1.0.0.0-ok1.4 @ii mR >
+  Considering ukui-system-appwidget:riscv64 2 as a solution to ukui-desktop-environment:riscv64 -1
+    Reinst Failed because of ukui-system-appwidget:riscv64
+  Removing ukui-desktop-environment:riscv64 rather than change ukui-system-appwidget:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libblkid-dev libdebian-installer4 libdevmapper-event1.02.1 libffi-dev
+  libglib2.0-dev-bin libgsettings-qt-dev liblvm2cmd2.03 libmount-dev
+  libpcre16-3 libpcre2-32-0 libpcre2-dev libpcre2-posix2 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libsepol1-dev lvm2 os-prober pkg-config
+  python3-distutils python3-lib2to3 uuid-dev zlib1g-dev
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  dbus dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common
+  dbus-x11 libdbus-1-3 libselinux1 libxfce4ui-2-0 libxfce4ui-common
+  libxfce4util-common libxfce4util7 libxfconf-0-3 libxpresent1 xfconf xfwm4
+建议安装：
+  devhelp xfce4
+推荐安装：
+  libxfce4util-bin
+下列软件包将被【卸载】：
+  autopkgtest-satdep libglib2.0-dev libselinux1-dev
+  libukui-appwidget-qmlplugin0 ukui-desktop-environment ukui-system-appwidget
+下列【新】软件包将被安装：
+  dbus-bin dbus-daemon dbus-session-bus-common dbus-system-bus-common dbus-x11
+  libxfce4ui-2-0 libxfce4ui-common libxfce4util-common libxfce4util7
+  libxfconf-0-3 libxpresent1 xfconf xfwm4
+下列软件包将被升级：
+  dbus libdbus-1-3 libselinux1
+升级了 3 个软件包，新安装了 13 个软件包，要卸载 6 个软件包，有 132 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 1,591 kB 的归档。
+解压缩后将会空出 28.6 MB 的空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 dbus riscv64 1.14.6-ok1 [28.2 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libdbus-1-3 riscv64 1.14.6-ok1 [185 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 dbus-bin riscv64 1.14.6-ok1 [36.9 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 dbus-session-bus-common all 1.14.6-ok1 [71.6 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libselinux1 riscv64 3.4-ok1 [71.3 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 dbus-daemon riscv64 1.14.6-ok1 [110 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 dbus-system-bus-common all 1.14.6-ok1 [72.8 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 dbus-x11 riscv64 1.14.6-ok1 [22.3 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libxfce4ui-common all 4.18.2-ok1 [237 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libxfce4util-common all 4.18.1-ok1 [59.8 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libxfce4util7 riscv64 4.18.1-ok1 [24.6 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 xfconf riscv64 4.18.0-ok1 [124 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxfconf-0-3 riscv64 4.18.0-ok1 [31.4 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libxfce4ui-2-0 riscv64 4.18.2-ok1 [54.5 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxpresent1 riscv64 1.0.0-2ok1 [6,240 B]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 xfwm4 riscv64 4.18.0-ok1 [455 kB]
+已下载 1,591 kB，耗时 2秒 (982 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 156946 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+正在卸载 ukui-desktop-environment (2.0.2-ok7~1104) ...
+正在卸载 ukui-system-appwidget (1.0.0.0-ok1.4) ...
+正在卸载 libukui-appwidget-qmlplugin0 (1.0.0.0-0k0.5) ...
+正在卸载 libglib2.0-dev:riscv64 (2.64.2-ok2) ...
+正在卸载 libselinux1-dev:riscv64 (3.0-ok1) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 156397 个文件和目录。)
+准备解压 .../dbus_1.14.6-ok1_riscv64.deb  ...
+正在解压 dbus (1.14.6-ok1) 并覆盖 (1.12.16-ok1) ...
+准备解压 .../libdbus-1-3_1.14.6-ok1_riscv64.deb  ...
+正在解压 libdbus-1-3:riscv64 (1.14.6-ok1) 并覆盖 (1.12.16-ok1) ...
+正在选中未选择的软件包 dbus-bin。
+准备解压 .../dbus-bin_1.14.6-ok1_riscv64.deb  ...
+正在解压 dbus-bin (1.14.6-ok1) ...
+正在选中未选择的软件包 dbus-session-bus-common。
+准备解压 .../dbus-session-bus-common_1.14.6-ok1_all.deb  ...
+正在解压 dbus-session-bus-common (1.14.6-ok1) ...
+准备解压 .../libselinux1_3.4-ok1_riscv64.deb  ...
+正在解压 libselinux1:riscv64 (3.4-ok1) 并覆盖 (3.0-ok1) ...
+正在设置 libselinux1:riscv64 (3.4-ok1) ...
+正在选中未选择的软件包 dbus-daemon。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 156400 个文件和目录。)
+准备解压 .../00-dbus-daemon_1.14.6-ok1_riscv64.deb  ...
+正在解压 dbus-daemon (1.14.6-ok1) ...
+正在选中未选择的软件包 dbus-system-bus-common。
+准备解压 .../01-dbus-system-bus-common_1.14.6-ok1_all.deb  ...
+正在解压 dbus-system-bus-common (1.14.6-ok1) ...
+正在选中未选择的软件包 dbus-x11。
+准备解压 .../02-dbus-x11_1.14.6-ok1_riscv64.deb  ...
+正在解压 dbus-x11 (1.14.6-ok1) ...
+正在选中未选择的软件包 libxfce4ui-common。
+准备解压 .../03-libxfce4ui-common_4.18.2-ok1_all.deb  ...
+正在解压 libxfce4ui-common (4.18.2-ok1) ...
+正在选中未选择的软件包 libxfce4util-common。
+准备解压 .../04-libxfce4util-common_4.18.1-ok1_all.deb  ...
+正在解压 libxfce4util-common (4.18.1-ok1) ...
+正在选中未选择的软件包 libxfce4util7:riscv64。
+准备解压 .../05-libxfce4util7_4.18.1-ok1_riscv64.deb  ...
+正在解压 libxfce4util7:riscv64 (4.18.1-ok1) ...
+正在选中未选择的软件包 xfconf。
+准备解压 .../06-xfconf_4.18.0-ok1_riscv64.deb  ...
+正在解压 xfconf (4.18.0-ok1) ...
+正在选中未选择的软件包 libxfconf-0-3:riscv64。
+准备解压 .../07-libxfconf-0-3_4.18.0-ok1_riscv64.deb  ...
+正在解压 libxfconf-0-3:riscv64 (4.18.0-ok1) ...
+正在选中未选择的软件包 libxfce4ui-2-0:riscv64。
+准备解压 .../08-libxfce4ui-2-0_4.18.2-ok1_riscv64.deb  ...
+正在解压 libxfce4ui-2-0:riscv64 (4.18.2-ok1) ...
+正在选中未选择的软件包 libxpresent1:riscv64。
+准备解压 .../09-libxpresent1_1.0.0-2ok1_riscv64.deb  ...
+正在解压 libxpresent1:riscv64 (1.0.0-2ok1) ...
+正在选中未选择的软件包 xfwm4。
+准备解压 .../10-xfwm4_4.18.0-ok1_riscv64.deb  ...
+正在解压 xfwm4 (4.18.0-ok1) ...
+正在设置 libxfce4util-common (4.18.1-ok1) ...
+正在设置 libxpresent1:riscv64 (1.0.0-2ok1) ...
+正在设置 libdbus-1-3:riscv64 (1.14.6-ok1) ...
+正在设置 dbus-session-bus-common (1.14.6-ok1) ...
+正在设置 libxfce4util7:riscv64 (4.18.1-ok1) ...
+正在设置 libxfce4ui-common (4.18.2-ok1) ...
+正在设置 xfconf (4.18.0-ok1) ...
+正在设置 dbus-system-bus-common (1.14.6-ok1) ...
+正在设置 dbus-bin (1.14.6-ok1) ...
+正在设置 libxfconf-0-3:riscv64 (4.18.0-ok1) ...
+正在设置 libxfce4ui-2-0:riscv64 (4.18.2-ok1) ...
+正在设置 dbus-daemon (1.14.6-ok1) ...
+正在设置 dbus (1.14.6-ok1) ...
+A reboot is required to replace the running dbus-daemon.
+Please reboot the system when convenient.
+dbus.service is a disabled or a static unit, not starting it.
+正在设置 dbus-x11 (1.14.6-ok1) ...
+正在设置 xfwm4 (4.18.0-ok1) ...
+update-alternatives: 使用 /usr/bin/xfwm4 来在自动模式中提供 /usr/bin/x-window-manager (x-window-manager)
+正在处理用于 libglib2.0-0:riscv64 (2.64.2-ok2) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 systemd (245.4-ok4~0716) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 bamfdaemon (0.5.3+18.04.20180207.2-ok1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+正在处理用于 desktop-file-utils (0.24-ok2) 的触发器 ...
+正在处理用于 mime-support (3.64-ok1) 的触发器 ...
+正在处理用于 hicolor-icon-theme (0.17-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'openjdk-11-jdk-headless'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+jdk                  FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [14:44:41]: @@@@@@@@@@@@@@@@@@@@ summary
+hotspot              FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+jaxp                 FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+langtools            FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+jdk                  FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.Prk9PE
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 159916 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

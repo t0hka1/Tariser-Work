@@ -1,0 +1,649 @@
+autopkgtest: DBG: testbed init
+autopkgtest [05:29:10]: starting date: 2023-02-28
+autopkgtest [05:29:10]: version 5.20ubuntu1
+autopkgtest [05:29:10]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/python-idna_2.8-ok1.dsc -o ./testing/python-idna -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.kek6sk25/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.kek6sk25/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.kek6sk25/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.kek6sk25/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.kek6sk25/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.kek6sk25/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.kek6sk25/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.kek6sk25/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'9ddf3522-dba8-4007-b904-4c470a9c1686[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9ddf3522-dba8-4007-b904-4c470a9c1686[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'9ddf3522-dba8-4007-b904-4c470a9c1686[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9ddf3522-dba8-4007-b904-4c470a9c1686[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'9ddf3522-dba8-4007-b904-4c470a9c1686[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9ddf3522-dba8-4007-b904-4c470a9c1686[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'9ddf3522-dba8-4007-b904-4c470a9c1686[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9ddf3522-dba8-4007-b904-4c470a9c1686[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'9ddf3522-dba8-4007-b904-4c470a9c1686[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9ddf3522-dba8-4007-b904-4c470a9c1686[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.kek6sk25/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'9ddf3522-dba8-4007-b904-4c470a9c1686[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9ddf3522-dba8-4007-b904-4c470a9c1686[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.kek6sk25/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.kek6sk25/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.kek6sk25/runcmd chmod 1777 /tmp/autopkgtest.CBHCNb
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.CBHCNb
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.kek6sk25/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:30:13]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.CBHCNb/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/testbed-packages ./testing/python-idna/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/testbed-packages ./testing/python-idna/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.kek6sk25/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.kek6sk25/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:30:19]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [05:30:19]: @@@@@@@@@@@@@@@@@@@@ source ./src/python-idna_2.8-ok1.dsc
+autopkgtest: DBG: blame += ./src/python-idna_2.8-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.CBHCNb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-idna_2.8-ok1.dsc /tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-idna_2.8-ok1.dsc /tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.kek6sk25/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-idna_2.8-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.kek6sk25/runcmd sh -ec cat >/tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.CBHCNb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-idna_2.8.orig.tar.gz /tmp/autopkgtest.CBHCNb/python-idna_2.8.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-idna_2.8.orig.tar.gz /tmp/autopkgtest.CBHCNb/python-idna_2.8.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.kek6sk25/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.CBHCNb/python-idna_2.8.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-idna_2.8.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.kek6sk25/runcmd sh -ec cat >/tmp/autopkgtest.CBHCNb/python-idna_2.8.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.CBHCNb/python-idna_2.8.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.CBHCNb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-idna_2.8-ok1.debian.tar.xz /tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-idna_2.8-ok1.debian.tar.xz /tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.kek6sk25/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-idna_2.8-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.kek6sk25/runcmd sh -ec cat >/tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.CBHCNb/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.CBHCNb/build.XXX
++ builddir=/tmp/autopkgtest.CBHCNb/build.jY3
++ cd /tmp/autopkgtest.CBHCNb/build.jY3
++ dpkg-source -x /tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.G4biz9RU/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年05月14日 星期六 08时02分58秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.CBHCNb/python-idna_2.8-ok1.dsc
+dpkg-source: info: extracting python-idna in src
+dpkg-source: info: unpacking python-idna_2.8.orig.tar.gz
+dpkg-source: info: unpacking python-idna_2.8-ok1.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:30:34]: testing package python-idna version 2.8-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/build.jY3/src/debian/ ./testing/python-idna/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/build.jY3/src/debian/ ./testing/python-idna/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.kek6sk25/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.CBHCNb/build.jY3/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-idna/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.kek6sk25/runcmd sh -ec cd /tmp/autopkgtest.CBHCNb/build.jY3/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-idna/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: autodep8 generated control: -----
+Tests: python2
+Depends: python-idna, python-all
+Restrictions: allow-stderr
+
+Tests: python3
+Depends: python3-idna, python3-all
+Restrictions: allow-stderr
+
+
+Test-Command: set -e ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import idna; print(idna)" ; done
+Depends: python3-all, python3-idna, 
+Restrictions: allow-stderr, superficial, 
+Features: test-name=autodep8-python3
+
+
+-------
+autopkgtest: DBG: processing dependency python-idna
+autopkgtest: DBG: marked alternatives ['python-idna'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-all
+autopkgtest: DBG: Test defined: name python2 path debian/tests/python2 command "None" restrictions ['allow-stderr'] features [] depends ['python-idna', 'python-all'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-idna
+autopkgtest: DBG: marked alternatives ['python3-idna'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: Test defined: name python3 path debian/tests/python3 command "None" restrictions ['allow-stderr'] features [] depends ['python3-idna', 'python3-all'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-idna
+autopkgtest: DBG: marked alternatives ['python3-idna'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name autodep8-python3 path None command "set -e ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import idna; print(idna)" ; done" restrictions ['allow-stderr', 'superficial'] features ['test-name=autodep8-python3'] depends ['python3-all', 'python3-idna'] clicks [] installed clicks []
+autopkgtest [05:30:34]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/build.jY3/src/ ./testing/python-idna/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/build.jY3/src/ ./testing/python-idna/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.kek6sk25/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.CBHCNb/build.jY3/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-idna/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.kek6sk25/runcmd sh -ec cd /tmp/autopkgtest.CBHCNb/build.jY3/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-idna/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: autodep8 generated control: -----
+Tests: python2
+Depends: python-idna, python-all
+Restrictions: allow-stderr
+
+Tests: python3
+Depends: python3-idna, python3-all
+Restrictions: allow-stderr
+
+
+Test-Command: set -e ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import idna; print(idna)" ; done
+Depends: python3-all, python3-idna, 
+Restrictions: allow-stderr, superficial, 
+Features: test-name=autodep8-python3
+
+
+-------
+autopkgtest: DBG: processing dependency python-idna
+autopkgtest: DBG: marked alternatives ['python-idna'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-all
+autopkgtest: DBG: Test defined: name python2 path debian/tests/python2 command "None" restrictions ['allow-stderr'] features [] depends ['python-idna', 'python-all'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-idna
+autopkgtest: DBG: marked alternatives ['python3-idna'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: Test defined: name python3 path debian/tests/python3 command "None" restrictions ['allow-stderr'] features [] depends ['python3-idna', 'python3-all'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-idna
+autopkgtest: DBG: marked alternatives ['python3-idna'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name autodep8-python3 path None command "set -e ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import idna; print(idna)" ; done" restrictions ['allow-stderr', 'superficial'] features ['test-name=autodep8-python3'] depends ['python3-all', 'python3-idna'] clicks [] installed clicks []
+autopkgtest [05:30:35]: test python2: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['python-idna', 'python-all']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python-idna', 'python-all']
+autopkgtest: DBG: install-deps: satisfying python-idna, python-all
+autopkgtest: DBG: install-deps: architecture resolved: python-idna, python-all
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.CBHCNb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-idna/1-autopkgtest-satdep.deb /tmp/autopkgtest.CBHCNb/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-idna/1-autopkgtest-satdep.deb /tmp/autopkgtest.CBHCNb/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.kek6sk25/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.CBHCNb/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-idna/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.kek6sk25/runcmd sh -ec cat >/tmp/autopkgtest.CBHCNb/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.CBHCNb/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.CBHCNb/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 2
+Starting 2 pkgProblemResolver with broken count: 2
+Investigating (0) python2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to python2.7:riscv64 4
+  Holding Back python2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2-stdlib:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-stdlib:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2-stdlib:riscv64 1
+  Holding Back libpython2-stdlib:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering python2.7:riscv64 4 as a solution to python2:riscv64 1
+  Holding Back python2:riscv64 rather than change python2.7:riscv64
+Investigating (0) python-all:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-all:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (= 2.7.18-ok1)
+  Considering python2:riscv64 1 as a solution to python-all:riscv64 0
+  Holding Back python-all:riscv64 rather than change python2:riscv64
+Investigating (0) python-idna:riscv64 < none -> 2.8-ok1 @un uN Ib >
+Broken python-idna:riscv64 依赖 on python2:any:any < none @un H > (< 2.8)
+  Considering python2:riscv64 1 as a solution to python-idna:riscv64 0
+  Holding Back python-idna:riscv64 rather than change python2:any:any
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python-idna:riscv64 < none | 2.8-ok1 @un uH >
+  Considering python-idna:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python-idna:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python-idna'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python-idna 相匹配的软件包
+ (exit code 1)
+python2              FAIL badpkg
+blame: ./src/python-idna_2.8-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-idna 相匹配的软件包
+ (exit code 1)
+autopkgtest [05:30:55]: test python3: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['python-idna', 'python-all'], deps_new=['python3-idna', 'python3-all']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.kek6sk25/runcmd rm -rf -- /tmp/autopkgtest.CBHCNb
+qemu-system-riscv64: terminating on signal 15 from pid 395495 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.wguj0lni/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.wguj0lni/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.wguj0lni/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.wguj0lni/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.wguj0lni/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.wguj0lni/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.wguj0lni/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.wguj0lni/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'8df659e3-6e48-431e-9e26-bc93319440c8[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'8df659e3-6e48-431e-9e26-bc93319440c8[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'8df659e3-6e48-431e-9e26-bc93319440c8[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'8df659e3-6e48-431e-9e26-bc93319440c8[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'8df659e3-6e48-431e-9e26-bc93319440c8[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'8df659e3-6e48-431e-9e26-bc93319440c8[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'8df659e3-6e48-431e-9e26-bc93319440c8[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'8df659e3-6e48-431e-9e26-bc93319440c8[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'8df659e3-6e48-431e-9e26-bc93319440c8[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'8df659e3-6e48-431e-9e26-bc93319440c8[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.wguj0lni/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'8df659e3-6e48-431e-9e26-bc93319440c8[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'8df659e3-6e48-431e-9e26-bc93319440c8[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.wguj0lni/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.CBHCNb
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.wguj0lni/runcmd'], downtmp = /tmp/autopkgtest.CBHCNb
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.CBHCNb
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.wguj0lni/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:31:57]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.CBHCNb/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/testbed-packages ./testing/python-idna/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/testbed-packages ./testing/python-idna/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-idna', 'python3-all']
+autopkgtest: DBG: install-deps: satisfying python3-idna, python3-all
+autopkgtest: DBG: install-deps: architecture resolved: python3-idna, python3-all
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.CBHCNb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-idna/2-autopkgtest-satdep.deb /tmp/autopkgtest.CBHCNb/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-idna/2-autopkgtest-satdep.deb /tmp/autopkgtest.CBHCNb/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.CBHCNb/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-idna/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat >/tmp/autopkgtest.CBHCNb/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.CBHCNb/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.CBHCNb/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  python3-all
+下列【新】软件包将被安装：
+  python3-all
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 916 B 的归档。
+解压缩后会消耗 6,144 B 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all riscv64 3.8.2-ok2 [916 B]
+已下载 916 B，耗时 1秒 (1,831 B/s)
+正在选中未选择的软件包 python3-all。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../python3-all_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all (3.8.2-ok2) ...
+正在设置 python3-all (3.8.2-ok2) ...
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-idna'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 python3-all
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'python3-all'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155962 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.CBHCNb/python3-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/python3-packages.all ./testing/python-idna/python3-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/python3-packages.all ./testing/python-idna/python3-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/python3-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/python3-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/python3-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.CBHCNb/build.jY3/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.CBHCNb/build.jY3'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-idna/tests-tree/ /tmp/autopkgtest.CBHCNb/build.jY3/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-idna/tests-tree/ /tmp/autopkgtest.CBHCNb/build.jY3/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/python-idna/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.CBHCNb/build.jY3/src/; then mkdir -- /tmp/autopkgtest.CBHCNb/build.jY3/src/; fi; cd /tmp/autopkgtest.CBHCNb/build.jY3/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/python-idna/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec if ! test -d /tmp/autopkgtest.CBHCNb/build.jY3/src/; then mkdir -- /tmp/autopkgtest.CBHCNb/build.jY3/src/; fi; cd /tmp/autopkgtest.CBHCNb/build.jY3/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.CBHCNb/build.jY3/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:32:38]: test python3: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.CBHCNb/build.jY3/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.CBHCNb/python3-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.CBHCNb/python3-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.CBHCNb/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.CBHCNb/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.CBHCNb/build.jY3/src/debian/tests/python3; touch /tmp/autopkgtest.CBHCNb/python3-stdout /tmp/autopkgtest.CBHCNb/python3-stderr; /tmp/autopkgtest.CBHCNb/build.jY3/src/debian/tests/python3 2> >(tee -a /tmp/autopkgtest.CBHCNb/python3-stderr >&2) > >(tee -a /tmp/autopkgtest.CBHCNb/python3-stdout);'], kind test, sout raw, serr raw, env []
+............................................................ssssss.s.................ssss.s........sssssss............ssssssssssss...........................................................................................................................................ssssssssssssss.......ssssssssssss..ssss................................................................................................................................................ss..sss.s...ssssss....................ss..sss..sss..s...ss.s........................................ssss.s.s......................................s.s..............ssssssss....ss....................s................................................................................ssss.s...........................s.................................s..............................................................ss........................................ssss.s..........................................................................................................ss.s.s.........................ssss.s.................ss................................................ssssssss.ss...................................................s.s.........................................................................s.s................................ssssssss.ssssss....................................................................................................................................s.s..........................s...s....................s.s............s.s........................................................................s.s...........ssss.s...........................................................................................s.s...s.s......................................................................ssss.s...s.....................................................................ss.s.s.......................s.......................................s..........................................................................................ss..............s........................................................................................................................ssss.s...........ss...s.s.s..........ss.s............................ssss.s.s.....................s...................s..........................s...........s......................................ss.s.sssssssssss.s.........................ss............................................ssss.s........................................................................................................................................s......................................................................................................................................................ssssssss.s...............s..s..........................s.........................................................s...................s.s.s..........................................................................ss.s.sss...........................................................................ss.s.s...........................................................ssss.s...................................................................................................................................................ssss.s......ssss...s..................s.s........................................................................ssssssssss.ssssssss..................ssss..s.........................................................................................................s.......................................................ss.s.sss............ssss.s...........................................................................................s.....ssss...............ss.........................................................................................................................................................................s..................ssss.s..........................................................ss..s......ssssss...sss............s...........................................................................................ss..ss...........ssssss..ss.....ssssss.s...............................................ss..ssss.s.sssss..ssssssss...sssss.............................................sss.......s..........................ss.s.s...........................................................................ssss.s.s...................................................................................ssss.s...................................................................ssss.s.sssss.......................s.........................................................................ss.s.............ss..........................ssss.s........................................................................ssssssssssss.....sssss................s...............................s....................................s.s.................s.s...............................................s.....................................................ssssss...sss.............ssssssss.ssssss..ss..ssss.s.sss.....................s..............................................................s.s......................s.....................................................................................s.................................................................................................................................................................................................ss.......ss........................ss....ssss.....s..........................ssss.s.sssss.......................................................................ss....ss....ssss...s.s......................................................................ssss.s.s......................................................................................ssssssss....ss.......ss...............................................................................................s.........................................................................................ssssss.sss..................ssssss.ss.....ss......................................................................................................................................................ssssssssss.sssssssssssssssss............................................................................................................................s.........................................sssss.s.ssssssssss....ssssssss.......................s........s..................................................................ssss..s...sssssss...s.......................................................................ssss.s............................................................................ssssssssss.ssssssss...................s.s.....s..................ssssss...sss........ss.s.s..........ssssssss.s.............................................s...............................................................................s.....................................................................................................................................................................................ss.............ss.....s.......................................................s.s..ss.s..........................ss.s......ss.s..ss.........................................................................................................................................ssss..s........................................................................................................................sss..s............................ssssssssss....ssssssss.................................................................s.....s.sssss..s............................................................................................................................................................
+----------------------------------------------------------------------
+Ran 7787 tests in 23.457s
+
+OK (skipped=726)
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:33:10]: test python3: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/python3-stdout ./testing/python-idna/python3-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/python3-stdout ./testing/python-idna/python3-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/python3-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/python3-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/python3-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/python3-stderr ./testing/python-idna/python3-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/python3-stderr ./testing/python-idna/python3-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/python3-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/python3-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/python3-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [05:33:12]: test python3:  - - - - - - - - - - results - - - - - - - - - -
+python3              PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/python3-artifacts/ ./testing/python-idna/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/python3-artifacts/ ./testing/python-idna/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.CBHCNb/python3-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-idna/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cd /tmp/autopkgtest.CBHCNb/python3-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-idna/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.CBHCNb/python3-artifacts', '/tmp/autopkgtest.CBHCNb/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [05:33:13]: test autodep8-python3: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['python3-idna', 'python3-all'], deps_new=['python3-all', 'python3-idna']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-all', 'python3-idna']
+autopkgtest: DBG: install-deps: satisfying python3-all, python3-idna
+autopkgtest: DBG: install-deps: architecture resolved: python3-all, python3-idna
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.CBHCNb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-idna/3-autopkgtest-satdep.deb /tmp/autopkgtest.CBHCNb/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-idna/3-autopkgtest-satdep.deb /tmp/autopkgtest.CBHCNb/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.CBHCNb/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-idna/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat >/tmp/autopkgtest.CBHCNb/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.CBHCNb/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.CBHCNb/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-idna'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155962 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.CBHCNb/autodep8-python3-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-packages.all ./testing/python-idna/autodep8-python3-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-packages.all ./testing/python-idna/autodep8-python3-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/autodep8-python3-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/autodep8-python3-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/autodep8-python3-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.CBHCNb/build.jY3/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.CBHCNb/build.jY3/src already exists
+autopkgtest [05:33:37]: test autodep8-python3: set -e ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import idna; print(idna)" ; done
+autopkgtest [05:33:37]: test autodep8-python3: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.CBHCNb/build.jY3/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.CBHCNb/autodep8-python3-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.CBHCNb/autodep8-python3-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.CBHCNb/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.CBHCNb/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; touch /tmp/autopkgtest.CBHCNb/autodep8-python3-stdout /tmp/autopkgtest.CBHCNb/autodep8-python3-stderr; bash -ec \'set -e ; for py in $(py3versions -r 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import idna; print(idna)" ; done\' 2> >(tee -a /tmp/autopkgtest.CBHCNb/autodep8-python3-stderr >&2) > >(tee -a /tmp/autopkgtest.CBHCNb/autodep8-python3-stdout);'], kind test, sout raw, serr raw, env []
+Testing with python3.8:
+<module 'idna' from '/usr/lib/python3/dist-packages/idna/__init__.py'>
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:33:43]: test autodep8-python3: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-stdout ./testing/python-idna/autodep8-python3-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-stdout ./testing/python-idna/autodep8-python3-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/autodep8-python3-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/autodep8-python3-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/autodep8-python3-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-stderr ./testing/python-idna/autodep8-python3-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-stderr ./testing/python-idna/autodep8-python3-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.CBHCNb/autodep8-python3-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-idna/autodep8-python3-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cat </tmp/autopkgtest.CBHCNb/autodep8-python3-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [05:33:44]: test autodep8-python3:  - - - - - - - - - - results - - - - - - - - - -
+autodep8-python3     PASS (superficial)
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-artifacts/ ./testing/python-idna/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.CBHCNb/autodep8-python3-artifacts/ ./testing/python-idna/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.wguj0lni/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.CBHCNb/autodep8-python3-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-idna/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.wguj0lni/runcmd sh -ec cd /tmp/autopkgtest.CBHCNb/autodep8-python3-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-idna/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.CBHCNb/autodep8-python3-artifacts', '/tmp/autopkgtest.CBHCNb/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [05:33:45]: @@@@@@@@@@@@@@@@@@@@ summary
+python2              FAIL badpkg
+blame: ./src/python-idna_2.8-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-idna 相匹配的软件包
+ (exit code 1)
+python3              PASS
+autodep8-python3     PASS (superficial)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.CBHCNb
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 395495 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

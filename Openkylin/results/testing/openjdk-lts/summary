@@ -1,0 +1,16 @@
+hotspot              FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+jaxp                 FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+langtools            FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)
+jdk                  FAIL badpkg
+blame: ./src/openjdk-lts_11.0.16+8-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-11-jdk-headless 相匹配的软件包
+ (exit code 1)

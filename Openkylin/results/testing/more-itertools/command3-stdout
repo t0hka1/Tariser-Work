@@ -1,0 +1,12 @@
+Testing with python3.8:
+running test
+running egg_info
+creating more_itertools.egg-info
+writing more_itertools.egg-info/PKG-INFO
+writing dependency_links to more_itertools.egg-info/dependency_links.txt
+writing requirements to more_itertools.egg-info/requires.txt
+writing top-level names to more_itertools.egg-info/top_level.txt
+writing manifest file 'more_itertools.egg-info/SOURCES.txt'
+reading manifest file 'more_itertools.egg-info/SOURCES.txt'
+writing manifest file 'more_itertools.egg-info/SOURCES.txt'
+running build_ext

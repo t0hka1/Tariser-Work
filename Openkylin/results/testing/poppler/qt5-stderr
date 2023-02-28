@@ -1,0 +1,73 @@
+In file included from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/poppler/qt5/poppler-annotation.h:540:5: error: ‘template<class T> class QLinkedList’ is deprecated: Use std::list instead [-Werror=deprecated-declarations]
+  540 |     QLinkedList<QPointF> linePoints() const;
+      |     ^~~~~~~~~~~
+In file included from /usr/include/riscv64-linux-gnu/qt5/QtCore/qvarlengtharray.h:43,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qmetatype.h:48,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qobject.h:54,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qiodevice.h:45,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qdatastream.h:44,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qlinkedlist.h:50,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/QLinkedList:1,
+                 from /usr/include/poppler/qt5/poppler-annotation.h:34,
+                 from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/riscv64-linux-gnu/qt5/QtCore/qcontainerfwd.h:51:26: note: declared here
+   51 | template <class T> class QLinkedList;
+      |                          ^~~~~~~~~~~
+In file included from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/poppler/qt5/poppler-annotation.h:541:31: error: ‘template<class T> class QLinkedList’ is deprecated: Use std::list instead [-Werror=deprecated-declarations]
+  541 |     void setLinePoints( const QLinkedList<QPointF> &points );
+      |                               ^~~~~~~~~~~
+In file included from /usr/include/riscv64-linux-gnu/qt5/QtCore/qvarlengtharray.h:43,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qmetatype.h:48,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qobject.h:54,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qiodevice.h:45,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qdatastream.h:44,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qlinkedlist.h:50,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/QLinkedList:1,
+                 from /usr/include/poppler/qt5/poppler-annotation.h:34,
+                 from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/riscv64-linux-gnu/qt5/QtCore/qcontainerfwd.h:51:26: note: declared here
+   51 | template <class T> class QLinkedList;
+      |                          ^~~~~~~~~~~
+In file included from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/poppler/qt5/poppler-annotation.h:742:12: error: ‘template<class T> class QLinkedList’ is deprecated: Use std::list instead [-Werror=deprecated-declarations]
+  742 |     QList< QLinkedList<QPointF> > inkPaths() const;
+      |            ^~~~~~~~~~~
+In file included from /usr/include/riscv64-linux-gnu/qt5/QtCore/qvarlengtharray.h:43,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qmetatype.h:48,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qobject.h:54,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qiodevice.h:45,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qdatastream.h:44,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qlinkedlist.h:50,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/QLinkedList:1,
+                 from /usr/include/poppler/qt5/poppler-annotation.h:34,
+                 from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/riscv64-linux-gnu/qt5/QtCore/qcontainerfwd.h:51:26: note: declared here
+   51 | template <class T> class QLinkedList;
+      |                          ^~~~~~~~~~~
+In file included from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/poppler/qt5/poppler-annotation.h:743:36: error: ‘template<class T> class QLinkedList’ is deprecated: Use std::list instead [-Werror=deprecated-declarations]
+  743 |     void setInkPaths( const QList< QLinkedList<QPointF> > &paths );
+      |                                    ^~~~~~~~~~~
+In file included from /usr/include/riscv64-linux-gnu/qt5/QtCore/qvarlengtharray.h:43,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qmetatype.h:48,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qobject.h:54,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qiodevice.h:45,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qdatastream.h:44,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/qlinkedlist.h:50,
+                 from /usr/include/riscv64-linux-gnu/qt5/QtCore/QLinkedList:1,
+                 from /usr/include/poppler/qt5/poppler-annotation.h:34,
+                 from /usr/include/poppler/qt5/poppler-qt5.h:43,
+                 from /tmp/autopkgtest.z7ykCk/build.qMt/src/debian/tests/test-qt5.cpp:1:
+/usr/include/riscv64-linux-gnu/qt5/QtCore/qcontainerfwd.h:51:26: note: declared here
+   51 | template <class T> class QLinkedList;
+      |                          ^~~~~~~~~~~
+cc1plus: all warnings being treated as errors

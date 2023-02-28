@@ -1,0 +1,23 @@
+build                FAIL badpkg
+blame: ./src/pygobject_3.36.0-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+build3               PASS (superficial)
+build2               FAIL badpkg
+blame: ./src/pygobject_3.36.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-gi-dev 相匹配的软件包
+ (exit code 1)
+python2              FAIL badpkg
+blame: ./src/pygobject_3.36.0-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+python3              FAIL badpkg
+blame: ./src/pygobject_3.36.0-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+python2-dbg          FAIL badpkg
+blame: ./src/pygobject_3.36.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-gi-dbg 相匹配的软件包
+ (exit code 1)
+python3-dbg          FAIL badpkg
+blame: ./src/pygobject_3.36.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-gi-dbg 相匹配的软件包
+ (exit code 1)
+python3-all          PASS (superficial)

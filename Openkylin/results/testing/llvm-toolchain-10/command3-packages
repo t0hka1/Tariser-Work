@@ -1,0 +1,11 @@
+libclang-10-dev	1:10.0.0-ok3
+libclang-common-10-dev	1:10.0.0-ok3
+libclang1-10	1:10.0.0-ok3
+libgc1c2	1:7.6.4-ok2
+libgcc-9-dev	9.3.0-ok4
+libllvm10	1:10.0.0-ok3
+libobjc-9-dev	9.3.0-ok4
+libobjc4	10-20200411-ok5
+libstdc++-9-dev	9.3.0-ok4
+libz3-4	4.8.7-ok1
+python3-clang-10	1:10.0.0-ok3

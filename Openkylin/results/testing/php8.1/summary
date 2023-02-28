@@ -1,0 +1,5 @@
+cli                  PASS
+cgi                  PASS
+mod-php              PASS
+fpm                  PASS
+version              PASS

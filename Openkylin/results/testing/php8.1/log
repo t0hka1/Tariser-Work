@@ -1,0 +1,1960 @@
+autopkgtest: DBG: testbed init
+autopkgtest [19:46:09]: starting date: 2023-02-27
+autopkgtest [19:46:09]: version 5.20ubuntu1
+autopkgtest [19:46:09]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/php8.1_8.1.12-ok1.dsc -o ./testing/php8.1 -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.vcdftrpa/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.vcdftrpa/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.vcdftrpa/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.vcdftrpa/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.vcdftrpa/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.vcdftrpa/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.vcdftrpa/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.vcdftrpa/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'035b1ce3-6388-436a-9259-f963105bc87a[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'035b1ce3-6388-436a-9259-f963105bc87a[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'035b1ce3-6388-436a-9259-f963105bc87a[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'035b1ce3-6388-436a-9259-f963105bc87a[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'035b1ce3-6388-436a-9259-f963105bc87a[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'035b1ce3-6388-436a-9259-f963105bc87a[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'035b1ce3-6388-436a-9259-f963105bc87a[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'035b1ce3-6388-436a-9259-f963105bc87a[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'035b1ce3-6388-436a-9259-f963105bc87a[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'035b1ce3-6388-436a-9259-f963105bc87a[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.vcdftrpa/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'035b1ce3-6388-436a-9259-f963105bc87a[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'035b1ce3-6388-436a-9259-f963105bc87a[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.vcdftrpa/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.vcdftrpa/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.vcdftrpa/runcmd chmod 1777 /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.vcdftrpa/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [19:47:12]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [19:47:18]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [19:47:19]: @@@@@@@@@@@@@@@@@@@@ source ./src/php8.1_8.1.12-ok1.dsc
+autopkgtest: DBG: blame += ./src/php8.1_8.1.12-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/php8.1_8.1.12-ok1.dsc /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/php8.1_8.1.12-ok1.dsc /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/php8.1_8.1.12-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/php8.1_8.1.12.orig.tar.xz /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12.orig.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/php8.1_8.1.12.orig.tar.xz /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12.orig.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12.orig.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/php8.1_8.1.12.orig.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12.orig.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12.orig.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/php8.1_8.1.12-ok1.debian.tar.xz /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/php8.1_8.1.12-ok1.debian.tar.xz /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/php8.1_8.1.12-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.ZFe0UO/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.ZFe0UO/build.XXX
++ builddir=/tmp/autopkgtest.ZFe0UO/build.40L
++ cd /tmp/autopkgtest.ZFe0UO/build.40L
++ dpkg-source -x /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.QAQi_q1S/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2023年01月13日 星期五 09时16分37秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.ZFe0UO/php8.1_8.1.12-ok1.dsc
+dpkg-source: info: extracting php8.1 in src
+dpkg-source: info: unpacking php8.1_8.1.12.orig.tar.xz
+dpkg-source: info: unpacking php8.1_8.1.12-ok1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 0001-libtool_fixes.patch
+dpkg-source: info: applying 0002-debian_quirks.patch
+dpkg-source: info: applying 0003-php-5.4.9-phpinfo.patch
+dpkg-source: info: applying 0004-extension_api.patch
+dpkg-source: info: applying 0005-php.ini_securitynotes.patch
+dpkg-source: info: applying 0006-php-5.4.7-libdb.patch
+dpkg-source: info: applying 0007-Add-support-for-use-of-the-system-timezone-database.patch
+dpkg-source: info: applying 0008-strcmp_null-OnUpdateErrorLog.patch
+dpkg-source: info: applying 0009-qdbm-is-usr_include_qdbm.patch
+dpkg-source: info: applying 0010-session_save_path.patch
+dpkg-source: info: applying 0011-php-fpm-man-section-and-cleanup.patch
+dpkg-source: info: applying 0012-fpm-config.patch
+dpkg-source: info: applying 0013-php-fpm-sysconfdir.patch
+dpkg-source: info: applying 0014-lp564920-fix-big-files.patch
+dpkg-source: info: applying 0015-temporary-path-fixes-for-multiarch.patch
+dpkg-source: info: applying 0016-hurd-noptrace.patch
+dpkg-source: info: applying 0017-php-5.3.9-gnusrc.patch
+dpkg-source: info: applying 0018-php-5.3.3-macropen.patch
+dpkg-source: info: applying 0019-php-5.2.4-embed.patch
+dpkg-source: info: applying 0020-php-fpm-m68k.patch
+dpkg-source: info: applying 0021-expose_all_built_and_installed_apis.patch
+dpkg-source: info: applying 0022-Use-system-timezone.patch
+dpkg-source: info: applying 0023-php-fpm-do-reload-on-SIGHUP.patch
+dpkg-source: info: applying 0024-php-5.4.8-ldap_r.patch
+dpkg-source: info: applying 0025-php-5.4.9-fixheader.patch
+dpkg-source: info: applying 0026-php-5.6.0-noNO.patch
+dpkg-source: info: applying 0027-php-5.6.0-oldpcre.patch
+dpkg-source: info: applying 0028-hack-phpdbg-to-explicitly-link-with-libedit.patch
+dpkg-source: info: applying 0029-Fix-ZEND_MM_ALIGNMENT-on-m64k.patch
+dpkg-source: info: applying 0030-Remove-W3C-validation-icon-to-not-expose-the-reader-.patch
+dpkg-source: info: applying 0031-Don-t-put-INSTALL_ROOT-into-phar.phar-exec-stanza.patch
+dpkg-source: info: applying 0032-Really-expand-libdir-datadir-into-EXPANDED_LIBDIR-DA.patch
+dpkg-source: info: applying 0033-Fix-ext-date-lib-parse_tz-PATH_MAX-HURD-FTBFS.patch
+dpkg-source: info: applying 0034-Amend-C-11-for-intl-compilation-on-older-distributio.patch
+dpkg-source: info: applying 0035-Add-patch-to-install-php7-module-directly-to-APXS_LI.patch
+dpkg-source: info: applying 0036-libtool2.2.patch
+dpkg-source: info: applying 0037-Include-all-libtool-files-from-phpize.m4.patch
+dpkg-source: info: applying 0038-In-phpize-also-copy-config.guess-config.sub-ltmain.s.patch
+dpkg-source: info: applying 0039-Don-t-use-hrtimers-on-GNU-Hurd.patch
+dpkg-source: info: applying 0040-Show-packaging-credits.patch
+dpkg-source: info: applying 0041-Allow-printing-credits-buffer-larger-than-4k.patch
+dpkg-source: info: applying 0042-Don-t-close-the-credits-buffer-file-descriptor-too-e.patch
+dpkg-source: info: applying 0043-Lower-the-OpenSSL-requirement-to-1.0.1.patch
+dpkg-source: info: applying 0044-Fail-the-build-when-the-dtrace-call-fails.patch
+dpkg-source: info: applying 0045-Override-result-of-AC_PROG_LN_S-to-fix-FTBFS-on-ppc6.patch
+dpkg-source: info: applying 0046-Update-gcc-func-attr-macro.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [19:48:21]: testing package php8.1 version 8.1.12-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/ ./testing/php8.1/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/ ./testing/php8.1/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/php8.1/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cd /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/php8.1/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency php8.1-cli
+autopkgtest: DBG: marked alternatives ['php8.1-cli'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name cli path debian/tests/cli command "None" restrictions [] features [] depends ['php8.1-cli', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency apache2
+autopkgtest: DBG: processing dependency php8.1-cgi
+autopkgtest: DBG: marked alternatives ['php8.1-cgi'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name cgi path debian/tests/cgi command "None" restrictions ['needs-root'] features [] depends ['apache2', 'php8.1-cgi', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency apache2
+autopkgtest: DBG: processing dependency libapache2-mod-php8.1
+autopkgtest: DBG: marked alternatives ['libapache2-mod-php8.1'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name mod-php path debian/tests/mod-php command "None" restrictions ['needs-root'] features [] depends ['apache2', 'libapache2-mod-php8.1', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency apache2
+autopkgtest: DBG: processing dependency php8.1-fpm
+autopkgtest: DBG: marked alternatives ['php8.1-fpm'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name fpm path debian/tests/fpm command "None" restrictions ['needs-root'] features [] depends ['apache2', 'php8.1-fpm', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency php8.1-cli
+autopkgtest: DBG: marked alternatives ['php8.1-cli'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name version path debian/tests/version command "None" restrictions [] features [] depends ['php8.1-cli'] clicks [] installed clicks []
+autopkgtest [19:48:22]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/build.40L/src/ ./testing/php8.1/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/build.40L/src/ ./testing/php8.1/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/php8.1/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/php8.1/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency php8.1-cli
+autopkgtest: DBG: marked alternatives ['php8.1-cli'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name cli path debian/tests/cli command "None" restrictions [] features [] depends ['php8.1-cli', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency apache2
+autopkgtest: DBG: processing dependency php8.1-cgi
+autopkgtest: DBG: marked alternatives ['php8.1-cgi'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name cgi path debian/tests/cgi command "None" restrictions ['needs-root'] features [] depends ['apache2', 'php8.1-cgi', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency apache2
+autopkgtest: DBG: processing dependency libapache2-mod-php8.1
+autopkgtest: DBG: marked alternatives ['libapache2-mod-php8.1'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name mod-php path debian/tests/mod-php command "None" restrictions ['needs-root'] features [] depends ['apache2', 'libapache2-mod-php8.1', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency apache2
+autopkgtest: DBG: processing dependency php8.1-fpm
+autopkgtest: DBG: marked alternatives ['php8.1-fpm'] as a synthesised dependency
+autopkgtest: DBG: processing dependency wget
+autopkgtest: DBG: Test defined: name fpm path debian/tests/fpm command "None" restrictions ['needs-root'] features [] depends ['apache2', 'php8.1-fpm', 'wget'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency php8.1-cli
+autopkgtest: DBG: marked alternatives ['php8.1-cli'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name version path debian/tests/version command "None" restrictions [] features [] depends ['php8.1-cli'] clicks [] installed clicks []
+autopkgtest [19:48:52]: test cli: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['php8.1-cli', 'wget']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['php8.1-cli', 'wget']
+autopkgtest: DBG: install-deps: satisfying php8.1-cli, wget
+autopkgtest: DBG: install-deps: architecture resolved: php8.1-cli, wget
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/1-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/1-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/php8.1/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ZFe0UO/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  libffi8 php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline
+建议安装：
+  php-pear
+下列【新】软件包将被安装：
+  libffi8 php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline
+升级了 0 个软件包，新安装了 6 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 2,426 kB 的归档。
+解压缩后会消耗 13.0 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php-common all 2:92-ok1 [11.6 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-common riscv64 8.1.12-ok1 [654 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-opcache riscv64 8.1.12-ok1 [62.5 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-readline riscv64 8.1.12-ok1 [11.8 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-cli riscv64 8.1.12-ok1 [1,666 kB]
+已下载 2,426 kB，耗时 2秒 (1,165 kB/s)
+正在选中未选择的软件包 php-common。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-php-common_2%3a92-ok1_all.deb  ...
+正在解压 php-common (2:92-ok1) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../1-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 php8.1-common。
+准备解压 .../2-php8.1-common_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-common (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-opcache。
+准备解压 .../3-php8.1-opcache_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-opcache (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-readline。
+准备解压 .../4-php8.1-readline_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-readline (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-cli。
+准备解压 .../5-php8.1-cli_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-cli (8.1.12-ok1) ...
+正在设置 php-common (2:92-ok1) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 php8.1-common (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/tokenizer.ini with new version
+正在设置 php8.1-readline (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/readline.ini with new version
+正在设置 php8.1-opcache (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/opcache.ini with new version
+正在设置 php8.1-cli (8.1.12-ok1) ...
+update-alternatives: 使用 /usr/bin/php8.1 来在自动模式中提供 /usr/bin/php (php)
+update-alternatives: 使用 /usr/bin/phar8.1 来在自动模式中提供 /usr/bin/phar (phar)
+update-alternatives: 使用 /usr/bin/phar.phar8.1 来在自动模式中提供 /usr/bin/phar.phar (phar.phar)
+
+Creating config file /etc/php/8.1/cli/php.ini with new version
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 php8.1-cli (8.1.12-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'php8.1-cli'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 php8.1-cli php8.1-readline php8.1-opcache php8.1-common libffi8 php-common
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'php8.1-cli', 'php8.1-readline', 'php8.1-opcache', 'php8.1-common', 'libffi8', 'php-common'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156076 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/cli-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cli-packages.all ./testing/php8.1/cli-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cli-packages.all ./testing/php8.1/cli-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/cli-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/cli-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/cli-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.ZFe0UO/build.40L/src already exists
+autopkgtest [19:54:08]: test cli: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.ZFe0UO/build.40L/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.ZFe0UO/cli-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.ZFe0UO/cli-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/cli; touch /tmp/autopkgtest.ZFe0UO/cli-stdout /tmp/autopkgtest.ZFe0UO/cli-stderr; /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/cli 2> >(tee -a /tmp/autopkgtest.ZFe0UO/cli-stderr >&2) > >(tee -a /tmp/autopkgtest.ZFe0UO/cli-stdout);'], kind test, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [19:54:12]: test cli: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cli-stdout ./testing/php8.1/cli-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cli-stdout ./testing/php8.1/cli-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/cli-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/cli-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/cli-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cli-stderr ./testing/php8.1/cli-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cli-stderr ./testing/php8.1/cli-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/cli-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/cli-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/cli-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [19:54:14]: test cli:  - - - - - - - - - - results - - - - - - - - - -
+cli                  PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cli-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cli-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.vcdftrpa/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ZFe0UO/cli-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/php8.1/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.vcdftrpa/runcmd sh -ec cd /tmp/autopkgtest.ZFe0UO/cli-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/php8.1/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.ZFe0UO/cli-artifacts', '/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [19:54:16]: test cgi: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['php8.1-cli', 'wget'], deps_new=['apache2', 'php8.1-cgi', 'wget']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.vcdftrpa/runcmd rm -rf -- /tmp/autopkgtest.ZFe0UO
+qemu-system-riscv64: terminating on signal 15 from pid 258804 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.ovk35w4p/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.ovk35w4p/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.ovk35w4p/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.ovk35w4p/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.ovk35w4p/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.ovk35w4p/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.ovk35w4p/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.ovk35w4p/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'56b24baa-04a2-4661-8958-410e74f00180[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'56b24baa-04a2-4661-8958-410e74f00180[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'56b24baa-04a2-4661-8958-410e74f00180[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'56b24baa-04a2-4661-8958-410e74f00180[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'56b24baa-04a2-4661-8958-410e74f00180[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'56b24baa-04a2-4661-8958-410e74f00180[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'56b24baa-04a2-4661-8958-410e74f00180[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'56b24baa-04a2-4661-8958-410e74f00180[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'56b24baa-04a2-4661-8958-410e74f00180[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'56b24baa-04a2-4661-8958-410e74f00180[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ovk35w4p/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'56b24baa-04a2-4661-8958-410e74f00180[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'56b24baa-04a2-4661-8958-410e74f00180[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ovk35w4p/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.ZFe0UO
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.ovk35w4p/runcmd'], downtmp = /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.ovk35w4p/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [19:55:36]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ovk35w4p/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ovk35w4p/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['apache2', 'php8.1-cgi', 'wget']
+autopkgtest: DBG: install-deps: satisfying apache2, php8.1-cgi, wget
+autopkgtest: DBG: install-deps: architecture resolved: apache2, php8.1-cgi, wget
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/2-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/2-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.ovk35w4p/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/php8.1/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ovk35w4p/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ZFe0UO/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libffi8 libldap2 liblua5.3-0
+  php-common php8.1-cgi php8.1-cli php8.1-common php8.1-opcache
+  php8.1-readline
+建议安装：
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw php-pear
+下列【新】软件包将被安装：
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libffi8 libldap2 liblua5.3-0
+  php-common php8.1-cgi php8.1-cli php8.1-common php8.1-opcache
+  php8.1-readline
+升级了 0 个软件包，新安装了 17 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 6,033 kB 的归档。
+解压缩后会消耗 27.8 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libapr1 riscv64 1.7.0-ok1 [90.2 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1 riscv64 1.6.1-ok3 [85.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1-dbd-sqlite3 riscv64 1.6.1-ok3 [9,974 B]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libldap2 riscv64 2.6.3+dfsg-ok2 [162 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1-ldap riscv64 1.6.1-ok3 [8,396 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 liblua5.3-0 riscv64 5.3.6-ok1 [125 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-bin riscv64 2.4.54-ok1 [1,153 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-data all 2.4.54-ok1 [165 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-utils riscv64 2.4.54-ok1 [83.2 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2 riscv64 2.4.54-ok1 [97.7 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php-common all 2:92-ok1 [11.6 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-common riscv64 8.1.12-ok1 [654 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-opcache riscv64 8.1.12-ok1 [62.5 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-readline riscv64 8.1.12-ok1 [11.8 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-cli riscv64 8.1.12-ok1 [1,666 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-cgi riscv64 8.1.12-ok1 [1,628 kB]
+已下载 6,033 kB，耗时 6秒 (961 kB/s)
+正在选中未选择的软件包 libapr1:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libapr1_1.7.0-ok1_riscv64.deb  ...
+正在解压 libapr1:riscv64 (1.7.0-ok1) ...
+正在选中未选择的软件包 libaprutil1:riscv64。
+准备解压 .../01-libaprutil1_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 libaprutil1-dbd-sqlite3:riscv64。
+准备解压 .../02-libaprutil1-dbd-sqlite3_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1-dbd-sqlite3:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 libldap2:riscv64。
+准备解压 .../03-libldap2_2.6.3+dfsg-ok2_riscv64.deb  ...
+正在解压 libldap2:riscv64 (2.6.3+dfsg-ok2) ...
+正在选中未选择的软件包 libaprutil1-ldap:riscv64。
+准备解压 .../04-libaprutil1-ldap_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1-ldap:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 liblua5.3-0:riscv64。
+准备解压 .../05-liblua5.3-0_5.3.6-ok1_riscv64.deb  ...
+正在解压 liblua5.3-0:riscv64 (5.3.6-ok1) ...
+正在选中未选择的软件包 apache2-bin。
+准备解压 .../06-apache2-bin_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2-bin (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2-data。
+准备解压 .../07-apache2-data_2.4.54-ok1_all.deb  ...
+正在解压 apache2-data (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2-utils。
+准备解压 .../08-apache2-utils_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2-utils (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2。
+准备解压 .../09-apache2_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2 (2.4.54-ok1) ...
+正在选中未选择的软件包 php-common。
+准备解压 .../10-php-common_2%3a92-ok1_all.deb  ...
+正在解压 php-common (2:92-ok1) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../11-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 php8.1-common。
+准备解压 .../12-php8.1-common_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-common (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-opcache。
+准备解压 .../13-php8.1-opcache_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-opcache (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-readline。
+准备解压 .../14-php8.1-readline_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-readline (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-cli。
+准备解压 .../15-php8.1-cli_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-cli (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-cgi。
+准备解压 .../16-php8.1-cgi_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-cgi (8.1.12-ok1) ...
+正在设置 php-common (2:92-ok1) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+正在设置 libapr1:riscv64 (1.7.0-ok1) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 liblua5.3-0:riscv64 (5.3.6-ok1) ...
+正在设置 apache2-data (2.4.54-ok1) ...
+正在设置 libldap2:riscv64 (2.6.3+dfsg-ok2) ...
+正在设置 libaprutil1:riscv64 (1.6.1-ok3) ...
+正在设置 php8.1-common (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/tokenizer.ini with new version
+正在设置 libaprutil1-ldap:riscv64 (1.6.1-ok3) ...
+正在设置 libaprutil1-dbd-sqlite3:riscv64 (1.6.1-ok3) ...
+正在设置 php8.1-readline (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/readline.ini with new version
+正在设置 php8.1-opcache (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/opcache.ini with new version
+正在设置 apache2-utils (2.4.54-ok1) ...
+正在设置 apache2-bin (2.4.54-ok1) ...
+正在设置 php8.1-cli (8.1.12-ok1) ...
+update-alternatives: 使用 /usr/bin/php8.1 来在自动模式中提供 /usr/bin/php (php)
+update-alternatives: 使用 /usr/bin/phar8.1 来在自动模式中提供 /usr/bin/phar (phar)
+update-alternatives: 使用 /usr/bin/phar.phar8.1 来在自动模式中提供 /usr/bin/phar.phar (phar.phar)
+
+Creating config file /etc/php/8.1/cli/php.ini with new version
+正在设置 php8.1-cgi (8.1.12-ok1) ...
+update-alternatives: 使用 /usr/bin/php-cgi8.1 来在自动模式中提供 /usr/bin/php-cgi (php-cgi)
+update-alternatives: 使用 /usr/lib/cgi-bin/php8.1 来在自动模式中提供 /usr/lib/cgi-bin/php (php-cgi-bin)
+
+Creating config file /etc/php/8.1/cgi/php.ini with new version
+正在设置 apache2 (2.4.54-ok1) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 systemd (245.4-ok4~0716) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 php8.1-cli (8.1.12-ok1) 的触发器 ...
+正在处理用于 php8.1-cgi (8.1.12-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'php8.1-cgi'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: apache2 apache2-bin apache2-data apache2-utils archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libaprutil1-ldap libaprutil1-dbd-sqlite3 libaprutil1 libapr1 libdebian-installer4 libdevmapper-event1.02.1 php8.1-cgi php8.1-cli php8.1-readline php8.1-opcache php8.1-common libffi8 libldap2 liblua5.3-0 php-common
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'apache2', 'apache2-bin', 'apache2-data', 'apache2-utils', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libaprutil1-ldap', 'libaprutil1-dbd-sqlite3', 'libaprutil1', 'libapr1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'php8.1-cgi'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'php8.1-cli', 'php8.1-readline', 'php8.1-opcache', 'php8.1-common', 'libffi8', 'libldap2', 'liblua5.3-0', 'php-common'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156808 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/cgi-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cgi-packages.all ./testing/php8.1/cgi-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cgi-packages.all ./testing/php8.1/cgi-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ovk35w4p/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/cgi-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/cgi-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ovk35w4p/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/cgi-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO/build.40L'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/php8.1/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.ovk35w4p/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/php8.1/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.ovk35w4p/runcmd sh -ec if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:05:36]: test cgi: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'root', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.ZFe0UO/build.40L/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.ZFe0UO/cgi-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.ZFe0UO/cgi-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; export AUTOPKGTEST_NORMAL_USER=openkylin; export ADT_NORMAL_USER=openkylin; chmod +x /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/cgi; touch /tmp/autopkgtest.ZFe0UO/cgi-stdout /tmp/autopkgtest.ZFe0UO/cgi-stderr; /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/cgi 2> >(tee -a /tmp/autopkgtest.ZFe0UO/cgi-stderr >&2) > >(tee -a /tmp/autopkgtest.ZFe0UO/cgi-stdout);'], kind test, sout raw, serr raw, env []
+Enabling module actions.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+Your MPM seems to be threaded. Selecting cgid instead of cgi.
+Enabling module cgid.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+Enabling conf php8.1-cgi.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:05:50]: test cgi: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cgi-stdout ./testing/php8.1/cgi-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cgi-stdout ./testing/php8.1/cgi-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ovk35w4p/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/cgi-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/cgi-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ovk35w4p/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/cgi-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cgi-stderr ./testing/php8.1/cgi-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cgi-stderr ./testing/php8.1/cgi-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ovk35w4p/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/cgi-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/cgi-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ovk35w4p/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/cgi-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [20:05:52]: test cgi:  - - - - - - - - - - results - - - - - - - - - -
+cgi                  PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/cgi-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/cgi-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.ovk35w4p/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ZFe0UO/cgi-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/php8.1/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.ovk35w4p/runcmd sh -ec cd /tmp/autopkgtest.ZFe0UO/cgi-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/php8.1/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.ZFe0UO/cgi-artifacts', '/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [20:05:53]: test mod-php: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['apache2', 'php8.1-cgi', 'wget'], deps_new=['apache2', 'libapache2-mod-php8.1', 'wget']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.ovk35w4p/runcmd rm -rf -- /tmp/autopkgtest.ZFe0UO
+qemu-system-riscv64: terminating on signal 15 from pid 258804 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.nrl_5j77/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.nrl_5j77/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.nrl_5j77/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.nrl_5j77/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.nrl_5j77/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.nrl_5j77/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.nrl_5j77/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.nrl_5j77/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.nrl_5j77/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a53e1b46-40a8-44f9-aa81-c2711a49a6fd[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.nrl_5j77/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.ZFe0UO
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.nrl_5j77/runcmd'], downtmp = /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.nrl_5j77/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:07:07]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.nrl_5j77/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.nrl_5j77/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['apache2', 'libapache2-mod-php8.1', 'wget']
+autopkgtest: DBG: install-deps: satisfying apache2, libapache2-mod-php8.1, wget
+autopkgtest: DBG: install-deps: architecture resolved: apache2, libapache2-mod-php8.1, wget
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/3-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/3-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.nrl_5j77/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/php8.1/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.nrl_5j77/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ZFe0UO/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php8.1 libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libffi8 libldap2
+  liblua5.3-0 php-common php8.1-cli php8.1-common php8.1-opcache
+  php8.1-readline
+建议安装：
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw php-pear
+下列【新】软件包将被安装：
+  apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php8.1 libapr1
+  libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap libffi8 libldap2
+  liblua5.3-0 php-common php8.1-cli php8.1-common php8.1-opcache
+  php8.1-readline
+升级了 0 个软件包，新安装了 17 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 6,004 kB 的归档。
+解压缩后会消耗 23.6 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libapr1 riscv64 1.7.0-ok1 [90.2 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1 riscv64 1.6.1-ok3 [85.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1-dbd-sqlite3 riscv64 1.6.1-ok3 [9,974 B]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libldap2 riscv64 2.6.3+dfsg-ok2 [162 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1-ldap riscv64 1.6.1-ok3 [8,396 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 liblua5.3-0 riscv64 5.3.6-ok1 [125 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-bin riscv64 2.4.54-ok1 [1,153 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-data all 2.4.54-ok1 [165 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-utils riscv64 2.4.54-ok1 [83.2 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2 riscv64 2.4.54-ok1 [97.7 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php-common all 2:92-ok1 [11.6 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-common riscv64 8.1.12-ok1 [654 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-opcache riscv64 8.1.12-ok1 [62.5 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-readline riscv64 8.1.12-ok1 [11.8 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-cli riscv64 8.1.12-ok1 [1,666 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libapache2-mod-php8.1 riscv64 8.1.12-ok1 [1,599 kB]
+已下载 6,004 kB，耗时 5秒 (1,135 kB/s)
+正在选中未选择的软件包 libapr1:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libapr1_1.7.0-ok1_riscv64.deb  ...
+正在解压 libapr1:riscv64 (1.7.0-ok1) ...
+正在选中未选择的软件包 libaprutil1:riscv64。
+准备解压 .../01-libaprutil1_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 libaprutil1-dbd-sqlite3:riscv64。
+准备解压 .../02-libaprutil1-dbd-sqlite3_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1-dbd-sqlite3:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 libldap2:riscv64。
+准备解压 .../03-libldap2_2.6.3+dfsg-ok2_riscv64.deb  ...
+正在解压 libldap2:riscv64 (2.6.3+dfsg-ok2) ...
+正在选中未选择的软件包 libaprutil1-ldap:riscv64。
+准备解压 .../04-libaprutil1-ldap_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1-ldap:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 liblua5.3-0:riscv64。
+准备解压 .../05-liblua5.3-0_5.3.6-ok1_riscv64.deb  ...
+正在解压 liblua5.3-0:riscv64 (5.3.6-ok1) ...
+正在选中未选择的软件包 apache2-bin。
+准备解压 .../06-apache2-bin_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2-bin (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2-data。
+准备解压 .../07-apache2-data_2.4.54-ok1_all.deb  ...
+正在解压 apache2-data (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2-utils。
+准备解压 .../08-apache2-utils_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2-utils (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2。
+准备解压 .../09-apache2_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2 (2.4.54-ok1) ...
+正在选中未选择的软件包 php-common。
+准备解压 .../10-php-common_2%3a92-ok1_all.deb  ...
+正在解压 php-common (2:92-ok1) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../11-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 php8.1-common。
+准备解压 .../12-php8.1-common_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-common (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-opcache。
+准备解压 .../13-php8.1-opcache_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-opcache (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-readline。
+准备解压 .../14-php8.1-readline_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-readline (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-cli。
+准备解压 .../15-php8.1-cli_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-cli (8.1.12-ok1) ...
+正在选中未选择的软件包 libapache2-mod-php8.1。
+准备解压 .../16-libapache2-mod-php8.1_8.1.12-ok1_riscv64.deb  ...
+正在解压 libapache2-mod-php8.1 (8.1.12-ok1) ...
+正在设置 php-common (2:92-ok1) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+正在设置 libapr1:riscv64 (1.7.0-ok1) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 liblua5.3-0:riscv64 (5.3.6-ok1) ...
+正在设置 apache2-data (2.4.54-ok1) ...
+正在设置 libldap2:riscv64 (2.6.3+dfsg-ok2) ...
+正在设置 libaprutil1:riscv64 (1.6.1-ok3) ...
+正在设置 php8.1-common (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/tokenizer.ini with new version
+正在设置 libaprutil1-ldap:riscv64 (1.6.1-ok3) ...
+正在设置 libaprutil1-dbd-sqlite3:riscv64 (1.6.1-ok3) ...
+正在设置 php8.1-readline (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/readline.ini with new version
+正在设置 php8.1-opcache (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/opcache.ini with new version
+正在设置 apache2-utils (2.4.54-ok1) ...
+正在设置 apache2-bin (2.4.54-ok1) ...
+正在设置 php8.1-cli (8.1.12-ok1) ...
+update-alternatives: 使用 /usr/bin/php8.1 来在自动模式中提供 /usr/bin/php (php)
+update-alternatives: 使用 /usr/bin/phar8.1 来在自动模式中提供 /usr/bin/phar (phar)
+update-alternatives: 使用 /usr/bin/phar.phar8.1 来在自动模式中提供 /usr/bin/phar.phar (phar.phar)
+
+Creating config file /etc/php/8.1/cli/php.ini with new version
+正在设置 libapache2-mod-php8.1 (8.1.12-ok1) ...
+Package apache2 is not configured yet. Will defer actions by package libapache2-mod-php8.1.
+
+Creating config file /etc/php/8.1/apache2/php.ini with new version
+No module matches 
+正在设置 apache2 (2.4.54-ok1) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+info: Switch to mpm prefork for package libapache2-mod-php8.1
+Module mpm_event disabled.
+Enabling module mpm_prefork.
+info: Executing deferred 'a2enmod php8.1' for package libapache2-mod-php8.1
+Enabling module php8.1.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 systemd (245.4-ok4~0716) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 php8.1-cli (8.1.12-ok1) 的触发器 ...
+正在处理用于 libapache2-mod-php8.1 (8.1.12-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libapache2-mod-php8.1'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: apache2 libapache2-mod-php8.1 apache2-bin apache2-data apache2-utils archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libaprutil1-ldap libaprutil1-dbd-sqlite3 libaprutil1 libapr1 libdebian-installer4 libdevmapper-event1.02.1 php8.1-cli php8.1-readline php8.1-opcache php8.1-common libffi8 libldap2 liblua5.3-0 php-common
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'apache2', 'libapache2-mod-php8.1', 'apache2-bin', 'apache2-data', 'apache2-utils', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libaprutil1-ldap', 'libaprutil1-dbd-sqlite3', 'libaprutil1', 'libapr1', 'libdebian-installer4', 'libdevmapper-event1.02.1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'php8.1-cli', 'php8.1-readline', 'php8.1-opcache', 'php8.1-common', 'libffi8', 'libldap2', 'liblua5.3-0', 'php-common'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156807 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/mod-php-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/mod-php-packages.all ./testing/php8.1/mod-php-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/mod-php-packages.all ./testing/php8.1/mod-php-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.nrl_5j77/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/mod-php-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/mod-php-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.nrl_5j77/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/mod-php-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO/build.40L'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/php8.1/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.nrl_5j77/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/php8.1/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.nrl_5j77/runcmd sh -ec if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:17:21]: test mod-php: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'root', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.ZFe0UO/build.40L/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.ZFe0UO/mod-php-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.ZFe0UO/mod-php-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; export AUTOPKGTEST_NORMAL_USER=openkylin; export ADT_NORMAL_USER=openkylin; chmod +x /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/mod-php; touch /tmp/autopkgtest.ZFe0UO/mod-php-stdout /tmp/autopkgtest.ZFe0UO/mod-php-stderr; /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/mod-php 2> >(tee -a /tmp/autopkgtest.ZFe0UO/mod-php-stderr >&2) > >(tee -a /tmp/autopkgtest.ZFe0UO/mod-php-stdout);'], kind test, sout raw, serr raw, env []
+Module actions already disabled
+Module cgi already disabled
+Module proxy_fcgi already disabled
+Considering dependency mpm_prefork for php8.1:
+Considering conflict mpm_event for mpm_prefork:
+Considering conflict mpm_worker for mpm_prefork:
+Module mpm_prefork already enabled
+Considering conflict php5 for php8.1:
+Module php8.1 already enabled
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:17:34]: test mod-php: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/mod-php-stdout ./testing/php8.1/mod-php-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/mod-php-stdout ./testing/php8.1/mod-php-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.nrl_5j77/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/mod-php-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/mod-php-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.nrl_5j77/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/mod-php-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/mod-php-stderr ./testing/php8.1/mod-php-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/mod-php-stderr ./testing/php8.1/mod-php-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.nrl_5j77/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/mod-php-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/mod-php-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.nrl_5j77/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/mod-php-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [20:17:35]: test mod-php:  - - - - - - - - - - results - - - - - - - - - -
+mod-php              PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/mod-php-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/mod-php-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.nrl_5j77/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ZFe0UO/mod-php-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/php8.1/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.nrl_5j77/runcmd sh -ec cd /tmp/autopkgtest.ZFe0UO/mod-php-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/php8.1/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.ZFe0UO/mod-php-artifacts', '/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [20:17:37]: test fpm: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['apache2', 'libapache2-mod-php8.1', 'wget'], deps_new=['apache2', 'php8.1-fpm', 'wget']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.nrl_5j77/runcmd rm -rf -- /tmp/autopkgtest.ZFe0UO
+qemu-system-riscv64: terminating on signal 15 from pid 258804 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.er66hh1j/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.er66hh1j/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.er66hh1j/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.er66hh1j/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.er66hh1j/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.er66hh1j/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.er66hh1j/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.er66hh1j/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'3f77a09d-1a76-491b-91c0-1bd247b98a32[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3f77a09d-1a76-491b-91c0-1bd247b98a32[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'3f77a09d-1a76-491b-91c0-1bd247b98a32[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3f77a09d-1a76-491b-91c0-1bd247b98a32[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'3f77a09d-1a76-491b-91c0-1bd247b98a32[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3f77a09d-1a76-491b-91c0-1bd247b98a32[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'3f77a09d-1a76-491b-91c0-1bd247b98a32[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3f77a09d-1a76-491b-91c0-1bd247b98a32[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'3f77a09d-1a76-491b-91c0-1bd247b98a32[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3f77a09d-1a76-491b-91c0-1bd247b98a32[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.er66hh1j/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'3f77a09d-1a76-491b-91c0-1bd247b98a32[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3f77a09d-1a76-491b-91c0-1bd247b98a32[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.er66hh1j/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.ZFe0UO
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.er66hh1j/runcmd'], downtmp = /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.er66hh1j/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:18:50]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.er66hh1j/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.er66hh1j/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['apache2', 'php8.1-fpm', 'wget']
+autopkgtest: DBG: install-deps: satisfying apache2, php8.1-fpm, wget
+autopkgtest: DBG: install-deps: architecture resolved: apache2, php8.1-fpm, wget
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/4-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/4-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.er66hh1j/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/4-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/php8.1/4-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.er66hh1j/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/4-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ZFe0UO/4-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libffi8 libldap2 liblua5.3-0
+  php-common php8.1-cli php8.1-common php8.1-fpm php8.1-opcache
+  php8.1-readline
+建议安装：
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom ufw php-pear
+下列【新】软件包将被安装：
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1
+  libaprutil1-dbd-sqlite3 libaprutil1-ldap libffi8 libldap2 liblua5.3-0
+  php-common php8.1-cli php8.1-common php8.1-fpm php8.1-opcache
+  php8.1-readline
+升级了 0 个软件包，新安装了 17 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 6,083 kB 的归档。
+解压缩后会消耗 23.8 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libapr1 riscv64 1.7.0-ok1 [90.2 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1 riscv64 1.6.1-ok3 [85.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1-dbd-sqlite3 riscv64 1.6.1-ok3 [9,974 B]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libldap2 riscv64 2.6.3+dfsg-ok2 [162 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libaprutil1-ldap riscv64 1.6.1-ok3 [8,396 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 liblua5.3-0 riscv64 5.3.6-ok1 [125 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-bin riscv64 2.4.54-ok1 [1,153 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-data all 2.4.54-ok1 [165 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2-utils riscv64 2.4.54-ok1 [83.2 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 apache2 riscv64 2.4.54-ok1 [97.7 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php-common all 2:92-ok1 [11.6 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-common riscv64 8.1.12-ok1 [654 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-opcache riscv64 8.1.12-ok1 [62.5 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-readline riscv64 8.1.12-ok1 [11.8 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-cli riscv64 8.1.12-ok1 [1,666 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-fpm riscv64 8.1.12-ok1 [1,678 kB]
+已下载 6,083 kB，耗时 6秒 (1,082 kB/s)
+正在选中未选择的软件包 libapr1:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libapr1_1.7.0-ok1_riscv64.deb  ...
+正在解压 libapr1:riscv64 (1.7.0-ok1) ...
+正在选中未选择的软件包 libaprutil1:riscv64。
+准备解压 .../01-libaprutil1_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 libaprutil1-dbd-sqlite3:riscv64。
+准备解压 .../02-libaprutil1-dbd-sqlite3_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1-dbd-sqlite3:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 libldap2:riscv64。
+准备解压 .../03-libldap2_2.6.3+dfsg-ok2_riscv64.deb  ...
+正在解压 libldap2:riscv64 (2.6.3+dfsg-ok2) ...
+正在选中未选择的软件包 libaprutil1-ldap:riscv64。
+准备解压 .../04-libaprutil1-ldap_1.6.1-ok3_riscv64.deb  ...
+正在解压 libaprutil1-ldap:riscv64 (1.6.1-ok3) ...
+正在选中未选择的软件包 liblua5.3-0:riscv64。
+准备解压 .../05-liblua5.3-0_5.3.6-ok1_riscv64.deb  ...
+正在解压 liblua5.3-0:riscv64 (5.3.6-ok1) ...
+正在选中未选择的软件包 apache2-bin。
+准备解压 .../06-apache2-bin_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2-bin (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2-data。
+准备解压 .../07-apache2-data_2.4.54-ok1_all.deb  ...
+正在解压 apache2-data (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2-utils。
+准备解压 .../08-apache2-utils_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2-utils (2.4.54-ok1) ...
+正在选中未选择的软件包 apache2。
+准备解压 .../09-apache2_2.4.54-ok1_riscv64.deb  ...
+正在解压 apache2 (2.4.54-ok1) ...
+正在选中未选择的软件包 php-common。
+准备解压 .../10-php-common_2%3a92-ok1_all.deb  ...
+正在解压 php-common (2:92-ok1) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../11-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 php8.1-common。
+准备解压 .../12-php8.1-common_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-common (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-opcache。
+准备解压 .../13-php8.1-opcache_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-opcache (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-readline。
+准备解压 .../14-php8.1-readline_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-readline (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-cli。
+准备解压 .../15-php8.1-cli_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-cli (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-fpm。
+准备解压 .../16-php8.1-fpm_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-fpm (8.1.12-ok1) ...
+正在设置 php-common (2:92-ok1) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+正在设置 libapr1:riscv64 (1.7.0-ok1) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 liblua5.3-0:riscv64 (5.3.6-ok1) ...
+正在设置 apache2-data (2.4.54-ok1) ...
+正在设置 libldap2:riscv64 (2.6.3+dfsg-ok2) ...
+正在设置 libaprutil1:riscv64 (1.6.1-ok3) ...
+正在设置 php8.1-common (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/tokenizer.ini with new version
+正在设置 libaprutil1-ldap:riscv64 (1.6.1-ok3) ...
+正在设置 libaprutil1-dbd-sqlite3:riscv64 (1.6.1-ok3) ...
+正在设置 php8.1-readline (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/readline.ini with new version
+正在设置 php8.1-opcache (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/opcache.ini with new version
+正在设置 apache2-utils (2.4.54-ok1) ...
+正在设置 apache2-bin (2.4.54-ok1) ...
+正在设置 php8.1-cli (8.1.12-ok1) ...
+update-alternatives: 使用 /usr/bin/php8.1 来在自动模式中提供 /usr/bin/php (php)
+update-alternatives: 使用 /usr/bin/phar8.1 来在自动模式中提供 /usr/bin/phar (phar)
+update-alternatives: 使用 /usr/bin/phar.phar8.1 来在自动模式中提供 /usr/bin/phar.phar (phar.phar)
+
+Creating config file /etc/php/8.1/cli/php.ini with new version
+正在设置 apache2 (2.4.54-ok1) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+正在设置 php8.1-fpm (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/fpm/php.ini with new version
+NOTICE: Not enabling PHP 8.1 FPM by default.
+NOTICE: To enable PHP 8.1 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php8.1-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+Created symlink /etc/systemd/system/multi-user.target.wants/php8.1-fpm.service → /lib/systemd/system/php8.1-fpm.service.
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 systemd (245.4-ok4~0716) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 php8.1-cli (8.1.12-ok1) 的触发器 ...
+正在处理用于 php8.1-fpm (8.1.12-ok1) 的触发器 ...
+NOTICE: Not enabling PHP 8.1 FPM by default.
+NOTICE: To enable PHP 8.1 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php8.1-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'php8.1-fpm'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: apache2 apache2-bin apache2-data apache2-utils archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libaprutil1-ldap libaprutil1-dbd-sqlite3 libaprutil1 libapr1 libdebian-installer4 libdevmapper-event1.02.1 php8.1-fpm php8.1-cli php8.1-readline php8.1-opcache php8.1-common libffi8 libldap2 liblua5.3-0 php-common
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'apache2', 'apache2-bin', 'apache2-data', 'apache2-utils', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libaprutil1-ldap', 'libaprutil1-dbd-sqlite3', 'libaprutil1', 'libapr1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'php8.1-fpm'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'php8.1-cli', 'php8.1-readline', 'php8.1-opcache', 'php8.1-common', 'libffi8', 'libldap2', 'liblua5.3-0', 'php-common'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156819 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/fpm-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/fpm-packages.all ./testing/php8.1/fpm-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/fpm-packages.all ./testing/php8.1/fpm-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.er66hh1j/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/fpm-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/fpm-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.er66hh1j/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/fpm-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO/build.40L'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/php8.1/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.er66hh1j/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/php8.1/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.er66hh1j/runcmd sh -ec if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:29:14]: test fpm: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'root', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.ZFe0UO/build.40L/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.ZFe0UO/fpm-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.ZFe0UO/fpm-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; export AUTOPKGTEST_NORMAL_USER=openkylin; export ADT_NORMAL_USER=openkylin; chmod +x /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/fpm; touch /tmp/autopkgtest.ZFe0UO/fpm-stdout /tmp/autopkgtest.ZFe0UO/fpm-stderr; /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/fpm 2> >(tee -a /tmp/autopkgtest.ZFe0UO/fpm-stderr >&2) > >(tee -a /tmp/autopkgtest.ZFe0UO/fpm-stdout);'], kind test, sout raw, serr raw, env []
+Module actions already disabled
+Module cgi already disabled
+Considering dependency proxy for proxy_fcgi:
+Enabling module proxy.
+Enabling module proxy_fcgi.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+Enabling conf php8.1-fpm.
+To activate the new configuration, you need to run:
+  systemctl reload apache2
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:29:28]: test fpm: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/fpm-stdout ./testing/php8.1/fpm-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/fpm-stdout ./testing/php8.1/fpm-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.er66hh1j/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/fpm-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/fpm-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.er66hh1j/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/fpm-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/fpm-stderr ./testing/php8.1/fpm-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/fpm-stderr ./testing/php8.1/fpm-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.er66hh1j/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/fpm-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/fpm-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.er66hh1j/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/fpm-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [20:29:30]: test fpm:  - - - - - - - - - - results - - - - - - - - - -
+fpm                  PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/fpm-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/fpm-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.er66hh1j/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ZFe0UO/fpm-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/php8.1/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.er66hh1j/runcmd sh -ec cd /tmp/autopkgtest.ZFe0UO/fpm-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/php8.1/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.ZFe0UO/fpm-artifacts', '/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [20:29:31]: test version: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['apache2', 'php8.1-fpm', 'wget'], deps_new=['php8.1-cli']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.er66hh1j/runcmd rm -rf -- /tmp/autopkgtest.ZFe0UO
+qemu-system-riscv64: terminating on signal 15 from pid 258804 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.cfgl4v51/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.cfgl4v51/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.cfgl4v51/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.cfgl4v51/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.cfgl4v51/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.cfgl4v51/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.cfgl4v51/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.cfgl4v51/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'994c01f3-a78a-4d28-af13-b7e895122bc4[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'994c01f3-a78a-4d28-af13-b7e895122bc4[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'994c01f3-a78a-4d28-af13-b7e895122bc4[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'994c01f3-a78a-4d28-af13-b7e895122bc4[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'994c01f3-a78a-4d28-af13-b7e895122bc4[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'994c01f3-a78a-4d28-af13-b7e895122bc4[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'994c01f3-a78a-4d28-af13-b7e895122bc4[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'994c01f3-a78a-4d28-af13-b7e895122bc4[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'994c01f3-a78a-4d28-af13-b7e895122bc4[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'994c01f3-a78a-4d28-af13-b7e895122bc4[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.cfgl4v51/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'994c01f3-a78a-4d28-af13-b7e895122bc4[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'994c01f3-a78a-4d28-af13-b7e895122bc4[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.cfgl4v51/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.ZFe0UO
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.cfgl4v51/runcmd'], downtmp = /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.cfgl4v51/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:30:44]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/testbed-packages ./testing/php8.1/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.cfgl4v51/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.cfgl4v51/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['php8.1-cli']
+autopkgtest: DBG: install-deps: satisfying php8.1-cli
+autopkgtest: DBG: install-deps: architecture resolved: php8.1-cli
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/5-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/5-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/5-autopkgtest-satdep.deb /tmp/autopkgtest.ZFe0UO/5-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.cfgl4v51/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.ZFe0UO/5-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/php8.1/5-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.cfgl4v51/runcmd sh -ec cat >/tmp/autopkgtest.ZFe0UO/5-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/5-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.ZFe0UO/5-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  libffi8 php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline
+建议安装：
+  php-pear
+下列【新】软件包将被安装：
+  libffi8 php-common php8.1-cli php8.1-common php8.1-opcache php8.1-readline
+升级了 0 个软件包，新安装了 6 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 2,426 kB 的归档。
+解压缩后会消耗 13.0 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php-common all 2:92-ok1 [11.6 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-common riscv64 8.1.12-ok1 [654 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-opcache riscv64 8.1.12-ok1 [62.5 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-readline riscv64 8.1.12-ok1 [11.8 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 php8.1-cli riscv64 8.1.12-ok1 [1,666 kB]
+已下载 2,426 kB，耗时 3秒 (860 kB/s)
+正在选中未选择的软件包 php-common。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-php-common_2%3a92-ok1_all.deb  ...
+正在解压 php-common (2:92-ok1) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../1-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 php8.1-common。
+准备解压 .../2-php8.1-common_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-common (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-opcache。
+准备解压 .../3-php8.1-opcache_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-opcache (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-readline。
+准备解压 .../4-php8.1-readline_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-readline (8.1.12-ok1) ...
+正在选中未选择的软件包 php8.1-cli。
+准备解压 .../5-php8.1-cli_8.1.12-ok1_riscv64.deb  ...
+正在解压 php8.1-cli (8.1.12-ok1) ...
+正在设置 php-common (2:92-ok1) ...
+Created symlink /etc/systemd/system/timers.target.wants/phpsessionclean.timer → /lib/systemd/system/phpsessionclean.timer.
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 php8.1-common (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/calendar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ctype.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/exif.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/fileinfo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ffi.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/ftp.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/gettext.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/iconv.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/pdo.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/phar.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/posix.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/shmop.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sockets.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvmsg.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvsem.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/sysvshm.ini with new version
+
+Creating config file /etc/php/8.1/mods-available/tokenizer.ini with new version
+正在设置 php8.1-readline (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/readline.ini with new version
+正在设置 php8.1-opcache (8.1.12-ok1) ...
+
+Creating config file /etc/php/8.1/mods-available/opcache.ini with new version
+正在设置 php8.1-cli (8.1.12-ok1) ...
+update-alternatives: 使用 /usr/bin/php8.1 来在自动模式中提供 /usr/bin/php (php)
+update-alternatives: 使用 /usr/bin/phar8.1 来在自动模式中提供 /usr/bin/phar (phar)
+update-alternatives: 使用 /usr/bin/phar.phar8.1 来在自动模式中提供 /usr/bin/phar.phar (phar.phar)
+
+Creating config file /etc/php/8.1/cli/php.ini with new version
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 php8.1-cli (8.1.12-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'php8.1-cli'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 php8.1-cli php8.1-readline php8.1-opcache php8.1-common libffi8 php-common
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'php8.1-cli', 'php8.1-readline', 'php8.1-opcache', 'php8.1-common', 'libffi8', 'php-common'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156076 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.ZFe0UO/version-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/version-packages.all ./testing/php8.1/version-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/version-packages.all ./testing/php8.1/version-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.cfgl4v51/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/version-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/version-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.cfgl4v51/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/version-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.ZFe0UO/build.40L'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/php8.1/tests-tree/ /tmp/autopkgtest.ZFe0UO/build.40L/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/php8.1/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.cfgl4v51/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/php8.1/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.cfgl4v51/runcmd sh -ec if ! test -d /tmp/autopkgtest.ZFe0UO/build.40L/src/; then mkdir -- /tmp/autopkgtest.ZFe0UO/build.40L/src/; fi; cd /tmp/autopkgtest.ZFe0UO/build.40L/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.ZFe0UO/build.40L/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:37:33]: test version: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.ZFe0UO/build.40L/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.ZFe0UO/version-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.ZFe0UO/version-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/version; touch /tmp/autopkgtest.ZFe0UO/version-stdout /tmp/autopkgtest.ZFe0UO/version-stderr; /tmp/autopkgtest.ZFe0UO/build.40L/src/debian/tests/version 2> >(tee -a /tmp/autopkgtest.ZFe0UO/version-stderr >&2) > >(tee -a /tmp/autopkgtest.ZFe0UO/version-stdout);'], kind test, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [20:37:38]: test version: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/version-stdout ./testing/php8.1/version-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/version-stdout ./testing/php8.1/version-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.cfgl4v51/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/version-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/version-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.cfgl4v51/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/version-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/version-stderr ./testing/php8.1/version-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/version-stderr ./testing/php8.1/version-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.cfgl4v51/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.ZFe0UO/version-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/php8.1/version-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.cfgl4v51/runcmd sh -ec cat </tmp/autopkgtest.ZFe0UO/version-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [20:37:40]: test version:  - - - - - - - - - - results - - - - - - - - - -
+version              PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.ZFe0UO/version-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.ZFe0UO/version-artifacts/ ./testing/php8.1/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.cfgl4v51/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.ZFe0UO/version-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/php8.1/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.cfgl4v51/runcmd sh -ec cd /tmp/autopkgtest.ZFe0UO/version-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/php8.1/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.ZFe0UO/version-artifacts', '/tmp/autopkgtest.ZFe0UO/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [20:37:41]: @@@@@@@@@@@@@@@@@@@@ summary
+cli                  PASS
+cgi                  PASS
+mod-php              PASS
+fpm                  PASS
+version              PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.ZFe0UO
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 258804 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

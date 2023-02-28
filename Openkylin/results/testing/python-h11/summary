@@ -1,0 +1,4 @@
+upstream             FAIL badpkg
+blame: ./src/python-h11_0.14.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-h11 相匹配的软件包
+ (exit code 1)

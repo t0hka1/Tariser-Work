@@ -1,0 +1,12 @@
+autodep8-perl-build-deps FAIL badpkg
+blame: ./src/perltidy_20220613-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 perltidy 相匹配的软件包
+ (exit code 1)
+autodep8-perl        FAIL badpkg
+blame: ./src/perltidy_20220613-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 perltidy 相匹配的软件包
+ (exit code 1)
+autodep8-perl-recommends FAIL badpkg
+blame: ./src/perltidy_20220613-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 perltidy 相匹配的软件包
+ (exit code 1)

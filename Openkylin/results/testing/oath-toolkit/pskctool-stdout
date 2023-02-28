@@ -1,0 +1,28 @@
+PASS pskctool --version
+PASS pskctool
+PASS pskctool -h
+PASS pskctool --info pskctool/tests/tst_pskctool.sh
+PASS pskctool --info --quiet --debug --strict pskctool/tests/tst_pskctool.sh
+PASS pskctool --info --strict pskctool/tests/pskc-invalid.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure2.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure3.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure4.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure5.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure10.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-all.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-ns.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-ocra.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/20120919-test001-4282.xml
+PASS pskctool --validate --quiet --debug --strict pskctool/tests/tst_pskctool.sh
+PASS pskctool --validate pskctool/tests/tst_pskctool.sh
+PASS pskctool --validate pskctool/tests/pskc-invalid.xml
+PASS pskctool --validate --quiet --debug --strict pskctool/tests/pskc-invalid.xml
+PASS pskctool --validate pskctool/tests/pskc-figure2.xml
+PASS pskctool --validate pskctool/tests/pskc-figure3.xml
+PASS pskctool --validate pskctool/tests/pskc-figure4.xml
+PASS pskctool --validate pskctool/tests/pskc-figure5.xml
+PASS pskctool --validate pskctool/tests/pskc-figure10.xml
+PASS pskctool --validate pskctool/tests/pskc-all.xml
+PASS pskctool --validate pskctool/tests/pskc-ns.xml
+PASS pskctool --validate pskctool/tests/pskc-ocra.xml
+PASS pskctool --validate pskctool/tests/20120919-test001-4282.xml

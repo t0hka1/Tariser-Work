@@ -1,0 +1,6 @@
+libffi8	3.4.4-ok3
+php-common	2:92-ok1
+php8.1-cli	8.1.12-ok1
+php8.1-common	8.1.12-ok1
+php8.1-opcache	8.1.12-ok1
+php8.1-readline	8.1.12-ok1

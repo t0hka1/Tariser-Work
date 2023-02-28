@@ -1,0 +1,3 @@
+pip3-root.sh         PASS
+pip3-user.sh         PASS
+pip3-editable.sh     FAIL non-zero exit status 1

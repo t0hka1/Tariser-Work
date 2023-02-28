@@ -1,0 +1,4 @@
+build (legacy): OK
+run: OK
+build (with pkg-config): OK
+run: OK

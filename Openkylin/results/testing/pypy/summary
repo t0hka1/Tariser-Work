@@ -1,0 +1,24 @@
+byte-compilation     FAIL badpkg
+blame: ./src/pypy_7.3.9-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy 相匹配的软件包
+ (exit code 1)
+command-line         FAIL badpkg
+blame: ./src/pypy_7.3.9-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy 相匹配的软件包
+ (exit code 1)
+pypy-tk              FAIL badpkg
+blame: ./src/pypy_7.3.9-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy-tk 相匹配的软件包
+ (exit code 1)
+module-install-local FAIL badpkg
+blame: ./src/pypy_7.3.9-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy-dev 相匹配的软件包
+ (exit code 1)
+module-install-user  FAIL badpkg
+blame: ./src/pypy_7.3.9-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy-dev 相匹配的软件包
+ (exit code 1)
+module-install-virtualenv FAIL badpkg
+blame: ./src/pypy_7.3.9-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pypy-dev 相匹配的软件包
+ (exit code 1)

@@ -1,0 +1,213 @@
+Plugin Details:
+  Name                     pipewire
+  Description              Uses PipeWire to handle media streams
+  Filename                 /usr/lib/riscv64-linux-gnu/gstreamer-1.0/libgstpipewire.so
+  Version                  0.3.56
+  License                  MIT/X11
+  Source module            pipewire
+  Binary package           pipewire
+  Origin URL               pipewire.org
+
+  pipewiredeviceprovider: PipeWire Device Provider
+  pipewiresink: PipeWire sink
+  pipewiresrc: PipeWire source
+
+  3 features:
+  +-- 2 elements
+  +-- 1 device providers
+
+Factory Details:
+  Rank                     none (0)
+  Long-name                PipeWire sink
+  Klass                    Sink/Video
+  Description              Send video to PipeWire
+  Author                   Wim Taymans <wim.taymans@gmail.com>
+
+Plugin Details:
+  Name                     pipewire
+  Description              Uses PipeWire to handle media streams
+  Filename                 /usr/lib/riscv64-linux-gnu/gstreamer-1.0/libgstpipewire.so
+  Version                  0.3.56
+  License                  MIT/X11
+  Source module            pipewire
+  Binary package           pipewire
+  Origin URL               pipewire.org
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBaseSink
+                         +----GstPipeWireSink
+
+Pad Templates:
+  SINK template: 'sink'
+    Availability: Always
+    Capabilities:
+      ANY
+
+Element has no clocking capabilities.
+Element has no URI handling capabilities.
+
+Pads:
+  SINK: 'sink'
+    Pad Template: 'sink'
+
+Element Properties:
+  async               : Go asynchronously to PAUSED
+                        flags: readable, writable
+                        Boolean. Default: true
+  blocksize           : Size in bytes to pull per buffer (0 = default)
+                        flags: readable, writable
+                        Unsigned Integer. Range: 0 - 4294967295 Default: 4096 
+  client-name         : The client name to use (NULL = default)
+                        flags: readable, writable
+                        String. Default: "gst-inspect-1.0"
+  client-properties   : List of PipeWire client properties
+                        flags: readable, writable
+                        Boxed pointer of type "GstStructure"
+  enable-last-sample  : Enable the last-sample property
+                        flags: readable, writable
+                        Boolean. Default: true
+  fd                  : The fd to connect with
+                        flags: readable, writable
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  last-sample         : The last sample received in the sink
+                        flags: readable
+                        Boxed pointer of type "GstSample"
+  max-bitrate         : The maximum bits per second to render (0 = disabled)
+                        flags: readable, writable
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 0 
+  max-lateness        : Maximum number of nanoseconds that a buffer can be late before it is dropped (-1 unlimited)
+                        flags: readable, writable
+                        Integer64. Range: -1 - 9223372036854775807 Default: -1 
+  mode                : The mode to operate in
+                        flags: readable, writable
+                        Enum "GstPipeWireSinkMode" Default: 0, "default"
+                           (0): default          - GST_PIPEWIRE_SINK_MODE_DEFAULT
+                           (1): render           - GST_PIPEWIRE_SINK_MODE_RENDER
+                           (2): provide          - GST_PIPEWIRE_SINK_MODE_PROVIDE
+  name                : The name of the object
+                        flags: readable, writable
+                        String. Default: "pipewiresink0"
+  parent              : The parent of the object
+                        flags: readable, writable
+                        Object of type "GstObject"
+  path                : The sink path to connect to (NULL = default)
+                        flags: readable, writable, deprecated
+                        String. Default: null
+  processing-deadline : Maximum processing deadline in nanoseconds
+                        flags: readable, writable
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 20000000 
+  qos                 : Generate Quality-of-Service events upstream
+                        flags: readable, writable
+                        Boolean. Default: false
+  render-delay        : Additional render delay of the sink in nanoseconds
+                        flags: readable, writable
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 0 
+  stream-properties   : List of PipeWire stream properties
+                        flags: readable, writable
+                        Boxed pointer of type "GstStructure"
+  sync                : Sync on the clock
+                        flags: readable, writable
+                        Boolean. Default: true
+  target-object       : The sink name/serial to connect to (NULL = default)
+                        flags: readable, writable
+                        String. Default: null
+  throttle-time       : The time to keep between rendered buffers (0 = disabled)
+                        flags: readable, writable
+                        Unsigned Integer64. Range: 0 - 18446744073709551615 Default: 0 
+  ts-offset           : Timestamp offset in nanoseconds
+                        flags: readable, writable
+                        Integer64. Range: -9223372036854775808 - 9223372036854775807 Default: 0 
+Factory Details:
+  Rank                     primary + 1 (257)
+  Long-name                PipeWire source
+  Klass                    Source/Video
+  Description              Uses PipeWire to create video
+  Author                   Wim Taymans <wim.taymans@gmail.com>
+
+Plugin Details:
+  Name                     pipewire
+  Description              Uses PipeWire to handle media streams
+  Filename                 /usr/lib/riscv64-linux-gnu/gstreamer-1.0/libgstpipewire.so
+  Version                  0.3.56
+  License                  MIT/X11
+  Source module            pipewire
+  Binary package           pipewire
+  Origin URL               pipewire.org
+
+GObject
+ +----GInitiallyUnowned
+       +----GstObject
+             +----GstElement
+                   +----GstBaseSrc
+                         +----GstPushSrc
+                               +----GstPipeWireSrc
+
+Pad Templates:
+  SRC template: 'src'
+    Availability: Always
+    Capabilities:
+      ANY
+
+Clocking Interaction:
+  element is supposed to provide a clock but returned NULL
+Element has no URI handling capabilities.
+
+Pads:
+  SRC: 'src'
+    Pad Template: 'src'
+
+Element Properties:
+  always-copy         : Always copy the buffer and data
+                        flags: readable, writable
+                        Boolean. Default: false
+  blocksize           : Size in bytes to read per buffer (-1 = default)
+                        flags: readable, writable
+                        Unsigned Integer. Range: 0 - 4294967295 Default: 4096 
+  client-name         : The client name to use (NULL = default)
+                        flags: readable, writable
+                        String. Default: "gst-inspect-1.0"
+  client-properties   : list of PipeWire client properties
+                        flags: readable, writable
+                        Boxed pointer of type "GstStructure"
+  do-timestamp        : Apply current stream time to buffers
+                        flags: readable, writable
+                        Boolean. Default: false
+  fd                  : The fd to connect with
+                        flags: readable, writable
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  keepalive-time      : Periodically send last buffer (in milliseconds, 0 = disabled)
+                        flags: readable, writable
+                        Integer. Range: 0 - 2147483647 Default: 0 
+  max-buffers         : Maximum number of buffers to negotiate with PipeWire
+                        flags: readable, writable
+                        Integer. Range: 1 - 2147483647 Default: 2147483647 
+  min-buffers         : Minimum number of buffers to negotiate with PipeWire
+                        flags: readable, writable
+                        Integer. Range: 1 - 2147483647 Default: 8 
+  name                : The name of the object
+                        flags: readable, writable
+                        String. Default: "pipewiresrc0"
+  num-buffers         : Number of buffers to output before sending EOS (-1 = unlimited)
+                        flags: readable, writable
+                        Integer. Range: -1 - 2147483647 Default: -1 
+  parent              : The parent of the object
+                        flags: readable, writable
+                        Object of type "GstObject"
+  path                : The source path to connect to (NULL = default)
+                        flags: readable, writable, deprecated
+                        String. Default: null
+  resend-last         : Resend last buffer on EOS
+                        flags: readable, writable
+                        Boolean. Default: false
+  stream-properties   : list of PipeWire stream properties
+                        flags: readable, writable
+                        Boxed pointer of type "GstStructure"
+  target-object       : The source name/serial to connect to (NULL = default)
+                        flags: readable, writable
+                        String. Default: null
+  typefind            : Run typefind before negotiating (deprecated, non-functional)
+                        flags: readable, writable, deprecated
+                        Boolean. Default: false

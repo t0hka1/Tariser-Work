@@ -1,0 +1,4 @@
+pytest               FAIL badpkg
+blame: ./src/mdurl_0.1.2-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-mdurl 相匹配的软件包
+ (exit code 1)

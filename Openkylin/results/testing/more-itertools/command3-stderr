@@ -1,0 +1,530 @@
+WARNING: Testing via this command is deprecated and will be removed in a future version. Users looking for a generic test entry point independent of test runner are encouraged to use tox.
+test_call_once (more_itertools.tests.test_more.AdjacentTests)
+Test that the predicate is only called once per item. ... ok
+test_consecutive_true (more_itertools.tests.test_more.AdjacentTests)
+Test that when the predicate matches multiple consecutive elements ... ok
+test_distance (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_empty_iterable (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_grouping (more_itertools.tests.test_more.AdjacentTests)
+Test interaction of adjacent() with groupby_transform() ... ok
+test_large_distance (more_itertools.tests.test_more.AdjacentTests)
+Test distance larger than the length of the iterable ... ok
+test_length_one (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_negative_distance (more_itertools.tests.test_more.AdjacentTests)
+Test that adjacent() raises an error with negative distance ... ok
+test_typical (more_itertools.tests.test_more.AdjacentTests) ... ok
+test_zero_distance (more_itertools.tests.test_more.AdjacentTests)
+Test that adjacent() reduces to zip+map when distance is 0 ... ok
+test_nonseq_reversed (more_itertools.tests.test_more.AlwaysReversibleTests) ... ok
+test_regular_reversed (more_itertools.tests.test_more.AlwaysReversibleTests) ... ok
+test_basic (more_itertools.tests.test_more.BucketTests) ... ok
+test_in (more_itertools.tests.test_more.BucketTests) ... ok
+test_validator (more_itertools.tests.test_more.BucketTests) ... ok
+test_even (more_itertools.tests.test_more.ChunkedTests)
+Test when ``n`` divides evenly into the length of the iterable. ... ok
+test_odd (more_itertools.tests.test_more.ChunkedTests)
+Test when ``n`` does not divide evenly into the length of the ... ok
+test_duplicates (more_itertools.tests.test_more.CircularShiftsTests) ... ok
+test_empty (more_itertools.tests.test_more.CircularShiftsTests) ... ok
+test_simple_circular_shifts (more_itertools.tests.test_more.CircularShiftsTests) ... ok
+test_alias (more_itertools.tests.test_more.CollateTests) ... ok
+test_default (more_itertools.tests.test_more.CollateTests)
+Test with the default `key` function. ... ok
+test_empty (more_itertools.tests.test_more.CollateTests)
+Be nice if passed an empty list of iterables. ... ok
+test_key (more_itertools.tests.test_more.CollateTests)
+Test using a custom `key` function. ... ok
+test_one (more_itertools.tests.test_more.CollateTests)
+Work when only 1 iterable is passed. ... ok
+test_reverse (more_itertools.tests.test_more.CollateTests)
+Test the `reverse` kwarg. ... ok
+test_custom_ordering (more_itertools.tests.test_more.ConsecutiveGroupsTest) ... ok
+test_exotic_ordering (more_itertools.tests.test_more.ConsecutiveGroupsTest) ... ok
+test_numbers (more_itertools.tests.test_more.ConsecutiveGroupsTest) ... ok
+test_consumer (more_itertools.tests.test_more.ConsumerTests) ... ok
+test_basic (more_itertools.tests.test_more.CountCycleTests) ... ok
+test_empty (more_itertools.tests.test_more.CountCycleTests) ... ok
+test_negative (more_itertools.tests.test_more.CountCycleTests) ... ok
+test_custom (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_empty (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_normal (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_one (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_roundtrip (more_itertools.tests.test_more.DifferenceTest) ... ok
+test_distinct_permutations (more_itertools.tests.test_more.DistinctPermutationsTests)
+Make sure the output for ``distinct_permutations()`` is the same as ... ok
+test_other_iterables (more_itertools.tests.test_more.DistinctPermutationsTests)
+Make sure ``distinct_permutations()`` accepts a different type of ... ok
+test_basic (more_itertools.tests.test_more.DistributeTest) ... ok
+test_invalid_n (more_itertools.tests.test_more.DistributeTest) ... ok
+test_large_n (more_itertools.tests.test_more.DistributeTest) ... ok
+test_basic (more_itertools.tests.test_more.DivideTest) ... ok
+test_invalid_n (more_itertools.tests.test_more.DivideTest) ... ok
+test_large_n (more_itertools.tests.test_more.DivideTest) ... ok
+test_empty (more_itertools.tests.test_more.ExactlyNTests)
+Return ``True`` if the iterable is empty and ``n`` is 0 ... ok
+test_false (more_itertools.tests.test_more.ExactlyNTests)
+Iterable does not have ``n`` ``True`` elements ... ok
+test_true (more_itertools.tests.test_more.ExactlyNTests)
+Iterable has ``n`` ``True`` elements ... ok
+test_default (more_itertools.tests.test_more.FirstTests)
+It should return the provided default arg for empty iterables. ... ok
+test_empty_stop_iteration (more_itertools.tests.test_more.FirstTests)
+It should raise StopIteration for empty iterables. ... ok
+test_many (more_itertools.tests.test_more.FirstTests)
+Test that it works on many-item iterables. ... ok
+test_one (more_itertools.tests.test_more.FirstTests)
+Test that it doesn't raise StopIteration prematurely. ... ok
+test_default_funcs (more_itertools.tests.test_more.GroupByTransformTests)
+Test that groupby_transform() with default args mimics groupby() ... ok
+test_no_valuefunc (more_itertools.tests.test_more.GroupByTransformTests) ... ok
+test_valuefunc (more_itertools.tests.test_more.GroupByTransformTests) ... ok
+test_ilen (more_itertools.tests.test_more.IlenTests)
+Sanity-checks for ``ilen()``. ... ok
+test_even (more_itertools.tests.test_more.InterleaveLongestTests) ... ok
+test_mixed_types (more_itertools.tests.test_more.InterleaveLongestTests) ... ok
+test_short (more_itertools.tests.test_more.InterleaveLongestTests) ... ok
+test_even (more_itertools.tests.test_more.InterleaveTests) ... ok
+test_mixed_types (more_itertools.tests.test_more.InterleaveTests) ... ok
+test_short (more_itertools.tests.test_more.InterleaveTests) ... ok
+test_even (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_n (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_n_zero (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_nested (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_not_iterable (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_odd (more_itertools.tests.test_more.IntersperseTest) ... ok
+test_all (more_itertools.tests.test_more.IsliceExtendedTests) ... ok
+test_zero_step (more_itertools.tests.test_more.IsliceExtendedTests) ... ok
+test_custom_pred (more_itertools.tests.test_more.LocateTests) ... ok
+test_default_pred (more_itertools.tests.test_more.LocateTests) ... ok
+test_no_matches (more_itertools.tests.test_more.LocateTests) ... ok
+test_basic (more_itertools.tests.test_more.MakeDecoratorTests) ... ok
+test_result_index (more_itertools.tests.test_more.MakeDecoratorTests) ... ok
+test_wrap_class (more_itertools.tests.test_more.MakeDecoratorTests) ... ok
+test_default (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_reducefunc (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_ret (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_valuefunc (more_itertools.tests.test_more.MapReduceTests) ... ok
+test_arg_count (more_itertools.tests.test_more.NumericRangeTests) ... ok
+test_basic (more_itertools.tests.test_more.NumericRangeTests) ... ok
+test_zero_step (more_itertools.tests.test_more.NumericRangeTests) ... ok
+test_basic (more_itertools.tests.test_more.OneTests) ... ok
+test_too_long (more_itertools.tests.test_more.OneTests) ... ok
+test_too_short (more_itertools.tests.test_more.OneTests) ... ok
+test_invalid_n (more_itertools.tests.test_more.PaddedTest) ... ok
+test_next_multiple (more_itertools.tests.test_more.PaddedTest) ... ok
+test_no_n (more_itertools.tests.test_more.PaddedTest) ... ok
+test_valid_n (more_itertools.tests.test_more.PaddedTest) ... ok
+test_empty (more_itertools.tests.test_more.PeekableTests)
+Tests prepending in front of an empty iterable ... ok
+test_indexing (more_itertools.tests.test_more.PeekableTests)
+Indexing into the peekable shouldn't advance the iterator. ... ok
+test_multi_prepend (more_itertools.tests.test_more.PeekableTests)
+Tests prepending multiple items and getting them in proper order ... ok
+test_multi_prepend_peek (more_itertools.tests.test_more.PeekableTests)
+Tests prepending multiple elements and getting them in reverse order ... ok
+test_passthrough (more_itertools.tests.test_more.PeekableTests)
+Iterating a peekable without using ``peek()`` or ``prepend()`` ... ok
+test_peek_default (more_itertools.tests.test_more.PeekableTests)
+Make sure passing a default into ``peek()`` works. ... ok
+test_prepend (more_itertools.tests.test_more.PeekableTests)
+Tests intersperesed ``prepend()`` and ``next()`` calls ... ok
+test_prepend_after_stop (more_itertools.tests.test_more.PeekableTests)
+Test resuming iteration after a previous exhaustion ... ok
+test_prepend_indexing (more_itertools.tests.test_more.PeekableTests)
+Tests interaction between prepending and indexing ... ok
+test_prepend_iterable (more_itertools.tests.test_more.PeekableTests)
+Tests prepending from an iterable ... ok
+test_prepend_many (more_itertools.tests.test_more.PeekableTests)
+Tests that prepending a huge number of elements works ... ok
+test_prepend_reversed (more_itertools.tests.test_more.PeekableTests)
+Tests prepending from a reversed iterable ... ok
+test_prepend_slicing (more_itertools.tests.test_more.PeekableTests)
+Tests interaction between prepending and slicing ... ok
+test_prepend_truthiness (more_itertools.tests.test_more.PeekableTests)
+Tests that ``__bool__()`` or ``__nonzero__()`` works properly ... ok
+test_simple_peeking (more_itertools.tests.test_more.PeekableTests)
+Make sure ``next`` and ``peek`` advance and don't advance the ... ok
+test_slicing (more_itertools.tests.test_more.PeekableTests)
+Slicing the peekable shouldn't advance the iterator. ... ok
+test_slicing_error (more_itertools.tests.test_more.PeekableTests) ... ok
+test_slicing_reset (more_itertools.tests.test_more.PeekableTests)
+Test slicing on a fresh iterable each time ... ok
+test_truthiness (more_itertools.tests.test_more.PeekableTests)
+Make sure a ``peekable`` tests true iff there are items remaining in ... ok
+test_decode (more_itertools.tests.test_more.RunLengthTest) ... ok
+test_encode (more_itertools.tests.test_more.RunLengthTest) ... ok
+test_elements (more_itertools.tests.test_more.SeekableTest) ... ok
+test_exhaustion_reset (more_itertools.tests.test_more.SeekableTest) ... ok
+test_forward (more_itertools.tests.test_more.SeekableTest) ... ok
+test_partial_reset (more_itertools.tests.test_more.SeekableTest) ... ok
+test_past_end (more_itertools.tests.test_more.SeekableTest) ... ok
+test_abc_methods (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_indexing (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_init (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_slicing (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_update (more_itertools.tests.test_more.SequenceViewTests) ... ok
+test_before_after (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_before_fails (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_chunked (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_individual (more_itertools.tests.test_more.SideEffectTests) ... ok
+test_even (more_itertools.tests.test_more.SlicedTests)
+Test when the length of the sequence is divisible by *n* ... ok
+test_not_sliceable (more_itertools.tests.test_more.SlicedTests) ... ok
+test_odd (more_itertools.tests.test_more.SlicedTests)
+Test when the length of the sequence is not divisible by *n* ... ok
+test_invalid_key_list (more_itertools.tests.test_more.SortTogetherTest)
+tests `key_list` for indexes not available in `iterables` ... ok
+test_key_list (more_itertools.tests.test_more.SortTogetherTest)
+tests `key_list` including default, iterables include duplicates ... ok
+test_reverse (more_itertools.tests.test_more.SortTogetherTest)
+tests `reverse` to ensure a reverse sort for `key_list` iterables ... ok
+test_uneven_iterables (more_itertools.tests.test_more.SortTogetherTest)
+tests trimming of iterables to the shortest length before sorting ... ok
+test_ends_with_sep (more_itertools.tests.test_more.SplitAfterTest) ... ok
+test_no_sep (more_itertools.tests.test_more.SplitAfterTest) ... ok
+test_starts_with_sep (more_itertools.tests.test_more.SplitAfterTest) ... ok
+test_seperators (more_itertools.tests.test_more.SplitAtTests) ... ok
+test_ends_with_sep (more_itertools.tests.test_more.SplitBeforeTest) ... ok
+test_no_sep (more_itertools.tests.test_more.SplitBeforeTest) ... ok
+test_starts_with_sep (more_itertools.tests.test_more.SplitBeforeTest) ... ok
+test_basic (more_itertools.tests.test_more.SpyTests) ... ok
+test_too_many (more_itertools.tests.test_more.SpyTests) ... ok
+test_unpacking (more_itertools.tests.test_more.SpyTests) ... ok
+test_zero (more_itertools.tests.test_more.SpyTests) ... ok
+test_default (more_itertools.tests.test_more.StaggerTest) ... ok
+test_longest (more_itertools.tests.test_more.StaggerTest) ... ok
+test_offsets (more_itertools.tests.test_more.StaggerTest) ... ok
+test_hashable (more_itertools.tests.test_more.StripFunctionTests) ... ok
+test_math (more_itertools.tests.test_more.StripFunctionTests) ... ok
+test_not_hashable (more_itertools.tests.test_more.StripFunctionTests) ... ok
+test_base_type (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_generator (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_iterables (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_none (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_single (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_strings (more_itertools.tests.test_more.TestAlwaysIterable) ... ok
+test_collapse (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_flatten (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_to_level (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_to_list (more_itertools.tests.test_more.TestCollapse) ... ok
+test_collapse_to_string (more_itertools.tests.test_more.TestCollapse) ... ok
+test_all_unique (more_itertools.tests.test_more.UniqueToEachTests)
+When all the input iterables are unique the output should match ... ok
+test_duplicates (more_itertools.tests.test_more.UniqueToEachTests)
+When there are duplicates in any of the input iterables that aren't ... ok
+test_mixed (more_itertools.tests.test_more.UniqueToEachTests)
+When the input iterables contain different types the function should ... ok
+test_basic (more_itertools.tests.test_more.WindowedTests) ... ok
+test_fillvalue (more_itertools.tests.test_more.WindowedTests)
+When sizes don't match evenly, the given fill value should be used. ... ok
+test_large_size (more_itertools.tests.test_more.WindowedTests)
+When the window size is larger than the iterable, and no fill value is ... ok
+test_negative (more_itertools.tests.test_more.WindowedTests)
+When the window size is negative, ValueError should be raised. ... ok
+test_step (more_itertools.tests.test_more.WindowedTests)
+The window should advance by the number of steps provided ... ok
+test_zero (more_itertools.tests.test_more.WindowedTests)
+When the window size is zero, an empty tuple should be emitted. ... ok
+test_with_iter (more_itertools.tests.test_more.WithIterTests) ... ok
+test_longest (more_itertools.tests.test_more.ZipOffsetTest) ... ok
+test_mismatch (more_itertools.tests.test_more.ZipOffsetTest) ... ok
+test_shortest (more_itertools.tests.test_more.ZipOffsetTest) ... ok
+SequenceView (more_itertools.more)
+Doctest: more_itertools.more.SequenceView ... ok
+adjacent (more_itertools.more)
+Doctest: more_itertools.more.adjacent ... ok
+always_iterable (more_itertools.more)
+Doctest: more_itertools.more.always_iterable ... ok
+always_reversible (more_itertools.more)
+Doctest: more_itertools.more.always_reversible ... ok
+bucket (more_itertools.more)
+Doctest: more_itertools.more.bucket ... ok
+chunked (more_itertools.more)
+Doctest: more_itertools.more.chunked ... ok
+circular_shifts (more_itertools.more)
+Doctest: more_itertools.more.circular_shifts ... ok
+collapse (more_itertools.more)
+Doctest: more_itertools.more.collapse ... ok
+consecutive_groups (more_itertools.more)
+Doctest: more_itertools.more.consecutive_groups ... ok
+consumer (more_itertools.more)
+Doctest: more_itertools.more.consumer ... ok
+count_cycle (more_itertools.more)
+Doctest: more_itertools.more.count_cycle ... ok
+difference (more_itertools.more)
+Doctest: more_itertools.more.difference ... ok
+distinct_permutations (more_itertools.more)
+Doctest: more_itertools.more.distinct_permutations ... ok
+distribute (more_itertools.more)
+Doctest: more_itertools.more.distribute ... ok
+divide (more_itertools.more)
+Doctest: more_itertools.more.divide ... ok
+exactly_n (more_itertools.more)
+Doctest: more_itertools.more.exactly_n ... ok
+first (more_itertools.more)
+Doctest: more_itertools.more.first ... ok
+groupby_transform (more_itertools.more)
+Doctest: more_itertools.more.groupby_transform ... ok
+ilen (more_itertools.more)
+Doctest: more_itertools.more.ilen ... ok
+interleave (more_itertools.more)
+Doctest: more_itertools.more.interleave ... ok
+interleave_longest (more_itertools.more)
+Doctest: more_itertools.more.interleave_longest ... ok
+intersperse (more_itertools.more)
+Doctest: more_itertools.more.intersperse ... ok
+islice_extended (more_itertools.more)
+Doctest: more_itertools.more.islice_extended ... ok
+iterate (more_itertools.more)
+Doctest: more_itertools.more.iterate ... ok
+locate (more_itertools.more)
+Doctest: more_itertools.more.locate ... ok
+lstrip (more_itertools.more)
+Doctest: more_itertools.more.lstrip ... ok
+make_decorator (more_itertools.more)
+Doctest: more_itertools.more.make_decorator ... ok
+map_reduce (more_itertools.more)
+Doctest: more_itertools.more.map_reduce ... ok
+numeric_range (more_itertools.more)
+Doctest: more_itertools.more.numeric_range ... ok
+one (more_itertools.more)
+Doctest: more_itertools.more.one ... ok
+padded (more_itertools.more)
+Doctest: more_itertools.more.padded ... ok
+peekable (more_itertools.more)
+Doctest: more_itertools.more.peekable ... ok
+prepend (more_itertools.more.peekable)
+Doctest: more_itertools.more.peekable.prepend ... ok
+rstrip (more_itertools.more)
+Doctest: more_itertools.more.rstrip ... ok
+run_length (more_itertools.more)
+Doctest: more_itertools.more.run_length ... ok
+seekable (more_itertools.more)
+Doctest: more_itertools.more.seekable ... ok
+side_effect (more_itertools.more)
+Doctest: more_itertools.more.side_effect ... ok
+sliced (more_itertools.more)
+Doctest: more_itertools.more.sliced ... ok
+sort_together (more_itertools.more)
+Doctest: more_itertools.more.sort_together ... ok
+split_after (more_itertools.more)
+Doctest: more_itertools.more.split_after ... ok
+split_at (more_itertools.more)
+Doctest: more_itertools.more.split_at ... ok
+split_before (more_itertools.more)
+Doctest: more_itertools.more.split_before ... ok
+spy (more_itertools.more)
+Doctest: more_itertools.more.spy ... ok
+stagger (more_itertools.more)
+Doctest: more_itertools.more.stagger ... ok
+strip (more_itertools.more)
+Doctest: more_itertools.more.strip ... ok
+unique_to_each (more_itertools.more)
+Doctest: more_itertools.more.unique_to_each ... ok
+windowed (more_itertools.more)
+Doctest: more_itertools.more.windowed ... ok
+zip_offset (more_itertools.more)
+Doctest: more_itertools.more.zip_offset ... ok
+test_bogus_function (more_itertools.tests.test_recipes.AccumulateTests)
+Test accumulate with an invalid function ... ok
+test_custom_function (more_itertools.tests.test_recipes.AccumulateTests)
+Test accumulate with a custom function ... ok
+test_default (more_itertools.tests.test_recipes.AccumulateTests)
+Test accumulate with the default function (addition) ... ok
+test_empty (more_itertools.tests.test_recipes.AccumulateTests)
+Test that an empty input returns an empty output ... ok
+test_empty (more_itertools.tests.test_recipes.AllEqualTests)
+Return True if the iterable is empty ... ok
+test_false (more_itertools.tests.test_recipes.AllEqualTests)
+Not everything is equal ... ok
+test_one (more_itertools.tests.test_recipes.AllEqualTests)
+Return True if the iterable is singular ... ok
+test_tricky (more_itertools.tests.test_recipes.AllEqualTests)
+Not everything is identical, but everything is equal ... ok
+test_true (more_itertools.tests.test_recipes.AllEqualTests)
+Everything is equal ... ok
+test_negative_consume (more_itertools.tests.test_recipes.ConsumeTests)
+Check that negative consumsion throws an error ... ok
+test_null_consume (more_itertools.tests.test_recipes.ConsumeTests)
+Check the null case ... ok
+test_sanity (more_itertools.tests.test_recipes.ConsumeTests)
+Test basic functionality ... ok
+test_total_consume (more_itertools.tests.test_recipes.ConsumeTests)
+Check that iterator is totally consumed by default ... ok
+test_happy_path (more_itertools.tests.test_recipes.DotproductTests)
+simple dotproduct example ... ok
+test_default (more_itertools.tests.test_recipes.FirstTrueTests)
+Test with a default keyword ... ok
+test_nothing_true (more_itertools.tests.test_recipes.FirstTrueTests)
+Test default return value. ... ok
+test_pred (more_itertools.tests.test_recipes.FirstTrueTests)
+Test with a custom predicate ... ok
+test_something_true (more_itertools.tests.test_recipes.FirstTrueTests)
+Test with no keywords ... ok
+test_basic_usage (more_itertools.tests.test_recipes.FlattenTests)
+ensure list of lists is flattened one level ... ok
+test_single_level (more_itertools.tests.test_recipes.FlattenTests)
+ensure list of lists is flattened only one level ... ok
+test_even (more_itertools.tests.test_recipes.GrouperTests)
+Test when group size divides evenly into the length of ... ok
+test_fill_value (more_itertools.tests.test_recipes.GrouperTests)
+Test that the fill value is used to pad the final group ... ok
+test_odd (more_itertools.tests.test_recipes.GrouperTests)
+Test when group size does not divide evenly into the length of the ... ok
+test_exact_exception (more_itertools.tests.test_recipes.IterExceptTests)
+ensure the exact specified exception is caught ... ok
+test_first (more_itertools.tests.test_recipes.IterExceptTests)
+ensure first is run before the function ... ok
+test_generic_exception (more_itertools.tests.test_recipes.IterExceptTests)
+ensure the generic exception can be caught ... ok
+test_uncaught_exception_is_raised (more_itertools.tests.test_recipes.IterExceptTests)
+ensure a non-specified exception is raised ... ok
+test_happy_path (more_itertools.tests.test_recipes.NcyclesTests)
+cycle a sequence three times ... ok
+test_null_case (more_itertools.tests.test_recipes.NcyclesTests)
+asking for 0 cycles should return an empty iterator ... ok
+test_pathalogical_case (more_itertools.tests.test_recipes.NcyclesTests)
+asking for negative cycles should return an empty iterator ... ok
+test_basic (more_itertools.tests.test_recipes.NthCombinationTests) ... ok
+test_long (more_itertools.tests.test_recipes.NthCombinationTests) ... ok
+test_basic (more_itertools.tests.test_recipes.NthTests)
+Make sure the nth item is returned ... ok
+test_default (more_itertools.tests.test_recipes.NthTests)
+Ensure a default value is returned when nth item not found ... ok
+test_negative_item_raises (more_itertools.tests.test_recipes.NthTests)
+Ensure asking for a negative item raises an exception ... ok
+test_happy_path (more_itertools.tests.test_recipes.PadnoneTests)
+wrapper iterator should return None indefinitely ... ok
+test_base_case (more_itertools.tests.test_recipes.PairwiseTests)
+ensure an iterable will return pairwise ... ok
+test_short_case (more_itertools.tests.test_recipes.PairwiseTests)
+ensure an empty iterator if there's not enough values to pair ... ok
+test_arbitrary (more_itertools.tests.test_recipes.PartitionTests)
+Test when pred() returns an integer ... ok
+test_bool (more_itertools.tests.test_recipes.PartitionTests)
+Test when pred() returns a boolean ... ok
+test_combinatorics (more_itertools.tests.test_recipes.PowersetTests)
+Ensure a proper enumeration ... ok
+test_basic (more_itertools.tests.test_recipes.PrependTests) ... ok
+test_multiple (more_itertools.tests.test_recipes.PrependTests) ... ok
+test_custom_predicate (more_itertools.tests.test_recipes.QuantifyTests)
+Ensure non-default predicates return as expected ... ok
+test_happy_path (more_itertools.tests.test_recipes.QuantifyTests)
+Make sure True count is returned ... ok
+test_no_replacement (more_itertools.tests.test_recipes.RandomCombinationTests)
+ensure that elements are sampled without replacement ... ok
+test_psuedorandomness (more_itertools.tests.test_recipes.RandomCombinationTests)
+ensure different subsets of the iterable get returned over many ... ok
+test_pseudorandomness (more_itertools.tests.test_recipes.RandomCombinationWithReplacementTests)
+ensure different subsets of the iterable get returned over many ... ok
+test_replacement (more_itertools.tests.test_recipes.RandomCombinationWithReplacementTests)
+ensure that elements are sampled with replacement ... ok
+test_full_permutation (more_itertools.tests.test_recipes.RandomPermutationTests)
+ensure every item from the iterable is returned in a new ordering ... ok
+test_partial_permutation (more_itertools.tests.test_recipes.RandomPermutationTests)
+ensure all returned items are from the iterable, that the returned ... ok
+test_list_with_repeat (more_itertools.tests.test_recipes.RandomProductTests)
+ensure multiple items are chosen, and that they appear to be chosen ... ok
+test_simple_lists (more_itertools.tests.test_recipes.RandomProductTests)
+Ensure that one item is chosen from each list in each pair. ... ok
+test_added_arguments (more_itertools.tests.test_recipes.RepeatfuncTests)
+ensure arguments are applied to the function ... ok
+test_finite_repeat (more_itertools.tests.test_recipes.RepeatfuncTests)
+ensure limited repeat when times is provided ... ok
+test_null_times (more_itertools.tests.test_recipes.RepeatfuncTests)
+repeat 0 should return an empty iterator ... ok
+test_simple_repeat (more_itertools.tests.test_recipes.RepeatfuncTests)
+test simple repeated functions ... ok
+test_even_groups (more_itertools.tests.test_recipes.RoundrobinTests)
+Ensure ordered output from evenly populated iterables ... ok
+test_uneven_groups (more_itertools.tests.test_recipes.RoundrobinTests)
+Ensure ordered output from unevenly populated iterables ... ok
+test_count (more_itertools.tests.test_recipes.TabulateTests)
+Ensure tabulate accepts specific count ... ok
+test_simple_tabulate (more_itertools.tests.test_recipes.TabulateTests)
+Test the happy path ... ok
+test_equal (more_itertools.tests.test_recipes.TailTests)
+Length of iterable is equal to the requested tail ... ok
+test_greater (more_itertools.tests.test_recipes.TailTests)
+Length of iterable is greather than requested tail ... ok
+test_less (more_itertools.tests.test_recipes.TailTests)
+Length of iterable is less than requested tail ... ok
+test_negative_take (more_itertools.tests.test_recipes.TakeTests)
+Make sure taking negative items results in a ValueError ... ok
+test_null_take (more_itertools.tests.test_recipes.TakeTests)
+Check the null case ... ok
+test_simple_take (more_itertools.tests.test_recipes.TakeTests)
+Test basic usage ... ok
+test_take_too_much (more_itertools.tests.test_recipes.TakeTests)
+Taking more than an iterator has remaining should return what the ... ok
+test_custom_key (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure the custom key comparison works ... ok
+test_everseen (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure duplicate elements are ignored ... ok
+test_unhashable (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure things work for unhashable items ... ok
+test_unhashable_key (more_itertools.tests.test_recipes.UniqueEverseenTests)
+ensure things work for unhashable items with a custom key ... ok
+test_custom_key (more_itertools.tests.test_recipes.UniqueJustseenTests)
+ensure the custom key comparison works ... ok
+test_justseen (more_itertools.tests.test_recipes.UniqueJustseenTests)
+ensure only last item is remembered ... ok
+accumulate (more_itertools.recipes)
+Doctest: more_itertools.recipes.accumulate ... ok
+all_equal (more_itertools.recipes)
+Doctest: more_itertools.recipes.all_equal ... ok
+consume (more_itertools.recipes)
+Doctest: more_itertools.recipes.consume ... ok
+dotproduct (more_itertools.recipes)
+Doctest: more_itertools.recipes.dotproduct ... ok
+first_true (more_itertools.recipes)
+Doctest: more_itertools.recipes.first_true ... ok
+flatten (more_itertools.recipes)
+Doctest: more_itertools.recipes.flatten ... ok
+grouper (more_itertools.recipes)
+Doctest: more_itertools.recipes.grouper ... ok
+iter_except (more_itertools.recipes)
+Doctest: more_itertools.recipes.iter_except ... ok
+ncycles (more_itertools.recipes)
+Doctest: more_itertools.recipes.ncycles ... ok
+nth (more_itertools.recipes)
+Doctest: more_itertools.recipes.nth ... ok
+padnone (more_itertools.recipes)
+Doctest: more_itertools.recipes.padnone ... ok
+pairwise (more_itertools.recipes)
+Doctest: more_itertools.recipes.pairwise ... ok
+partition (more_itertools.recipes)
+Doctest: more_itertools.recipes.partition ... ok
+powerset (more_itertools.recipes)
+Doctest: more_itertools.recipes.powerset ... ok
+prepend (more_itertools.recipes)
+Doctest: more_itertools.recipes.prepend ... ok
+quantify (more_itertools.recipes)
+Doctest: more_itertools.recipes.quantify ... ok
+random_combination (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_combination ... ok
+random_combination_with_replacement (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_combination_with_replacement ... ok
+random_permutation (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_permutation ... ok
+random_product (more_itertools.recipes)
+Doctest: more_itertools.recipes.random_product ... ok
+repeatfunc (more_itertools.recipes)
+Doctest: more_itertools.recipes.repeatfunc ... ok
+roundrobin (more_itertools.recipes)
+Doctest: more_itertools.recipes.roundrobin ... ok
+tabulate (more_itertools.recipes)
+Doctest: more_itertools.recipes.tabulate ... ok
+tail (more_itertools.recipes)
+Doctest: more_itertools.recipes.tail ... ok
+take (more_itertools.recipes)
+Doctest: more_itertools.recipes.take ... ok
+unique_everseen (more_itertools.recipes)
+Doctest: more_itertools.recipes.unique_everseen ... ok
+unique_justseen (more_itertools.recipes)
+Doctest: more_itertools.recipes.unique_justseen ... ok
+
+----------------------------------------------------------------------
+Ran 323 tests in 2.883s
+
+OK

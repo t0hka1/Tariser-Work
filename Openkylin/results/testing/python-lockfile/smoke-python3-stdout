@@ -1,0 +1,9 @@
+Python command: python3.8
+Interpreter: /usr/bin/python3.8
+3.8.2 (default, Jun  3 2022, 08:49:21) 
+[GCC 9.3.0]
+Distribution ‘lockfile’:
+	lockfile 0.12.2 (/usr/lib/python3/dist-packages)
+Package ‘lockfile’:
+	<module 'lockfile' from '/usr/lib/python3/dist-packages/lockfile/__init__.py'>
+

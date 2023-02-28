@@ -1,0 +1,1140 @@
+autopkgtest: DBG: testbed init
+autopkgtest [00:22:57]: starting date: 2023-02-28
+autopkgtest [00:22:57]: version 5.20ubuntu1
+autopkgtest [00:22:57]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/protobuf-c_1.3.3-ok1.dsc -o ./testing/protobuf-c -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.gp4at3xm/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.gp4at3xm/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.gp4at3xm/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.gp4at3xm/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.gp4at3xm/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.gp4at3xm/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.gp4at3xm/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.gp4at3xm/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'3b871489-14fb-40fa-a082-2cc70323b569[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b871489-14fb-40fa-a082-2cc70323b569[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'3b871489-14fb-40fa-a082-2cc70323b569[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b871489-14fb-40fa-a082-2cc70323b569[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'3b871489-14fb-40fa-a082-2cc70323b569[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b871489-14fb-40fa-a082-2cc70323b569[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'3b871489-14fb-40fa-a082-2cc70323b569[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b871489-14fb-40fa-a082-2cc70323b569[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'3b871489-14fb-40fa-a082-2cc70323b569[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b871489-14fb-40fa-a082-2cc70323b569[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.gp4at3xm/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'3b871489-14fb-40fa-a082-2cc70323b569[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b871489-14fb-40fa-a082-2cc70323b569[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.gp4at3xm/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.gp4at3xm/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.gp4at3xm/runcmd chmod 1777 /tmp/autopkgtest.9N9dhw
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.9N9dhw
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.gp4at3xm/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:23:58]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.9N9dhw/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/testbed-packages ./testing/protobuf-c/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/testbed-packages ./testing/protobuf-c/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:24:04]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [00:24:05]: @@@@@@@@@@@@@@@@@@@@ source ./src/protobuf-c_1.3.3-ok1.dsc
+autopkgtest: DBG: blame += ./src/protobuf-c_1.3.3-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.9N9dhw'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/protobuf-c_1.3.3-ok1.dsc /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/protobuf-c_1.3.3-ok1.dsc /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/protobuf-c_1.3.3-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat >/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.9N9dhw'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/protobuf-c_1.3.3.orig.tar.gz /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/protobuf-c_1.3.3.orig.tar.gz /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/protobuf-c_1.3.3.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat >/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.9N9dhw'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/protobuf-c_1.3.3-ok1.debian.tar.xz /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/protobuf-c_1.3.3-ok1.debian.tar.xz /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/protobuf-c_1.3.3-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat >/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.9N9dhw/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.9N9dhw/build.XXX
++ builddir=/tmp/autopkgtest.9N9dhw/build.Uxs
++ cd /tmp/autopkgtest.9N9dhw/build.Uxs
++ dpkg-source -x /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.IvB9H4pW/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2023年02月13日 星期一 09时32分12秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.9N9dhw/protobuf-c_1.3.3-ok1.dsc
+dpkg-source: info: extracting protobuf-c in src
+dpkg-source: info: unpacking protobuf-c_1.3.3.orig.tar.gz
+dpkg-source: info: unpacking protobuf-c_1.3.3-ok1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying CVE-2022-33070.patch
+dpkg-source: info: applying misc-2022-unsigned-integer.patch
+dpkg-source: info: applying misc-2022-null-deref.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:24:20]: testing package protobuf-c version 1.3.3-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/build.Uxs/src/debian/ ./testing/protobuf-c/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/build.Uxs/src/debian/ ./testing/protobuf-c/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.9N9dhw/build.Uxs/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/protobuf-c/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cd /tmp/autopkgtest.9N9dhw/build.Uxs/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/protobuf-c/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency libprotobuf-c-dev
+autopkgtest: DBG: marked alternatives ['libprotobuf-c-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build-test path debian/tests/build-test command "None" restrictions [] features [] depends ['libprotobuf-c-dev', 'build-essential', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @builddeps@
+autopkgtest: DBG: synthesised dependency debhelper-compat (= 12)
+autopkgtest: DBG: synthesised dependency libprotobuf-dev (>= 2.6.0~)
+autopkgtest: DBG: synthesised dependency libprotoc-dev (>= 2.6.0~)
+autopkgtest: DBG: synthesised dependency pkg-config
+autopkgtest: DBG: synthesised dependency protobuf-compiler (>= 2.6.0~)
+autopkgtest: DBG: synthesised dependency build-essential
+autopkgtest: DBG: Test defined: name command1 path None command "dh_auto_configure; dh_auto_build; dh_auto_test" restrictions ['allow-stderr'] features [] depends ['debhelper-compat (= 12)', 'libprotobuf-dev (>= 2.6.0~)', 'libprotoc-dev (>= 2.6.0~)', 'pkg-config', 'protobuf-compiler (>= 2.6.0~)', 'build-essential'] clicks [] installed clicks []
+autopkgtest [00:24:21]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/build.Uxs/src/ ./testing/protobuf-c/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/build.Uxs/src/ ./testing/protobuf-c/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.9N9dhw/build.Uxs/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/protobuf-c/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cd /tmp/autopkgtest.9N9dhw/build.Uxs/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/protobuf-c/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency libprotobuf-c-dev
+autopkgtest: DBG: marked alternatives ['libprotobuf-c-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build-test path debian/tests/build-test command "None" restrictions [] features [] depends ['libprotobuf-c-dev', 'build-essential', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @builddeps@
+autopkgtest: DBG: synthesised dependency debhelper-compat (= 12)
+autopkgtest: DBG: synthesised dependency libprotobuf-dev (>= 2.6.0~)
+autopkgtest: DBG: synthesised dependency libprotoc-dev (>= 2.6.0~)
+autopkgtest: DBG: synthesised dependency pkg-config
+autopkgtest: DBG: synthesised dependency protobuf-compiler (>= 2.6.0~)
+autopkgtest: DBG: synthesised dependency build-essential
+autopkgtest: DBG: Test defined: name command1 path None command "dh_auto_configure; dh_auto_build; dh_auto_test" restrictions ['allow-stderr'] features [] depends ['debhelper-compat (= 12)', 'libprotobuf-dev (>= 2.6.0~)', 'libprotoc-dev (>= 2.6.0~)', 'pkg-config', 'protobuf-compiler (>= 2.6.0~)', 'build-essential'] clicks [] installed clicks []
+autopkgtest [00:24:22]: test build-test: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['libprotobuf-c-dev', 'build-essential', 'pkg-config']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['libprotobuf-c-dev', 'build-essential', 'pkg-config']
+autopkgtest: DBG: install-deps: satisfying libprotobuf-c-dev, build-essential, pkg-config
+autopkgtest: DBG: install-deps: architecture resolved: libprotobuf-c-dev, build-essential, pkg-config
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.9N9dhw'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/protobuf-c/1-autopkgtest-satdep.deb /tmp/autopkgtest.9N9dhw/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/protobuf-c/1-autopkgtest-satdep.deb /tmp/autopkgtest.9N9dhw/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.9N9dhw/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/protobuf-c/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat >/tmp/autopkgtest.9N9dhw/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.9N9dhw/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.9N9dhw/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev
+  libprotobuf-c-dev libprotobuf-c1 libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libprotobuf-c-dev
+  libprotobuf-c1 libstdc++-9-dev
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 10 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.2 MB 的归档。
+解压缩后会消耗 80.6 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libprotobuf-c1 riscv64 1.3.3-ok1 [18.4 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libprotobuf-c-dev riscv64 1.3.3-ok1 [62.4 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+已下载 20.2 MB，耗时 9秒 (2,161 kB/s)
+正在选中未选择的软件包 libprotobuf-c1:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libprotobuf-c1_1.3.3-ok1_riscv64.deb  ...
+正在解压 libprotobuf-c1:riscv64 (1.3.3-ok1) ...
+正在选中未选择的软件包 libprotobuf-c-dev:riscv64。
+准备解压 .../01-libprotobuf-c-dev_1.3.3-ok1_riscv64.deb  ...
+正在解压 libprotobuf-c-dev:riscv64 (1.3.3-ok1) ...
+准备解压 .../02-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../03-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../04-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../05-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../06-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../07-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../08-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../09-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../10-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在设置 libprotobuf-c1:riscv64 (1.3.3-ok1) ...
+正在设置 libprotobuf-c-dev:riscv64 (1.3.3-ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libprotobuf-c-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 libprotobuf-c-dev libprotobuf-c1
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libprotobuf-c-dev', 'libprotobuf-c1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156962 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.9N9dhw/build-test-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/build-test-packages.all ./testing/protobuf-c/build-test-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/build-test-packages.all ./testing/protobuf-c/build-test-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/build-test-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/build-test-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/build-test-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.9N9dhw/build.Uxs/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.9N9dhw/build.Uxs/src already exists
+autopkgtest [00:25:40]: test build-test: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.9N9dhw/build.Uxs/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.9N9dhw/build-test-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.9N9dhw/build-test-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.9N9dhw/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.9N9dhw/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.9N9dhw/build.Uxs/src/debian/tests/build-test; touch /tmp/autopkgtest.9N9dhw/build-test-stdout /tmp/autopkgtest.9N9dhw/build-test-stderr; /tmp/autopkgtest.9N9dhw/build.Uxs/src/debian/tests/build-test 2> >(tee -a /tmp/autopkgtest.9N9dhw/build-test-stderr >&2) > >(tee -a /tmp/autopkgtest.9N9dhw/build-test-stdout);'], kind test, sout raw, serr raw, env []
+build ok
+protobuf-c version: 1.3.3
+starts ok
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:25:47]: test build-test: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/build-test-stdout ./testing/protobuf-c/build-test-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/build-test-stdout ./testing/protobuf-c/build-test-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/build-test-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/build-test-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/build-test-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/build-test-stderr ./testing/protobuf-c/build-test-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/build-test-stderr ./testing/protobuf-c/build-test-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/build-test-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/build-test-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/build-test-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [00:25:48]: test build-test:  - - - - - - - - - - results - - - - - - - - - -
+build-test           PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/build-test-artifacts/ ./testing/protobuf-c/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/build-test-artifacts/ ./testing/protobuf-c/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.gp4at3xm/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.9N9dhw/build-test-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/protobuf-c/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.gp4at3xm/runcmd sh -ec cd /tmp/autopkgtest.9N9dhw/build-test-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/protobuf-c/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.9N9dhw/build-test-artifacts', '/tmp/autopkgtest.9N9dhw/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [00:25:50]: test command1: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['libprotobuf-c-dev', 'build-essential', 'pkg-config'], deps_new=['debhelper-compat (= 12)', 'libprotobuf-dev (>= 2.6.0~)', 'libprotoc-dev (>= 2.6.0~)', 'pkg-config', 'protobuf-compiler (>= 2.6.0~)', 'build-essential']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.gp4at3xm/runcmd rm -rf -- /tmp/autopkgtest.9N9dhw
+qemu-system-riscv64: terminating on signal 15 from pid 330769 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.sz7sn93k/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.sz7sn93k/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.sz7sn93k/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.sz7sn93k/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.sz7sn93k/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.sz7sn93k/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.sz7sn93k/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.sz7sn93k/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'38046c14-cfe6-45f4-8a82-670debcfe659[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'38046c14-cfe6-45f4-8a82-670debcfe659[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'38046c14-cfe6-45f4-8a82-670debcfe659[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'38046c14-cfe6-45f4-8a82-670debcfe659[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'38046c14-cfe6-45f4-8a82-670debcfe659[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'38046c14-cfe6-45f4-8a82-670debcfe659[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'38046c14-cfe6-45f4-8a82-670debcfe659[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'38046c14-cfe6-45f4-8a82-670debcfe659[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'38046c14-cfe6-45f4-8a82-670debcfe659[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'38046c14-cfe6-45f4-8a82-670debcfe659[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.sz7sn93k/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'38046c14-cfe6-45f4-8a82-670debcfe659[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'38046c14-cfe6-45f4-8a82-670debcfe659[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.sz7sn93k/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.9N9dhw
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.sz7sn93k/runcmd'], downtmp = /tmp/autopkgtest.9N9dhw
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.9N9dhw
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.sz7sn93k/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:26:53]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.9N9dhw/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/testbed-packages ./testing/protobuf-c/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/testbed-packages ./testing/protobuf-c/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.sz7sn93k/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.sz7sn93k/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['debhelper-compat (= 12)', 'libprotobuf-dev (>= 2.6.0~)', 'libprotoc-dev (>= 2.6.0~)', 'pkg-config', 'protobuf-compiler (>= 2.6.0~)', 'build-essential']
+autopkgtest: DBG: install-deps: satisfying debhelper-compat (= 12), libprotobuf-dev (>= 2.6.0~), libprotoc-dev (>= 2.6.0~), pkg-config, protobuf-compiler (>= 2.6.0~), build-essential
+autopkgtest: DBG: install-deps: architecture resolved: debhelper-compat (= 12), libprotobuf-dev (>= 2.6.0~), libprotoc-dev (>= 2.6.0~), pkg-config, protobuf-compiler (>= 2.6.0~), build-essential
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.9N9dhw'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/protobuf-c/2-autopkgtest-satdep.deb /tmp/autopkgtest.9N9dhw/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/protobuf-c/2-autopkgtest-satdep.deb /tmp/autopkgtest.9N9dhw/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.sz7sn93k/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.9N9dhw/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/protobuf-c/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.sz7sn93k/runcmd sh -ec cat >/tmp/autopkgtest.9N9dhw/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.9N9dhw/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.9N9dhw/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  autoconf automake autopoint autotools-dev build-essential cpp debhelper
+  debugedit dh-autoreconf dh-strip-nondeterminism dwz g++ g++-9 gcc gcc-9
+  intltool-debian libarchive-zip-perl libcc1-0 libdebhelper-perl libdw1
+  libfile-stripnondeterminism-perl libgcc-9-dev libprotobuf-dev
+  libprotobuf-lite17 libprotobuf17 libprotoc-dev libprotoc17 libsigsegv2
+  libstdc++-9-dev libsub-override-perl libtool m4 po-debconf protobuf-compiler
+建议安装：
+  autoconf-archive gnu-standards autoconf-doc cpp-doc dh-make gcc-9-doc bison
+  flex gcc-doc gcc-multilib gdb manpages-dev gcc-9-locales libstdc++-9-doc
+  libtool-doc gfortran | fortran95-compiler gcj-jdk m4-doc libmail-box-perl
+推荐安装：
+  libarchive-cpio-perl libltdl-dev libmail-sendmail-perl
+下列【新】软件包将被安装：
+  autoconf automake autopoint autotools-dev build-essential debhelper
+  debugedit dh-autoreconf dh-strip-nondeterminism dwz g++ g++-9 gcc gcc-9
+  intltool-debian libarchive-zip-perl libcc1-0 libdebhelper-perl libdw1
+  libfile-stripnondeterminism-perl libgcc-9-dev libprotobuf-dev
+  libprotobuf-lite17 libprotobuf17 libprotoc-dev libprotoc17 libsigsegv2
+  libstdc++-9-dev libsub-override-perl libtool m4 po-debconf protobuf-compiler
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 33 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 34.4 MB 的归档。
+解压缩后会消耗 174 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autotools-dev all 20220506-ok1 [41.6 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libsigsegv2 riscv64 2.12-ok1 [11.5 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 m4 riscv64 1.4.18-ok2 [191 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autoconf all 2.71-ok2 [390 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 automake all 1:1.16.5-ok1 [557 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autopoint all 0.19.8.1-ok1 [410 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libdebhelper-perl all 13.11.4-ok1 [63.6 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libtool all 2.4.6-ok1 [159 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 dh-autoreconf all 20-ok1 [16.3 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libarchive-zip-perl all 1.68-ok1 [90.7 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libsub-override-perl all 0.09-ok2 [8,374 B]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libfile-stripnondeterminism-perl all 1.13.0-ok1 [16.8 kB]
+获取:18 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 dh-strip-nondeterminism all 1.13.0-ok1 [5,334 B]
+获取:19 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libdw1 riscv64 0.187-ok1 [229 kB]
+获取:20 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 debugedit riscv64 1:5.0-ok1 [71.2 kB]
+获取:21 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 dwz riscv64 0.14-ok1 [123 kB]
+获取:22 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 intltool-debian all 0.35.0+20060710.5-ok2 [23.2 kB]
+获取:23 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 po-debconf all 1.0.21+nmu1-ok1 [227 kB]
+获取:24 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 debhelper all 13.11.4-ok1 [924 kB]
+获取:25 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libprotobuf17 riscv64 3.6.1.3-ok1 [847 kB]
+获取:26 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libprotobuf-lite17 riscv64 3.6.1.3-ok1 [139 kB]
+获取:27 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libprotobuf-dev riscv64 3.6.1.3-ok1 [4,782 kB]
+获取:28 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libprotoc17 riscv64 3.6.1.3-ok1 [672 kB]
+获取:29 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libprotoc-dev riscv64 3.6.1.3-ok1 [4,299 kB]
+获取:30 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 protobuf-compiler riscv64 3.6.1.3-ok1 [28.2 kB]
+获取:31 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:32 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:33 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:34 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+已下载 34.4 MB，耗时 26秒 (1,317 kB/s)
+正在选中未选择的软件包 autotools-dev。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-autotools-dev_20220506-ok1_all.deb  ...
+正在解压 autotools-dev (20220506-ok1) ...
+正在选中未选择的软件包 libsigsegv2:riscv64。
+准备解压 .../01-libsigsegv2_2.12-ok1_riscv64.deb  ...
+正在解压 libsigsegv2:riscv64 (2.12-ok1) ...
+正在选中未选择的软件包 m4。
+准备解压 .../02-m4_1.4.18-ok2_riscv64.deb  ...
+正在解压 m4 (1.4.18-ok2) ...
+正在选中未选择的软件包 autoconf。
+准备解压 .../03-autoconf_2.71-ok2_all.deb  ...
+正在解压 autoconf (2.71-ok2) ...
+正在选中未选择的软件包 automake。
+准备解压 .../04-automake_1%3a1.16.5-ok1_all.deb  ...
+正在解压 automake (1:1.16.5-ok1) ...
+正在选中未选择的软件包 autopoint。
+准备解压 .../05-autopoint_0.19.8.1-ok1_all.deb  ...
+正在解压 autopoint (0.19.8.1-ok1) ...
+正在选中未选择的软件包 libdebhelper-perl。
+准备解压 .../06-libdebhelper-perl_13.11.4-ok1_all.deb  ...
+正在解压 libdebhelper-perl (13.11.4-ok1) ...
+准备解压 .../07-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../08-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../09-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../10-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../11-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libtool。
+准备解压 .../12-libtool_2.4.6-ok1_all.deb  ...
+正在解压 libtool (2.4.6-ok1) ...
+正在选中未选择的软件包 dh-autoreconf。
+准备解压 .../13-dh-autoreconf_20-ok1_all.deb  ...
+正在解压 dh-autoreconf (20-ok1) ...
+正在选中未选择的软件包 libarchive-zip-perl。
+准备解压 .../14-libarchive-zip-perl_1.68-ok1_all.deb  ...
+正在解压 libarchive-zip-perl (1.68-ok1) ...
+正在选中未选择的软件包 libsub-override-perl。
+准备解压 .../15-libsub-override-perl_0.09-ok2_all.deb  ...
+正在解压 libsub-override-perl (0.09-ok2) ...
+正在选中未选择的软件包 libfile-stripnondeterminism-perl。
+准备解压 .../16-libfile-stripnondeterminism-perl_1.13.0-ok1_all.deb  ...
+正在解压 libfile-stripnondeterminism-perl (1.13.0-ok1) ...
+正在选中未选择的软件包 dh-strip-nondeterminism。
+准备解压 .../17-dh-strip-nondeterminism_1.13.0-ok1_all.deb  ...
+正在解压 dh-strip-nondeterminism (1.13.0-ok1) ...
+正在选中未选择的软件包 libdw1:riscv64。
+准备解压 .../18-libdw1_0.187-ok1_riscv64.deb  ...
+正在解压 libdw1:riscv64 (0.187-ok1) ...
+正在选中未选择的软件包 debugedit。
+准备解压 .../19-debugedit_1%3a5.0-ok1_riscv64.deb  ...
+正在解压 debugedit (1:5.0-ok1) ...
+正在选中未选择的软件包 dwz。
+准备解压 .../20-dwz_0.14-ok1_riscv64.deb  ...
+正在解压 dwz (0.14-ok1) ...
+正在选中未选择的软件包 intltool-debian。
+准备解压 .../21-intltool-debian_0.35.0+20060710.5-ok2_all.deb  ...
+正在解压 intltool-debian (0.35.0+20060710.5-ok2) ...
+正在选中未选择的软件包 po-debconf。
+准备解压 .../22-po-debconf_1.0.21+nmu1-ok1_all.deb  ...
+正在解压 po-debconf (1.0.21+nmu1-ok1) ...
+正在选中未选择的软件包 debhelper。
+准备解压 .../23-debhelper_13.11.4-ok1_all.deb  ...
+正在解压 debhelper (13.11.4-ok1) ...
+正在选中未选择的软件包 libprotobuf17:riscv64。
+准备解压 .../24-libprotobuf17_3.6.1.3-ok1_riscv64.deb  ...
+正在解压 libprotobuf17:riscv64 (3.6.1.3-ok1) ...
+正在选中未选择的软件包 libprotobuf-lite17:riscv64。
+准备解压 .../25-libprotobuf-lite17_3.6.1.3-ok1_riscv64.deb  ...
+正在解压 libprotobuf-lite17:riscv64 (3.6.1.3-ok1) ...
+正在选中未选择的软件包 libprotobuf-dev:riscv64。
+准备解压 .../26-libprotobuf-dev_3.6.1.3-ok1_riscv64.deb  ...
+正在解压 libprotobuf-dev:riscv64 (3.6.1.3-ok1) ...
+正在选中未选择的软件包 libprotoc17:riscv64。
+准备解压 .../27-libprotoc17_3.6.1.3-ok1_riscv64.deb  ...
+正在解压 libprotoc17:riscv64 (3.6.1.3-ok1) ...
+正在选中未选择的软件包 libprotoc-dev:riscv64。
+准备解压 .../28-libprotoc-dev_3.6.1.3-ok1_riscv64.deb  ...
+正在解压 libprotoc-dev:riscv64 (3.6.1.3-ok1) ...
+正在选中未选择的软件包 protobuf-compiler。
+准备解压 .../29-protobuf-compiler_3.6.1.3-ok1_riscv64.deb  ...
+正在解压 protobuf-compiler (3.6.1.3-ok1) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../30-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../31-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../32-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../33-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在设置 libdw1:riscv64 (0.187-ok1) ...
+正在设置 libarchive-zip-perl (1.68-ok1) ...
+正在设置 libprotobuf-lite17:riscv64 (3.6.1.3-ok1) ...
+正在设置 libdebhelper-perl (13.11.4-ok1) ...
+正在设置 intltool-debian (0.35.0+20060710.5-ok2) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 autotools-dev (20220506-ok1) ...
+正在设置 libsigsegv2:riscv64 (2.12-ok1) ...
+正在设置 autopoint (0.19.8.1-ok1) ...
+正在设置 dwz (0.14-ok1) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 debugedit (1:5.0-ok1) ...
+正在设置 libsub-override-perl (0.09-ok2) ...
+正在设置 libprotobuf17:riscv64 (3.6.1.3-ok1) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 libfile-stripnondeterminism-perl (1.13.0-ok1) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libprotoc17:riscv64 (3.6.1.3-ok1) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 protobuf-compiler (3.6.1.3-ok1) ...
+正在设置 libtool (2.4.6-ok1) ...
+正在设置 po-debconf (1.0.21+nmu1-ok1) ...
+正在设置 m4 (1.4.18-ok2) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 libprotobuf-dev:riscv64 (3.6.1.3-ok1) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 autoconf (2.71-ok2) ...
+正在设置 dh-strip-nondeterminism (1.13.0-ok1) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 libprotoc-dev:riscv64 (3.6.1.3-ok1) ...
+正在设置 build-essential (12.8-ok1) ...
+正在设置 automake (1:1.16.5-ok1) ...
+update-alternatives: 使用 /usr/bin/automake-1.16 来在自动模式中提供 /usr/bin/automake (automake)
+正在设置 dh-autoreconf (20-ok1) ...
+正在设置 debhelper (13.11.4-ok1) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 install-info (6.7.0.dfsg.2-ok1) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin debhelper dh-autoreconf debugedit dh-strip-nondeterminism lvm2 dmeventd liblvm2cmd2.03 dwz os-prober grub-common po-debconf intltool-debian libaio1 libfile-stripnondeterminism-perl libarchive-zip-perl libdebhelper-perl libdebian-installer4 libdevmapper-event1.02.1 libdw1 libprotoc-dev libprotobuf-dev libprotobuf-lite17 protobuf-compiler libprotoc17 libprotobuf17 libsub-override-perl
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'debhelper', 'dh-autoreconf', 'debugedit', 'dh-strip-nondeterminism', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'dwz', 'os-prober', 'grub-common', 'po-debconf', 'intltool-debian', 'libaio1', 'libfile-stripnondeterminism-perl', 'libarchive-zip-perl', 'libdebhelper-perl', 'libdebian-installer4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'libdevmapper-event1.02.1', 'libdw1', 'libprotoc-dev', 'libprotobuf-dev', 'libprotobuf-lite17', 'protobuf-compiler', 'libprotoc17', 'libprotobuf17', 'libsub-override-perl'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 158109 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.9N9dhw/command1-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/command1-packages.all ./testing/protobuf-c/command1-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/command1-packages.all ./testing/protobuf-c/command1-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.sz7sn93k/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/command1-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/command1-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.sz7sn93k/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/command1-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.9N9dhw/build.Uxs/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.9N9dhw/build.Uxs'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/protobuf-c/tests-tree/ /tmp/autopkgtest.9N9dhw/build.Uxs/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/protobuf-c/tests-tree/ /tmp/autopkgtest.9N9dhw/build.Uxs/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/protobuf-c/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.sz7sn93k/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.9N9dhw/build.Uxs/src/; then mkdir -- /tmp/autopkgtest.9N9dhw/build.Uxs/src/; fi; cd /tmp/autopkgtest.9N9dhw/build.Uxs/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/protobuf-c/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.sz7sn93k/runcmd sh -ec if ! test -d /tmp/autopkgtest.9N9dhw/build.Uxs/src/; then mkdir -- /tmp/autopkgtest.9N9dhw/build.Uxs/src/; fi; cd /tmp/autopkgtest.9N9dhw/build.Uxs/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.9N9dhw/build.Uxs/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:29:51]: test command1: dh_auto_configure; dh_auto_build; dh_auto_test
+autopkgtest [00:29:51]: test command1: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.9N9dhw/build.Uxs/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.9N9dhw/command1-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.9N9dhw/command1-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.9N9dhw/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.9N9dhw/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; touch /tmp/autopkgtest.9N9dhw/command1-stdout /tmp/autopkgtest.9N9dhw/command1-stderr; bash -ec \'dh_auto_configure; dh_auto_build; dh_auto_test\' 2> >(tee -a /tmp/autopkgtest.9N9dhw/command1-stderr >&2) > >(tee -a /tmp/autopkgtest.9N9dhw/command1-stdout);'], kind test, sout raw, serr raw, env []
+	./configure --build=riscv64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-option-checking --disable-silent-rules --libdir=\${prefix}/lib/riscv64-linux-gnu --runstatedir=/run --disable-maintainer-mode --disable-dependency-tracking
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... no
+checking for mawk... mawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... none
+checking for gcc option to accept ISO C99... none needed
+checking for gcc option to accept ISO Standard C... (cached) none needed
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... none
+checking whether ln -s works... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether make supports nested variables... (cached) yes
+checking build system type... riscv64-unknown-linux-gnu
+checking host system type... riscv64-unknown-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert riscv64-unknown-linux-gnu file names to riscv64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert riscv64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether C compiler accepts "-Wc99-c11-compat"... yes
+checking whether C compiler accepts "-Werror=incompatible-pointer-types"... yes
+checking whether C compiler accepts "-Werror=int-conversion"... yes
+checking whether C compiler accepts "-Wnull-dereference"... yes
+checking for doxygen... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether g++ supports C++11 features with -std=c++11... yes
+checking for protobuf... yes
+checking google/protobuf/compiler/command_line_interface.h usability... yes
+checking google/protobuf/compiler/command_line_interface.h presence... yes
+checking for google/protobuf/compiler/command_line_interface.h... yes
+checking for protoc... /usr/bin/protoc
+checking if LD -Wl,--version-script works... yes
+checking whether self tests are run under valgrind... no
+checking whether to build with code coverage support... no
+checking whether byte ordering is bigendian... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating protobuf-c/libprotobuf-c.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+    protobuf-c 1.3.3
+
+        CC:                     gcc
+        CFLAGS:                 -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security
+        CXX:                    g++ -std=c++11
+        CXXFLAGS:               -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security
+        LDFLAGS:                -Wl,-Bsymbolic-functions -Wl,-z,relro
+        LIBS:                   
+
+        prefix:                 /usr
+        sysconfdir:             /etc
+        libdir:                 ${prefix}/lib/riscv64-linux-gnu
+        includedir:             ${prefix}/include
+        pkgconfigdir:           ${libdir}/pkgconfig
+
+        bigendian:              no
+        protobuf version:       libprotoc 3.6.1
+
+	make -j8
+/usr/bin/protoc -I. --cpp_out=. ./t/test-full.proto
+/usr/bin/protoc -I. --cpp_out=. ./t/test-full.proto
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_bytes_field.o `test -f 'protoc-c/c_bytes_field.cc' || echo './'`protoc-c/c_bytes_field.cc
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test-full.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test-full.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_enum.o `test -f 'protoc-c/c_enum.cc' || echo './'`protoc-c/c_enum.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_enum_field.o `test -f 'protoc-c/c_enum_field.cc' || echo './'`protoc-c/c_enum_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_extension.o `test -f 'protoc-c/c_extension.cc' || echo './'`protoc-c/c_extension.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_field.o `test -f 'protoc-c/c_field.cc' || echo './'`protoc-c/c_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_file.o `test -f 'protoc-c/c_file.cc' || echo './'`protoc-c/c_file.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_generator.o `test -f 'protoc-c/c_generator.cc' || echo './'`protoc-c/c_generator.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_helpers.o `test -f 'protoc-c/c_helpers.cc' || echo './'`protoc-c/c_helpers.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_message.o `test -f 'protoc-c/c_message.cc' || echo './'`protoc-c/c_message.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_message_field.o `test -f 'protoc-c/c_message_field.cc' || echo './'`protoc-c/c_message_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_primitive_field.o `test -f 'protoc-c/c_primitive_field.cc' || echo './'`protoc-c/c_primitive_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_service.o `test -f 'protoc-c/c_service.cc' || echo './'`protoc-c/c_service.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-c_string_field.o `test -f 'protoc-c/c_string_field.cc' || echo './'`protoc-c/c_string_field.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protoc-c/protoc_gen_c-main.o `test -f 'protoc-c/main.cc' || echo './'`protoc-c/main.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code2/cxx_generate_packed_data-cxx-generate-packed-data.o `test -f 't/generated-code2/cxx-generate-packed-data.cc' || echo './'`t/generated-code2/cxx-generate-packed-data.cc
+g++ -std=c++11 -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated_code2_cxx_generate_packed_data-test-full.pb.o `test -f 't/test-full.pb.cc' || echo './'`t/test-full.pb.cc
+/bin/bash ./libtool  --tag=CXX   --mode=link g++ -std=c++11  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o protoc-c/protoc-gen-c protoc-c/protoc_gen_c-c_bytes_field.o protoc-c/protoc_gen_c-c_enum.o protoc-c/protoc_gen_c-c_enum_field.o protoc-c/protoc_gen_c-c_extension.o protoc-c/protoc_gen_c-c_field.o protoc-c/protoc_gen_c-c_file.o protoc-c/protoc_gen_c-c_generator.o protoc-c/protoc_gen_c-c_helpers.o protoc-c/protoc_gen_c-c_message.o protoc-c/protoc_gen_c-c_message_field.o protoc-c/protoc_gen_c-c_primitive_field.o protoc-c/protoc_gen_c-c_service.o protoc-c/protoc_gen_c-c_string_field.o protoc-c/protoc_gen_c-main.o -lprotobuf -pthread -lprotoc 
+libtool: link: g++ -std=c++11 -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o protoc-c/protoc-gen-c protoc-c/protoc_gen_c-c_bytes_field.o protoc-c/protoc_gen_c-c_enum.o protoc-c/protoc_gen_c-c_enum_field.o protoc-c/protoc_gen_c-c_extension.o protoc-c/protoc_gen_c-c_field.o protoc-c/protoc_gen_c-c_file.o protoc-c/protoc_gen_c-c_generator.o protoc-c/protoc_gen_c-c_helpers.o protoc-c/protoc_gen_c-c_message.o protoc-c/protoc_gen_c-c_message_field.o protoc-c/protoc_gen_c-c_primitive_field.o protoc-c/protoc_gen_c-c_service.o protoc-c/protoc_gen_c-c_string_field.o protoc-c/protoc_gen_c-main.o -pthread  -lprotobuf -lprotoc -pthread
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-full.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-full.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-optimized.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-optimized.proto
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test-full.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test-optimized.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test-full.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/test-optimized.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-proto3.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/test-proto3.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue220/issue220.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue220/issue220.proto
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/issue220/issue220.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue251/issue251.proto
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/issue220/issue220.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue251/issue251.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue330/issue330.proto
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/issue251/issue251.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue330/issue330.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue375/issue375.proto
+/usr/bin/protoc --plugin=protoc-gen-c=./protoc-c/protoc-gen-c -I. --c_out=. ./t/issue375/issue375.proto
+[libprotobuf WARNING google/protobuf/compiler/parser.cc:562] No syntax specified for the proto file: t/issue251/issue251.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+/bin/bash ./libtool  --tag=CXX   --mode=link g++ -std=c++11  -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code2/cxx-generate-packed-data t/generated-code2/cxx_generate_packed_data-cxx-generate-packed-data.o t/generated_code2_cxx_generate_packed_data-test-full.pb.o -lprotobuf -pthread 
+libtool: link: g++ -std=c++11 -pthread -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code2/cxx-generate-packed-data t/generated-code2/cxx_generate_packed_data-cxx-generate-packed-data.o t/generated_code2_cxx_generate_packed_data-test-full.pb.o -pthread  -lprotobuf -pthread
+./t/generated-code2/cxx-generate-packed-data > ./t/generated-code2/test-full-cxx-output.inc
+make  all-am
+make[1]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+/bin/bash ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o protobuf-c/protobuf-c.lo protobuf-c/protobuf-c.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c protobuf-c/protobuf-c.c  -fPIC -DPIC -o protobuf-c/.libs/protobuf-c.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c protobuf-c/protobuf-c.c -o protobuf-c/protobuf-c.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -version-info 1:0:0 -no-undefined -Wl,--version-script=./protobuf-c/libprotobuf-c.sym  -Wl,-Bsymbolic-functions -Wl,-z,relro -o protobuf-c/libprotobuf-c.la -rpath /usr/lib/riscv64-linux-gnu protobuf-c/protobuf-c.lo  
+libtool: link: gcc -shared  -fPIC -DPIC  protobuf-c/.libs/protobuf-c.o    -g -O2 -fstack-protector-strong -Wl,--version-script=./protobuf-c/libprotobuf-c.sym -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro   -Wl,-soname -Wl,libprotobuf-c.so.1 -o protobuf-c/.libs/libprotobuf-c.so.1.0.0
+libtool: link: (cd "protobuf-c/.libs" && rm -f "libprotobuf-c.so.1" && ln -s "libprotobuf-c.so.1.0.0" "libprotobuf-c.so.1")
+libtool: link: (cd "protobuf-c/.libs" && rm -f "libprotobuf-c.so" && ln -s "libprotobuf-c.so.1.0.0" "libprotobuf-c.so")
+libtool: link: ar cr protobuf-c/.libs/libprotobuf-c.a  protobuf-c/protobuf-c.o
+libtool: link: ranlib protobuf-c/.libs/libprotobuf-c.a
+libtool: link: ( cd "protobuf-c/.libs" && rm -f "libprotobuf-c.la" && ln -s "../libprotobuf-c.la" "libprotobuf-c.la" )
+make[1]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+	make -j8 check "TESTSUITEFLAGS=-j8 --verbose" VERBOSE=1
+make  check-am
+make[1]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make  t/generated-code/test-generated-code t/generated-code2/test-generated-code2 t/version/version t/generated-code3/test-generated-code3 t/issue220/issue220 t/issue251/issue251 t/issue330/issue330 t/issue375/issue375
+make[2]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/test.pb-c.o t/test.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code2/test-generated-code2.o t/generated-code2/test-generated-code2.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/test-full.pb-c.o t/test-full.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/test-optimized.pb-c.o t/test-optimized.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -DPROTO3 -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated_code3_test_generated_code3-test-proto3.pb-c.o `test -f 't/test-proto3.pb-c.c' || echo './'`t/test-proto3.pb-c.c
+In file included from t/test-full.pb-c.c:9:
+./t/test-full.pb-c.h:400:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+  400 |   };
+      |    ^
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code/test-generated-code.o t/generated-code/test-generated-code.c
+In file included from t/generated-code2/test-generated-code2.c:4:
+./t/test-full.pb-c.h:400:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+  400 |   };
+      |    ^
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/version/version.o t/version/version.c
+gcc -DHAVE_CONFIG_H -I.  -DPROTO3 -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/generated-code/generated_code3_test_generated_code3-test-generated-code.o `test -f 't/generated-code/test-generated-code.c' || echo './'`t/generated-code/test-generated-code.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue220/issue220.o t/issue220/issue220.c
+In file included from t/issue220/issue220.c:5:
+./t/issue220/issue220.pb-c.h:50:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+   50 |   };
+      |    ^
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue220/issue220.pb-c.o t/issue220/issue220.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue251/issue251.o t/issue251/issue251.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue251/issue251.pb-c.o t/issue251/issue251.pb-c.c
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue330/issue330.o t/issue330/issue330.c
+In file included from t/issue220/issue220.pb-c.c:9:
+./t/issue220/issue220.pb-c.h:50:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+   50 |   };
+      |    ^
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue330/issue330.pb-c.o t/issue330/issue330.pb-c.c
+In file included from t/issue251/issue251.pb-c.c:9:
+./t/issue251/issue251.pb-c.h:47:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+   47 |   };
+      |    ^
+./t/issue251/issue251.pb-c.h:52:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+   52 |   };
+      |    ^
+In file included from t/issue251/issue251.c:3:
+./t/issue251/issue251.pb-c.h:47:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+   47 |   };
+      |    ^
+./t/issue251/issue251.pb-c.h:52:4: warning: ISO C99 doesn’t support unnamed structs/unions [-Wc99-c11-compat]
+   52 |   };
+      |    ^
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue375/issue375.o t/issue375/issue375.c
+t/generated-code2/test-generated-code2.c: In function ‘test_oneof_merge’:
+t/generated-code2/test-generated-code2.c:991:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  991 |   Foo__SubMess submess = FOO__SUB_MESS__INIT;
+      |   ^~~~~~~~~~~~
+t/generated-code2/test-generated-code2.c:995:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  995 |   ProtobufCBinaryData bd_hello = { 5, (uint8_t*)"hello" };
+      |   ^~~~~~~~~~~~~~~~~~~
+gcc -DHAVE_CONFIG_H -I.  -include ./config.h -I./protobuf-c -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -c -o t/issue375/issue375.pb-c.o t/issue375/issue375.pb-c.c
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code/test-generated-code t/generated-code/test-generated-code.o t/test.pb-c.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/version/version t/version/version.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code3/test-generated-code3 t/generated-code/generated_code3_test_generated_code3-test-generated-code.o t/generated_code3_test_generated_code3-test-proto3.pb-c.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue220/issue220 t/issue220/issue220.o t/issue220/issue220.pb-c.o protobuf-c/libprotobuf-c.la 
+t/generated-code2/test-generated-code2.c: In function ‘test_optional_default_values’:
+t/generated-code2/test-generated-code2.c:1773:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1773 |   Foo__TestMessOptional mess3 = FOO__TEST_MESS_OPTIONAL__INIT;
+      |   ^~~~~~~~~~~~~~~~~~~~~
+t/generated-code2/test-generated-code2.c: In function ‘test_field_merge’:
+t/generated-code2/test-generated-code2.c:1817:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1817 |    int32_t arr1[] = {0, 1};
+      |    ^~~~~~~
+t/generated-code2/test-generated-code2.c:1826:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1826 |    size_t msg_size = foo__test_mess_optional__get_packed_size (&msg1);
+      |    ^~~~~~
+t/generated-code2/test-generated-code2.c:1840:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1840 |    int32_t arr2[] = {2, 3, 4};
+      |    ^~~~~~~
+t/generated-code2/test-generated-code2.c:1849:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1849 |    uint8_t *packed_buffer = (uint8_t *)malloc (msg_size);
+      |    ^~~~~~~
+t/generated-code2/test-generated-code2.c:1856:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1856 |    Foo__TestMessOptional *merged = foo__test_mess_optional__unpack
+      |    ^~~~~~~~~~~~~~~~~~~~~
+t/generated-code2/test-generated-code2.c:1867:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+ 1867 |    int32_t merged_arr[] = {0, 1, 2, 3, 4};
+      |    ^~~~~~~
+t/generated-code2/test-generated-code2.c: At top level:
+t/generated-code2/test-generated-code2.c:2340:5: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ 2340 | int main ()
+      |     ^~~~
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue251/issue251 t/issue251/issue251.o t/issue251/issue251.pb-c.o protobuf-c/libprotobuf-c.la 
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue330/issue330 t/issue330/issue330.o t/issue330/issue330.pb-c.o protobuf-c/libprotobuf-c.la 
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code3/.libs/test-generated-code3 t/generated-code/generated_code3_test_generated_code3-test-generated-code.o t/generated_code3_test_generated_code3-test-proto3.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code/.libs/test-generated-code t/generated-code/test-generated-code.o t/test.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/version/.libs/version t/version/version.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue220/.libs/issue220 t/issue220/issue220.o t/issue220/issue220.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue251/.libs/issue251 t/issue251/issue251.o t/issue251/issue251.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue330/.libs/issue330 t/issue330/issue330.o t/issue330/issue330.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/issue375/issue375 t/issue375/issue375.o t/issue375/issue375.pb-c.o protobuf-c/libprotobuf-c.la 
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/issue375/.libs/issue375 t/issue375/issue375.o t/issue375/issue375.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+/bin/bash ./libtool  --tag=CC   --mode=link gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits  -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference  -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security  -Wl,-Bsymbolic-functions -Wl,-z,relro -o t/generated-code2/test-generated-code2 t/generated-code2/test-generated-code2.o t/test-full.pb-c.o t/test-optimized.pb-c.o protobuf-c/libprotobuf-c.la 
+libtool: link: gcc -Wall -Wchar-subscripts -Wdeclaration-after-statement -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wshadow -Wsign-compare -Wstrict-prototypes -Wtype-limits -Wc99-c11-compat -Werror=incompatible-pointer-types -Werror=int-conversion -Wnull-dereference -g -O2 -ffile-prefix-map=/tmp/autopkgtest.9N9dhw/build.Uxs/src=. -fstack-protector-strong -Wformat -Werror=format-security -Wl,-Bsymbolic-functions -Wl,-z -Wl,relro -o t/generated-code2/.libs/test-generated-code2 t/generated-code2/test-generated-code2.o t/test-full.pb-c.o t/test-optimized.pb-c.o  protobuf-c/.libs/libprotobuf-c.so
+make[2]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make  check-TESTS
+make[2]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make[3]: Entering directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+PASS: t/issue330/issue330
+PASS: t/version/version
+PASS: t/issue220/issue220
+PASS: t/generated-code2/test-generated-code2
+PASS: t/issue251/issue251
+PASS: t/generated-code3/test-generated-code3
+PASS: t/generated-code/test-generated-code
+PASS: t/issue375/issue375
+============================================================================
+Testsuite summary for protobuf-c 1.3.3
+============================================================================
+# TOTAL: 8
+# PASS:  8
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[3]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make[2]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+make[1]: Leaving directory '/tmp/autopkgtest.9N9dhw/build.Uxs/src'
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:39:50]: test command1: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/command1-stdout ./testing/protobuf-c/command1-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/command1-stdout ./testing/protobuf-c/command1-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.sz7sn93k/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/command1-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/command1-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.sz7sn93k/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/command1-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/command1-stderr ./testing/protobuf-c/command1-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/command1-stderr ./testing/protobuf-c/command1-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.sz7sn93k/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.9N9dhw/command1-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/protobuf-c/command1-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.sz7sn93k/runcmd sh -ec cat </tmp/autopkgtest.9N9dhw/command1-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+command1             PASS
+autopkgtest [00:39:52]: test command1:  - - - - - - - - - - results - - - - - - - - - -
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.9N9dhw/command1-artifacts/ ./testing/protobuf-c/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.9N9dhw/command1-artifacts/ ./testing/protobuf-c/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.sz7sn93k/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.9N9dhw/command1-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/protobuf-c/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.sz7sn93k/runcmd sh -ec cd /tmp/autopkgtest.9N9dhw/command1-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/protobuf-c/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.9N9dhw/command1-artifacts', '/tmp/autopkgtest.9N9dhw/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [00:39:53]: @@@@@@@@@@@@@@@@@@@@ summary
+build-test           PASS
+command1             PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.9N9dhw
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 330769 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

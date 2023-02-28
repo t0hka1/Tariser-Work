@@ -1,0 +1,10 @@
++ cat
++ perl -MConfig -E say $Config{cc}
++ CC=riscv64-linux-gnu-gcc
++ perl -MExtUtils::Embed -e ccopts
++ CCOPTS= -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fwrapv -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -I/usr/lib/riscv64-linux-gnu/perl/5.30/CORE 
++ perl -MExtUtils::Embed -e ldopts
++ LDOPTS=-Wl,-E  -fstack-protector-strong -L/usr/local/lib  -L/usr/lib/riscv64-linux-gnu/perl/5.30/CORE -lperl -ldl -lm -lpthread -lc -lcrypt
++ riscv64-linux-gnu-gcc -D_REENTRANT -D_GNU_SOURCE -DDEBIAN -fwrapv -fno-strict-aliasing -pipe -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -I/usr/lib/riscv64-linux-gnu/perl/5.30/CORE perlembed.c -o perlembed.bin -Wl,-E -fstack-protector-strong -L/usr/local/lib -L/usr/lib/riscv64-linux-gnu/perl/5.30/CORE -lperl -ldl -lm -lpthread -lc -lcrypt -lperl
++ + ./perlembed.bingrep -q -x OK
+ -E say "OK"

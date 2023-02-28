@@ -1,0 +1,17 @@
+hello                PASS
+perl-base-self-contained PASS
+compression          PASS
+db                   PASS
+gdbm                 SKIP exit status 77 and marked as skippable
+ndbm                 SKIP exit status 77 and marked as skippable
+storable             PASS
+embed                PASS
+control              PASS
+released_versions    PASS
+syntax               FAIL badpkg
+blame: ./src/perl_5.30.0-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 perl-debug 相匹配的软件包
+ (exit code 1)
+verify-configure     FAIL badpkg
+blame: ./src/perl_5.30.0-ok3.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.

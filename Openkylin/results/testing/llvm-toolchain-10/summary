@@ -1,0 +1,13 @@
+command1             FAIL badpkg
+blame: ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 clang-tools-10 相匹配的软件包
+ (exit code 1)
+cmake-test           FAIL badpkg
+blame: ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 llvm-10-dev 相匹配的软件包
+ (exit code 1)
+command2             FAIL badpkg
+blame: ./src/llvm-toolchain-10_10.0.0-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-lldb-10 相匹配的软件包
+ (exit code 1)
+testbed failure: sent `auxverb_debug_fail', got `timeout', expected `ok...'

@@ -1,0 +1,22 @@
+test_glib_enum (__main__.TestGI)
+GLib enum ... ok
+test_glib_flag (__main__.TestGI)
+GLib flag ... ok
+test_method (__main__.TestGI)
+GLib method call ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK
+test_glib_enum (__main__.TestGI)
+GLib enum ... ok
+test_glib_flag (__main__.TestGI)
+GLib flag ... ok
+test_method (__main__.TestGI)
+GLib method call ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.012s
+
+OK

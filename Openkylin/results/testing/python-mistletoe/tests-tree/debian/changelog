@@ -1,0 +1,5 @@
+python-mistletoe (0.9.0-ok1) yangtze; urgency=medium
+
+  * Build for openkylin.
+
+ -- sufang <sufang@kylinos.cn>  Thu, 03 Nov 2022 17:34:21 +0800

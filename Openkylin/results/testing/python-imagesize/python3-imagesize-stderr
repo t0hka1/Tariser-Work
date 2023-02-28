@@ -1,0 +1,54 @@
++ cp -r test /tmp/autopkgtest.Lyo8hO/autopkgtest_tmp
++ cd /tmp/autopkgtest.Lyo8hO/autopkgtest_tmp
++ py3versions -s
++ python3.8 -m unittest discover -v test
+test_bigendian_tiff (test_get.GetTest) ... ok
+test_bigendian_tiff_bytes (test_get.GetTest) ... ok
+test_bigendian_tiff_path (test_get.GetTest) ... ok
+test_littleendian_tiff (test_get.GetTest) ... ok
+test_littleendian_tiff_bytes (test_get.GetTest) ... ok
+test_littleendian_tiff_path (test_get.GetTest) ... ok
+test_load_gif (test_get.GetTest) ... ok
+test_load_gif_bytes (test_get.GetTest) ... ok
+test_load_gif_path (test_get.GetTest) ... ok
+test_load_jpeg (test_get.GetTest) ... ok
+test_load_jpeg2000 (test_get.GetTest) ... ok
+test_load_jpeg2000_bytes (test_get.GetTest) ... ok
+test_load_jpeg2000_path (test_get.GetTest) ... ok
+test_load_jpeg_bytes (test_get.GetTest) ... ok
+test_load_jpeg_path (test_get.GetTest) ... ok
+test_load_png (test_get.GetTest) ... ok
+test_load_png_bytes (test_get.GetTest) ... ok
+test_load_png_filelike (test_get.GetTest)
+test_load_png_filelike ... ok
+test_load_png_path (test_get.GetTest) ... ok
+test_load_svg (test_get.GetTest) ... ok
+test_load_svg_bytes (test_get.GetTest) ... ok
+test_load_svg_path (test_get.GetTest) ... ok
+test_netpbm (test_get.GetTest) ... ok
+test_bigendian_tiff (test_getdpi.GetDPITest) ... ok
+test_bigendian_tiff_bytes (test_getdpi.GetDPITest) ... ok
+test_bigendian_tiff_path (test_getdpi.GetDPITest) ... ok
+test_gif (test_getdpi.GetDPITest) ... ok
+test_gif_bytes (test_getdpi.GetDPITest) ... ok
+test_gif_path (test_getdpi.GetDPITest) ... ok
+test_jpeg (test_getdpi.GetDPITest) ... ok
+test_jpeg2000 (test_getdpi.GetDPITest) ... ok
+test_jpeg2000_bytes (test_getdpi.GetDPITest) ... ok
+test_jpeg2000_path (test_getdpi.GetDPITest) ... ok
+test_jpeg_bytes (test_getdpi.GetDPITest) ... ok
+test_jpeg_path (test_getdpi.GetDPITest) ... ok
+test_littleendian_tiff (test_getdpi.GetDPITest) ... ok
+test_littleendian_tiff_bytes (test_getdpi.GetDPITest) ... ok
+test_littleendian_tiff_path (test_getdpi.GetDPITest) ... ok
+test_png (test_getdpi.GetDPITest) ... ok
+test_png_bytes (test_getdpi.GetDPITest) ... ok
+test_png_path (test_getdpi.GetDPITest) ... ok
+test_svg (test_getdpi.GetDPITest) ... ok
+test_svg_bytes (test_getdpi.GetDPITest) ... ok
+test_svg_path (test_getdpi.GetDPITest) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.122s
+
+OK

@@ -1,0 +1,2 @@
+grep: /var/lib/extrausers/passwd: No such file or directory
+grep: /var/lib/extrausers/shadow: No such file or directory

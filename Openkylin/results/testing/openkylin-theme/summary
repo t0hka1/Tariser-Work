@@ -1,0 +1,3 @@
+blame: ./src/openkylin-theme_3.22.0.0-ok2.dsc
+badpkg: rules extract failed with exit code 25
+erroneous package: rules extract failed with exit code 25

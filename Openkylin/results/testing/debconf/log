@@ -1,0 +1,34 @@
+autopkgtest: DBG: testbed init
+autopkgtest [11:37:59]: starting date: 2023-02-28
+autopkgtest [11:37:59]: version 5.20ubuntu1
+autopkgtest [11:37:59]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/debconf_1.5.73-ok1.dsc -o ./testing/debconf -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.li24qjd6/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.li24qjd6/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.li24qjd6/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.li24qjd6/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.li24qjd6/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.li24qjd6/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.li24qjd6/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.li24qjd6/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+qemu-system-riscv64: terminating on signal 15 from pid 483963 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: cleanup...
+<VirtSubproc>: failure: timed out waiting for 'login prompt on serial console'
+autopkgtest: DBG: sending command to testbed: auxverb_debug_fail
+autopkgtest: DBG: sending command to testbed: auxverb_debug_fail
+autopkgtest: DBG: TestbedFailure cannot send to testbed: [Errno 32] Broken pipe
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=None
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest: DBG: sending command to testbed: auxverb_debug_fail
+autopkgtest: DBG: TestbedFailure cannot send to testbed: [Errno 32] Broken pipe
+autopkgtest: DBG: testbed stop
+autopkgtest [11:38:59]: ERROR: testbed failure: cannot send to testbed: [Errno 32] Broken pipe
+autopkgtest: DBG: testbed stop

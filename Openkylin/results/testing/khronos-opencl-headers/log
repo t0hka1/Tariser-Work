@@ -1,0 +1,1393 @@
+autopkgtest: DBG: testbed init
+autopkgtest [13:46:14]: starting date: 2023-02-27
+autopkgtest [13:46:14]: version 5.20ubuntu1
+autopkgtest [13:46:14]: host MyKubuntu; command line: /usr/bin/autopkgtest './src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc' -o ./testing/khronos-opencl-headers -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.d23cgtwd/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.d23cgtwd/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.d23cgtwd/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.d23cgtwd/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.d23cgtwd/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.d23cgtwd/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.d23cgtwd/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.d23cgtwd/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.d23cgtwd/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c7f5a89d-cc1b-40c7-a9a4-b2dd1bfedbb0[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.d23cgtwd/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.d23cgtwd/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.d23cgtwd/runcmd chmod 1777 /tmp/autopkgtest.1qGVpR
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.1qGVpR
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.d23cgtwd/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [13:47:16]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.1qGVpR/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/testbed-packages ./testing/khronos-opencl-headers/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/testbed-packages ./testing/khronos-opencl-headers/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.d23cgtwd/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.1qGVpR/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/khronos-opencl-headers/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.d23cgtwd/runcmd sh -ec cat </tmp/autopkgtest.1qGVpR/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [13:47:22]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [13:47:23]: @@@@@@@@@@@@@@@@@@@@ source ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+autopkgtest: DBG: blame += ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.1qGVpR'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', '([\'cat\'], [\'/tmp/autopkgtest-qemu.d23cgtwd/runcmd\', \'sh\', \'-ec\', "cat >\'/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc\'"])']
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.d23cgtwd/runcmd sh -ec cat >'/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc'
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.1qGVpR'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', '([\'cat\'], [\'/tmp/autopkgtest-qemu.d23cgtwd/runcmd\', \'sh\', \'-ec\', "cat >\'/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz\'"])']
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.d23cgtwd/runcmd sh -ec cat >'/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz'
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.1qGVpR'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', '([\'cat\'], [\'/tmp/autopkgtest-qemu.d23cgtwd/runcmd\', \'sh\', \'-ec\', "cat >\'/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz\'"])']
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.d23cgtwd/runcmd sh -ec cat >'/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz'
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.1qGVpR/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.1qGVpR/build.XXX
++ builddir=/tmp/autopkgtest.1qGVpR/build.xSP
++ cd /tmp/autopkgtest.1qGVpR/build.xSP
++ dpkg-source -x /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.Exvd0vlu/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年09月20日 星期二 06时30分41秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.1qGVpR/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+dpkg-source: info: extracting khronos-opencl-headers in src
+dpkg-source: info: unpacking khronos-opencl-headers_3.0~2022.05.18.orig.tar.gz
+dpkg-source: info: unpacking khronos-opencl-headers_3.0~2022.05.18-ok1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying restore_CL_EXT_defines.patch
+dpkg-source: info: applying AMD_extensions.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [13:47:37]: testing package khronos-opencl-headers version 3.0~2022.05.18-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/build.xSP/src/debian/ ./testing/khronos-opencl-headers/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/build.xSP/src/debian/ ./testing/khronos-opencl-headers/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.d23cgtwd/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.1qGVpR/build.xSP/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/khronos-opencl-headers/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.d23cgtwd/runcmd sh -ec cd /tmp/autopkgtest.1qGVpR/build.xSP/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/khronos-opencl-headers/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency opencl-c-headers
+autopkgtest: DBG: marked alternatives ['opencl-c-headers'] as a synthesised dependency
+autopkgtest: DBG: processing dependency g++
+autopkgtest: DBG: processing dependency libva-dev
+autopkgtest: DBG: Test defined: name compile-headers path debian/tests/compile-headers command "None" restrictions ['superficial', 'allow-stderr'] features [] depends ['opencl-c-headers', 'g++', 'libva-dev'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency opencl-c-headers
+autopkgtest: DBG: marked alternatives ['opencl-c-headers'] as a synthesised dependency
+autopkgtest: DBG: processing dependency cmake
+autopkgtest: DBG: processing dependency g++
+autopkgtest: DBG: Test defined: name upstream-testsuite path debian/tests/upstream-testsuite command "None" restrictions ['allow-stderr'] features [] depends ['opencl-c-headers', 'cmake', 'g++'] clicks [] installed clicks []
+autopkgtest [13:47:38]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/build.xSP/src/ ./testing/khronos-opencl-headers/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/build.xSP/src/ ./testing/khronos-opencl-headers/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.d23cgtwd/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.1qGVpR/build.xSP/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/khronos-opencl-headers/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.d23cgtwd/runcmd sh -ec cd /tmp/autopkgtest.1qGVpR/build.xSP/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/khronos-opencl-headers/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency opencl-c-headers
+autopkgtest: DBG: marked alternatives ['opencl-c-headers'] as a synthesised dependency
+autopkgtest: DBG: processing dependency g++
+autopkgtest: DBG: processing dependency libva-dev
+autopkgtest: DBG: Test defined: name compile-headers path debian/tests/compile-headers command "None" restrictions ['superficial', 'allow-stderr'] features [] depends ['opencl-c-headers', 'g++', 'libva-dev'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency opencl-c-headers
+autopkgtest: DBG: marked alternatives ['opencl-c-headers'] as a synthesised dependency
+autopkgtest: DBG: processing dependency cmake
+autopkgtest: DBG: processing dependency g++
+autopkgtest: DBG: Test defined: name upstream-testsuite path debian/tests/upstream-testsuite command "None" restrictions ['allow-stderr'] features [] depends ['opencl-c-headers', 'cmake', 'g++'] clicks [] installed clicks []
+autopkgtest [13:47:39]: test compile-headers: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['opencl-c-headers', 'g++', 'libva-dev']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['opencl-c-headers', 'g++', 'libva-dev']
+autopkgtest: DBG: install-deps: satisfying opencl-c-headers, g++, libva-dev
+autopkgtest: DBG: install-deps: architecture resolved: opencl-c-headers, g++, libva-dev
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.1qGVpR'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/khronos-opencl-headers/1-autopkgtest-satdep.deb /tmp/autopkgtest.1qGVpR/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/khronos-opencl-headers/1-autopkgtest-satdep.deb /tmp/autopkgtest.1qGVpR/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.d23cgtwd/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.1qGVpR/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/khronos-opencl-headers/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.d23cgtwd/runcmd sh -ec cat >/tmp/autopkgtest.1qGVpR/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.1qGVpR/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.1qGVpR/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on libva-dev:riscv64 < none | 2.7.0-ok2 @un uH >
+  Considering libva-dev:riscv64 1 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change libva-dev:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  cpp gcc gcc-9 libcc1-0 libgcc-9-dev
+建议安装：
+  cpp-doc autoconf automake bison flex gcc-doc gcc-multilib gdb libtool
+  manpages-dev gcc-9-doc gcc-9-locales
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  gcc gcc-9 libcc1-0 libgcc-9-dev
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 4 个软件包，要卸载 1 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 7,980 kB 的归档。
+解压缩后会消耗 22.9 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+已下载 7,980 kB，耗时 9秒 (855 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'opencl-c-headers'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 opencl-c-headers 相匹配的软件包
+ (exit code 1)
+compile-headers      FAIL badpkg
+blame: ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 opencl-c-headers 相匹配的软件包
+ (exit code 1)
+autopkgtest [13:48:28]: test upstream-testsuite: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['opencl-c-headers', 'g++', 'libva-dev'], deps_new=['opencl-c-headers', 'cmake', 'g++']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.d23cgtwd/runcmd rm -rf -- /tmp/autopkgtest.1qGVpR
+qemu-system-riscv64: terminating on signal 15 from pid 150192 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu._mzdxh7n/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu._mzdxh7n/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu._mzdxh7n/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu._mzdxh7n/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu._mzdxh7n/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu._mzdxh7n/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu._mzdxh7n/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu._mzdxh7n/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'd589520b-129f-4781-8a3d-d2308583cfeb[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'd589520b-129f-4781-8a3d-d2308583cfeb[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'd589520b-129f-4781-8a3d-d2308583cfeb[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'd589520b-129f-4781-8a3d-d2308583cfeb[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'd589520b-129f-4781-8a3d-d2308583cfeb[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'd589520b-129f-4781-8a3d-d2308583cfeb[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'd589520b-129f-4781-8a3d-d2308583cfeb[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'd589520b-129f-4781-8a3d-d2308583cfeb[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'd589520b-129f-4781-8a3d-d2308583cfeb[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'd589520b-129f-4781-8a3d-d2308583cfeb[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._mzdxh7n/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'd589520b-129f-4781-8a3d-d2308583cfeb[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'd589520b-129f-4781-8a3d-d2308583cfeb[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._mzdxh7n/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.1qGVpR
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu._mzdxh7n/runcmd'], downtmp = /tmp/autopkgtest.1qGVpR
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.1qGVpR
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu._mzdxh7n/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [13:49:28]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.1qGVpR/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/testbed-packages ./testing/khronos-opencl-headers/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/testbed-packages ./testing/khronos-opencl-headers/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._mzdxh7n/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.1qGVpR/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/khronos-opencl-headers/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._mzdxh7n/runcmd sh -ec cat </tmp/autopkgtest.1qGVpR/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['opencl-c-headers', 'cmake', 'g++']
+autopkgtest: DBG: install-deps: satisfying opencl-c-headers, cmake, g++
+autopkgtest: DBG: install-deps: architecture resolved: opencl-c-headers, cmake, g++
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.1qGVpR'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/khronos-opencl-headers/2-autopkgtest-satdep.deb /tmp/autopkgtest.1qGVpR/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/khronos-opencl-headers/2-autopkgtest-satdep.deb /tmp/autopkgtest.1qGVpR/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu._mzdxh7n/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.1qGVpR/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/khronos-opencl-headers/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._mzdxh7n/runcmd sh -ec cat >/tmp/autopkgtest.1qGVpR/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.1qGVpR/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.1qGVpR/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  cmake cmake-data cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libjsoncpp1
+  librhash0 libstdc++-9-dev opencl-c-headers
+建议安装：
+  cmake-doc ninja-build cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc
+  gcc-multilib gdb libtool manpages-dev gcc-9-locales libstdc++-9-doc
+推荐安装：
+  libssl3
+下列【新】软件包将被安装：
+  cmake cmake-data g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libjsoncpp1
+  librhash0 libstdc++-9-dev opencl-c-headers
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 12 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 26.1 MB 的归档。
+解压缩后会消耗 104 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 opencl-c-headers all 3.0~2022.05.18-ok1 [43.7 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cmake-data all 3.16.3-ok2 [1,635 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libjsoncpp1 riscv64 1.7.6-ok1 [72.6 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 librhash0 riscv64 1.4.3-ok2 [152 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cmake riscv64 3.16.3-ok2 [4,167 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+已下载 26.1 MB，耗时 21秒 (1,243 kB/s)
+正在选中未选择的软件包 opencl-c-headers。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-opencl-c-headers_3.0~2022.05.18-ok1_all.deb  ...
+正在解压 opencl-c-headers (3.0~2022.05.18-ok1) ...
+正在选中未选择的软件包 cmake-data。
+准备解压 .../01-cmake-data_3.16.3-ok2_all.deb  ...
+正在解压 cmake-data (3.16.3-ok2) ...
+正在选中未选择的软件包 libjsoncpp1:riscv64。
+准备解压 .../02-libjsoncpp1_1.7.6-ok1_riscv64.deb  ...
+正在解压 libjsoncpp1:riscv64 (1.7.6-ok1) ...
+正在选中未选择的软件包 librhash0:riscv64。
+准备解压 .../03-librhash0_1.4.3-ok2_riscv64.deb  ...
+正在解压 librhash0:riscv64 (1.4.3-ok2) ...
+正在选中未选择的软件包 cmake。
+准备解压 .../04-cmake_3.16.3-ok2_riscv64.deb  ...
+正在解压 cmake (3.16.3-ok2) ...
+准备解压 .../05-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../06-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../07-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../08-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../09-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../10-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../11-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 g++。
+准备解压 .../12-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 opencl-c-headers (3.0~2022.05.18-ok1) ...
+正在设置 librhash0:riscv64 (1.4.3-ok2) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 cmake-data (3.16.3-ok2) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 libjsoncpp1:riscv64 (1.7.6-ok1) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 cmake (3.16.3-ok2) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'opencl-c-headers'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cmake cmake-data cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 g++ g++-9 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 libjsoncpp1 librhash0 libstdc++-9-dev opencl-c-headers
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cmake', 'cmake-data', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'g++', 'g++-9', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libjsoncpp1', 'librhash0', 'libstdc++-9-dev', 'opencl-c-headers'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 159745 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.1qGVpR/upstream-testsuite-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-packages.all ./testing/khronos-opencl-headers/upstream-testsuite-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-packages.all ./testing/khronos-opencl-headers/upstream-testsuite-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._mzdxh7n/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.1qGVpR/upstream-testsuite-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/khronos-opencl-headers/upstream-testsuite-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._mzdxh7n/runcmd sh -ec cat </tmp/autopkgtest.1qGVpR/upstream-testsuite-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.1qGVpR/build.xSP/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.1qGVpR/build.xSP'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/khronos-opencl-headers/tests-tree/ /tmp/autopkgtest.1qGVpR/build.xSP/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/khronos-opencl-headers/tests-tree/ /tmp/autopkgtest.1qGVpR/build.xSP/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/khronos-opencl-headers/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu._mzdxh7n/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.1qGVpR/build.xSP/src/; then mkdir -- /tmp/autopkgtest.1qGVpR/build.xSP/src/; fi; cd /tmp/autopkgtest.1qGVpR/build.xSP/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/khronos-opencl-headers/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._mzdxh7n/runcmd sh -ec if ! test -d /tmp/autopkgtest.1qGVpR/build.xSP/src/; then mkdir -- /tmp/autopkgtest.1qGVpR/build.xSP/src/; fi; cd /tmp/autopkgtest.1qGVpR/build.xSP/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.1qGVpR/build.xSP/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [13:51:25]: test upstream-testsuite: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.1qGVpR/build.xSP/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.1qGVpR/upstream-testsuite-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.1qGVpR/upstream-testsuite-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.1qGVpR/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.1qGVpR/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.1qGVpR/build.xSP/src/debian/tests/upstream-testsuite; touch /tmp/autopkgtest.1qGVpR/upstream-testsuite-stdout /tmp/autopkgtest.1qGVpR/upstream-testsuite-stderr; /tmp/autopkgtest.1qGVpR/build.xSP/src/debian/tests/upstream-testsuite 2> >(tee -a /tmp/autopkgtest.1qGVpR/upstream-testsuite-stderr >&2) > >(tee -a /tmp/autopkgtest.1qGVpR/upstream-testsuite-stdout);'], kind test, sout raw, serr raw, env []
++ cp -a tests/ /tmp/autopkgtest.1qGVpR/autopkgtest_tmp
++ cd /tmp/autopkgtest.1qGVpR/autopkgtest_tmp
++ cat
++ mkdir build
++ cd build
++ cmake -Wno-dev ..
+-- The C compiler identification is GNU 9.3.0
+-- The CXX compiler identification is GNU 9.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/build
++ make
+Scanning dependencies of target headers_c_200
+[  1%] Building C object tests/lang_c/CMakeFiles/headers_c_200.dir/__/test_headers.o
+[  1%] Linking C executable headers_c_200
+[  1%] Built target headers_c_200
+Scanning dependencies of target headers_c_120
+[  2%] Building C object tests/lang_c/CMakeFiles/headers_c_120.dir/__/test_headers.o
+[  2%] Linking C executable headers_c_120
+[  2%] Built target headers_c_120
+Scanning dependencies of target cl_version_h_c_300
+[  2%] Building C object tests/lang_c/CMakeFiles/cl_version_h_c_300.dir/__/test_cl_version.h.o
+[  3%] Linking C executable cl_version_h_c_300
+[  3%] Built target cl_version_h_c_300
+Scanning dependencies of target cl_version_h_c_220
+[  3%] Building C object tests/lang_c/CMakeFiles/cl_version_h_c_220.dir/__/test_cl_version.h.o
+[  4%] Linking C executable cl_version_h_c_220
+[  4%] Built target cl_version_h_c_220
+Scanning dependencies of target cl_version_h_c_200
+[  5%] Building C object tests/lang_c/CMakeFiles/cl_version_h_c_200.dir/__/test_cl_version.h.o
+[  5%] Linking C executable cl_version_h_c_200
+[  5%] Built target cl_version_h_c_200
+Scanning dependencies of target cl_version_h_c_120
+[  6%] Building C object tests/lang_c/CMakeFiles/cl_version_h_c_120.dir/__/test_cl_version.h.o
+[  6%] Linking C executable cl_version_h_c_120
+[  6%] Built target cl_version_h_c_120
+Scanning dependencies of target cl_version_h_c_110
+[  6%] Building C object tests/lang_c/CMakeFiles/cl_version_h_c_110.dir/__/test_cl_version.h.o
+[  6%] Linking C executable cl_version_h_c_110
+[  6%] Built target cl_version_h_c_110
+Scanning dependencies of target cl_version_h_c_100
+[  6%] Building C object tests/lang_c/CMakeFiles/cl_version_h_c_100.dir/__/test_cl_version.h.o
+[  7%] Linking C executable cl_version_h_c_100
+[  7%] Built target cl_version_h_c_100
+Scanning dependencies of target cl_opencl_h_c_210
+[  8%] Building C object tests/lang_c/CMakeFiles/cl_opencl_h_c_210.dir/__/test_opencl.h.o
+[  8%] Linking C executable cl_opencl_h_c_210
+[  8%] Built target cl_opencl_h_c_210
+Scanning dependencies of target cl_opencl_h_c_110
+[  8%] Building C object tests/lang_c/CMakeFiles/cl_opencl_h_c_110.dir/__/test_opencl.h.o
+[  9%] Linking C executable cl_opencl_h_c_110
+[  9%] Built target cl_opencl_h_c_110
+Scanning dependencies of target cl_opencl_h_c_100
+[  9%] Building C object tests/lang_c/CMakeFiles/cl_opencl_h_c_100.dir/__/test_opencl.h.o
+[ 10%] Linking C executable cl_opencl_h_c_100
+[ 10%] Built target cl_opencl_h_c_100
+Scanning dependencies of target cl_platform_h_c_210
+[ 11%] Building C object tests/lang_c/CMakeFiles/cl_platform_h_c_210.dir/__/test_cl_platform.h.o
+[ 11%] Linking C executable cl_platform_h_c_210
+[ 11%] Built target cl_platform_h_c_210
+Scanning dependencies of target cl_platform_h_c_200
+[ 12%] Building C object tests/lang_c/CMakeFiles/cl_platform_h_c_200.dir/__/test_cl_platform.h.o
+[ 12%] Linking C executable cl_platform_h_c_200
+[ 12%] Built target cl_platform_h_c_200
+Scanning dependencies of target cl_platform_h_c_110
+[ 12%] Building C object tests/lang_c/CMakeFiles/cl_platform_h_c_110.dir/__/test_cl_platform.h.o
+[ 13%] Linking C executable cl_platform_h_c_110
+[ 13%] Built target cl_platform_h_c_110
+Scanning dependencies of target cl_platform_h_c_100
+[ 13%] Building C object tests/lang_c/CMakeFiles/cl_platform_h_c_100.dir/__/test_cl_platform.h.o
+[ 14%] Linking C executable cl_platform_h_c_100
+[ 14%] Built target cl_platform_h_c_100
+Scanning dependencies of target cl_layer_h_c_300
+[ 15%] Building C object tests/lang_c/CMakeFiles/cl_layer_h_c_300.dir/__/test_cl_layer.h.o
+[ 15%] Linking C executable cl_layer_h_c_300
+[ 15%] Built target cl_layer_h_c_300
+Scanning dependencies of target cl_layer_h_c_220
+[ 16%] Building C object tests/lang_c/CMakeFiles/cl_layer_h_c_220.dir/__/test_cl_layer.h.o
+[ 16%] Linking C executable cl_layer_h_c_220
+[ 16%] Built target cl_layer_h_c_220
+Scanning dependencies of target cl_layer_h_c_210
+[ 17%] Building C object tests/lang_c/CMakeFiles/cl_layer_h_c_210.dir/__/test_cl_layer.h.o
+[ 17%] Linking C executable cl_layer_h_c_210
+[ 17%] Built target cl_layer_h_c_210
+Scanning dependencies of target headers_c_300
+[ 17%] Building C object tests/lang_c/CMakeFiles/headers_c_300.dir/__/test_headers.o
+[ 18%] Linking C executable headers_c_300
+[ 18%] Built target headers_c_300
+Scanning dependencies of target cl_opencl_h_c_120
+[ 18%] Building C object tests/lang_c/CMakeFiles/cl_opencl_h_c_120.dir/__/test_opencl.h.o
+[ 18%] Linking C executable cl_opencl_h_c_120
+[ 18%] Built target cl_opencl_h_c_120
+Scanning dependencies of target cl_layer_h_c_200
+[ 18%] Building C object tests/lang_c/CMakeFiles/cl_layer_h_c_200.dir/__/test_cl_layer.h.o
+[ 18%] Linking C executable cl_layer_h_c_200
+[ 18%] Built target cl_layer_h_c_200
+Scanning dependencies of target cl_opencl_h_c_220
+[ 19%] Building C object tests/lang_c/CMakeFiles/cl_opencl_h_c_220.dir/__/test_opencl.h.o
+[ 19%] Linking C executable cl_opencl_h_c_220
+[ 19%] Built target cl_opencl_h_c_220
+Scanning dependencies of target cl_icd_h_c_300
+[ 20%] Building C object tests/lang_c/CMakeFiles/cl_icd_h_c_300.dir/__/test_cl_icd.h.o
+[ 20%] Linking C executable cl_icd_h_c_300
+[ 20%] Built target cl_icd_h_c_300
+Scanning dependencies of target headers_c_100
+[ 20%] Building C object tests/lang_c/CMakeFiles/headers_c_100.dir/__/test_headers.o
+[ 20%] Linking C executable headers_c_100
+[ 20%] Built target headers_c_100
+Scanning dependencies of target cl_icd_h_c_220
+[ 21%] Building C object tests/lang_c/CMakeFiles/cl_icd_h_c_220.dir/__/test_cl_icd.h.o
+[ 21%] Linking C executable cl_icd_h_c_220
+[ 21%] Built target cl_icd_h_c_220
+Scanning dependencies of target cl_platform_h_c_220
+[ 21%] Building C object tests/lang_c/CMakeFiles/cl_platform_h_c_220.dir/__/test_cl_platform.h.o
+[ 22%] Linking C executable cl_platform_h_c_220
+[ 22%] Built target cl_platform_h_c_220
+Scanning dependencies of target cl_icd_h_c_210
+[ 22%] Building C object tests/lang_c/CMakeFiles/cl_icd_h_c_210.dir/__/test_cl_icd.h.o
+[ 22%] Linking C executable cl_icd_h_c_210
+[ 22%] Built target cl_icd_h_c_210
+Scanning dependencies of target headers_c_220
+[ 22%] Building C object tests/lang_c/CMakeFiles/headers_c_220.dir/__/test_headers.o
+[ 23%] Linking C executable headers_c_220
+[ 23%] Built target headers_c_220
+Scanning dependencies of target cl_icd_h_c_200
+[ 23%] Building C object tests/lang_c/CMakeFiles/cl_icd_h_c_200.dir/__/test_cl_icd.h.o
+[ 24%] Linking C executable cl_icd_h_c_200
+[ 24%] Built target cl_icd_h_c_200
+Scanning dependencies of target cl_icd_h_c_110
+[ 24%] Building C object tests/lang_c/CMakeFiles/cl_icd_h_c_110.dir/__/test_cl_icd.h.o
+[ 25%] Linking C executable cl_icd_h_c_110
+[ 25%] Built target cl_icd_h_c_110
+Scanning dependencies of target cl_opencl_h_c_200
+[ 26%] Building C object tests/lang_c/CMakeFiles/cl_opencl_h_c_200.dir/__/test_opencl.h.o
+[ 26%] Linking C executable cl_opencl_h_c_200
+[ 26%] Built target cl_opencl_h_c_200
+Scanning dependencies of target cl_layer_h_c_120
+[ 26%] Building C object tests/lang_c/CMakeFiles/cl_layer_h_c_120.dir/__/test_cl_layer.h.o
+[ 27%] Linking C executable cl_layer_h_c_120
+[ 27%] Built target cl_layer_h_c_120
+Scanning dependencies of target cl_icd_h_c_100
+[ 28%] Building C object tests/lang_c/CMakeFiles/cl_icd_h_c_100.dir/__/test_cl_icd.h.o
+[ 28%] Linking C executable cl_icd_h_c_100
+[ 28%] Built target cl_icd_h_c_100
+Scanning dependencies of target cl_half_h_c_300
+[ 29%] Building C object tests/lang_c/CMakeFiles/cl_half_h_c_300.dir/__/test_cl_half.h.o
+[ 29%] Linking C executable cl_half_h_c_300
+[ 29%] Built target cl_half_h_c_300
+Scanning dependencies of target cl_half_h_c_120
+[ 29%] Building C object tests/lang_c/CMakeFiles/cl_half_h_c_120.dir/__/test_cl_half.h.o
+[ 30%] Linking C executable cl_half_h_c_120
+[ 30%] Built target cl_half_h_c_120
+Scanning dependencies of target cl_gl_ext_h_c_300
+[ 30%] Building C object tests/lang_c/CMakeFiles/cl_gl_ext_h_c_300.dir/__/test_cl_gl_ext.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+[ 31%] Linking C executable cl_gl_ext_h_c_300
+[ 31%] Built target cl_gl_ext_h_c_300
+Scanning dependencies of target cl_gl_ext_h_c_200
+[ 32%] Building C object tests/lang_c/CMakeFiles/cl_gl_ext_h_c_200.dir/__/test_cl_gl_ext.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+[ 32%] Linking C executable cl_gl_ext_h_c_200
+[ 32%] Built target cl_gl_ext_h_c_200
+Scanning dependencies of target cl_opencl_h_c_300
+[ 32%] Building C object tests/lang_c/CMakeFiles/cl_opencl_h_c_300.dir/__/test_opencl.h.o
+[ 33%] Linking C executable cl_opencl_h_c_300
+[ 33%] Built target cl_opencl_h_c_300
+Scanning dependencies of target cl_gl_ext_h_c_120
+[ 34%] Building C object tests/lang_c/CMakeFiles/cl_gl_ext_h_c_120.dir/__/test_cl_gl_ext.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+[ 34%] Linking C executable cl_gl_ext_h_c_120
+[ 34%] Built target cl_gl_ext_h_c_120
+Scanning dependencies of target cl_gl_ext_h_c_100
+[ 34%] Building C object tests/lang_c/CMakeFiles/cl_gl_ext_h_c_100.dir/__/test_cl_gl_ext.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+[ 35%] Linking C executable cl_gl_ext_h_c_100
+[ 35%] Built target cl_gl_ext_h_c_100
+Scanning dependencies of target cl_gl_h_c_300
+[ 35%] Building C object tests/lang_c/CMakeFiles/cl_gl_h_c_300.dir/__/test_cl_gl.h.o
+[ 35%] Linking C executable cl_gl_h_c_300
+[ 35%] Built target cl_gl_h_c_300
+Scanning dependencies of target cl_platform_h_c_120
+[ 35%] Building C object tests/lang_c/CMakeFiles/cl_platform_h_c_120.dir/__/test_cl_platform.h.o
+[ 35%] Linking C executable cl_platform_h_c_120
+[ 35%] Built target cl_platform_h_c_120
+Scanning dependencies of target cl_half_h_c_100
+[ 36%] Building C object tests/lang_c/CMakeFiles/cl_half_h_c_100.dir/__/test_cl_half.h.o
+[ 36%] Linking C executable cl_half_h_c_100
+[ 36%] Built target cl_half_h_c_100
+Scanning dependencies of target cl_gl_h_c_220
+[ 36%] Building C object tests/lang_c/CMakeFiles/cl_gl_h_c_220.dir/__/test_cl_gl.h.o
+[ 37%] Linking C executable cl_gl_h_c_220
+[ 37%] Built target cl_gl_h_c_220
+Scanning dependencies of target cl_ext_intel_h_c_110
+[ 37%] Building C object tests/lang_c/CMakeFiles/cl_ext_intel_h_c_110.dir/__/test_cl_ext_intel.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+[ 37%] Linking C executable cl_ext_intel_h_c_110
+[ 37%] Built target cl_ext_intel_h_c_110
+Scanning dependencies of target cl_dx9_media_sharing_h_c_120
+[ 37%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_h_c_120.dir/__/test_cl_dx9_media_sharing.h.o
+[ 38%] Linking C executable cl_dx9_media_sharing_h_c_120
+[ 38%] Built target cl_dx9_media_sharing_h_c_120
+Scanning dependencies of target cl_dx9_media_sharing_h_c_110
+[ 39%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_h_c_110.dir/__/test_cl_dx9_media_sharing.h.o
+[ 39%] Linking C executable cl_dx9_media_sharing_h_c_110
+[ 39%] Built target cl_dx9_media_sharing_h_c_110
+Scanning dependencies of target cl_dx9_media_sharing_intel_h_c_110
+[ 39%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_intel_h_c_110.dir/__/test_cl_dx9_media_sharing.h.o
+[ 40%] Linking C executable cl_dx9_media_sharing_intel_h_c_110
+[ 40%] Built target cl_dx9_media_sharing_intel_h_c_110
+Scanning dependencies of target cl_d3d11_h_c_210
+[ 40%] Building C object tests/lang_c/CMakeFiles/cl_d3d11_h_c_210.dir/__/test_cl_d3d11.h.o
+[ 41%] Linking C executable cl_d3d11_h_c_210
+[ 41%] Built target cl_d3d11_h_c_210
+Scanning dependencies of target cl_d3d10_h_c_200
+[ 41%] Building C object tests/lang_c/CMakeFiles/cl_d3d10_h_c_200.dir/__/test_cl_d3d10.h.o
+[ 42%] Linking C executable cl_d3d10_h_c_200
+[ 42%] Built target cl_d3d10_h_c_200
+Scanning dependencies of target cl_egl_h_c_300
+[ 42%] Building C object tests/lang_c/CMakeFiles/cl_egl_h_c_300.dir/__/test_cl_egl.h.o
+[ 43%] Linking C executable cl_egl_h_c_300
+[ 43%] Built target cl_egl_h_c_300
+Scanning dependencies of target cl_gl_h_c_100
+[ 43%] Building C object tests/lang_c/CMakeFiles/cl_gl_h_c_100.dir/__/test_cl_gl.h.o
+[ 43%] Linking C executable cl_gl_h_c_100
+[ 43%] Built target cl_gl_h_c_100
+Scanning dependencies of target cl_d3d11_h_c_120
+[ 43%] Building C object tests/lang_c/CMakeFiles/cl_d3d11_h_c_120.dir/__/test_cl_d3d11.h.o
+[ 44%] Linking C executable cl_d3d11_h_c_120
+[ 44%] Built target cl_d3d11_h_c_120
+Scanning dependencies of target cl_egl_h_c_120
+[ 44%] Building C object tests/lang_c/CMakeFiles/cl_egl_h_c_120.dir/__/test_cl_egl.h.o
+[ 45%] Linking C executable cl_egl_h_c_120
+[ 45%] Built target cl_egl_h_c_120
+Scanning dependencies of target cl_platform_h_c_300
+[ 45%] Building C object tests/lang_c/CMakeFiles/cl_platform_h_c_300.dir/__/test_cl_platform.h.o
+[ 46%] Linking C executable cl_platform_h_c_300
+[ 46%] Built target cl_platform_h_c_300
+Scanning dependencies of target cl_dx9_media_sharing_h_c_100
+[ 47%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_h_c_100.dir/__/test_cl_dx9_media_sharing.h.o
+[ 47%] Linking C executable cl_dx9_media_sharing_h_c_100
+[ 47%] Built target cl_dx9_media_sharing_h_c_100
+Scanning dependencies of target cl_half_h_c_220
+[ 47%] Building C object tests/lang_c/CMakeFiles/cl_half_h_c_220.dir/__/test_cl_half.h.o
+[ 47%] Linking C executable cl_half_h_c_220
+[ 47%] Built target cl_half_h_c_220
+Scanning dependencies of target cl_dx9_media_sharing_h_c_210
+[ 47%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_h_c_210.dir/__/test_cl_dx9_media_sharing.h.o
+[ 47%] Linking C executable cl_dx9_media_sharing_h_c_210
+[ 47%] Built target cl_dx9_media_sharing_h_c_210
+Scanning dependencies of target cl_gl_h_c_110
+[ 48%] Building C object tests/lang_c/CMakeFiles/cl_gl_h_c_110.dir/__/test_cl_gl.h.o
+[ 48%] Linking C executable cl_gl_h_c_110
+[ 48%] Built target cl_gl_h_c_110
+Scanning dependencies of target cl_d3d11_h_c_110
+[ 49%] Building C object tests/lang_c/CMakeFiles/cl_d3d11_h_c_110.dir/__/test_cl_d3d11.h.o
+[ 49%] Linking C executable cl_d3d11_h_c_110
+[ 49%] Built target cl_d3d11_h_c_110
+Scanning dependencies of target cl_dx9_media_sharing_h_c_300
+[ 50%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_h_c_300.dir/__/test_cl_dx9_media_sharing.h.o
+[ 50%] Linking C executable cl_dx9_media_sharing_h_c_300
+[ 50%] Built target cl_dx9_media_sharing_h_c_300
+Scanning dependencies of target cl_gl_ext_h_c_110
+[ 50%] Building C object tests/lang_c/CMakeFiles/cl_gl_ext_h_c_110.dir/__/test_cl_gl_ext.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+[ 50%] Linking C executable cl_gl_ext_h_c_110
+[ 50%] Built target cl_gl_ext_h_c_110
+Scanning dependencies of target cl_d3d11_h_c_100
+[ 51%] Building C object tests/lang_c/CMakeFiles/cl_d3d11_h_c_100.dir/__/test_cl_d3d11.h.o
+[ 51%] Linking C executable cl_d3d11_h_c_100
+[ 51%] Built target cl_d3d11_h_c_100
+Scanning dependencies of target cl_layer_h_c_100
+[ 52%] Building C object tests/lang_c/CMakeFiles/cl_layer_h_c_100.dir/__/test_cl_layer.h.o
+[ 52%] Linking C executable cl_layer_h_c_100
+[ 52%] Built target cl_layer_h_c_100
+Scanning dependencies of target cl_d3d10_h_c_300
+[ 52%] Building C object tests/lang_c/CMakeFiles/cl_d3d10_h_c_300.dir/__/test_cl_d3d10.h.o
+[ 52%] Linking C executable cl_d3d10_h_c_300
+[ 52%] Built target cl_d3d10_h_c_300
+Scanning dependencies of target cl_ext_h_c_100
+[ 52%] Building C object tests/lang_c/CMakeFiles/cl_ext_h_c_100.dir/__/test_cl_ext.h.o
+[ 53%] Linking C executable cl_ext_h_c_100
+[ 53%] Built target cl_ext_h_c_100
+Scanning dependencies of target cl_h_c_100
+[ 54%] Building C object tests/lang_c/CMakeFiles/cl_h_c_100.dir/__/test_cl.h.o
+[ 54%] Linking C executable cl_h_c_100
+[ 54%] Built target cl_h_c_100
+Scanning dependencies of target cl_half_h_c_200
+[ 54%] Building C object tests/lang_c/CMakeFiles/cl_half_h_c_200.dir/__/test_cl_half.h.o
+[ 55%] Linking C executable cl_half_h_c_200
+[ 55%] Built target cl_half_h_c_200
+Scanning dependencies of target cl_h_c_200
+[ 55%] Building C object tests/lang_c/CMakeFiles/cl_h_c_200.dir/__/test_cl.h.o
+[ 56%] Linking C executable cl_h_c_200
+[ 56%] Built target cl_h_c_200
+Scanning dependencies of target cl_dx9_media_sharing_intel_h_c_100
+[ 57%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_intel_h_c_100.dir/__/test_cl_dx9_media_sharing.h.o
+[ 57%] Linking C executable cl_dx9_media_sharing_intel_h_c_100
+[ 57%] Built target cl_dx9_media_sharing_intel_h_c_100
+Scanning dependencies of target cl_ext_h_c_120
+[ 57%] Building C object tests/lang_c/CMakeFiles/cl_ext_h_c_120.dir/__/test_cl_ext.h.o
+[ 57%] Linking C executable cl_ext_h_c_120
+[ 57%] Built target cl_ext_h_c_120
+Scanning dependencies of target cl_dx9_media_sharing_h_c_220
+[ 58%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_h_c_220.dir/__/test_cl_dx9_media_sharing.h.o
+[ 58%] Linking C executable cl_dx9_media_sharing_h_c_220
+[ 58%] Built target cl_dx9_media_sharing_h_c_220
+Scanning dependencies of target cl_icd_h_c_120
+[ 58%] Building C object tests/lang_c/CMakeFiles/cl_icd_h_c_120.dir/__/test_cl_icd.h.o
+[ 59%] Linking C executable cl_icd_h_c_120
+[ 59%] Built target cl_icd_h_c_120
+Scanning dependencies of target cl_dx9_media_sharing_h_c_200
+[ 59%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_h_c_200.dir/__/test_cl_dx9_media_sharing.h.o
+[ 60%] Linking C executable cl_dx9_media_sharing_h_c_200
+[ 60%] Built target cl_dx9_media_sharing_h_c_200
+Scanning dependencies of target cl_h_c_120
+[ 61%] Building C object tests/lang_c/CMakeFiles/cl_h_c_120.dir/__/test_cl.h.o
+[ 61%] Linking C executable cl_h_c_120
+[ 61%] Built target cl_h_c_120
+Scanning dependencies of target cl_half_h_c_110
+[ 62%] Building C object tests/lang_c/CMakeFiles/cl_half_h_c_110.dir/__/test_cl_half.h.o
+[ 62%] Linking C executable cl_half_h_c_110
+[ 62%] Built target cl_half_h_c_110
+Scanning dependencies of target cl_h_c_220
+[ 62%] Building C object tests/lang_c/CMakeFiles/cl_h_c_220.dir/__/test_cl.h.o
+[ 62%] Linking C executable cl_h_c_220
+[ 62%] Built target cl_h_c_220
+Scanning dependencies of target cl_d3d10_h_c_210
+[ 62%] Building C object tests/lang_c/CMakeFiles/cl_d3d10_h_c_210.dir/__/test_cl_d3d10.h.o
+[ 63%] Linking C executable cl_d3d10_h_c_210
+[ 63%] Built target cl_d3d10_h_c_210
+Scanning dependencies of target cl_h_c_210
+[ 63%] Building C object tests/lang_c/CMakeFiles/cl_h_c_210.dir/__/test_cl.h.o
+[ 64%] Linking C executable cl_h_c_210
+[ 64%] Built target cl_h_c_210
+Scanning dependencies of target cl_gl_h_c_210
+[ 64%] Building C object tests/lang_c/CMakeFiles/cl_gl_h_c_210.dir/__/test_cl_gl.h.o
+[ 65%] Linking C executable cl_gl_h_c_210
+[ 65%] Built target cl_gl_h_c_210
+Scanning dependencies of target cl_d3d11_h_c_300
+[ 66%] Building C object tests/lang_c/CMakeFiles/cl_d3d11_h_c_300.dir/__/test_cl_d3d11.h.o
+[ 66%] Linking C executable cl_d3d11_h_c_300
+[ 66%] Built target cl_d3d11_h_c_300
+Scanning dependencies of target cl_gl_h_c_200
+[ 67%] Building C object tests/lang_c/CMakeFiles/cl_gl_h_c_200.dir/__/test_cl_gl.h.o
+[ 67%] Linking C executable cl_gl_h_c_200
+[ 67%] Built target cl_gl_h_c_200
+Scanning dependencies of target cl_dx9_media_sharing_intel_h_c_220
+[ 68%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_intel_h_c_220.dir/__/test_cl_dx9_media_sharing.h.o
+[ 68%] Linking C executable cl_dx9_media_sharing_intel_h_c_220
+[ 68%] Built target cl_dx9_media_sharing_intel_h_c_220
+Scanning dependencies of target cl_d3d10_h_c_110
+[ 69%] Building C object tests/lang_c/CMakeFiles/cl_d3d10_h_c_110.dir/__/test_cl_d3d10.h.o
+[ 69%] Linking C executable cl_d3d10_h_c_110
+[ 69%] Built target cl_d3d10_h_c_110
+Scanning dependencies of target cl_ext_intel_h_c_220
+[ 69%] Building C object tests/lang_c/CMakeFiles/cl_ext_intel_h_c_220.dir/__/test_cl_ext_intel.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+[ 70%] Linking C executable cl_ext_intel_h_c_220
+[ 70%] Built target cl_ext_intel_h_c_220
+Scanning dependencies of target cl_h_c_300
+[ 71%] Building C object tests/lang_c/CMakeFiles/cl_h_c_300.dir/__/test_cl.h.o
+[ 71%] Linking C executable cl_h_c_300
+[ 71%] Built target cl_h_c_300
+Scanning dependencies of target cl_d3d10_h_c_100
+[ 71%] Building C object tests/lang_c/CMakeFiles/cl_d3d10_h_c_100.dir/__/test_cl_d3d10.h.o
+[ 71%] Linking C executable cl_d3d10_h_c_100
+[ 71%] Built target cl_d3d10_h_c_100
+Scanning dependencies of target cl_gl_ext_h_c_210
+[ 71%] Building C object tests/lang_c/CMakeFiles/cl_gl_ext_h_c_210.dir/__/test_cl_gl_ext.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+[ 72%] Linking C executable cl_gl_ext_h_c_210
+[ 72%] Built target cl_gl_ext_h_c_210
+Scanning dependencies of target cl_d3d10_h_c_120
+[ 73%] Building C object tests/lang_c/CMakeFiles/cl_d3d10_h_c_120.dir/__/test_cl_d3d10.h.o
+[ 73%] Linking C executable cl_d3d10_h_c_120
+[ 73%] Built target cl_d3d10_h_c_120
+Scanning dependencies of target cl_dx9_media_sharing_intel_h_c_120
+[ 73%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_intel_h_c_120.dir/__/test_cl_dx9_media_sharing.h.o
+[ 74%] Linking C executable cl_dx9_media_sharing_intel_h_c_120
+[ 74%] Built target cl_dx9_media_sharing_intel_h_c_120
+Scanning dependencies of target headers_c_110
+[ 75%] Building C object tests/lang_c/CMakeFiles/headers_c_110.dir/__/test_headers.o
+[ 75%] Linking C executable headers_c_110
+[ 75%] Built target headers_c_110
+Scanning dependencies of target cl_dx9_media_sharing_intel_h_c_200
+[ 75%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_intel_h_c_200.dir/__/test_cl_dx9_media_sharing.h.o
+[ 76%] Linking C executable cl_dx9_media_sharing_intel_h_c_200
+[ 76%] Built target cl_dx9_media_sharing_intel_h_c_200
+Scanning dependencies of target cl_d3d10_h_c_220
+[ 76%] Building C object tests/lang_c/CMakeFiles/cl_d3d10_h_c_220.dir/__/test_cl_d3d10.h.o
+[ 77%] Linking C executable cl_d3d10_h_c_220
+[ 77%] Built target cl_d3d10_h_c_220
+Scanning dependencies of target cl_dx9_media_sharing_intel_h_c_210
+[ 77%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_intel_h_c_210.dir/__/test_cl_dx9_media_sharing.h.o
+[ 77%] Linking C executable cl_dx9_media_sharing_intel_h_c_210
+[ 77%] Built target cl_dx9_media_sharing_intel_h_c_210
+Scanning dependencies of target cl_ext_intel_h_c_210
+[ 78%] Building C object tests/lang_c/CMakeFiles/cl_ext_intel_h_c_210.dir/__/test_cl_ext_intel.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+[ 78%] Linking C executable cl_ext_intel_h_c_210
+[ 78%] Built target cl_ext_intel_h_c_210
+Scanning dependencies of target cl_egl_h_c_100
+[ 78%] Building C object tests/lang_c/CMakeFiles/cl_egl_h_c_100.dir/__/test_cl_egl.h.o
+[ 79%] Linking C executable cl_egl_h_c_100
+[ 79%] Built target cl_egl_h_c_100
+Scanning dependencies of target cl_egl_h_c_200
+[ 79%] Building C object tests/lang_c/CMakeFiles/cl_egl_h_c_200.dir/__/test_cl_egl.h.o
+[ 79%] Linking C executable cl_egl_h_c_200
+[ 79%] Built target cl_egl_h_c_200
+Scanning dependencies of target cl_egl_h_c_110
+[ 79%] Building C object tests/lang_c/CMakeFiles/cl_egl_h_c_110.dir/__/test_cl_egl.h.o
+[ 80%] Linking C executable cl_egl_h_c_110
+[ 80%] Built target cl_egl_h_c_110
+Scanning dependencies of target cl_ext_h_c_200
+[ 81%] Building C object tests/lang_c/CMakeFiles/cl_ext_h_c_200.dir/__/test_cl_ext.h.o
+[ 81%] Linking C executable cl_ext_h_c_200
+[ 81%] Built target cl_ext_h_c_200
+Scanning dependencies of target cl_egl_h_c_210
+[ 82%] Building C object tests/lang_c/CMakeFiles/cl_egl_h_c_210.dir/__/test_cl_egl.h.o
+[ 82%] Linking C executable cl_egl_h_c_210
+[ 82%] Built target cl_egl_h_c_210
+Scanning dependencies of target cl_egl_h_c_220
+[ 83%] Building C object tests/lang_c/CMakeFiles/cl_egl_h_c_220.dir/__/test_cl_egl.h.o
+[ 83%] Linking C executable cl_egl_h_c_220
+[ 83%] Built target cl_egl_h_c_220
+Scanning dependencies of target cl_gl_ext_h_c_220
+[ 83%] Building C object tests/lang_c/CMakeFiles/cl_gl_ext_h_c_220.dir/__/test_cl_gl_ext.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+[ 84%] Linking C executable cl_gl_ext_h_c_220
+[ 84%] Built target cl_gl_ext_h_c_220
+Scanning dependencies of target cl_d3d11_h_c_220
+[ 84%] Building C object tests/lang_c/CMakeFiles/cl_d3d11_h_c_220.dir/__/test_cl_d3d11.h.o
+[ 84%] Linking C executable cl_d3d11_h_c_220
+[ 84%] Built target cl_d3d11_h_c_220
+Scanning dependencies of target cl_ext_h_c_110
+[ 84%] Building C object tests/lang_c/CMakeFiles/cl_ext_h_c_110.dir/__/test_cl_ext.h.o
+[ 85%] Linking C executable cl_ext_h_c_110
+[ 85%] Built target cl_ext_h_c_110
+Scanning dependencies of target cl_ext_h_c_210
+[ 86%] Building C object tests/lang_c/CMakeFiles/cl_ext_h_c_210.dir/__/test_cl_ext.h.o
+[ 86%] Linking C executable cl_ext_h_c_210
+[ 86%] Built target cl_ext_h_c_210
+Scanning dependencies of target cl_h_c_110
+[ 87%] Building C object tests/lang_c/CMakeFiles/cl_h_c_110.dir/__/test_cl.h.o
+[ 87%] Linking C executable cl_h_c_110
+[ 87%] Built target cl_h_c_110
+Scanning dependencies of target cl_ext_h_c_220
+[ 88%] Building C object tests/lang_c/CMakeFiles/cl_ext_h_c_220.dir/__/test_cl_ext.h.o
+[ 88%] Linking C executable cl_ext_h_c_220
+[ 88%] Built target cl_ext_h_c_220
+Scanning dependencies of target headers_c_210
+[ 88%] Building C object tests/lang_c/CMakeFiles/headers_c_210.dir/__/test_headers.o
+[ 89%] Linking C executable headers_c_210
+[ 89%] Built target headers_c_210
+Scanning dependencies of target cl_dx9_media_sharing_intel_h_c_300
+[ 90%] Building C object tests/lang_c/CMakeFiles/cl_dx9_media_sharing_intel_h_c_300.dir/__/test_cl_dx9_media_sharing.h.o
+[ 90%] Linking C executable cl_dx9_media_sharing_intel_h_c_300
+[ 90%] Built target cl_dx9_media_sharing_intel_h_c_300
+Scanning dependencies of target cl_ext_intel_h_c_120
+[ 91%] Building C object tests/lang_c/CMakeFiles/cl_ext_intel_h_c_120.dir/__/test_cl_ext_intel.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+[ 91%] Linking C executable cl_ext_intel_h_c_120
+[ 91%] Built target cl_ext_intel_h_c_120
+Scanning dependencies of target cl_ext_h_c_300
+[ 91%] Building C object tests/lang_c/CMakeFiles/cl_ext_h_c_300.dir/__/test_cl_ext.h.o
+[ 92%] Linking C executable cl_ext_h_c_300
+[ 92%] Built target cl_ext_h_c_300
+Scanning dependencies of target cl_layer_h_c_110
+[ 92%] Building C object tests/lang_c/CMakeFiles/cl_layer_h_c_110.dir/__/test_cl_layer.h.o
+[ 93%] Linking C executable cl_layer_h_c_110
+[ 93%] Built target cl_layer_h_c_110
+Scanning dependencies of target cl_d3d11_h_c_200
+[ 93%] Building C object tests/lang_c/CMakeFiles/cl_d3d11_h_c_200.dir/__/test_cl_d3d11.h.o
+[ 94%] Linking C executable cl_d3d11_h_c_200
+[ 94%] Built target cl_d3d11_h_c_200
+Scanning dependencies of target cl_ext_intel_h_c_100
+[ 94%] Building C object tests/lang_c/CMakeFiles/cl_ext_intel_h_c_100.dir/__/test_cl_ext_intel.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+[ 95%] Linking C executable cl_ext_intel_h_c_100
+[ 95%] Built target cl_ext_intel_h_c_100
+Scanning dependencies of target cl_version_h_c_210
+[ 96%] Building C object tests/lang_c/CMakeFiles/cl_version_h_c_210.dir/__/test_cl_version.h.o
+[ 96%] Linking C executable cl_version_h_c_210
+[ 96%] Built target cl_version_h_c_210
+Scanning dependencies of target cl_half_h_c_210
+[ 96%] Building C object tests/lang_c/CMakeFiles/cl_half_h_c_210.dir/__/test_cl_half.h.o
+[ 97%] Linking C executable cl_half_h_c_210
+[ 97%] Built target cl_half_h_c_210
+Scanning dependencies of target cl_ext_intel_h_c_200
+[ 98%] Building C object tests/lang_c/CMakeFiles/cl_ext_intel_h_c_200.dir/__/test_cl_ext_intel.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+[ 98%] Linking C executable cl_ext_intel_h_c_200
+[ 98%] Built target cl_ext_intel_h_c_200
+Scanning dependencies of target cl_ext_intel_h_c_300
+[ 98%] Building C object tests/lang_c/CMakeFiles/cl_ext_intel_h_c_300.dir/__/test_cl_ext_intel.h.o
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+[ 99%] Linking C executable cl_ext_intel_h_c_300
+[ 99%] Built target cl_ext_intel_h_c_300
+Scanning dependencies of target cl_gl_h_c_120
+[100%] Building C object tests/lang_c/CMakeFiles/cl_gl_h_c_120.dir/__/test_cl_gl.h.o
+[100%] Linking C executable cl_gl_h_c_120
+[100%] Built target cl_gl_h_c_120
++ make test
+Running tests...
+Test project /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/build
+        Start   1: cl_h_c_100
+  1/119 Test   #1: cl_h_c_100 ...........................   Passed    0.04 sec
+        Start   2: cl_h_c_110
+  2/119 Test   #2: cl_h_c_110 ...........................   Passed    0.03 sec
+        Start   3: cl_h_c_120
+  3/119 Test   #3: cl_h_c_120 ...........................   Passed    0.05 sec
+        Start   4: cl_h_c_200
+  4/119 Test   #4: cl_h_c_200 ...........................   Passed    0.04 sec
+        Start   5: cl_h_c_210
+  5/119 Test   #5: cl_h_c_210 ...........................   Passed    0.03 sec
+        Start   6: cl_h_c_220
+  6/119 Test   #6: cl_h_c_220 ...........................   Passed    0.04 sec
+        Start   7: cl_h_c_300
+  7/119 Test   #7: cl_h_c_300 ...........................   Passed    0.04 sec
+        Start   8: cl_d3d10_h_c_100
+  8/119 Test   #8: cl_d3d10_h_c_100 .....................   Passed    0.04 sec
+        Start   9: cl_d3d10_h_c_110
+  9/119 Test   #9: cl_d3d10_h_c_110 .....................   Passed    0.04 sec
+        Start  10: cl_d3d10_h_c_120
+ 10/119 Test  #10: cl_d3d10_h_c_120 .....................   Passed    0.06 sec
+        Start  11: cl_d3d10_h_c_200
+ 11/119 Test  #11: cl_d3d10_h_c_200 .....................   Passed    0.07 sec
+        Start  12: cl_d3d10_h_c_210
+ 12/119 Test  #12: cl_d3d10_h_c_210 .....................   Passed    0.03 sec
+        Start  13: cl_d3d10_h_c_220
+ 13/119 Test  #13: cl_d3d10_h_c_220 .....................   Passed    0.03 sec
+        Start  14: cl_d3d10_h_c_300
+ 14/119 Test  #14: cl_d3d10_h_c_300 .....................   Passed    0.03 sec
+        Start  15: cl_d3d11_h_c_100
+ 15/119 Test  #15: cl_d3d11_h_c_100 .....................   Passed    0.04 sec
+        Start  16: cl_d3d11_h_c_110
+ 16/119 Test  #16: cl_d3d11_h_c_110 .....................   Passed    0.04 sec
+        Start  17: cl_d3d11_h_c_120
+ 17/119 Test  #17: cl_d3d11_h_c_120 .....................   Passed    0.08 sec
+        Start  18: cl_d3d11_h_c_200
+ 18/119 Test  #18: cl_d3d11_h_c_200 .....................   Passed    0.04 sec
+        Start  19: cl_d3d11_h_c_210
+ 19/119 Test  #19: cl_d3d11_h_c_210 .....................   Passed    0.04 sec
+        Start  20: cl_d3d11_h_c_220
+ 20/119 Test  #20: cl_d3d11_h_c_220 .....................   Passed    0.03 sec
+        Start  21: cl_d3d11_h_c_300
+ 21/119 Test  #21: cl_d3d11_h_c_300 .....................   Passed    0.03 sec
+        Start  22: cl_dx9_media_sharing_h_c_100
+ 22/119 Test  #22: cl_dx9_media_sharing_h_c_100 .........   Passed    0.03 sec
+        Start  23: cl_dx9_media_sharing_h_c_110
+ 23/119 Test  #23: cl_dx9_media_sharing_h_c_110 .........   Passed    0.05 sec
+        Start  24: cl_dx9_media_sharing_h_c_120
+ 24/119 Test  #24: cl_dx9_media_sharing_h_c_120 .........   Passed    0.06 sec
+        Start  25: cl_dx9_media_sharing_h_c_200
+ 25/119 Test  #25: cl_dx9_media_sharing_h_c_200 .........   Passed    0.03 sec
+        Start  26: cl_dx9_media_sharing_h_c_210
+ 26/119 Test  #26: cl_dx9_media_sharing_h_c_210 .........   Passed    0.03 sec
+        Start  27: cl_dx9_media_sharing_h_c_220
+ 27/119 Test  #27: cl_dx9_media_sharing_h_c_220 .........   Passed    0.03 sec
+        Start  28: cl_dx9_media_sharing_h_c_300
+ 28/119 Test  #28: cl_dx9_media_sharing_h_c_300 .........   Passed    0.04 sec
+        Start  29: cl_dx9_media_sharing_intel_h_c_100
+ 29/119 Test  #29: cl_dx9_media_sharing_intel_h_c_100 ...   Passed    0.04 sec
+        Start  30: cl_dx9_media_sharing_intel_h_c_110
+ 30/119 Test  #30: cl_dx9_media_sharing_intel_h_c_110 ...   Passed    0.04 sec
+        Start  31: cl_dx9_media_sharing_intel_h_c_120
+ 31/119 Test  #31: cl_dx9_media_sharing_intel_h_c_120 ...   Passed    0.07 sec
+        Start  32: cl_dx9_media_sharing_intel_h_c_200
+ 32/119 Test  #32: cl_dx9_media_sharing_intel_h_c_200 ...   Passed    0.05 sec
+        Start  33: cl_dx9_media_sharing_intel_h_c_210
+ 33/119 Test  #33: cl_dx9_media_sharing_intel_h_c_210 ...   Passed    0.04 sec
+        Start  34: cl_dx9_media_sharing_intel_h_c_220
+ 34/119 Test  #34: cl_dx9_media_sharing_intel_h_c_220 ...   Passed    0.05 sec
+        Start  35: cl_dx9_media_sharing_intel_h_c_300
+ 35/119 Test  #35: cl_dx9_media_sharing_intel_h_c_300 ...   Passed    0.04 sec
+        Start  36: cl_egl_h_c_100
+ 36/119 Test  #36: cl_egl_h_c_100 .......................   Passed    0.04 sec
+        Start  37: cl_egl_h_c_110
+ 37/119 Test  #37: cl_egl_h_c_110 .......................   Passed    0.03 sec
+        Start  38: cl_egl_h_c_120
+ 38/119 Test  #38: cl_egl_h_c_120 .......................   Passed    0.04 sec
+        Start  39: cl_egl_h_c_200
+ 39/119 Test  #39: cl_egl_h_c_200 .......................   Passed    0.04 sec
+        Start  40: cl_egl_h_c_210
+ 40/119 Test  #40: cl_egl_h_c_210 .......................   Passed    0.05 sec
+        Start  41: cl_egl_h_c_220
+ 41/119 Test  #41: cl_egl_h_c_220 .......................   Passed    0.03 sec
+        Start  42: cl_egl_h_c_300
+ 42/119 Test  #42: cl_egl_h_c_300 .......................   Passed    0.06 sec
+        Start  43: cl_ext_h_c_100
+ 43/119 Test  #43: cl_ext_h_c_100 .......................   Passed    0.06 sec
+        Start  44: cl_ext_h_c_110
+ 44/119 Test  #44: cl_ext_h_c_110 .......................   Passed    0.04 sec
+        Start  45: cl_ext_h_c_120
+ 45/119 Test  #45: cl_ext_h_c_120 .......................   Passed    0.07 sec
+        Start  46: cl_ext_h_c_200
+ 46/119 Test  #46: cl_ext_h_c_200 .......................   Passed    0.04 sec
+        Start  47: cl_ext_h_c_210
+ 47/119 Test  #47: cl_ext_h_c_210 .......................   Passed    0.03 sec
+        Start  48: cl_ext_h_c_220
+ 48/119 Test  #48: cl_ext_h_c_220 .......................   Passed    0.04 sec
+        Start  49: cl_ext_h_c_300
+ 49/119 Test  #49: cl_ext_h_c_300 .......................   Passed    0.04 sec
+        Start  50: cl_ext_intel_h_c_100
+ 50/119 Test  #50: cl_ext_intel_h_c_100 .................   Passed    0.07 sec
+        Start  51: cl_ext_intel_h_c_110
+ 51/119 Test  #51: cl_ext_intel_h_c_110 .................   Passed    0.04 sec
+        Start  52: cl_ext_intel_h_c_120
+ 52/119 Test  #52: cl_ext_intel_h_c_120 .................   Passed    0.04 sec
+        Start  53: cl_ext_intel_h_c_200
+ 53/119 Test  #53: cl_ext_intel_h_c_200 .................   Passed    0.04 sec
+        Start  54: cl_ext_intel_h_c_210
+ 54/119 Test  #54: cl_ext_intel_h_c_210 .................   Passed    0.05 sec
+        Start  55: cl_ext_intel_h_c_220
+ 55/119 Test  #55: cl_ext_intel_h_c_220 .................   Passed    0.06 sec
+        Start  56: cl_ext_intel_h_c_300
+ 56/119 Test  #56: cl_ext_intel_h_c_300 .................   Passed    0.04 sec
+        Start  57: cl_gl_h_c_100
+ 57/119 Test  #57: cl_gl_h_c_100 ........................   Passed    0.04 sec
+        Start  58: cl_gl_h_c_110
+ 58/119 Test  #58: cl_gl_h_c_110 ........................   Passed    0.04 sec
+        Start  59: cl_gl_h_c_120
+ 59/119 Test  #59: cl_gl_h_c_120 ........................   Passed    0.04 sec
+        Start  60: cl_gl_h_c_200
+ 60/119 Test  #60: cl_gl_h_c_200 ........................   Passed    0.05 sec
+        Start  61: cl_gl_h_c_210
+ 61/119 Test  #61: cl_gl_h_c_210 ........................   Passed    0.04 sec
+        Start  62: cl_gl_h_c_220
+ 62/119 Test  #62: cl_gl_h_c_220 ........................   Passed    0.03 sec
+        Start  63: cl_gl_h_c_300
+ 63/119 Test  #63: cl_gl_h_c_300 ........................   Passed    0.04 sec
+        Start  64: cl_gl_ext_h_c_100
+ 64/119 Test  #64: cl_gl_ext_h_c_100 ....................   Passed    0.04 sec
+        Start  65: cl_gl_ext_h_c_110
+ 65/119 Test  #65: cl_gl_ext_h_c_110 ....................   Passed    0.04 sec
+        Start  66: cl_gl_ext_h_c_120
+ 66/119 Test  #66: cl_gl_ext_h_c_120 ....................   Passed    0.04 sec
+        Start  67: cl_gl_ext_h_c_200
+ 67/119 Test  #67: cl_gl_ext_h_c_200 ....................   Passed    0.04 sec
+        Start  68: cl_gl_ext_h_c_210
+ 68/119 Test  #68: cl_gl_ext_h_c_210 ....................   Passed    0.04 sec
+        Start  69: cl_gl_ext_h_c_220
+ 69/119 Test  #69: cl_gl_ext_h_c_220 ....................   Passed    0.04 sec
+        Start  70: cl_gl_ext_h_c_300
+ 70/119 Test  #70: cl_gl_ext_h_c_300 ....................   Passed    0.04 sec
+        Start  71: cl_half_h_c_100
+ 71/119 Test  #71: cl_half_h_c_100 ......................   Passed    0.07 sec
+        Start  72: cl_half_h_c_110
+ 72/119 Test  #72: cl_half_h_c_110 ......................   Passed    0.03 sec
+        Start  73: cl_half_h_c_120
+ 73/119 Test  #73: cl_half_h_c_120 ......................   Passed    0.05 sec
+        Start  74: cl_half_h_c_200
+ 74/119 Test  #74: cl_half_h_c_200 ......................   Passed    0.04 sec
+        Start  75: cl_half_h_c_210
+ 75/119 Test  #75: cl_half_h_c_210 ......................   Passed    0.04 sec
+        Start  76: cl_half_h_c_220
+ 76/119 Test  #76: cl_half_h_c_220 ......................   Passed    0.04 sec
+        Start  77: cl_half_h_c_300
+ 77/119 Test  #77: cl_half_h_c_300 ......................   Passed    0.07 sec
+        Start  78: cl_icd_h_c_100
+ 78/119 Test  #78: cl_icd_h_c_100 .......................   Passed    0.04 sec
+        Start  79: cl_icd_h_c_110
+ 79/119 Test  #79: cl_icd_h_c_110 .......................   Passed    0.05 sec
+        Start  80: cl_icd_h_c_120
+ 80/119 Test  #80: cl_icd_h_c_120 .......................   Passed    0.05 sec
+        Start  81: cl_icd_h_c_200
+ 81/119 Test  #81: cl_icd_h_c_200 .......................   Passed    0.05 sec
+        Start  82: cl_icd_h_c_210
+ 82/119 Test  #82: cl_icd_h_c_210 .......................   Passed    0.06 sec
+        Start  83: cl_icd_h_c_220
+ 83/119 Test  #83: cl_icd_h_c_220 .......................   Passed    0.03 sec
+        Start  84: cl_icd_h_c_300
+ 84/119 Test  #84: cl_icd_h_c_300 .......................   Passed    0.07 sec
+        Start  85: cl_layer_h_c_100
+ 85/119 Test  #85: cl_layer_h_c_100 .....................   Passed    0.03 sec
+        Start  86: cl_layer_h_c_110
+ 86/119 Test  #86: cl_layer_h_c_110 .....................   Passed    0.04 sec
+        Start  87: cl_layer_h_c_120
+ 87/119 Test  #87: cl_layer_h_c_120 .....................   Passed    0.04 sec
+        Start  88: cl_layer_h_c_200
+ 88/119 Test  #88: cl_layer_h_c_200 .....................   Passed    0.04 sec
+        Start  89: cl_layer_h_c_210
+ 89/119 Test  #89: cl_layer_h_c_210 .....................   Passed    0.04 sec
+        Start  90: cl_layer_h_c_220
+ 90/119 Test  #90: cl_layer_h_c_220 .....................   Passed    0.04 sec
+        Start  91: cl_layer_h_c_300
+ 91/119 Test  #91: cl_layer_h_c_300 .....................   Passed    0.03 sec
+        Start  92: cl_platform_h_c_100
+ 92/119 Test  #92: cl_platform_h_c_100 ..................   Passed    0.03 sec
+        Start  93: cl_platform_h_c_110
+ 93/119 Test  #93: cl_platform_h_c_110 ..................   Passed    0.03 sec
+        Start  94: cl_platform_h_c_120
+ 94/119 Test  #94: cl_platform_h_c_120 ..................   Passed    0.05 sec
+        Start  95: cl_platform_h_c_200
+ 95/119 Test  #95: cl_platform_h_c_200 ..................   Passed    0.04 sec
+        Start  96: cl_platform_h_c_210
+ 96/119 Test  #96: cl_platform_h_c_210 ..................   Passed    0.04 sec
+        Start  97: cl_platform_h_c_220
+ 97/119 Test  #97: cl_platform_h_c_220 ..................   Passed    0.07 sec
+        Start  98: cl_platform_h_c_300
+ 98/119 Test  #98: cl_platform_h_c_300 ..................   Passed    0.05 sec
+        Start  99: cl_opencl_h_c_100
+ 99/119 Test  #99: cl_opencl_h_c_100 ....................   Passed    0.04 sec
+        Start 100: cl_opencl_h_c_110
+100/119 Test #100: cl_opencl_h_c_110 ....................   Passed    0.04 sec
+        Start 101: cl_opencl_h_c_120
+101/119 Test #101: cl_opencl_h_c_120 ....................   Passed    0.06 sec
+        Start 102: cl_opencl_h_c_200
+102/119 Test #102: cl_opencl_h_c_200 ....................   Passed    0.03 sec
+        Start 103: cl_opencl_h_c_210
+103/119 Test #103: cl_opencl_h_c_210 ....................   Passed    0.05 sec
+        Start 104: cl_opencl_h_c_220
+104/119 Test #104: cl_opencl_h_c_220 ....................   Passed    0.03 sec
+        Start 105: cl_opencl_h_c_300
+105/119 Test #105: cl_opencl_h_c_300 ....................   Passed    0.06 sec
+        Start 106: cl_version_h_c_100
+106/119 Test #106: cl_version_h_c_100 ...................   Passed    0.06 sec
+        Start 107: cl_version_h_c_110
+107/119 Test #107: cl_version_h_c_110 ...................   Passed    0.04 sec
+        Start 108: cl_version_h_c_120
+108/119 Test #108: cl_version_h_c_120 ...................   Passed    0.06 sec
+        Start 109: cl_version_h_c_200
+109/119 Test #109: cl_version_h_c_200 ...................   Passed    0.08 sec
+        Start 110: cl_version_h_c_210
+110/119 Test #110: cl_version_h_c_210 ...................   Passed    0.04 sec
+        Start 111: cl_version_h_c_220
+111/119 Test #111: cl_version_h_c_220 ...................   Passed    0.06 sec
+        Start 112: cl_version_h_c_300
+112/119 Test #112: cl_version_h_c_300 ...................   Passed    0.05 sec
+        Start 113: headers_c_100
+113/119 Test #113: headers_c_100 ........................   Passed    0.06 sec
+        Start 114: headers_c_110
+114/119 Test #114: headers_c_110 ........................   Passed    0.10 sec
+        Start 115: headers_c_120
+115/119 Test #115: headers_c_120 ........................   Passed    0.08 sec
+        Start 116: headers_c_200
+116/119 Test #116: headers_c_200 ........................   Passed    0.06 sec
+        Start 117: headers_c_210
+117/119 Test #117: headers_c_210 ........................   Passed    0.04 sec
+        Start 118: headers_c_220
+118/119 Test #118: headers_c_220 ........................   Passed    0.04 sec
+        Start 119: headers_c_300
+119/119 Test #119: headers_c_300 ........................   Passed    0.04 sec
+
+100% tests passed, 0 tests failed out of 119
+
+Total Test time (real) =   6.75 sec
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [13:57:33]: test upstream-testsuite: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-stdout ./testing/khronos-opencl-headers/upstream-testsuite-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-stdout ./testing/khronos-opencl-headers/upstream-testsuite-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._mzdxh7n/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.1qGVpR/upstream-testsuite-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/khronos-opencl-headers/upstream-testsuite-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._mzdxh7n/runcmd sh -ec cat </tmp/autopkgtest.1qGVpR/upstream-testsuite-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-stderr ./testing/khronos-opencl-headers/upstream-testsuite-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-stderr ./testing/khronos-opencl-headers/upstream-testsuite-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._mzdxh7n/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.1qGVpR/upstream-testsuite-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/khronos-opencl-headers/upstream-testsuite-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._mzdxh7n/runcmd sh -ec cat </tmp/autopkgtest.1qGVpR/upstream-testsuite-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [13:57:35]: test upstream-testsuite:  - - - - - - - - - - results - - - - - - - - - -
+upstream-testsuite   PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-artifacts/ ./testing/khronos-opencl-headers/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.1qGVpR/upstream-testsuite-artifacts/ ./testing/khronos-opencl-headers/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._mzdxh7n/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.1qGVpR/upstream-testsuite-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/khronos-opencl-headers/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._mzdxh7n/runcmd sh -ec cd /tmp/autopkgtest.1qGVpR/upstream-testsuite-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/khronos-opencl-headers/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.1qGVpR/upstream-testsuite-artifacts', '/tmp/autopkgtest.1qGVpR/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [13:57:37]: @@@@@@@@@@@@@@@@@@@@ summary
+compile-headers      FAIL badpkg
+blame: ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 opencl-c-headers 相匹配的软件包
+ (exit code 1)
+upstream-testsuite   PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.1qGVpR
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 150192 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

@@ -1,0 +1,4 @@
+installed-tests      FAIL badpkg
+blame: ./src/ibus_1.5.22-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 ibus-tests 相匹配的软件包
+ (exit code 1)

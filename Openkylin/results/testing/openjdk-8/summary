@@ -1,0 +1,12 @@
+hotspot              FAIL badpkg
+blame: ./src/openjdk-8_8u342-b07-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-8-source 相匹配的软件包
+ (exit code 1)
+langtools            FAIL badpkg
+blame: ./src/openjdk-8_8u342-b07-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-8-source 相匹配的软件包
+ (exit code 1)
+jdk                  FAIL badpkg
+blame: ./src/openjdk-8_8u342-b07-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 openjdk-8-source 相匹配的软件包
+ (exit code 1)

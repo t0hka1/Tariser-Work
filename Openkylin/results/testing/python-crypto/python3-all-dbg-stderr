@@ -1,0 +1,43 @@
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:141: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = factory.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:244: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:141: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = factory.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:244: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:295: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:158: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  IV_cipher = factory.new(key, MODE_CFB,
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:165: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._encrypted_IV = IV_cipher.encrypt(
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:183: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = factory.new(key, MODE_CFB,
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:238: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:172: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self.IV = IV_cipher.decrypt(self.IV +   # Ciphertext
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:292: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:236: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.encrypt(padded)[:len(plaintext)]
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:290: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.decrypt(padded)[:len(ciphertext)]
+/usr/lib/python3/dist-packages/Crypto/Cipher/ARC4.py:77: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = _ARC4.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/ARC4.py:90: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/ARC4.py:101: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/XOR.py:44: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = _XOR.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/XOR.py:57: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/XOR.py:68: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Hash/hashalgo.py:69: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._hash.update(data)
+SelfTest: You can ignore the RandomPool_DeprecationWarning that follows.
+/usr/lib/python3/dist-packages/Crypto/Util/randpool.py:39: RandomPool_DeprecationWarning: This application uses RandomPool, which is BROKEN in older releases.  See http://www.pycrypto.org/randpool-broken
+  warnings.warn("This application uses RandomPool, which is BROKEN in older releases.  See http://www.pycrypto.org/randpool-broken",

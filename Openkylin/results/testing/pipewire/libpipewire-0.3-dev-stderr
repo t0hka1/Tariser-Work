@@ -1,0 +1,9 @@
++ [ -n /tmp/autopkgtest.vJGt4F/libpipewire-0.3-dev-artifacts ]
++ WORKDIR=/tmp/autopkgtest.vJGt4F/libpipewire-0.3-dev-artifacts
++ [ -n  ]
++ CROSS_COMPILE=
++ cd /tmp/autopkgtest.vJGt4F/libpipewire-0.3-dev-artifacts
++ cat
++ pkg-config --cflags --libs libpipewire-0.3
++ gcc -otrivial trivial.c -lm -D_REENTRANT -I/usr/include/pipewire-0.3 -I/usr/include/spa-0.2 -lpipewire-0.3
++ ./trivial

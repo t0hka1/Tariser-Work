@@ -1,0 +1,8 @@
+run-testsuite        FAIL badpkg
+blame: ./src/postgresql-12_12.2-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 libpq-dev 相匹配的软件包
+ (exit code 1)
+installcheck         FAIL badpkg
+blame: ./src/postgresql-12_12.2-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 libpq-dev 相匹配的软件包
+ (exit code 1)

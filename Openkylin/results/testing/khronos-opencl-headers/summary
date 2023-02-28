@@ -1,0 +1,5 @@
+compile-headers      FAIL badpkg
+blame: ./src/khronos-opencl-headers_3.0~2022.05.18-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 opencl-c-headers 相匹配的软件包
+ (exit code 1)
+upstream-testsuite   PASS

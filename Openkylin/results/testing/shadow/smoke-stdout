@@ -1,0 +1,8 @@
+Adding an user works
+shadow-test-user:x:1001:1001::/home/shadow-test-user:/bin/sh
+shadow-test-user:!:19415:0:99999:7:::
+Removing an user works
+Adding an extrauser works
+shadow-test-user:x:1001:1001::/home/shadow-test-user:/bin/sh
+shadow-test-user:!:19415:0:99999:7:::
+Removing an extrauser works

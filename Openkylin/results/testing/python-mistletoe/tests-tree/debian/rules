@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+export SETUPTOOLS_USE_DISTUTILS=stdlib
+
+include /usr/share/dpkg/pkg-info.mk
+
+destdir = debian/python3-mistletoe
+cmd = mistletoe
+python3path = $(destdir)/usr/lib/$(shell py3versions -d)/dist-packages
+
+# generate manpage with help2man from --help option of python script
+_mkman = PYTHONPATH=$(python3path) \
+ help2man $(if $3,--name "$(strip $3)") --no-info --output $2 $1 \
+ || { PYTHONPATH=$(python3path) $1 --help; false; }
+
+override_dh_auto_test:
+	python3 -m unittest --verbose test
+
+# * generate manpage
+execute_after_dh_auto_install:
+	$(call _mkman, $(destdir)/usr/bin/$(cmd), debian/$(cmd).1, \
+		turn Markdown into HTML in pure Python)
+	find $(destdir)/usr/lib -name '*.pyc' -delete
+	find $(destdir)/usr/lib -type d -empty -delete
+
+%:
+	dh $@ --buildsystem=pybuild

@@ -1,0 +1,90 @@
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+Traceback (most recent call last):
+  File "setup.py", line 3, in <module>
+    setup(name='dummy',
+  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 87, in setup
+    return distutils.core.setup(**attrs)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 185, in setup
+    return run_commands(dist)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 201, in run_commands
+    dist.run_commands()
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 973, in run_commands
+    self.run_command(cmd)
+  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+    super().run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+    cmd_obj.run()
+  File "/usr/lib/python3/dist-packages/wheel/bdist_wheel.py", line 360, in run
+    self.run_command("install")
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+    self.distribution.run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+    super().run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+    cmd_obj.run()
+  File "/usr/lib/python3/dist-packages/setuptools/command/install.py", line 68, in run
+    return orig.install.run(self)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/command/install.py", line 709, in run
+    self.run_command(cmd_name)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+    self.distribution.run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+    super().run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 991, in run_command
+    cmd_obj.ensure_finalized()
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 109, in ensure_finalized
+    self.finalize_options()
+  File "/usr/lib/python3/dist-packages/setuptools/command/install_lib.py", line 17, in finalize_options
+    self.set_undefined_options('install',('install_layout','install_layout'))
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 297, in set_undefined_options
+    setattr(self, dst_option, getattr(src_cmd_obj, src_option))
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 105, in __getattr__
+    raise AttributeError(attr)
+AttributeError: install_layout
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+Traceback (most recent call last):
+  File "setup.py", line 3, in <module>
+    setup(name='dummy',
+  File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 87, in setup
+    return distutils.core.setup(**attrs)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 185, in setup
+    return run_commands(dist)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 201, in run_commands
+    dist.run_commands()
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 973, in run_commands
+    self.run_command(cmd)
+  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+    super().run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+    cmd_obj.run()
+  File "/usr/lib/python3/dist-packages/wheel/bdist_wheel.py", line 360, in run
+    self.run_command("install")
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+    self.distribution.run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+    super().run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 992, in run_command
+    cmd_obj.run()
+  File "/usr/lib/python3/dist-packages/setuptools/command/install.py", line 68, in run
+    return orig.install.run(self)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/command/install.py", line 709, in run
+    self.run_command(cmd_name)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 319, in run_command
+    self.distribution.run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+    super().run_command(command)
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 991, in run_command
+    cmd_obj.ensure_finalized()
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 109, in ensure_finalized
+    self.finalize_options()
+  File "/usr/lib/python3/dist-packages/setuptools/command/install_lib.py", line 17, in finalize_options
+    self.set_undefined_options('install',('install_layout','install_layout'))
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 297, in set_undefined_options
+    setattr(self, dst_option, getattr(src_cmd_obj, src_option))
+  File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 105, in __getattr__
+    raise AttributeError(attr)
+AttributeError: install_layout
+sha256sum: /tmp/autopkgtest.KXEU9A/autopkgtest_tmp/wheels-1/dummy-0.0-py3-none-any.whl: No such file or directory
+sha256sum: /tmp/autopkgtest.KXEU9A/autopkgtest_tmp/wheels-2/dummy-0.0-py3-none-any.whl: No such file or directory

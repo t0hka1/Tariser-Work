@@ -1,0 +1,4 @@
+run-test             FAIL badpkg
+blame: ./src/aptdaemon_1.1.1+bzr982-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-aptdaemon.test 相匹配的软件包
+ (exit code 1)

@@ -1,0 +1,6 @@
+build                PASS (superficial)
+installed-tests      FAIL badpkg
+blame: ./src/pango1.0_1.46.2-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pango1.0-tests 相匹配的软件包
+ (exit code 1)
+python3-gi           PASS (superficial)

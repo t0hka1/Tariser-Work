@@ -1,0 +1,16 @@
+rose-6.q16           FAIL badpkg
+blame: ./src/imagemagick_6.9.11.60+dfsg-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 imagemagick-6.q16 相匹配的软件包
+ (exit code 1)
+perlmagick-6.q16     FAIL badpkg
+blame: ./src/imagemagick_6.9.11.60+dfsg-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 libimage-magick-q16-perl 相匹配的软件包
+ (exit code 1)
+rose-6.q16hdri       FAIL badpkg
+blame: ./src/imagemagick_6.9.11.60+dfsg-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 imagemagick-6.q16hdri 相匹配的软件包
+ (exit code 1)
+perlmagick-6.q16hdri FAIL badpkg
+blame: ./src/imagemagick_6.9.11.60+dfsg-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 libimage-magick-q16hdri-perl 相匹配的软件包
+ (exit code 1)

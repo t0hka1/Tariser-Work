@@ -1,0 +1,1364 @@
+autopkgtest: DBG: testbed init
+autopkgtest [00:46:29]: starting date: 2023-02-28
+autopkgtest [00:46:29]: version 5.20ubuntu1
+autopkgtest [00:46:29]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/oath-toolkit_2.6.7-ok3.dsc -o ./testing/oath-toolkit -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.xeyx2sk4/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.xeyx2sk4/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.xeyx2sk4/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.xeyx2sk4/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.xeyx2sk4/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.xeyx2sk4/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.xeyx2sk4/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.xeyx2sk4/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.xeyx2sk4/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'e833fe30-1a7f-432c-8cf5-c7ba5072cd26[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.xeyx2sk4/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.xeyx2sk4/runcmd chmod 1777 /tmp/autopkgtest.DsjKu6
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.DsjKu6
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.xeyx2sk4/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:47:31]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.DsjKu6/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/testbed-packages ./testing/oath-toolkit/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/testbed-packages ./testing/oath-toolkit/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:47:36]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [00:47:37]: @@@@@@@@@@@@@@@@@@@@ source ./src/oath-toolkit_2.6.7-ok3.dsc
+autopkgtest: DBG: blame += ./src/oath-toolkit_2.6.7-ok3.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.DsjKu6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/oath-toolkit_2.6.7-ok3.dsc /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/oath-toolkit_2.6.7-ok3.dsc /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/oath-toolkit_2.6.7-ok3.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat >/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.DsjKu6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/oath-toolkit_2.6.7.orig.tar.gz /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/oath-toolkit_2.6.7.orig.tar.gz /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/oath-toolkit_2.6.7.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat >/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.DsjKu6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/oath-toolkit_2.6.7-ok3.debian.tar.xz /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/oath-toolkit_2.6.7-ok3.debian.tar.xz /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/oath-toolkit_2.6.7-ok3.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat >/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.DsjKu6/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.DsjKu6/build.XXX
++ builddir=/tmp/autopkgtest.DsjKu6/build.KH0
++ cd /tmp/autopkgtest.DsjKu6/build.KH0
++ dpkg-source -x /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.8pddD4lB/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年11月28日 星期一 04时41分00秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.DsjKu6/oath-toolkit_2.6.7-ok3.dsc
+dpkg-source: info: extracting oath-toolkit in src
+dpkg-source: info: unpacking oath-toolkit_2.6.7.orig.tar.gz
+dpkg-source: info: unpacking oath-toolkit_2.6.7-ok3.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 0001-Handle-new-libxmlsec.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:47:58]: testing package oath-toolkit version 2.6.7-ok3
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/ ./testing/oath-toolkit/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/ ./testing/oath-toolkit/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/oath-toolkit/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cd /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/oath-toolkit/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency liboath-dev
+autopkgtest: DBG: marked alternatives ['liboath-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpskc-dev
+autopkgtest: DBG: marked alternatives ['libpskc-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency man
+autopkgtest: DBG: processing dependency oathtool
+autopkgtest: DBG: marked alternatives ['oathtool'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: processing dependency pskctool
+autopkgtest: DBG: marked alternatives ['pskctool'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name liboath path debian/tests/liboath command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name libpskc path debian/tests/libpskc command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name oathtool path debian/tests/oathtool command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name pskctool path debian/tests/pskctool command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest [00:47:59]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/build.KH0/src/ ./testing/oath-toolkit/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/build.KH0/src/ ./testing/oath-toolkit/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.DsjKu6/build.KH0/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/oath-toolkit/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cd /tmp/autopkgtest.DsjKu6/build.KH0/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/oath-toolkit/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency liboath-dev
+autopkgtest: DBG: marked alternatives ['liboath-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpskc-dev
+autopkgtest: DBG: marked alternatives ['libpskc-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency man
+autopkgtest: DBG: processing dependency oathtool
+autopkgtest: DBG: marked alternatives ['oathtool'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: processing dependency pskctool
+autopkgtest: DBG: marked alternatives ['pskctool'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name liboath path debian/tests/liboath command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name libpskc path debian/tests/libpskc command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name oathtool path debian/tests/oathtool command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest: DBG: Test defined: name pskctool path debian/tests/pskctool command "None" restrictions [] features [] depends ['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'] clicks [] installed clicks []
+autopkgtest [00:48:04]: test liboath: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: install-deps: satisfying build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.DsjKu6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/oath-toolkit/1-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/oath-toolkit/1-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.DsjKu6/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/oath-toolkit/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat >/tmp/autopkgtest.DsjKu6/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.DsjKu6/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.DsjKu6/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev liboath-dev
+  liboath0 libpskc-dev libpskc0 libstdc++-9-dev libxmlsec1 libxmlsec1-openssl
+  oathtool pskctool
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev liboath-dev
+  liboath0 libpskc-dev libpskc0 libstdc++-9-dev libxmlsec1 libxmlsec1-openssl
+  oathtool pskctool
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 16 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.8 MB 的归档。
+解压缩后会消耗 84.2 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 liboath0 riscv64 2.6.7-ok3 [80.7 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 liboath-dev riscv64 2.6.7-ok3 [165 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxmlsec1 riscv64 1.2.33-ok1 [123 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxmlsec1-openssl riscv64 1.2.33-ok1 [80.3 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpskc0 riscv64 2.6.7-ok3 [46.9 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpskc-dev riscv64 2.6.7-ok3 [158 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 oathtool riscv64 2.6.7-ok3 [49.8 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 pskctool riscv64 2.6.7-ok3 [36.0 kB]
+已下载 20.8 MB，耗时 14秒 (1,453 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../01-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../02-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../03-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../04-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../05-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../06-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../07-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../08-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在选中未选择的软件包 liboath0:riscv64。
+准备解压 .../09-liboath0_2.6.7-ok3_riscv64.deb  ...
+正在解压 liboath0:riscv64 (2.6.7-ok3) ...
+正在选中未选择的软件包 liboath-dev:riscv64。
+准备解压 .../10-liboath-dev_2.6.7-ok3_riscv64.deb  ...
+正在解压 liboath-dev:riscv64 (2.6.7-ok3) ...
+正在选中未选择的软件包 libxmlsec1:riscv64。
+准备解压 .../11-libxmlsec1_1.2.33-ok1_riscv64.deb  ...
+正在解压 libxmlsec1:riscv64 (1.2.33-ok1) ...
+正在选中未选择的软件包 libxmlsec1-openssl:riscv64。
+准备解压 .../12-libxmlsec1-openssl_1.2.33-ok1_riscv64.deb  ...
+正在解压 libxmlsec1-openssl:riscv64 (1.2.33-ok1) ...
+正在选中未选择的软件包 libpskc0:riscv64。
+准备解压 .../13-libpskc0_2.6.7-ok3_riscv64.deb  ...
+正在解压 libpskc0:riscv64 (2.6.7-ok3) ...
+正在选中未选择的软件包 libpskc-dev:riscv64。
+准备解压 .../14-libpskc-dev_2.6.7-ok3_riscv64.deb  ...
+正在解压 libpskc-dev:riscv64 (2.6.7-ok3) ...
+正在选中未选择的软件包 oathtool。
+准备解压 .../15-oathtool_2.6.7-ok3_riscv64.deb  ...
+正在解压 oathtool (2.6.7-ok3) ...
+正在选中未选择的软件包 pskctool。
+准备解压 .../16-pskctool_2.6.7-ok3_riscv64.deb  ...
+正在解压 pskctool (2.6.7-ok3) ...
+正在设置 liboath0:riscv64 (2.6.7-ok3) ...
+正在设置 oathtool (2.6.7-ok3) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 liboath-dev:riscv64 (2.6.7-ok3) ...
+正在设置 libxmlsec1:riscv64 (1.2.33-ok1) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libxmlsec1-openssl:riscv64 (1.2.33-ok1) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 libpskc0:riscv64 (2.6.7-ok3) ...
+正在设置 pskctool (2.6.7-ok3) ...
+正在设置 libpskc-dev:riscv64 (2.6.7-ok3) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'liboath-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libpskc-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'oathtool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pskctool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 liboath-dev oathtool liboath0 libpskc-dev pskctool libpskc0 libxmlsec1-openssl libxmlsec1
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'liboath-dev', 'oathtool', 'liboath0', 'libpskc-dev', 'pskctool', 'libpskc0', 'libxmlsec1-openssl', 'libxmlsec1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 157157 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.DsjKu6/liboath-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/liboath-packages.all ./testing/oath-toolkit/liboath-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/liboath-packages.all ./testing/oath-toolkit/liboath-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/liboath-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/liboath-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/liboath-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.DsjKu6/build.KH0/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.DsjKu6/build.KH0/src already exists
+autopkgtest [00:49:45]: test liboath: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.DsjKu6/build.KH0/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.DsjKu6/liboath-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.DsjKu6/liboath-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/liboath; touch /tmp/autopkgtest.DsjKu6/liboath-stdout /tmp/autopkgtest.DsjKu6/liboath-stderr; /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/liboath 2> >(tee -a /tmp/autopkgtest.DsjKu6/liboath-stderr >&2) > >(tee -a /tmp/autopkgtest.DsjKu6/liboath-stdout);'], kind test, sout raw, serr raw, env []
+PASS: gcc
+PASS: run
+OATHTOOL(1)                      User Commands                     OATHTOOL(1)
+
+NAME
+       oathtool - Open AuTHentication (OATH) one-time password tool
+
+SYNOPSIS
+       oathtool [OPTIONS]... [KEY [OTP]]...
+
+DESCRIPTION
+       oathtool 2.6.7
+
+       Generate  and  validate  OATH  one-time  passwords.  KEY and OTP is the
+       string '-' to read from standard input, '@FILE' to read from  indicated
+       filename,  or  a  hex encoded value (not recommended on multi-user sys‐
+       tems).
+
+       -h, --help
+              Print help and exit
+
+       -V, --version
+              Print version and exit
+
+       --hotp use event-based HOTP mode  (default=on)
+
+       --totp[=MODE]
+              use  time-variant  TOTP  mode  (values  "SHA1",   "SHA256",   or
+              "SHA512")  (default=`SHA1')
+
+       -b, --base32
+              use base32 encoding of KEY instead of hex (default=off)
+
+       -c, --counter=COUNTER
+              HOTP counter value
+
+       -s, --time-step-size=DURATION TOTP time-step duration
+              (default=`30s')
+
+       -S, --start-time=TIME
+              when  to start counting time steps for TOTP (default=`1970-01-01
+              00:00:00 UTC')
+
+       -N, --now=TIME
+              use this time as current time for TOTP (default=`now')
+
+       -d, --digits=DIGITS
+              number of digits in one-time password
+
+       -w, --window=WIDTH
+              number of additional OTPs to generate or validate against
+
+       -v, --verbose
+              explain what is being done  (default=off)
+
+EXAMPLES
+       To generate a time-based (TOTP) one-time password from a key  protected
+       by GnuPG:
+
+         $ gpg --decrypt --quiet ~/.my-totp-secret.asc | oathtool --totp -
+
+       How  to  create  the encrypted file is outside of scope of this manual,
+       see gpg(1), however the following two commands may help you to  encrypt
+       the  secret  symmetrically (using a password) or asymmetrically (if you
+       have created a private key), respectively.  You will  need  to  provide
+       the secret from the terminal after invoking the commands.
+
+         $ gpg --symmetric > ~/.my-totp-secret.asc
+         $ gpg --encrypt --default-recipient-self > ~/.my-totp-secret.asc
+
+       For  easier reading, the rest of this man page provides the KEY and OTP
+       on the command line.  Keep in mind that this usage is  not  recommended
+       since  on  most  multi-user systems, command-line parameters of running
+       processes can be seen by other users.
+
+       To generate the first event-based (HOTP) one-time password for an  all-
+       zero key:
+
+          $ echo 00 | oathtool -
+          328482
+          $
+
+       Sometime  you  want to generate more than a single OTP.  To generate 10
+       additional event-based one-time passwords, with the secret key used  in
+       the examples of RFC 4226, use the -w (--window) parameter:
+
+          $ oathtool -w 10 3132333435363738393031323334353637383930
+          755224
+          287082
+          359152
+          969429
+          338314
+          254676
+          287922
+          162583
+          399871
+          520489
+          403154
+          $
+
+       In the last output, the counter for the first OTP was 0, the second OTP
+       had a counter of 1, and so on up to 10.
+
+       In order to use keys encoded in Base32 instead of hex, you may  provide
+       the -b (--base32) parameter:
+
+          $ oathtool --base32 -w 3 GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ
+          755224
+          287082
+          359152
+          969429
+          $
+
+       The  tool ignore whitespace in base32 data and re-add padding if neces‐
+       sary, thus you may supply keys formatted like the one below.
+
+          $ oathtool --base32 --totp "gr6d 5br7 25s6 vnck v4vl hlao re"
+          977872
+          $
+
+       To generate a particular OTP, use the -c (--counter) parameter to  give
+       the exact position directly:
+
+          $ oathtool -c 5 3132333435363738393031323334353637383930
+          254676
+          $
+
+       To validate a HOTP one-time password supply the OTP last on the command
+       line:
+
+          $ oathtool -w 10 3132333435363738393031323334353637383930 969429
+          3
+          $
+
+       The output indicates the counter that was used.  It works  by  starting
+       with  counter  0 and increment until it founds a match (or not), within
+       the supplied window of 10 OTPs.
+
+       The tool supports time-variant one-time passwords, in  so  called  TOTP
+       mode.  Usage is similar, but --totp needs to be provided:
+
+          $ oathtool --totp 00
+          943388
+          $
+
+       Don't be alarmed if you do not get the same output, this is because the
+       output depends on the current time.  To generate a TOTP for a  particu‐
+       lar fixed time use the -N (--now) parameter:
+
+          $ oathtool --totp --now "2008-04-23 17:42:17 UTC" 00
+          974945
+          $
+
+       The  format  is a mostly free format human readable date string such as
+       "Sun, 29 Feb 2004 16:21:42 -0800"  or  "2004-02-29  16:21:42"  or  even
+       "next  Thursday".   It  is the same used as the --date parameter of the
+       date(1) tool.
+
+       The default MAC algorithm to use with TOTP is  HMAC-SHA1  and  this  is
+       what  is  usually  used.   The tool supports two other MACs, namely the
+       HMAC-SHA256 and HMAC-SHA512 as well.  To use either of  these,  qualify
+       the  --totp  parameter  with a value.  Use "SHA256" for HMAC-SHA256 and
+       "SHA512" for HMAC-SHA512.  The following demonstrate generating one  of
+       the RFC 6238 test vectors.
+
+          $  oathtool --totp=SHA256 --digits=8 --now "2009-02-13 23:31:30 UTC"
+       3132333435363738393031323334353637383930313233343536373839303132
+          91819424
+          $
+
+       You may generate several TOTPs by specifying  the  --window  parameter,
+       similar  to how it works for HOTP.  The OTPs generated here will be for
+       the initial time (normally current time) and then each  following  time
+       step (e.g., 30 second window).
+
+          $ oathtool --totp 00 -w5
+          815120
+          003818
+          814756
+          184042
+          582326
+          733842
+          $
+
+       You can validate a TOTP one-time password by supplying the secret and a
+       window parameter (number of time steps before or after current time):
+
+          $ oathtool --totp -w 5 00 `oathtool --totp 00`
+          0
+          $
+
+       Similar when generating TOTPs, you can use a -N  (--now)  parameter  to
+       specify the time to use instead of the current time:
+
+         $   oathtool  --totp  --now="2005-03-18  01:58:29  UTC"  -w  10000000
+       3132333435363738393031323334353637383930 89005924
+         4115227
+         $
+
+       The previous test uses values from  the  TOTP  specification  and  will
+       stress  test  the  tool because the expected window is around 4 million
+       time-steps.
+
+       There are two system parameters for TOTP: the time-step  size  and  the
+       time start.
+
+       By  default the time-step size is 30 seconds, which means you get a new
+       OTP  every  30  seconds.    You   may   modify   this   with   the   -s
+       (--time-step-size) parameter:
+
+          $ oathtool --totp --time-step-size=45s 00
+          109841
+          $
+
+       The      values      are     valid     ISO-8601     durations,     see:
+       http://en.wikipedia.org/wiki/ISO_8601#Durations
+
+       The time start is normally 1970-01-01 00:00:00 UTC but you  may  change
+       it using the -S (--start-time):
+
+          $ oathtool --totp --start-time "1980-01-01 00:00:00 UTC" 00
+          273884
+          $
+
+       To get more information about what the tool is using use the -v (--ver‐
+       bose) parameter.  Finally, to generate the last TOTP (for SHA-1) in the
+       test vector table of RFC 6238 you can invoke the tool like this:
+
+          $   oathtool   --totp   -v   -N   "2033-05-18   03:33:20   UTC"  -d8
+       3132333435363738393031323334353637383930
+          Hex secret: 3132333435363738393031323334353637383930
+          Base32 secret: GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ
+          Digits: 8
+          Window size: 0
+          TOTP mode: SHA1
+          Step size (seconds): 30
+          Start time: 1970-01-01 00:00:00 UTC (0)
+          Time now: 2033-05-18 03:33:20 UTC (2000000000)
+          Counter: 0x3F940AA (66666666)
+
+          69279037
+          $
+
+AUTHOR
+       Written by Simon Josefsson.
+
+REPORTING BUGS
+       Report  bugs  to:  oath-toolkit-help@nongnu.org  oathtool  home   page:
+       <https://www.nongnu.org/oath-toolkit/>
+       General help using GNU software: <https://www.gnu.org/gethelp/>
+
+COPYRIGHT
+       Copyright © 2009-2021 Simon Josefsson.  License GPLv3+: GNU GPL version
+       3 or later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free  to  change  and  redistribute  it.
+       There is NO WARRANTY, to the extent permitted by law.
+
+oathtool (OATH Toolkit) 2.6.7      May 2021                        OATHTOOL(1)
+oath_init(3)                        liboath                       oath_init(3)
+
+NAME
+       oath_init - API function
+
+SYNOPSIS
+       #include <oath.h>
+
+       int oath_init( void);
+
+ARGUMENTS
+        void
+
+DESCRIPTION
+       This function initializes the OATH library.  Every user of this library
+       needs to call this function before using other functions.   You  should
+       call oath_done() when use of the OATH library is no longer needed.
+
+       Note  that this function may also initialize Libgcrypt, if the OATH li‐
+       brary is built with libgcrypt support and libgcrypt has not  been  ini‐
+       tialized before.  Thus if you want to manually initialize libgcrypt you
+       must do it before calling this function.  This is useful in  cases  you
+       want to disable libgcrypt's internal lockings etc.
+
+RETURNS
+       On  success, OATH_OK (zero) is returned, otherwise an error code is re‐
+       turned.
+
+REPORTING BUGS
+       Report bugs  to  <oath-toolkit-help@nongnu.org>.   liboath  home  page:
+       https://www.nongnu.org/oath-toolkit/  General  help using GNU software:
+       http://www.gnu.org/gethelp/
+
+COPYRIGHT
+       Copyright © 2009-2020 Simon Josefsson.
+       Copying and distribution of this file, with  or  without  modification,
+       are  permitted in any medium without royalty provided the copyright no‐
+       tice and this notice are preserved.
+
+liboath                              2.6.7                        oath_init(3)
+PASS: man
+oathtool (OATH Toolkit) 2.6.7
+Copyright (C) 2009-2021 Simon Josefsson.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Simon Josefsson.
+Usage: oathtool [OPTION]... [KEY [OTP]]...
+Generate and validate OATH one-time passwords.  KEY and OTP is the string '-'
+to read from standard input, '@FILE' to read from indicated filename, or a hex
+encoded value (not recommended on multi-user systems).
+
+  -h, --help                    Print help and exit
+  -V, --version                 Print version and exit
+      --hotp                    use event-based HOTP mode  (default=on)
+      --totp[=MODE]             use time-variant TOTP mode (values "SHA1",
+                                  "SHA256", or "SHA512")  (default=`SHA1')
+  -b, --base32                  use base32 encoding of KEY instead of hex
+                                  (default=off)
+  -c, --counter=COUNTER         HOTP counter value
+  -s, --time-step-size=DURATION TOTP time-step duration  (default=`30s')
+  -S, --start-time=TIME         when to start counting time steps for TOTP
+                                  (default=`1970-01-01 00:00:00 UTC')
+  -N, --now=TIME                use this time as current time for TOTP
+                                  (default=`now')
+  -d, --digits=DIGITS           number of digits in one-time password
+  -w, --window=WIDTH            number of additional OTPs to generate or
+                                  validate against
+  -v, --verbose                 explain what is being done  (default=off)
+
+Report bugs to: oath-toolkit-help@nongnu.org
+oathtool home page: <https://www.nongnu.org/oath-toolkit/>
+General help using GNU software: <https://www.gnu.org/gethelp/>
+PASS: oathtool liboath version
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:49:54]: test liboath: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/liboath-stdout ./testing/oath-toolkit/liboath-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/liboath-stdout ./testing/oath-toolkit/liboath-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/liboath-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/liboath-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/liboath-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/liboath-stderr ./testing/oath-toolkit/liboath-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/liboath-stderr ./testing/oath-toolkit/liboath-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/liboath-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/liboath-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/liboath-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [00:49:55]: test liboath:  - - - - - - - - - - results - - - - - - - - - -
+liboath              PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/liboath-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/liboath-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.DsjKu6/liboath-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/oath-toolkit/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cd /tmp/autopkgtest.DsjKu6/liboath-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/oath-toolkit/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.DsjKu6/liboath-artifacts', '/tmp/autopkgtest.DsjKu6/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [00:49:57]: test libpskc: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'], deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: install-deps: satisfying build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.DsjKu6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/oath-toolkit/2-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/oath-toolkit/2-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.DsjKu6/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/oath-toolkit/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat >/tmp/autopkgtest.DsjKu6/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.DsjKu6/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.DsjKu6/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'liboath-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libpskc-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'oathtool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pskctool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 157157 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.DsjKu6/libpskc-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/libpskc-packages.all ./testing/oath-toolkit/libpskc-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/libpskc-packages.all ./testing/oath-toolkit/libpskc-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/libpskc-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/libpskc-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/libpskc-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.DsjKu6/build.KH0/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.DsjKu6/build.KH0/src already exists
+autopkgtest [00:50:24]: test libpskc: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.DsjKu6/build.KH0/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.DsjKu6/libpskc-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.DsjKu6/libpskc-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/libpskc; touch /tmp/autopkgtest.DsjKu6/libpskc-stdout /tmp/autopkgtest.DsjKu6/libpskc-stderr; /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/libpskc 2> >(tee -a /tmp/autopkgtest.DsjKu6/libpskc-stderr >&2) > >(tee -a /tmp/autopkgtest.DsjKu6/libpskc-stdout);'], kind test, sout raw, serr raw, env []
+PASS: gcc
+PASS: run
+PSKCTOOL(1)                      User Commands                     PSKCTOOL(1)
+
+NAME
+       pskctool - Portable Symmetric Key Container (PSKC) tool
+
+SYNOPSIS
+       pskctool [OPTIONS]... [FILE]...
+
+DESCRIPTION
+       pskctool 2.6.7
+
+       Manipulate Portable Symmetric Key Container (PSKC) data.
+
+       This  tool  allows  you to parse, print, validate, sign and verify PSKC
+       data.  The input is provided in FILE or on standard input.
+
+       -h, --help
+              Print help and exit
+
+       -V, --version
+              Print version and exit
+
+       --strict
+              Fail hard on PSKC parse error  (default=off)
+
+       -d, --debug
+              Show debug messages on stderr  (default=off)
+
+       -q, --quiet
+              Quiet operation  (default=off)
+
+       -v, --verbose
+              Produce more output  (default=off)
+
+       Selecting one of the following modes is required:
+
+              Mode: info
+
+       -i, --info
+              Parse and print  human  readable  summary  of  PSKC  input  (de‐
+              fault=off)
+
+              Mode: validate
+
+       -e, --validate
+              Validate PSKC input against XML Schema  (default=off)
+
+              Mode: sign
+
+              Digitally sign PSKC data
+
+       --sign Sign PSKC input  (default=off)
+
+       --sign-key=FILE
+              Private key to sign with
+
+       --sign-crt=FILE
+              X.509 certificate to sign with
+
+              Mode: verify
+
+              Verify digitally signed PSKC data
+
+       --verify
+              Verify signed PSKC input  (default=off)
+
+       --verify-crt=FILE
+              Trusted X.509 certificate for verification
+
+EXAMPLES
+       See     <https://www.nongnu.org/oath-toolkit/libpskc-api/pskc-tutorial-
+       pskctool.html>.
+
+AUTHOR
+       Written by Simon Josefsson.
+
+REPORTING BUGS
+       Report  bugs  to:  oath-toolkit-help@nongnu.org  pskctool  home   page:
+       <https://www.nongnu.org/oath-toolkit/>
+       General help using GNU software: <https://www.gnu.org/gethelp/>
+
+COPYRIGHT
+       Copyright © 2021 Simon Josefsson.  License GPLv3+: GNU GPL version 3 or
+       later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free  to  change  and  redistribute  it.
+       There is NO WARRANTY, to the extent permitted by law.
+
+pskctool (OATH Toolkit) 2.6.7      May 2021                        PSKCTOOL(1)
+pskc_global_init(3)                 libpskc                pskc_global_init(3)
+
+NAME
+       pskc_global_init - API function
+
+SYNOPSIS
+       #include <pskc.h>
+
+       int pskc_global_init( void);
+
+ARGUMENTS
+        void
+
+DESCRIPTION
+       This function initializes the PSKC library.  Every user of this library
+       needs to call this function before using other functions.   You  should
+       call  pskc_global_done()  when  use  of  the  PSKC library is no longer
+       needed.
+
+RETURNS
+       On success, PSKC_OK (zero) is returned, otherwise an error code is  re‐
+       turned.
+
+REPORTING BUGS
+       Report  bugs  to  <oath-toolkit-help@nongnu.org>.   libpskc  home page:
+       https://www.nongnu.org/oath-toolkit/ General help using  GNU  software:
+       http://www.gnu.org/gethelp/
+
+COPYRIGHT
+       Copyright © 2012-2020 Simon Josefsson.
+       Copying  and  distribution  of this file, with or without modification,
+       are permitted in any medium without royalty provided the copyright  no‐
+       tice and this notice are preserved.
+
+libpskc                              2.6.7                 pskc_global_init(3)
+PASS: man
+pskctool (OATH Toolkit) 2.6.7
+Copyright (C) 2021 Simon Josefsson.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Simon Josefsson.
+Usage: pskctool [OPTION]... [FILE]...
+Manipulate Portable Symmetric Key Container (PSKC) data.
+
+This tool allows you to parse, print, validate, sign and verify PSKC data.  The
+input is provided in FILE or on standard input.
+
+  -h, --help             Print help and exit
+  -V, --version          Print version and exit
+      --strict           Fail hard on PSKC parse error  (default=off)
+  -d, --debug            Show debug messages on stderr  (default=off)
+  -q, --quiet            Quiet operation  (default=off)
+  -v, --verbose          Produce more output  (default=off)
+
+Selecting one of the following modes is required:
+
+ Mode: info
+  -i, --info             Parse and print human readable summary of PSKC input
+                           (default=off)
+
+ Mode: validate
+  -e, --validate         Validate PSKC input against XML Schema  (default=off)
+
+ Mode: sign
+  Digitally sign PSKC data
+      --sign             Sign PSKC input  (default=off)
+      --sign-key=FILE    Private key to sign with
+      --sign-crt=FILE    X.509 certificate to sign with
+
+ Mode: verify
+  Verify digitally signed PSKC data
+      --verify           Verify signed PSKC input  (default=off)
+      --verify-crt=FILE  Trusted X.509 certificate for verification
+
+Report bugs to: oath-toolkit-help@nongnu.org
+pskctool home page: <https://www.nongnu.org/oath-toolkit/>
+General help using GNU software: <https://www.gnu.org/gethelp/>
+PASS: pskctool libpskc version
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:50:33]: test libpskc: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/libpskc-stdout ./testing/oath-toolkit/libpskc-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/libpskc-stdout ./testing/oath-toolkit/libpskc-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/libpskc-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/libpskc-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/libpskc-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/libpskc-stderr ./testing/oath-toolkit/libpskc-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/libpskc-stderr ./testing/oath-toolkit/libpskc-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/libpskc-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/libpskc-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/libpskc-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+libpskc              PASS
+autopkgtest [00:50:34]: test libpskc:  - - - - - - - - - - results - - - - - - - - - -
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/libpskc-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/libpskc-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.DsjKu6/libpskc-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/oath-toolkit/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cd /tmp/autopkgtest.DsjKu6/libpskc-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/oath-toolkit/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.DsjKu6/libpskc-artifacts', '/tmp/autopkgtest.DsjKu6/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [00:50:36]: test oathtool: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'], deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: install-deps: satisfying build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.DsjKu6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/oath-toolkit/3-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/oath-toolkit/3-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.DsjKu6/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/oath-toolkit/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat >/tmp/autopkgtest.DsjKu6/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.DsjKu6/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.DsjKu6/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'liboath-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libpskc-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'oathtool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pskctool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 157157 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.DsjKu6/oathtool-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/oathtool-packages.all ./testing/oath-toolkit/oathtool-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/oathtool-packages.all ./testing/oath-toolkit/oathtool-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/oathtool-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/oathtool-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/oathtool-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.DsjKu6/build.KH0/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.DsjKu6/build.KH0/src already exists
+autopkgtest [00:51:02]: test oathtool: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.DsjKu6/build.KH0/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.DsjKu6/oathtool-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.DsjKu6/oathtool-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/oathtool; touch /tmp/autopkgtest.DsjKu6/oathtool-stdout /tmp/autopkgtest.DsjKu6/oathtool-stderr; /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/oathtool 2> >(tee -a /tmp/autopkgtest.DsjKu6/oathtool-stderr >&2) > >(tee -a /tmp/autopkgtest.DsjKu6/oathtool-stdout);'], kind test, sout raw, serr raw, env []
+PASS oathtool --version
+PASS oathtool
+PASS oathtool -h
+PASS oathtool -z
+PASS oathtool Z
+PASS oathtool 00
+PASS oathtool --base32 GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ
+PASS oathtool --base32 gezdgnbvgy3tqojqgezdgnbvgy3tqojq
+PASS oathtool --base32 gr6d5br725s6vnckv4vlhlaore
+PASS oathtool -d 6 00
+PASS oathtool -d 9 00
+PASS oathtool --digits=6 00
+PASS oathtool --digits 6 00
+PASS oathtool --digits 7 00
+PASS oathtool --digits 8 00
+PASS oathtool --counter 0 --digits 8 00
+PASS oathtool -c 1 --digits 8 00
+PASS oathtool --counter 1 --digits 8 00
+PASS oathtool --window 4 -d 7 00
+PASS oathtool --window 4 -c 4 00
+PASS oathtool 00 328482
+PASS oathtool -c 4 00 964213
+PASS oathtool -c 4 -w 4 00 964213
+PASS oathtool -c 4 -w 4 -d 6 00 964213
+PASS oathtool -c 4 -w 4 -d 7 00 964213
+PASS oathtool -c 4 -d 7 00 964213
+PASS oathtool --totp 3132333435363738393031323334353637383930 -N @59 -d8
+PASS oathtool --totp=sha256 3132333435363738393031323334353637383930313233343536373839303132 -N @59 -d8
+PASS oathtool --totp=Sha256 3132333435363738393031323334353637383930313233343536373839303132 -N @59 -d8
+PASS oathtool --totp=SHA256 3132333435363738393031323334353637383930313233343536373839303132 -N @59 -d8
+PASS oathtool --totp=sha512 31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334 -N @59 -d8
+PASS oathtool --totp=sHa512 31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334 -N @59 -d8
+PASS oathtool --totp=SHA512 31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334 -N @59 -d8
+PASS oathtool --totp 3132333435363738393031323334353637383930 -N @1111111109 -d8
+PASS oathtool --totp=sha1 3132333435363738393031323334353637383930 -N @1111111109 -d8
+PASS oathtool --totp=SHA1 3132333435363738393031323334353637383930 -N @1111111109 -d8
+PASS oathtool --totp=sha256 3132333435363738393031323334353637383930313233343536373839303132 -N @1111111109 -d8
+PASS oathtool --totp=sha512 31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334 -N @1111111109 -d8
+PASS oathtool --totp 3132333435363738393031323334353637383930 -N @1111111111 -d8
+PASS oathtool --totp=sha256 3132333435363738393031323334353637383930313233343536373839303132 -N @1111111111 -d8
+PASS oathtool --totp=sha512 31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334 -N @1111111111 -d8
+PASS oathtool --totp 3132333435363738393031323334353637383930 -N @1234567890 -d8
+PASS oathtool --totp=sha256 3132333435363738393031323334353637383930313233343536373839303132 -N @1234567890 -d8
+PASS oathtool --totp=sha512 31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334 -N @1234567890 -d8
+PASS oathtool --totp 3132333435363738393031323334353637383930 -N @2000000000 -d8
+PASS oathtool --totp=sha256 3132333435363738393031323334353637383930313233343536373839303132 -N @2000000000 -d8
+PASS oathtool --totp=sha512 31323334353637383930313233343536373839303132333435363738393031323334353637383930313233343536373839303132333435363738393031323334 -N @2000000000 -d8
+PASS oathtool --totp 00 --time-step-size=45m --start-time=now --now=now
+PASS oathtool --totp 00 --time-step-size=1m --start-time=now --now=hour -d7
+PASS oathtool --totp --now @1111111109 -w 10 3132333435363738393031323334353637383930 07081804
+PASS oathtool --totp=sha256 --now @1111111109 -w 10 3132333435363738393031323334353637383930313233343536373839303132 68084774
+PASS oathtool --totp --now @1111111109 -w 10 3132333435363738393031323334353637383930 14050471
+PASS oathtool --totp --now @1111111109 -w 5 3132333435363738393031323334353637383930
+PASS oathtool --totp=sha256 --now @1111111109 -w 5 3132333435363738393031323334353637383930313233343536373839303132
+PASS oathtool --hotp --counter 1099511627776 00
+PASS oathtool --verbose 00
+PASS oathtool --verbose 00 328482
+PASS oathtool --verbose --totp --now @0 00
+PASS oathtool --verbose --totp=SHA256 --now @0 42
+PASS oathtool --verbose --totp=SHA512 --now @0 00
+PASS oathtool -v --hotp -c 9223372036854775808 DEADBEEF
+PASS oathtool -v --hotp -c 18446744073709551615 DEADBEEF
+PASS oathtool --base32 - STDIN=gr6d5br725s6vnckv4vlhlaore
+PASS oathtool --base32 - - STDIN=gr6d5br725s6vnckv4vlhlaore 993210
+PASS oathtool --base32 @/tmp/tmp.Cv61L78gOa
+PASS oathtool --base32 @/tmp/tmp.Cv61L78gOa - STDIN=993210
+PASS oathtool --base32 @/tmp/tmp.Cv61L78gOa @/tmp/tmp.FdWjjdw9yE
+PASS oathtool --base32 @/tmp/tmp.Cv61L78gOa @/tmp/tmp.Cv61L78gOa
+rm -f /tmp/tmp.Cv61L78gOa /tmp/tmp.FdWjjdw9yE
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:51:18]: test oathtool: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/oathtool-stdout ./testing/oath-toolkit/oathtool-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/oathtool-stdout ./testing/oath-toolkit/oathtool-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/oathtool-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/oathtool-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/oathtool-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/oathtool-stderr ./testing/oath-toolkit/oathtool-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/oathtool-stderr ./testing/oath-toolkit/oathtool-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/oathtool-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/oathtool-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/oathtool-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [00:51:20]: test oathtool:  - - - - - - - - - - results - - - - - - - - - -
+oathtool             PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/oathtool-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/oathtool-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.DsjKu6/oathtool-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/oath-toolkit/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cd /tmp/autopkgtest.DsjKu6/oathtool-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/oath-toolkit/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.DsjKu6/oathtool-artifacts', '/tmp/autopkgtest.DsjKu6/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [00:51:21]: test pskctool: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool'], deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'liboath-dev', 'libpskc-dev', 'man', 'oathtool', 'pkg-config', 'pskctool']
+autopkgtest: DBG: install-deps: satisfying build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, liboath-dev, libpskc-dev, man, oathtool, pkg-config, pskctool
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.DsjKu6'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/oath-toolkit/4-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/oath-toolkit/4-autopkgtest-satdep.deb /tmp/autopkgtest.DsjKu6/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.DsjKu6/4-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/oath-toolkit/4-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat >/tmp/autopkgtest.DsjKu6/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.DsjKu6/4-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.DsjKu6/4-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'liboath-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libpskc-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'oathtool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pskctool'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 157157 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.DsjKu6/pskctool-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/pskctool-packages.all ./testing/oath-toolkit/pskctool-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/pskctool-packages.all ./testing/oath-toolkit/pskctool-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/pskctool-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/pskctool-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/pskctool-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.DsjKu6/build.KH0/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.DsjKu6/build.KH0/src already exists
+autopkgtest [00:51:48]: test pskctool: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.DsjKu6/build.KH0/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.DsjKu6/pskctool-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.DsjKu6/pskctool-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.DsjKu6/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/pskctool; touch /tmp/autopkgtest.DsjKu6/pskctool-stdout /tmp/autopkgtest.DsjKu6/pskctool-stderr; /tmp/autopkgtest.DsjKu6/build.KH0/src/debian/tests/pskctool 2> >(tee -a /tmp/autopkgtest.DsjKu6/pskctool-stderr >&2) > >(tee -a /tmp/autopkgtest.DsjKu6/pskctool-stdout);'], kind test, sout raw, serr raw, env []
+PASS pskctool --version
+PASS pskctool
+PASS pskctool -h
+PASS pskctool --info pskctool/tests/tst_pskctool.sh
+PASS pskctool --info --quiet --debug --strict pskctool/tests/tst_pskctool.sh
+PASS pskctool --info --strict pskctool/tests/pskc-invalid.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure2.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure3.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure4.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure5.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-figure10.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-all.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-ns.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/pskc-ocra.xml
+PASS pskctool --info --quiet --debug --strict pskctool/tests/20120919-test001-4282.xml
+PASS pskctool --validate --quiet --debug --strict pskctool/tests/tst_pskctool.sh
+PASS pskctool --validate pskctool/tests/tst_pskctool.sh
+PASS pskctool --validate pskctool/tests/pskc-invalid.xml
+PASS pskctool --validate --quiet --debug --strict pskctool/tests/pskc-invalid.xml
+PASS pskctool --validate pskctool/tests/pskc-figure2.xml
+PASS pskctool --validate pskctool/tests/pskc-figure3.xml
+PASS pskctool --validate pskctool/tests/pskc-figure4.xml
+PASS pskctool --validate pskctool/tests/pskc-figure5.xml
+PASS pskctool --validate pskctool/tests/pskc-figure10.xml
+PASS pskctool --validate pskctool/tests/pskc-all.xml
+PASS pskctool --validate pskctool/tests/pskc-ns.xml
+PASS pskctool --validate pskctool/tests/pskc-ocra.xml
+PASS pskctool --validate pskctool/tests/20120919-test001-4282.xml
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [00:52:05]: test pskctool: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/pskctool-stdout ./testing/oath-toolkit/pskctool-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/pskctool-stdout ./testing/oath-toolkit/pskctool-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/pskctool-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/pskctool-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/pskctool-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/pskctool-stderr ./testing/oath-toolkit/pskctool-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/pskctool-stderr ./testing/oath-toolkit/pskctool-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.DsjKu6/pskctool-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/oath-toolkit/pskctool-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cat </tmp/autopkgtest.DsjKu6/pskctool-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [00:52:06]: test pskctool:  - - - - - - - - - - results - - - - - - - - - -
+pskctool             PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.DsjKu6/pskctool-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.DsjKu6/pskctool-artifacts/ ./testing/oath-toolkit/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.xeyx2sk4/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.DsjKu6/pskctool-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/oath-toolkit/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.xeyx2sk4/runcmd sh -ec cd /tmp/autopkgtest.DsjKu6/pskctool-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/oath-toolkit/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.DsjKu6/pskctool-artifacts', '/tmp/autopkgtest.DsjKu6/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [00:52:08]: @@@@@@@@@@@@@@@@@@@@ summary
+liboath              PASS
+libpskc              PASS
+oathtool             PASS
+pskctool             PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.DsjKu6
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 334752 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

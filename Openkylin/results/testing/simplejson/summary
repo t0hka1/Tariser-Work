@@ -1,0 +1,8 @@
+upstream             FAIL badpkg
+blame: ./src/simplejson_3.16.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-simplejson 相匹配的软件包
+ (exit code 1)
+upstream-3           FAIL badpkg
+blame: ./src/simplejson_3.16.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-simplejson 相匹配的软件包
+ (exit code 1)

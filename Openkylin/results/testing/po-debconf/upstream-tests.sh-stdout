@@ -1,0 +1,7 @@
+01a-debconf-gettextize-a.pl .. ok
+02-extract-flags.pl .......... ok
+03-merge-flags.pl ............ ok
+04-po2debconf.pl ............. ok
+All tests successful.
+Files=4, Tests=22, 22 wallclock secs ( 0.44 usr  0.23 sys + 14.23 cusr  6.64 csys = 21.54 CPU)
+Result: PASS

@@ -1,0 +1,4 @@
+command1             FAIL badpkg
+blame: ./src/python-iniconfig_1.1.1-ok3.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-iniconfig 相匹配的软件包
+ (exit code 1)

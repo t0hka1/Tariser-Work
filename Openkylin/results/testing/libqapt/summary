@@ -1,0 +1,4 @@
+acc                  FAIL badpkg
+blame: ./src/libqapt_3.0.5-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 libqapt3 相匹配的软件包
+ (exit code 1)

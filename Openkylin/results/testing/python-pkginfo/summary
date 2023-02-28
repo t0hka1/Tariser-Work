@@ -1,0 +1,5 @@
+unittests            FAIL badpkg
+blame: ./src/python-pkginfo_1.8.2-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-pkginfo 相匹配的软件包
+ (exit code 1)
+autodep8-python3     PASS (superficial)

@@ -1,0 +1,8 @@
+upstreamtestsuite2   FAIL badpkg
+blame: ./src/entrypoints_0.3-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-entrypoints 相匹配的软件包
+ (exit code 1)
+upstreamtestsuite3   FAIL badpkg
+blame: ./src/entrypoints_0.3-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autodep8-python3     PASS (superficial)

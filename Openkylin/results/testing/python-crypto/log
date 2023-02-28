@@ -1,0 +1,962 @@
+autopkgtest: DBG: testbed init
+autopkgtest [03:59:20]: starting date: 2023-02-28
+autopkgtest [03:59:20]: version 5.20ubuntu1
+autopkgtest [03:59:20]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/python-crypto_2.6.1-ok1.dsc -o ./testing/python-crypto -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.evds0h6z/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.evds0h6z/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.evds0h6z/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.evds0h6z/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.evds0h6z/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.evds0h6z/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.evds0h6z/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.evds0h6z/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'a62b25f3-c507-46fe-89e8-c090aa491689[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a62b25f3-c507-46fe-89e8-c090aa491689[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'a62b25f3-c507-46fe-89e8-c090aa491689[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a62b25f3-c507-46fe-89e8-c090aa491689[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'a62b25f3-c507-46fe-89e8-c090aa491689[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a62b25f3-c507-46fe-89e8-c090aa491689[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'a62b25f3-c507-46fe-89e8-c090aa491689[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a62b25f3-c507-46fe-89e8-c090aa491689[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'a62b25f3-c507-46fe-89e8-c090aa491689[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a62b25f3-c507-46fe-89e8-c090aa491689[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.evds0h6z/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'a62b25f3-c507-46fe-89e8-c090aa491689[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'a62b25f3-c507-46fe-89e8-c090aa491689[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.evds0h6z/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.evds0h6z/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.evds0h6z/runcmd chmod 1777 /tmp/autopkgtest.flDl2j
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.flDl2j
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.evds0h6z/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:00:22]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.flDl2j/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/testbed-packages ./testing/python-crypto/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/testbed-packages ./testing/python-crypto/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.evds0h6z/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.evds0h6z/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:00:28]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [04:00:28]: @@@@@@@@@@@@@@@@@@@@ source ./src/python-crypto_2.6.1-ok1.dsc
+autopkgtest: DBG: blame += ./src/python-crypto_2.6.1-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-crypto_2.6.1-ok1.dsc /tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-crypto_2.6.1-ok1.dsc /tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.evds0h6z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-crypto_2.6.1-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.evds0h6z/runcmd sh -ec cat >/tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-crypto_2.6.1.orig.tar.gz /tmp/autopkgtest.flDl2j/python-crypto_2.6.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-crypto_2.6.1.orig.tar.gz /tmp/autopkgtest.flDl2j/python-crypto_2.6.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.evds0h6z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.flDl2j/python-crypto_2.6.1.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-crypto_2.6.1.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.evds0h6z/runcmd sh -ec cat >/tmp/autopkgtest.flDl2j/python-crypto_2.6.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/python-crypto_2.6.1.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-crypto_2.6.1-ok1.debian.tar.xz /tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-crypto_2.6.1-ok1.debian.tar.xz /tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.evds0h6z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-crypto_2.6.1-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.evds0h6z/runcmd sh -ec cat >/tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.flDl2j/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.flDl2j/build.XXX
++ builddir=/tmp/autopkgtest.flDl2j/build.Bno
++ cd /tmp/autopkgtest.flDl2j/build.Bno
++ dpkg-source -x /tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.tJyUT7NA/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年05月17日 星期二 02时32分43秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.flDl2j/python-crypto_2.6.1-ok1.dsc
+dpkg-source: info: extracting python-crypto in src
+dpkg-source: info: unpacking python-crypto_2.6.1.orig.tar.gz
+dpkg-source: info: unpacking python-crypto_2.6.1-ok1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 0001-dont-drop-g.patch
+dpkg-source: info: applying 0002-fix-unresolved-reference-size.patch
+dpkg-source: info: applying 0003-fix-epydoc-ignore.patch
+dpkg-source: info: applying 0004-fix-cipher-iv-documentation.patch
+dpkg-source: info: applying 0005-reenable-redefined-tests.patch
+dpkg-source: info: applying 0006-fix-py3-errors.patch
+dpkg-source: info: applying 0007-fix-except-shadows-builtin.patch
+dpkg-source: info: applying 0008-multiprocessing-test.patch
+dpkg-source: info: applying 0009-unittest-stream.patch
+dpkg-source: info: applying 0010-deprecated-test-methods.patch
+dpkg-source: info: applying 0011-asn1-decoding.patch
+dpkg-source: info: applying 0012-CVE-2013-7459.patch
+dpkg-source: info: applying 0013-Backport-of-fix-for-CVE-2018-6594-from-pycryptodome.patch
+dpkg-source: info: applying 0014-Replace-time.clock-with-timeit.default_timer.patch
+dpkg-source: info: applying 0015-Use-for-int-compare.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:00:46]: testing package python-crypto version 2.6.1-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/build.Bno/src/debian/ ./testing/python-crypto/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/build.Bno/src/debian/ ./testing/python-crypto/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.evds0h6z/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.flDl2j/build.Bno/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-crypto/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.evds0h6z/runcmd sh -ec cd /tmp/autopkgtest.flDl2j/build.Bno/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-crypto/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python-crypto
+autopkgtest: DBG: marked alternatives ['python-crypto'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python2 path debian/tests/python2 command "None" restrictions ['allow-stderr'] features [] depends ['python-crypto'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-crypto
+autopkgtest: DBG: marked alternatives ['python3-crypto'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3 path debian/tests/python3 command "None" restrictions ['allow-stderr'] features [] depends ['python3-crypto'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-crypto
+autopkgtest: DBG: marked alternatives ['python3-crypto'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3-all path debian/tests/python3-all command "None" restrictions ['allow-stderr'] features [] depends ['python3-all', 'python3-crypto'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all-dbg
+autopkgtest: DBG: processing dependency python3-crypto-dbg
+autopkgtest: DBG: marked alternatives ['python3-crypto-dbg'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3-all-dbg path debian/tests/python3-all-dbg command "None" restrictions ['allow-stderr'] features [] depends ['python3-all-dbg', 'python3-crypto-dbg'] clicks [] installed clicks []
+autopkgtest [04:00:46]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/build.Bno/src/ ./testing/python-crypto/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/build.Bno/src/ ./testing/python-crypto/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.evds0h6z/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.flDl2j/build.Bno/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-crypto/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.evds0h6z/runcmd sh -ec cd /tmp/autopkgtest.flDl2j/build.Bno/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-crypto/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python-crypto
+autopkgtest: DBG: marked alternatives ['python-crypto'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python2 path debian/tests/python2 command "None" restrictions ['allow-stderr'] features [] depends ['python-crypto'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-crypto
+autopkgtest: DBG: marked alternatives ['python3-crypto'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3 path debian/tests/python3 command "None" restrictions ['allow-stderr'] features [] depends ['python3-crypto'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-crypto
+autopkgtest: DBG: marked alternatives ['python3-crypto'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3-all path debian/tests/python3-all command "None" restrictions ['allow-stderr'] features [] depends ['python3-all', 'python3-crypto'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency python3-all-dbg
+autopkgtest: DBG: processing dependency python3-crypto-dbg
+autopkgtest: DBG: marked alternatives ['python3-crypto-dbg'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3-all-dbg path debian/tests/python3-all-dbg command "None" restrictions ['allow-stderr'] features [] depends ['python3-all-dbg', 'python3-crypto-dbg'] clicks [] installed clicks []
+autopkgtest [04:00:47]: test python2: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['python-crypto']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python-crypto']
+autopkgtest: DBG: install-deps: satisfying python-crypto
+autopkgtest: DBG: install-deps: architecture resolved: python-crypto
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-crypto/1-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-crypto/1-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.evds0h6z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.flDl2j/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-crypto/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.evds0h6z/runcmd sh -ec cat >/tmp/autopkgtest.flDl2j/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.flDl2j/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 2
+Starting 2 pkgProblemResolver with broken count: 2
+Investigating (0) python2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to python2.7:riscv64 4
+  Holding Back python2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2-stdlib:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-stdlib:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2-stdlib:riscv64 2
+  Holding Back libpython2-stdlib:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering python2.7:riscv64 4 as a solution to python2:riscv64 2
+  Holding Back python2:riscv64 rather than change python2.7:riscv64
+Investigating (0) python-crypto:riscv64 < none -> 2.6.1-ok1 @un uN Ib >
+Broken python-crypto:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (< 2.8)
+  Considering python2:riscv64 2 as a solution to python-crypto:riscv64 0
+  Holding Back python-crypto:riscv64 rather than change python2:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python-crypto:riscv64 < none | 2.6.1-ok1 @un uH >
+  Considering python-crypto:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python-crypto:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python-crypto'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python-crypto 相匹配的软件包
+ (exit code 1)
+python2              FAIL badpkg
+blame: ./src/python-crypto_2.6.1-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-crypto 相匹配的软件包
+ (exit code 1)
+autopkgtest [04:01:06]: test python3: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['python-crypto'], deps_new=['python3-crypto']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.evds0h6z/runcmd rm -rf -- /tmp/autopkgtest.flDl2j
+qemu-system-riscv64: terminating on signal 15 from pid 375512 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.5z5qgh5d/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.5z5qgh5d/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.5z5qgh5d/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.5z5qgh5d/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.5z5qgh5d/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.5z5qgh5d/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.5z5qgh5d/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.5z5qgh5d/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'541a1680-d9de-4308-bd03-10f1f9436eea[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'541a1680-d9de-4308-bd03-10f1f9436eea[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'541a1680-d9de-4308-bd03-10f1f9436eea[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'541a1680-d9de-4308-bd03-10f1f9436eea[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'541a1680-d9de-4308-bd03-10f1f9436eea[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'541a1680-d9de-4308-bd03-10f1f9436eea[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'541a1680-d9de-4308-bd03-10f1f9436eea[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'541a1680-d9de-4308-bd03-10f1f9436eea[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'541a1680-d9de-4308-bd03-10f1f9436eea[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'541a1680-d9de-4308-bd03-10f1f9436eea[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5z5qgh5d/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'541a1680-d9de-4308-bd03-10f1f9436eea[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'541a1680-d9de-4308-bd03-10f1f9436eea[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5z5qgh5d/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.flDl2j
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd'], downtmp = /tmp/autopkgtest.flDl2j
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.flDl2j
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.5z5qgh5d/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:02:08]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.flDl2j/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/testbed-packages ./testing/python-crypto/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/testbed-packages ./testing/python-crypto/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-crypto']
+autopkgtest: DBG: install-deps: satisfying python3-crypto
+autopkgtest: DBG: install-deps: architecture resolved: python3-crypto
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-crypto/2-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-crypto/2-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.flDl2j/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-crypto/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat >/tmp/autopkgtest.flDl2j/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.flDl2j/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-crypto'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.flDl2j/python3-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-packages.all ./testing/python-crypto/python3-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-packages.all ./testing/python-crypto/python3-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.flDl2j/build.Bno/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j/build.Bno'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-crypto/tests-tree/ /tmp/autopkgtest.flDl2j/build.Bno/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-crypto/tests-tree/ /tmp/autopkgtest.flDl2j/build.Bno/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/python-crypto/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.flDl2j/build.Bno/src/; then mkdir -- /tmp/autopkgtest.flDl2j/build.Bno/src/; fi; cd /tmp/autopkgtest.flDl2j/build.Bno/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/python-crypto/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec if ! test -d /tmp/autopkgtest.flDl2j/build.Bno/src/; then mkdir -- /tmp/autopkgtest.flDl2j/build.Bno/src/; fi; cd /tmp/autopkgtest.flDl2j/build.Bno/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/build.Bno/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:02:46]: test python3: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.flDl2j/build.Bno/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.flDl2j/python3-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.flDl2j/python3-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.flDl2j/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.flDl2j/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.flDl2j/build.Bno/src/debian/tests/python3; touch /tmp/autopkgtest.flDl2j/python3-stdout /tmp/autopkgtest.flDl2j/python3-stderr; /tmp/autopkgtest.flDl2j/build.Bno/src/debian/tests/python3 2> >(tee -a /tmp/autopkgtest.flDl2j/python3-stderr >&2) > >(tee -a /tmp/autopkgtest.flDl2j/python3-stdout);'], kind test, sout raw, serr raw, env []
+SelfTest: You can ignore the RandomPool_DeprecationWarning that follows.
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:03:57]: test python3: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-stdout ./testing/python-crypto/python3-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-stdout ./testing/python-crypto/python3-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-stderr ./testing/python-crypto/python3-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-stderr ./testing/python-crypto/python3-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [04:03:58]: test python3:  - - - - - - - - - - results - - - - - - - - - -
+python3              PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-artifacts/ ./testing/python-crypto/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-artifacts/ ./testing/python-crypto/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.flDl2j/python3-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-crypto/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cd /tmp/autopkgtest.flDl2j/python3-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-crypto/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.flDl2j/python3-artifacts', '/tmp/autopkgtest.flDl2j/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [04:04:00]: test python3-all: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['python3-crypto'], deps_new=['python3-all', 'python3-crypto']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-all', 'python3-crypto']
+autopkgtest: DBG: install-deps: satisfying python3-all, python3-crypto
+autopkgtest: DBG: install-deps: architecture resolved: python3-all, python3-crypto
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-crypto/3-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-crypto/3-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.flDl2j/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-crypto/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat >/tmp/autopkgtest.flDl2j/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.flDl2j/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+将会同时安装下列软件：
+  python3-all
+下列【新】软件包将被安装：
+  python3-all
+升级了 0 个软件包，新安装了 1 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 916 B 的归档。
+解压缩后会消耗 6,144 B 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all riscv64 3.8.2-ok2 [916 B]
+已下载 916 B，耗时 1秒 (1,568 B/s)
+正在选中未选择的软件包 python3-all。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../python3-all_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all (3.8.2-ok2) ...
+正在设置 python3-all (3.8.2-ok2) ...
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-crypto'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: python3-all
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'python3-all'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155962 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.flDl2j/python3-all-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-packages.all ./testing/python-crypto/python3-all-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-packages.all ./testing/python-crypto/python3-all-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-all-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-all-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-all-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.flDl2j/build.Bno/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.flDl2j/build.Bno/src already exists
+autopkgtest [04:04:32]: test python3-all: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.flDl2j/build.Bno/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.flDl2j/python3-all-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.flDl2j/python3-all-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.flDl2j/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.flDl2j/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.flDl2j/build.Bno/src/debian/tests/python3-all; touch /tmp/autopkgtest.flDl2j/python3-all-stdout /tmp/autopkgtest.flDl2j/python3-all-stderr; /tmp/autopkgtest.flDl2j/build.Bno/src/debian/tests/python3-all 2> >(tee -a /tmp/autopkgtest.flDl2j/python3-all-stderr >&2) > >(tee -a /tmp/autopkgtest.flDl2j/python3-all-stdout);'], kind test, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:04:37]: test python3-all: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-stdout ./testing/python-crypto/python3-all-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-stdout ./testing/python-crypto/python3-all-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-all-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-all-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-all-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-stderr ./testing/python-crypto/python3-all-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-stderr ./testing/python-crypto/python3-all-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-all-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-all-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-all-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [04:04:39]: test python3-all:  - - - - - - - - - - results - - - - - - - - - -
+python3-all          PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-artifacts/ ./testing/python-crypto/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-artifacts/ ./testing/python-crypto/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z5qgh5d/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.flDl2j/python3-all-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-crypto/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z5qgh5d/runcmd sh -ec cd /tmp/autopkgtest.flDl2j/python3-all-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-crypto/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.flDl2j/python3-all-artifacts', '/tmp/autopkgtest.flDl2j/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [04:04:40]: test python3-all-dbg: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['python3-all', 'python3-crypto'], deps_new=['python3-all-dbg', 'python3-crypto-dbg']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5z5qgh5d/runcmd rm -rf -- /tmp/autopkgtest.flDl2j
+qemu-system-riscv64: terminating on signal 15 from pid 375512 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.x_ma4pfc/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.x_ma4pfc/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.x_ma4pfc/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.x_ma4pfc/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.x_ma4pfc/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.x_ma4pfc/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.x_ma4pfc/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.x_ma4pfc/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'92acedf6-1d95-4986-aa2a-55f854dbff58[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'92acedf6-1d95-4986-aa2a-55f854dbff58[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'92acedf6-1d95-4986-aa2a-55f854dbff58[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'92acedf6-1d95-4986-aa2a-55f854dbff58[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'92acedf6-1d95-4986-aa2a-55f854dbff58[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'92acedf6-1d95-4986-aa2a-55f854dbff58[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'92acedf6-1d95-4986-aa2a-55f854dbff58[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'92acedf6-1d95-4986-aa2a-55f854dbff58[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'92acedf6-1d95-4986-aa2a-55f854dbff58[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'92acedf6-1d95-4986-aa2a-55f854dbff58[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.x_ma4pfc/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'92acedf6-1d95-4986-aa2a-55f854dbff58[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'92acedf6-1d95-4986-aa2a-55f854dbff58[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.x_ma4pfc/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.flDl2j
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd'], downtmp = /tmp/autopkgtest.flDl2j
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.flDl2j
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.x_ma4pfc/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:05:42]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.flDl2j/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/testbed-packages ./testing/python-crypto/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/testbed-packages ./testing/python-crypto/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.x_ma4pfc/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-all-dbg', 'python3-crypto-dbg']
+autopkgtest: DBG: install-deps: satisfying python3-all-dbg, python3-crypto-dbg
+autopkgtest: DBG: install-deps: architecture resolved: python3-all-dbg, python3-crypto-dbg
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-crypto/4-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-crypto/4-autopkgtest-satdep.deb /tmp/autopkgtest.flDl2j/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.flDl2j/4-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-crypto/4-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.x_ma4pfc/runcmd sh -ec cat >/tmp/autopkgtest.flDl2j/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/4-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.flDl2j/4-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 libmpdec2 lvm2
+  os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  libffi8 libpython3-all-dbg libpython3-dbg libpython3.8 libpython3.8-dbg
+  libpython3.8-minimal libpython3.8-stdlib python3-all python3-all-dbg
+  python3-crypto-dbg python3-dbg python3.8 python3.8-dbg python3.8-minimal
+建议安装：
+  python3.8-venv python3.8-doc python3-gdbm-dbg python3-tk-dbg binfmt-support
+推荐安装：
+  gdb
+下列【新】软件包将被安装：
+  libffi8 libpython3-all-dbg libpython3-dbg libpython3.8-dbg python3-all
+  python3-all-dbg python3-crypto-dbg python3-dbg python3.8-dbg
+下列软件包将被升级：
+  libpython3.8 libpython3.8-minimal libpython3.8-stdlib python3.8
+  python3.8-minimal
+升级了 5 个软件包，新安装了 9 个软件包，要卸载 0 个软件包，有 133 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 46.7 MB 的归档。
+解压缩后会消耗 195 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8 riscv64 3.8.2-ok4 [365 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8 riscv64 3.8.2-ok4 [1,652 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-stdlib riscv64 3.8.2-ok4 [1,738 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-minimal riscv64 3.8.2-ok4 [1,632 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-minimal riscv64 3.8.2-ok4 [720 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-dbg riscv64 3.8.2-ok4 [22.0 MB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3-dbg riscv64 3.8.2-ok2 [6,530 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3-all-dbg riscv64 3.8.2-ok2 [922 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all riscv64 3.8.2-ok2 [916 B]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-dbg riscv64 3.8.2-ok4 [18.5 MB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dbg riscv64 3.8.2-ok2 [1,094 B]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all-dbg riscv64 3.8.2-ok2 [924 B]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-crypto-dbg riscv64 2.6.1-ok1 [134 kB]
+已下载 46.7 MB，耗时 21秒 (2,250 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-python3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../01-libpython3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../02-libpython3.8-stdlib_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-stdlib:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../03-python3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-minimal (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../04-libpython3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-minimal:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../05-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 libpython3.8-dbg:riscv64。
+准备解压 .../06-libpython3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在选中未选择的软件包 libpython3-dbg:riscv64。
+准备解压 .../07-libpython3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在选中未选择的软件包 libpython3-all-dbg:riscv64。
+准备解压 .../08-libpython3-all-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 libpython3-all-dbg:riscv64 (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-all。
+准备解压 .../09-python3-all_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all (3.8.2-ok2) ...
+正在选中未选择的软件包 python3.8-dbg。
+准备解压 .../10-python3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-dbg (3.8.2-ok4) ...
+正在选中未选择的软件包 python3-dbg。
+准备解压 .../11-python3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-dbg (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-all-dbg。
+准备解压 .../12-python3-all-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all-dbg (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-crypto-dbg。
+准备解压 .../13-python3-crypto-dbg_2.6.1-ok1_riscv64.deb  ...
+正在解压 python3-crypto-dbg (2.6.1-ok1) ...
+正在设置 libpython3.8-minimal:riscv64 (3.8.2-ok4) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 python3.8-minimal (3.8.2-ok4) ...
+正在设置 libpython3.8-stdlib:riscv64 (3.8.2-ok4) ...
+正在设置 python3.8 (3.8.2-ok4) ...
+正在设置 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在设置 python3-all (3.8.2-ok2) ...
+正在设置 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在设置 libpython3-all-dbg:riscv64 (3.8.2-ok2) ...
+正在设置 libpython3.8:riscv64 (3.8.2-ok4) ...
+正在设置 python3.8-dbg (3.8.2-ok4) ...
+正在设置 python3-dbg (3.8.2-ok2) ...
+正在设置 python3-crypto-dbg (2.6.1-ok1) ...
+正在设置 python3-all-dbg (3.8.2-ok2) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 bamfdaemon (0.5.3+18.04.20180207.2-ok1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+正在处理用于 desktop-file-utils (0.24-ok2) 的触发器 ...
+正在处理用于 mime-support (3.64-ok1) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-crypto-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 libmpdec2 python3-all-dbg libpython3-all-dbg python3-crypto-dbg python3-dbg libpython3-dbg python3.8-dbg libpython3.8-dbg python3-all
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libmpdec2', 'python3-all-dbg', 'libpython3-all-dbg', 'python3-crypto-dbg', 'python3-dbg', 'libpython3-dbg', 'python3.8-dbg', 'libpython3.8-dbg', 'python3-all'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156298 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.flDl2j/python3-all-dbg-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-packages.all ./testing/python-crypto/python3-all-dbg-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-packages.all ./testing/python-crypto/python3-all-dbg-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-all-dbg-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-all-dbg-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.x_ma4pfc/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-all-dbg-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.flDl2j/build.Bno/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.flDl2j/build.Bno'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-crypto/tests-tree/ /tmp/autopkgtest.flDl2j/build.Bno/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-crypto/tests-tree/ /tmp/autopkgtest.flDl2j/build.Bno/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/python-crypto/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.flDl2j/build.Bno/src/; then mkdir -- /tmp/autopkgtest.flDl2j/build.Bno/src/; fi; cd /tmp/autopkgtest.flDl2j/build.Bno/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/python-crypto/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.x_ma4pfc/runcmd sh -ec if ! test -d /tmp/autopkgtest.flDl2j/build.Bno/src/; then mkdir -- /tmp/autopkgtest.flDl2j/build.Bno/src/; fi; cd /tmp/autopkgtest.flDl2j/build.Bno/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.flDl2j/build.Bno/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:08:08]: test python3-all-dbg: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.flDl2j/build.Bno/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.flDl2j/python3-all-dbg-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.flDl2j/python3-all-dbg-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.flDl2j/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.flDl2j/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.flDl2j/build.Bno/src/debian/tests/python3-all-dbg; touch /tmp/autopkgtest.flDl2j/python3-all-dbg-stdout /tmp/autopkgtest.flDl2j/python3-all-dbg-stderr; /tmp/autopkgtest.flDl2j/build.Bno/src/debian/tests/python3-all-dbg 2> >(tee -a /tmp/autopkgtest.flDl2j/python3-all-dbg-stderr >&2) > >(tee -a /tmp/autopkgtest.flDl2j/python3-all-dbg-stdout);'], kind test, sout raw, serr raw, env []
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:141: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = factory.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:244: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:141: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = factory.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:244: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:295: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:158: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  IV_cipher = factory.new(key, MODE_CFB,
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:165: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._encrypted_IV = IV_cipher.encrypt(
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:183: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = factory.new(key, MODE_CFB,
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:238: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:172: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self.IV = IV_cipher.decrypt(self.IV +   # Ciphertext
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:292: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:236: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.encrypt(padded)[:len(plaintext)]
+/usr/lib/python3/dist-packages/Crypto/Cipher/blockalgo.py:290: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  res = self._cipher.decrypt(padded)[:len(ciphertext)]
+/usr/lib/python3/dist-packages/Crypto/Cipher/ARC4.py:77: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = _ARC4.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/ARC4.py:90: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/ARC4.py:101: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/XOR.py:44: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  self._cipher = _XOR.new(key, *args, **kwargs)
+/usr/lib/python3/dist-packages/Crypto/Cipher/XOR.py:57: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.encrypt(plaintext)
+/usr/lib/python3/dist-packages/Crypto/Cipher/XOR.py:68: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._cipher.decrypt(ciphertext)
+/usr/lib/python3/dist-packages/Crypto/Hash/hashalgo.py:69: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+  return self._hash.update(data)
+SelfTest: You can ignore the RandomPool_DeprecationWarning that follows.
+/usr/lib/python3/dist-packages/Crypto/Util/randpool.py:39: RandomPool_DeprecationWarning: This application uses RandomPool, which is BROKEN in older releases.  See http://www.pycrypto.org/randpool-broken
+  warnings.warn("This application uses RandomPool, which is BROKEN in older releases.  See http://www.pycrypto.org/randpool-broken",
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [04:10:27]: test python3-all-dbg: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-stdout ./testing/python-crypto/python3-all-dbg-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-stdout ./testing/python-crypto/python3-all-dbg-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-all-dbg-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-all-dbg-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.x_ma4pfc/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-all-dbg-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-stderr ./testing/python-crypto/python3-all-dbg-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-stderr ./testing/python-crypto/python3-all-dbg-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.flDl2j/python3-all-dbg-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-crypto/python3-all-dbg-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.x_ma4pfc/runcmd sh -ec cat </tmp/autopkgtest.flDl2j/python3-all-dbg-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [04:10:28]: test python3-all-dbg:  - - - - - - - - - - results - - - - - - - - - -
+python3-all-dbg      PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-artifacts/ ./testing/python-crypto/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.flDl2j/python3-all-dbg-artifacts/ ./testing/python-crypto/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.x_ma4pfc/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.flDl2j/python3-all-dbg-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-crypto/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.x_ma4pfc/runcmd sh -ec cd /tmp/autopkgtest.flDl2j/python3-all-dbg-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-crypto/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.flDl2j/python3-all-dbg-artifacts', '/tmp/autopkgtest.flDl2j/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [04:10:29]: @@@@@@@@@@@@@@@@@@@@ summary
+python2              FAIL badpkg
+blame: ./src/python-crypto_2.6.1-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-crypto 相匹配的软件包
+ (exit code 1)
+python3              PASS
+python3-all          PASS
+python3-all-dbg      PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.flDl2j
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 375512 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

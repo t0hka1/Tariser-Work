@@ -1,0 +1,14 @@
+testing gz uncompression...
+gz uncompressed OK
+buster OK
+jessie OK
+stretch OK
+testing gz compression...
+gz compressed OK
+testing bz2 uncompression
+bz2 uncompressed OK
+buster OK
+jessie OK
+stretch OK
+testing bz2 compression...
+bz2 compressed OK

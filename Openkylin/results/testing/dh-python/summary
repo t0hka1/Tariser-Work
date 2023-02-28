@@ -1,0 +1,20 @@
+dh-python            FAIL badpkg
+blame: ./src/dh-python_5.20221001-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 dh-python 相匹配的软件包
+ (exit code 1)
+dh-python2           FAIL badpkg
+blame: ./src/dh-python_5.20221001-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 dh-python 相匹配的软件包
+ (exit code 1)
+nosetests            FAIL badpkg
+blame: ./src/dh-python_5.20221001-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 dh-python 相匹配的软件包
+ (exit code 1)
+pybuild              FAIL badpkg
+blame: ./src/dh-python_5.20221001-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 dh-python 相匹配的软件包
+ (exit code 1)
+pybuild-py2          FAIL badpkg
+blame: ./src/dh-python_5.20221001-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 dh-python 相匹配的软件包
+ (exit code 1)

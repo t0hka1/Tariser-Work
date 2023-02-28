@@ -1,0 +1,3 @@
+crosswrapper         PASS
+foreign-arch         PASS
+invalid-arch         FAIL non-zero exit status 100

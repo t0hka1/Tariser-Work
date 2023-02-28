@@ -1,0 +1,3 @@
+command1             FAIL badpkg
+blame: ./src/pyparsing2_2.4.7-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.

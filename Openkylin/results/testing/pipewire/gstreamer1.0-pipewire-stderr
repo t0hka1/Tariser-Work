@@ -1,0 +1,5 @@
++ export GST_INSPECT_NO_COLORS=1
++ export PAGER=cat
++ gst-inspect-1.0 pipewire
++ gst-inspect-1.0 pipewiresink
++ gst-inspect-1.0 pipewiresrc

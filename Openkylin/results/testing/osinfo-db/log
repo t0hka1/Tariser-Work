@@ -1,0 +1,503 @@
+autopkgtest: DBG: testbed init
+autopkgtest [16:22:29]: starting date: 2023-02-27
+autopkgtest [16:22:29]: version 5.20ubuntu1
+autopkgtest [16:22:29]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/osinfo-db_0.20200325-ok1.dsc -o ./testing/osinfo-db -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.u1r0vxfx/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.u1r0vxfx/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.u1r0vxfx/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.u1r0vxfx/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.u1r0vxfx/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.u1r0vxfx/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.u1r0vxfx/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.u1r0vxfx/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'9931fa17-bb78-4141-82e5-f2ab875abc78[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9931fa17-bb78-4141-82e5-f2ab875abc78[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'9931fa17-bb78-4141-82e5-f2ab875abc78[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9931fa17-bb78-4141-82e5-f2ab875abc78[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'9931fa17-bb78-4141-82e5-f2ab875abc78[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9931fa17-bb78-4141-82e5-f2ab875abc78[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'9931fa17-bb78-4141-82e5-f2ab875abc78[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9931fa17-bb78-4141-82e5-f2ab875abc78[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'9931fa17-bb78-4141-82e5-f2ab875abc78[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9931fa17-bb78-4141-82e5-f2ab875abc78[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.u1r0vxfx/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'9931fa17-bb78-4141-82e5-f2ab875abc78[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9931fa17-bb78-4141-82e5-f2ab875abc78[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.u1r0vxfx/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.u1r0vxfx/runcmd chmod 1777 /tmp/autopkgtest.gnHy5U
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.gnHy5U
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.u1r0vxfx/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [16:23:32]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.gnHy5U/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/testbed-packages ./testing/osinfo-db/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/testbed-packages ./testing/osinfo-db/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.gnHy5U/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/osinfo-db/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u1r0vxfx/runcmd sh -ec cat </tmp/autopkgtest.gnHy5U/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [16:23:38]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [16:23:39]: @@@@@@@@@@@@@@@@@@@@ source ./src/osinfo-db_0.20200325-ok1.dsc
+autopkgtest: DBG: blame += ./src/osinfo-db_0.20200325-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.gnHy5U'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/osinfo-db_0.20200325-ok1.dsc /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/osinfo-db_0.20200325-ok1.dsc /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/osinfo-db_0.20200325-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.u1r0vxfx/runcmd sh -ec cat >/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.gnHy5U'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/osinfo-db_0.20200325.orig.tar.xz /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325.orig.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/osinfo-db_0.20200325.orig.tar.xz /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325.orig.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325.orig.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/osinfo-db_0.20200325.orig.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.u1r0vxfx/runcmd sh -ec cat >/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325.orig.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325.orig.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.gnHy5U'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/osinfo-db_0.20200325-ok1.debian.tar.xz /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/osinfo-db_0.20200325-ok1.debian.tar.xz /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/osinfo-db_0.20200325-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.u1r0vxfx/runcmd sh -ec cat >/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.gnHy5U/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.gnHy5U/build.XXX
++ builddir=/tmp/autopkgtest.gnHy5U/build.6wI
++ cd /tmp/autopkgtest.gnHy5U/build.6wI
++ dpkg-source -x /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.eK1NyCL5/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年11月17日 星期四 07时41分05秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.gnHy5U/osinfo-db_0.20200325-ok1.dsc
+dpkg-source: info: extracting osinfo-db in src
+dpkg-source: info: unpacking osinfo-db_0.20200325.orig.tar.xz
+dpkg-source: info: unpacking osinfo-db_0.20200325-ok1.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [16:23:59]: testing package osinfo-db version 0.20200325-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/build.6wI/src/debian/ ./testing/osinfo-db/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/build.6wI/src/debian/ ./testing/osinfo-db/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.gnHy5U/build.6wI/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/osinfo-db/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u1r0vxfx/runcmd sh -ec cd /tmp/autopkgtest.gnHy5U/build.6wI/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/osinfo-db/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency osinfo-db
+autopkgtest: DBG: processing dependency gir1.2-libosinfo-1.0 (>= 1.0.0)
+autopkgtest: DBG: processing dependency python3
+autopkgtest: DBG: processing dependency python3-nose
+autopkgtest: DBG: processing dependency python3-gi
+autopkgtest: DBG: Test defined: name command1 path None command "cd debian/tests && nosetests3 -vv" restrictions ['allow-stderr'] features [] depends ['osinfo-db', 'gir1.2-libosinfo-1.0 (>= 1.0.0)', 'python3', 'python3-nose', 'python3-gi'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency osinfo-db
+autopkgtest: DBG: processing dependency libosinfo-bin
+autopkgtest: DBG: Test defined: name test-installscript path debian/tests/test-installscript command "None" restrictions [] features [] depends ['osinfo-db', 'libosinfo-bin'] clicks [] installed clicks []
+autopkgtest [16:23:59]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/build.6wI/src/ ./testing/osinfo-db/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/build.6wI/src/ ./testing/osinfo-db/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.gnHy5U/build.6wI/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/osinfo-db/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u1r0vxfx/runcmd sh -ec cd /tmp/autopkgtest.gnHy5U/build.6wI/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/osinfo-db/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency osinfo-db
+autopkgtest: DBG: processing dependency gir1.2-libosinfo-1.0 (>= 1.0.0)
+autopkgtest: DBG: processing dependency python3
+autopkgtest: DBG: processing dependency python3-nose
+autopkgtest: DBG: processing dependency python3-gi
+autopkgtest: DBG: Test defined: name command1 path None command "cd debian/tests && nosetests3 -vv" restrictions ['allow-stderr'] features [] depends ['osinfo-db', 'gir1.2-libosinfo-1.0 (>= 1.0.0)', 'python3', 'python3-nose', 'python3-gi'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency osinfo-db
+autopkgtest: DBG: processing dependency libosinfo-bin
+autopkgtest: DBG: Test defined: name test-installscript path debian/tests/test-installscript command "None" restrictions [] features [] depends ['osinfo-db', 'libosinfo-bin'] clicks [] installed clicks []
+autopkgtest [16:24:03]: test command1: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['osinfo-db', 'gir1.2-libosinfo-1.0 (>= 1.0.0)', 'python3', 'python3-nose', 'python3-gi']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['osinfo-db', 'gir1.2-libosinfo-1.0 (>= 1.0.0)', 'python3', 'python3-nose', 'python3-gi']
+autopkgtest: DBG: install-deps: satisfying osinfo-db, gir1.2-libosinfo-1.0 (>= 1.0.0), python3, python3-nose, python3-gi
+autopkgtest: DBG: install-deps: architecture resolved: osinfo-db, gir1.2-libosinfo-1.0 (>= 1.0.0), python3, python3-nose, python3-gi
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.gnHy5U'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/osinfo-db/1-autopkgtest-satdep.deb /tmp/autopkgtest.gnHy5U/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/osinfo-db/1-autopkgtest-satdep.deb /tmp/autopkgtest.gnHy5U/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.u1r0vxfx/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.gnHy5U/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/osinfo-db/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.u1r0vxfx/runcmd sh -ec cat >/tmp/autopkgtest.gnHy5U/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.gnHy5U/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.gnHy5U/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python3-nose:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find python3-nose:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'osinfo-db'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 osinfo-db 相匹配的软件包
+ (exit code 1)
+command1             FAIL badpkg
+blame: ./src/osinfo-db_0.20200325-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 osinfo-db 相匹配的软件包
+ (exit code 1)
+autopkgtest [16:24:23]: test test-installscript: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['osinfo-db', 'gir1.2-libosinfo-1.0 (>= 1.0.0)', 'python3', 'python3-nose', 'python3-gi'], deps_new=['osinfo-db', 'libosinfo-bin']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.u1r0vxfx/runcmd rm -rf -- /tmp/autopkgtest.gnHy5U
+qemu-system-riscv64: terminating on signal 15 from pid 187518 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.eijmixtz/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.eijmixtz/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.eijmixtz/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.eijmixtz/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.eijmixtz/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.eijmixtz/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.eijmixtz/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.eijmixtz/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'4008c635-75cc-4b02-b247-2f38987fcc2c[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'4008c635-75cc-4b02-b247-2f38987fcc2c[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'4008c635-75cc-4b02-b247-2f38987fcc2c[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'4008c635-75cc-4b02-b247-2f38987fcc2c[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'4008c635-75cc-4b02-b247-2f38987fcc2c[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'4008c635-75cc-4b02-b247-2f38987fcc2c[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'4008c635-75cc-4b02-b247-2f38987fcc2c[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'4008c635-75cc-4b02-b247-2f38987fcc2c[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'4008c635-75cc-4b02-b247-2f38987fcc2c[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'4008c635-75cc-4b02-b247-2f38987fcc2c[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.eijmixtz/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'4008c635-75cc-4b02-b247-2f38987fcc2c[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'4008c635-75cc-4b02-b247-2f38987fcc2c[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.eijmixtz/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.gnHy5U
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.eijmixtz/runcmd'], downtmp = /tmp/autopkgtest.gnHy5U
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.gnHy5U
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.eijmixtz/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [16:25:28]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.gnHy5U/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/testbed-packages ./testing/osinfo-db/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/testbed-packages ./testing/osinfo-db/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eijmixtz/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.gnHy5U/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/osinfo-db/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eijmixtz/runcmd sh -ec cat </tmp/autopkgtest.gnHy5U/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['osinfo-db', 'libosinfo-bin']
+autopkgtest: DBG: install-deps: satisfying osinfo-db, libosinfo-bin
+autopkgtest: DBG: install-deps: architecture resolved: osinfo-db, libosinfo-bin
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.gnHy5U'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/osinfo-db/2-autopkgtest-satdep.deb /tmp/autopkgtest.gnHy5U/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/osinfo-db/2-autopkgtest-satdep.deb /tmp/autopkgtest.gnHy5U/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.eijmixtz/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.gnHy5U/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/osinfo-db/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.eijmixtz/runcmd sh -ec cat >/tmp/autopkgtest.gnHy5U/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.gnHy5U/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.gnHy5U/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  libosinfo-1.0-0 libosinfo-bin osinfo-db
+建议安装：
+  libosinfo-l10n
+下列【新】软件包将被安装：
+  libosinfo-1.0-0 libosinfo-bin osinfo-db
+升级了 0 个软件包，新安装了 3 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 224 kB 的归档。
+解压缩后会消耗 2,771 kB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 osinfo-db all 0.20200325-ok1 [106 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libosinfo-1.0-0 riscv64 1.7.1-ok1build1 [91.6 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libosinfo-bin riscv64 1.7.1-ok1build1 [26.6 kB]
+已下载 224 kB，耗时 1秒 (318 kB/s)
+正在选中未选择的软件包 osinfo-db。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../osinfo-db_0.20200325-ok1_all.deb  ...
+正在解压 osinfo-db (0.20200325-ok1) ...
+正在选中未选择的软件包 libosinfo-1.0-0:riscv64。
+准备解压 .../libosinfo-1.0-0_1.7.1-ok1build1_riscv64.deb  ...
+正在解压 libosinfo-1.0-0:riscv64 (1.7.1-ok1build1) ...
+正在选中未选择的软件包 libosinfo-bin。
+准备解压 .../libosinfo-bin_1.7.1-ok1build1_riscv64.deb  ...
+正在解压 libosinfo-bin (1.7.1-ok1build1) ...
+正在设置 osinfo-db (0.20200325-ok1) ...
+正在设置 libosinfo-1.0-0:riscv64 (1.7.1-ok1build1) ...
+正在设置 libosinfo-bin (1.7.1-ok1build1) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'osinfo-db'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 libosinfo-bin libosinfo-1.0-0 osinfo-db
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libosinfo-bin', 'libosinfo-1.0-0', 'osinfo-db'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156874 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.gnHy5U/test-installscript-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/test-installscript-packages.all ./testing/osinfo-db/test-installscript-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/test-installscript-packages.all ./testing/osinfo-db/test-installscript-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eijmixtz/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.gnHy5U/test-installscript-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/osinfo-db/test-installscript-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eijmixtz/runcmd sh -ec cat </tmp/autopkgtest.gnHy5U/test-installscript-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.gnHy5U/build.6wI/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.gnHy5U/build.6wI'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/osinfo-db/tests-tree/ /tmp/autopkgtest.gnHy5U/build.6wI/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/osinfo-db/tests-tree/ /tmp/autopkgtest.gnHy5U/build.6wI/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/osinfo-db/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.eijmixtz/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.gnHy5U/build.6wI/src/; then mkdir -- /tmp/autopkgtest.gnHy5U/build.6wI/src/; fi; cd /tmp/autopkgtest.gnHy5U/build.6wI/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/osinfo-db/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.eijmixtz/runcmd sh -ec if ! test -d /tmp/autopkgtest.gnHy5U/build.6wI/src/; then mkdir -- /tmp/autopkgtest.gnHy5U/build.6wI/src/; fi; cd /tmp/autopkgtest.gnHy5U/build.6wI/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.gnHy5U/build.6wI/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [16:26:29]: test test-installscript: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.gnHy5U/build.6wI/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.gnHy5U/test-installscript-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.gnHy5U/test-installscript-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.gnHy5U/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.gnHy5U/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.gnHy5U/build.6wI/src/debian/tests/test-installscript; touch /tmp/autopkgtest.gnHy5U/test-installscript-stdout /tmp/autopkgtest.gnHy5U/test-installscript-stderr; /tmp/autopkgtest.gnHy5U/build.6wI/src/debian/tests/test-installscript 2> >(tee -a /tmp/autopkgtest.gnHy5U/test-installscript-stderr >&2) > >(tee -a /tmp/autopkgtest.gnHy5U/test-installscript-stdout);'], kind test, sout raw, serr raw, env []
+preseed.cfg
+Found install script for debian6
+preseed.cfg
+Found install script for debian7
+preseed.cfg
+Found install script for debian8
+preseed.cfg
+Found install script for debian9
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [16:27:01]: test test-installscript: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/test-installscript-stdout ./testing/osinfo-db/test-installscript-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/test-installscript-stdout ./testing/osinfo-db/test-installscript-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eijmixtz/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.gnHy5U/test-installscript-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/osinfo-db/test-installscript-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eijmixtz/runcmd sh -ec cat </tmp/autopkgtest.gnHy5U/test-installscript-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/test-installscript-stderr ./testing/osinfo-db/test-installscript-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/test-installscript-stderr ./testing/osinfo-db/test-installscript-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eijmixtz/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.gnHy5U/test-installscript-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/osinfo-db/test-installscript-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eijmixtz/runcmd sh -ec cat </tmp/autopkgtest.gnHy5U/test-installscript-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [16:27:03]: test test-installscript:  - - - - - - - - - - results - - - - - - - - - -
+test-installscript   PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.gnHy5U/test-installscript-artifacts/ ./testing/osinfo-db/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.gnHy5U/test-installscript-artifacts/ ./testing/osinfo-db/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eijmixtz/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.gnHy5U/test-installscript-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/osinfo-db/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eijmixtz/runcmd sh -ec cd /tmp/autopkgtest.gnHy5U/test-installscript-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/osinfo-db/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.gnHy5U/test-installscript-artifacts', '/tmp/autopkgtest.gnHy5U/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [16:27:04]: @@@@@@@@@@@@@@@@@@@@ summary
+command1             FAIL badpkg
+blame: ./src/osinfo-db_0.20200325-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 osinfo-db 相匹配的软件包
+ (exit code 1)
+test-installscript   PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.gnHy5U
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 187518 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

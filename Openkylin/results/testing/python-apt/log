@@ -1,0 +1,480 @@
+autopkgtest: DBG: testbed init
+autopkgtest [03:24:52]: starting date: 2023-02-28
+autopkgtest [03:24:52]: version 5.20ubuntu1
+autopkgtest [03:24:52]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/python-apt_2.3.0-ok2.dsc -o ./testing/python-apt -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.hkqqu83t/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.hkqqu83t/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.hkqqu83t/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.hkqqu83t/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.hkqqu83t/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.hkqqu83t/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.hkqqu83t/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.hkqqu83t/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.hkqqu83t/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'66e8f04f-2b9c-40c4-8794-4481fb2192fc[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.hkqqu83t/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.hkqqu83t/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.hkqqu83t/runcmd chmod 1777 /tmp/autopkgtest.f8XQVj
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.f8XQVj
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.hkqqu83t/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [03:25:54]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.f8XQVj/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.f8XQVj/testbed-packages ./testing/python-apt/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.f8XQVj/testbed-packages ./testing/python-apt/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.hkqqu83t/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.f8XQVj/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-apt/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.hkqqu83t/runcmd sh -ec cat </tmp/autopkgtest.f8XQVj/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [03:26:00]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [03:26:00]: @@@@@@@@@@@@@@@@@@@@ source ./src/python-apt_2.3.0-ok2.dsc
+autopkgtest: DBG: blame += ./src/python-apt_2.3.0-ok2.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.f8XQVj'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-apt_2.3.0-ok2.dsc /tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-apt_2.3.0-ok2.dsc /tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.hkqqu83t/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-apt_2.3.0-ok2.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.hkqqu83t/runcmd sh -ec cat >/tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.f8XQVj'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-apt_2.3.0.orig.tar.gz /tmp/autopkgtest.f8XQVj/python-apt_2.3.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-apt_2.3.0.orig.tar.gz /tmp/autopkgtest.f8XQVj/python-apt_2.3.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.hkqqu83t/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.f8XQVj/python-apt_2.3.0.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-apt_2.3.0.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.hkqqu83t/runcmd sh -ec cat >/tmp/autopkgtest.f8XQVj/python-apt_2.3.0.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.f8XQVj/python-apt_2.3.0.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.f8XQVj'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-apt_2.3.0-ok2.debian.tar.xz /tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-apt_2.3.0-ok2.debian.tar.xz /tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.hkqqu83t/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-apt_2.3.0-ok2.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.hkqqu83t/runcmd sh -ec cat >/tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.f8XQVj/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.f8XQVj/build.XXX
++ builddir=/tmp/autopkgtest.f8XQVj/build.LJ7
++ cd /tmp/autopkgtest.f8XQVj/build.LJ7
++ dpkg-source -x /tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.eN3D_Z3d/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年05月26日 星期四 07时45分56秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.f8XQVj/python-apt_2.3.0-ok2.dsc
+dpkg-source: info: extracting python-apt in src
+dpkg-source: info: unpacking python-apt_2.3.0.orig.tar.gz
+dpkg-source: info: unpacking python-apt_2.3.0-ok2.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [03:26:15]: testing package python-apt version 2.3.0-ok2
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.f8XQVj/build.LJ7/src/debian/ ./testing/python-apt/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.f8XQVj/build.LJ7/src/debian/ ./testing/python-apt/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.hkqqu83t/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.f8XQVj/build.LJ7/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-apt/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.hkqqu83t/runcmd sh -ec cd /tmp/autopkgtest.f8XQVj/build.LJ7/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-apt/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency apt-utils
+autopkgtest: DBG: processing dependency dirmngr | gnupg (<< 2)
+autopkgtest: DBG: processing dependency distro-info-data
+autopkgtest: DBG: processing dependency fakeroot
+autopkgtest: DBG: processing dependency gnupg
+autopkgtest: DBG: processing dependency intltool
+autopkgtest: DBG: processing dependency pycodestyle
+autopkgtest: DBG: processing dependency pyflakes3
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency python-apt-doc
+autopkgtest: DBG: synthesised dependency python-apt-dev
+autopkgtest: DBG: synthesised dependency python-apt-common
+autopkgtest: DBG: synthesised dependency python3-apt
+autopkgtest: DBG: synthesised dependency python3-apt-dbg
+autopkgtest: DBG: Test defined: name run-tests path debian/tests/run-tests command "None" restrictions [] features [] depends ['apt-utils', 'dirmngr | gnupg (<< 2)', 'distro-info-data', 'fakeroot', 'gnupg', 'intltool', 'pycodestyle', 'pyflakes3', 'python3-all', 'python-apt-doc', 'python-apt-dev', 'python-apt-common', 'python3-apt', 'python3-apt-dbg'] clicks [] installed clicks []
+autopkgtest [03:26:16]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.f8XQVj/build.LJ7/src/ ./testing/python-apt/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.f8XQVj/build.LJ7/src/ ./testing/python-apt/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.hkqqu83t/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.f8XQVj/build.LJ7/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-apt/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.hkqqu83t/runcmd sh -ec cd /tmp/autopkgtest.f8XQVj/build.LJ7/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-apt/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency apt-utils
+autopkgtest: DBG: processing dependency dirmngr | gnupg (<< 2)
+autopkgtest: DBG: processing dependency distro-info-data
+autopkgtest: DBG: processing dependency fakeroot
+autopkgtest: DBG: processing dependency gnupg
+autopkgtest: DBG: processing dependency intltool
+autopkgtest: DBG: processing dependency pycodestyle
+autopkgtest: DBG: processing dependency pyflakes3
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency python-apt-doc
+autopkgtest: DBG: synthesised dependency python-apt-dev
+autopkgtest: DBG: synthesised dependency python-apt-common
+autopkgtest: DBG: synthesised dependency python3-apt
+autopkgtest: DBG: synthesised dependency python3-apt-dbg
+autopkgtest: DBG: Test defined: name run-tests path debian/tests/run-tests command "None" restrictions [] features [] depends ['apt-utils', 'dirmngr | gnupg (<< 2)', 'distro-info-data', 'fakeroot', 'gnupg', 'intltool', 'pycodestyle', 'pyflakes3', 'python3-all', 'python-apt-doc', 'python-apt-dev', 'python-apt-common', 'python3-apt', 'python3-apt-dbg'] clicks [] installed clicks []
+autopkgtest [03:26:17]: test run-tests: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['apt-utils', 'dirmngr | gnupg (<< 2)', 'distro-info-data', 'fakeroot', 'gnupg', 'intltool', 'pycodestyle', 'pyflakes3', 'python3-all', 'python-apt-doc', 'python-apt-dev', 'python-apt-common', 'python3-apt', 'python3-apt-dbg']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['apt-utils', 'dirmngr | gnupg (<< 2)', 'distro-info-data', 'fakeroot', 'gnupg', 'intltool', 'pycodestyle', 'pyflakes3', 'python3-all', 'python-apt-doc', 'python-apt-dev', 'python-apt-common', 'python3-apt', 'python3-apt-dbg']
+autopkgtest: DBG: install-deps: satisfying apt-utils, dirmngr | gnupg (<< 2), distro-info-data, fakeroot, gnupg, intltool, pycodestyle, pyflakes3, python3-all, python-apt-doc, python-apt-dev, python-apt-common, python3-apt, python3-apt-dbg
+autopkgtest: DBG: install-deps: architecture resolved: apt-utils, dirmngr | gnupg (<< 2), distro-info-data, fakeroot, gnupg, intltool, pycodestyle, pyflakes3, python3-all, python-apt-doc, python-apt-dev, python-apt-common, python3-apt, python3-apt-dbg
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.f8XQVj'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-apt/1-autopkgtest-satdep.deb /tmp/autopkgtest.f8XQVj/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-apt/1-autopkgtest-satdep.deb /tmp/autopkgtest.f8XQVj/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.hkqqu83t/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.f8XQVj/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-apt/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.hkqqu83t/runcmd sh -ec cat >/tmp/autopkgtest.f8XQVj/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.f8XQVj/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.f8XQVj/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on pycodestyle:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find pycodestyle:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 libmpdec2 lvm2
+  os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  fakeroot libencode-locale-perl libfakeroot libffi8 libfile-listing-perl
+  libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl
+  libhttp-cookies-perl libhttp-date-perl libhttp-message-perl
+  libhttp-negotiate-perl libio-html-perl libio-socket-ssl-perl
+  liblwp-mediatypes-perl liblwp-protocol-https-perl libnet-http-perl
+  libnet-ssleay-perl libpython3-dbg libpython3.8 libpython3.8-dbg
+  libpython3.8-minimal libpython3.8-stdlib libtimedate-perl libtry-tiny-perl
+  libwww-perl libwww-robotrules-perl perl-openssl-defaults python3-apt-dbg
+  python3-dbg python3.8 python3.8-dbg python3.8-minimal
+建议安装：
+  libdata-dump-perl libcrypt-ssleay-perl libsub-name-perl libauthen-ntlm-perl
+  python3.8-venv python3.8-doc python3-gdbm-dbg python3-tk-dbg binfmt-support
+推荐安装：
+  libhtml-format-perl libclone-perl libdata-dump-perl libhtml-form-perl
+  libhttp-daemon-perl libmailtools-perl gdb
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  fakeroot libencode-locale-perl libfakeroot libffi8 libfile-listing-perl
+  libhtml-parser-perl libhtml-tagset-perl libhtml-tree-perl
+  libhttp-cookies-perl libhttp-date-perl libhttp-message-perl
+  libhttp-negotiate-perl libio-html-perl libio-socket-ssl-perl
+  liblwp-mediatypes-perl liblwp-protocol-https-perl libnet-http-perl
+  libnet-ssleay-perl libpython3-dbg libpython3.8-dbg libtimedate-perl
+  libtry-tiny-perl libwww-perl libwww-robotrules-perl perl-openssl-defaults
+  python3-apt-dbg python3-dbg python3.8-dbg
+下列软件包将被升级：
+  libpython3.8 libpython3.8-minimal libpython3.8-stdlib python3.8
+  python3.8-minimal
+升级了 5 个软件包，新安装了 28 个软件包，要卸载 1 个软件包，有 133 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 49.4 MB 的归档。
+解压缩后会消耗 202 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8 riscv64 3.8.2-ok4 [365 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8 riscv64 3.8.2-ok4 [1,652 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-stdlib riscv64 3.8.2-ok4 [1,738 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-minimal riscv64 3.8.2-ok4 [1,632 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-minimal riscv64 3.8.2-ok4 [720 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libfakeroot riscv64 1.30.1-ok1 [26.1 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 fakeroot riscv64 1.30.1-ok1 [65.2 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libencode-locale-perl all 1.05-ok2 [11.1 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libtimedate-perl all 2.3300-ok2 [33.5 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libhttp-date-perl all 6.05-ok3 [15.9 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libfile-listing-perl all 6.15-ok2 [17.0 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libhtml-tagset-perl all 3.20-ok2 [11.0 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libhtml-parser-perl riscv64 3.76-ok1 [85.2 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libhtml-tree-perl all 5.07-ok2 [199 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libio-html-perl all 1.004-ok2 [20.3 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 liblwp-mediatypes-perl all 6.04-ok2 [19.7 kB]
+获取:18 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libhttp-message-perl all 6.36-ok1 [76.3 kB]
+获取:19 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libhttp-cookies-perl all 6.10-ok1 [17.5 kB]
+获取:20 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libhttp-negotiate-perl all 6.01-ok2 [12.0 kB]
+获取:21 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 perl-openssl-defaults riscv64 5-ok1 [6,742 B]
+获取:22 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libnet-ssleay-perl riscv64 1.88-ok2 [296 kB]
+获取:23 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libio-socket-ssl-perl all 2.075-ok2 [191 kB]
+获取:24 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libnet-http-perl all 6.22-ok2 [28.1 kB]
+获取:25 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libtry-tiny-perl all 0.31-ok1 [20.5 kB]
+获取:26 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libwww-robotrules-perl all 6.02-ok2 [12.3 kB]
+获取:27 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libwww-perl all 6.43-ok2 [140 kB]
+获取:28 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 liblwp-protocol-https-perl all 6.10-ok1 [8,848 B]
+获取:29 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-dbg riscv64 3.8.2-ok4 [22.0 MB]
+获取:30 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3-dbg riscv64 3.8.2-ok2 [6,530 B]
+获取:31 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-dbg riscv64 3.8.2-ok4 [18.5 MB]
+获取:32 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dbg riscv64 3.8.2-ok2 [1,094 B]
+获取:33 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-apt-dbg riscv64 2.3.0-ok2 [1,518 kB]
+已下载 49.4 MB，耗时 21秒 (2,349 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-python3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../01-libpython3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../02-libpython3.8-stdlib_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-stdlib:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../03-python3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-minimal (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../04-libpython3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-minimal:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../05-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 libfakeroot:riscv64。
+准备解压 .../06-libfakeroot_1.30.1-ok1_riscv64.deb  ...
+正在解压 libfakeroot:riscv64 (1.30.1-ok1) ...
+正在选中未选择的软件包 fakeroot。
+准备解压 .../07-fakeroot_1.30.1-ok1_riscv64.deb  ...
+正在解压 fakeroot (1.30.1-ok1) ...
+正在选中未选择的软件包 libencode-locale-perl。
+准备解压 .../08-libencode-locale-perl_1.05-ok2_all.deb  ...
+正在解压 libencode-locale-perl (1.05-ok2) ...
+正在选中未选择的软件包 libtimedate-perl。
+准备解压 .../09-libtimedate-perl_2.3300-ok2_all.deb  ...
+正在解压 libtimedate-perl (2.3300-ok2) ...
+正在选中未选择的软件包 libhttp-date-perl。
+准备解压 .../10-libhttp-date-perl_6.05-ok3_all.deb  ...
+正在解压 libhttp-date-perl (6.05-ok3) ...
+正在选中未选择的软件包 libfile-listing-perl。
+准备解压 .../11-libfile-listing-perl_6.15-ok2_all.deb  ...
+正在解压 libfile-listing-perl (6.15-ok2) ...
+正在选中未选择的软件包 libhtml-tagset-perl。
+准备解压 .../12-libhtml-tagset-perl_3.20-ok2_all.deb  ...
+正在解压 libhtml-tagset-perl (3.20-ok2) ...
+正在选中未选择的软件包 libhtml-parser-perl:riscv64。
+准备解压 .../13-libhtml-parser-perl_3.76-ok1_riscv64.deb  ...
+正在解压 libhtml-parser-perl:riscv64 (3.76-ok1) ...
+正在选中未选择的软件包 libhtml-tree-perl。
+准备解压 .../14-libhtml-tree-perl_5.07-ok2_all.deb  ...
+正在解压 libhtml-tree-perl (5.07-ok2) ...
+正在选中未选择的软件包 libio-html-perl。
+准备解压 .../15-libio-html-perl_1.004-ok2_all.deb  ...
+正在解压 libio-html-perl (1.004-ok2) ...
+正在选中未选择的软件包 liblwp-mediatypes-perl。
+准备解压 .../16-liblwp-mediatypes-perl_6.04-ok2_all.deb  ...
+正在解压 liblwp-mediatypes-perl (6.04-ok2) ...
+正在选中未选择的软件包 libhttp-message-perl。
+准备解压 .../17-libhttp-message-perl_6.36-ok1_all.deb  ...
+正在解压 libhttp-message-perl (6.36-ok1) ...
+正在选中未选择的软件包 libhttp-cookies-perl。
+准备解压 .../18-libhttp-cookies-perl_6.10-ok1_all.deb  ...
+正在解压 libhttp-cookies-perl (6.10-ok1) ...
+正在选中未选择的软件包 libhttp-negotiate-perl。
+准备解压 .../19-libhttp-negotiate-perl_6.01-ok2_all.deb  ...
+正在解压 libhttp-negotiate-perl (6.01-ok2) ...
+正在选中未选择的软件包 perl-openssl-defaults:riscv64。
+准备解压 .../20-perl-openssl-defaults_5-ok1_riscv64.deb  ...
+正在解压 perl-openssl-defaults:riscv64 (5-ok1) ...
+正在选中未选择的软件包 libnet-ssleay-perl。
+准备解压 .../21-libnet-ssleay-perl_1.88-ok2_riscv64.deb  ...
+正在解压 libnet-ssleay-perl (1.88-ok2) ...
+正在选中未选择的软件包 libio-socket-ssl-perl。
+准备解压 .../22-libio-socket-ssl-perl_2.075-ok2_all.deb  ...
+正在解压 libio-socket-ssl-perl (2.075-ok2) ...
+正在选中未选择的软件包 libnet-http-perl。
+准备解压 .../23-libnet-http-perl_6.22-ok2_all.deb  ...
+正在解压 libnet-http-perl (6.22-ok2) ...
+正在选中未选择的软件包 libtry-tiny-perl。
+准备解压 .../24-libtry-tiny-perl_0.31-ok1_all.deb  ...
+正在解压 libtry-tiny-perl (0.31-ok1) ...
+正在选中未选择的软件包 libwww-robotrules-perl。
+准备解压 .../25-libwww-robotrules-perl_6.02-ok2_all.deb  ...
+正在解压 libwww-robotrules-perl (6.02-ok2) ...
+正在选中未选择的软件包 libwww-perl。
+准备解压 .../26-libwww-perl_6.43-ok2_all.deb  ...
+正在解压 libwww-perl (6.43-ok2) ...
+正在选中未选择的软件包 liblwp-protocol-https-perl。
+准备解压 .../27-liblwp-protocol-https-perl_6.10-ok1_all.deb  ...
+正在解压 liblwp-protocol-https-perl (6.10-ok1) ...
+正在选中未选择的软件包 libpython3.8-dbg:riscv64。
+准备解压 .../28-libpython3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在选中未选择的软件包 libpython3-dbg:riscv64。
+准备解压 .../29-libpython3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在选中未选择的软件包 python3.8-dbg。
+准备解压 .../30-python3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-dbg (3.8.2-ok4) ...
+正在选中未选择的软件包 python3-dbg。
+准备解压 .../31-python3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-dbg (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-apt-dbg。
+准备解压 .../32-python3-apt-dbg_2.3.0-ok2_riscv64.deb  ...
+正在解压 python3-apt-dbg (2.3.0-ok2) ...
+正在设置 libpython3.8-minimal:riscv64 (3.8.2-ok4) ...
+正在设置 libhtml-tagset-perl (3.20-ok2) ...
+正在设置 liblwp-mediatypes-perl (6.04-ok2) ...
+正在设置 libtry-tiny-perl (0.31-ok1) ...
+正在设置 perl-openssl-defaults:riscv64 (5-ok1) ...
+正在设置 libnet-http-perl (6.22-ok2) ...
+正在设置 libencode-locale-perl (1.05-ok2) ...
+正在设置 libfakeroot:riscv64 (1.30.1-ok1) ...
+正在设置 fakeroot (1.30.1-ok1) ...
+update-alternatives: 使用 /usr/bin/fakeroot-sysv 来在自动模式中提供 /usr/bin/fakeroot (fakeroot)
+正在设置 libio-html-perl (1.004-ok2) ...
+正在设置 libtimedate-perl (2.3300-ok2) ...
+正在设置 libwww-robotrules-perl (6.02-ok2) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 python3.8-minimal (3.8.2-ok4) ...
+正在设置 libhtml-parser-perl:riscv64 (3.76-ok1) ...
+正在设置 libpython3.8-stdlib:riscv64 (3.8.2-ok4) ...
+正在设置 python3.8 (3.8.2-ok4) ...
+正在设置 libnet-ssleay-perl (1.88-ok2) ...
+正在设置 libhttp-date-perl (6.05-ok3) ...
+正在设置 libfile-listing-perl (6.15-ok2) ...
+正在设置 libhtml-tree-perl (5.07-ok2) ...
+正在设置 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在设置 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在设置 libpython3.8:riscv64 (3.8.2-ok4) ...
+正在设置 libio-socket-ssl-perl (2.075-ok2) ...
+正在设置 libhttp-message-perl (6.36-ok1) ...
+正在设置 python3.8-dbg (3.8.2-ok4) ...
+正在设置 libhttp-negotiate-perl (6.01-ok2) ...
+正在设置 libhttp-cookies-perl (6.10-ok1) ...
+正在设置 python3-dbg (3.8.2-ok2) ...
+正在设置 python3-apt-dbg (2.3.0-ok2) ...
+正在设置 libwww-perl (6.43-ok2) ...
+正在设置 liblwp-protocol-https-perl (6.10-ok1) ...
+正在处理用于 bamfdaemon (0.5.3+18.04.20180207.2-ok1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+正在处理用于 desktop-file-utils (0.24-ok2) 的触发器 ...
+正在处理用于 mime-support (3.64-ok1) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python-apt-doc'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status} ${Provides}\n', '*'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: WARNING: package python-apt-doc is not installed though it should be
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python-apt-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python-apt-dev 相匹配的软件包
+ (exit code 1)
+run-tests            FAIL badpkg
+blame: ./src/python-apt_2.3.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-apt-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [03:28:55]: @@@@@@@@@@@@@@@@@@@@ summary
+run-tests            FAIL badpkg
+blame: ./src/python-apt_2.3.0-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-apt-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.f8XQVj
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 366680 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

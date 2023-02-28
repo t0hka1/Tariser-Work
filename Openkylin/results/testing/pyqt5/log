@@ -1,0 +1,793 @@
+autopkgtest: DBG: testbed init
+autopkgtest [03:07:08]: starting date: 2023-02-28
+autopkgtest [03:07:08]: version 5.20ubuntu1
+autopkgtest [03:07:08]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/pyqt5_5.14.1+dfsg-ok3.dsc -o ./testing/pyqt5 -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.tdca3ob6/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.tdca3ob6/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.tdca3ob6/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.tdca3ob6/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.tdca3ob6/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.tdca3ob6/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.tdca3ob6/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.tdca3ob6/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'3982ae6d-78ae-477e-a4dc-0976ce68b239[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3982ae6d-78ae-477e-a4dc-0976ce68b239[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'3982ae6d-78ae-477e-a4dc-0976ce68b239[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3982ae6d-78ae-477e-a4dc-0976ce68b239[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'3982ae6d-78ae-477e-a4dc-0976ce68b239[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3982ae6d-78ae-477e-a4dc-0976ce68b239[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'3982ae6d-78ae-477e-a4dc-0976ce68b239[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3982ae6d-78ae-477e-a4dc-0976ce68b239[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'3982ae6d-78ae-477e-a4dc-0976ce68b239[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3982ae6d-78ae-477e-a4dc-0976ce68b239[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.tdca3ob6/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'3982ae6d-78ae-477e-a4dc-0976ce68b239[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3982ae6d-78ae-477e-a4dc-0976ce68b239[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.tdca3ob6/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.tdca3ob6/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.tdca3ob6/runcmd chmod 1777 /tmp/autopkgtest.HBxd7k
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.HBxd7k
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.tdca3ob6/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [03:08:10]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.HBxd7k/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.HBxd7k/testbed-packages ./testing/pyqt5/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.HBxd7k/testbed-packages ./testing/pyqt5/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.HBxd7k/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pyqt5/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat </tmp/autopkgtest.HBxd7k/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [03:08:16]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [03:08:17]: @@@@@@@@@@@@@@@@@@@@ source ./src/pyqt5_5.14.1+dfsg-ok3.dsc
+autopkgtest: DBG: blame += ./src/pyqt5_5.14.1+dfsg-ok3.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.HBxd7k'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pyqt5_5.14.1%2Bdfsg-ok3.dsc /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1%2Bdfsg-ok3.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pyqt5_5.14.1%2Bdfsg-ok3.dsc /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1%2Bdfsg-ok3.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pyqt5_5.14.1+dfsg-ok3.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat >/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.HBxd7k'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pyqt5_5.14.1%2Bdfsg.orig.tar.xz /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1%2Bdfsg.orig.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pyqt5_5.14.1%2Bdfsg.orig.tar.xz /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1%2Bdfsg.orig.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg.orig.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pyqt5_5.14.1+dfsg.orig.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat >/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg.orig.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg.orig.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.HBxd7k'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pyqt5_5.14.1%2Bdfsg-ok3.debian.tar.xz /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1%2Bdfsg-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pyqt5_5.14.1%2Bdfsg-ok3.debian.tar.xz /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1%2Bdfsg-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pyqt5_5.14.1+dfsg-ok3.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat >/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.HBxd7k/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.HBxd7k/build.XXX
++ builddir=/tmp/autopkgtest.HBxd7k/build.GgB
++ cd /tmp/autopkgtest.HBxd7k/build.GgB
++ dpkg-source -x /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.9tMcDEOQ/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年10月14日 星期五 06时25分33秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.HBxd7k/pyqt5_5.14.1+dfsg-ok3.dsc
+dpkg-source: info: extracting pyqt5 in src
+dpkg-source: info: unpacking pyqt5_5.14.1+dfsg.orig.tar.xz
+dpkg-source: info: unpacking pyqt5_5.14.1+dfsg-ok3.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying public_sip.diff
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [03:08:36]: testing package pyqt5 version 5.14.1+dfsg-ok3
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.HBxd7k/build.GgB/src/debian/ ./testing/pyqt5/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.HBxd7k/build.GgB/src/debian/ ./testing/pyqt5/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.HBxd7k/build.GgB/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pyqt5/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cd /tmp/autopkgtest.HBxd7k/build.GgB/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pyqt5/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python3-all-dbg
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency pyqt5-dev
+autopkgtest: DBG: synthesised dependency pyqt5-dev-tools
+autopkgtest: DBG: synthesised dependency pyqt5-examples
+autopkgtest: DBG: synthesised dependency python3-pyqt5
+autopkgtest: DBG: synthesised dependency python3-pyqt5-dbg
+autopkgtest: DBG: synthesised dependency python3-dbus.mainloop.pyqt5
+autopkgtest: DBG: synthesised dependency python3-dbus.mainloop.pyqt5-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtopengl
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtopengl-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsql
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsql-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebchannel
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebchannel-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebkit
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebkit-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebsockets
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebsockets-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtxmlpatterns
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtxmlpatterns-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsvg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsvg-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtmultimedia
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtmultimedia-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtquick
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtquick-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtserialport
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtserialport-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsensors
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsensors-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtx11extras
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtx11extras-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtpositioning
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtpositioning-dbg
+autopkgtest: DBG: Test defined: name import path debian/tests/import command "None" restrictions [] features [] depends ['python3-all-dbg', 'pyqt5-dev', 'pyqt5-dev-tools', 'pyqt5-examples', 'python3-pyqt5', 'python3-pyqt5-dbg', 'python3-dbus.mainloop.pyqt5', 'python3-dbus.mainloop.pyqt5-dbg', 'python3-pyqt5.qtopengl', 'python3-pyqt5.qtopengl-dbg', 'python3-pyqt5.qtsql', 'python3-pyqt5.qtsql-dbg', 'python3-pyqt5.qtwebchannel', 'python3-pyqt5.qtwebchannel-dbg', 'python3-pyqt5.qtwebkit', 'python3-pyqt5.qtwebkit-dbg', 'python3-pyqt5.qtwebsockets', 'python3-pyqt5.qtwebsockets-dbg', 'python3-pyqt5.qtxmlpatterns', 'python3-pyqt5.qtxmlpatterns-dbg', 'python3-pyqt5.qtsvg', 'python3-pyqt5.qtsvg-dbg', 'python3-pyqt5.qtmultimedia', 'python3-pyqt5.qtmultimedia-dbg', 'python3-pyqt5.qtquick', 'python3-pyqt5.qtquick-dbg', 'python3-pyqt5.qtserialport', 'python3-pyqt5.qtserialport-dbg', 'python3-pyqt5.qtsensors', 'python3-pyqt5.qtsensors-dbg', 'python3-pyqt5.qtx11extras', 'python3-pyqt5.qtx11extras-dbg', 'python3-pyqt5.qtpositioning', 'python3-pyqt5.qtpositioning-dbg'] clicks [] installed clicks []
+autopkgtest [03:08:37]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.HBxd7k/build.GgB/src/ ./testing/pyqt5/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.HBxd7k/build.GgB/src/ ./testing/pyqt5/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.HBxd7k/build.GgB/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pyqt5/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cd /tmp/autopkgtest.HBxd7k/build.GgB/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pyqt5/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python3-all-dbg
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency pyqt5-dev
+autopkgtest: DBG: synthesised dependency pyqt5-dev-tools
+autopkgtest: DBG: synthesised dependency pyqt5-examples
+autopkgtest: DBG: synthesised dependency python3-pyqt5
+autopkgtest: DBG: synthesised dependency python3-pyqt5-dbg
+autopkgtest: DBG: synthesised dependency python3-dbus.mainloop.pyqt5
+autopkgtest: DBG: synthesised dependency python3-dbus.mainloop.pyqt5-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtopengl
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtopengl-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsql
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsql-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebchannel
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebchannel-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebkit
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebkit-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebsockets
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtwebsockets-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtxmlpatterns
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtxmlpatterns-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsvg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsvg-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtmultimedia
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtmultimedia-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtquick
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtquick-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtserialport
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtserialport-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsensors
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtsensors-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtx11extras
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtx11extras-dbg
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtpositioning
+autopkgtest: DBG: synthesised dependency python3-pyqt5.qtpositioning-dbg
+autopkgtest: DBG: Test defined: name import path debian/tests/import command "None" restrictions [] features [] depends ['python3-all-dbg', 'pyqt5-dev', 'pyqt5-dev-tools', 'pyqt5-examples', 'python3-pyqt5', 'python3-pyqt5-dbg', 'python3-dbus.mainloop.pyqt5', 'python3-dbus.mainloop.pyqt5-dbg', 'python3-pyqt5.qtopengl', 'python3-pyqt5.qtopengl-dbg', 'python3-pyqt5.qtsql', 'python3-pyqt5.qtsql-dbg', 'python3-pyqt5.qtwebchannel', 'python3-pyqt5.qtwebchannel-dbg', 'python3-pyqt5.qtwebkit', 'python3-pyqt5.qtwebkit-dbg', 'python3-pyqt5.qtwebsockets', 'python3-pyqt5.qtwebsockets-dbg', 'python3-pyqt5.qtxmlpatterns', 'python3-pyqt5.qtxmlpatterns-dbg', 'python3-pyqt5.qtsvg', 'python3-pyqt5.qtsvg-dbg', 'python3-pyqt5.qtmultimedia', 'python3-pyqt5.qtmultimedia-dbg', 'python3-pyqt5.qtquick', 'python3-pyqt5.qtquick-dbg', 'python3-pyqt5.qtserialport', 'python3-pyqt5.qtserialport-dbg', 'python3-pyqt5.qtsensors', 'python3-pyqt5.qtsensors-dbg', 'python3-pyqt5.qtx11extras', 'python3-pyqt5.qtx11extras-dbg', 'python3-pyqt5.qtpositioning', 'python3-pyqt5.qtpositioning-dbg'] clicks [] installed clicks []
+autopkgtest [03:08:40]: test import: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['python3-all-dbg', 'pyqt5-dev', 'pyqt5-dev-tools', 'pyqt5-examples', 'python3-pyqt5', 'python3-pyqt5-dbg', 'python3-dbus.mainloop.pyqt5', 'python3-dbus.mainloop.pyqt5-dbg', 'python3-pyqt5.qtopengl', 'python3-pyqt5.qtopengl-dbg', 'python3-pyqt5.qtsql', 'python3-pyqt5.qtsql-dbg', 'python3-pyqt5.qtwebchannel', 'python3-pyqt5.qtwebchannel-dbg', 'python3-pyqt5.qtwebkit', 'python3-pyqt5.qtwebkit-dbg', 'python3-pyqt5.qtwebsockets', 'python3-pyqt5.qtwebsockets-dbg', 'python3-pyqt5.qtxmlpatterns', 'python3-pyqt5.qtxmlpatterns-dbg', 'python3-pyqt5.qtsvg', 'python3-pyqt5.qtsvg-dbg', 'python3-pyqt5.qtmultimedia', 'python3-pyqt5.qtmultimedia-dbg', 'python3-pyqt5.qtquick', 'python3-pyqt5.qtquick-dbg', 'python3-pyqt5.qtserialport', 'python3-pyqt5.qtserialport-dbg', 'python3-pyqt5.qtsensors', 'python3-pyqt5.qtsensors-dbg', 'python3-pyqt5.qtx11extras', 'python3-pyqt5.qtx11extras-dbg', 'python3-pyqt5.qtpositioning', 'python3-pyqt5.qtpositioning-dbg']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-all-dbg', 'pyqt5-dev', 'pyqt5-dev-tools', 'pyqt5-examples', 'python3-pyqt5', 'python3-pyqt5-dbg', 'python3-dbus.mainloop.pyqt5', 'python3-dbus.mainloop.pyqt5-dbg', 'python3-pyqt5.qtopengl', 'python3-pyqt5.qtopengl-dbg', 'python3-pyqt5.qtsql', 'python3-pyqt5.qtsql-dbg', 'python3-pyqt5.qtwebchannel', 'python3-pyqt5.qtwebchannel-dbg', 'python3-pyqt5.qtwebkit', 'python3-pyqt5.qtwebkit-dbg', 'python3-pyqt5.qtwebsockets', 'python3-pyqt5.qtwebsockets-dbg', 'python3-pyqt5.qtxmlpatterns', 'python3-pyqt5.qtxmlpatterns-dbg', 'python3-pyqt5.qtsvg', 'python3-pyqt5.qtsvg-dbg', 'python3-pyqt5.qtmultimedia', 'python3-pyqt5.qtmultimedia-dbg', 'python3-pyqt5.qtquick', 'python3-pyqt5.qtquick-dbg', 'python3-pyqt5.qtserialport', 'python3-pyqt5.qtserialport-dbg', 'python3-pyqt5.qtsensors', 'python3-pyqt5.qtsensors-dbg', 'python3-pyqt5.qtx11extras', 'python3-pyqt5.qtx11extras-dbg', 'python3-pyqt5.qtpositioning', 'python3-pyqt5.qtpositioning-dbg']
+autopkgtest: DBG: install-deps: satisfying python3-all-dbg, pyqt5-dev, pyqt5-dev-tools, pyqt5-examples, python3-pyqt5, python3-pyqt5-dbg, python3-dbus.mainloop.pyqt5, python3-dbus.mainloop.pyqt5-dbg, python3-pyqt5.qtopengl, python3-pyqt5.qtopengl-dbg, python3-pyqt5.qtsql, python3-pyqt5.qtsql-dbg, python3-pyqt5.qtwebchannel, python3-pyqt5.qtwebchannel-dbg, python3-pyqt5.qtwebkit, python3-pyqt5.qtwebkit-dbg, python3-pyqt5.qtwebsockets, python3-pyqt5.qtwebsockets-dbg, python3-pyqt5.qtxmlpatterns, python3-pyqt5.qtxmlpatterns-dbg, python3-pyqt5.qtsvg, python3-pyqt5.qtsvg-dbg, python3-pyqt5.qtmultimedia, python3-pyqt5.qtmultimedia-dbg, python3-pyqt5.qtquick, python3-pyqt5.qtquick-dbg, python3-pyqt5.qtserialport, python3-pyqt5.qtserialport-dbg, python3-pyqt5.qtsensors, python3-pyqt5.qtsensors-dbg, python3-pyqt5.qtx11extras, python3-pyqt5.qtx11extras-dbg, python3-pyqt5.qtpositioning, python3-pyqt5.qtpositioning-dbg
+autopkgtest: DBG: install-deps: architecture resolved: python3-all-dbg, pyqt5-dev, pyqt5-dev-tools, pyqt5-examples, python3-pyqt5, python3-pyqt5-dbg, python3-dbus.mainloop.pyqt5, python3-dbus.mainloop.pyqt5-dbg, python3-pyqt5.qtopengl, python3-pyqt5.qtopengl-dbg, python3-pyqt5.qtsql, python3-pyqt5.qtsql-dbg, python3-pyqt5.qtwebchannel, python3-pyqt5.qtwebchannel-dbg, python3-pyqt5.qtwebkit, python3-pyqt5.qtwebkit-dbg, python3-pyqt5.qtwebsockets, python3-pyqt5.qtwebsockets-dbg, python3-pyqt5.qtxmlpatterns, python3-pyqt5.qtxmlpatterns-dbg, python3-pyqt5.qtsvg, python3-pyqt5.qtsvg-dbg, python3-pyqt5.qtmultimedia, python3-pyqt5.qtmultimedia-dbg, python3-pyqt5.qtquick, python3-pyqt5.qtquick-dbg, python3-pyqt5.qtserialport, python3-pyqt5.qtserialport-dbg, python3-pyqt5.qtsensors, python3-pyqt5.qtsensors-dbg, python3-pyqt5.qtx11extras, python3-pyqt5.qtx11extras-dbg, python3-pyqt5.qtpositioning, python3-pyqt5.qtpositioning-dbg
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.HBxd7k'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/pyqt5/1-autopkgtest-satdep.deb /tmp/autopkgtest.HBxd7k/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/pyqt5/1-autopkgtest-satdep.deb /tmp/autopkgtest.HBxd7k/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.HBxd7k/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/pyqt5/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat >/tmp/autopkgtest.HBxd7k/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.HBxd7k/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.HBxd7k/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 libmpdec2 lvm2
+  os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  libexpat1 libexpat1-dev libffi8 libpython3-all-dbg libpython3-dbg
+  libpython3-dev libpython3.8 libpython3.8-dbg libpython3.8-dev
+  libpython3.8-minimal libpython3.8-stdlib libqt5location5
+  libqt5positioningquick5 libqt5serialport5 libqt5websockets5
+  libqt5xmlpatterns5 pyqt5-dev pyqt5-dev-tools pyqt5-examples python3-all
+  python3-all-dbg python3-dbg python3-dbus-dbg python3-dbus.mainloop.pyqt5
+  python3-dbus.mainloop.pyqt5-dbg python3-dev python3-pyqt5-dbg
+  python3-pyqt5.qtmultimedia python3-pyqt5.qtmultimedia-dbg
+  python3-pyqt5.qtopengl python3-pyqt5.qtopengl-dbg
+  python3-pyqt5.qtpositioning python3-pyqt5.qtpositioning-dbg
+  python3-pyqt5.qtquick python3-pyqt5.qtquick-dbg python3-pyqt5.qtsensors
+  python3-pyqt5.qtsensors-dbg python3-pyqt5.qtserialport
+  python3-pyqt5.qtserialport-dbg python3-pyqt5.qtsql python3-pyqt5.qtsql-dbg
+  python3-pyqt5.qtsvg python3-pyqt5.qtsvg-dbg python3-pyqt5.qtwebchannel
+  python3-pyqt5.qtwebchannel-dbg python3-pyqt5.qtwebkit
+  python3-pyqt5.qtwebkit-dbg python3-pyqt5.qtwebsockets
+  python3-pyqt5.qtwebsockets-dbg python3-pyqt5.qtx11extras
+  python3-pyqt5.qtx11extras-dbg python3-pyqt5.qtxmlpatterns
+  python3-pyqt5.qtxmlpatterns-dbg python3-sip-dbg python3-sip-dev python3.8
+  python3.8-dbg python3.8-dev python3.8-minimal sip-dev
+建议安装：
+  qt5-doc qttools5-dev-tools python-sip-doc python3.8-venv python3.8-doc
+  python3-gdbm-dbg python3-tk-dbg binfmt-support
+推荐安装：
+  gdb
+下列【新】软件包将被安装：
+  libexpat1-dev libffi8 libpython3-all-dbg libpython3-dbg libpython3-dev
+  libpython3.8-dbg libpython3.8-dev libqt5location5 libqt5positioningquick5
+  libqt5serialport5 libqt5websockets5 libqt5xmlpatterns5 pyqt5-dev
+  pyqt5-dev-tools pyqt5-examples python3-all python3-all-dbg python3-dbg
+  python3-dbus-dbg python3-dbus.mainloop.pyqt5 python3-dbus.mainloop.pyqt5-dbg
+  python3-dev python3-pyqt5-dbg python3-pyqt5.qtmultimedia
+  python3-pyqt5.qtmultimedia-dbg python3-pyqt5.qtopengl
+  python3-pyqt5.qtopengl-dbg python3-pyqt5.qtpositioning
+  python3-pyqt5.qtpositioning-dbg python3-pyqt5.qtquick
+  python3-pyqt5.qtquick-dbg python3-pyqt5.qtsensors
+  python3-pyqt5.qtsensors-dbg python3-pyqt5.qtserialport
+  python3-pyqt5.qtserialport-dbg python3-pyqt5.qtsql python3-pyqt5.qtsql-dbg
+  python3-pyqt5.qtsvg python3-pyqt5.qtsvg-dbg python3-pyqt5.qtwebchannel
+  python3-pyqt5.qtwebchannel-dbg python3-pyqt5.qtwebkit
+  python3-pyqt5.qtwebkit-dbg python3-pyqt5.qtwebsockets
+  python3-pyqt5.qtwebsockets-dbg python3-pyqt5.qtx11extras
+  python3-pyqt5.qtx11extras-dbg python3-pyqt5.qtxmlpatterns
+  python3-pyqt5.qtxmlpatterns-dbg python3-sip-dbg python3-sip-dev
+  python3.8-dbg python3.8-dev sip-dev
+下列软件包将被升级：
+  libexpat1 libpython3.8 libpython3.8-minimal libpython3.8-stdlib python3.8
+  python3.8-minimal
+升级了 6 个软件包，新安装了 54 个软件包，要卸载 0 个软件包，有 132 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 162 MB 的归档。
+解压缩后会消耗 551 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8 riscv64 3.8.2-ok4 [365 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8 riscv64 3.8.2-ok4 [1,652 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-stdlib riscv64 3.8.2-ok4 [1,738 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-minimal riscv64 3.8.2-ok4 [1,632 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-minimal riscv64 3.8.2-ok4 [720 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1 riscv64 2.2.9-ok3 [69.2 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-dbg riscv64 3.8.2-ok4 [22.0 MB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3-dbg riscv64 3.8.2-ok2 [6,530 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3-all-dbg riscv64 3.8.2-ok2 [922 B]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all riscv64 3.8.2-ok2 [916 B]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-dbg riscv64 3.8.2-ok4 [18.5 MB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dbg riscv64 3.8.2-ok2 [1,094 B]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all-dbg riscv64 3.8.2-ok2 [924 B]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 sip-dev riscv64 4.19.21+dfsg-ok1 [152 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1-dev riscv64 2.2.9-ok3 [214 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-dev riscv64 3.8.2-ok4 [11.2 MB]
+获取:18 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3-dev riscv64 3.8.2-ok2 [6,526 B]
+获取:19 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-dev riscv64 3.8.2-ok4 [500 kB]
+获取:20 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dev riscv64 3.8.2-ok2 [1,026 B]
+获取:21 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-sip-dev riscv64 4.19.21+dfsg-ok1 [22.3 kB]
+获取:22 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 pyqt5-dev all 5.14.1+dfsg-ok3 [311 kB]
+获取:23 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 pyqt5-dev-tools riscv64 5.14.1+dfsg-ok3 [105 kB]
+获取:24 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 pyqt5-examples all 5.14.1+dfsg-ok3 [1,778 kB]
+获取:25 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-sip-dbg riscv64 4.19.21+dfsg-ok1 [408 kB]
+获取:26 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5-dbg riscv64 5.14.1+dfsg-ok3 [54.8 MB]
+获取:27 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dbus.mainloop.pyqt5 riscv64 5.14.1+dfsg-ok3 [15.4 kB]
+获取:28 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dbus-dbg riscv64 1.2.16-ok1 [359 kB]
+获取:29 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dbus.mainloop.pyqt5-dbg riscv64 5.14.1+dfsg-ok3 [448 kB]
+获取:30 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtopengl riscv64 5.14.1+dfsg-ok3 [95.2 kB]
+获取:31 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtopengl-dbg riscv64 5.14.1+dfsg-ok3 [3,377 kB]
+获取:32 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtsql riscv64 5.14.1+dfsg-ok3 [84.1 kB]
+获取:33 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtsql-dbg riscv64 5.14.1+dfsg-ok3 [2,884 kB]
+获取:34 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtwebchannel riscv64 5.14.1+dfsg-ok3 [13.1 kB]
+获取:35 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtwebchannel-dbg riscv64 5.14.1+dfsg-ok3 [946 kB]
+获取:36 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtwebkit riscv64 5.14.1+dfsg-ok3 [97.1 kB]
+获取:37 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtwebkit-dbg riscv64 5.14.1+dfsg-ok3 [4,735 kB]
+获取:38 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libqt5websockets5 riscv64 5.15.3-ok1 [57.2 kB]
+获取:39 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtwebsockets riscv64 5.14.1+dfsg-ok3 [22.6 kB]
+获取:40 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtwebsockets-dbg riscv64 5.14.1+dfsg-ok3 [1,419 kB]
+获取:41 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libqt5xmlpatterns5 riscv64 5.15.3-ok1 [1,020 kB]
+获取:42 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtxmlpatterns riscv64 5.14.1+dfsg-ok3 [37.5 kB]
+获取:43 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtxmlpatterns-dbg riscv64 5.14.1+dfsg-ok3 [2,024 kB]
+获取:44 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtsvg riscv64 5.14.1+dfsg-ok3 [24.7 kB]
+获取:45 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtsvg-dbg riscv64 5.14.1+dfsg-ok3 [1,539 kB]
+获取:46 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtmultimedia riscv64 5.14.1+dfsg-ok3 [136 kB]
+获取:47 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtmultimedia-dbg riscv64 5.14.1+dfsg-ok3 [4,648 kB]
+获取:48 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtquick riscv64 5.14.1+dfsg-ok3 [335 kB]
+获取:49 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtquick-dbg riscv64 5.14.1+dfsg-ok3 [12.2 MB]
+获取:50 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libqt5serialport5 riscv64 5.15.3-ok1 [32.1 kB]
+获取:51 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtserialport riscv64 5.14.1+dfsg-ok3 [24.1 kB]
+获取:52 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtserialport-dbg riscv64 5.14.1+dfsg-ok3 [1,046 kB]
+获取:53 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtsensors riscv64 5.14.1+dfsg-ok3 [45.9 kB]
+获取:54 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtsensors-dbg riscv64 5.14.1+dfsg-ok3 [1,777 kB]
+获取:55 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtx11extras riscv64 5.14.1+dfsg-ok3 [8,650 B]
+获取:56 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtx11extras-dbg riscv64 5.14.1+dfsg-ok3 [546 kB]
+获取:57 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libqt5positioningquick5 riscv64 5.15.3+dfsg-ok1 [47.0 kB]
+获取:58 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libqt5location5 riscv64 5.15.3+dfsg-ok1 [705 kB]
+获取:59 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtpositioning riscv64 5.14.1+dfsg-ok3 [133 kB]
+获取:60 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pyqt5.qtpositioning-dbg riscv64 5.14.1+dfsg-ok3 [4,780 kB]
+已下载 162 MB，耗时 1分 42秒 (1,592 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-python3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../01-libpython3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../02-libpython3.8-stdlib_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-stdlib:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../03-python3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-minimal (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../04-libpython3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-minimal:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../05-libexpat1_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1:riscv64 (2.2.9-ok3) 并覆盖 (2.2.9-ok1) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../06-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 libpython3.8-dbg:riscv64。
+准备解压 .../07-libpython3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在选中未选择的软件包 libpython3-dbg:riscv64。
+准备解压 .../08-libpython3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在选中未选择的软件包 libpython3-all-dbg:riscv64。
+准备解压 .../09-libpython3-all-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 libpython3-all-dbg:riscv64 (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-all。
+准备解压 .../10-python3-all_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all (3.8.2-ok2) ...
+正在选中未选择的软件包 python3.8-dbg。
+准备解压 .../11-python3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-dbg (3.8.2-ok4) ...
+正在选中未选择的软件包 python3-dbg。
+准备解压 .../12-python3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-dbg (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-all-dbg。
+准备解压 .../13-python3-all-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all-dbg (3.8.2-ok2) ...
+正在选中未选择的软件包 sip-dev。
+准备解压 .../14-sip-dev_4.19.21+dfsg-ok1_riscv64.deb  ...
+正在解压 sip-dev (4.19.21+dfsg-ok1) ...
+正在选中未选择的软件包 libexpat1-dev:riscv64。
+准备解压 .../15-libexpat1-dev_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1-dev:riscv64 (2.2.9-ok3) ...
+正在选中未选择的软件包 libpython3.8-dev:riscv64。
+准备解压 .../16-libpython3.8-dev_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-dev:riscv64 (3.8.2-ok4) ...
+正在选中未选择的软件包 libpython3-dev:riscv64。
+准备解压 .../17-libpython3-dev_3.8.2-ok2_riscv64.deb  ...
+正在解压 libpython3-dev:riscv64 (3.8.2-ok2) ...
+正在选中未选择的软件包 python3.8-dev。
+准备解压 .../18-python3.8-dev_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-dev (3.8.2-ok4) ...
+正在选中未选择的软件包 python3-dev。
+准备解压 .../19-python3-dev_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-dev (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-sip-dev。
+准备解压 .../20-python3-sip-dev_4.19.21+dfsg-ok1_riscv64.deb  ...
+正在解压 python3-sip-dev (4.19.21+dfsg-ok1) ...
+正在选中未选择的软件包 pyqt5-dev。
+准备解压 .../21-pyqt5-dev_5.14.1+dfsg-ok3_all.deb  ...
+正在解压 pyqt5-dev (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 pyqt5-dev-tools。
+准备解压 .../22-pyqt5-dev-tools_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 pyqt5-dev-tools (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 pyqt5-examples。
+准备解压 .../23-pyqt5-examples_5.14.1+dfsg-ok3_all.deb  ...
+正在解压 pyqt5-examples (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-sip-dbg。
+准备解压 .../24-python3-sip-dbg_4.19.21+dfsg-ok1_riscv64.deb  ...
+正在解压 python3-sip-dbg (4.19.21+dfsg-ok1) ...
+正在选中未选择的软件包 python3-pyqt5-dbg。
+准备解压 .../25-python3-pyqt5-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-dbus.mainloop.pyqt5。
+准备解压 .../26-python3-dbus.mainloop.pyqt5_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-dbus.mainloop.pyqt5 (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-dbus-dbg。
+准备解压 .../27-python3-dbus-dbg_1.2.16-ok1_riscv64.deb  ...
+正在解压 python3-dbus-dbg (1.2.16-ok1) ...
+正在选中未选择的软件包 python3-dbus.mainloop.pyqt5-dbg。
+准备解压 .../28-python3-dbus.mainloop.pyqt5-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-dbus.mainloop.pyqt5-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtopengl。
+准备解压 .../29-python3-pyqt5.qtopengl_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtopengl (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtopengl-dbg。
+准备解压 .../30-python3-pyqt5.qtopengl-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtopengl-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtsql。
+准备解压 .../31-python3-pyqt5.qtsql_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtsql (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtsql-dbg。
+准备解压 .../32-python3-pyqt5.qtsql-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtsql-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtwebchannel。
+准备解压 .../33-python3-pyqt5.qtwebchannel_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtwebchannel (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtwebchannel-dbg。
+准备解压 .../34-python3-pyqt5.qtwebchannel-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtwebchannel-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtwebkit。
+准备解压 .../35-python3-pyqt5.qtwebkit_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtwebkit (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtwebkit-dbg。
+准备解压 .../36-python3-pyqt5.qtwebkit-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtwebkit-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 libqt5websockets5:riscv64。
+准备解压 .../37-libqt5websockets5_5.15.3-ok1_riscv64.deb  ...
+正在解压 libqt5websockets5:riscv64 (5.15.3-ok1) ...
+正在选中未选择的软件包 python3-pyqt5.qtwebsockets。
+准备解压 .../38-python3-pyqt5.qtwebsockets_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtwebsockets (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtwebsockets-dbg。
+准备解压 .../39-python3-pyqt5.qtwebsockets-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtwebsockets-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 libqt5xmlpatterns5:riscv64。
+准备解压 .../40-libqt5xmlpatterns5_5.15.3-ok1_riscv64.deb  ...
+正在解压 libqt5xmlpatterns5:riscv64 (5.15.3-ok1) ...
+正在选中未选择的软件包 python3-pyqt5.qtxmlpatterns。
+准备解压 .../41-python3-pyqt5.qtxmlpatterns_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtxmlpatterns (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtxmlpatterns-dbg。
+准备解压 .../42-python3-pyqt5.qtxmlpatterns-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtxmlpatterns-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtsvg。
+准备解压 .../43-python3-pyqt5.qtsvg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtsvg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtsvg-dbg。
+准备解压 .../44-python3-pyqt5.qtsvg-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtsvg-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtmultimedia。
+准备解压 .../45-python3-pyqt5.qtmultimedia_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtmultimedia (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtmultimedia-dbg。
+准备解压 .../46-python3-pyqt5.qtmultimedia-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtmultimedia-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtquick。
+准备解压 .../47-python3-pyqt5.qtquick_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtquick (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtquick-dbg。
+准备解压 .../48-python3-pyqt5.qtquick-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtquick-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 libqt5serialport5:riscv64。
+准备解压 .../49-libqt5serialport5_5.15.3-ok1_riscv64.deb  ...
+正在解压 libqt5serialport5:riscv64 (5.15.3-ok1) ...
+正在选中未选择的软件包 python3-pyqt5.qtserialport。
+准备解压 .../50-python3-pyqt5.qtserialport_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtserialport (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtserialport-dbg。
+准备解压 .../51-python3-pyqt5.qtserialport-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtserialport-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtsensors。
+准备解压 .../52-python3-pyqt5.qtsensors_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtsensors (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtsensors-dbg。
+准备解压 .../53-python3-pyqt5.qtsensors-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtsensors-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtx11extras。
+准备解压 .../54-python3-pyqt5.qtx11extras_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtx11extras (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtx11extras-dbg。
+准备解压 .../55-python3-pyqt5.qtx11extras-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtx11extras-dbg (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 libqt5positioningquick5:riscv64。
+准备解压 .../56-libqt5positioningquick5_5.15.3+dfsg-ok1_riscv64.deb  ...
+正在解压 libqt5positioningquick5:riscv64 (5.15.3+dfsg-ok1) ...
+正在选中未选择的软件包 libqt5location5:riscv64。
+准备解压 .../57-libqt5location5_5.15.3+dfsg-ok1_riscv64.deb  ...
+正在解压 libqt5location5:riscv64 (5.15.3+dfsg-ok1) ...
+正在选中未选择的软件包 python3-pyqt5.qtpositioning。
+准备解压 .../58-python3-pyqt5.qtpositioning_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtpositioning (5.14.1+dfsg-ok3) ...
+正在选中未选择的软件包 python3-pyqt5.qtpositioning-dbg。
+准备解压 .../59-python3-pyqt5.qtpositioning-dbg_5.14.1+dfsg-ok3_riscv64.deb  ...
+正在解压 python3-pyqt5.qtpositioning-dbg (5.14.1+dfsg-ok3) ...
+正在设置 libexpat1:riscv64 (2.2.9-ok3) ...
+正在设置 pyqt5-examples (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtx11extras (5.14.1+dfsg-ok3) ...
+正在设置 python3-dbus.mainloop.pyqt5 (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtsql (5.14.1+dfsg-ok3) ...
+正在设置 libqt5positioningquick5:riscv64 (5.15.3+dfsg-ok1) ...
+正在设置 libpython3.8-minimal:riscv64 (3.8.2-ok4) ...
+正在设置 python3-pyqt5.qtopengl (5.14.1+dfsg-ok3) ...
+正在设置 libqt5location5:riscv64 (5.15.3+dfsg-ok1) ...
+正在设置 libqt5xmlpatterns5:riscv64 (5.15.3-ok1) ...
+正在设置 python3-pyqt5.qtmultimedia (5.14.1+dfsg-ok3) ...
+正在设置 libqt5serialport5:riscv64 (5.15.3-ok1) ...
+正在设置 python3-pyqt5.qtxmlpatterns (5.14.1+dfsg-ok3) ...
+正在设置 sip-dev (4.19.21+dfsg-ok1) ...
+正在设置 python3-pyqt5.qtsensors (5.14.1+dfsg-ok3) ...
+正在设置 pyqt5-dev-tools (5.14.1+dfsg-ok3) ...
+正在设置 libqt5websockets5:riscv64 (5.15.3-ok1) ...
+正在设置 python3-pyqt5.qtwebsockets (5.14.1+dfsg-ok3) ...
+正在设置 libexpat1-dev:riscv64 (2.2.9-ok3) ...
+正在设置 python3-pyqt5.qtserialport (5.14.1+dfsg-ok3) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 python3.8-minimal (3.8.2-ok4) ...
+正在设置 python3-pyqt5.qtwebchannel (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtwebkit (5.14.1+dfsg-ok3) ...
+正在设置 libpython3.8-stdlib:riscv64 (3.8.2-ok4) ...
+正在设置 python3.8 (3.8.2-ok4) ...
+正在设置 python3-pyqt5.qtpositioning (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtsvg (5.14.1+dfsg-ok3) ...
+正在设置 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在设置 python3-all (3.8.2-ok2) ...
+正在设置 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在设置 libpython3-all-dbg:riscv64 (3.8.2-ok2) ...
+正在设置 libpython3.8:riscv64 (3.8.2-ok4) ...
+正在设置 python3-pyqt5.qtquick (5.14.1+dfsg-ok3) ...
+正在设置 python3.8-dbg (3.8.2-ok4) ...
+正在设置 libpython3.8-dev:riscv64 (3.8.2-ok4) ...
+正在设置 python3.8-dev (3.8.2-ok4) ...
+正在设置 python3-dbg (3.8.2-ok2) ...
+正在设置 libpython3-dev:riscv64 (3.8.2-ok2) ...
+正在设置 python3-dbus-dbg (1.2.16-ok1) ...
+正在设置 python3-sip-dbg (4.19.21+dfsg-ok1) ...
+正在设置 python3-dev (3.8.2-ok2) ...
+正在设置 python3-all-dbg (3.8.2-ok2) ...
+正在设置 python3-dbus.mainloop.pyqt5-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-sip-dev (4.19.21+dfsg-ok1) ...
+正在设置 python3-pyqt5-dbg (5.14.1+dfsg-ok3) ...
+正在设置 pyqt5-dev (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtopengl-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtmultimedia-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtserialport-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtsensors-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtwebsockets-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtpositioning-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtsvg-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtsql-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtquick-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtwebkit-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtx11extras-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtxmlpatterns-dbg (5.14.1+dfsg-ok3) ...
+正在设置 python3-pyqt5.qtwebchannel-dbg (5.14.1+dfsg-ok3) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 bamfdaemon (0.5.3+18.04.20180207.2-ok1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+正在处理用于 desktop-file-utils (0.24-ok2) 的触发器 ...
+正在处理用于 mime-support (3.64-ok1) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pyqt5-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pyqt5-dev-tools'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pyqt5-examples'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-dbus.mainloop.pyqt5'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-dbus.mainloop.pyqt5-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtopengl'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtopengl-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtsql'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtsql-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtwebchannel'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtwebchannel-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtwebkit'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtwebkit-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtwebsockets'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtwebsockets-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtxmlpatterns'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtxmlpatterns-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtsvg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtsvg-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtmultimedia'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtmultimedia-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtquick'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtquick-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtserialport'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtserialport-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtsensors'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtsensors-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtx11extras'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtx11extras-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtpositioning'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pyqt5.qtpositioning-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 pyqt5-dev python3-sip-dev python3-dev python3.8-dev libpython3-dev libpython3.8-dev libexpat1-dev libmpdec2 python3-all-dbg libpython3-all-dbg python3-pyqt5.qtpositioning-dbg python3-pyqt5.qtpositioning libqt5location5 libqt5positioningquick5 python3-pyqt5.qtserialport-dbg python3-pyqt5.qtserialport libqt5serialport5 python3-pyqt5.qtwebsockets-dbg python3-pyqt5.qtwebsockets libqt5websockets5 python3-pyqt5.qtxmlpatterns-dbg python3-pyqt5.qtxmlpatterns libqt5xmlpatterns5 pyqt5-dev-tools pyqt5-examples python3-all python3-dbus.mainloop.pyqt5-dbg python3-dbus.mainloop.pyqt5 python3-pyqt5.qtmultimedia-dbg python3-pyqt5.qtmultimedia python3-pyqt5.qtopengl-dbg python3-pyqt5.qtopengl python3-pyqt5.qtquick-dbg python3-pyqt5.qtquick python3-pyqt5.qtsensors-dbg python3-pyqt5.qtsensors python3-pyqt5.qtsql-dbg python3-pyqt5.qtsql python3-pyqt5.qtsvg-dbg python3-pyqt5.qtsvg python3-pyqt5.qtwebchannel-dbg python3-pyqt5.qtwebchannel python3-pyqt5.qtwebkit-dbg python3-pyqt5.qtwebkit python3-pyqt5.qtx11extras-dbg python3-pyqt5.qtx11extras sip-dev
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'pyqt5-dev', 'python3-sip-dev', 'python3-dev', 'python3.8-dev', 'libpython3-dev', 'libpython3.8-dev', 'libexpat1-dev', 'libmpdec2', 'python3-all-dbg'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'libpython3-all-dbg', 'python3-pyqt5.qtpositioning-dbg', 'python3-pyqt5.qtpositioning', 'libqt5location5', 'libqt5positioningquick5', 'python3-pyqt5.qtserialport-dbg', 'python3-pyqt5.qtserialport', 'libqt5serialport5', 'python3-pyqt5.qtwebsockets-dbg', 'python3-pyqt5.qtwebsockets', 'libqt5websockets5', 'python3-pyqt5.qtxmlpatterns-dbg', 'python3-pyqt5.qtxmlpatterns', 'libqt5xmlpatterns5', 'pyqt5-dev-tools', 'pyqt5-examples', 'python3-all', 'python3-dbus.mainloop.pyqt5-dbg', 'python3-dbus.mainloop.pyqt5', 'python3-pyqt5.qtmultimedia-dbg'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'python3-pyqt5.qtmultimedia', 'python3-pyqt5.qtopengl-dbg', 'python3-pyqt5.qtopengl', 'python3-pyqt5.qtquick-dbg', 'python3-pyqt5.qtquick', 'python3-pyqt5.qtsensors-dbg', 'python3-pyqt5.qtsensors', 'python3-pyqt5.qtsql-dbg', 'python3-pyqt5.qtsql', 'python3-pyqt5.qtsvg-dbg', 'python3-pyqt5.qtsvg', 'python3-pyqt5.qtwebchannel-dbg', 'python3-pyqt5.qtwebchannel', 'python3-pyqt5.qtwebkit-dbg', 'python3-pyqt5.qtwebkit', 'python3-pyqt5.qtx11extras-dbg', 'python3-pyqt5.qtx11extras', 'sip-dev'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 158464 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.HBxd7k/import-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.HBxd7k/import-packages.all ./testing/pyqt5/import-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.HBxd7k/import-packages.all ./testing/pyqt5/import-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.HBxd7k/import-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pyqt5/import-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat </tmp/autopkgtest.HBxd7k/import-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.HBxd7k/build.GgB/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.HBxd7k/build.GgB/src already exists
+autopkgtest [03:14:41]: test import: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.HBxd7k/build.GgB/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.HBxd7k/import-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.HBxd7k/import-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.HBxd7k/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.HBxd7k/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.HBxd7k/build.GgB/src/debian/tests/import; touch /tmp/autopkgtest.HBxd7k/import-stdout /tmp/autopkgtest.HBxd7k/import-stderr; /tmp/autopkgtest.HBxd7k/build.GgB/src/debian/tests/import 2> >(tee -a /tmp/autopkgtest.HBxd7k/import-stderr >&2) > >(tee -a /tmp/autopkgtest.HBxd7k/import-stdout);'], kind test, sout raw, serr raw, env []
+testing python3.8
+testing python3.8-dbg
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [03:14:52]: test import: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.HBxd7k/import-stdout ./testing/pyqt5/import-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.HBxd7k/import-stdout ./testing/pyqt5/import-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.HBxd7k/import-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pyqt5/import-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat </tmp/autopkgtest.HBxd7k/import-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.HBxd7k/import-stderr ./testing/pyqt5/import-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.HBxd7k/import-stderr ./testing/pyqt5/import-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.HBxd7k/import-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pyqt5/import-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cat </tmp/autopkgtest.HBxd7k/import-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+import               PASS
+autopkgtest [03:14:53]: test import:  - - - - - - - - - - results - - - - - - - - - -
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.HBxd7k/import-artifacts/ ./testing/pyqt5/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.HBxd7k/import-artifacts/ ./testing/pyqt5/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.tdca3ob6/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.HBxd7k/import-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pyqt5/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.tdca3ob6/runcmd sh -ec cd /tmp/autopkgtest.HBxd7k/import-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pyqt5/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.HBxd7k/import-artifacts', '/tmp/autopkgtest.HBxd7k/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [03:14:55]: @@@@@@@@@@@@@@@@@@@@ summary
+import               PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.HBxd7k
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 362295 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

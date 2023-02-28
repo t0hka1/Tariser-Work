@@ -1,0 +1,5 @@
+TEST: pkaction
+No action with action id unknown.action
+TEST: pkcheck
+Error checking for authorization org.freedesktop.policykit.exec: GDBus.Error:org.freedesktop.PolicyKit1.Error.NotAuthorized: Only trusted callers (e.g. uid 0 or an action owner) can use CheckAuthorization() for subjects belonging to other identities
+Authorization requires authentication and -u wasn't passed.

@@ -1,0 +1,4 @@
+unittests            FAIL badpkg
+blame: ./src/lazy-object-proxy_1.7.1-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-lazy-object-proxy 相匹配的软件包
+ (exit code 1)

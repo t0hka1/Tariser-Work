@@ -1,0 +1,375 @@
+autopkgtest: DBG: testbed init
+autopkgtest [05:35:51]: starting date: 2023-02-28
+autopkgtest [05:35:51]: version 5.20ubuntu1
+autopkgtest [05:35:51]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/python-imagesize_1.4.1-ok1.dsc -o ./testing/python-imagesize -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.lzn0gp6m/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.lzn0gp6m/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.lzn0gp6m/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.lzn0gp6m/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.lzn0gp6m/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.lzn0gp6m/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.lzn0gp6m/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.lzn0gp6m/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'07d62059-3edf-4f62-936f-d42545b2fe8e[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'07d62059-3edf-4f62-936f-d42545b2fe8e[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'07d62059-3edf-4f62-936f-d42545b2fe8e[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'07d62059-3edf-4f62-936f-d42545b2fe8e[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'07d62059-3edf-4f62-936f-d42545b2fe8e[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'07d62059-3edf-4f62-936f-d42545b2fe8e[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'07d62059-3edf-4f62-936f-d42545b2fe8e[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'07d62059-3edf-4f62-936f-d42545b2fe8e[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'07d62059-3edf-4f62-936f-d42545b2fe8e[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'07d62059-3edf-4f62-936f-d42545b2fe8e[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.lzn0gp6m/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'07d62059-3edf-4f62-936f-d42545b2fe8e[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'07d62059-3edf-4f62-936f-d42545b2fe8e[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.lzn0gp6m/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.lzn0gp6m/runcmd chmod 1777 /tmp/autopkgtest.Lyo8hO
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.Lyo8hO
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.lzn0gp6m/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:36:54]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Lyo8hO/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Lyo8hO/testbed-packages ./testing/python-imagesize/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Lyo8hO/testbed-packages ./testing/python-imagesize/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Lyo8hO/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-imagesize/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat </tmp/autopkgtest.Lyo8hO/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:37:00]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [05:37:00]: @@@@@@@@@@@@@@@@@@@@ source ./src/python-imagesize_1.4.1-ok1.dsc
+autopkgtest: DBG: blame += ./src/python-imagesize_1.4.1-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Lyo8hO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-imagesize_1.4.1-ok1.dsc /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-imagesize_1.4.1-ok1.dsc /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-imagesize_1.4.1-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat >/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Lyo8hO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-imagesize_1.4.1.orig.tar.gz /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-imagesize_1.4.1.orig.tar.gz /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-imagesize_1.4.1.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat >/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Lyo8hO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python-imagesize_1.4.1-ok1.debian.tar.xz /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python-imagesize_1.4.1-ok1.debian.tar.xz /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python-imagesize_1.4.1-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat >/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.Lyo8hO/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.Lyo8hO/build.XXX
++ builddir=/tmp/autopkgtest.Lyo8hO/build.0wc
++ cd /tmp/autopkgtest.Lyo8hO/build.0wc
++ dpkg-source -x /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.MyLAitvr/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年10月10日 星期一 09时11分53秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.Lyo8hO/python-imagesize_1.4.1-ok1.dsc
+dpkg-source: info: extracting python-imagesize in src
+dpkg-source: info: unpacking python-imagesize_1.4.1.orig.tar.gz
+dpkg-source: info: unpacking python-imagesize_1.4.1-ok1.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:37:16]: testing package python-imagesize version 1.4.1-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Lyo8hO/build.0wc/src/debian/ ./testing/python-imagesize/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Lyo8hO/build.0wc/src/debian/ ./testing/python-imagesize/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Lyo8hO/build.0wc/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-imagesize/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cd /tmp/autopkgtest.Lyo8hO/build.0wc/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-imagesize/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-imagesize
+autopkgtest: DBG: marked alternatives ['python3-imagesize'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3-imagesize path debian/tests/python3-imagesize command "None" restrictions ['allow-stderr'] features [] depends ['python3-all', 'python3-imagesize'] clicks [] installed clicks []
+autopkgtest [05:37:17]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Lyo8hO/build.0wc/src/ ./testing/python-imagesize/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Lyo8hO/build.0wc/src/ ./testing/python-imagesize/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Lyo8hO/build.0wc/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-imagesize/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cd /tmp/autopkgtest.Lyo8hO/build.0wc/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-imagesize/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency python3-all
+autopkgtest: DBG: processing dependency python3-imagesize
+autopkgtest: DBG: marked alternatives ['python3-imagesize'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name python3-imagesize path debian/tests/python3-imagesize command "None" restrictions ['allow-stderr'] features [] depends ['python3-all', 'python3-imagesize'] clicks [] installed clicks []
+autopkgtest [05:37:17]: test python3-imagesize: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['python3-all', 'python3-imagesize']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-all', 'python3-imagesize']
+autopkgtest: DBG: install-deps: satisfying python3-all, python3-imagesize
+autopkgtest: DBG: install-deps: architecture resolved: python3-all, python3-imagesize
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Lyo8hO'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python-imagesize/1-autopkgtest-satdep.deb /tmp/autopkgtest.Lyo8hO/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python-imagesize/1-autopkgtest-satdep.deb /tmp/autopkgtest.Lyo8hO/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Lyo8hO/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python-imagesize/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat >/tmp/autopkgtest.Lyo8hO/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Lyo8hO/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Lyo8hO/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  python3-all python3-imagesize
+下列【新】软件包将被安装：
+  python3-all python3-imagesize
+升级了 0 个软件包，新安装了 2 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 7,456 B 的归档。
+解压缩后会消耗 45.1 kB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-all riscv64 3.8.2-ok2 [916 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-imagesize all 1.4.1-ok1 [6,540 B]
+已下载 7,456 B，耗时 0秒 (16.2 kB/s)
+正在选中未选择的软件包 python3-all。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../python3-all_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-all (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-imagesize。
+准备解压 .../python3-imagesize_1.4.1-ok1_all.deb  ...
+正在解压 python3-imagesize (1.4.1-ok1) ...
+正在设置 python3-all (3.8.2-ok2) ...
+正在设置 python3-imagesize (1.4.1-ok1) ...
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-imagesize'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 python3-all python3-imagesize
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'python3-all', 'python3-imagesize'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155973 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Lyo8hO/python3-imagesize-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-packages.all ./testing/python-imagesize/python3-imagesize-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-packages.all ./testing/python-imagesize/python3-imagesize-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Lyo8hO/python3-imagesize-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-imagesize/python3-imagesize-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat </tmp/autopkgtest.Lyo8hO/python3-imagesize-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.Lyo8hO/build.0wc/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.Lyo8hO/build.0wc/src already exists
+autopkgtest [05:37:55]: test python3-imagesize: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.Lyo8hO/build.0wc/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.Lyo8hO/python3-imagesize-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.Lyo8hO/python3-imagesize-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.Lyo8hO/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.Lyo8hO/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.Lyo8hO/build.0wc/src/debian/tests/python3-imagesize; touch /tmp/autopkgtest.Lyo8hO/python3-imagesize-stdout /tmp/autopkgtest.Lyo8hO/python3-imagesize-stderr; /tmp/autopkgtest.Lyo8hO/build.0wc/src/debian/tests/python3-imagesize 2> >(tee -a /tmp/autopkgtest.Lyo8hO/python3-imagesize-stderr >&2) > >(tee -a /tmp/autopkgtest.Lyo8hO/python3-imagesize-stdout);'], kind test, sout raw, serr raw, env []
++ cp -r test /tmp/autopkgtest.Lyo8hO/autopkgtest_tmp
++ cd /tmp/autopkgtest.Lyo8hO/autopkgtest_tmp
++ py3versions -s
++ python3.8 -m unittest discover -v test
+test_bigendian_tiff (test_get.GetTest) ... ok
+test_bigendian_tiff_bytes (test_get.GetTest) ... ok
+test_bigendian_tiff_path (test_get.GetTest) ... ok
+test_littleendian_tiff (test_get.GetTest) ... ok
+test_littleendian_tiff_bytes (test_get.GetTest) ... ok
+test_littleendian_tiff_path (test_get.GetTest) ... ok
+test_load_gif (test_get.GetTest) ... ok
+test_load_gif_bytes (test_get.GetTest) ... ok
+test_load_gif_path (test_get.GetTest) ... ok
+test_load_jpeg (test_get.GetTest) ... ok
+test_load_jpeg2000 (test_get.GetTest) ... ok
+test_load_jpeg2000_bytes (test_get.GetTest) ... ok
+test_load_jpeg2000_path (test_get.GetTest) ... ok
+test_load_jpeg_bytes (test_get.GetTest) ... ok
+test_load_jpeg_path (test_get.GetTest) ... ok
+test_load_png (test_get.GetTest) ... ok
+test_load_png_bytes (test_get.GetTest) ... ok
+test_load_png_filelike (test_get.GetTest)
+test_load_png_filelike ... ok
+test_load_png_path (test_get.GetTest) ... ok
+test_load_svg (test_get.GetTest) ... ok
+test_load_svg_bytes (test_get.GetTest) ... ok
+test_load_svg_path (test_get.GetTest) ... ok
+test_netpbm (test_get.GetTest) ... ok
+test_bigendian_tiff (test_getdpi.GetDPITest) ... ok
+test_bigendian_tiff_bytes (test_getdpi.GetDPITest) ... ok
+test_bigendian_tiff_path (test_getdpi.GetDPITest) ... ok
+test_gif (test_getdpi.GetDPITest) ... ok
+test_gif_bytes (test_getdpi.GetDPITest) ... ok
+test_gif_path (test_getdpi.GetDPITest) ... ok
+test_jpeg (test_getdpi.GetDPITest) ... ok
+test_jpeg2000 (test_getdpi.GetDPITest) ... ok
+test_jpeg2000_bytes (test_getdpi.GetDPITest) ... ok
+test_jpeg2000_path (test_getdpi.GetDPITest) ... ok
+test_jpeg_bytes (test_getdpi.GetDPITest) ... ok
+test_jpeg_path (test_getdpi.GetDPITest) ... ok
+test_littleendian_tiff (test_getdpi.GetDPITest) ... ok
+test_littleendian_tiff_bytes (test_getdpi.GetDPITest) ... ok
+test_littleendian_tiff_path (test_getdpi.GetDPITest) ... ok
+test_png (test_getdpi.GetDPITest) ... ok
+test_png_bytes (test_getdpi.GetDPITest) ... ok
+test_png_path (test_getdpi.GetDPITest) ... ok
+test_svg (test_getdpi.GetDPITest) ... ok
+test_svg_bytes (test_getdpi.GetDPITest) ... ok
+test_svg_path (test_getdpi.GetDPITest) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.122s
+
+OK
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [05:38:03]: test python3-imagesize: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-stdout ./testing/python-imagesize/python3-imagesize-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-stdout ./testing/python-imagesize/python3-imagesize-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Lyo8hO/python3-imagesize-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-imagesize/python3-imagesize-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat </tmp/autopkgtest.Lyo8hO/python3-imagesize-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-stderr ./testing/python-imagesize/python3-imagesize-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-stderr ./testing/python-imagesize/python3-imagesize-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Lyo8hO/python3-imagesize-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-imagesize/python3-imagesize-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cat </tmp/autopkgtest.Lyo8hO/python3-imagesize-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+python3-imagesize    PASS
+autopkgtest [05:38:04]: test python3-imagesize:  - - - - - - - - - - results - - - - - - - - - -
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-artifacts/ ./testing/python-imagesize/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Lyo8hO/python3-imagesize-artifacts/ ./testing/python-imagesize/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lzn0gp6m/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Lyo8hO/python3-imagesize-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-imagesize/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lzn0gp6m/runcmd sh -ec cd /tmp/autopkgtest.Lyo8hO/python3-imagesize-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-imagesize/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.Lyo8hO/python3-imagesize-artifacts', '/tmp/autopkgtest.Lyo8hO/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [05:38:06]: @@@@@@@@@@@@@@@@@@@@ summary
+python3-imagesize    PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.Lyo8hO
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 396954 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

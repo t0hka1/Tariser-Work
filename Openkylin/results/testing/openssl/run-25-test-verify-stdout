@@ -1,0 +1,254 @@
+1..127
+../../test/certs/ee-cert.pem: OK
+ok 1 - accept compat trust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 2 - fail trusted non-ca root
+error ../../test/certs/ee-cert.pem: verification failed
+ok 3 - fail server trust non-ca root
+error ../../test/certs/ee-cert.pem: verification failed
+ok 4 - fail wildcard trust non-ca root
+error ../../test/certs/ee-cert.pem: verification failed
+ok 5 - fail wrong root key
+error ../../test/certs/ee-cert.pem: verification failed
+ok 6 - fail wrong root DN
+../../test/certs/ee-cert.pem: OK
+ok 7 - accept server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 8 - fail client purpose
+../../test/certs/ee-cert.pem: OK
+ok 9 - accept server trust
+../../test/certs/ee-cert.pem: OK
+ok 10 - accept server trust with server purpose
+../../test/certs/ee-cert.pem: OK
+ok 11 - accept server trust with client purpose
+../../test/certs/ee-cert.pem: OK
+ok 12 - accept wildcard trust
+../../test/certs/ee-cert.pem: OK
+ok 13 - accept wildcard trust with server purpose
+../../test/certs/ee-cert.pem: OK
+ok 14 - accept wildcard trust with client purpose
+../../test/certs/ee-cert.pem: OK
+ok 15 - accept client mistrust
+../../test/certs/ee-cert.pem: OK
+ok 16 - accept client mistrust with server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 17 - fail client mistrust with client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 18 - fail client trust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 19 - fail client trust with server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 20 - fail client trust with client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 21 - fail rejected EKU
+error ../../test/certs/ee-cert.pem: verification failed
+ok 22 - fail server mistrust with server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 23 - fail server mistrust with client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 24 - fail wildcard mistrust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 25 - fail wildcard mistrust with server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 26 - fail wildcard mistrust with client purpose
+../../test/certs/ee-cert.pem: OK
+ok 27 - accept trusted-first path
+../../test/certs/ee-cert.pem: OK
+ok 28 - accept trusted-first path with server trust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 29 - fail trusted-first path with server mistrust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 30 - fail trusted-first path with client trust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 31 - fail non-CA untrusted intermediate
+error ../../test/certs/ee-cert.pem: verification failed
+ok 32 - fail non-CA untrusted intermediate
+error ../../test/certs/ee-cert.pem: verification failed
+ok 33 - fail non-CA trust-store intermediate
+error ../../test/certs/ee-cert.pem: verification failed
+ok 34 - fail non-CA trust-store intermediate
+error ../../test/certs/ee-cert.pem: verification failed
+ok 35 - fail non-CA server trust intermediate
+error ../../test/certs/ee-cert.pem: verification failed
+ok 36 - fail non-CA wildcard trust intermediate
+error ../../test/certs/ee-cert.pem: verification failed
+ok 37 - fail wrong intermediate CA key
+error ../../test/certs/ee-cert.pem: verification failed
+ok 38 - fail wrong intermediate CA DN
+error ../../test/certs/ee-cert.pem: verification failed
+ok 39 - fail wrong intermediate CA issuer
+error ../../test/certs/ee-cert.pem: verification failed
+ok 40 - fail untrusted partial chain
+../../test/certs/ee-cert.pem: OK
+ok 41 - accept trusted partial chain
+../../test/certs/ee-cert.pem: OK
+ok 42 - accept partial chain with server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 43 - fail partial chain with client purpose
+../../test/certs/ee-cert.pem: OK
+ok 44 - accept server trust partial chain
+../../test/certs/ee-cert.pem: OK
+ok 45 - accept server trust client purpose partial chain
+../../test/certs/ee-cert.pem: OK
+ok 46 - accept client mistrust partial chain
+../../test/certs/ee-cert.pem: OK
+ok 47 - accept wildcard trust partial chain
+error ../../test/certs/ee-cert.pem: verification failed
+ok 48 - fail untrusted partial issuer with ignored server trust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 49 - fail server mistrust partial chain
+error ../../test/certs/ee-cert.pem: verification failed
+ok 50 - fail client trust partial chain
+error ../../test/certs/ee-cert.pem: verification failed
+ok 51 - fail wildcard mistrust partial chain
+../../test/certs/ee-cert.pem: OK
+ok 52 - accept server trust
+../../test/certs/ee-cert.pem: OK
+ok 53 - accept wildcard trust
+../../test/certs/ee-cert.pem: OK
+ok 54 - accept server purpose
+../../test/certs/ee-cert.pem: OK
+ok 55 - accept server trust and purpose
+../../test/certs/ee-cert.pem: OK
+ok 56 - accept wildcard trust and server purpose
+../../test/certs/ee-cert.pem: OK
+ok 57 - accept client mistrust and server purpose
+../../test/certs/ee-cert.pem: OK
+ok 58 - accept server trust and client purpose
+../../test/certs/ee-cert.pem: OK
+ok 59 - accept wildcard trust and client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 60 - fail client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 61 - fail wildcard mistrust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 62 - fail server mistrust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 63 - fail client trust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 64 - fail client trust and server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 65 - fail client trust and client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 66 - fail server mistrust and client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 67 - fail client mistrust and client purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 68 - fail server mistrust and server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 69 - fail wildcard mistrust and server purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 70 - fail wildcard mistrust and client purpose
+../../test/certs/ee-client.pem: OK
+ok 71 - accept client chain
+error ../../test/certs/ee-client.pem: verification failed
+ok 72 - fail server leaf purpose
+error ../../test/certs/ee-cert.pem: verification failed
+ok 73 - fail client leaf purpose
+error ../../test/certs/ee-cert2.pem: verification failed
+ok 74 - fail wrong intermediate CA key
+error ../../test/certs/ee-name2.pem: verification failed
+ok 75 - fail wrong intermediate CA DN
+error ../../test/certs/ee-expired.pem: verification failed
+ok 76 - fail expired leaf
+../../test/certs/ee-cert.pem: OK
+ok 77 - accept last-resort direct leaf match
+../../test/certs/ee-client.pem: OK
+ok 78 - accept last-resort direct leaf match
+error ../../test/certs/ee-cert.pem: verification failed
+ok 79 - fail last-resort direct leaf non-match
+../../test/certs/ee-cert.pem: OK
+ok 80 - accept direct match with server trust
+error ../../test/certs/ee-cert.pem: verification failed
+ok 81 - fail direct match with server mistrust
+../../test/certs/ee-client.pem: OK
+ok 82 - accept direct match with client trust
+error ../../test/certs/ee-client.pem: verification failed
+ok 83 - reject direct match with client mistrust
+error ../../test/certs/pc1-cert.pem: verification failed
+ok 84 - fail to accept proxy cert without -allow_proxy_certs
+../../test/certs/pc1-cert.pem: OK
+ok 85 - accept proxy cert 1
+../../test/certs/pc2-cert.pem: OK
+ok 86 - accept proxy cert 2
+error ../../test/certs/bad-pc3-cert.pem: verification failed
+ok 87 - fail proxy cert with incorrect subject
+error ../../test/certs/bad-pc4-cert.pem: verification failed
+ok 88 - fail proxy cert with incorrect pathlen
+../../test/certs/pc5-cert.pem: OK
+ok 89 - accept proxy cert missing proxy policy
+ok 90 - failed proxy cert where last CN was added as a multivalue RDN component
+../../test/certs/ee-cert.pem: OK
+ok 91 - accept RSA 2048 chain at auth level 2
+error ../../test/certs/ee-cert.pem: verification failed
+ok 92 - reject RSA 2048 root at auth level 3
+../../test/certs/ee-cert.pem: OK
+ok 93 - accept RSA 768 root at auth level 0
+error ../../test/certs/ee-cert.pem: verification failed
+ok 94 - reject RSA 768 root at auth level 1
+../../test/certs/ee-cert-768i.pem: OK
+ok 95 - accept RSA 768 intermediate at auth level 0
+error ../../test/certs/ee-cert-768i.pem: verification failed
+ok 96 - reject RSA 768 intermediate at auth level 1
+../../test/certs/ee-cert-768.pem: OK
+ok 97 - accept RSA 768 leaf at auth level 0
+error ../../test/certs/ee-cert-768.pem: verification failed
+ok 98 - reject RSA 768 leaf at auth level 1
+../../test/certs/ee-cert.pem: OK
+ok 99 - accept md5 self-signed TA at auth level 2
+../../test/certs/ee-cert.pem: OK
+ok 100 - accept md5 intermediate TA at auth level 2
+../../test/certs/ee-cert.pem: OK
+ok 101 - accept md5 intermediate at auth level 0
+error ../../test/certs/ee-cert.pem: verification failed
+ok 102 - reject md5 intermediate at auth level 1
+../../test/certs/ee-cert-md5.pem: OK
+ok 103 - accept md5 leaf at auth level 0
+error ../../test/certs/ee-cert-md5.pem: verification failed
+ok 104 - reject md5 leaf at auth level 1
+../../test/certs/ee-cert.pem: OK
+ok 105 - accept chain with verify_depth 2
+../../test/certs/ee-cert.pem: OK
+ok 106 - accept chain with verify_depth 1
+error ../../test/certs/ee-cert.pem: verification failed
+ok 107 - accept chain with verify_depth 0
+../../test/certs/ee-cert.pem: OK
+ok 108 - accept md5 intermediate TA with verify_depth 0
+../../test/certs/alt1-cert.pem: OK
+ok 109 - Name Constraints everything permitted
+../../test/certs/alt2-cert.pem: OK
+ok 110 - Name Constraints nothing excluded
+../../test/certs/alt3-cert.pem: OK
+ok 111 - Name Constraints nested test all permitted
+error ../../test/certs/badalt1-cert.pem: verification failed
+ok 112 - Name Constraints hostname not permitted
+error ../../test/certs/badalt2-cert.pem: verification failed
+ok 113 - Name Constraints hostname excluded
+error ../../test/certs/badalt3-cert.pem: verification failed
+ok 114 - Name Constraints email address not permitted
+error ../../test/certs/badalt4-cert.pem: verification failed
+ok 115 - Name Constraints subject email address not permitted
+error ../../test/certs/badalt5-cert.pem: verification failed
+ok 116 - Name Constraints IP address not permitted
+error ../../test/certs/badalt6-cert.pem: verification failed
+ok 117 - Name Constraints CN hostname not permitted
+error ../../test/certs/badalt7-cert.pem: verification failed
+ok 118 - Name Constraints CN BMPSTRING hostname not permitted
+error ../../test/certs/badalt8-cert.pem: verification failed
+ok 119 - Name constaints nested DNS name not permitted 1
+error ../../test/certs/badalt9-cert.pem: verification failed
+ok 120 - Name constaints nested DNS name not permitted 2
+error ../../test/certs/badalt10-cert.pem: verification failed
+ok 121 - Name constaints nested DNS name excluded
+error ../../test/certs/many-names1.pem: verification failed
+ok 122 - Too many names and constraints to check (1)
+error ../../test/certs/many-names2.pem: verification failed
+ok 123 - Too many names and constraints to check (2)
+error ../../test/certs/many-names3.pem: verification failed
+ok 124 - Too many names and constraints to check (3)
+../../test/certs/some-names1.pem: OK
+ok 125 - Not too many names and constraints to check (1)
+../../test/certs/some-names2.pem: OK
+ok 126 - Not too many names and constraints to check (2)
+../../test/certs/some-names2.pem: OK
+ok 127 - Not too many names and constraints to check (3)

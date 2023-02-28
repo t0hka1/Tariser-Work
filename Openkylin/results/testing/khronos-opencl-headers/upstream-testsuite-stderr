@@ -1,0 +1,64 @@
++ cp -a tests/ /tmp/autopkgtest.1qGVpR/autopkgtest_tmp
++ cd /tmp/autopkgtest.1qGVpR/autopkgtest_tmp
++ cat
++ mkdir build
++ cd build
++ cmake -Wno-dev ..
++ make
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_gl_ext.h.c:19:
+/usr/include/CL/cl_gl_ext.h:18:9: note: #pragma message: All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.
+   18 | #pragma message("All OpenGL-related extensions have been moved into cl_gl.h.  Please include cl_gl.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
+In file included from /tmp/autopkgtest.1qGVpR/autopkgtest_tmp/tests/test_cl_ext_intel.h.c:19:
+/usr/include/CL/cl_ext_intel.h:19:9: note: #pragma message: The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.
+   19 | #pragma message("The Intel extensions have been moved into cl_ext.h.  Please include cl_ext.h directly.")
+      |         ^~~~~~~
++ make test

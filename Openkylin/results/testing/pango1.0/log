@@ -1,0 +1,963 @@
+autopkgtest: DBG: testbed init
+autopkgtest [17:13:38]: starting date: 2023-02-27
+autopkgtest [17:13:38]: version 5.20ubuntu1
+autopkgtest [17:13:38]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/pango1.0_1.46.2-ok2.dsc -o ./testing/pango1.0 -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu._yd2ree1/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu._yd2ree1/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu._yd2ree1/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu._yd2ree1/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu._yd2ree1/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu._yd2ree1/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu._yd2ree1/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu._yd2ree1/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'f857f1de-41e0-4edd-9d94-7422f45aed0a[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'f857f1de-41e0-4edd-9d94-7422f45aed0a[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'f857f1de-41e0-4edd-9d94-7422f45aed0a[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'f857f1de-41e0-4edd-9d94-7422f45aed0a[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'f857f1de-41e0-4edd-9d94-7422f45aed0a[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'f857f1de-41e0-4edd-9d94-7422f45aed0a[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'f857f1de-41e0-4edd-9d94-7422f45aed0a[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'f857f1de-41e0-4edd-9d94-7422f45aed0a[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'f857f1de-41e0-4edd-9d94-7422f45aed0a[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'f857f1de-41e0-4edd-9d94-7422f45aed0a[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._yd2ree1/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'f857f1de-41e0-4edd-9d94-7422f45aed0a[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'f857f1de-41e0-4edd-9d94-7422f45aed0a[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu._yd2ree1/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._yd2ree1/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._yd2ree1/runcmd chmod 1777 /tmp/autopkgtest.M3Zqib
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.M3Zqib
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu._yd2ree1/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:14:39]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.M3Zqib/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/testbed-packages ./testing/pango1.0/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/testbed-packages ./testing/pango1.0/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:14:44]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [17:14:45]: @@@@@@@@@@@@@@@@@@@@ source ./src/pango1.0_1.46.2-ok2.dsc
+autopkgtest: DBG: blame += ./src/pango1.0_1.46.2-ok2.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.M3Zqib'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pango1.0_1.46.2-ok2.dsc /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pango1.0_1.46.2-ok2.dsc /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pango1.0_1.46.2-ok2.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat >/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.M3Zqib'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pango1.0_1.46.2.orig.tar.xz /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2.orig.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pango1.0_1.46.2.orig.tar.xz /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2.orig.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2.orig.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pango1.0_1.46.2.orig.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat >/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2.orig.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2.orig.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.M3Zqib'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pango1.0_1.46.2-ok2.debian.tar.xz /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pango1.0_1.46.2-ok2.debian.tar.xz /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pango1.0_1.46.2-ok2.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat >/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.M3Zqib/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.M3Zqib/build.XXX
++ builddir=/tmp/autopkgtest.M3Zqib/build.3Qg
++ cd /tmp/autopkgtest.M3Zqib/build.3Qg
++ dpkg-source -x /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.ueNqaLju/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2023年02月07日 星期二 07时34分48秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.M3Zqib/pango1.0_1.46.2-ok2.dsc
+dpkg-source: info: extracting pango1.0 in src
+dpkg-source: info: unpacking pango1.0_1.46.2.orig.tar.xz
+dpkg-source: info: unpacking pango1.0_1.46.2-ok2.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 1-sync-upstream-patches.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:15:01]: testing package pango1.0 version 1.46.2-ok2
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/ ./testing/pango1.0/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/ ./testing/pango1.0/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pango1.0/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cd /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pango1.0/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libpango1.0-dev
+autopkgtest: DBG: marked alternatives ['libpango1.0-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build path debian/tests/build command "None" restrictions ['superficial'] features [] depends ['build-essential', 'libpango1.0-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency locales | locales-all
+autopkgtest: DBG: processing dependency pango1.0-tests
+autopkgtest: DBG: marked alternatives ['pango1.0-tests'] as a synthesised dependency
+autopkgtest: DBG: processing dependency dbus (>= 1.8)
+autopkgtest: DBG: processing dependency xauth
+autopkgtest: DBG: processing dependency xvfb
+autopkgtest: DBG: processing dependency gnome-desktop-testing
+autopkgtest: DBG: Test defined: name installed-tests path debian/tests/installed-tests command "None" restrictions ['allow-stderr'] features [] depends ['locales | locales-all', 'pango1.0-tests', 'dbus (>= 1.8)', 'xauth', 'xvfb', 'gnome-desktop-testing'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency gir1.2-gdk-3.0
+autopkgtest: DBG: processing dependency gir1.2-pango-1.0
+autopkgtest: DBG: marked alternatives ['gir1.2-pango-1.0'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-gi
+autopkgtest: DBG: processing dependency xauth
+autopkgtest: DBG: processing dependency xvfb
+autopkgtest: DBG: Test defined: name python3-gi path debian/tests/python3-gi command "None" restrictions ['allow-stderr', 'superficial'] features [] depends ['gir1.2-gdk-3.0', 'gir1.2-pango-1.0', 'python3-gi', 'xauth', 'xvfb'] clicks [] installed clicks []
+autopkgtest [17:15:01]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/build.3Qg/src/ ./testing/pango1.0/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/build.3Qg/src/ ./testing/pango1.0/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.M3Zqib/build.3Qg/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pango1.0/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cd /tmp/autopkgtest.M3Zqib/build.3Qg/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pango1.0/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libpango1.0-dev
+autopkgtest: DBG: marked alternatives ['libpango1.0-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build path debian/tests/build command "None" restrictions ['superficial'] features [] depends ['build-essential', 'libpango1.0-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency locales | locales-all
+autopkgtest: DBG: processing dependency pango1.0-tests
+autopkgtest: DBG: marked alternatives ['pango1.0-tests'] as a synthesised dependency
+autopkgtest: DBG: processing dependency dbus (>= 1.8)
+autopkgtest: DBG: processing dependency xauth
+autopkgtest: DBG: processing dependency xvfb
+autopkgtest: DBG: processing dependency gnome-desktop-testing
+autopkgtest: DBG: Test defined: name installed-tests path debian/tests/installed-tests command "None" restrictions ['allow-stderr'] features [] depends ['locales | locales-all', 'pango1.0-tests', 'dbus (>= 1.8)', 'xauth', 'xvfb', 'gnome-desktop-testing'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency gir1.2-gdk-3.0
+autopkgtest: DBG: processing dependency gir1.2-pango-1.0
+autopkgtest: DBG: marked alternatives ['gir1.2-pango-1.0'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python3-gi
+autopkgtest: DBG: processing dependency xauth
+autopkgtest: DBG: processing dependency xvfb
+autopkgtest: DBG: Test defined: name python3-gi path debian/tests/python3-gi command "None" restrictions ['allow-stderr', 'superficial'] features [] depends ['gir1.2-gdk-3.0', 'gir1.2-pango-1.0', 'python3-gi', 'xauth', 'xvfb'] clicks [] installed clicks []
+autopkgtest [17:15:03]: test build: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['build-essential', 'libpango1.0-dev', 'pkg-config']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'libpango1.0-dev', 'pkg-config']
+autopkgtest: DBG: install-deps: satisfying build-essential, libpango1.0-dev, pkg-config
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, libpango1.0-dev, pkg-config
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.M3Zqib'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/pango1.0/1-autopkgtest-satdep.deb /tmp/autopkgtest.M3Zqib/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/pango1.0/1-autopkgtest-satdep.deb /tmp/autopkgtest.M3Zqib/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.M3Zqib/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/pango1.0/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat >/tmp/autopkgtest.M3Zqib/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.M3Zqib/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.M3Zqib/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 gir1.2-harfbuzz-0.0 gir1.2-pango-1.0
+  icu-devtools libcairo-script-interpreter2 libcairo2-dev libcc1-0
+  libdatrie-dev libexpat1 libexpat1-dev libfontconfig1-dev libfreetype-dev
+  libfreetype6-dev libfribidi-dev libgcc-9-dev libgraphite2-dev
+  libharfbuzz-dev libharfbuzz-gobject0 libice-dev libicu-dev libpango-1.0-0
+  libpango1.0-dev libpangocairo-1.0-0 libpangoft2-1.0-0 libpangoxft-1.0-0
+  libpixman-1-dev libpng-dev libpthread-stubs0-dev libsm-dev libstdc++-9-dev
+  libthai-dev libx11-dev libxau-dev libxcb-render0-dev libxcb-shm0-dev
+  libxcb1-dev libxdmcp-dev libxext-dev libxft-dev libxrender-dev
+  pango1.0-tools x11proto-core-dev x11proto-dev xorg-sgml-doctools xtrans-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libcairo2-doc libdatrie-doc freetype2-doc
+  libgraphite2-utils libice-doc icu-doc imagemagick libpango1.0-doc libsm-doc
+  libstdc++-9-doc libthai-doc libx11-doc libxcb-doc libxext-doc
+推荐安装：
+  libpng-tools
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 gir1.2-harfbuzz-0.0 icu-devtools
+  libcairo-script-interpreter2 libcairo2-dev libcc1-0 libdatrie-dev
+  libexpat1-dev libfontconfig1-dev libfreetype-dev libfreetype6-dev
+  libfribidi-dev libgcc-9-dev libgraphite2-dev libharfbuzz-dev
+  libharfbuzz-gobject0 libice-dev libicu-dev libpango1.0-dev libpixman-1-dev
+  libpng-dev libpthread-stubs0-dev libsm-dev libstdc++-9-dev libthai-dev
+  libx11-dev libxau-dev libxcb-render0-dev libxcb-shm0-dev libxcb1-dev
+  libxdmcp-dev libxext-dev libxft-dev libxrender-dev pango1.0-tools
+  x11proto-core-dev x11proto-dev xorg-sgml-doctools xtrans-dev
+下列软件包将被升级：
+  cpp gir1.2-pango-1.0 libexpat1 libpango-1.0-0 libpangocairo-1.0-0
+  libpangoft2-1.0-0 libpangoxft-1.0-0
+升级了 7 个软件包，新安装了 43 个软件包，要卸载 0 个软件包，有 131 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 42.7 MB 的归档。
+解压缩后会消耗 234 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gir1.2-harfbuzz-0.0 riscv64 2.6.4-ok1 [26.4 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gir1.2-pango-1.0 riscv64 1.46.2-ok2 [31.0 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpangoxft-1.0-0 riscv64 1.46.2-ok2 [16.8 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpangoft2-1.0-0 riscv64 1.46.2-ok2 [33.6 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpango-1.0-0 riscv64 1.46.2-ok2 [165 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpangocairo-1.0-0 riscv64 1.46.2-ok2 [23.1 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcairo-script-interpreter2 riscv64 1.16.0-ok1 [52.5 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1 riscv64 2.2.9-ok3 [69.2 kB]
+获取:18 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1-dev riscv64 2.2.9-ok3 [214 kB]
+获取:19 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpng-dev riscv64 1.6.37-ok1 [287 kB]
+获取:20 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libfreetype-dev riscv64 2.10.1-ok1 [1,099 kB]
+获取:21 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libfreetype6-dev riscv64 2.10.1-ok1 [9,886 B]
+获取:22 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libfontconfig1-dev riscv64 2.13.1-ok1 [850 kB]
+获取:23 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 xorg-sgml-doctools all 1:1.11-ok1 [9,766 B]
+获取:24 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 x11proto-dev all 2022.2-ok3 [613 kB]
+获取:25 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 x11proto-core-dev all 2022.2-ok3 [12.8 kB]
+获取:26 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxau-dev riscv64 1:1.0.9-ok1 [12.8 kB]
+获取:27 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpthread-stubs0-dev riscv64 0.4-ok2 [4,242 B]
+获取:28 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxdmcp-dev riscv64 1:1.1.3-ok1 [31.7 kB]
+获取:29 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxcb1-dev riscv64 1.14-ok1 [163 kB]
+获取:30 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 xtrans-dev all 1.4.0-ok1 [68.5 kB]
+获取:31 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libx11-dev riscv64 2:1.6.9-ok1 [1,244 kB]
+获取:32 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxrender-dev riscv64 1:0.9.10-ok1 [48.5 kB]
+获取:33 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxext-dev riscv64 2:1.3.4-ok2 [126 kB]
+获取:34 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libice-dev riscv64 2:1.0.10-ok1 [87.5 kB]
+获取:35 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libsm-dev riscv64 2:1.2.3-ok1 [30.3 kB]
+获取:36 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpixman-1-dev riscv64 0.38.4-ok3 [638 kB]
+获取:37 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxcb-render0-dev riscv64 1.14-ok1 [35.9 kB]
+获取:38 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxcb-shm0-dev riscv64 1.14-ok1 [9,474 B]
+获取:39 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcairo2-dev riscv64 1.16.0-ok1 [1,711 kB]
+获取:40 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libfribidi-dev riscv64 1.0.8-ok1 [67.8 kB]
+获取:41 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libharfbuzz-gobject0 riscv64 2.6.4-ok1 [17.5 kB]
+获取:42 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgraphite2-dev riscv64 1.3.13-ok1 [14.7 kB]
+获取:43 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 icu-devtools riscv64 66.1-ok1 [178 kB]
+获取:44 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libicu-dev riscv64 66.1-ok1 [12.5 MB]
+获取:45 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libharfbuzz-dev riscv64 2.6.4-ok1 [1,879 kB]
+获取:46 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libdatrie-dev riscv64 0.2.12-ok1 [30.2 kB]
+获取:47 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libthai-dev riscv64 0.1.28-ok1 [37.2 kB]
+获取:48 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libxft-dev riscv64 2.3.3-ok1 [86.9 kB]
+获取:49 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 pango1.0-tools riscv64 1.46.2-ok2 [25.7 kB]
+获取:50 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpango1.0-dev riscv64 1.46.2-ok2 [142 kB]
+已下载 42.7 MB，耗时 1分 24秒 (511 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../01-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../02-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../03-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../04-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../05-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../06-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../07-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../08-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在选中未选择的软件包 gir1.2-harfbuzz-0.0:riscv64。
+准备解压 .../09-gir1.2-harfbuzz-0.0_2.6.4-ok1_riscv64.deb  ...
+正在解压 gir1.2-harfbuzz-0.0:riscv64 (2.6.4-ok1) ...
+准备解压 .../10-gir1.2-pango-1.0_1.46.2-ok2_riscv64.deb  ...
+正在解压 gir1.2-pango-1.0:riscv64 (1.46.2-ok2) 并覆盖 (1.44.7-ok1) ...
+准备解压 .../11-libpangoxft-1.0-0_1.46.2-ok2_riscv64.deb  ...
+正在解压 libpangoxft-1.0-0:riscv64 (1.46.2-ok2) 并覆盖 (1.44.7-ok1) ...
+准备解压 .../12-libpangoft2-1.0-0_1.46.2-ok2_riscv64.deb  ...
+正在解压 libpangoft2-1.0-0:riscv64 (1.46.2-ok2) 并覆盖 (1.44.7-ok1) ...
+准备解压 .../13-libpango-1.0-0_1.46.2-ok2_riscv64.deb  ...
+正在解压 libpango-1.0-0:riscv64 (1.46.2-ok2) 并覆盖 (1.44.7-ok1) ...
+准备解压 .../14-libpangocairo-1.0-0_1.46.2-ok2_riscv64.deb  ...
+正在解压 libpangocairo-1.0-0:riscv64 (1.46.2-ok2) 并覆盖 (1.44.7-ok1) ...
+正在选中未选择的软件包 libcairo-script-interpreter2:riscv64。
+准备解压 .../15-libcairo-script-interpreter2_1.16.0-ok1_riscv64.deb  ...
+正在解压 libcairo-script-interpreter2:riscv64 (1.16.0-ok1) ...
+准备解压 .../16-libexpat1_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1:riscv64 (2.2.9-ok3) 并覆盖 (2.2.9-ok1) ...
+正在选中未选择的软件包 libexpat1-dev:riscv64。
+准备解压 .../17-libexpat1-dev_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1-dev:riscv64 (2.2.9-ok3) ...
+正在选中未选择的软件包 libpng-dev:riscv64。
+准备解压 .../18-libpng-dev_1.6.37-ok1_riscv64.deb  ...
+正在解压 libpng-dev:riscv64 (1.6.37-ok1) ...
+正在选中未选择的软件包 libfreetype-dev:riscv64。
+准备解压 .../19-libfreetype-dev_2.10.1-ok1_riscv64.deb  ...
+正在解压 libfreetype-dev:riscv64 (2.10.1-ok1) ...
+正在选中未选择的软件包 libfreetype6-dev:riscv64。
+准备解压 .../20-libfreetype6-dev_2.10.1-ok1_riscv64.deb  ...
+正在解压 libfreetype6-dev:riscv64 (2.10.1-ok1) ...
+正在选中未选择的软件包 libfontconfig1-dev:riscv64。
+准备解压 .../21-libfontconfig1-dev_2.13.1-ok1_riscv64.deb  ...
+正在解压 libfontconfig1-dev:riscv64 (2.13.1-ok1) ...
+正在选中未选择的软件包 xorg-sgml-doctools。
+准备解压 .../22-xorg-sgml-doctools_1%3a1.11-ok1_all.deb  ...
+正在解压 xorg-sgml-doctools (1:1.11-ok1) ...
+正在选中未选择的软件包 x11proto-dev。
+准备解压 .../23-x11proto-dev_2022.2-ok3_all.deb  ...
+正在解压 x11proto-dev (2022.2-ok3) ...
+正在选中未选择的软件包 x11proto-core-dev。
+准备解压 .../24-x11proto-core-dev_2022.2-ok3_all.deb  ...
+正在解压 x11proto-core-dev (2022.2-ok3) ...
+正在选中未选择的软件包 libxau-dev:riscv64。
+准备解压 .../25-libxau-dev_1%3a1.0.9-ok1_riscv64.deb  ...
+正在解压 libxau-dev:riscv64 (1:1.0.9-ok1) ...
+正在选中未选择的软件包 libpthread-stubs0-dev:riscv64。
+准备解压 .../26-libpthread-stubs0-dev_0.4-ok2_riscv64.deb  ...
+正在解压 libpthread-stubs0-dev:riscv64 (0.4-ok2) ...
+正在选中未选择的软件包 libxdmcp-dev:riscv64。
+准备解压 .../27-libxdmcp-dev_1%3a1.1.3-ok1_riscv64.deb  ...
+正在解压 libxdmcp-dev:riscv64 (1:1.1.3-ok1) ...
+正在选中未选择的软件包 libxcb1-dev:riscv64。
+准备解压 .../28-libxcb1-dev_1.14-ok1_riscv64.deb  ...
+正在解压 libxcb1-dev:riscv64 (1.14-ok1) ...
+正在选中未选择的软件包 xtrans-dev。
+准备解压 .../29-xtrans-dev_1.4.0-ok1_all.deb  ...
+正在解压 xtrans-dev (1.4.0-ok1) ...
+正在选中未选择的软件包 libx11-dev:riscv64。
+准备解压 .../30-libx11-dev_2%3a1.6.9-ok1_riscv64.deb  ...
+正在解压 libx11-dev:riscv64 (2:1.6.9-ok1) ...
+正在选中未选择的软件包 libxrender-dev:riscv64。
+准备解压 .../31-libxrender-dev_1%3a0.9.10-ok1_riscv64.deb  ...
+正在解压 libxrender-dev:riscv64 (1:0.9.10-ok1) ...
+正在选中未选择的软件包 libxext-dev:riscv64。
+准备解压 .../32-libxext-dev_2%3a1.3.4-ok2_riscv64.deb  ...
+正在解压 libxext-dev:riscv64 (2:1.3.4-ok2) ...
+正在选中未选择的软件包 libice-dev:riscv64。
+准备解压 .../33-libice-dev_2%3a1.0.10-ok1_riscv64.deb  ...
+正在解压 libice-dev:riscv64 (2:1.0.10-ok1) ...
+正在选中未选择的软件包 libsm-dev:riscv64。
+准备解压 .../34-libsm-dev_2%3a1.2.3-ok1_riscv64.deb  ...
+正在解压 libsm-dev:riscv64 (2:1.2.3-ok1) ...
+正在选中未选择的软件包 libpixman-1-dev:riscv64。
+准备解压 .../35-libpixman-1-dev_0.38.4-ok3_riscv64.deb  ...
+正在解压 libpixman-1-dev:riscv64 (0.38.4-ok3) ...
+正在选中未选择的软件包 libxcb-render0-dev:riscv64。
+准备解压 .../36-libxcb-render0-dev_1.14-ok1_riscv64.deb  ...
+正在解压 libxcb-render0-dev:riscv64 (1.14-ok1) ...
+正在选中未选择的软件包 libxcb-shm0-dev:riscv64。
+准备解压 .../37-libxcb-shm0-dev_1.14-ok1_riscv64.deb  ...
+正在解压 libxcb-shm0-dev:riscv64 (1.14-ok1) ...
+正在选中未选择的软件包 libcairo2-dev:riscv64。
+准备解压 .../38-libcairo2-dev_1.16.0-ok1_riscv64.deb  ...
+正在解压 libcairo2-dev:riscv64 (1.16.0-ok1) ...
+正在选中未选择的软件包 libfribidi-dev:riscv64。
+准备解压 .../39-libfribidi-dev_1.0.8-ok1_riscv64.deb  ...
+正在解压 libfribidi-dev:riscv64 (1.0.8-ok1) ...
+正在选中未选择的软件包 libharfbuzz-gobject0:riscv64。
+准备解压 .../40-libharfbuzz-gobject0_2.6.4-ok1_riscv64.deb  ...
+正在解压 libharfbuzz-gobject0:riscv64 (2.6.4-ok1) ...
+正在选中未选择的软件包 libgraphite2-dev:riscv64。
+准备解压 .../41-libgraphite2-dev_1.3.13-ok1_riscv64.deb  ...
+正在解压 libgraphite2-dev:riscv64 (1.3.13-ok1) ...
+正在选中未选择的软件包 icu-devtools。
+准备解压 .../42-icu-devtools_66.1-ok1_riscv64.deb  ...
+正在解压 icu-devtools (66.1-ok1) ...
+正在选中未选择的软件包 libicu-dev:riscv64。
+准备解压 .../43-libicu-dev_66.1-ok1_riscv64.deb  ...
+正在解压 libicu-dev:riscv64 (66.1-ok1) ...
+正在选中未选择的软件包 libharfbuzz-dev:riscv64。
+准备解压 .../44-libharfbuzz-dev_2.6.4-ok1_riscv64.deb  ...
+正在解压 libharfbuzz-dev:riscv64 (2.6.4-ok1) ...
+正在选中未选择的软件包 libdatrie-dev:riscv64。
+准备解压 .../45-libdatrie-dev_0.2.12-ok1_riscv64.deb  ...
+正在解压 libdatrie-dev:riscv64 (0.2.12-ok1) ...
+正在选中未选择的软件包 libthai-dev:riscv64。
+准备解压 .../46-libthai-dev_0.1.28-ok1_riscv64.deb  ...
+正在解压 libthai-dev:riscv64 (0.1.28-ok1) ...
+正在选中未选择的软件包 libxft-dev:riscv64。
+准备解压 .../47-libxft-dev_2.3.3-ok1_riscv64.deb  ...
+正在解压 libxft-dev:riscv64 (2.3.3-ok1) ...
+正在选中未选择的软件包 pango1.0-tools。
+准备解压 .../48-pango1.0-tools_1.46.2-ok2_riscv64.deb  ...
+正在解压 pango1.0-tools (1.46.2-ok2) ...
+正在选中未选择的软件包 libpango1.0-dev:riscv64。
+准备解压 .../49-libpango1.0-dev_1.46.2-ok2_riscv64.deb  ...
+正在解压 libpango1.0-dev:riscv64 (1.46.2-ok2) ...
+正在设置 libexpat1:riscv64 (2.2.9-ok3) ...
+正在设置 libcairo-script-interpreter2:riscv64 (1.16.0-ok1) ...
+正在设置 libpixman-1-dev:riscv64 (0.38.4-ok3) ...
+正在设置 libfribidi-dev:riscv64 (1.0.8-ok1) ...
+正在设置 libpango-1.0-0:riscv64 (1.46.2-ok2) ...
+正在设置 libpng-dev:riscv64 (1.6.37-ok1) ...
+正在设置 libharfbuzz-gobject0:riscv64 (2.6.4-ok1) ...
+正在设置 gir1.2-harfbuzz-0.0:riscv64 (2.6.4-ok1) ...
+正在设置 libpthread-stubs0-dev:riscv64 (0.4-ok2) ...
+正在设置 libfreetype-dev:riscv64 (2.10.1-ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 xtrans-dev (1.4.0-ok1) ...
+正在设置 libgraphite2-dev:riscv64 (1.3.13-ok1) ...
+正在设置 libexpat1-dev:riscv64 (2.2.9-ok3) ...
+正在设置 icu-devtools (66.1-ok1) ...
+正在设置 libdatrie-dev:riscv64 (0.2.12-ok1) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 xorg-sgml-doctools (1:1.11-ok1) ...
+正在设置 libpangoft2-1.0-0:riscv64 (1.46.2-ok2) ...
+正在设置 libicu-dev:riscv64 (66.1-ok1) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 libpangocairo-1.0-0:riscv64 (1.46.2-ok2) ...
+正在设置 x11proto-dev (2022.2-ok3) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libharfbuzz-dev:riscv64 (2.6.4-ok1) ...
+正在设置 libxau-dev:riscv64 (1:1.0.9-ok1) ...
+正在设置 libpangoxft-1.0-0:riscv64 (1.46.2-ok2) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libice-dev:riscv64 (2:1.0.10-ok1) ...
+正在设置 libsm-dev:riscv64 (2:1.2.3-ok1) ...
+正在设置 pango1.0-tools (1.46.2-ok2) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 libfreetype6-dev:riscv64 (2.10.1-ok1) ...
+正在设置 libxdmcp-dev:riscv64 (1:1.1.3-ok1) ...
+正在设置 gir1.2-pango-1.0:riscv64 (1.46.2-ok2) ...
+正在设置 x11proto-core-dev (2022.2-ok3) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 libthai-dev:riscv64 (0.1.28-ok1) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 libfontconfig1-dev:riscv64 (2.13.1-ok1) ...
+正在设置 libxcb1-dev:riscv64 (1.14-ok1) ...
+正在设置 libx11-dev:riscv64 (2:1.6.9-ok1) ...
+正在设置 libxcb-shm0-dev:riscv64 (1.14-ok1) ...
+正在设置 libxcb-render0-dev:riscv64 (1.14-ok1) ...
+正在设置 libxext-dev:riscv64 (2:1.3.4-ok2) ...
+正在设置 libxrender-dev:riscv64 (1:0.9.10-ok1) ...
+正在设置 libxft-dev:riscv64 (2.3.3-ok1) ...
+正在设置 libcairo2-dev:riscv64 (1.16.0-ok1) ...
+正在设置 libpango1.0-dev:riscv64 (1.46.2-ok2) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libpango1.0-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libpango1.0-dev libharfbuzz-dev libicu-dev icu-devtools libaio1 libcairo2-dev libcairo-script-interpreter2 libthai-dev libdatrie-dev libdebian-installer4 libdevmapper-event1.02.1 libxft-dev libfontconfig1-dev libexpat1-dev libfreetype6-dev libfreetype-dev libfribidi-dev libgraphite2-dev libharfbuzz-gobject0 libsm-dev libice-dev libpixman-1-dev libpng-dev libxcb-shm0-dev libxcb-render0-dev libxcb1-dev libpthread-stubs0-dev libxrender-dev libxext-dev libx11-dev libxau-dev libxdmcp-dev pango1.0-tools x11proto-core-dev x11proto-dev xorg-sgml-doctools xtrans-dev
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libpango1.0-dev', 'libharfbuzz-dev', 'libicu-dev', 'icu-devtools', 'libaio1', 'libcairo2-dev', 'libcairo-script-interpreter2', 'libthai-dev', 'libdatrie-dev', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libxft-dev'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'libfontconfig1-dev', 'libexpat1-dev', 'libfreetype6-dev', 'libfreetype-dev', 'libfribidi-dev', 'libgraphite2-dev', 'libharfbuzz-gobject0', 'libsm-dev', 'libice-dev', 'libpixman-1-dev', 'libpng-dev', 'libxcb-shm0-dev', 'libxcb-render0-dev', 'libxcb1-dev', 'libpthread-stubs0-dev', 'libxrender-dev', 'libxext-dev', 'libx11-dev', 'libxau-dev', 'libxdmcp-dev'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'pango1.0-tools', 'x11proto-core-dev', 'x11proto-dev', 'xorg-sgml-doctools', 'xtrans-dev'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 158475 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.M3Zqib/build-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/build-packages.all ./testing/pango1.0/build-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/build-packages.all ./testing/pango1.0/build-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/build-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/build-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/build-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.M3Zqib/build.3Qg/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.M3Zqib/build.3Qg/src already exists
+autopkgtest [17:19:07]: test build: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.M3Zqib/build.3Qg/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.M3Zqib/build-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.M3Zqib/build-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.M3Zqib/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.M3Zqib/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/tests/build; touch /tmp/autopkgtest.M3Zqib/build-stdout /tmp/autopkgtest.M3Zqib/build-stderr; /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/tests/build 2> >(tee -a /tmp/autopkgtest.M3Zqib/build-stderr >&2) > >(tee -a /tmp/autopkgtest.M3Zqib/build-stdout);'], kind test, sout raw, serr raw, env []
+build: OK
+run: OK
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:19:16]: test build: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/build-stdout ./testing/pango1.0/build-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/build-stdout ./testing/pango1.0/build-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/build-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/build-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/build-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/build-stderr ./testing/pango1.0/build-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/build-stderr ./testing/pango1.0/build-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/build-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/build-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/build-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [17:19:18]: test build:  - - - - - - - - - - results - - - - - - - - - -
+build                PASS (superficial)
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/build-artifacts/ ./testing/pango1.0/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/build-artifacts/ ./testing/pango1.0/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._yd2ree1/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.M3Zqib/build-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pango1.0/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._yd2ree1/runcmd sh -ec cd /tmp/autopkgtest.M3Zqib/build-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pango1.0/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.M3Zqib/build-artifacts', '/tmp/autopkgtest.M3Zqib/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [17:19:19]: test installed-tests: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'libpango1.0-dev', 'pkg-config'], deps_new=['locales | locales-all', 'pango1.0-tests', 'dbus (>= 1.8)', 'xauth', 'xvfb', 'gnome-desktop-testing']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._yd2ree1/runcmd rm -rf -- /tmp/autopkgtest.M3Zqib
+qemu-system-riscv64: terminating on signal 15 from pid 202237 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.42qi_k91/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.42qi_k91/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.42qi_k91/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.42qi_k91/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.42qi_k91/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.42qi_k91/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.42qi_k91/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.42qi_k91/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.42qi_k91/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'329f358c-e248-4b8a-97ed-bc9cfe81b7c3[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.42qi_k91/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.M3Zqib
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.42qi_k91/runcmd'], downtmp = /tmp/autopkgtest.M3Zqib
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.M3Zqib
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.42qi_k91/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:20:22]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.M3Zqib/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/testbed-packages ./testing/pango1.0/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/testbed-packages ./testing/pango1.0/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.42qi_k91/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.42qi_k91/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['locales | locales-all', 'pango1.0-tests', 'dbus (>= 1.8)', 'xauth', 'xvfb', 'gnome-desktop-testing']
+autopkgtest: DBG: install-deps: satisfying locales | locales-all, pango1.0-tests, dbus (>= 1.8), xauth, xvfb, gnome-desktop-testing
+autopkgtest: DBG: install-deps: architecture resolved: locales | locales-all, pango1.0-tests, dbus (>= 1.8), xauth, xvfb, gnome-desktop-testing
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.M3Zqib'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/pango1.0/2-autopkgtest-satdep.deb /tmp/autopkgtest.M3Zqib/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/pango1.0/2-autopkgtest-satdep.deb /tmp/autopkgtest.M3Zqib/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.42qi_k91/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.M3Zqib/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/pango1.0/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.42qi_k91/runcmd sh -ec cat >/tmp/autopkgtest.M3Zqib/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.M3Zqib/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.M3Zqib/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on pango1.0-tests:riscv64 < none | 1.46.2-ok2 @un uH >
+  Considering pango1.0-tests:riscv64 1 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change pango1.0-tests:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'pango1.0-tests'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 pango1.0-tests 相匹配的软件包
+ (exit code 1)
+installed-tests      FAIL badpkg
+blame: ./src/pango1.0_1.46.2-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pango1.0-tests 相匹配的软件包
+ (exit code 1)
+autopkgtest [17:20:48]: test python3-gi: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['locales | locales-all', 'pango1.0-tests', 'dbus (>= 1.8)', 'xauth', 'xvfb', 'gnome-desktop-testing'], deps_new=['gir1.2-gdk-3.0', 'gir1.2-pango-1.0', 'python3-gi', 'xauth', 'xvfb']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.42qi_k91/runcmd rm -rf -- /tmp/autopkgtest.M3Zqib
+qemu-system-riscv64: terminating on signal 15 from pid 202237 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.eyylgjx4/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.eyylgjx4/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.eyylgjx4/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.eyylgjx4/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.eyylgjx4/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.eyylgjx4/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.eyylgjx4/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.eyylgjx4/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'6c67cbe6-9609-411e-85d6-9b52241cc22c[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6c67cbe6-9609-411e-85d6-9b52241cc22c[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'6c67cbe6-9609-411e-85d6-9b52241cc22c[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6c67cbe6-9609-411e-85d6-9b52241cc22c[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'6c67cbe6-9609-411e-85d6-9b52241cc22c[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6c67cbe6-9609-411e-85d6-9b52241cc22c[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'6c67cbe6-9609-411e-85d6-9b52241cc22c[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6c67cbe6-9609-411e-85d6-9b52241cc22c[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'6c67cbe6-9609-411e-85d6-9b52241cc22c[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6c67cbe6-9609-411e-85d6-9b52241cc22c[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.eyylgjx4/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'6c67cbe6-9609-411e-85d6-9b52241cc22c[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6c67cbe6-9609-411e-85d6-9b52241cc22c[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.eyylgjx4/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.M3Zqib
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.eyylgjx4/runcmd'], downtmp = /tmp/autopkgtest.M3Zqib
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.M3Zqib
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.eyylgjx4/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:21:50]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.M3Zqib/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/testbed-packages ./testing/pango1.0/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/testbed-packages ./testing/pango1.0/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eyylgjx4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eyylgjx4/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['gir1.2-gdk-3.0', 'gir1.2-pango-1.0', 'python3-gi', 'xauth', 'xvfb']
+autopkgtest: DBG: install-deps: satisfying gir1.2-gdk-3.0, gir1.2-pango-1.0, python3-gi, xauth, xvfb
+autopkgtest: DBG: install-deps: architecture resolved: gir1.2-gdk-3.0, gir1.2-pango-1.0, python3-gi, xauth, xvfb
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.M3Zqib'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/pango1.0/3-autopkgtest-satdep.deb /tmp/autopkgtest.M3Zqib/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/pango1.0/3-autopkgtest-satdep.deb /tmp/autopkgtest.M3Zqib/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.eyylgjx4/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.M3Zqib/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/pango1.0/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.eyylgjx4/runcmd sh -ec cat >/tmp/autopkgtest.M3Zqib/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.M3Zqib/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.M3Zqib/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'gir1.2-pango-1.0'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.M3Zqib/python3-gi-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/python3-gi-packages.all ./testing/pango1.0/python3-gi-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/python3-gi-packages.all ./testing/pango1.0/python3-gi-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eyylgjx4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/python3-gi-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/python3-gi-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eyylgjx4/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/python3-gi-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.M3Zqib/build.3Qg/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.M3Zqib/build.3Qg'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/pango1.0/tests-tree/ /tmp/autopkgtest.M3Zqib/build.3Qg/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/pango1.0/tests-tree/ /tmp/autopkgtest.M3Zqib/build.3Qg/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/pango1.0/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.eyylgjx4/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.M3Zqib/build.3Qg/src/; then mkdir -- /tmp/autopkgtest.M3Zqib/build.3Qg/src/; fi; cd /tmp/autopkgtest.M3Zqib/build.3Qg/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/pango1.0/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.eyylgjx4/runcmd sh -ec if ! test -d /tmp/autopkgtest.M3Zqib/build.3Qg/src/; then mkdir -- /tmp/autopkgtest.M3Zqib/build.3Qg/src/; fi; cd /tmp/autopkgtest.M3Zqib/build.3Qg/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.M3Zqib/build.3Qg/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:22:28]: test python3-gi: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.M3Zqib/build.3Qg/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.M3Zqib/python3-gi-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.M3Zqib/python3-gi-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.M3Zqib/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.M3Zqib/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/tests/python3-gi; touch /tmp/autopkgtest.M3Zqib/python3-gi-stdout /tmp/autopkgtest.M3Zqib/python3-gi-stderr; /tmp/autopkgtest.M3Zqib/build.3Qg/src/debian/tests/python3-gi 2> >(tee -a /tmp/autopkgtest.M3Zqib/python3-gi-stderr >&2) > >(tee -a /tmp/autopkgtest.M3Zqib/python3-gi-stdout);'], kind test, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [17:22:46]: test python3-gi: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/python3-gi-stdout ./testing/pango1.0/python3-gi-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/python3-gi-stdout ./testing/pango1.0/python3-gi-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eyylgjx4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/python3-gi-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/python3-gi-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eyylgjx4/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/python3-gi-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/python3-gi-stderr ./testing/pango1.0/python3-gi-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/python3-gi-stderr ./testing/pango1.0/python3-gi-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eyylgjx4/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.M3Zqib/python3-gi-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pango1.0/python3-gi-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eyylgjx4/runcmd sh -ec cat </tmp/autopkgtest.M3Zqib/python3-gi-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [17:22:47]: test python3-gi:  - - - - - - - - - - results - - - - - - - - - -
+python3-gi           PASS (superficial)
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.M3Zqib/python3-gi-artifacts/ ./testing/pango1.0/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.M3Zqib/python3-gi-artifacts/ ./testing/pango1.0/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.eyylgjx4/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.M3Zqib/python3-gi-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pango1.0/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.eyylgjx4/runcmd sh -ec cd /tmp/autopkgtest.M3Zqib/python3-gi-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pango1.0/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.M3Zqib/python3-gi-artifacts', '/tmp/autopkgtest.M3Zqib/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [17:22:48]: @@@@@@@@@@@@@@@@@@@@ summary
+build                PASS (superficial)
+installed-tests      FAIL badpkg
+blame: ./src/pango1.0_1.46.2-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pango1.0-tests 相匹配的软件包
+ (exit code 1)
+python3-gi           PASS (superficial)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.M3Zqib
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 202237 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

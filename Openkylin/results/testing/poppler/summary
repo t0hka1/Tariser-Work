@@ -1,0 +1,3 @@
+cpp                  PASS
+glib                 PASS
+qt5                  FAIL non-zero exit status 1

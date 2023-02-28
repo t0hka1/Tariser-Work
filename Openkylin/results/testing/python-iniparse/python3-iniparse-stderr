@@ -1,0 +1,33 @@
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_ini.py:27: DeprecationWarning: invalid escape sequence \c
+  ('[se\ct%[ion\t]' ,     ('se\ct%[ion\t', None, None, -1)),
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_ini.py:27: DeprecationWarning: invalid escape sequence \c
+  ('[se\ct%[ion\t]' ,     ('se\ct%[ion\t', None, None, -1)),
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_fuzz.py:55: DeprecationWarning: invalid escape sequence \[
+  name = re.sub(':|=| |\[', '', name)
+........................................./tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_fuzz.py:101: DeprecationWarning: This method will be removed in future versions.  Use 'parser.read_file()' instead.
+  cc_py.readfp(StringIO(s))
+s/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:91: DeprecationWarning: Please use assertFalse instead.
+  self.failIf('__name__' in cf.options("Foo Bar"),
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:96: DeprecationWarning: Please use assertTrue instead.
+  self.failUnless(cf.remove_option('Foo Bar', 'foo'),
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:98: DeprecationWarning: Please use assertFalse instead.
+  self.failIf(cf.has_option('Foo Bar', 'foo'),
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:100: DeprecationWarning: Please use assertFalse instead.
+  self.failIf(cf.remove_option('Foo Bar', 'foo'),
+./tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:217: DeprecationWarning: Please use assertTrue instead.
+  self.failUnless(cf.getboolean('BOOLTEST', 't%d' % x))
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:218: DeprecationWarning: Please use assertFalse instead.
+  self.failIf(cf.getboolean('BOOLTEST', 'f%d' % x))
+./tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:122: DeprecationWarning: Please use assertTrue instead.
+  self.failUnless(cf.has_option("a", "b"))
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:125: DeprecationWarning: Please use assertTrue instead.
+  self.failUnless(
+/tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:142: DeprecationWarning: Please use assertTrue instead.
+  self.failUnless(cf.has_option("section", "Key"))
+...../tmp/autopkgtest.8Z2Ksw/autopkgtest_tmp/tests/test_compat.py:178: DeprecationWarning: Please use assertFalse instead.
+  self.failIf(cf.has_section("Foo"),
+..............................................
+----------------------------------------------------------------------
+Ran 95 tests in 0.923s
+
+OK (skipped=1)

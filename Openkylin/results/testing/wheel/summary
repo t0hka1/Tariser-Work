@@ -1,0 +1,5 @@
+smoketest-3          FAIL non-zero exit status 2
+reproduce-3          PASS
+unittests-3          FAIL badpkg
+blame: ./src/wheel_0.38.4-ok3.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.

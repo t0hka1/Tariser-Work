@@ -1,0 +1,478 @@
+autopkgtest: DBG: testbed init
+autopkgtest [23:05:02]: starting date: 2023-02-27
+autopkgtest [23:05:02]: version 5.20ubuntu1
+autopkgtest [23:05:02]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/policykit-1_0.105-ok3.dsc -o ./testing/policykit-1 -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.lknsu8bk/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.lknsu8bk/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.lknsu8bk/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.lknsu8bk/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.lknsu8bk/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.lknsu8bk/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.lknsu8bk/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.lknsu8bk/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.lknsu8bk/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0f07194c-8e2f-4ec8-ac4e-8156f08a8645[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.lknsu8bk/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.lknsu8bk/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.lknsu8bk/runcmd chmod 1777 /tmp/autopkgtest.cU63N3
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.cU63N3
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.lknsu8bk/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [23:06:07]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.cU63N3/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/testbed-packages ./testing/policykit-1/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/testbed-packages ./testing/policykit-1/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.cU63N3/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/policykit-1/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat </tmp/autopkgtest.cU63N3/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [23:06:13]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [23:06:14]: @@@@@@@@@@@@@@@@@@@@ source ./src/policykit-1_0.105-ok3.dsc
+autopkgtest: DBG: blame += ./src/policykit-1_0.105-ok3.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.cU63N3'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/policykit-1_0.105-ok3.dsc /tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/policykit-1_0.105-ok3.dsc /tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/policykit-1_0.105-ok3.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat >/tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.cU63N3'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/policykit-1_0.105.orig.tar.gz /tmp/autopkgtest.cU63N3/policykit-1_0.105.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/policykit-1_0.105.orig.tar.gz /tmp/autopkgtest.cU63N3/policykit-1_0.105.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.cU63N3/policykit-1_0.105.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/policykit-1_0.105.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat >/tmp/autopkgtest.cU63N3/policykit-1_0.105.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.cU63N3/policykit-1_0.105.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.cU63N3'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/policykit-1_0.105-ok3.debian.tar.xz /tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/policykit-1_0.105-ok3.debian.tar.xz /tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/policykit-1_0.105-ok3.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat >/tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.cU63N3/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.cU63N3/build.XXX
++ builddir=/tmp/autopkgtest.cU63N3/build.4nG
++ cd /tmp/autopkgtest.cU63N3/build.4nG
++ dpkg-source -x /tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.ZdVgDKDr/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年10月28日 星期五 07时50分25秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.cU63N3/policykit-1_0.105-ok3.dsc
+dpkg-source: info: extracting policykit-1 in src
+dpkg-source: info: unpacking policykit-1_0.105.orig.tar.gz
+dpkg-source: info: unpacking policykit-1_0.105-ok3.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 0.106/agenthelper-pam-Fix-newline-trimming-code.patch
+dpkg-source: info: applying 0.108/build-Fix-.gir-generation-for-parallel-make.patch
+dpkg-source: info: applying 0.108/PolkitAgent-Avoid-crashing-if-initializing-the-server-obj.patch
+dpkg-source: info: applying 0.110/07_set-XAUTHORITY-environment-variable-if-unset.patch
+dpkg-source: info: applying 0.110/04_get_cwd.patch
+dpkg-source: info: applying 0.111/09_pam_environment.patch
+dpkg-source: info: applying 0.111/Add-a-FIXME-to-polkitprivate.h.patch
+dpkg-source: info: applying 0.111/Fix-a-memory-leak.patch
+dpkg-source: info: applying 0.112/00git_type_registration.patch
+dpkg-source: info: applying 0.112/08_deprecate_racy_APIs.patch
+dpkg-source: info: applying 0.112/cve-2013-4288.patch
+dpkg-source: info: applying 0.114/polkitpermission-Fix-a-memory-leak-on-authority-changes.patch
+dpkg-source: info: applying 0.113/Port-internals-non-deprecated-PolkitProcess-API-wher.patch
+dpkg-source: info: applying 0.113/pkexec-Work-around-systemd-injecting-broken-XDG_RUNT.patch
+dpkg-source: info: applying 0.113/03_PolkitAgentSession-fix-race-between-child-and-io-wat.patch
+dpkg-source: info: applying 0.113/polkitd-Fix-problem-with-removing-non-existent-sourc.patch
+dpkg-source: info: applying 0.113/PolkitSystemBusName-Add-public-API-to-retrieve-Unix-.patch
+dpkg-source: info: applying 0.113/Fixed-compilation-problem-in-the-backend.patch
+dpkg-source: info: applying 0.113/Don-t-discard-error-data-returned-by-polkit_system_b.patch
+dpkg-source: info: applying 0.113/sessionmonitor-systemd-Deduplicate-code-paths.patch
+dpkg-source: info: applying 0.113/PolkitSystemBusName-Retrieve-both-pid-and-uid.patch
+dpkg-source: info: applying 0.113/sessionmonitor-systemd-prepare-for-D-Bus-user-bus-mo.patch
+dpkg-source: info: applying 0.113/Refuse-duplicate-user-arguments-to-pkexec.patch
+dpkg-source: info: applying 0.113/00git_fix_memleak.patch
+dpkg-source: info: applying 0.113/00git_invalid_object_paths.patch
+dpkg-source: info: applying 0.113/sessionmonitor-systemd-Use-sd_uid_get_state-to-check.patch
+dpkg-source: info: applying 0.113/Fix-a-possible-NULL-dereference.patch
+dpkg-source: info: applying 0.113/Remove-a-redundant-assignment.patch
+dpkg-source: info: applying 0.113/Fix-duplicate-GError-use-when-uid-is-missing.patch
+dpkg-source: info: applying 0.113/Fix-a-crash-when-two-authentication-requests-are-in-.patch
+dpkg-source: info: applying 0.113/CVE-2015-4625-Use-unpredictable-cookie-values-keep-t.patch
+dpkg-source: info: applying 0.113/CVE-2015-4625-Bind-use-of-cookies-to-specific-uids.patch
+dpkg-source: info: applying 0.113/docs-Update-for-changes-to-uid-binding-Authenticatio.patch
+dpkg-source: info: applying 0.113/Fix-a-per-authorization-memory-leak.patch
+dpkg-source: info: applying 0.113/Fix-a-memory-leak-when-registering-an-authentication.patch
+dpkg-source: info: applying 0.113/CVE-2015-3255-Fix-GHashTable-usage.patch
+dpkg-source: info: applying 0.113/Fix-use-after-free-in-polkitagentsession.c.patch
+dpkg-source: info: applying 0.113/README-Note-to-send-security-reports-via-DBus-s-mech.patch
+dpkg-source: info: applying 0.114/Fix-multi-line-pam-text-info.patch
+dpkg-source: info: applying 0.114/Refactor-send_to_helper-usage.patch
+dpkg-source: info: applying 0.114/Add-gettext-support-for-.policy-files.patch
+dpkg-source: info: applying 0.114/gettext-switch-to-default-translate-no.patch
+dpkg-source: info: applying 0.114/Support-polkit-session-agent-running-outside-user-session.patch
+dpkg-source: info: applying 0.115/Fix-CVE-2018-1116-Trusting-client-supplied-UID.patch
+dpkg-source: info: applying 0.116/Possible-resource-leak-found-by-static-analyzer.patch
+dpkg-source: info: applying 0.116/Elaborate-message-printed-by-polkit-when-disconnecting-fr.patch
+dpkg-source: info: applying 0.116/Error-message-raised-on-every-systemctl-start-in-emergenc.patch
+dpkg-source: info: applying 0.116/Fix-a-critical-warning-on-calling-polkit_permission_new_s.patch
+dpkg-source: info: applying 0.116/Allow-negative-uids-gids-in-PolkitUnixUser-and-Group-obje.patch
+dpkg-source: info: applying 0.116/tests-add-tests-for-high-uids.patch
+dpkg-source: info: applying 0.116/backend-Compare-PolkitUnixProcess-uids-for-temporary-auth.patch
+dpkg-source: info: applying 0.116/Allow-uid-of-1-for-a-PolkitUnixProcess.patch
+dpkg-source: info: applying 0.116/pkttyagent-PolkitAgentTextListener-leaves-echo-tty-disabl.patch
+dpkg-source: info: applying 01_pam_polkit.patch
+dpkg-source: info: applying 02_gettext.patch
+dpkg-source: info: applying 05_revert-admin-identities-unix-group-wheel.patch
+dpkg-source: info: applying 06_systemd-service.patch
+dpkg-source: info: applying 10_build-against-libsystemd.patch
+dpkg-source: info: applying Move-D-Bus-policy-file-to-usr-share-dbus-1-system.d.patch
+dpkg-source: info: applying Statically-link-libpolkit-backend1-into-polkitd.patch
+dpkg-source: info: applying Remove-example-null-backend.patch
+dpkg-source: info: applying Fix-CVE-2021-3560-CVE-2021-4034-CVE-2021-4115.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [23:06:41]: testing package policykit-1 version 0.105-ok3
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/build.4nG/src/debian/ ./testing/policykit-1/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/build.4nG/src/debian/ ./testing/policykit-1/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.cU63N3/build.4nG/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/policykit-1/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cd /tmp/autopkgtest.cU63N3/build.4nG/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/policykit-1/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency policykit-1
+autopkgtest: DBG: marked alternatives ['policykit-1'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name cli path debian/tests/cli command "None" restrictions ['isolation-container'] features [] depends ['policykit-1'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency policykit-1
+autopkgtest: DBG: marked alternatives ['policykit-1'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name cli-root path debian/tests/cli-root command "None" restrictions ['isolation-container', 'needs-root'] features [] depends ['policykit-1'] clicks [] installed clicks []
+autopkgtest [23:06:41]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/build.4nG/src/ ./testing/policykit-1/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/build.4nG/src/ ./testing/policykit-1/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.cU63N3/build.4nG/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/policykit-1/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cd /tmp/autopkgtest.cU63N3/build.4nG/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/policykit-1/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency policykit-1
+autopkgtest: DBG: marked alternatives ['policykit-1'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name cli path debian/tests/cli command "None" restrictions ['isolation-container'] features [] depends ['policykit-1'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency policykit-1
+autopkgtest: DBG: marked alternatives ['policykit-1'] as a synthesised dependency
+autopkgtest: DBG: Test defined: name cli-root path debian/tests/cli-root command "None" restrictions ['isolation-container', 'needs-root'] features [] depends ['policykit-1'] clicks [] installed clicks []
+autopkgtest [23:06:43]: test cli: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['policykit-1']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['policykit-1']
+autopkgtest: DBG: install-deps: satisfying policykit-1
+autopkgtest: DBG: install-deps: architecture resolved: policykit-1
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.cU63N3'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/policykit-1/1-autopkgtest-satdep.deb /tmp/autopkgtest.cU63N3/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/policykit-1/1-autopkgtest-satdep.deb /tmp/autopkgtest.cU63N3/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.cU63N3/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/policykit-1/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat >/tmp/autopkgtest.cU63N3/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.cU63N3/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.cU63N3/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 139 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'policykit-1'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.cU63N3/cli-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-packages.all ./testing/policykit-1/cli-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-packages.all ./testing/policykit-1/cli-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.cU63N3/cli-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/policykit-1/cli-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat </tmp/autopkgtest.cU63N3/cli-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.cU63N3/build.4nG/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.cU63N3/build.4nG/src already exists
+autopkgtest [23:07:12]: test cli: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.cU63N3/build.4nG/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.cU63N3/cli-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.cU63N3/cli-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.cU63N3/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.cU63N3/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.cU63N3/build.4nG/src/debian/tests/cli; touch /tmp/autopkgtest.cU63N3/cli-stdout /tmp/autopkgtest.cU63N3/cli-stderr; /tmp/autopkgtest.cU63N3/build.4nG/src/debian/tests/cli 2> >(tee -a /tmp/autopkgtest.cU63N3/cli-stderr >&2) > >(tee -a /tmp/autopkgtest.cU63N3/cli-stdout);'], kind test, sout raw, serr raw, env []
+TEST: pkaction
+No action with action id unknown.action
+TEST: pkcheck
+Error checking for authorization org.freedesktop.policykit.exec: GDBus.Error:org.freedesktop.PolicyKit1.Error.NotAuthorized: Only trusted callers (e.g. uid 0 or an action owner) can use CheckAuthorization() for subjects belonging to other identities
+Authorization requires authentication and -u wasn't passed.
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [23:07:19]: test cli: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-stdout ./testing/policykit-1/cli-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-stdout ./testing/policykit-1/cli-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.cU63N3/cli-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/policykit-1/cli-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat </tmp/autopkgtest.cU63N3/cli-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-stderr ./testing/policykit-1/cli-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-stderr ./testing/policykit-1/cli-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.cU63N3/cli-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/policykit-1/cli-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat </tmp/autopkgtest.cU63N3/cli-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [23:07:20]: test cli:  - - - - - - - - - - results - - - - - - - - - -
+cli                  PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-artifacts/ ./testing/policykit-1/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-artifacts/ ./testing/policykit-1/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.cU63N3/cli-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/policykit-1/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cd /tmp/autopkgtest.cU63N3/cli-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/policykit-1/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.cU63N3/cli-artifacts', '/tmp/autopkgtest.cU63N3/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [23:07:22]: test cli-root: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['policykit-1'], deps_new=['policykit-1']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['policykit-1']
+autopkgtest: DBG: install-deps: satisfying policykit-1
+autopkgtest: DBG: install-deps: architecture resolved: policykit-1
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.cU63N3'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/policykit-1/2-autopkgtest-satdep.deb /tmp/autopkgtest.cU63N3/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/policykit-1/2-autopkgtest-satdep.deb /tmp/autopkgtest.cU63N3/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.cU63N3/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/policykit-1/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat >/tmp/autopkgtest.cU63N3/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.cU63N3/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.cU63N3/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 139 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'policykit-1'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.cU63N3/cli-root-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-root-packages.all ./testing/policykit-1/cli-root-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-root-packages.all ./testing/policykit-1/cli-root-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.cU63N3/cli-root-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/policykit-1/cli-root-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat </tmp/autopkgtest.cU63N3/cli-root-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.cU63N3/build.4nG/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.cU63N3/build.4nG/src already exists
+autopkgtest [23:07:47]: test cli-root: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'root', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.cU63N3/build.4nG/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.cU63N3/cli-root-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.cU63N3/cli-root-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.cU63N3/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.cU63N3/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; export AUTOPKGTEST_NORMAL_USER=openkylin; export ADT_NORMAL_USER=openkylin; chmod +x /tmp/autopkgtest.cU63N3/build.4nG/src/debian/tests/cli-root; touch /tmp/autopkgtest.cU63N3/cli-root-stdout /tmp/autopkgtest.cU63N3/cli-root-stderr; /tmp/autopkgtest.cU63N3/build.4nG/src/debian/tests/cli-root 2> >(tee -a /tmp/autopkgtest.cU63N3/cli-root-stderr >&2) > >(tee -a /tmp/autopkgtest.cU63N3/cli-root-stdout);'], kind test, sout raw, serr raw, env []
+TEST: pkaction
+No action with action id unknown.action
+TEST: pkcheck
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [23:07:54]: test cli-root: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-root-stdout ./testing/policykit-1/cli-root-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-root-stdout ./testing/policykit-1/cli-root-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.cU63N3/cli-root-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/policykit-1/cli-root-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat </tmp/autopkgtest.cU63N3/cli-root-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-root-stderr ./testing/policykit-1/cli-root-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-root-stderr ./testing/policykit-1/cli-root-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.cU63N3/cli-root-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/policykit-1/cli-root-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cat </tmp/autopkgtest.cU63N3/cli-root-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [23:07:55]: test cli-root:  - - - - - - - - - - results - - - - - - - - - -
+cli-root             PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.cU63N3/cli-root-artifacts/ ./testing/policykit-1/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.cU63N3/cli-root-artifacts/ ./testing/policykit-1/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.lknsu8bk/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.cU63N3/cli-root-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/policykit-1/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.lknsu8bk/runcmd sh -ec cd /tmp/autopkgtest.cU63N3/cli-root-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/policykit-1/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.cU63N3/cli-root-artifacts', '/tmp/autopkgtest.cU63N3/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [23:07:57]: @@@@@@@@@@@@@@@@@@@@ summary
+cli                  PASS
+cli-root             PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.cU63N3
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 307161 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

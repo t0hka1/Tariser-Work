@@ -1,0 +1,394 @@
+autopkgtest: DBG: testbed init
+autopkgtest [06:36:30]: starting date: 2023-02-28
+autopkgtest [06:36:30]: version 5.20ubuntu1
+autopkgtest [06:36:30]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/pillow_7.0.0-ok1.dsc -o ./testing/pillow -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.bau_fc9z/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.bau_fc9z/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.bau_fc9z/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.bau_fc9z/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.bau_fc9z/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.bau_fc9z/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.bau_fc9z/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.bau_fc9z/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.bau_fc9z/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'3b20f21a-cbf5-4873-9e4a-fdf50cf069cc[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.bau_fc9z/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.bau_fc9z/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.bau_fc9z/runcmd chmod 1777 /tmp/autopkgtest.b26xaB
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.b26xaB
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.bau_fc9z/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [06:37:32]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.b26xaB/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.b26xaB/testbed-packages ./testing/pillow/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.b26xaB/testbed-packages ./testing/pillow/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.bau_fc9z/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.b26xaB/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/pillow/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.bau_fc9z/runcmd sh -ec cat </tmp/autopkgtest.b26xaB/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [06:37:38]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [06:37:39]: @@@@@@@@@@@@@@@@@@@@ source ./src/pillow_7.0.0-ok1.dsc
+autopkgtest: DBG: blame += ./src/pillow_7.0.0-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.b26xaB'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pillow_7.0.0-ok1.dsc /tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pillow_7.0.0-ok1.dsc /tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.bau_fc9z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pillow_7.0.0-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.bau_fc9z/runcmd sh -ec cat >/tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.b26xaB'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pillow_7.0.0.orig.tar.xz /tmp/autopkgtest.b26xaB/pillow_7.0.0.orig.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pillow_7.0.0.orig.tar.xz /tmp/autopkgtest.b26xaB/pillow_7.0.0.orig.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.bau_fc9z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.b26xaB/pillow_7.0.0.orig.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pillow_7.0.0.orig.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.bau_fc9z/runcmd sh -ec cat >/tmp/autopkgtest.b26xaB/pillow_7.0.0.orig.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.b26xaB/pillow_7.0.0.orig.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.b26xaB'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/pillow_7.0.0-ok1.debian.tar.xz /tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/pillow_7.0.0-ok1.debian.tar.xz /tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.bau_fc9z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/pillow_7.0.0-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.bau_fc9z/runcmd sh -ec cat >/tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.b26xaB/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.b26xaB/build.XXX
++ builddir=/tmp/autopkgtest.b26xaB/build.rv4
++ cd /tmp/autopkgtest.b26xaB/build.rv4
++ dpkg-source -x /tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.QMNMn7gL/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年06月27日 星期一 08时13分18秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.b26xaB/pillow_7.0.0-ok1.dsc
+dpkg-source: info: extracting pillow in src
+dpkg-source: info: unpacking pillow_7.0.0.orig.tar.xz
+dpkg-source: info: unpacking pillow_7.0.0-ok1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying toplevel-setup.py
+dpkg-source: info: applying generate-webp-file
+dpkg-source: info: applying js-script-file.diff
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [06:38:23]: testing package pillow version 7.0.0-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.b26xaB/build.rv4/src/debian/ ./testing/pillow/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.b26xaB/build.rv4/src/debian/ ./testing/pillow/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.bau_fc9z/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.b26xaB/build.rv4/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pillow/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.bau_fc9z/runcmd sh -ec cd /tmp/autopkgtest.b26xaB/build.rv4/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pillow/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency python3-pil
+autopkgtest: DBG: synthesised dependency python3-pil-dbg
+autopkgtest: DBG: synthesised dependency python3-pil.imagetk
+autopkgtest: DBG: synthesised dependency python3-pil.imagetk-dbg
+autopkgtest: DBG: synthesised dependency python-pil-doc
+autopkgtest: DBG: Test defined: name selftest-py3 path debian/tests/selftest-py3 command "None" restrictions [] features [] depends ['python3-pil', 'python3-pil-dbg', 'python3-pil.imagetk', 'python3-pil.imagetk-dbg', 'python-pil-doc'] clicks [] installed clicks []
+autopkgtest [06:38:24]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.b26xaB/build.rv4/src/ ./testing/pillow/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.b26xaB/build.rv4/src/ ./testing/pillow/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.bau_fc9z/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.b26xaB/build.rv4/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/pillow/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.bau_fc9z/runcmd sh -ec cd /tmp/autopkgtest.b26xaB/build.rv4/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/pillow/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency python3-pil
+autopkgtest: DBG: synthesised dependency python3-pil-dbg
+autopkgtest: DBG: synthesised dependency python3-pil.imagetk
+autopkgtest: DBG: synthesised dependency python3-pil.imagetk-dbg
+autopkgtest: DBG: synthesised dependency python-pil-doc
+autopkgtest: DBG: Test defined: name selftest-py3 path debian/tests/selftest-py3 command "None" restrictions [] features [] depends ['python3-pil', 'python3-pil-dbg', 'python3-pil.imagetk', 'python3-pil.imagetk-dbg', 'python-pil-doc'] clicks [] installed clicks []
+autopkgtest [06:38:31]: test selftest-py3: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['python3-pil', 'python3-pil-dbg', 'python3-pil.imagetk', 'python3-pil.imagetk-dbg', 'python-pil-doc']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['python3-pil', 'python3-pil-dbg', 'python3-pil.imagetk', 'python3-pil.imagetk-dbg', 'python-pil-doc']
+autopkgtest: DBG: install-deps: satisfying python3-pil, python3-pil-dbg, python3-pil.imagetk, python3-pil.imagetk-dbg, python-pil-doc
+autopkgtest: DBG: install-deps: architecture resolved: python3-pil, python3-pil-dbg, python3-pil.imagetk, python3-pil.imagetk-dbg, python-pil-doc
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.b26xaB'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/pillow/1-autopkgtest-satdep.deb /tmp/autopkgtest.b26xaB/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/pillow/1-autopkgtest-satdep.deb /tmp/autopkgtest.b26xaB/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.bau_fc9z/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.b26xaB/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/pillow/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.bau_fc9z/runcmd sh -ec cat >/tmp/autopkgtest.b26xaB/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.b26xaB/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.b26xaB/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) python3-pil.imagetk:riscv64 < none -> 7.0.0-ok1 @un uN Ib >
+Broken python3-pil.imagetk:riscv64 依赖 on python3-tk:riscv64 < none | 3.8.2-ok1 @un uH > (>= 3.4.1-0)
+  Considering python3-tk:riscv64 0 as a solution to python3-pil.imagetk:riscv64 6
+  Holding Back python3-pil.imagetk:riscv64 rather than change python3-tk:riscv64
+Investigating (0) python3-pil.imagetk-dbg:riscv64 < none -> 7.0.0-ok1 @un uN Ib >
+Broken python3-pil.imagetk-dbg:riscv64 依赖 on python3-pil.imagetk:riscv64 < none | 7.0.0-ok1 @un uH > (= 7.0.0-ok1)
+  Considering python3-pil.imagetk:riscv64 6 as a solution to python3-pil.imagetk-dbg:riscv64 0
+  Holding Back python3-pil.imagetk-dbg:riscv64 rather than change python3-pil.imagetk:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python3-pil.imagetk:riscv64 < none | 7.0.0-ok1 @un uH >
+  Considering python3-pil.imagetk:riscv64 6 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python3-pil.imagetk:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 libmpdec2 lvm2
+  os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  fonts-font-awesome fonts-lato libffi8 libjs-modernizr libjs-sphinxdoc
+  libjs-underscore libpython3-dbg libpython3.8 libpython3.8-dbg
+  libpython3.8-minimal libpython3.8-stdlib python-pil-doc python3-dbg
+  python3-pil-dbg python3.8 python3.8-dbg python3.8-minimal
+  sphinx-rtd-theme-common
+建议安装：
+  python3-doc python3-pil.imagetk python3.8-venv python3.8-doc
+  python3-gdbm-dbg python3-tk-dbg binfmt-support
+推荐安装：
+  javascript-common gdb
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  fonts-font-awesome fonts-lato libffi8 libjs-modernizr libjs-sphinxdoc
+  libjs-underscore libpython3-dbg libpython3.8-dbg python-pil-doc python3-dbg
+  python3-pil-dbg python3.8-dbg sphinx-rtd-theme-common
+下列软件包将被升级：
+  libpython3.8 libpython3.8-minimal libpython3.8-stdlib python3.8
+  python3.8-minimal
+升级了 5 个软件包，新安装了 13 个软件包，要卸载 1 个软件包，有 133 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 52.7 MB 的归档。
+解压缩后会消耗 220 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 fonts-lato all 2.0-ok2 [2,697 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8 riscv64 3.8.2-ok4 [365 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8 riscv64 3.8.2-ok4 [1,652 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-stdlib riscv64 3.8.2-ok4 [1,738 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-minimal riscv64 3.8.2-ok4 [1,632 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-minimal riscv64 3.8.2-ok4 [720 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 fonts-font-awesome all 5.0.10+really4.7.0~dfsg-ok2 [535 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libjs-modernizr all 2.6.2+ds1-ok2 [46.8 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libjs-underscore all 1.13.2-ok1 [115 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libjs-sphinxdoc all 1.8.5-ok1 [79.7 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-dbg riscv64 3.8.2-ok4 [22.0 MB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3-dbg riscv64 3.8.2-ok2 [6,530 B]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 sphinx-rtd-theme-common all 0.4.3+dfsg-ok2 [987 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python-pil-doc all 7.0.0-ok1 [399 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-dbg riscv64 3.8.2-ok4 [18.5 MB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-dbg riscv64 3.8.2-ok2 [1,094 B]
+获取:18 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-pil-dbg riscv64 7.0.0-ok1 [1,260 kB]
+已下载 52.7 MB，耗时 23秒 (2,284 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+正在选中未选择的软件包 fonts-lato。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-fonts-lato_2.0-ok2_all.deb  ...
+正在解压 fonts-lato (2.0-ok2) ...
+准备解压 .../01-python3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../02-libpython3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../03-libpython3.8-stdlib_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-stdlib:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../04-python3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-minimal (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../05-libpython3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-minimal:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../06-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 fonts-font-awesome。
+准备解压 .../07-fonts-font-awesome_5.0.10+really4.7.0~dfsg-ok2_all.deb  ...
+正在解压 fonts-font-awesome (5.0.10+really4.7.0~dfsg-ok2) ...
+正在选中未选择的软件包 libjs-modernizr。
+准备解压 .../08-libjs-modernizr_2.6.2+ds1-ok2_all.deb  ...
+正在解压 libjs-modernizr (2.6.2+ds1-ok2) ...
+正在选中未选择的软件包 libjs-underscore。
+准备解压 .../09-libjs-underscore_1.13.2-ok1_all.deb  ...
+正在解压 libjs-underscore (1.13.2-ok1) ...
+正在选中未选择的软件包 libjs-sphinxdoc。
+准备解压 .../10-libjs-sphinxdoc_1.8.5-ok1_all.deb  ...
+正在解压 libjs-sphinxdoc (1.8.5-ok1) ...
+正在选中未选择的软件包 libpython3.8-dbg:riscv64。
+准备解压 .../11-libpython3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在选中未选择的软件包 libpython3-dbg:riscv64。
+准备解压 .../12-libpython3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在选中未选择的软件包 sphinx-rtd-theme-common。
+准备解压 .../13-sphinx-rtd-theme-common_0.4.3+dfsg-ok2_all.deb  ...
+正在解压 sphinx-rtd-theme-common (0.4.3+dfsg-ok2) ...
+正在选中未选择的软件包 python-pil-doc。
+准备解压 .../14-python-pil-doc_7.0.0-ok1_all.deb  ...
+正在解压 python-pil-doc (7.0.0-ok1) ...
+正在选中未选择的软件包 python3.8-dbg。
+准备解压 .../15-python3.8-dbg_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-dbg (3.8.2-ok4) ...
+正在选中未选择的软件包 python3-dbg。
+准备解压 .../16-python3-dbg_3.8.2-ok2_riscv64.deb  ...
+正在解压 python3-dbg (3.8.2-ok2) ...
+正在选中未选择的软件包 python3-pil-dbg:riscv64。
+准备解压 .../17-python3-pil-dbg_7.0.0-ok1_riscv64.deb  ...
+正在解压 python3-pil-dbg:riscv64 (7.0.0-ok1) ...
+正在设置 libpython3.8-minimal:riscv64 (3.8.2-ok4) ...
+正在设置 fonts-lato (2.0-ok2) ...
+正在设置 libjs-modernizr (2.6.2+ds1-ok2) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 python3.8-minimal (3.8.2-ok4) ...
+正在设置 libpython3.8-stdlib:riscv64 (3.8.2-ok4) ...
+正在设置 python3.8 (3.8.2-ok4) ...
+正在设置 fonts-font-awesome (5.0.10+really4.7.0~dfsg-ok2) ...
+正在设置 sphinx-rtd-theme-common (0.4.3+dfsg-ok2) ...
+正在设置 libjs-underscore (1.13.2-ok1) ...
+正在设置 libpython3.8-dbg:riscv64 (3.8.2-ok4) ...
+正在设置 libpython3-dbg:riscv64 (3.8.2-ok2) ...
+正在设置 libpython3.8:riscv64 (3.8.2-ok4) ...
+正在设置 libjs-sphinxdoc (1.8.5-ok1) ...
+正在设置 python-pil-doc (7.0.0-ok1) ...
+正在设置 python3.8-dbg (3.8.2-ok4) ...
+正在设置 python3-dbg (3.8.2-ok2) ...
+正在设置 python3-pil-dbg:riscv64 (7.0.0-ok1) ...
+正在处理用于 mime-support (3.64-ok1) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 fontconfig (2.13.1-ok1) 的触发器 ...
+正在处理用于 bamfdaemon (0.5.3+18.04.20180207.2-ok1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+正在处理用于 desktop-file-utils (0.24-ok2) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pil'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pil-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pil.imagetk'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status} ${Provides}\n', '*'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: WARNING: package python3-pil.imagetk is not installed though it should be
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-pil.imagetk-dbg'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python3-pil.imagetk-dbg 相匹配的软件包
+ (exit code 1)
+selftest-py3         FAIL badpkg
+blame: ./src/pillow_7.0.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-pil.imagetk-dbg 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [06:40:53]: @@@@@@@@@@@@@@@@@@@@ summary
+selftest-py3         FAIL badpkg
+blame: ./src/pillow_7.0.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-pil.imagetk-dbg 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.b26xaB
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 414383 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

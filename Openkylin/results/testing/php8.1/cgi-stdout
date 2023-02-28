@@ -1,0 +1,10 @@
+Enabling module actions.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+Your MPM seems to be threaded. Selecting cgid instead of cgi.
+Enabling module cgid.
+To activate the new configuration, you need to run:
+  systemctl restart apache2
+Enabling conf php8.1-cgi.
+To activate the new configuration, you need to run:
+  systemctl reload apache2

@@ -1,0 +1,2 @@
+pkg-config-dpkghook: warning: Architecture x86 not defined in architecture tables, ignored
+E: Package 'sash' has no installation candidate

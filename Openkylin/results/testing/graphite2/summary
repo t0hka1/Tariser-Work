@@ -1,0 +1,5 @@
+autodep8-python3     PASS (superficial)
+test                 FAIL badpkg
+blame: ./src/graphite2_1.3.13-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 libgraphite2-utils 相匹配的软件包
+ (exit code 1)

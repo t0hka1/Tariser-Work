@@ -1,0 +1,16 @@
+testsuite            FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+testsuite-dbg        FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+failing-tests        FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+failing-tests-dbg    FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)

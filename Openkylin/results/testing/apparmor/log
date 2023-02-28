@@ -1,0 +1,988 @@
+autopkgtest: DBG: testbed init
+autopkgtest [09:02:58]: starting date: 2023-02-28
+autopkgtest [09:02:58]: version 5.20ubuntu1
+autopkgtest [09:02:58]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/apparmor_2.13.3-ok1.dsc -o ./testing/apparmor -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.5edge72s/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.5edge72s/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.5edge72s/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.5edge72s/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.5edge72s/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.5edge72s/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.5edge72s/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.5edge72s/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5edge72s/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'27f46fd3-f3c1-4dcf-ad85-7974802ed46f[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.5edge72s/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5edge72s/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5edge72s/runcmd chmod 1777 /tmp/autopkgtest.sdHMp4
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.sdHMp4
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.5edge72s/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [09:04:01]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.sdHMp4/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/testbed-packages ./testing/apparmor/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/testbed-packages ./testing/apparmor/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5edge72s/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.sdHMp4/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/apparmor/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5edge72s/runcmd sh -ec cat </tmp/autopkgtest.sdHMp4/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [09:04:06]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [09:04:07]: @@@@@@@@@@@@@@@@@@@@ source ./src/apparmor_2.13.3-ok1.dsc
+autopkgtest: DBG: blame += ./src/apparmor_2.13.3-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.sdHMp4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/apparmor_2.13.3-ok1.dsc /tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/apparmor_2.13.3-ok1.dsc /tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5edge72s/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/apparmor_2.13.3-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5edge72s/runcmd sh -ec cat >/tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.sdHMp4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/apparmor_2.13.3.orig.tar.gz /tmp/autopkgtest.sdHMp4/apparmor_2.13.3.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/apparmor_2.13.3.orig.tar.gz /tmp/autopkgtest.sdHMp4/apparmor_2.13.3.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5edge72s/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.sdHMp4/apparmor_2.13.3.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/apparmor_2.13.3.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5edge72s/runcmd sh -ec cat >/tmp/autopkgtest.sdHMp4/apparmor_2.13.3.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.sdHMp4/apparmor_2.13.3.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.sdHMp4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/apparmor_2.13.3-ok1.debian.tar.xz /tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/apparmor_2.13.3-ok1.debian.tar.xz /tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5edge72s/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/apparmor_2.13.3-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5edge72s/runcmd sh -ec cat >/tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.sdHMp4/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.sdHMp4/build.XXX
++ builddir=/tmp/autopkgtest.sdHMp4/build.vm9
++ cd /tmp/autopkgtest.sdHMp4/build.vm9
++ dpkg-source -x /tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.ionCbVce/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年05月14日 星期六 07时17分47秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.sdHMp4/apparmor_2.13.3-ok1.dsc
+dpkg-source: info: extracting apparmor in src
+dpkg-source: info: unpacking apparmor_2.13.3.orig.tar.gz
+dpkg-source: info: unpacking apparmor_2.13.3-ok1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying upstream-commit-1244b81-limit-expr-tree-simplification-passes.patch
+dpkg-source: info: applying upstream-commit-0d5ab43-rc.apparmor.functions-drop-module-loading-support.patch
+dpkg-source: info: applying upstream-commit-94ff870-remove-subdomainfs-support.patch
+dpkg-source: info: applying upstream-commit-3a89e98-Remove-traces-of-aa-eventd.patch
+dpkg-source: info: applying upstream-commit-7ba8dc7-Drop-APPARMOR_ENABLE_AAEVENTD.patch
+dpkg-source: info: applying upstream-mr-252-Make-rc.apparmor.functions-suitable-for-Debian-and-Ubuntu.patch
+dpkg-source: info: applying lp1824812.patch
+dpkg-source: info: applying Avoid-blhc-CPPFLAGS-missing-false-positive.patch
+dpkg-source: info: applying upstream-mr-419-Xwayland-vs-recent-mutter.patch
+dpkg-source: info: applying upstream-mr-430-Fix-a-Python-3.8-autoconf-check.patch
+dpkg-source: info: applying debian/add-debian-integration-to-lighttpd.patch
+dpkg-source: info: applying debian/libapparmor-layout-deb.patch
+dpkg-source: info: applying debian/etc-writable.patch
+dpkg-source: info: applying debian/allow-access-to-ibus-socket.patch
+dpkg-source: info: applying debian/non-linux.patch
+dpkg-source: info: applying debian/Enable-writing-cache.patch
+dpkg-source: info: applying debian/Make-the-systemd-unit-a-no-op-in-containers-with-no-inter.patch
+dpkg-source: info: applying debian/smbd-include-snippet-generated-at-runtime.patch
+dpkg-source: info: applying debian/dont-include-site-local-with-dovecot.patch
+dpkg-source: info: applying ubuntu/add-chromium-browser.patch
+dpkg-source: info: applying ubuntu/communitheme-snap-support.patch
+dpkg-source: info: applying ubuntu/mimeinfo-snap-support.patch
+dpkg-source: info: applying ubuntu/profiles-grant-access-to-systemd-resolved.patch
+dpkg-source: info: applying ubuntu/libnss-systemd.patch
+dpkg-source: info: applying ubuntu/stop-loading-snapd-profiles.patch
+dpkg-source: info: applying upstream-dont-allow-fontconfig-cache-write.patch
+dpkg-source: info: applying upstream-tests-mult-mount-bump-size-of-created-disk.patch
+dpkg-source: info: applying upstream-adjust-for-ibus-1.5.22.patch
+dpkg-source: info: applying upstream-adjust-gnome-for-mimeapps.patch
+dpkg-source: info: applying upstream-commit-dda6825f-abstractions-add-etc-mdns.allow-to-etc-apparmor.d-ab.patch
+dpkg-source: info: applying upstream-mr-424-kerberos-dot-dirs.patch
+dpkg-source: info: applying upstream-mr-442-gnome-user-themes.patch
+dpkg-source: info: applying upstream-mr-443-ecryptfs-dirs.patch
+dpkg-source: info: applying upstream-mr-445-uuidd-request.patch
+dpkg-source: info: applying upstream-mr-464-Mesa_i915_perf_interface.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [09:04:37]: testing package apparmor version 2.13.3-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/build.vm9/src/debian/ ./testing/apparmor/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/build.vm9/src/debian/ ./testing/apparmor/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5edge72s/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.sdHMp4/build.vm9/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/apparmor/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5edge72s/runcmd sh -ec cd /tmp/autopkgtest.sdHMp4/build.vm9/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/apparmor/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency apparmor
+autopkgtest: DBG: marked alternatives ['apparmor'] as a synthesised dependency
+autopkgtest: DBG: processing dependency apparmor-profiles-extra
+autopkgtest: DBG: processing dependency bind9
+autopkgtest: DBG: processing dependency cups-browsed
+autopkgtest: DBG: processing dependency cups-daemon
+autopkgtest: DBG: processing dependency evince
+autopkgtest: DBG: processing dependency haveged
+autopkgtest: DBG: processing dependency kopano-dagent
+autopkgtest: DBG: processing dependency kopano-server
+autopkgtest: DBG: processing dependency libreoffice-common
+autopkgtest: DBG: processing dependency libvirt-daemon-system
+autopkgtest: DBG: processing dependency man-db
+autopkgtest: DBG: processing dependency ntp
+autopkgtest: DBG: processing dependency onioncircuits
+autopkgtest: DBG: processing dependency tcpdump
+autopkgtest: DBG: processing dependency tor
+autopkgtest: DBG: Test defined: name compile-policy path debian/tests/compile-policy command "None" restrictions ['allow-stderr'] features [] depends ['apparmor', 'apparmor-profiles-extra', 'bind9', 'cups-browsed', 'cups-daemon', 'evince', 'haveged', 'kopano-dagent', 'kopano-server', 'libreoffice-common', 'libvirt-daemon-system', 'man-db', 'ntp', 'onioncircuits', 'tcpdump', 'tor'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency apparmor
+autopkgtest: DBG: synthesised dependency apparmor-utils
+autopkgtest: DBG: synthesised dependency apparmor-profiles
+autopkgtest: DBG: synthesised dependency libapparmor-dev
+autopkgtest: DBG: synthesised dependency libapparmor1
+autopkgtest: DBG: synthesised dependency libapparmor-perl
+autopkgtest: DBG: synthesised dependency libapache2-mod-apparmor
+autopkgtest: DBG: synthesised dependency libpam-apparmor
+autopkgtest: DBG: synthesised dependency apparmor-notify
+autopkgtest: DBG: synthesised dependency python3-libapparmor
+autopkgtest: DBG: synthesised dependency python3-apparmor
+autopkgtest: DBG: synthesised dependency dh-apparmor
+autopkgtest: DBG: synthesised dependency apparmor-easyprof
+autopkgtest: DBG: processing dependency @builddeps@
+autopkgtest: DBG: synthesised dependency apache2-dev
+autopkgtest: DBG: synthesised dependency autoconf
+autopkgtest: DBG: synthesised dependency automake
+autopkgtest: DBG: synthesised dependency bison
+autopkgtest: DBG: synthesised dependency bzip2
+autopkgtest: DBG: synthesised dependency chrpath
+autopkgtest: DBG: synthesised dependency debhelper-compat (= 12)
+autopkgtest: DBG: synthesised dependency dejagnu
+autopkgtest: DBG: synthesised dependency dh-apache2
+autopkgtest: DBG: synthesised dependency dh-python
+autopkgtest: DBG: synthesised dependency flex
+autopkgtest: DBG: synthesised dependency liblocale-gettext-perl
+autopkgtest: DBG: synthesised dependency libpam-dev
+autopkgtest: DBG: synthesised dependency libtool
+autopkgtest: DBG: synthesised dependency perl
+autopkgtest: DBG: synthesised dependency pkg-config
+autopkgtest: DBG: synthesised dependency po-debconf
+autopkgtest: DBG: synthesised dependency python3
+autopkgtest: DBG: synthesised dependency python3-all-dev
+autopkgtest: DBG: synthesised dependency swig
+autopkgtest: DBG: synthesised dependency build-essential
+autopkgtest: DBG: Test defined: name test-installed path debian/tests/test-installed command "None" restrictions ['allow-stderr', 'superficial'] features [] depends ['apparmor', 'apparmor-utils', 'apparmor-profiles', 'libapparmor-dev', 'libapparmor1', 'libapparmor-perl', 'libapache2-mod-apparmor', 'libpam-apparmor', 'apparmor-notify', 'python3-libapparmor', 'python3-apparmor', 'dh-apparmor', 'apparmor-easyprof', 'apache2-dev', 'autoconf', 'automake', 'bison', 'bzip2', 'chrpath', 'debhelper-compat (= 12)', 'dejagnu', 'dh-apache2', 'dh-python', 'flex', 'liblocale-gettext-perl', 'libpam-dev', 'libtool', 'perl', 'pkg-config', 'po-debconf', 'python3', 'python3-all-dev', 'swig', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency linux-image-amd64 [amd64] | linux-image-generic [ amd64 ]
+autopkgtest: DBG: Test defined: name command1 path None command "/bin/true" restrictions ['superficial', 'skip-not-installable'] features [] depends ['linux-image-amd64 [amd64] | linux-image-generic [ amd64 ]'] clicks [] installed clicks []
+autopkgtest [09:04:38]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/build.vm9/src/ ./testing/apparmor/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/build.vm9/src/ ./testing/apparmor/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5edge72s/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.sdHMp4/build.vm9/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/apparmor/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5edge72s/runcmd sh -ec cd /tmp/autopkgtest.sdHMp4/build.vm9/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/apparmor/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency apparmor
+autopkgtest: DBG: marked alternatives ['apparmor'] as a synthesised dependency
+autopkgtest: DBG: processing dependency apparmor-profiles-extra
+autopkgtest: DBG: processing dependency bind9
+autopkgtest: DBG: processing dependency cups-browsed
+autopkgtest: DBG: processing dependency cups-daemon
+autopkgtest: DBG: processing dependency evince
+autopkgtest: DBG: processing dependency haveged
+autopkgtest: DBG: processing dependency kopano-dagent
+autopkgtest: DBG: processing dependency kopano-server
+autopkgtest: DBG: processing dependency libreoffice-common
+autopkgtest: DBG: processing dependency libvirt-daemon-system
+autopkgtest: DBG: processing dependency man-db
+autopkgtest: DBG: processing dependency ntp
+autopkgtest: DBG: processing dependency onioncircuits
+autopkgtest: DBG: processing dependency tcpdump
+autopkgtest: DBG: processing dependency tor
+autopkgtest: DBG: Test defined: name compile-policy path debian/tests/compile-policy command "None" restrictions ['allow-stderr'] features [] depends ['apparmor', 'apparmor-profiles-extra', 'bind9', 'cups-browsed', 'cups-daemon', 'evince', 'haveged', 'kopano-dagent', 'kopano-server', 'libreoffice-common', 'libvirt-daemon-system', 'man-db', 'ntp', 'onioncircuits', 'tcpdump', 'tor'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency @
+autopkgtest: DBG: synthesised dependency apparmor
+autopkgtest: DBG: synthesised dependency apparmor-utils
+autopkgtest: DBG: synthesised dependency apparmor-profiles
+autopkgtest: DBG: synthesised dependency libapparmor-dev
+autopkgtest: DBG: synthesised dependency libapparmor1
+autopkgtest: DBG: synthesised dependency libapparmor-perl
+autopkgtest: DBG: synthesised dependency libapache2-mod-apparmor
+autopkgtest: DBG: synthesised dependency libpam-apparmor
+autopkgtest: DBG: synthesised dependency apparmor-notify
+autopkgtest: DBG: synthesised dependency python3-libapparmor
+autopkgtest: DBG: synthesised dependency python3-apparmor
+autopkgtest: DBG: synthesised dependency dh-apparmor
+autopkgtest: DBG: synthesised dependency apparmor-easyprof
+autopkgtest: DBG: processing dependency @builddeps@
+autopkgtest: DBG: synthesised dependency apache2-dev
+autopkgtest: DBG: synthesised dependency autoconf
+autopkgtest: DBG: synthesised dependency automake
+autopkgtest: DBG: synthesised dependency bison
+autopkgtest: DBG: synthesised dependency bzip2
+autopkgtest: DBG: synthesised dependency chrpath
+autopkgtest: DBG: synthesised dependency debhelper-compat (= 12)
+autopkgtest: DBG: synthesised dependency dejagnu
+autopkgtest: DBG: synthesised dependency dh-apache2
+autopkgtest: DBG: synthesised dependency dh-python
+autopkgtest: DBG: synthesised dependency flex
+autopkgtest: DBG: synthesised dependency liblocale-gettext-perl
+autopkgtest: DBG: synthesised dependency libpam-dev
+autopkgtest: DBG: synthesised dependency libtool
+autopkgtest: DBG: synthesised dependency perl
+autopkgtest: DBG: synthesised dependency pkg-config
+autopkgtest: DBG: synthesised dependency po-debconf
+autopkgtest: DBG: synthesised dependency python3
+autopkgtest: DBG: synthesised dependency python3-all-dev
+autopkgtest: DBG: synthesised dependency swig
+autopkgtest: DBG: synthesised dependency build-essential
+autopkgtest: DBG: Test defined: name test-installed path debian/tests/test-installed command "None" restrictions ['allow-stderr', 'superficial'] features [] depends ['apparmor', 'apparmor-utils', 'apparmor-profiles', 'libapparmor-dev', 'libapparmor1', 'libapparmor-perl', 'libapache2-mod-apparmor', 'libpam-apparmor', 'apparmor-notify', 'python3-libapparmor', 'python3-apparmor', 'dh-apparmor', 'apparmor-easyprof', 'apache2-dev', 'autoconf', 'automake', 'bison', 'bzip2', 'chrpath', 'debhelper-compat (= 12)', 'dejagnu', 'dh-apache2', 'dh-python', 'flex', 'liblocale-gettext-perl', 'libpam-dev', 'libtool', 'perl', 'pkg-config', 'po-debconf', 'python3', 'python3-all-dev', 'swig', 'build-essential'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency linux-image-amd64 [amd64] | linux-image-generic [ amd64 ]
+autopkgtest: DBG: Test defined: name command1 path None command "/bin/true" restrictions ['superficial', 'skip-not-installable'] features [] depends ['linux-image-amd64 [amd64] | linux-image-generic [ amd64 ]'] clicks [] installed clicks []
+autopkgtest [09:04:43]: test compile-policy: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['apparmor', 'apparmor-profiles-extra', 'bind9', 'cups-browsed', 'cups-daemon', 'evince', 'haveged', 'kopano-dagent', 'kopano-server', 'libreoffice-common', 'libvirt-daemon-system', 'man-db', 'ntp', 'onioncircuits', 'tcpdump', 'tor']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['apparmor', 'apparmor-profiles-extra', 'bind9', 'cups-browsed', 'cups-daemon', 'evince', 'haveged', 'kopano-dagent', 'kopano-server', 'libreoffice-common', 'libvirt-daemon-system', 'man-db', 'ntp', 'onioncircuits', 'tcpdump', 'tor']
+autopkgtest: DBG: install-deps: satisfying apparmor, apparmor-profiles-extra, bind9, cups-browsed, cups-daemon, evince, haveged, kopano-dagent, kopano-server, libreoffice-common, libvirt-daemon-system, man-db, ntp, onioncircuits, tcpdump, tor
+autopkgtest: DBG: install-deps: architecture resolved: apparmor, apparmor-profiles-extra, bind9, cups-browsed, cups-daemon, evince, haveged, kopano-dagent, kopano-server, libreoffice-common, libvirt-daemon-system, man-db, ntp, onioncircuits, tcpdump, tor
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.sdHMp4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/apparmor/1-autopkgtest-satdep.deb /tmp/autopkgtest.sdHMp4/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/apparmor/1-autopkgtest-satdep.deb /tmp/autopkgtest.sdHMp4/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5edge72s/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.sdHMp4/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/apparmor/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5edge72s/runcmd sh -ec cat >/tmp/autopkgtest.sdHMp4/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.sdHMp4/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.sdHMp4/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 1
+Starting 2 pkgProblemResolver with broken count: 1
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on apparmor-profiles-extra:riscv64 < none @un H >
+  Removing autopkgtest-satdep:riscv64 because I can't find apparmor-profiles-extra:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  apparmor cups-browsed systemd-container
+建议安装：
+  apparmor-profiles-extra apparmor-utils
+推荐安装：
+  avahi-daemon libnss-mymachines
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  apparmor cups-browsed systemd-container
+升级了 0 个软件包，新安装了 3 个软件包，要卸载 1 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 917 kB 的归档。
+解压缩后会消耗 2,967 kB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 apparmor riscv64 2.13.3-ok1 [497 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cups-browsed riscv64 1.27.4-ok4 [110 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 systemd-container riscv64 245.4-ok4~0716 [311 kB]
+正在预设定软件包 ...
+已下载 917 kB，耗时 1秒 (1,012 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+正在选中未选择的软件包 apparmor。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../apparmor_2.13.3-ok1_riscv64.deb  ...
+正在解压 apparmor (2.13.3-ok1) ...
+正在选中未选择的软件包 cups-browsed。
+准备解压 .../cups-browsed_1.27.4-ok4_riscv64.deb  ...
+正在解压 cups-browsed (1.27.4-ok4) ...
+正在选中未选择的软件包 systemd-container。
+准备解压 .../systemd-container_245.4-ok4~0716_riscv64.deb  ...
+正在解压 systemd-container (245.4-ok4~0716) ...
+正在设置 cups-browsed (1.27.4-ok4) ...
+Warning from stdin (line 1): config file '/etc/apparmor/parser.conf' not found
+AppArmor parser error for /etc/apparmor.d/usr.sbin.cups-browsed in /etc/apparmor.d/usr.sbin.cups-browsed at line 1: Could not open 'tunables/global'
+正在设置 apparmor (2.13.3-ok1) ...
+Created symlink /etc/systemd/system/sysinit.target.wants/apparmor.service → /lib/systemd/system/apparmor.service.
+Reloading AppArmor profiles 
+Skipping profile in /etc/apparmor.d/disable: usr.sbin.rsyslogd
+正在设置 systemd-container (245.4-ok4~0716) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/machines.target → /lib/systemd/system/machines.target.
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 dbus (1.12.16-ok1) 的触发器 ...
+正在处理用于 systemd (245.4-ok4~0716) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'apparmor'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: WARNING: Test dependencies are unsatisfiable - calling apt install on test deps directly for further data about failing dependencies in test logs
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --simulate apparmor apparmor-profiles-extra bind9 cups-browsed cups-daemon evince haveged kopano-dagent kopano-server libreoffice-common libvirt-daemon-system man-db ntp onioncircuits tcpdump tor -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+没有可用的软件包 apparmor-profiles-extra，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+没有可用的软件包 tor，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+没有可用的软件包 evince，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+没有可用的软件包 ntp，但是它被其它的软件包引用了。
+这可能意味着这个缺失的软件包可能已被废弃，
+或者只能在其他发布源中找到
+
+E: 软件包 apparmor-profiles-extra 没有可安装候选
+E: 软件包 evince 没有可安装候选
+E: 无法定位软件包 kopano-dagent
+E: 无法定位软件包 kopano-server
+E: 无法定位软件包 libreoffice-common
+E: 软件包 ntp 没有可安装候选
+E: 无法定位软件包 onioncircuits
+E: 无法定位软件包 tcpdump
+E: 软件包 tor 没有可安装候选
+autopkgtest: DBG: testbed command exited with code 100
+autopkgtest: DBG: BadPackageError Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+compile-policy       FAIL badpkg
+blame: ./src/apparmor_2.13.3-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+autopkgtest [09:06:08]: test test-installed: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['apparmor', 'apparmor-profiles-extra', 'bind9', 'cups-browsed', 'cups-daemon', 'evince', 'haveged', 'kopano-dagent', 'kopano-server', 'libreoffice-common', 'libvirt-daemon-system', 'man-db', 'ntp', 'onioncircuits', 'tcpdump', 'tor'], deps_new=['apparmor', 'apparmor-utils', 'apparmor-profiles', 'libapparmor-dev', 'libapparmor1', 'libapparmor-perl', 'libapache2-mod-apparmor', 'libpam-apparmor', 'apparmor-notify', 'python3-libapparmor', 'python3-apparmor', 'dh-apparmor', 'apparmor-easyprof', 'apache2-dev', 'autoconf', 'automake', 'bison', 'bzip2', 'chrpath', 'debhelper-compat (= 12)', 'dejagnu', 'dh-apache2', 'dh-python', 'flex', 'liblocale-gettext-perl', 'libpam-dev', 'libtool', 'perl', 'pkg-config', 'po-debconf', 'python3', 'python3-all-dev', 'swig', 'build-essential']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5edge72s/runcmd rm -rf -- /tmp/autopkgtest.sdHMp4
+qemu-system-riscv64: terminating on signal 15 from pid 449587 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.g0bxg380/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.g0bxg380/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.g0bxg380/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.g0bxg380/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.g0bxg380/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.g0bxg380/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.g0bxg380/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.g0bxg380/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.g0bxg380/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'0de0c629-be08-4fba-81fb-0eb0e6fb9063[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.g0bxg380/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.sdHMp4
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.g0bxg380/runcmd'], downtmp = /tmp/autopkgtest.sdHMp4
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.sdHMp4
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.g0bxg380/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [09:07:12]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.sdHMp4/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/testbed-packages ./testing/apparmor/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/testbed-packages ./testing/apparmor/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.g0bxg380/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.sdHMp4/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/apparmor/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.g0bxg380/runcmd sh -ec cat </tmp/autopkgtest.sdHMp4/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['apparmor', 'apparmor-utils', 'apparmor-profiles', 'libapparmor-dev', 'libapparmor1', 'libapparmor-perl', 'libapache2-mod-apparmor', 'libpam-apparmor', 'apparmor-notify', 'python3-libapparmor', 'python3-apparmor', 'dh-apparmor', 'apparmor-easyprof', 'apache2-dev', 'autoconf', 'automake', 'bison', 'bzip2', 'chrpath', 'debhelper-compat (= 12)', 'dejagnu', 'dh-apache2', 'dh-python', 'flex', 'liblocale-gettext-perl', 'libpam-dev', 'libtool', 'perl', 'pkg-config', 'po-debconf', 'python3', 'python3-all-dev', 'swig', 'build-essential']
+autopkgtest: DBG: install-deps: satisfying apparmor, apparmor-utils, apparmor-profiles, libapparmor-dev, libapparmor1, libapparmor-perl, libapache2-mod-apparmor, libpam-apparmor, apparmor-notify, python3-libapparmor, python3-apparmor, dh-apparmor, apparmor-easyprof, apache2-dev, autoconf, automake, bison, bzip2, chrpath, debhelper-compat (= 12), dejagnu, dh-apache2, dh-python, flex, liblocale-gettext-perl, libpam-dev, libtool, perl, pkg-config, po-debconf, python3, python3-all-dev, swig, build-essential
+autopkgtest: DBG: install-deps: architecture resolved: apparmor, apparmor-utils, apparmor-profiles, libapparmor-dev, libapparmor1, libapparmor-perl, libapache2-mod-apparmor, libpam-apparmor, apparmor-notify, python3-libapparmor, python3-apparmor, dh-apparmor, apparmor-easyprof, apache2-dev, autoconf, automake, bison, bzip2, chrpath, debhelper-compat (= 12), dejagnu, dh-apache2, dh-python, flex, liblocale-gettext-perl, libpam-dev, libtool, perl, pkg-config, po-debconf, python3, python3-all-dev, swig, build-essential
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.sdHMp4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/apparmor/2-autopkgtest-satdep.deb /tmp/autopkgtest.sdHMp4/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/apparmor/2-autopkgtest-satdep.deb /tmp/autopkgtest.sdHMp4/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.g0bxg380/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.sdHMp4/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/apparmor/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.g0bxg380/runcmd sh -ec cat >/tmp/autopkgtest.sdHMp4/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.sdHMp4/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.sdHMp4/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 3
+Starting 2 pkgProblemResolver with broken count: 3
+Investigating (0) libaprutil1-dev:riscv64 < none -> 1.6.1-ok3 @un uN Ib >
+Broken libaprutil1-dev:riscv64 依赖 on libapr1-dev:riscv64 < none | 1.7.0-ok1 @un uH >
+  Considering libapr1-dev:riscv64 2 as a solution to libaprutil1-dev:riscv64 0
+  Holding Back libaprutil1-dev:riscv64 rather than change libapr1-dev:riscv64
+Investigating (0) apache2-dev:riscv64 < none -> 2.4.54-ok1 @un uN Ib >
+Broken apache2-dev:riscv64 依赖 on libapr1-dev:riscv64 < none | 1.7.0-ok1 @un uH >
+  Considering libapr1-dev:riscv64 2 as a solution to apache2-dev:riscv64 0
+  Holding Back apache2-dev:riscv64 rather than change libapr1-dev:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on apache2-dev:riscv64 < none | 2.4.54-ok1 @un uH >
+  Considering apache2-dev:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change apache2-dev:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 libmpdec2 lvm2
+  os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  apparmor apparmor-utils autoconf automake autopoint autotools-dev bison
+  build-essential cpp flex g++ g++-9 gcc gcc-9 libcc1-0 libexpat1 libffi8
+  libgcc-9-dev libpython3.8 libpython3.8-minimal libpython3.8-stdlib
+  libsigsegv2 libstdc++-9-dev libtool m4 python3-apparmor python3-libapparmor
+  python3.8 python3.8-minimal
+建议安装：
+  apparmor-profiles-extra vim-addon-manager autoconf-archive gnu-standards
+  autoconf-doc bison-doc cpp-doc flex-doc gcc-9-doc gcc-doc gcc-multilib gdb
+  manpages-dev gcc-9-locales libstdc++-9-doc libtool-doc gfortran
+  | fortran95-compiler gcj-jdk m4-doc python3.8-venv python3.8-doc
+  binfmt-support
+推荐安装：
+  libfl-dev libltdl-dev
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  apparmor apparmor-utils autoconf automake autopoint autotools-dev bison
+  build-essential flex g++ g++-9 gcc gcc-9 libcc1-0 libffi8 libgcc-9-dev
+  libsigsegv2 libstdc++-9-dev libtool m4 python3-apparmor python3-libapparmor
+下列软件包将被升级：
+  cpp libexpat1 libpython3.8 libpython3.8-minimal libpython3.8-stdlib
+  python3.8 python3.8-minimal
+升级了 7 个软件包，新安装了 22 个软件包，要卸载 1 个软件包，有 131 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 29.9 MB 的归档。
+解压缩后会消耗 93.0 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libsigsegv2 riscv64 2.12-ok1 [11.5 kB]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 m4 riscv64 1.4.18-ok2 [191 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 flex riscv64 2.6.4-ok2 [363 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8 riscv64 3.8.2-ok4 [365 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8 riscv64 3.8.2-ok4 [1,652 kB]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-stdlib riscv64 3.8.2-ok4 [1,738 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3.8-minimal riscv64 3.8.2-ok4 [1,632 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libpython3.8-minimal riscv64 3.8.2-ok4 [720 kB]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1 riscv64 2.2.9-ok3 [69.2 kB]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libffi8 riscv64 3.4.4-ok3 [20.0 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 apparmor riscv64 2.13.3-ok1 [497 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-libapparmor riscv64 2.13.3-ok1 [22.9 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 python3-apparmor riscv64 2.13.3-ok1 [78.7 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 apparmor-utils riscv64 2.13.3-ok1 [51.4 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autoconf all 2.71-ok2 [390 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autotools-dev all 20220506-ok1 [41.6 kB]
+获取:17 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 automake all 1:1.16.5-ok1 [557 kB]
+获取:18 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 autopoint all 0.19.8.1-ok1 [410 kB]
+获取:19 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 bison riscv64 3.8.2-ok1 [899 kB]
+获取:20 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:21 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:22 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:23 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:24 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:25 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:26 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:27 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:28 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:29 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libtool all 2.4.6-ok1 [159 kB]
+正在预设定软件包 ...
+已下载 29.9 MB，耗时 57秒 (522 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+正在选中未选择的软件包 libsigsegv2:riscv64。
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-libsigsegv2_2.12-ok1_riscv64.deb  ...
+正在解压 libsigsegv2:riscv64 (2.12-ok1) ...
+正在选中未选择的软件包 m4。
+准备解压 .../01-m4_1.4.18-ok2_riscv64.deb  ...
+正在解压 m4 (1.4.18-ok2) ...
+正在选中未选择的软件包 flex。
+准备解压 .../02-flex_2.6.4-ok2_riscv64.deb  ...
+正在解压 flex (2.6.4-ok2) ...
+准备解压 .../03-python3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../04-libpython3.8_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../05-libpython3.8-stdlib_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-stdlib:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../06-python3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 python3.8-minimal (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../07-libpython3.8-minimal_3.8.2-ok4_riscv64.deb  ...
+正在解压 libpython3.8-minimal:riscv64 (3.8.2-ok4) 并覆盖 (3.8.2-ok2) ...
+准备解压 .../08-libexpat1_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1:riscv64 (2.2.9-ok3) 并覆盖 (2.2.9-ok1) ...
+正在选中未选择的软件包 libffi8:riscv64。
+准备解压 .../09-libffi8_3.4.4-ok3_riscv64.deb  ...
+正在解压 libffi8:riscv64 (3.4.4-ok3) ...
+正在选中未选择的软件包 apparmor。
+准备解压 .../10-apparmor_2.13.3-ok1_riscv64.deb  ...
+正在解压 apparmor (2.13.3-ok1) ...
+正在选中未选择的软件包 python3-libapparmor。
+准备解压 .../11-python3-libapparmor_2.13.3-ok1_riscv64.deb  ...
+正在解压 python3-libapparmor (2.13.3-ok1) ...
+正在选中未选择的软件包 python3-apparmor。
+准备解压 .../12-python3-apparmor_2.13.3-ok1_riscv64.deb  ...
+正在解压 python3-apparmor (2.13.3-ok1) ...
+正在选中未选择的软件包 apparmor-utils。
+准备解压 .../13-apparmor-utils_2.13.3-ok1_riscv64.deb  ...
+正在解压 apparmor-utils (2.13.3-ok1) ...
+正在选中未选择的软件包 autoconf。
+准备解压 .../14-autoconf_2.71-ok2_all.deb  ...
+正在解压 autoconf (2.71-ok2) ...
+正在选中未选择的软件包 autotools-dev。
+准备解压 .../15-autotools-dev_20220506-ok1_all.deb  ...
+正在解压 autotools-dev (20220506-ok1) ...
+正在选中未选择的软件包 automake。
+准备解压 .../16-automake_1%3a1.16.5-ok1_all.deb  ...
+正在解压 automake (1:1.16.5-ok1) ...
+正在选中未选择的软件包 autopoint。
+准备解压 .../17-autopoint_0.19.8.1-ok1_all.deb  ...
+正在解压 autopoint (0.19.8.1-ok1) ...
+正在选中未选择的软件包 bison。
+准备解压 .../18-bison_3.8.2-ok1_riscv64.deb  ...
+正在解压 bison (3.8.2-ok1) ...
+准备解压 .../19-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../20-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../21-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../22-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../23-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../24-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../25-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../26-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../27-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在选中未选择的软件包 libtool。
+准备解压 .../28-libtool_2.4.6-ok1_all.deb  ...
+正在解压 libtool (2.4.6-ok1) ...
+正在设置 python3-libapparmor (2.13.3-ok1) ...
+正在设置 libexpat1:riscv64 (2.2.9-ok3) ...
+正在设置 libpython3.8-minimal:riscv64 (3.8.2-ok4) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 apparmor (2.13.3-ok1) ...
+Created symlink /etc/systemd/system/sysinit.target.wants/apparmor.service → /lib/systemd/system/apparmor.service.
+Reloading AppArmor profiles 
+Skipping profile in /etc/apparmor.d/disable: usr.sbin.rsyslogd
+正在设置 autotools-dev (20220506-ok1) ...
+正在设置 libsigsegv2:riscv64 (2.12-ok1) ...
+正在设置 autopoint (0.19.8.1-ok1) ...
+正在设置 libffi8:riscv64 (3.4.4-ok3) ...
+正在设置 python3.8-minimal (3.8.2-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 python3-apparmor (2.13.3-ok1) ...
+正在设置 libpython3.8-stdlib:riscv64 (3.8.2-ok4) ...
+正在设置 python3.8 (3.8.2-ok4) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libtool (2.4.6-ok1) ...
+正在设置 m4 (1.4.18-ok2) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 libpython3.8:riscv64 (3.8.2-ok4) ...
+正在设置 apparmor-utils (2.13.3-ok1) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 autoconf (2.71-ok2) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 bison (3.8.2-ok1) ...
+update-alternatives: 使用 /usr/bin/bison.yacc 来在自动模式中提供 /usr/bin/yacc (yacc)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 automake (1:1.16.5-ok1) ...
+update-alternatives: 使用 /usr/bin/automake-1.16 来在自动模式中提供 /usr/bin/automake (automake)
+正在设置 flex (2.6.4-ok2) ...
+正在处理用于 mime-support (3.64-ok1) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+正在处理用于 systemd (245.4-ok4~0716) 的触发器 ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 install-info (6.7.0.dfsg.2-ok1) 的触发器 ...
+正在处理用于 bamfdaemon (0.5.3+18.04.20180207.2-ok1) 的触发器 ...
+Rebuilding /usr/share/applications/bamf-2.index...
+正在处理用于 desktop-file-utils (0.24-ok2) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'apparmor'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'apparmor-utils'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'apparmor-profiles'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 apparmor-profiles 相匹配的软件包
+ (exit code 1)
+test-installed       FAIL badpkg
+blame: ./src/apparmor_2.13.3-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 apparmor-profiles 相匹配的软件包
+ (exit code 1)
+autopkgtest [09:11:02]: test command1: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['apparmor', 'apparmor-utils', 'apparmor-profiles', 'libapparmor-dev', 'libapparmor1', 'libapparmor-perl', 'libapache2-mod-apparmor', 'libpam-apparmor', 'apparmor-notify', 'python3-libapparmor', 'python3-apparmor', 'dh-apparmor', 'apparmor-easyprof', 'apache2-dev', 'autoconf', 'automake', 'bison', 'bzip2', 'chrpath', 'debhelper-compat (= 12)', 'dejagnu', 'dh-apache2', 'dh-python', 'flex', 'liblocale-gettext-perl', 'libpam-dev', 'libtool', 'perl', 'pkg-config', 'po-debconf', 'python3', 'python3-all-dev', 'swig', 'build-essential'], deps_new=['linux-image-amd64 [amd64] | linux-image-generic [ amd64 ]']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.g0bxg380/runcmd rm -rf -- /tmp/autopkgtest.sdHMp4
+qemu-system-riscv64: terminating on signal 15 from pid 449587 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.zzfm5ond/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.zzfm5ond/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.zzfm5ond/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.zzfm5ond/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.zzfm5ond/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.zzfm5ond/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.zzfm5ond/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.zzfm5ond/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.zzfm5ond/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'9a2f2f1d-15e1-4e37-9fea-b0bd0a70b266[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.zzfm5ond/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.sdHMp4
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.zzfm5ond/runcmd'], downtmp = /tmp/autopkgtest.sdHMp4
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.sdHMp4
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.zzfm5ond/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [09:12:05]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.sdHMp4/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/testbed-packages ./testing/apparmor/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/testbed-packages ./testing/apparmor/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.zzfm5ond/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.sdHMp4/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/apparmor/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.zzfm5ond/runcmd sh -ec cat </tmp/autopkgtest.sdHMp4/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['linux-image-amd64 [amd64] | linux-image-generic [ amd64 ]']
+autopkgtest: DBG: install-deps: satisfying linux-image-amd64 [amd64] | linux-image-generic [ amd64 ]
+autopkgtest: DBG: install-deps: architecture resolved: 
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.sdHMp4'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/apparmor/3-autopkgtest-satdep.deb /tmp/autopkgtest.sdHMp4/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/apparmor/3-autopkgtest-satdep.deb /tmp/autopkgtest.sdHMp4/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.zzfm5ond/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.sdHMp4/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/apparmor/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.zzfm5ond/runcmd sh -ec cat >/tmp/autopkgtest.sdHMp4/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.sdHMp4/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.sdHMp4/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 138 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+解压缩后会消耗 0 B 的额外空间。
+正在设置 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.sdHMp4/command1-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/command1-packages.all ./testing/apparmor/command1-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/command1-packages.all ./testing/apparmor/command1-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.zzfm5ond/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.sdHMp4/command1-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/apparmor/command1-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.zzfm5ond/runcmd sh -ec cat </tmp/autopkgtest.sdHMp4/command1-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.sdHMp4/build.vm9/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.sdHMp4/build.vm9'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/apparmor/tests-tree/ /tmp/autopkgtest.sdHMp4/build.vm9/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/apparmor/tests-tree/ /tmp/autopkgtest.sdHMp4/build.vm9/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/apparmor/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.zzfm5ond/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.sdHMp4/build.vm9/src/; then mkdir -- /tmp/autopkgtest.sdHMp4/build.vm9/src/; fi; cd /tmp/autopkgtest.sdHMp4/build.vm9/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/apparmor/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.zzfm5ond/runcmd sh -ec if ! test -d /tmp/autopkgtest.sdHMp4/build.vm9/src/; then mkdir -- /tmp/autopkgtest.sdHMp4/build.vm9/src/; fi; cd /tmp/autopkgtest.sdHMp4/build.vm9/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.sdHMp4/build.vm9/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [09:12:52]: test command1: /bin/true
+autopkgtest [09:12:52]: test command1: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.sdHMp4/build.vm9/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.sdHMp4/command1-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.sdHMp4/command1-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.sdHMp4/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.sdHMp4/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; touch /tmp/autopkgtest.sdHMp4/command1-stdout /tmp/autopkgtest.sdHMp4/command1-stderr; bash -ec \'/bin/true\' 2> >(tee -a /tmp/autopkgtest.sdHMp4/command1-stderr >&2) > >(tee -a /tmp/autopkgtest.sdHMp4/command1-stdout);'], kind test, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [09:12:56]: test command1: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/command1-stdout ./testing/apparmor/command1-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/command1-stdout ./testing/apparmor/command1-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.zzfm5ond/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.sdHMp4/command1-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/apparmor/command1-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.zzfm5ond/runcmd sh -ec cat </tmp/autopkgtest.sdHMp4/command1-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/command1-stderr ./testing/apparmor/command1-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/command1-stderr ./testing/apparmor/command1-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.zzfm5ond/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.sdHMp4/command1-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/apparmor/command1-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.zzfm5ond/runcmd sh -ec cat </tmp/autopkgtest.sdHMp4/command1-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [09:12:58]: test command1:  - - - - - - - - - - results - - - - - - - - - -
+command1             PASS (superficial)
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.sdHMp4/command1-artifacts/ ./testing/apparmor/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.sdHMp4/command1-artifacts/ ./testing/apparmor/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.zzfm5ond/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.sdHMp4/command1-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/apparmor/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.zzfm5ond/runcmd sh -ec cd /tmp/autopkgtest.sdHMp4/command1-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/apparmor/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.sdHMp4/command1-artifacts', '/tmp/autopkgtest.sdHMp4/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [09:12:59]: @@@@@@@@@@@@@@@@@@@@ summary
+compile-policy       FAIL badpkg
+blame: ./src/apparmor_2.13.3-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.
+test-installed       FAIL badpkg
+blame: ./src/apparmor_2.13.3-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 apparmor-profiles 相匹配的软件包
+ (exit code 1)
+command1             PASS (superficial)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.sdHMp4
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 449587 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

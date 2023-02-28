@@ -1,0 +1,1002 @@
+autopkgtest: DBG: testbed init
+autopkgtest [15:46:29]: starting date: 2023-02-27
+autopkgtest [15:46:29]: version 5.20ubuntu1
+autopkgtest [15:46:29]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/libopenmpt_0.4.11-ok1.dsc -o ./testing/libopenmpt -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.759y55j5/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.759y55j5/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.759y55j5/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.759y55j5/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.759y55j5/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.759y55j5/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.759y55j5/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.759y55j5/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'78f79308-ba14-476a-a219-5e68850ff13a[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'78f79308-ba14-476a-a219-5e68850ff13a[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'78f79308-ba14-476a-a219-5e68850ff13a[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'78f79308-ba14-476a-a219-5e68850ff13a[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'78f79308-ba14-476a-a219-5e68850ff13a[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'78f79308-ba14-476a-a219-5e68850ff13a[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'78f79308-ba14-476a-a219-5e68850ff13a[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'78f79308-ba14-476a-a219-5e68850ff13a[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'78f79308-ba14-476a-a219-5e68850ff13a[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'78f79308-ba14-476a-a219-5e68850ff13a[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.759y55j5/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'78f79308-ba14-476a-a219-5e68850ff13a[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'78f79308-ba14-476a-a219-5e68850ff13a[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.759y55j5/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.759y55j5/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.759y55j5/runcmd chmod 1777 /tmp/autopkgtest.Ovkn2Q
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.Ovkn2Q
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.759y55j5/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:47:34]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Ovkn2Q/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/testbed-packages ./testing/libopenmpt/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/testbed-packages ./testing/libopenmpt/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:47:40]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [15:47:41]: @@@@@@@@@@@@@@@@@@@@ source ./src/libopenmpt_0.4.11-ok1.dsc
+autopkgtest: DBG: blame += ./src/libopenmpt_0.4.11-ok1.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/libopenmpt_0.4.11-ok1.dsc /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/libopenmpt_0.4.11-ok1.dsc /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/libopenmpt_0.4.11-ok1.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat >/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/libopenmpt_0.4.11.orig.tar.gz /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/libopenmpt_0.4.11.orig.tar.gz /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/libopenmpt_0.4.11.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat >/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/libopenmpt_0.4.11-ok1.debian.tar.xz /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/libopenmpt_0.4.11-ok1.debian.tar.xz /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/libopenmpt_0.4.11-ok1.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat >/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.Ovkn2Q/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.Ovkn2Q/build.XXX
++ builddir=/tmp/autopkgtest.Ovkn2Q/build.LGR
++ cd /tmp/autopkgtest.Ovkn2Q/build.LGR
++ dpkg-source -x /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.4X4GkoD2/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年06月27日 星期一 08时20分26秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.Ovkn2Q/libopenmpt_0.4.11-ok1.dsc
+dpkg-source: info: extracting libopenmpt in src
+dpkg-source: info: unpacking libopenmpt_0.4.11.orig.tar.gz
+dpkg-source: info: unpacking libopenmpt_0.4.11-ok1.debian.tar.xz
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying 01_libmodplug_symver.patch
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:47:58]: testing package libopenmpt version 0.4.11-ok1
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/ ./testing/libopenmpt/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/ ./testing/libopenmpt/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/libopenmpt/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/libopenmpt/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libopenmpt-dev
+autopkgtest: DBG: marked alternatives ['libopenmpt-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build path debian/tests/build command "None" restrictions [] features [] depends ['build-essential', 'libopenmpt-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libopenmpt-modplug-dev
+autopkgtest: DBG: marked alternatives ['libopenmpt-modplug-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build-modplug path debian/tests/build-modplug command "None" restrictions [] features [] depends ['build-essential', 'libopenmpt-modplug-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libmodplug-dev
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build-modplug path debian/tests/build-modplug command "None" restrictions [] features [] depends ['build-essential', 'libmodplug-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest [15:47:58]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build.LGR/src/ ./testing/libopenmpt/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build.LGR/src/ ./testing/libopenmpt/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/libopenmpt/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/libopenmpt/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libopenmpt-dev
+autopkgtest: DBG: marked alternatives ['libopenmpt-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build path debian/tests/build command "None" restrictions [] features [] depends ['build-essential', 'libopenmpt-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libopenmpt-modplug-dev
+autopkgtest: DBG: marked alternatives ['libopenmpt-modplug-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build-modplug path debian/tests/build-modplug command "None" restrictions [] features [] depends ['build-essential', 'libopenmpt-modplug-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency libmodplug-dev
+autopkgtest: DBG: processing dependency pkg-config
+autopkgtest: DBG: Test defined: name build-modplug path debian/tests/build-modplug command "None" restrictions [] features [] depends ['build-essential', 'libmodplug-dev', 'pkg-config'] clicks [] installed clicks []
+autopkgtest [15:48:00]: test build: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['build-essential', 'libopenmpt-dev', 'pkg-config']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'libopenmpt-dev', 'pkg-config']
+autopkgtest: DBG: install-deps: satisfying build-essential, libopenmpt-dev, pkg-config
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, libopenmpt-dev, pkg-config
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/libopenmpt/1-autopkgtest-satdep.deb /tmp/autopkgtest.Ovkn2Q/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/libopenmpt/1-autopkgtest-satdep.deb /tmp/autopkgtest.Ovkn2Q/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Ovkn2Q/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/libopenmpt/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat >/tmp/autopkgtest.Ovkn2Q/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Ovkn2Q/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libmpg123-dev
+  libogg-dev libopenmpt-dev libout123-0 libstdc++-9-dev libvorbis-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libmpg123-dev
+  libogg-dev libopenmpt-dev libout123-0 libstdc++-9-dev libvorbis-dev
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 13 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.7 MB 的归档。
+解压缩后会消耗 84.0 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libout123-0 riscv64 1.25.13-ok1 [22.2 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libmpg123-dev riscv64 1.25.13-ok1 [35.2 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libogg-dev riscv64 1.3.4-ok2 [181 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libvorbis-dev riscv64 1.3.6-ok1 [388 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libopenmpt-dev riscv64 0.4.11-ok1 [27.8 kB]
+已下载 15.1 MB，耗时 39秒 (391 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../01-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../02-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../03-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../04-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../05-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../06-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../07-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../08-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在选中未选择的软件包 libout123-0:riscv64。
+准备解压 .../09-libout123-0_1.25.13-ok1_riscv64.deb  ...
+正在解压 libout123-0:riscv64 (1.25.13-ok1) ...
+正在选中未选择的软件包 libmpg123-dev:riscv64。
+准备解压 .../10-libmpg123-dev_1.25.13-ok1_riscv64.deb  ...
+正在解压 libmpg123-dev:riscv64 (1.25.13-ok1) ...
+正在选中未选择的软件包 libogg-dev:riscv64。
+准备解压 .../11-libogg-dev_1.3.4-ok2_riscv64.deb  ...
+正在解压 libogg-dev:riscv64 (1.3.4-ok2) ...
+正在选中未选择的软件包 libvorbis-dev:riscv64。
+准备解压 .../12-libvorbis-dev_1.3.6-ok1_riscv64.deb  ...
+正在解压 libvorbis-dev:riscv64 (1.3.6-ok1) ...
+正在选中未选择的软件包 libopenmpt-dev:riscv64。
+准备解压 .../13-libopenmpt-dev_0.4.11-ok1_riscv64.deb  ...
+正在解压 libopenmpt-dev:riscv64 (0.4.11-ok1) ...
+正在设置 libogg-dev:riscv64 (1.3.4-ok2) ...
+正在设置 libout123-0:riscv64 (1.25.13-ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 libvorbis-dev:riscv64 (1.3.6-ok1) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libmpg123-dev:riscv64 (1.25.13-ok1) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 libopenmpt-dev:riscv64 (0.4.11-ok1) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libopenmpt-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 libopenmpt-dev libmpg123-dev libvorbis-dev libogg-dev libout123-0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libopenmpt-dev', 'libmpg123-dev', 'libvorbis-dev', 'libogg-dev', 'libout123-0'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 157248 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Ovkn2Q/build-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-packages.all ./testing/libopenmpt/build-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-packages.all ./testing/libopenmpt/build-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.Ovkn2Q/build.LGR/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.Ovkn2Q/build.LGR/src already exists
+autopkgtest [15:49:50]: test build: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.Ovkn2Q/build.LGR/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.Ovkn2Q/build-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.Ovkn2Q/build-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/tests/build; touch /tmp/autopkgtest.Ovkn2Q/build-stdout /tmp/autopkgtest.Ovkn2Q/build-stderr; /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/tests/build 2> >(tee -a /tmp/autopkgtest.Ovkn2Q/build-stderr >&2) > >(tee -a /tmp/autopkgtest.Ovkn2Q/build-stdout);'], kind test, sout raw, serr raw, env []
+build1: OK
+build2: OK
+build3: OK
+build4: OK
+run1: OK
+run2: OK
+run3: OK
+run4: OK
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:50:20]: test build: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-stdout ./testing/libopenmpt/build-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-stdout ./testing/libopenmpt/build-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-stderr ./testing/libopenmpt/build-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-stderr ./testing/libopenmpt/build-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [15:50:21]: test build:  - - - - - - - - - - results - - - - - - - - - -
+build                PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-artifacts/ ./testing/libopenmpt/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-artifacts/ ./testing/libopenmpt/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.759y55j5/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Ovkn2Q/build-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/libopenmpt/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.759y55j5/runcmd sh -ec cd /tmp/autopkgtest.Ovkn2Q/build-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/libopenmpt/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.Ovkn2Q/build-artifacts', '/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [15:50:23]: test build-modplug: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'libopenmpt-dev', 'pkg-config'], deps_new=['build-essential', 'libopenmpt-modplug-dev', 'pkg-config']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.759y55j5/runcmd rm -rf -- /tmp/autopkgtest.Ovkn2Q
+qemu-system-riscv64: terminating on signal 15 from pid 173923 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu._fsiob3q/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu._fsiob3q/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu._fsiob3q/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu._fsiob3q/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu._fsiob3q/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu._fsiob3q/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu._fsiob3q/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu._fsiob3q/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'6143c154-130f-4bf7-ae24-52e3ef932e54[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6143c154-130f-4bf7-ae24-52e3ef932e54[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'6143c154-130f-4bf7-ae24-52e3ef932e54[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6143c154-130f-4bf7-ae24-52e3ef932e54[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'6143c154-130f-4bf7-ae24-52e3ef932e54[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6143c154-130f-4bf7-ae24-52e3ef932e54[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'6143c154-130f-4bf7-ae24-52e3ef932e54[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6143c154-130f-4bf7-ae24-52e3ef932e54[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'6143c154-130f-4bf7-ae24-52e3ef932e54[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6143c154-130f-4bf7-ae24-52e3ef932e54[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._fsiob3q/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'6143c154-130f-4bf7-ae24-52e3ef932e54[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6143c154-130f-4bf7-ae24-52e3ef932e54[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._fsiob3q/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.Ovkn2Q
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu._fsiob3q/runcmd'], downtmp = /tmp/autopkgtest.Ovkn2Q
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.Ovkn2Q
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu._fsiob3q/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:51:26]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Ovkn2Q/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/testbed-packages ./testing/libopenmpt/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/testbed-packages ./testing/libopenmpt/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._fsiob3q/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._fsiob3q/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'libopenmpt-modplug-dev', 'pkg-config']
+autopkgtest: DBG: install-deps: satisfying build-essential, libopenmpt-modplug-dev, pkg-config
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, libopenmpt-modplug-dev, pkg-config
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/libopenmpt/2-autopkgtest-satdep.deb /tmp/autopkgtest.Ovkn2Q/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/libopenmpt/2-autopkgtest-satdep.deb /tmp/autopkgtest.Ovkn2Q/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu._fsiob3q/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Ovkn2Q/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/libopenmpt/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._fsiob3q/runcmd sh -ec cat >/tmp/autopkgtest.Ovkn2Q/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Ovkn2Q/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libmpg123-dev
+  libogg-dev libopenmpt-dev libopenmpt-modplug-dev libopenmpt-modplug1
+  libout123-0 libstdc++-9-dev libvorbis-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libmpg123-dev
+  libogg-dev libopenmpt-dev libopenmpt-modplug-dev libopenmpt-modplug1
+  libout123-0 libstdc++-9-dev libvorbis-dev
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 15 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.8 MB 的归档。
+解压缩后会消耗 84.2 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libout123-0 riscv64 1.25.13-ok1 [22.2 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libmpg123-dev riscv64 1.25.13-ok1 [35.2 kB]
+获取:12 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libogg-dev riscv64 1.3.4-ok2 [181 kB]
+获取:13 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libvorbis-dev riscv64 1.3.6-ok1 [388 kB]
+获取:14 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libopenmpt-dev riscv64 0.4.11-ok1 [27.8 kB]
+获取:15 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libopenmpt-modplug1 riscv64 0.4.11-ok1 [21.4 kB]
+获取:16 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libopenmpt-modplug-dev riscv64 0.4.11-ok1 [16.6 kB]
+已下载 20.8 MB，耗时 48秒 (436 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../01-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../02-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../03-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../04-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../05-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../06-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../07-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../08-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在选中未选择的软件包 libout123-0:riscv64。
+准备解压 .../09-libout123-0_1.25.13-ok1_riscv64.deb  ...
+正在解压 libout123-0:riscv64 (1.25.13-ok1) ...
+正在选中未选择的软件包 libmpg123-dev:riscv64。
+准备解压 .../10-libmpg123-dev_1.25.13-ok1_riscv64.deb  ...
+正在解压 libmpg123-dev:riscv64 (1.25.13-ok1) ...
+正在选中未选择的软件包 libogg-dev:riscv64。
+准备解压 .../11-libogg-dev_1.3.4-ok2_riscv64.deb  ...
+正在解压 libogg-dev:riscv64 (1.3.4-ok2) ...
+正在选中未选择的软件包 libvorbis-dev:riscv64。
+准备解压 .../12-libvorbis-dev_1.3.6-ok1_riscv64.deb  ...
+正在解压 libvorbis-dev:riscv64 (1.3.6-ok1) ...
+正在选中未选择的软件包 libopenmpt-dev:riscv64。
+准备解压 .../13-libopenmpt-dev_0.4.11-ok1_riscv64.deb  ...
+正在解压 libopenmpt-dev:riscv64 (0.4.11-ok1) ...
+正在选中未选择的软件包 libopenmpt-modplug1:riscv64。
+准备解压 .../14-libopenmpt-modplug1_0.4.11-ok1_riscv64.deb  ...
+正在解压 libopenmpt-modplug1:riscv64 (0.4.11-ok1) ...
+正在选中未选择的软件包 libopenmpt-modplug-dev:riscv64。
+准备解压 .../15-libopenmpt-modplug-dev_0.4.11-ok1_riscv64.deb  ...
+正在解压 libopenmpt-modplug-dev:riscv64 (0.4.11-ok1) ...
+正在设置 libogg-dev:riscv64 (1.3.4-ok2) ...
+正在设置 libout123-0:riscv64 (1.25.13-ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libopenmpt-modplug1:riscv64 (0.4.11-ok1) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 libvorbis-dev:riscv64 (1.3.6-ok1) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 libmpg123-dev:riscv64 (1.25.13-ok1) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 libopenmpt-dev:riscv64 (0.4.11-ok1) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 libopenmpt-modplug-dev:riscv64 (0.4.11-ok1) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'libopenmpt-modplug-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 libopenmpt-modplug-dev libopenmpt-dev libmpg123-dev libvorbis-dev libogg-dev libopenmpt-modplug1 libout123-0
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libopenmpt-modplug-dev', 'libopenmpt-dev', 'libmpg123-dev', 'libvorbis-dev', 'libogg-dev', 'libopenmpt-modplug1', 'libout123-0'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 157263 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all ./testing/libopenmpt/build-modplug-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all ./testing/libopenmpt/build-modplug-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._fsiob3q/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-modplug-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._fsiob3q/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.Ovkn2Q/build.LGR/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q/build.LGR'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/libopenmpt/tests-tree/ /tmp/autopkgtest.Ovkn2Q/build.LGR/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/libopenmpt/tests-tree/ /tmp/autopkgtest.Ovkn2Q/build.LGR/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/libopenmpt/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu._fsiob3q/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; then mkdir -- /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; fi; cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/libopenmpt/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu._fsiob3q/runcmd sh -ec if ! test -d /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; then mkdir -- /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; fi; cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/build.LGR/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:53:41]: test build-modplug: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.Ovkn2Q/build.LGR/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/tests/build-modplug; touch /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr; /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/tests/build-modplug 2> >(tee -a /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr >&2) > >(tee -a /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout);'], kind test, sout raw, serr raw, env []
+build1: OK
+build2: OK
+run1: OK
+run2: OK
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:53:51]: test build-modplug: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout ./testing/libopenmpt/build-modplug-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout ./testing/libopenmpt/build-modplug-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._fsiob3q/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-modplug-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._fsiob3q/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr ./testing/libopenmpt/build-modplug-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr ./testing/libopenmpt/build-modplug-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._fsiob3q/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-modplug-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._fsiob3q/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [15:53:53]: test build-modplug:  - - - - - - - - - - results - - - - - - - - - -
+build-modplug        PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/ ./testing/libopenmpt/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/ ./testing/libopenmpt/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu._fsiob3q/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/libopenmpt/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu._fsiob3q/runcmd sh -ec cd /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/libopenmpt/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts', '/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest [15:53:54]: test build-modplug: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'libopenmpt-modplug-dev', 'pkg-config'], deps_new=['build-essential', 'libmodplug-dev', 'pkg-config']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu._fsiob3q/runcmd rm -rf -- /tmp/autopkgtest.Ovkn2Q
+qemu-system-riscv64: terminating on signal 15 from pid 173923 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.dinzo2od/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.dinzo2od/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.dinzo2od/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.dinzo2od/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.dinzo2od/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.dinzo2od/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.dinzo2od/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.dinzo2od/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.dinzo2od/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'ed040502-5a83-4bb6-b4a8-a0513e20fa6f[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.dinzo2od/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.Ovkn2Q
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.dinzo2od/runcmd'], downtmp = /tmp/autopkgtest.Ovkn2Q
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.Ovkn2Q
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.dinzo2od/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:54:56]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Ovkn2Q/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/testbed-packages ./testing/libopenmpt/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/testbed-packages ./testing/libopenmpt/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.dinzo2od/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.dinzo2od/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'libmodplug-dev', 'pkg-config']
+autopkgtest: DBG: install-deps: satisfying build-essential, libmodplug-dev, pkg-config
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, libmodplug-dev, pkg-config
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/libopenmpt/3-autopkgtest-satdep.deb /tmp/autopkgtest.Ovkn2Q/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/libopenmpt/3-autopkgtest-satdep.deb /tmp/autopkgtest.Ovkn2Q/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.dinzo2od/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.Ovkn2Q/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/libopenmpt/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.dinzo2od/runcmd sh -ec cat >/tmp/autopkgtest.Ovkn2Q/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.Ovkn2Q/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libmodplug-dev
+  libmodplug1 libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libmodplug-dev
+  libmodplug1 libstdc++-9-dev
+下列软件包将被升级：
+  cpp
+升级了 1 个软件包，新安装了 10 个软件包，要卸载 0 个软件包，有 137 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.3 MB 的归档。
+解压缩后会消耗 80.5 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libmodplug1 riscv64 1:0.8.9.0-3ok1 [176 kB]
+获取:11 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libmodplug-dev riscv64 1:0.8.9.0-3ok1 [14.8 kB]
+已下载 20.3 MB，耗时 15秒 (1,315 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../00-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../01-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../02-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../03-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../04-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../05-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../06-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../07-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../08-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+正在选中未选择的软件包 libmodplug1:riscv64。
+准备解压 .../09-libmodplug1_1%3a0.8.9.0-3ok1_riscv64.deb  ...
+正在解压 libmodplug1:riscv64 (1:0.8.9.0-3ok1) ...
+正在选中未选择的软件包 libmodplug-dev:riscv64。
+准备解压 .../10-libmodplug-dev_1%3a0.8.9.0-3ok1_riscv64.deb  ...
+正在解压 libmodplug-dev:riscv64 (1:0.8.9.0-3ok1) ...
+正在设置 libmodplug1:riscv64 (1:0.8.9.0-3ok1) ...
+正在设置 libmodplug-dev:riscv64 (1:0.8.9.0-3ok1) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在设置 autopkgtest-satdep (0) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 libmodplug-dev libmodplug1
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'libmodplug-dev', 'libmodplug1'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 156964 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all ./testing/libopenmpt/build-modplug-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all ./testing/libopenmpt/build-modplug-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.dinzo2od/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-modplug-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.dinzo2od/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-modplug-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.Ovkn2Q/build.LGR/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.Ovkn2Q/build.LGR'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/libopenmpt/tests-tree/ /tmp/autopkgtest.Ovkn2Q/build.LGR/src/
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/libopenmpt/tests-tree/ /tmp/autopkgtest.Ovkn2Q/build.LGR/src/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['tar', '--directory', './testing/libopenmpt/tests-tree/', '--warning=none', '-c', '.', '-f', '-'], ['/tmp/autopkgtest-qemu.dinzo2od/runcmd', 'sh', '-ec', 'if ! test -d /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; then mkdir -- /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; fi; cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< tar --directory ./testing/libopenmpt/tests-tree/ --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.dinzo2od/runcmd sh -ec if ! test -d /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; then mkdir -- /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; fi; cd /tmp/autopkgtest.Ovkn2Q/build.LGR/src/; tar --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.Ovkn2Q/build.LGR/src'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:56:30]: test build-modplug: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.Ovkn2Q/build.LGR/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; chmod +x /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/tests/build-modplug; touch /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr; /tmp/autopkgtest.Ovkn2Q/build.LGR/src/debian/tests/build-modplug 2> >(tee -a /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr >&2) > >(tee -a /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout);'], kind test, sout raw, serr raw, env []
+build1: OK
+build2: OK
+run1: OK
+run2: OK
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:56:39]: test build-modplug: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout ./testing/libopenmpt/build-modplug-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stdout ./testing/libopenmpt/build-modplug-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.dinzo2od/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-modplug-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.dinzo2od/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr ./testing/libopenmpt/build-modplug-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-stderr ./testing/libopenmpt/build-modplug-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.dinzo2od/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/libopenmpt/build-modplug-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.dinzo2od/runcmd sh -ec cat </tmp/autopkgtest.Ovkn2Q/build-modplug-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [15:56:41]: test build-modplug:  - - - - - - - - - - results - - - - - - - - - -
+build-modplug        PASS
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/ ./testing/libopenmpt/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/ ./testing/libopenmpt/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.dinzo2od/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/libopenmpt/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.dinzo2od/runcmd sh -ec cd /tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/libopenmpt/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.Ovkn2Q/build-modplug-artifacts', '/tmp/autopkgtest.Ovkn2Q/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [15:56:42]: @@@@@@@@@@@@@@@@@@@@ summary
+build                PASS
+build-modplug        PASS
+build-modplug        PASS
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.Ovkn2Q
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 173923 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

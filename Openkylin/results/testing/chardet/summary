@@ -1,0 +1,7 @@
+unittests            FAIL badpkg
+blame: ./src/chardet_3.0.4-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-chardet 相匹配的软件包
+ (exit code 1)
+unittests3           FAIL badpkg
+blame: ./src/chardet_3.0.4-ok1.dsc
+badpkg: Test dependencies are unsatisfiable. A common reason is that your testbed is out of date with respect to the archive, and you need to use a current testbed or run apt-get update or use -U.

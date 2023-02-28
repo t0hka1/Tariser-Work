@@ -1,0 +1,7 @@
+python2              FAIL badpkg
+blame: ./src/python-crypto_2.6.1-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python-crypto 相匹配的软件包
+ (exit code 1)
+python3              PASS
+python3-all          PASS
+python3-all-dbg      PASS

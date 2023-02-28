@@ -1,0 +1,162 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: python-mistletoe
+Source: <url://example.com>
+#
+# Please double check copyright with the licensecheck(1) command.
+
+Files:     .gitignore
+           .travis.yml
+           MANIFEST.in
+           contrib/Makefile
+           contrib/github_wiki.py
+           contrib/mathjax.py
+           contrib/pygments_renderer.py
+           contrib/scheme.py
+           contrib/toc_renderer.py
+           docs/CNAME
+           docs/README.md
+           docs/__init__.py
+           docs/__main__.py
+           docs/style.css
+           makefile
+           mistletoe/__init__.py
+           mistletoe/__main__.py
+           mistletoe/ast_renderer.py
+           mistletoe/base_renderer.py
+           mistletoe/block_token.py
+           mistletoe/block_tokenizer.py
+           mistletoe/cli.py
+           mistletoe/core_tokens.py
+           mistletoe/html_renderer.py
+           mistletoe/latex_renderer.py
+           mistletoe/latex_token.py
+           mistletoe/span_token.py
+           mistletoe/span_tokenizer.py
+           mistletoe/token.py
+           mistletoe/utils.py
+           setup.py
+           test/__init__.py
+           test/base_test.py
+           test/benchmark.py
+           test/bump_version.sh
+           test/samples/__init__.py
+           test/samples/basic_blocks.jira
+           test/samples/basic_blocks.md
+           test/samples/basic_blocks.xwiki20
+           test/samples/jquery.md
+           test/samples/lists.jira
+           test/samples/lists.md
+           test/samples/lists.xwiki20
+           test/samples/quotes.jira
+           test/samples/quotes.md
+           test/samples/quotes.xwiki20
+           test/samples/syntax.md
+           test/specification/__init__.py
+           test/specification/__main__.py
+           test/specification/commonmark.json
+           test/specification/commonmark.py
+           test/specification/spec.sh
+           test/test_ast_renderer.py
+           test/test_block_token.py
+           test/test_ci.sh
+           test/test_cli.py
+           test/test_contrib/__init__.py
+           test/test_contrib/test_github_wiki.py
+           test/test_contrib/test_mathjax.py
+           test/test_contrib/test_toc_renderer.py
+           test/test_core_tokens.py
+           test/test_html_renderer.py
+           test/test_latex_renderer.py
+           test/test_latex_token.py
+           test/test_repr.py
+           test/test_span_token.py
+           test/test_traverse.py
+Copyright: __NO_COPYRIGHT_NOR_LICENSE__
+License:   __NO_COPYRIGHT_NOR_LICENSE__
+
+Files:     contrib/jira_renderer.py
+           contrib/md2jira.py
+           test/test_contrib/test_jira_renderer.py
+Copyright: 2018 Tile, Inc.
+License:   Expat
+ The MIT License
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+Files:     contrib/xwiki20_renderer.py
+           test/test_contrib/test_xwiki20_renderer.py
+Copyright: __NO_COPYRIGHT__ in: contrib/xwiki20_renderer.py
+           __NO_COPYRIGHT__ in: test/test_contrib/test_xwiki20_renderer.py
+License:   Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+#----------------------------------------------------------------------------
+# xml and html files (skipped):
+#         performance.md
+#         README.md
+#         dev-guide.md
+#         cutting-a-release.md
+#         CONTRIBUTING.md
+#         docs/contributing.html
+#         docs/index.html
+#         resources/logo.svg
+
+#----------------------------------------------------------------------------
+# Files marked as NO_LICENSE_TEXT_FOUND may be covered by the following
+# license/copyright files.
+
+#----------------------------------------------------------------------------
+# License file: LICENSE
+ The MIT License
+ .
+ Copyright 2017 Mi Yu
+ .
+ Permission is hereby granted, free of charge, to any person obtaining a copy of
+ this software and associated documentation files (the "Software"), to deal in
+ the Software without restriction, including without limitation the rights to
+ use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.

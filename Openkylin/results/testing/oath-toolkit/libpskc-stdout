@@ -1,0 +1,170 @@
+PASS: gcc
+PASS: run
+PSKCTOOL(1)                      User Commands                     PSKCTOOL(1)
+
+NAME
+       pskctool - Portable Symmetric Key Container (PSKC) tool
+
+SYNOPSIS
+       pskctool [OPTIONS]... [FILE]...
+
+DESCRIPTION
+       pskctool 2.6.7
+
+       Manipulate Portable Symmetric Key Container (PSKC) data.
+
+       This  tool  allows  you to parse, print, validate, sign and verify PSKC
+       data.  The input is provided in FILE or on standard input.
+
+       -h, --help
+              Print help and exit
+
+       -V, --version
+              Print version and exit
+
+       --strict
+              Fail hard on PSKC parse error  (default=off)
+
+       -d, --debug
+              Show debug messages on stderr  (default=off)
+
+       -q, --quiet
+              Quiet operation  (default=off)
+
+       -v, --verbose
+              Produce more output  (default=off)
+
+       Selecting one of the following modes is required:
+
+              Mode: info
+
+       -i, --info
+              Parse and print  human  readable  summary  of  PSKC  input  (de‐
+              fault=off)
+
+              Mode: validate
+
+       -e, --validate
+              Validate PSKC input against XML Schema  (default=off)
+
+              Mode: sign
+
+              Digitally sign PSKC data
+
+       --sign Sign PSKC input  (default=off)
+
+       --sign-key=FILE
+              Private key to sign with
+
+       --sign-crt=FILE
+              X.509 certificate to sign with
+
+              Mode: verify
+
+              Verify digitally signed PSKC data
+
+       --verify
+              Verify signed PSKC input  (default=off)
+
+       --verify-crt=FILE
+              Trusted X.509 certificate for verification
+
+EXAMPLES
+       See     <https://www.nongnu.org/oath-toolkit/libpskc-api/pskc-tutorial-
+       pskctool.html>.
+
+AUTHOR
+       Written by Simon Josefsson.
+
+REPORTING BUGS
+       Report  bugs  to:  oath-toolkit-help@nongnu.org  pskctool  home   page:
+       <https://www.nongnu.org/oath-toolkit/>
+       General help using GNU software: <https://www.gnu.org/gethelp/>
+
+COPYRIGHT
+       Copyright © 2021 Simon Josefsson.  License GPLv3+: GNU GPL version 3 or
+       later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free  to  change  and  redistribute  it.
+       There is NO WARRANTY, to the extent permitted by law.
+
+pskctool (OATH Toolkit) 2.6.7      May 2021                        PSKCTOOL(1)
+pskc_global_init(3)                 libpskc                pskc_global_init(3)
+
+NAME
+       pskc_global_init - API function
+
+SYNOPSIS
+       #include <pskc.h>
+
+       int pskc_global_init( void);
+
+ARGUMENTS
+        void
+
+DESCRIPTION
+       This function initializes the PSKC library.  Every user of this library
+       needs to call this function before using other functions.   You  should
+       call  pskc_global_done()  when  use  of  the  PSKC library is no longer
+       needed.
+
+RETURNS
+       On success, PSKC_OK (zero) is returned, otherwise an error code is  re‐
+       turned.
+
+REPORTING BUGS
+       Report  bugs  to  <oath-toolkit-help@nongnu.org>.   libpskc  home page:
+       https://www.nongnu.org/oath-toolkit/ General help using  GNU  software:
+       http://www.gnu.org/gethelp/
+
+COPYRIGHT
+       Copyright © 2012-2020 Simon Josefsson.
+       Copying  and  distribution  of this file, with or without modification,
+       are permitted in any medium without royalty provided the copyright  no‐
+       tice and this notice are preserved.
+
+libpskc                              2.6.7                 pskc_global_init(3)
+PASS: man
+pskctool (OATH Toolkit) 2.6.7
+Copyright (C) 2021 Simon Josefsson.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Simon Josefsson.
+Usage: pskctool [OPTION]... [FILE]...
+Manipulate Portable Symmetric Key Container (PSKC) data.
+
+This tool allows you to parse, print, validate, sign and verify PSKC data.  The
+input is provided in FILE or on standard input.
+
+  -h, --help             Print help and exit
+  -V, --version          Print version and exit
+      --strict           Fail hard on PSKC parse error  (default=off)
+  -d, --debug            Show debug messages on stderr  (default=off)
+  -q, --quiet            Quiet operation  (default=off)
+  -v, --verbose          Produce more output  (default=off)
+
+Selecting one of the following modes is required:
+
+ Mode: info
+  -i, --info             Parse and print human readable summary of PSKC input
+                           (default=off)
+
+ Mode: validate
+  -e, --validate         Validate PSKC input against XML Schema  (default=off)
+
+ Mode: sign
+  Digitally sign PSKC data
+      --sign             Sign PSKC input  (default=off)
+      --sign-key=FILE    Private key to sign with
+      --sign-crt=FILE    X.509 certificate to sign with
+
+ Mode: verify
+  Verify digitally signed PSKC data
+      --verify           Verify signed PSKC input  (default=off)
+      --verify-crt=FILE  Trusted X.509 certificate for verification
+
+Report bugs to: oath-toolkit-help@nongnu.org
+pskctool home page: <https://www.nongnu.org/oath-toolkit/>
+General help using GNU software: <https://www.gnu.org/gethelp/>
+PASS: pskctool libpskc version

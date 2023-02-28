@@ -1,0 +1,4 @@
+debian/t/released-versions.t .. ok
+All tests successful.
+Files=1, Tests=6,  2 wallclock secs ( 0.34 usr  0.11 sys +  1.88 cusr  0.64 csys =  2.97 CPU)
+Result: PASS

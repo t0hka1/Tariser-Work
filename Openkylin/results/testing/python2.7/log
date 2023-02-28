@@ -1,0 +1,1161 @@
+autopkgtest: DBG: testbed init
+autopkgtest [08:35:06]: starting date: 2023-02-28
+autopkgtest [08:35:06]: version 5.20ubuntu1
+autopkgtest [08:35:06]: host MyKubuntu; command line: /usr/bin/autopkgtest ./src/python2.7_2.7.18-ok2.dsc -o ./testing/python2.7 -d -B -- qemu -u root -p root --qemu-architecture=riscv64 -c 8 --ram-size=8192 -d '--qemu-options=-machine virt -kernel /usr/lib/u-boot/qemu-riscv64_smode/uboot.elf' ./backbackup/openkylin.qcow2
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed open, scratch=None
+autopkgtest: DBG: sending command to testbed: open
+autopkgtest-virt-qemu: DBG: executing open
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.5z0vt02l/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.5z0vt02l/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.5z0vt02l/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.5z0vt02l/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.5z0vt02l/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.5z0vt02l/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.5z0vt02l/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.5z0vt02l/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5z0vt02l/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'6e12bbf2-0463-477b-904e-bdc6ca3f454b[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.5z0vt02l/runcmd'], downtmp = None
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5z0vt02l/runcmd mktemp --directory --tmpdir autopkgtest.XXXXXX
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5z0vt02l/runcmd chmod 1777 /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.5z0vt02l/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [08:36:10]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.QeRzEa/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z0vt02l/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.QeRzEa/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python2.7/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z0vt02l/runcmd sh -ec cat </tmp/autopkgtest.QeRzEa/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [08:36:16]: testbed running kernel: Linux 5.11.0-1030-generic #34 SMP Fri Mar 11 15:27:17 CST 2022
+autopkgtest: DBG: testbed command ['sh', '-c', 'nproc; cat /proc/cpuinfo 2>/dev/null || true'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: initialising
+autopkgtest [08:36:16]: @@@@@@@@@@@@@@@@@@@@ source ./src/python2.7_2.7.18-ok2.dsc
+autopkgtest: DBG: blame += ./src/python2.7_2.7.18-ok2.dsc
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=[]
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.QeRzEa'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python2.7_2.7.18-ok2.dsc /tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python2.7_2.7.18-ok2.dsc /tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5z0vt02l/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python2.7_2.7.18-ok2.dsc'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5z0vt02l/runcmd sh -ec cat >/tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.QeRzEa'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python2.7_2.7.18.orig.tar.gz /tmp/autopkgtest.QeRzEa/python2.7_2.7.18.orig.tar.gz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python2.7_2.7.18.orig.tar.gz /tmp/autopkgtest.QeRzEa/python2.7_2.7.18.orig.tar.gz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5z0vt02l/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.QeRzEa/python2.7_2.7.18.orig.tar.gz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python2.7_2.7.18.orig.tar.gz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5z0vt02l/runcmd sh -ec cat >/tmp/autopkgtest.QeRzEa/python2.7_2.7.18.orig.tar.gz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.QeRzEa/python2.7_2.7.18.orig.tar.gz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.QeRzEa'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./src/python2.7_2.7.18-ok2.debian.tar.xz /tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: executing copydown ./src/python2.7_2.7.18-ok2.debian.tar.xz /tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5z0vt02l/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.debian.tar.xz'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./src/python2.7_2.7.18-ok2.debian.tar.xz'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5z0vt02l/runcmd sh -ec cat >/tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.debian.tar.xz
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.debian.tar.xz'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: install_deps: deps_new=[]
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-source'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', 'su --shell=/bin/sh openkylin -c \'set -e; exec 3>&1 >&2; set -x; cd /; builddir=$(mktemp -d /tmp/autopkgtest.QeRzEa/build.XXX); cd $builddir; dpkg-source -x "/tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc" src; chmod -R a+rX .; cd [a-z0-9]*/.; pwd >&3; sed -n "1 {s/).*//; s/ (/\\n/; p}" debian/changelog >&3\''], kind build, sout pipe, serr raw, env []
++ cd /
++ mktemp -d /tmp/autopkgtest.QeRzEa/build.XXX
++ builddir=/tmp/autopkgtest.QeRzEa/build.3Wl
++ cd /tmp/autopkgtest.QeRzEa/build.3Wl
++ dpkg-source -x /tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc src
+gpgv: unknown type of key resource 'trustedkeys.kbx'
+gpgv: 密钥区块资源‘/tmp/dpkg-verify-sig.zVGLDKNg/trustedkeys.kbx’：一般错误
+gpgv: 签名建立于 2022年10月31日 星期一 01时54分47秒 UTC
+gpgv:                使用 RSA 密钥 64FBB79F5EAE64D792E94CFE0716F00F842CD274
+gpgv: 无法检查签名：没有公钥
+dpkg-source: 警告: cannot verify signature /tmp/autopkgtest.QeRzEa/python2.7_2.7.18-ok2.dsc
+dpkg-source: info: extracting python2.7 in src
+dpkg-source: info: unpacking python2.7_2.7.18.orig.tar.gz
+dpkg-source: info: unpacking python2.7_2.7.18-ok2.debian.tar.xz
++ chmod -R a+rX .
++ cd src/.
++ pwd
++ sed -n 1 {s/).*//; s/ (/\n/; p} debian/changelog
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [08:36:51]: testing package python2.7 version 2.7.18-ok2
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.QeRzEa/build.3Wl/src/debian/ ./testing/python2.7/pkg/debian/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.QeRzEa/build.3Wl/src/debian/ ./testing/python2.7/pkg/debian/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z0vt02l/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.QeRzEa/build.3Wl/src/debian/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python2.7/pkg/debian/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z0vt02l/runcmd sh -ec cd /tmp/autopkgtest.QeRzEa/build.3Wl/src/debian/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python2.7/pkg/debian/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm
+autopkgtest: DBG: Test defined: name testsuite path debian/tests/testsuite command "None" restrictions ['needs-root'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python2.7-dbg
+autopkgtest: DBG: marked alternatives ['python2.7-dbg'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm-dbg
+autopkgtest: DBG: Test defined: name testsuite-dbg path debian/tests/testsuite-dbg command "None" restrictions ['needs-root'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm
+autopkgtest: DBG: Test defined: name failing-tests path debian/tests/failing-tests command "None" restrictions ['needs-root', 'allow-stderr'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python2.7-dbg
+autopkgtest: DBG: marked alternatives ['python2.7-dbg'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm-dbg
+autopkgtest: DBG: Test defined: name failing-tests-dbg path debian/tests/failing-tests-dbg command "None" restrictions ['needs-root', 'allow-stderr'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg'] clicks [] installed clicks []
+autopkgtest [08:36:52]: build not needed
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.QeRzEa/build.3Wl/src/ ./testing/python2.7/tests-tree/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.QeRzEa/build.3Wl/src/ ./testing/python2.7/tests-tree/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.5z0vt02l/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.QeRzEa/build.3Wl/src/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python2.7/tests-tree/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.5z0vt02l/runcmd sh -ec cd /tmp/autopkgtest.QeRzEa/build.3Wl/src/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python2.7/tests-tree/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm
+autopkgtest: DBG: Test defined: name testsuite path debian/tests/testsuite command "None" restrictions ['needs-root'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python2.7-dbg
+autopkgtest: DBG: marked alternatives ['python2.7-dbg'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm-dbg
+autopkgtest: DBG: Test defined: name testsuite-dbg path debian/tests/testsuite-dbg command "None" restrictions ['needs-root'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm
+autopkgtest: DBG: Test defined: name failing-tests path debian/tests/failing-tests command "None" restrictions ['needs-root', 'allow-stderr'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm'] clicks [] installed clicks []
+autopkgtest: DBG: processing dependency build-essential
+autopkgtest: DBG: processing dependency locales:native
+autopkgtest: DBG: processing dependency python2.7-dev
+autopkgtest: DBG: marked alternatives ['python2.7-dev'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python2.7-dbg
+autopkgtest: DBG: marked alternatives ['python2.7-dbg'] as a synthesised dependency
+autopkgtest: DBG: processing dependency libpython2.7-testsuite:native
+autopkgtest: DBG: marked alternatives ['libpython2.7-testsuite'] as a synthesised dependency
+autopkgtest: DBG: processing dependency python-gdbm-dbg
+autopkgtest: DBG: Test defined: name failing-tests-dbg path debian/tests/failing-tests-dbg command "None" restrictions ['needs-root', 'allow-stderr'] features [] depends ['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg'] clicks [] installed clicks []
+autopkgtest [08:37:05]: test testsuite: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=[], deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm']
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm']
+autopkgtest: DBG: install-deps: satisfying build-essential, locales:native, python2.7-dev, libpython2.7-testsuite:native, python-gdbm
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, locales, python2.7-dev, libpython2.7-testsuite, python-gdbm
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.QeRzEa'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python2.7/1-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python2.7/1-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.5z0vt02l/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.QeRzEa/1-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python2.7/1-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.5z0vt02l/runcmd sh -ec cat >/tmp/autopkgtest.QeRzEa/1-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.QeRzEa/1-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.QeRzEa/1-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 5
+Starting 2 pkgProblemResolver with broken count: 5
+Investigating (0) python2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to python2.7:riscv64 5
+  Holding Back python2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2-stdlib:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-stdlib:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2-stdlib:riscv64 2
+  Holding Back libpython2-stdlib:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering python2.7:riscv64 5 as a solution to python2:riscv64 2
+  Holding Back python2:riscv64 rather than change python2.7:riscv64
+Investigating (0) libpython2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7:riscv64 1
+  Holding Back libpython2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7-dev:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering python2.7:riscv64 5 as a solution to python2.7-dev:riscv64 0
+  Holding Back python2.7-dev:riscv64 rather than change python2.7:riscv64
+Investigating (0) python-gdbm:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-gdbm:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (>= 2.7)
+  Considering python2:riscv64 2 as a solution to python-gdbm:riscv64 0
+  Holding Back python-gdbm:riscv64 rather than change python2:riscv64
+Investigating (0) libpython2.7-testsuite:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-testsuite:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-testsuite:riscv64 0
+  Holding Back libpython2.7-testsuite:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-dev:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-dev:riscv64 0
+  Holding Back libpython2.7-dev:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python2.7-dev:riscv64 < none | 2.7.18-ok2 @un uH >
+  Considering python2.7-dev:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python2.7-dev:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libexpat1 libgcc-9-dev
+  libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libstdc++-9-dev
+下列软件包将被升级：
+  cpp libexpat1
+升级了 2 个软件包，新安装了 8 个软件包，要卸载 1 个软件包，有 136 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.1 MB 的归档。
+解压缩后会消耗 80.3 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1 riscv64 2.2.9-ok3 [69.2 kB]
+已下载 20.1 MB，耗时 36秒 (556 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../1-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../2-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../3-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../4-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../5-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../6-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../7-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../8-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+准备解压 .../9-libexpat1_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1:riscv64 (2.2.9-ok3) 并覆盖 (2.2.9-ok1) ...
+正在设置 libexpat1:riscv64 (2.2.9-ok3) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python2.7-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+testsuite            FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest [08:40:41]: test testsuite-dbg: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm'], deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.5z0vt02l/runcmd rm -rf -- /tmp/autopkgtest.QeRzEa
+qemu-system-riscv64: terminating on signal 15 from pid 443173 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.oa54hz2n/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.oa54hz2n/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.oa54hz2n/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.oa54hz2n/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.oa54hz2n/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.oa54hz2n/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.oa54hz2n/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.oa54hz2n/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'c82a41a1-3f80-48c4-b39d-076bb388b738[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c82a41a1-3f80-48c4-b39d-076bb388b738[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'c82a41a1-3f80-48c4-b39d-076bb388b738[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c82a41a1-3f80-48c4-b39d-076bb388b738[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'c82a41a1-3f80-48c4-b39d-076bb388b738[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c82a41a1-3f80-48c4-b39d-076bb388b738[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'c82a41a1-3f80-48c4-b39d-076bb388b738[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c82a41a1-3f80-48c4-b39d-076bb388b738[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'c82a41a1-3f80-48c4-b39d-076bb388b738[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c82a41a1-3f80-48c4-b39d-076bb388b738[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.oa54hz2n/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'c82a41a1-3f80-48c4-b39d-076bb388b738[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'c82a41a1-3f80-48c4-b39d-076bb388b738[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.oa54hz2n/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.QeRzEa
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.oa54hz2n/runcmd'], downtmp = /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.oa54hz2n/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [08:41:48]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.QeRzEa/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.oa54hz2n/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.QeRzEa/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python2.7/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.oa54hz2n/runcmd sh -ec cat </tmp/autopkgtest.QeRzEa/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg']
+autopkgtest: DBG: install-deps: satisfying build-essential, locales:native, python2.7-dev, python2.7-dbg, libpython2.7-testsuite:native, python-gdbm-dbg
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, locales, python2.7-dev, python2.7-dbg, libpython2.7-testsuite, python-gdbm-dbg
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.QeRzEa'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python2.7/2-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python2.7/2-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.oa54hz2n/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.QeRzEa/2-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python2.7/2-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.oa54hz2n/runcmd sh -ec cat >/tmp/autopkgtest.QeRzEa/2-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.QeRzEa/2-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.QeRzEa/2-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 6
+Starting 2 pkgProblemResolver with broken count: 6
+Investigating (0) python2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to python2.7:riscv64 8
+  Holding Back python2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering python2.7:riscv64 8 as a solution to python2:riscv64 4
+  Holding Back python2:riscv64 rather than change python2.7:riscv64
+Investigating (0) libpython2-stdlib:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-stdlib:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2-stdlib:riscv64 3
+  Holding Back libpython2-stdlib:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2.7-dbg:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7-dbg:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering python2.7:riscv64 8 as a solution to python2.7-dbg:riscv64 2
+  Holding Back python2.7-dbg:riscv64 rather than change python2.7:riscv64
+Investigating (0) libpython2.7-dbg:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-dbg:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-dbg:riscv64 2
+  Holding Back libpython2.7-dbg:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2-dbg:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2-dbg:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (= 2.7.18-ok1)
+  Considering python2:riscv64 4 as a solution to python2-dbg:riscv64 1
+  Holding Back python2-dbg:riscv64 rather than change python2:riscv64
+Investigating (0) libpython2-dbg:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-dbg:riscv64 依赖 on libpython2.7-dbg:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-dbg:riscv64 2 as a solution to libpython2-dbg:riscv64 1
+  Holding Back libpython2-dbg:riscv64 rather than change libpython2.7-dbg:riscv64
+Investigating (0) libpython2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7:riscv64 1
+  Holding Back libpython2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python-gdbm-dbg:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-gdbm-dbg:riscv64 依赖 on python2-dbg:riscv64 < none | 2.7.18-ok1 @un uH > (>= 2.7)
+  Considering python2-dbg:riscv64 1 as a solution to python-gdbm-dbg:riscv64 0
+  Holding Back python-gdbm-dbg:riscv64 rather than change python2-dbg:riscv64
+Investigating (0) python2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7-dev:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering python2.7:riscv64 8 as a solution to python2.7-dev:riscv64 0
+  Holding Back python2.7-dev:riscv64 rather than change python2.7:riscv64
+Investigating (0) python-gdbm:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-gdbm:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (>= 2.7)
+  Considering python2:riscv64 4 as a solution to python-gdbm:riscv64 0
+  Holding Back python-gdbm:riscv64 rather than change python2:riscv64
+Investigating (0) libpython2.7-testsuite:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-testsuite:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-testsuite:riscv64 0
+  Holding Back libpython2.7-testsuite:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-dev:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-dev:riscv64 0
+  Holding Back libpython2.7-dev:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python2.7-dev:riscv64 < none | 2.7.18-ok2 @un uH >
+  Considering python2.7-dev:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python2.7-dev:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libexpat1 libgcc-9-dev
+  libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libstdc++-9-dev
+下列软件包将被升级：
+  cpp libexpat1
+升级了 2 个软件包，新安装了 8 个软件包，要卸载 1 个软件包，有 136 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.1 MB 的归档。
+解压缩后会消耗 80.3 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1 riscv64 2.2.9-ok3 [69.2 kB]
+已下载 20.1 MB，耗时 24秒 (854 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../1-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../2-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../3-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../4-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../5-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../6-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../7-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../8-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+准备解压 .../9-libexpat1_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1:riscv64 (2.2.9-ok3) 并覆盖 (2.2.9-ok1) ...
+正在设置 libexpat1:riscv64 (2.2.9-ok3) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python2.7-dev'], kind short, sout pipe, serr pipe, env []
+testsuite-dbg        FAIL badpkg
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest [08:43:18]: test failing-tests: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg'], deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.oa54hz2n/runcmd rm -rf -- /tmp/autopkgtest.QeRzEa
+qemu-system-riscv64: terminating on signal 15 from pid 443173 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.u55i1mrr/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.u55i1mrr/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.u55i1mrr/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.u55i1mrr/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.u55i1mrr/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.u55i1mrr/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.u55i1mrr/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.u55i1mrr/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'12e35668-0699-417f-9ecd-b4e098a363ae[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'12e35668-0699-417f-9ecd-b4e098a363ae[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'12e35668-0699-417f-9ecd-b4e098a363ae[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'12e35668-0699-417f-9ecd-b4e098a363ae[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'12e35668-0699-417f-9ecd-b4e098a363ae[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'12e35668-0699-417f-9ecd-b4e098a363ae[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'12e35668-0699-417f-9ecd-b4e098a363ae[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'12e35668-0699-417f-9ecd-b4e098a363ae[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'12e35668-0699-417f-9ecd-b4e098a363ae[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'12e35668-0699-417f-9ecd-b4e098a363ae[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.u55i1mrr/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'12e35668-0699-417f-9ecd-b4e098a363ae[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'12e35668-0699-417f-9ecd-b4e098a363ae[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.u55i1mrr/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.QeRzEa
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.u55i1mrr/runcmd'], downtmp = /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.u55i1mrr/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [08:44:21]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.QeRzEa/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u55i1mrr/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.QeRzEa/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python2.7/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u55i1mrr/runcmd sh -ec cat </tmp/autopkgtest.QeRzEa/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm']
+autopkgtest: DBG: install-deps: satisfying build-essential, locales:native, python2.7-dev, libpython2.7-testsuite:native, python-gdbm
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, locales, python2.7-dev, libpython2.7-testsuite, python-gdbm
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.QeRzEa'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python2.7/3-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python2.7/3-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.u55i1mrr/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.QeRzEa/3-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python2.7/3-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.u55i1mrr/runcmd sh -ec cat >/tmp/autopkgtest.QeRzEa/3-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.QeRzEa/3-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.QeRzEa/3-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 5
+Starting 2 pkgProblemResolver with broken count: 5
+Investigating (0) python2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to python2.7:riscv64 5
+  Holding Back python2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2-stdlib:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-stdlib:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2-stdlib:riscv64 2
+  Holding Back libpython2-stdlib:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering python2.7:riscv64 5 as a solution to python2:riscv64 2
+  Holding Back python2:riscv64 rather than change python2.7:riscv64
+Investigating (0) libpython2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7:riscv64 1
+  Holding Back libpython2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7-dev:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering python2.7:riscv64 5 as a solution to python2.7-dev:riscv64 0
+  Holding Back python2.7-dev:riscv64 rather than change python2.7:riscv64
+Investigating (0) python-gdbm:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-gdbm:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (>= 2.7)
+  Considering python2:riscv64 2 as a solution to python-gdbm:riscv64 0
+  Holding Back python-gdbm:riscv64 rather than change python2:riscv64
+Investigating (0) libpython2.7-testsuite:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-testsuite:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-testsuite:riscv64 0
+  Holding Back libpython2.7-testsuite:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-dev:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-dev:riscv64 0
+  Holding Back libpython2.7-dev:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python2.7-dev:riscv64 < none | 2.7.18-ok2 @un uH >
+  Considering python2.7-dev:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python2.7-dev:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libexpat1 libgcc-9-dev
+  libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libstdc++-9-dev
+下列软件包将被升级：
+  cpp libexpat1
+升级了 2 个软件包，新安装了 8 个软件包，要卸载 1 个软件包，有 136 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.1 MB 的归档。
+解压缩后会消耗 80.3 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1 riscv64 2.2.9-ok3 [69.2 kB]
+已下载 20.1 MB，耗时 10秒 (2,046 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../1-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../2-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../3-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../4-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../5-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../6-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../7-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../8-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+准备解压 .../9-libexpat1_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1:riscv64 (2.2.9-ok3) 并覆盖 (2.2.9-ok1) ...
+正在设置 libexpat1:riscv64 (2.2.9-ok3) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python2.7-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+failing-tests        FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest [08:45:37]: test failing-tests-dbg: preparing testbed
+autopkgtest: DBG: testbed reset: modified=False, deps_installed=['build-essential', 'locales:native', 'python2.7-dev', 'libpython2.7-testsuite:native', 'python-gdbm'], deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg']
+autopkgtest: DBG: testbed reset
+autopkgtest: DBG: sending command to testbed: revert
+autopkgtest-virt-qemu: DBG: executing revert
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.u55i1mrr/runcmd rm -rf -- /tmp/autopkgtest.QeRzEa
+qemu-system-riscv64: terminating on signal 15 from pid 443173 (/usr/bin/python3)
+autopkgtest-virt-qemu: DBG: find_free_port: trying 10022
+autopkgtest-virt-qemu: DBG: find_free_port: 10022 is free
+autopkgtest-virt-qemu: DBG: autopkgtest does not know how to boot this machine, hopefully nothing special needs to be done?
+autopkgtest-virt-qemu: DBG: qemu architecture: riscv64
+autopkgtest-virt-qemu: DBG: qemu command: qemu-system-riscv64
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img info --output=json ./backbackup/openkylin.qcow2
+autopkgtest-virt-qemu: DBG: Creating temporary overlay image in /tmp/autopkgtest-qemu.bm0drxhj/overlay.img
+autopkgtest-virt-qemu: DBG: execute-timeout: qemu-img create -f qcow2 -F qcow2 -b /home/t0hka/NewHome/intern_home/openkylin-0.9.5/backup/backbackup/openkylin.qcow2 /tmp/autopkgtest-qemu.bm0drxhj/overlay.img
+autopkgtest-virt-qemu: DBG: Forwarding local port 10022 to VM ssh port 22
+autopkgtest-virt-qemu: DBG: Assuming nothing special needs to be done to set up firmware to boot this machine (boot method: none)
+autopkgtest-virt-qemu: DBG: full qemu command-line: ['qemu-system-riscv64', '-m', '8192', '-smp', '8', '-nographic', '-object', 'rng-random,filename=/dev/urandom,id=rng0', '-device', 'virtio-rng-pci,rng=rng0,id=rng-device0', '-monitor', 'unix:/tmp/autopkgtest-qemu.bm0drxhj/monitor,server=on,wait=off', '-virtfs', 'local,id=autopkgtest,path=/tmp/autopkgtest-qemu.bm0drxhj/shared,security_model=none,mount_tag=autopkgtest', '-device', 'virtio-net-device,netdev=usernet', '-netdev', 'user,id=usernet,hostfwd=tcp:127.0.0.1:10022-:22', '-device', 'virtio-serial', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.bm0drxhj/hvc0,server=on,wait=off,id=hvc0', '-device', 'virtconsole,chardev=hvc0', '-chardev', 'socket,path=/tmp/autopkgtest-qemu.bm0drxhj/hvc1,server=on,wait=off,id=hvc1', '-device', 'virtconsole,chardev=hvc1', '-serial', 'unix:/tmp/autopkgtest-qemu.bm0drxhj/ttyS0,server=on,wait=off', '-drive', 'index=0,file=/tmp/autopkgtest-qemu.bm0drxhj/overlay.img,format=qcow2,cache=unsafe,if=virtio,discard=unmap', '-machine', 'virt', '-kernel', '/usr/lib/u-boot/qemu-riscv64_smode/uboot.elf']
+autopkgtest-virt-qemu: DBG: expect: b' login: '
+autopkgtest-virt-qemu: DBG: expect: found "'login prompt on serial console'"
+autopkgtest-virt-qemu: DBG: expect: b'ok'
+autopkgtest-virt-qemu: DBG: expect: found "b'ok'"
+autopkgtest-virt-qemu: DBG: setup_shell(): there already is a shell on hvc1
+qemu-system-riscv64: warning: 9p: degraded performance: a reasonable high msize should be chosen on client/guest side (chosen msize is <= 8192). See https://wiki.qemu.org/Documentation/9psetup#msize for details.
+autopkgtest-virt-qemu: DBG: expect: b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[1]'
+autopkgtest-virt-qemu: DBG: expect: found "b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[1]'"
+autopkgtest-virt-qemu: DBG: expect: b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[2]'
+autopkgtest-virt-qemu: DBG: expect: found "b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[2]'"
+autopkgtest-virt-qemu: DBG: expect: b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[3]'
+autopkgtest-virt-qemu: DBG: expect: found "b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[3]'"
+autopkgtest-virt-qemu: DBG: Copying host timezone Asia/Shanghai to VM
+autopkgtest-virt-qemu: DBG: expect: b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[4]'
+autopkgtest-virt-qemu: DBG: expect: found "b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[4]'"
+autopkgtest-virt-qemu: DBG: expect: b'/python'
+autopkgtest-virt-qemu: DBG: expect: found "b'/python'"
+autopkgtest-virt-qemu: DBG: expect: b'# '
+autopkgtest-virt-qemu: DBG: expect: found "b'# '"
+autopkgtest-virt-qemu: DBG: expect: b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[5]'
+autopkgtest-virt-qemu: DBG: expect: found "b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[5]'"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.bm0drxhj/runcmd true
+autopkgtest-virt-qemu: DBG: can connect to autopkgtest sh in VM
+autopkgtest-virt-qemu: DBG: expect: b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[6]'
+autopkgtest-virt-qemu: DBG: expect: found "b'23649ce7-b92b-4d0d-9c78-6441ed57eb7b[6]'"
+autopkgtest-virt-qemu: DBG: determine_normal_user: got user "openkylin"
+autopkgtest-virt-qemu: DBG: execute-timeout: /tmp/autopkgtest-qemu.bm0drxhj/runcmd mkdir --mode=1777 --parents /tmp/autopkgtest.QeRzEa
+autopkgtest-virt-qemu: DBG: auxverb = ['/tmp/autopkgtest-qemu.bm0drxhj/runcmd'], downtmp = /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: sending command to testbed: print-execute-command
+autopkgtest-virt-qemu: DBG: executing print-execute-command
+autopkgtest: DBG: got reply from testbed: ok /tmp/autopkgtest-qemu.bm0drxhj/runcmd
+autopkgtest: DBG: sending command to testbed: capabilities
+autopkgtest-virt-qemu: DBG: executing capabilities
+autopkgtest: DBG: got reply from testbed: ok revert revert-full-system root-on-testbed isolation-machine reboot suggested-normal-user=openkylin
+autopkgtest: DBG: testbed capabilities: ['revert', 'revert-full-system', 'root-on-testbed', 'isolation-machine', 'reboot', 'suggested-normal-user=openkylin', 'has_internet']
+autopkgtest: DBG: testbed command ['dpkg', '--print-architecture'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [08:46:41]: testbed dpkg architecture: riscv64
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v eatmydata'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 127
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.QeRzEa/testbed-packages"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.QeRzEa/testbed-packages ./testing/python2.7/testbed-packages
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.bm0drxhj/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.QeRzEa/testbed-packages'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python2.7/testbed-packages'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.bm0drxhj/runcmd sh -ec cat </tmp/autopkgtest.QeRzEa/testbed-packages
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed supports reboot, creating /tmp/autopkgtest-reboot
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\np=$PPID; while true; do read _ c _ pp _ < /proc/$p/stat;  [ $pp -ne $test_script_pid ] || break; p=$pp; done\\nkill -KILL $p\\n\' > /tmp/autopkgtest-reboot;chmod 755 /tmp/autopkgtest-reboot;[ -L /sbin/autopkgtest-reboot ] || ln -s   /tmp/autopkgtest-reboot /sbin/autopkgtest-reboot 2>/dev/null || true'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ecC', '[ ! -e /tmp/autopkgtest-reboot-prepare ] || exit 0; /bin/echo -e \'#!/bin/sh -e\\n[ -n "$1" ] || { echo "Usage: $0 <mark>" >&2; exit 1; }\\necho "$1" > /run/autopkgtest-reboot-prepare-mark\\ntest_script_pid=$(cat /tmp/autopkgtest_script_pid)\\nkill -KILL $test_script_pid\\nwhile [ -e /run/autopkgtest-reboot-prepare-mark ]; do sleep 0.5; done\\n \'> /tmp/autopkgtest-reboot-prepare;chmod 755 /tmp/autopkgtest-reboot-prepare;'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['uname', '-srv'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Binaries: no registered binaries, not publishing anything
+autopkgtest: DBG: install_deps: deps_new=['build-essential', 'locales:native', 'python2.7-dev', 'python2.7-dbg', 'libpython2.7-testsuite:native', 'python-gdbm-dbg']
+autopkgtest: DBG: install-deps: satisfying build-essential, locales:native, python2.7-dev, python2.7-dbg, libpython2.7-testsuite:native, python-gdbm-dbg
+autopkgtest: DBG: install-deps: architecture resolved: build-essential, locales, python2.7-dev, python2.7-dbg, libpython2.7-testsuite, python-gdbm-dbg
+autopkgtest: DBG: testbed command ['test', '-w', '/var/lib/dpkg/status'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: can use apt-get on testbed: True
+autopkgtest: DBG: testbed command ['mkdir', '-p', '/tmp/autopkgtest.QeRzEa'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copydown ./testing/python2.7/4-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: executing copydown ./testing/python2.7/4-autopkgtest-satdep.deb /tmp/autopkgtest.QeRzEa/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['cat'], ['/tmp/autopkgtest-qemu.bm0drxhj/runcmd', 'sh', '-ec', 'cat >/tmp/autopkgtest.QeRzEa/4-autopkgtest-satdep.deb'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='./testing/python2.7/4-autopkgtest-satdep.deb'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< cat
+autopkgtest-virt-qemu: DBG:  +> /tmp/autopkgtest-qemu.bm0drxhj/runcmd sh -ec cat >/tmp/autopkgtest.QeRzEa/4-autopkgtest-satdep.deb
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['chown', '-R', 'openkylin', '--', '/tmp/autopkgtest.QeRzEa/4-autopkgtest-satdep.deb'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--unpack', '/tmp/autopkgtest.QeRzEa/4-autopkgtest-satdep.deb'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['/bin/sh', '-ec', ' apt-get install --assume-yes --fix-broken -o APT::Status-Fd=3 -o APT::Install-Recommends=false -o Dpkg::Options::=--force-confnew -o Debug::pkgProblemResolver=true 3>&2 2>&1'], kind install, sout raw, serr pipe, env ['DEBIAN_FRONTEND=noninteractive', 'APT_LISTBUGS_FRONTEND=none', 'APT_LISTCHANGES_FRONTEND=none']
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+正在修复依赖关系...Starting pkgProblemResolver with broken count: 6
+Starting 2 pkgProblemResolver with broken count: 6
+Investigating (0) python2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to python2.7:riscv64 8
+  Holding Back python2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering python2.7:riscv64 8 as a solution to python2:riscv64 4
+  Holding Back python2:riscv64 rather than change python2.7:riscv64
+Investigating (0) libpython2-stdlib:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-stdlib:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2-stdlib:riscv64 3
+  Holding Back libpython2-stdlib:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2.7-dbg:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7-dbg:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering python2.7:riscv64 8 as a solution to python2.7-dbg:riscv64 2
+  Holding Back python2.7-dbg:riscv64 rather than change python2.7:riscv64
+Investigating (0) libpython2.7-dbg:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-dbg:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-dbg:riscv64 2
+  Holding Back libpython2.7-dbg:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python2-dbg:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python2-dbg:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (= 2.7.18-ok1)
+  Considering python2:riscv64 4 as a solution to python2-dbg:riscv64 1
+  Holding Back python2-dbg:riscv64 rather than change python2:riscv64
+Investigating (0) libpython2-dbg:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken libpython2-dbg:riscv64 依赖 on libpython2.7-dbg:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18~)
+  Considering libpython2.7-dbg:riscv64 2 as a solution to libpython2-dbg:riscv64 1
+  Holding Back libpython2-dbg:riscv64 rather than change libpython2.7-dbg:riscv64
+Investigating (0) libpython2.7:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7:riscv64 1
+  Holding Back libpython2.7:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) python-gdbm-dbg:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-gdbm-dbg:riscv64 依赖 on python2-dbg:riscv64 < none | 2.7.18-ok1 @un uH > (>= 2.7)
+  Considering python2-dbg:riscv64 1 as a solution to python-gdbm-dbg:riscv64 0
+  Holding Back python-gdbm-dbg:riscv64 rather than change python2-dbg:riscv64
+Investigating (0) python2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken python2.7-dev:riscv64 依赖 on python2.7:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering python2.7:riscv64 8 as a solution to python2.7-dev:riscv64 0
+  Holding Back python2.7-dev:riscv64 rather than change python2.7:riscv64
+Investigating (0) python-gdbm:riscv64 < none -> 2.7.18-ok1 @un uN Ib >
+Broken python-gdbm:riscv64 依赖 on python2:riscv64 < none | 2.7.18-ok1 @un uH > (>= 2.7)
+  Considering python2:riscv64 4 as a solution to python-gdbm:riscv64 0
+  Holding Back python-gdbm:riscv64 rather than change python2:riscv64
+Investigating (0) libpython2.7-testsuite:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-testsuite:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (>= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-testsuite:riscv64 0
+  Holding Back libpython2.7-testsuite:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) libpython2.7-dev:riscv64 < none -> 2.7.18-ok2 @un uN Ib >
+Broken libpython2.7-dev:riscv64 依赖 on libpython2.7-stdlib:riscv64 < none | 2.7.18-ok2 @un uH > (= 2.7.18-ok2)
+  Considering libpython2.7-stdlib:riscv64 1 as a solution to libpython2.7-dev:riscv64 0
+  Holding Back libpython2.7-dev:riscv64 rather than change libpython2.7-stdlib:riscv64
+Investigating (0) autopkgtest-satdep:riscv64 < 0 @iU mK Nb Ib >
+Broken autopkgtest-satdep:riscv64 依赖 on python2.7-dev:riscv64 < none | 2.7.18-ok2 @un uH >
+  Considering python2.7-dev:riscv64 0 as a solution to autopkgtest-satdep:riscv64 -2
+  Removing autopkgtest-satdep:riscv64 rather than change python2.7-dev:riscv64
+Done
+ 完成
+Starting pkgProblemResolver with broken count: 0
+Starting 2 pkgProblemResolver with broken count: 0
+Done
+下列软件包是自动安装的并且现在不需要了：
+  archdetect-deb cryptsetup cryptsetup-bin dmeventd grub-common libaio1
+  libdebian-installer4 libdevmapper-event1.02.1 liblvm2cmd2.03 lvm2 os-prober
+使用'apt autoremove'来卸载它(它们)。
+将会同时安装下列软件：
+  build-essential cpp g++ g++-9 gcc gcc-9 libcc1-0 libexpat1 libgcc-9-dev
+  libstdc++-9-dev
+建议安装：
+  cpp-doc gcc-9-doc autoconf automake bison flex gcc-doc gcc-multilib gdb
+  libtool manpages-dev gcc-9-locales libstdc++-9-doc
+下列软件包将被【卸载】：
+  autopkgtest-satdep
+下列【新】软件包将被安装：
+  build-essential g++ g++-9 gcc gcc-9 libcc1-0 libgcc-9-dev libstdc++-9-dev
+下列软件包将被升级：
+  cpp libexpat1
+升级了 2 个软件包，新安装了 8 个软件包，要卸载 1 个软件包，有 136 个软件包未被升级。
+有 1 个软件包没有被完全安装或卸载。
+需要下载 20.1 MB 的归档。
+解压缩后会消耗 80.3 MB 的额外空间。
+获取:1 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 cpp riscv64 4:9.3.0-ok7 [5,772 B]
+获取:2 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libcc1-0 riscv64 10-20200411-ok5 [42.3 kB]
+获取:3 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libgcc-9-dev riscv64 9.3.0-ok4 [510 kB]
+获取:4 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc-9 riscv64 9.3.0-ok4 [7,417 kB]
+获取:5 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 gcc riscv64 4:9.3.0-ok7 [5,160 B]
+获取:6 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 libstdc++-9-dev riscv64 9.3.0-ok4 [4,517 kB]
+获取:7 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++-9 riscv64 9.3.0-ok4 [7,571 kB]
+获取:8 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 g++ riscv64 4:9.3.0-ok7 [1,470 B]
+获取:9 http://archive.build.openkylin.top/openkylin yangtze/main riscv64 build-essential riscv64 12.8-ok1 [4,000 B]
+获取:10 http://archive.build.openkylin.top/openkylin yangtze-proposed/main riscv64 libexpat1 riscv64 2.2.9-ok3 [69.2 kB]
+已下载 20.1 MB，耗时 12秒 (1,690 kB/s)
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+(正在读取数据库 ... (正在读取数据库 ... 5%(正在读取数据库 ... 10%(正在读取数据库 ... 15%(正在读取数据库 ... 20%(正在读取数据库 ... 25%(正在读取数据库 ... 30%(正在读取数据库 ... 35%(正在读取数据库 ... 40%(正在读取数据库 ... 45%(正在读取数据库 ... 50%(正在读取数据库 ... 55%(正在读取数据库 ... 60%(正在读取数据库 ... 65%(正在读取数据库 ... 70%(正在读取数据库 ... 75%(正在读取数据库 ... 80%(正在读取数据库 ... 85%(正在读取数据库 ... 90%(正在读取数据库 ... 95%(正在读取数据库 ... 100%(正在读取数据库 ... 系统当前共安装有 155961 个文件和目录。)
+准备解压 .../0-cpp_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 cpp (4:9.3.0-ok7) 并覆盖 (4:9.3.0-ok5) ...
+正在选中未选择的软件包 libcc1-0:riscv64。
+准备解压 .../1-libcc1-0_10-20200411-ok5_riscv64.deb  ...
+正在解压 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在选中未选择的软件包 libgcc-9-dev:riscv64。
+准备解压 .../2-libgcc-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc-9。
+准备解压 .../3-gcc-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 gcc-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 gcc。
+准备解压 .../4-gcc_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 gcc (4:9.3.0-ok7) ...
+正在选中未选择的软件包 libstdc++-9-dev:riscv64。
+准备解压 .../5-libstdc++-9-dev_9.3.0-ok4_riscv64.deb  ...
+正在解压 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++-9。
+准备解压 .../6-g++-9_9.3.0-ok4_riscv64.deb  ...
+正在解压 g++-9 (9.3.0-ok4) ...
+正在选中未选择的软件包 g++。
+准备解压 .../7-g++_4%3a9.3.0-ok7_riscv64.deb  ...
+正在解压 g++ (4:9.3.0-ok7) ...
+正在选中未选择的软件包 build-essential。
+准备解压 .../8-build-essential_12.8-ok1_riscv64.deb  ...
+正在解压 build-essential (12.8-ok1) ...
+准备解压 .../9-libexpat1_2.2.9-ok3_riscv64.deb  ...
+正在解压 libexpat1:riscv64 (2.2.9-ok3) 并覆盖 (2.2.9-ok1) ...
+正在设置 libexpat1:riscv64 (2.2.9-ok3) ...
+正在设置 libgcc-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 cpp (4:9.3.0-ok7) ...
+正在设置 libcc1-0:riscv64 (10-20200411-ok5) ...
+正在设置 gcc-9 (9.3.0-ok4) ...
+正在设置 libstdc++-9-dev:riscv64 (9.3.0-ok4) ...
+正在设置 gcc (4:9.3.0-ok7) ...
+正在设置 g++-9 (9.3.0-ok4) ...
+正在设置 g++ (4:9.3.0-ok7) ...
+update-alternatives: 使用 /usr/bin/g++ 来在自动模式中提供 /usr/bin/c++ (c++)
+正在设置 build-essential (12.8-ok1) ...
+正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+正在处理用于 libc-bin (2.36-ok1) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python2.7-dev'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: BadPackageError Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+failing-tests-dbg    FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [08:47:58]: @@@@@@@@@@@@@@@@@@@@ summary
+testsuite            FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+testsuite-dbg        FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+failing-tests        FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+failing-tests-dbg    FAIL badpkg
+blame: ./src/python2.7_2.7.18-ok2.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python2.7-dev 相匹配的软件包
+ (exit code 1)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.QeRzEa
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 443173 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

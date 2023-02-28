@@ -1,0 +1,33 @@
+    ERROR: Command errored out with exit status 1:
+     command: /usr/bin/python3 -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/autopkgtest.TfWd99/autopkgtest_tmp/stupid/setup.py'"'"'; __file__='"'"'/tmp/autopkgtest.TfWd99/autopkgtest_tmp/stupid/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' develop --no-deps --user --prefix=
+         cwd: /tmp/autopkgtest.TfWd99/autopkgtest_tmp/stupid/
+    Complete output (26 lines):
+    running develop
+    /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:146: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+      warnings.warn(
+    Traceback (most recent call last):
+      File "<string>", line 1, in <module>
+      File "/tmp/autopkgtest.TfWd99/autopkgtest_tmp/stupid/setup.py", line 3, in <module>
+        setup(
+      File "/usr/lib/python3/dist-packages/setuptools/__init__.py", line 87, in setup
+        return distutils.core.setup(**attrs)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 185, in setup
+        return run_commands(dist)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/core.py", line 201, in run_commands
+        dist.run_commands()
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 973, in run_commands
+        self.run_command(cmd)
+      File "/usr/lib/python3/dist-packages/setuptools/dist.py", line 1217, in run_command
+        super().run_command(command)
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/dist.py", line 991, in run_command
+        cmd_obj.ensure_finalized()
+      File "/usr/lib/python3/dist-packages/setuptools/_distutils/cmd.py", line 109, in ensure_finalized
+        self.finalize_options()
+      File "/usr/lib/python3/dist-packages/setuptools/command/develop.py", line 52, in finalize_options
+        easy_install.finalize_options(self)
+      File "/usr/lib/python3/dist-packages/setuptools/command/easy_install.py", line 231, in finalize_options
+        self.config_vars = dict(sysconfig.get_config_vars())
+    UnboundLocalError: local variable 'sysconfig' referenced before assignment
+    ----------------------------------------
+  ERROR: Can't roll back stupid; was not uninstalled
+ERROR: Command errored out with exit status 1: /usr/bin/python3 -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/autopkgtest.TfWd99/autopkgtest_tmp/stupid/setup.py'"'"'; __file__='"'"'/tmp/autopkgtest.TfWd99/autopkgtest_tmp/stupid/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' develop --no-deps --user --prefix= Check the logs for full command output.

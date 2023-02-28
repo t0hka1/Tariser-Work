@@ -1,0 +1,12 @@
+cli                  FAIL badpkg
+blame: ./src/mallard-ducktype_1.0.2-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 ducktype 相匹配的软件包
+ (exit code 1)
+library              FAIL badpkg
+blame: ./src/mallard-ducktype_1.0.2-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-mallard.ducktype 相匹配的软件包
+ (exit code 1)
+autodep8-python3     FAIL badpkg
+blame: ./src/mallard-ducktype_1.0.2-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-mallard.ducktype 相匹配的软件包
+ (exit code 1)

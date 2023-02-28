@@ -1,0 +1,8 @@
+btf-struct-with-hole FAIL badpkg
+blame: ./src/dwarves_1.22-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pahole 相匹配的软件包
+ (exit code 1)
+dwarf-struct-with-hole FAIL badpkg
+blame: ./src/dwarves_1.22-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 pahole 相匹配的软件包
+ (exit code 1)
