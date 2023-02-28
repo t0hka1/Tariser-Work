@@ -253,3 +253,89 @@ Done
 正在设置 python3-mistletoe (0.9.0-ok1) ...
 正在设置 autopkgtest-satdep (0) ...
 正在处理用于 man-db (2.9.1-ok3) 的触发器 ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg-query', '--show', '-f', '${Status}', 'python3-mistletoe'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--status', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['apt-get', '--simulate', '--quiet', '-o', 'APT::Get::Show-User-Simulation-Note=False', '--auto-remove', 'purge', 'autopkgtest-satdep'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: Marking test dependencies as manually installed: archdetect-deb cryptsetup cryptsetup-bin lvm2 dmeventd liblvm2cmd2.03 os-prober grub-common libaio1 libdebian-installer4 libdevmapper-event1.02.1 python3-all python3-mistletoe
+autopkgtest: DBG: testbed command ['apt-mark', 'manual', '-qq', 'archdetect-deb', 'cryptsetup', 'cryptsetup-bin', 'lvm2', 'dmeventd', 'liblvm2cmd2.03', 'os-prober', 'grub-common', 'libaio1', 'libdebian-installer4', 'libdevmapper-event1.02.1', 'python3-all', 'python3-mistletoe'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['dpkg', '--purge', 'autopkgtest-satdep'], kind short, sout raw, serr raw, env []
+(正在读取数据库 ... 系统当前共安装有 155998 个文件和目录。)
+正在卸载 autopkgtest-satdep (0) ...
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', '[ -d /var/cache/apparmor -a -d /var/lib/apparmor/clicks -a ! -e /var/cache/apparmor/click-ap.rules ] && type aa-clickhook >/dev/null 2>&1'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 1
+autopkgtest: DBG: testbed does not have AppArmor/click or already has Autopilot click rules, no need to adjust rules
+autopkgtest: DBG: testbed command ['sh', '-ec', 'command -v dpkg-query'], kind short, sout pipe, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: testbed command ['sh', '-ec', "dpkg-query --show -f '${Package}\\t${Version}\\n' > /tmp/autopkgtest.3FiU9g/autodep8-python3-packages.all"], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-packages.all ./testing/python-mistletoe/autodep8-python3-packages.all
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-packages.all ./testing/python-mistletoe/autodep8-python3-packages.all
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u_9iypoh/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.3FiU9g/autodep8-python3-packages.all'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-mistletoe/autodep8-python3-packages.all'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u_9iypoh/runcmd sh -ec cat </tmp/autopkgtest.3FiU9g/autodep8-python3-packages.all
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['test', '-e', '/tmp/autopkgtest.3FiU9g/build.9Gt/src'], kind short, sout raw, serr raw, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: copydown: tb path /tmp/autopkgtest.3FiU9g/build.9Gt/src already exists
+autopkgtest [15:07:24]: test autodep8-python3: set -e ; for py in $(py3versions -d 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import mistletoe; print(mistletoe)" ; done
+autopkgtest [15:07:24]: test autodep8-python3: [-----------------------
+autopkgtest: DBG: testbed command ['su', '-s', '/bin/bash', 'openkylin', '-c', 'set -e; export USER=`id -nu`; . /etc/profile >/dev/null 2>&1 || true;  . ~/.profile >/dev/null 2>&1 || true; buildtree="/tmp/autopkgtest.3FiU9g/build.9Gt/src"; mkdir -p -m 1777 -- "/tmp/autopkgtest.3FiU9g/autodep8-python3-artifacts"; export AUTOPKGTEST_ARTIFACTS="/tmp/autopkgtest.3FiU9g/autodep8-python3-artifacts"; export ADT_ARTIFACTS="$AUTOPKGTEST_ARTIFACTS"; mkdir -p -m 755 "/tmp/autopkgtest.3FiU9g/autopkgtest_tmp"; export AUTOPKGTEST_TMP="/tmp/autopkgtest.3FiU9g/autopkgtest_tmp"; export ADTTMP="$AUTOPKGTEST_TMP"; export DEBIAN_FRONTEND=noninteractive; export LANG=C.UTF-8; export DEB_BUILD_OPTIONS=parallel=8; unset LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE   LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS   LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION LC_ALL;rm -f /tmp/autopkgtest_script_pid; set -C; echo $$ > /tmp/autopkgtest_script_pid; set +C; trap "rm -f /tmp/autopkgtest_script_pid" EXIT INT QUIT PIPE; cd "$buildtree"; touch /tmp/autopkgtest.3FiU9g/autodep8-python3-stdout /tmp/autopkgtest.3FiU9g/autodep8-python3-stderr; bash -ec \'set -e ; for py in $(py3versions -d 2>/dev/null) ; do cd "$AUTOPKGTEST_TMP" ; echo "Testing with $py:" ; $py -c "import mistletoe; print(mistletoe)" ; done\' 2> >(tee -a /tmp/autopkgtest.3FiU9g/autodep8-python3-stderr >&2) > >(tee -a /tmp/autopkgtest.3FiU9g/autodep8-python3-stdout);'], kind test, sout raw, serr raw, env []
+Testing with python3.8:
+<module 'mistletoe' from '/usr/lib/python3/dist-packages/mistletoe/__init__.py'>
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest [15:07:30]: test autodep8-python3: -----------------------]
+autopkgtest: DBG: testbed executing test finished with exit status 0
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-stdout ./testing/python-mistletoe/autodep8-python3-stdout
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-stdout ./testing/python-mistletoe/autodep8-python3-stdout
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u_9iypoh/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.3FiU9g/autodep8-python3-stdout'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-mistletoe/autodep8-python3-stdout'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u_9iypoh/runcmd sh -ec cat </tmp/autopkgtest.3FiU9g/autodep8-python3-stdout
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-stderr ./testing/python-mistletoe/autodep8-python3-stderr
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-stderr ./testing/python-mistletoe/autodep8-python3-stderr
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u_9iypoh/runcmd', 'sh', '-ec', 'cat </tmp/autopkgtest.3FiU9g/autodep8-python3-stderr'], ['cat'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedWriter name='./testing/python-mistletoe/autodep8-python3-stderr'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u_9iypoh/runcmd sh -ec cat </tmp/autopkgtest.3FiU9g/autodep8-python3-stderr
+autopkgtest-virt-qemu: DBG:  +> cat
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest [15:07:31]: test autodep8-python3:  - - - - - - - - - - results - - - - - - - - - -
+autodep8-python3     PASS (superficial)
+autopkgtest: DBG: sending command to testbed: copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-artifacts/ ./testing/python-mistletoe/artifacts/
+autopkgtest-virt-qemu: DBG: executing copyup /tmp/autopkgtest.3FiU9g/autodep8-python3-artifacts/ ./testing/python-mistletoe/artifacts/
+autopkgtest-virt-qemu: DBG: ['cmdls', "(['/tmp/autopkgtest-qemu.u_9iypoh/runcmd', 'sh', '-ec', 'cd /tmp/autopkgtest.3FiU9g/autodep8-python3-artifacts/; tar --warning=none -c . -f -'], ['tar', '--directory', './testing/python-mistletoe/artifacts/', '--warning=none', '--preserve-permissions', '--extract', '--no-same-owner', '-f', '-'])"]
+autopkgtest-virt-qemu: DBG: ['srcstdin', "<_io.BufferedReader name='/dev/null'>", 'deststdout', "<_io.BufferedReader name='/dev/null'>", 'devnull_read', <_io.BufferedReader name='/dev/null'>]
+autopkgtest-virt-qemu: DBG:  +< /tmp/autopkgtest-qemu.u_9iypoh/runcmd sh -ec cd /tmp/autopkgtest.3FiU9g/autodep8-python3-artifacts/; tar --warning=none -c . -f -
+autopkgtest-virt-qemu: DBG:  +> tar --directory ./testing/python-mistletoe/artifacts/ --warning=none --preserve-permissions --extract --no-same-owner -f -
+autopkgtest-virt-qemu: DBG:  +>?
+autopkgtest-virt-qemu: DBG:  +<?
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: testbed command ['rm', '-rf', '/tmp/autopkgtest.3FiU9g/autodep8-python3-artifacts', '/tmp/autopkgtest.3FiU9g/autopkgtest_tmp'], kind short, sout raw, serr pipe, env []
+autopkgtest: DBG: testbed command exited with code 0
+autopkgtest: DBG: no need to restore click AppArmor profiles
+autopkgtest: DBG: needs_reset, previously=False, requested by run_tests() line 199
+autopkgtest [15:07:33]: @@@@@@@@@@@@@@@@@@@@ summary
+autodep8-python3     PASS (superficial)
+autopkgtest: DBG: testbed stop
+autopkgtest: DBG: testbed close, scratch=/tmp/autopkgtest.3FiU9g
+autopkgtest: DBG: sending command to testbed: close
+autopkgtest-virt-qemu: DBG: executing close
+autopkgtest-virt-qemu: DBG: cleanup...
+qemu-system-riscv64: terminating on signal 15 from pid 560019 (/usr/bin/python3)
+autopkgtest: DBG: got reply from testbed: ok
+autopkgtest: DBG: sending command to testbed: quit
+autopkgtest-virt-qemu: DBG: executing quit
+autopkgtest-virt-qemu: DBG: cleanup...

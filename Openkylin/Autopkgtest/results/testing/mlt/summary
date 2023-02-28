@@ -1,0 +1,4 @@
+autodep8-python3     FAIL badpkg
+blame: ./src/mlt_7.12.0-ok1.dsc
+badpkg: Failed to run dpkg-query: dpkg-query: 没有找到与 python3-mlt 相匹配的软件包
+ (exit code 1)
