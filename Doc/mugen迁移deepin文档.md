@@ -20,12 +20,14 @@ sudo chroot /mnt/deepin
 ```
 
 ```
+# 修改配置文件
 sudo vi /etc/shadow  # 把文件第一行改成root::19292:0:99999:7:::
 sudo vi /etc/apt/source.list 
 # 添加deb [trusted=yes] https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1/ beige main
 ```
 
 ```
+# 结束挂载
 exit 
 sudo umount /mnt/deepin
 sudo losetup -d /dev/loop7
@@ -129,10 +131,15 @@ echo -e "Exit."
 - 安装`apt install sudo`
 - 安装`apt-get install openssh-server`
 	- `vi /etc/ssh/sshd_config`
-	- 修改sshd_config ，找到#PermitRootLogin一行将后面那个改为yes并取消注释，PermitRootLogin yes 然后重启sshd `systemctl restart sshd`
+	- 修改sshd_config ，找到#PermitRootLogin一行将后面那个改为yes并取消注释，PermitRootLogin yes 然后重启sshd
+	-  `systemctl restart sshd`
 
 
-### Mugen测试
-- `git clone https://github.com/t0hka1/mugen-debian-riscv`
-- `qemu-img convert -f raw -O qcow2 deepin.raw deepin.qcow2`
-- `sudo python3 qemu_ubuntu_test.py -w WorkDir -B none -K fw_payload_oe_qemuvirt.elf -D deepin.qcow2 -x 2 -c 8 -M 8 -g -l lists/list_minimal`
+### Mugen测试框架使用
+- clone仓库
+  - `git clone https://github.com/t0hka1/mugen-debian-riscv`
+- 将raw镜像转为mugen适用的qcow2镜像
+  - `qemu-img convert -f raw -O qcow2 deepin.raw deepin.qcow2`
+- 使用qemu_debian_test.py多线程地执行mugen（具体用法参照[RISC-V-oE多线程QEMU自动化测试使用](https://github.com/brsf11/mugen-riscv/blob/riscv/doc_riscv/Markdown/RISC-V-oE%E5%A4%9A%E7%BA%BF%E7%A8%8BQEMU%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8.md)）
+  - `sudo python3 qemu_debian_test.py -w WorkDir -B none -K fw_payload_oe_qemuvirt.elf -D deepin.qcow2 -x 2 -c 8 -M 8 -g -l lists/list_minimal`
+
