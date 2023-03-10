@@ -137,7 +137,7 @@ echo -e "Exit."
 
 ### Mugen测试框架使用
 - clone仓库
-  - `git clone https://github.com/t0hka1/mugen-debian-riscv`
+  - `git clone https://github.com/t0hka1/mugen-debian-riscv.git`
 - 将raw镜像转为mugen适用的qcow2镜像
   - `qemu-img convert -f raw -O qcow2 deepin.raw deepin.qcow2`
 - 使用qemu_debian_test.py多线程地执行mugen（具体用法参照[RISC-V-oE多线程QEMU自动化测试使用](https://github.com/brsf11/mugen-riscv/blob/riscv/doc_riscv/Markdown/RISC-V-oE%E5%A4%9A%E7%BA%BF%E7%A8%8BQEMU%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E4%BD%BF%E7%94%A8.md)）
