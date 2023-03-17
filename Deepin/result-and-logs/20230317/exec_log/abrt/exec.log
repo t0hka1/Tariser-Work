@@ -1,0 +1,28 @@
+Fri Mar 17 09:33:03 2023 - INFO  - start to run testcase:oe_test_service_abrtd.
+Fri Mar 17 09:33:41 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:33:52 2023 - INFO  - End to run testcase:oe_test_service_abrtd.
+Fri Mar 17 09:33:53 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:33:57 2023 - INFO  - start to run testcase:oe_test_service_abrt-journal-core.
+Fri Mar 17 09:34:39 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:34:55 2023 - INFO  - End to run testcase:oe_test_service_abrt-journal-core.
+Fri Mar 17 09:34:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:35:00 2023 - INFO  - start to run testcase:oe_test_service_abrt-oops.
+Fri Mar 17 09:35:38 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:35:49 2023 - INFO  - End to run testcase:oe_test_service_abrt-oops.
+Fri Mar 17 09:35:49 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:35:53 2023 - INFO  - start to run testcase:oe_test_service_abrt-pstoreoops.
+Fri Mar 17 09:36:06 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:36:16 2023 - INFO  - End to run testcase:oe_test_service_abrt-pstoreoops.
+Fri Mar 17 09:36:17 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:36:20 2023 - INFO  - start to run testcase:oe_test_service_abrt-upload-watch.
+Fri Mar 17 09:36:58 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:37:09 2023 - INFO  - End to run testcase:oe_test_service_abrt-upload-watch.
+Fri Mar 17 09:37:09 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:37:13 2023 - INFO  - start to run testcase:oe_test_service_abrt-vmcore.
+Fri Mar 17 09:37:52 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:38:03 2023 - INFO  - End to run testcase:oe_test_service_abrt-vmcore.
+Fri Mar 17 09:38:03 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:38:07 2023 - INFO  - start to run testcase:oe_test_service_abrt-xorg.
+Fri Mar 17 09:38:44 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:38:55 2023 - INFO  - End to run testcase:oe_test_service_abrt-xorg.
+Fri Mar 17 09:38:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

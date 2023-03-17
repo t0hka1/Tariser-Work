@@ -1,0 +1,69 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:46:01 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 11:46:04 2023 - ERROR - pkgs:(gcc-c+) not found
+Fri Mar 17 11:46:05 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 11:46:05 2023 - INFO  - Start to run test.
+oe_test_cpack3.sh: line 30: cpack3: command not found
+Fri Mar 17 11:46:06 2023 - ERROR - oe_test_cpack3.sh line 31
+oe_test_cpack3.sh: line 32: cpack3: command not found
+Fri Mar 17 11:46:07 2023 - ERROR - oe_test_cpack3.sh line 33
+oe_test_cpack3.sh: line 34: cpack3: command not found
+Fri Mar 17 11:46:07 2023 - ERROR - oe_test_cpack3.sh line 35
+oe_test_cpack3.sh: line 36: cpack3: command not found
+Fri Mar 17 11:46:08 2023 - ERROR - oe_test_cpack3.sh line 37
+oe_test_cpack3.sh: line 38: cpack3: command not found
+Fri Mar 17 11:46:08 2023 - ERROR - oe_test_cpack3.sh line 39
+oe_test_cpack3.sh: line 40: cpack3: command not found
+Fri Mar 17 11:46:09 2023 - ERROR - oe_test_cpack3.sh line 41
+oe_test_cpack3.sh: line 42: cmake: command not found
+Fri Mar 17 11:46:09 2023 - ERROR - oe_test_cpack3.sh line 43
+Fri Mar 17 11:46:10 2023 - ERROR - oe_test_cpack3.sh line 45
+Fri Mar 17 11:46:10 2023 - ERROR - oe_test_cpack3.sh line 47
+oe_test_cpack3.sh: line 48: cpack3: command not found
+Fri Mar 17 11:46:11 2023 - ERROR - oe_test_cpack3.sh line 49
+Fri Mar 17 11:46:11 2023 - ERROR - oe_test_cpack3.sh line 51
+Fri Mar 17 11:46:12 2023 - ERROR - oe_test_cpack3.sh line 53
+oe_test_cpack3.sh: line 54: cpack3: command not found
+Fri Mar 17 11:46:13 2023 - ERROR - oe_test_cpack3.sh line 55
+Fri Mar 17 11:46:13 2023 - ERROR - oe_test_cpack3.sh line 57
+oe_test_cpack3.sh: line 58: cpack3: command not found
+Fri Mar 17 11:46:14 2023 - ERROR - oe_test_cpack3.sh line 59
+Fri Mar 17 11:46:14 2023 - ERROR - oe_test_cpack3.sh line 61
+oe_test_cpack3.sh: line 62: cpack3: command not found
+Fri Mar 17 11:46:15 2023 - ERROR - oe_test_cpack3.sh line 63
+Fri Mar 17 11:46:16 2023 - ERROR - oe_test_cpack3.sh line 65
+oe_test_cpack3.sh: line 66: cpack3: command not found
+Fri Mar 17 11:46:16 2023 - ERROR - oe_test_cpack3.sh line 67
+Fri Mar 17 11:46:17 2023 - ERROR - oe_test_cpack3.sh line 69
+oe_test_cpack3.sh: line 70: cpack3: command not found
+Fri Mar 17 11:46:18 2023 - ERROR - oe_test_cpack3.sh line 71
+Fri Mar 17 11:46:19 2023 - ERROR - oe_test_cpack3.sh line 73
+oe_test_cpack3.sh: line 74: cpack3: command not found
+Fri Mar 17 11:46:20 2023 - ERROR - oe_test_cpack3.sh line 75
+grep: demo1-1.0.0-Linux.sh: No such file or directory
+Fri Mar 17 11:46:20 2023 - ERROR - oe_test_cpack3.sh line 77
+oe_test_cpack3.sh: line 78: cpack3: command not found
+Fri Mar 17 11:46:21 2023 - ERROR - oe_test_cpack3.sh line 79
+grep: demo1-1.0.0-Linux.sh: No such file or directory
+Fri Mar 17 11:46:22 2023 - ERROR - oe_test_cpack3.sh line 81
+awk: cannot open /etc/openEuler-release (No such file or directory)
+oe_test_cpack3.sh: line 83: [: !=: unary operator expected
+oe_test_cpack3.sh: line 90: cpack: command not found
+Fri Mar 17 11:46:23 2023 - ERROR - oe_test_cpack3.sh line 93
+Fri Mar 17 11:46:23 2023 - ERROR - oe_test_cpack3.sh line 95
+oe_test_cpack3.sh: line 96: cpack3: command not found
+Fri Mar 17 11:46:24 2023 - ERROR - oe_test_cpack3.sh line 97
+grep: demo1-1.0.0-Linux.sh: No such file or directory
+Fri Mar 17 11:46:25 2023 - ERROR - oe_test_cpack3.sh line 99
+Fri Mar 17 11:46:25 2023 - INFO  - End of the test.
+Fri Mar 17 11:46:26 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:46:26 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:46:27 2023 - WARN  - no thing to do.
+Fri Mar 17 11:46:28 2023 - INFO  - Finish restoring the test environment.

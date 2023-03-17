@@ -1,0 +1,82 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:46:46 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 11:46:50 2023 - ERROR - pkgs:(gcc-c+) not found
+Fri Mar 17 11:46:51 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 11:46:51 2023 - INFO  - Start to run test.
+oe_test_ctest.sh: line 30: ctest: command not found
+Fri Mar 17 11:46:52 2023 - ERROR - oe_test_ctest.sh line 31
+oe_test_ctest.sh: line 32: ctest: command not found
+Fri Mar 17 11:46:52 2023 - ERROR - oe_test_ctest.sh line 33
+oe_test_ctest.sh: line 34: cmake: command not found
+Fri Mar 17 11:46:53 2023 - ERROR - oe_test_ctest.sh line 35
+Fri Mar 17 11:46:53 2023 - ERROR - oe_test_ctest.sh line 37
+Fri Mar 17 11:46:54 2023 - ERROR - oe_test_ctest.sh line 39
+make: *** No targets specified and no makefile found.  Stop.
+Fri Mar 17 11:46:54 2023 - ERROR - oe_test_ctest.sh line 41
+Fri Mar 17 11:46:55 2023 - ERROR - oe_test_ctest.sh line 43
+oe_test_ctest.sh: line 44: ctest: command not found
+Fri Mar 17 11:46:55 2023 - ERROR - oe_test_ctest.sh line 45
+Fri Mar 17 11:46:56 2023 - ERROR - oe_test_ctest.sh line 47
+oe_test_ctest.sh: line 48: ctest: command not found
+Fri Mar 17 11:46:56 2023 - ERROR - oe_test_ctest.sh line 49
+oe_test_ctest.sh: line 50: ctest: command not found
+Fri Mar 17 11:46:57 2023 - ERROR - oe_test_ctest.sh line 51
+oe_test_ctest.sh: line 52: ctest: command not found
+Fri Mar 17 11:46:57 2023 - ERROR - oe_test_ctest.sh line 53
+oe_test_ctest.sh: line 54: ctest: command not found
+Fri Mar 17 11:46:58 2023 - ERROR - oe_test_ctest.sh line 55
+oe_test_ctest.sh: line 56: ctest: command not found
+Fri Mar 17 11:46:59 2023 - ERROR - oe_test_ctest.sh line 57
+oe_test_ctest.sh: line 58: ctest: command not found
+Fri Mar 17 11:46:59 2023 - ERROR - oe_test_ctest.sh line 59
+oe_test_ctest.sh: line 60: ctest: command not found
+oe_test_ctest.sh: line 62: ctest: command not found
+Fri Mar 17 11:47:00 2023 - ERROR - oe_test_ctest.sh line 63
+grep: result: No such file or directory
+Fri Mar 17 11:47:00 2023 - ERROR - oe_test_ctest.sh line 65
+oe_test_ctest.sh: line 66: ctest: command not found
+Fri Mar 17 11:47:01 2023 - ERROR - oe_test_ctest.sh line 67
+oe_test_ctest.sh: line 68: ctest: command not found
+Fri Mar 17 11:47:02 2023 - ERROR - oe_test_ctest.sh line 69
+oe_test_ctest.sh: line 70: ctest: command not found
+Fri Mar 17 11:47:02 2023 - ERROR - oe_test_ctest.sh line 71
+oe_test_ctest.sh: line 72: ctest: command not found
+Fri Mar 17 11:47:03 2023 - ERROR - oe_test_ctest.sh line 73
+oe_test_ctest.sh: line 74: ctest: command not found
+Fri Mar 17 11:47:04 2023 - ERROR - oe_test_ctest.sh line 75
+oe_test_ctest.sh: line 76: ctest: command not found
+Fri Mar 17 11:47:04 2023 - ERROR - oe_test_ctest.sh line 77
+oe_test_ctest.sh: line 78: ctest: command not found
+Fri Mar 17 11:47:05 2023 - ERROR - oe_test_ctest.sh line 79
+oe_test_ctest.sh: line 80: ctest: command not found
+Fri Mar 17 11:47:05 2023 - ERROR - oe_test_ctest.sh line 81
+oe_test_ctest.sh: line 82: ctest: command not found
+Fri Mar 17 11:47:06 2023 - ERROR - oe_test_ctest.sh line 83
+oe_test_ctest.sh: line 84: ctest: command not found
+Fri Mar 17 11:47:07 2023 - ERROR - oe_test_ctest.sh line 85
+oe_test_ctest.sh: line 86: ctest: command not found
+Fri Mar 17 11:47:07 2023 - ERROR - oe_test_ctest.sh line 87
+oe_test_ctest.sh: line 88: ctest: command not found
+Fri Mar 17 11:47:08 2023 - ERROR - oe_test_ctest.sh line 89
+oe_test_ctest.sh: line 90: ctest: command not found
+Fri Mar 17 11:47:08 2023 - ERROR - oe_test_ctest.sh line 91
+oe_test_ctest.sh: line 92: ctest: command not found
+Fri Mar 17 11:47:09 2023 - ERROR - oe_test_ctest.sh line 93
+oe_test_ctest.sh: line 94: ctest: command not found
+Fri Mar 17 11:47:10 2023 - ERROR - oe_test_ctest.sh line 95
+oe_test_ctest.sh: line 96: ctest: command not found
+Fri Mar 17 11:47:10 2023 - ERROR - oe_test_ctest.sh line 97
+oe_test_ctest.sh: line 98: ctest: command not found
+Fri Mar 17 11:47:11 2023 - ERROR - oe_test_ctest.sh line 99
+Fri Mar 17 11:47:11 2023 - INFO  - End of the test.
+Fri Mar 17 11:47:12 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:47:12 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:47:13 2023 - WARN  - no thing to do.
+Fri Mar 17 11:47:13 2023 - INFO  - Finish restoring the test environment.

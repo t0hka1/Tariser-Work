@@ -1,0 +1,49 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:39:28 2023 - INFO  - Start environmental preparation.
+0022
+Fri Mar 17 09:39:29 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 09:39:29 2023 - INFO  - Start executing testcase.
+New password: Retype new password: passwd: password updated successfully
+oe_test_acl_defaulr_rule.sh: line 37: setfacl: command not found
+oe_test_acl_defaulr_rule.sh: line 50: getfacl: command not found
+1,12d0
+< # file: home/test
+< # owner: root
+< # group: root
+< user::rwx
+< group::r-x
+< other::r-x
+< default:user::rwx
+< default:user:example:-w-
+< default:group::r-x
+< default:mask::rwx
+< default:other::r-x
+< 
+Fri Mar 17 09:39:31 2023 - ERROR - Comparison between diff_file_log and tmp_file failed
+Fri Mar 17 09:39:31 2023 - ERROR - oe_test_acl_defaulr_rule.sh line 52
+oe_test_acl_defaulr_rule.sh: line 63: getfacl: command not found
+1,9d0
+< # file: home/test/file
+< # owner: root
+< # group: root
+< user::rw-
+< user:example:-w-
+< group::r-x	#effective:r--
+< mask::rw-
+< other::r--
+< 
+Fri Mar 17 09:39:32 2023 - ERROR - Comparison between diff_file_log and tmp_file failed
+Fri Mar 17 09:39:33 2023 - ERROR - oe_test_acl_defaulr_rule.sh line 65
+Fri Mar 17 09:39:33 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 09:39:34 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:39:34 2023 - INFO  - start environment cleanup.
+userdel: example mail spool (/var/mail/example) not found
+userdel: example home directory (/home/example) not found
+Fri Mar 17 09:39:35 2023 - INFO  - Finish environment cleanup!

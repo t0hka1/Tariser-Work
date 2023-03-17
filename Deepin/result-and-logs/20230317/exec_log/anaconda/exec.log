@@ -1,0 +1,36 @@
+Fri Mar 17 09:54:38 2023 - INFO  - start to run testcase:oe_test_service_anaconda-direct.
+Fri Mar 17 09:54:53 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:55:03 2023 - INFO  - End to run testcase:oe_test_service_anaconda-direct.
+Fri Mar 17 09:55:04 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:55:07 2023 - INFO  - start to run testcase:oe_test_service_anaconda-nm-config.
+Fri Mar 17 09:55:20 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:55:31 2023 - INFO  - End to run testcase:oe_test_service_anaconda-nm-config.
+Fri Mar 17 09:55:31 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:55:35 2023 - INFO  - start to run testcase:oe_test_service_anaconda-noshell.
+Fri Mar 17 09:55:46 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:55:57 2023 - INFO  - End to run testcase:oe_test_service_anaconda-noshell.
+Fri Mar 17 09:55:58 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:56:01 2023 - INFO  - start to run testcase:oe_test_service_anaconda-pre.
+Fri Mar 17 09:56:13 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:56:23 2023 - INFO  - End to run testcase:oe_test_service_anaconda-pre.
+Fri Mar 17 09:56:24 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:56:27 2023 - INFO  - start to run testcase:oe_test_service_anaconda.
+Fri Mar 17 09:56:41 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:56:52 2023 - INFO  - End to run testcase:oe_test_service_anaconda.
+Fri Mar 17 09:56:52 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:56:56 2023 - INFO  - start to run testcase:oe_test_service_anaconda-sshd.
+Fri Mar 17 09:57:08 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:57:18 2023 - INFO  - End to run testcase:oe_test_service_anaconda-sshd.
+Fri Mar 17 09:57:19 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:57:22 2023 - INFO  - start to run testcase:oe_test_service_instperf.
+Fri Mar 17 09:57:34 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:57:45 2023 - INFO  - End to run testcase:oe_test_service_instperf.
+Fri Mar 17 09:57:46 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:57:49 2023 - INFO  - start to run testcase:oe_test_service_zram.
+Fri Mar 17 09:58:27 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:58:38 2023 - INFO  - End to run testcase:oe_test_service_zram.
+Fri Mar 17 09:58:38 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:58:42 2023 - INFO  - start to run testcase:oe_test_target_anaconda.
+Fri Mar 17 09:58:53 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:59:03 2023 - INFO  - End to run testcase:oe_test_target_anaconda.
+Fri Mar 17 09:59:04 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.

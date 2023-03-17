@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:41:09 2023 - INFO  - Start to prepare the test environment.
+passwd: unrecognized option '--stdin'
+Usage: passwd [options] [LOGIN]
+
+Options:
+  -a, --all                     report password status on all accounts
+  -d, --delete                  delete the password for the named account
+  -e, --expire                  force expire the password for the named account
+  -h, --help                    display this help message and exit
+  -k, --keep-tokens             change password only if expired
+  -i, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -l, --lock                    lock the password of the named account
+  -n, --mindays MIN_DAYS        set minimum number of days before password
+                                change to MIN_DAYS
+  -q, --quiet                   quiet mode
+  -r, --repository REPOSITORY   change password in REPOSITORY repository
+  -R, --root CHROOT_DIR         directory to chroot into
+  -S, --status                  report password status on the named account
+  -u, --unlock                  unlock the password of the named account
+  -w, --warndays WARN_DAYS      set expiration warning days to WARN_DAYS
+  -x, --maxdays MAX_DAYS        set maximum number of days before password
+                                change to MAX_DAYS
+
+Fri Mar 17 10:41:10 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 10:41:11 2023 - INFO  - Start to run test.
+Failed to restart auditd.service: Unit auditd.service not found.
+oe_test_audit_monitor_network_visit.sh: line 33: auditctl: command not found
+Fri Mar 17 10:41:12 2023 - ERROR - delete failed
+Fri Mar 17 10:41:12 2023 - ERROR - oe_test_audit_monitor_network_visit.sh line 34
+spawn ssh Jevons@localhost
+invalid command name "expect{"
+    while executing
+"expect{"
+oe_test_audit_monitor_network_visit.sh: line 47: ausearch: command not found
+Fri Mar 17 10:41:13 2023 - ERROR - ausearch failed
+Fri Mar 17 10:41:14 2023 - ERROR - oe_test_audit_monitor_network_visit.sh line 48
+Fri Mar 17 10:41:14 2023 - INFO  - End to run test.
+Fri Mar 17 10:41:15 2023 - ERROR - failed to execute the case.
+Fri Mar 17 10:41:15 2023 - INFO  - Start to restore the test environment.
+userdel: Jevons mail spool (/var/mail/Jevons) not found
+userdel: Jevons home directory (/home/Jevons) not found
+Fri Mar 17 10:41:17 2023 - INFO  - End to restore the test environment.

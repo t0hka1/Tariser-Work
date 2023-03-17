@@ -1,0 +1,52 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:20:53 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 09:20:57 2023 - ERROR - pkgs:(ImageMagick) not found
+Fri Mar 17 09:20:57 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 09:20:58 2023 - INFO  - Start to run test.
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar3.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:20:59 2023 - ERROR - oe_test_ImageMagick_04.sh line 34
+Fri Mar 17 09:20:59 2023 - ERROR - oe_test_ImageMagick_04.sh line 36
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar4.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:21:00 2023 - ERROR - oe_test_ImageMagick_04.sh line 38
+Fri Mar 17 09:21:00 2023 - ERROR - oe_test_ImageMagick_04.sh line 40
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar5.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:21:01 2023 - ERROR - oe_test_ImageMagick_04.sh line 42
+Fri Mar 17 09:21:02 2023 - ERROR - oe_test_ImageMagick_04.sh line 44
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar6.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:21:02 2023 - ERROR - oe_test_ImageMagick_04.sh line 46
+Fri Mar 17 09:21:03 2023 - ERROR - oe_test_ImageMagick_04.sh line 48
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar7.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:21:04 2023 - ERROR - oe_test_ImageMagick_04.sh line 50
+Fri Mar 17 09:21:04 2023 - ERROR - oe_test_ImageMagick_04.sh line 52
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar8.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:21:05 2023 - ERROR - oe_test_ImageMagick_04.sh line 54
+Fri Mar 17 09:21:05 2023 - ERROR - oe_test_ImageMagick_04.sh line 56
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar9.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:21:06 2023 - ERROR - oe_test_ImageMagick_04.sh line 58
+Fri Mar 17 09:21:06 2023 - ERROR - oe_test_ImageMagick_04.sh line 60
+Fri Mar 17 09:21:07 2023 - INFO  - End to run test.
+Fri Mar 17 09:21:07 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:21:08 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 09:21:08 2023 - WARN  - no thing to do.
+Fri Mar 17 09:21:09 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:40:03 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 10:40:04 2023 - INFO  - End to prepare the environment
+Fri Mar 17 10:40:04 2023 - INFO  - Start to run test.
+Failed to restart auditd.service: Unit auditd.service not found.
+oe_test_audit_monitor_do_command.sh: line 32: auditctl: command not found
+Fri Mar 17 10:40:05 2023 - ERROR - clean failed
+Fri Mar 17 10:40:06 2023 - ERROR - oe_test_audit_monitor_do_command.sh line 33
+oe_test_audit_monitor_do_command.sh: line 34: auditctl: command not found
+Fri Mar 17 10:40:06 2023 - ERROR - add rule failed
+Fri Mar 17 10:40:07 2023 - ERROR - oe_test_audit_monitor_do_command.sh line 35
+oe_test_audit_monitor_do_command.sh: line 36: auditctl: command not found
+Fri Mar 17 10:40:07 2023 - ERROR - grep failed
+Fri Mar 17 10:40:08 2023 - ERROR - oe_test_audit_monitor_do_command.sh line 37
+su: warning: cannot change directory to /home/Jevons: No such file or directory
+/root/GitRepo/mugen-debian-riscv/testcases/cli-test/audit/oe_test_audit_monitor_do_command
+oe_test_audit_monitor_do_command.sh: line 42: ausearch: command not found
+Fri Mar 17 10:40:09 2023 - ERROR - ausearch failed
+Fri Mar 17 10:40:10 2023 - ERROR - oe_test_audit_monitor_do_command.sh line 43
+Fri Mar 17 10:40:10 2023 - INFO  - End to run test.
+Fri Mar 17 10:40:11 2023 - ERROR - failed to execute the case.
+oe_test_audit_monitor_do_command.sh: line 48: fOG_INFO: command not found
+userdel: Jevons mail spool (/var/mail/Jevons) not found
+userdel: Jevons home directory (/home/Jevons) not found
+oe_test_audit_monitor_do_command.sh: line 50: auditctl: command not found
+Fri Mar 17 10:40:12 2023 - INFO  - End to restore the test environment.

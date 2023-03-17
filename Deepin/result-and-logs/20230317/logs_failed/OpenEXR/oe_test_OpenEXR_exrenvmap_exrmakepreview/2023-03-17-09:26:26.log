@@ -1,0 +1,46 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:26:29 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 09:26:32 2023 - ERROR - pkgs:(OpenEXR-devel) not found
+Fri Mar 17 09:26:33 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 09:26:34 2023 - INFO  - Start to run test.
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 34: exrenvmap: command not found
+Fri Mar 17 09:26:34 2023 - ERROR - Check exrenvmap -u failed.
+Fri Mar 17 09:26:35 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 35
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 36: exrenvmap: command not found
+Fri Mar 17 09:26:35 2023 - ERROR - Check exrenvmap -z failed.
+Fri Mar 17 09:26:36 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 37
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 38: exrenvmap: command not found
+Fri Mar 17 09:26:36 2023 - ERROR - Check exrenvmap -v failed.
+Fri Mar 17 09:26:37 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 39
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 40: exrenvmap: command not found
+Fri Mar 17 09:26:37 2023 - ERROR - Check exrenvmap -w failed.
+Fri Mar 17 09:26:38 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 41
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 42: exrenvmap: command not found
+Fri Mar 17 09:26:38 2023 - ERROR - Check exrenvmap -f failed.
+Fri Mar 17 09:26:39 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 43
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 44: exrenvmap: command not found
+Fri Mar 17 09:26:39 2023 - ERROR - Check exrenvmap -t failed.
+Fri Mar 17 09:26:40 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 45
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 47: exrmakepreview: command not found
+Fri Mar 17 09:26:41 2023 - ERROR - Check exrmakepreview -w failed.
+Fri Mar 17 09:26:41 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 48
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 49: exrmakepreview: command not found
+Fri Mar 17 09:26:42 2023 - ERROR - Check exrmakepreview -e failed.
+Fri Mar 17 09:26:42 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 50
+oe_test_OpenEXR_exrenvmap_exrmakepreview.sh: line 51: exrmakepreview: command not found
+Fri Mar 17 09:26:43 2023 - ERROR - Check exrmakepreview -v failed.
+Fri Mar 17 09:26:43 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 52
+Fri Mar 17 09:26:44 2023 - ERROR - Check exrmakepreview -h failed.
+Fri Mar 17 09:26:44 2023 - ERROR - oe_test_OpenEXR_exrenvmap_exrmakepreview.sh line 54
+Fri Mar 17 09:26:45 2023 - INFO  - End to run test.
+Fri Mar 17 09:26:46 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:26:46 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 09:26:47 2023 - WARN  - no thing to do.
+Fri Mar 17 09:26:47 2023 - INFO  - End to restore the test environment.

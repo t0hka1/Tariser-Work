@@ -1,0 +1,28 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:44:13 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 09:45:28 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 09:45:28 2023 - INFO  - Start to run test.
+     Active: active (running) since Fri 2023-03-17 09:45:29 UTC; 5s ago
+Job for acpid.socket canceled.
+Fri Mar 17 09:45:35 2023 - ERROR - acpid.socket stop failed
+Fri Mar 17 09:45:36 2023 - ERROR - ../common/common_lib.sh line 39
+Fri Mar 17 09:45:42 2023 - ERROR - acpid.socket stop failed
+Fri Mar 17 09:45:43 2023 - ERROR - ../common/common_lib.sh line 42
+     Active: active (running) since Fri 2023-03-17 09:45:29 UTC; 20s ago
+find: ‘/etc/systemd/system/sockets.target.wants/acpid.socket’: No such file or directory
+Created symlink /etc/systemd/system/sockets.target.wants/acpid.socket → /lib/systemd/system/acpid.socket.
+/etc/systemd/system/sockets.target.wants/acpid.socket
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to reload acpid.socket: Job type reload is not applicable for unit acpid.socket.
+     Active: active (running) since Fri 2023-03-17 09:45:29 UTC; 32s ago
+Fri Mar 17 09:46:02 2023 - INFO  - End of the test.
+Fri Mar 17 09:46:03 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:46:03 2023 - INFO  - start environment cleanup.
+Fri Mar 17 09:46:53 2023 - INFO  - Finish environment cleanup!

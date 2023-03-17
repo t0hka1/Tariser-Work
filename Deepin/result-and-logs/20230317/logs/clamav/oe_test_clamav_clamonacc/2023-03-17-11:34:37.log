@@ -1,0 +1,68 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:34:39 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 11:34:43 2023 - ERROR - pkgs:(clamav-server) not found
+cp: cannot stat '/var/lib/clamav/main.cvd': No such file or directory
+mv: cannot stat '/etc/clamd.d/scan.conf': No such file or directory
+oe_test_clamav_clamonacc.sh: line 48: /etc/clamd.d/scan.conf: No such file or directory
+Failed to restart clamd@scan.service: Unit clamd@scan.service not found.
+Failed to restart clamav-clamonacc.service: Unit clamav-clamonacc.service not found.
+Fri Mar 17 11:34:45 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:34:45 2023 - INFO  - Start to run test.
+oe_test_clamav_clamonacc.sh: line 58: clamonacc: command not found
+Fri Mar 17 11:34:46 2023 - ERROR - Execute clamonacc -v failed.
+Fri Mar 17 11:34:46 2023 - ERROR - oe_test_clamav_clamonacc.sh line 59
+oe_test_clamav_clamonacc.sh: line 60: clamonacc: command not found
+Fri Mar 17 11:34:47 2023 - ERROR - Execute clamonacc -w failed.
+Fri Mar 17 11:34:48 2023 - ERROR - oe_test_clamav_clamonacc.sh line 61
+oe_test_clamav_clamonacc.sh: line 62: clamonacc: command not found
+Fri Mar 17 11:34:48 2023 - ERROR - Execute clamonacc -W testfile failed.
+Fri Mar 17 11:34:49 2023 - ERROR - oe_test_clamav_clamonacc.sh line 63
+oe_test_clamav_clamonacc.sh: line 64: clamonacc: command not found
+Fri Mar 17 11:34:49 2023 - ERROR - Execute clamonacc -l clamonacc_log /opt --fdpass failed.
+Fri Mar 17 11:34:50 2023 - ERROR - oe_test_clamav_clamonacc.sh line 65
+oe_test_clamav_clamonacc.sh: line 66: clamonacc: command not found
+Fri Mar 17 11:34:50 2023 - ERROR - Execute clamonacc --exclude-list=testlist failed.
+Fri Mar 17 11:34:51 2023 - ERROR - oe_test_clamav_clamonacc.sh line 67
+oe_test_clamav_clamonacc.sh: line 68: clamonacc: command not found
+Fri Mar 17 11:34:51 2023 - ERROR - Execute clamonacc --config-file=/etc/clamd.d/scan.conf failed.
+Fri Mar 17 11:34:52 2023 - ERROR - oe_test_clamav_clamonacc.sh line 69
+oe_test_clamav_clamonacc.sh: line 70: clamonacc: command not found
+Fri Mar 17 11:34:52 2023 - ERROR - Execute clamonacc -p 3:1  -w failed.
+Fri Mar 17 11:34:53 2023 - ERROR - oe_test_clamav_clamonacc.sh line 71
+oe_test_clamav_clamonacc.sh: line 72: clamonacc: command not found
+Fri Mar 17 11:34:53 2023 - ERROR - Execute clamonacc --remove failed.
+Fri Mar 17 11:34:54 2023 - ERROR - oe_test_clamav_clamonacc.sh line 73
+oe_test_clamav_clamonacc.sh: line 74: clamonacc: command not found
+Fri Mar 17 11:34:54 2023 - ERROR - Execute clamonacc --move testdir /opt failed.
+Fri Mar 17 11:34:55 2023 - ERROR - oe_test_clamav_clamonacc.sh line 75
+oe_test_clamav_clamonacc.sh: line 76: clamonacc: command not found
+Fri Mar 17 11:34:55 2023 - ERROR - Execute clamonacc --copy testdir /opt failed.
+Fri Mar 17 11:34:56 2023 - ERROR - oe_test_clamav_clamonacc.sh line 77
+oe_test_clamav_clamonacc.sh: line 78: clamonacc: command not found
+Fri Mar 17 11:34:56 2023 - ERROR - Execute clamonacc -z failed.
+Fri Mar 17 11:34:57 2023 - ERROR - oe_test_clamav_clamonacc.sh line 79
+oe_test_clamav_clamonacc.sh: line 80: clamonacc: command not found
+Fri Mar 17 11:34:57 2023 - ERROR - Execute clamonacc --stream failed.
+Fri Mar 17 11:34:58 2023 - ERROR - oe_test_clamav_clamonacc.sh line 81
+nohup: failed to run command 'clamonacc': No such file or directory
+Fri Mar 17 11:35:01 2023 - WARN  - the remote user uses the default configuration.
+Fri Mar 17 11:35:02 2023 - WARN  - the connect port using the default configuration
+spawn ssh -o ConnectTimeout=300 -p 22 root@127.0.0.1 echo 'test force file' >/opt/test_forcefile
+root@127.0.0.1's password: 
+grep: nohup.out: No such file or directory
+Fri Mar 17 11:35:09 2023 - ERROR - Execute clamonacc -F failed.
+Fri Mar 17 11:35:10 2023 - ERROR - oe_test_clamav_clamonacc.sh line 89
+Fri Mar 17 11:35:10 2023 - INFO  - End to run test.
+Fri Mar 17 11:35:11 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:35:11 2023 - INFO  - Start to restore the test environment.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+mv: cannot stat '/etc/clamd.d/scan.conf.bak': No such file or directory
+Fri Mar 17 11:35:12 2023 - WARN  - no thing to do.
+Fri Mar 17 11:35:13 2023 - INFO  - End to restore the test environment.

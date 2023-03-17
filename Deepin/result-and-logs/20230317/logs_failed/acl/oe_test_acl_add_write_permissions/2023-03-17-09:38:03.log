@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:38:05 2023 - INFO  - Start environmental preparation.
+0022
+Fri Mar 17 09:38:06 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 09:38:07 2023 - INFO  - Start executing testcase.
+New password: Retype new password: passwd: password updated successfully
+-rw-r--r-- 1 root root 0 Mar 17 09:38 /tmp/my_pwd
+oe_test_acl_add_write_permissions.sh: line 39: setfacl: command not found
+Fri Mar 17 09:38:09 2023 - ERROR - Failed to add a user permission for 'example'
+Fri Mar 17 09:38:09 2023 - ERROR - oe_test_acl_add_write_permissions.sh line 40
+oe_test_acl_add_write_permissions.sh: line 41: getfacl: command not found
+0a1,9
+> # file: tmp/my_pwd
+> # owner: root
+> # group: root
+> user::rw-
+> user:example:-w-
+> group::r--
+> mask::rw-
+> other::r--
+> 
+Fri Mar 17 09:38:10 2023 - ERROR - Comparison between tmp_log and diff_file failed
+Fri Mar 17 09:38:10 2023 - ERROR - oe_test_acl_add_write_permissions.sh line 52
+Fri Mar 17 09:38:11 2023 - ERROR - Check file umask failed
+Fri Mar 17 09:38:12 2023 - ERROR - oe_test_acl_add_write_permissions.sh line 54
+su: warning: cannot change directory to /home/example: No such file or directory
+-sh: 1: cannot create /tmp/my_pwd: Permission denied
+Fri Mar 17 09:38:13 2023 - ERROR - Switching to 'example' failed to execute echo command
+Fri Mar 17 09:38:13 2023 - ERROR - oe_test_acl_add_write_permissions.sh line 56
+Fri Mar 17 09:38:14 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 09:38:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:38:15 2023 - INFO  - start environment cleanup.
+userdel: example mail spool (/var/mail/example) not found
+userdel: example home directory (/home/example) not found
+Fri Mar 17 09:38:16 2023 - INFO  - Finish environment cleanup!

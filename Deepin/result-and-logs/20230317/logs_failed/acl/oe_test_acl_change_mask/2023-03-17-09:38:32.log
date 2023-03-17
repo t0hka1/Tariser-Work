@@ -1,0 +1,35 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:38:35 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 09:38:36 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 09:38:36 2023 - INFO  - Start executing testcase.
+New password: Retype new password: passwd: password updated successfully
+New password: Retype new password: passwd: password updated successfully
+su: warning: cannot change directory to /home/example1: No such file or directory
+-sh: 1: setfacl: not found
+su: warning: cannot change directory to /home/example2: No such file or directory
+cat: /home/test1: Permission denied
+Fri Mar 17 09:38:40 2023 - ERROR - Failed to switch 'example2' user to view files
+Fri Mar 17 09:38:40 2023 - ERROR - oe_test_acl_change_mask.sh line 46
+oe_test_acl_change_mask.sh: line 47: setfacl: command not found
+Fri Mar 17 09:38:41 2023 - ERROR - Failed to set ACL
+Fri Mar 17 09:38:41 2023 - ERROR - oe_test_acl_change_mask.sh line 48
+oe_test_acl_change_mask.sh: line 49: getfacl: command not found
+Fri Mar 17 09:38:42 2023 - ERROR - Failed to get ACL
+Fri Mar 17 09:38:42 2023 - ERROR - oe_test_acl_change_mask.sh line 50
+su: warning: cannot change directory to /home/example2: No such file or directory
+cat: /home/test1: Permission denied
+Fri Mar 17 09:38:43 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 09:38:44 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:38:44 2023 - INFO  - start environment cleanup.
+userdel: example1 mail spool (/var/mail/example1) not found
+userdel: example1 home directory (/home/example1) not found
+userdel: example2 mail spool (/var/mail/example2) not found
+userdel: example2 home directory (/home/example2) not found
+Fri Mar 17 09:38:46 2023 - INFO  - Finish environment cleanup!

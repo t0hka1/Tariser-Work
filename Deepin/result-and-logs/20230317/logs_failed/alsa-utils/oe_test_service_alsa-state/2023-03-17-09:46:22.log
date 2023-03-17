@@ -1,0 +1,32 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:46:25 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 09:46:29 2023 - INFO  - pkgs:(alsa-utils) is already installed
+Fri Mar 17 09:46:30 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 09:46:30 2023 - INFO  - Start testing...
+Fri Mar 17 09:46:37 2023 - ERROR - alsa-state.service restart failed
+Fri Mar 17 09:46:37 2023 - ERROR - ../common/common_lib.sh line 37
+     Active: inactive (dead)
+Fri Mar 17 09:46:50 2023 - ERROR - alsa-state.service start failed
+Fri Mar 17 09:46:50 2023 - ERROR - ../common/common_lib.sh line 47
+Fri Mar 17 09:46:51 2023 - INFO  - The unit files have no installation config,This means they are not meant to be enabled using systemctl.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 17 09:46:30 deepin-rv-builder-2 systemd[1]: Manage Sound Card State (restore and store) was skipped because of a failed condition check (ConditionPathExists=/etc/alsa/state-daemon.conf).
+Mar 17 09:46:43 deepin-rv-builder-2 systemd[1]: Manage Sound Card State (restore and store) was skipped because of a failed condition check (ConditionPathExists=/etc/alsa/state-daemon.conf).
+Fri Mar 17 09:46:52 2023 - ERROR - There is an error message for the log of alsa-state.service
+Fri Mar 17 09:46:52 2023 - ERROR - oe_test_service_alsa-state.sh line 40
+Failed to reload alsa-state.service: Job type reload is not applicable for unit alsa-state.service.
+     Active: inactive (dead)
+Fri Mar 17 09:46:54 2023 - ERROR - alsa-state.service reload causes the service status to change
+Fri Mar 17 09:46:54 2023 - ERROR - ../common/common_lib.sh line 95
+Fri Mar 17 09:46:55 2023 - INFO  - Finish test!
+Fri Mar 17 09:46:55 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:46:56 2023 - INFO  - start environment cleanup.
+Fri Mar 17 09:46:56 2023 - WARN  - no thing to do.
+Fri Mar 17 09:46:57 2023 - INFO  - Finish environment cleanup!

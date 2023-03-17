@@ -1,0 +1,70 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:43:10 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 11:43:14 2023 - ERROR - pkgs:(gcc-c+) not found
+awk: cannot open /etc/openEuler-release (No such file or directory)
+Fri Mar 17 11:43:15 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 11:43:15 2023 - INFO  - Start to run test.
+oe_test_ccmake3.sh: line 31: ccmake3: command not found
+Fri Mar 17 11:43:16 2023 - ERROR - oe_test_ccmake3.sh line 32
+oe_test_ccmake3.sh: line 33: ccmake3: command not found
+Fri Mar 17 11:43:17 2023 - ERROR - oe_test_ccmake3.sh line 34
+oe_test_ccmake3.sh: line 35: ccmake3: command not found
+Fri Mar 17 11:43:17 2023 - ERROR - oe_test_ccmake3.sh line 36
+oe_test_ccmake3.sh: line 37: ccmake3: command not found
+Fri Mar 17 11:43:18 2023 - ERROR - oe_test_ccmake3.sh line 38
+oe_test_ccmake3.sh: line 39: ccmake3: command not found
+Fri Mar 17 11:43:18 2023 - ERROR - oe_test_ccmake3.sh line 40
+oe_test_ccmake3.sh: line 41: [: !=: unary operator expected
+spawn ccmake3 -B ../buildccmake3 -S ../../common/
+couldn't execute "ccmake3": no such file or directory
+    while executing
+"spawn ccmake3 -B ../buildccmake3 -S ../../common/"
+Fri Mar 17 11:43:19 2023 - ERROR - oe_test_ccmake3.sh line 65
+Fri Mar 17 11:43:19 2023 - ERROR - oe_test_ccmake3.sh line 67
+oe_test_ccmake3.sh: line 68: [: !=: unary operator expected
+spawn ccmake3 -C ../../common/mysettings.cmake ../../common/
+couldn't execute "ccmake3": no such file or directory
+    while executing
+"spawn ccmake3 -C ../../common/mysettings.cmake ../../common/"
+Fri Mar 17 11:43:20 2023 - ERROR - oe_test_ccmake3.sh line 92
+Fri Mar 17 11:43:21 2023 - ERROR - oe_test_ccmake3.sh line 94
+oe_test_ccmake3.sh: line 96: [: !=: unary operator expected
+spawn ccmake3 -DCMAKE_BUILD_TYPE:STRING=RELEASE ../../common/
+couldn't execute "ccmake3": no such file or directory
+    while executing
+"spawn ccmake3 -DCMAKE_BUILD_TYPE:STRING=RELEASE ../../common/"
+Fri Mar 17 11:43:22 2023 - ERROR - oe_test_ccmake3.sh line 116
+Fri Mar 17 11:43:22 2023 - ERROR - oe_test_ccmake3.sh line 118
+oe_test_ccmake3.sh: line 120: [: !=: unary operator expected
+spawn ccmake3 -UCMAKE_BUILD_TYPE ../../common/
+couldn't execute "ccmake3": no such file or directory
+    while executing
+"spawn ccmake3 -UCMAKE_BUILD_TYPE ../../common/"
+Fri Mar 17 11:43:23 2023 - ERROR - oe_test_ccmake3.sh line 140
+Fri Mar 17 11:43:23 2023 - ERROR - oe_test_ccmake3.sh line 142
+oe_test_ccmake3.sh: line 144: [: !=: unary operator expected
+spawn ccmake3 -G Unix Makefiles ../../common/
+couldn't execute "ccmake3": no such file or directory
+    while executing
+"spawn ccmake3 -G "Unix Makefiles" ../../common/"
+Fri Mar 17 11:43:24 2023 - ERROR - oe_test_ccmake3.sh line 164
+Fri Mar 17 11:43:25 2023 - ERROR - oe_test_ccmake3.sh line 166
+oe_test_ccmake3.sh: line 168: [: !=: unary operator expected
+spawn ccmake3 -G Ninja ../../common/
+couldn't execute "ccmake3": no such file or directory
+    while executing
+"spawn ccmake3 -G "Ninja" ../../common/"
+Fri Mar 17 11:43:26 2023 - ERROR - oe_test_ccmake3.sh line 188
+Fri Mar 17 11:43:26 2023 - ERROR - oe_test_ccmake3.sh line 190
+Fri Mar 17 11:43:27 2023 - INFO  - End of the test.
+Fri Mar 17 11:43:27 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:43:28 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:43:29 2023 - WARN  - no thing to do.
+Fri Mar 17 11:43:29 2023 - INFO  - Finish restoring the test environment.

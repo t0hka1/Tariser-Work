@@ -1,0 +1,28 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:39:05 2023 - INFO  - Start environmental preparation.
+0022
+Fri Mar 17 09:39:05 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 09:39:06 2023 - INFO  - Start executing testcase.
+-rw-r--r-- 1 root root 0 Mar 17 09:39 /tmp/my_pwd
+oe_test_acl_check_create.sh: line 32: getfacl: command not found
+0a1,7
+> # file: tmp/my_pwd
+> # owner: root
+> # group: root
+> user::rw-
+> group::r--
+> other::r--
+> 
+Fri Mar 17 09:39:06 2023 - ERROR - Comparison between tmp_log and diff_file failed
+Fri Mar 17 09:39:07 2023 - ERROR - oe_test_acl_check_create.sh line 41
+Fri Mar 17 09:39:07 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 09:39:08 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:39:09 2023 - INFO  - start environment cleanup.
+Fri Mar 17 09:39:09 2023 - INFO  - Finish environment cleanup!

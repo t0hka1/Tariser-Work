@@ -1,0 +1,30 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:07:06 2023 - INFO  - Start to prepare the test environment.
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+Failed to restart auditd.service: Unit auditd.service not found.
+Fri Mar 17 11:07:07 2023 - INFO  - End to prepare the environment
+Fri Mar 17 11:07:08 2023 - INFO  - Start to run test.
+du: cannot access '/var/log/audit/': No such file or directory
+find: ‘/var/log/audit’: No such file or directory
+ls: cannot access '/var/log/audit/audit.log*': No such file or directory
+../common/comlib.sh: line 24: auditctl: command not found
+../common/comlib.sh: line 30: auditctl: command not found
+ls: cannot access '/var/log/audit/audit.log*': No such file or directory
+du: cannot access '/var/log/audit/': No such file or directory
+find: ‘/var/log/audit’: No such file or directory
+oe_test_audit_max_log_file_keep_logs.sh: line 41: - : syntax error: operand expected (error token is "- ")
+Fri Mar 17 11:08:28 2023 - INFO  - Start to restore the test environment.
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+Failed to restart auditd.service: Unit auditd.service not found.
+Fri Mar 17 11:08:29 2023 - INFO  - End to restore the test environment.

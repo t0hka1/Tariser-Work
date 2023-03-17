@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:25:48 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 09:25:52 2023 - ERROR - pkgs:(OpenEXR-devel) not found
+Fri Mar 17 09:25:53 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 09:25:53 2023 - INFO  - Start to run test.
+oe_test_OpenEXR_cmd.sh: line 34: exrmultipart: command not found
+Fri Mar 17 09:25:54 2023 - ERROR - Check exrmultipart -combine -i failed.
+Fri Mar 17 09:25:55 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 35
+oe_test_OpenEXR_cmd.sh: line 36: exrmultipart: command not found
+Fri Mar 17 09:25:55 2023 - ERROR - Check exrmultipart -separate -i failed.
+Fri Mar 17 09:25:56 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 37
+oe_test_OpenEXR_cmd.sh: line 38: exrmultipart: command not found
+Fri Mar 17 09:25:56 2023 - ERROR - Check exrmultipart -convert -i failed.
+Fri Mar 17 09:25:57 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 39
+oe_test_OpenEXR_cmd.sh: line 42: exrmultipart: command not found
+Fri Mar 17 09:25:58 2023 - ERROR - Check exrmultipart -convert view failed.
+Fri Mar 17 09:25:58 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 43
+oe_test_OpenEXR_cmd.sh: line 44: exrmultipart: command not found
+Fri Mar 17 09:25:59 2023 - ERROR - Check exrmultipart -convert view failed.
+Fri Mar 17 09:25:59 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 45
+oe_test_OpenEXR_cmd.sh: line 46: exrmultipart: command not found
+Fri Mar 17 09:26:00 2023 - ERROR - Check exrmultipart -convert view failed.
+Fri Mar 17 09:26:00 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 47
+oe_test_OpenEXR_cmd.sh: line 49: exrheader: command not found
+Fri Mar 17 09:26:01 2023 - ERROR - Check exrheader failed.
+Fri Mar 17 09:26:01 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 50
+Fri Mar 17 09:26:02 2023 - ERROR - Check exrheader -h failed.
+Fri Mar 17 09:26:02 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 52
+oe_test_OpenEXR_cmd.sh: line 54: exrenvmap: command not found
+Fri Mar 17 09:26:03 2023 - ERROR - Check exrenvmap -o failed.
+Fri Mar 17 09:26:03 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 55
+oe_test_OpenEXR_cmd.sh: line 56: exrmultiview: command not found
+Fri Mar 17 09:26:04 2023 - ERROR - Check exrmultiview -z failed.
+Fri Mar 17 09:26:04 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 57
+oe_test_OpenEXR_cmd.sh: line 58: exrmultiview: command not found
+Fri Mar 17 09:26:05 2023 - ERROR - Check exrmultiview -v failed.
+Fri Mar 17 09:26:06 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 59
+Fri Mar 17 09:26:06 2023 - ERROR - Check exrmultiview -h failed.
+Fri Mar 17 09:26:07 2023 - ERROR - oe_test_OpenEXR_cmd.sh line 61
+Fri Mar 17 09:26:07 2023 - INFO  - End to run test.
+Fri Mar 17 09:26:08 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:26:08 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 09:26:09 2023 - WARN  - no thing to do.
+Fri Mar 17 09:26:09 2023 - INFO  - End to restore the test environment.

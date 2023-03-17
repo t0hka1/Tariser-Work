@@ -1,0 +1,25 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:51:57 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 10:54:25 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 10:54:25 2023 - INFO  - Start testing...
+     Active: active (exited) since Fri 2023-03-17 10:54:26 UTC; 5s ago
+     Active: inactive (dead) since Fri 2023-03-17 10:54:32 UTC; 6s ago
+     Active: active (exited) since Fri 2023-03-17 10:54:39 UTC; 5s ago
+find: ‘/etc/systemd/system/multi-user.target.wants/rbdmap.service’: No such file or directory
+Synchronizing state of rbdmap.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable rbdmap
+Created symlink /etc/systemd/system/multi-user.target.wants/rbdmap.service → /lib/systemd/system/rbdmap.service.
+/etc/systemd/system/multi-user.target.wants/rbdmap.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+     Active: active (exited) since Fri 2023-03-17 10:54:39 UTC; 51s ago
+Fri Mar 17 10:55:31 2023 - INFO  - Finish test!
+Fri Mar 17 10:55:32 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 10:55:32 2023 - INFO  - start environment cleanup.
+Fri Mar 17 10:56:37 2023 - INFO  - Finish environment cleanup!

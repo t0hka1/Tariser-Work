@@ -1,0 +1,135 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:44:03 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 10:44:26 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 10:44:26 2023 - INFO  - Start testing...
+Usage: byacc [options] filename
+
+Options:
+  -b file_prefix        set filename prefix (default "y.")
+  -B                    create a backtracking parser
+  -d                    write definitions (.tab.h)
+  -i                    write interface (y.tab.i)
+  -g                    write a graphical description
+  -l                    suppress #line directives
+  -L                    enable position processing, e.g., "%locations"
+  -o output_file        (default ".tab.c")
+  -p symbol_prefix      set symbol prefix (default "yy")
+  -P                    create a reentrant parser, e.g., "%pure-parser"
+  -r                    produce separate code and table files (y.code.c)
+  -s                    suppress #define's for quoted names in %token lines
+  -t                    add debugging support
+  -v                    write description (y.output)
+  -V                    show version information and exit
+Fri Mar 17 10:44:27 2023 - ERROR - Failed option: -t
+Fri Mar 17 10:44:27 2023 - ERROR - oe_test_byacc_byacc_02.sh line 38
+Usage: byacc [options] filename
+
+Options:
+  -b file_prefix        set filename prefix (default "y.")
+  -B                    create a backtracking parser
+  -d                    write definitions (.tab.h)
+  -i                    write interface (y.tab.i)
+  -g                    write a graphical description
+  -l                    suppress #line directives
+  -L                    enable position processing, e.g., "%locations"
+  -o output_file        (default ".tab.c")
+  -p symbol_prefix      set symbol prefix (default "yy")
+  -P                    create a reentrant parser, e.g., "%pure-parser"
+  -r                    produce separate code and table files (y.code.c)
+  -s                    suppress #define's for quoted names in %token lines
+  -t                    add debugging support
+  -v                    write description (y.output)
+  -V                    show version information and exit
+Fri Mar 17 10:44:28 2023 - ERROR - Failed option: -r
+Fri Mar 17 10:44:29 2023 - ERROR - oe_test_byacc_byacc_02.sh line 41
+Usage: byacc [options] filename
+
+Options:
+  -b file_prefix        set filename prefix (default "y.")
+  -B                    create a backtracking parser
+  -d                    write definitions (.tab.h)
+  -i                    write interface (y.tab.i)
+  -g                    write a graphical description
+  -l                    suppress #line directives
+  -L                    enable position processing, e.g., "%locations"
+  -o output_file        (default ".tab.c")
+  -p symbol_prefix      set symbol prefix (default "yy")
+  -P                    create a reentrant parser, e.g., "%pure-parser"
+  -r                    produce separate code and table files (y.code.c)
+  -s                    suppress #define's for quoted names in %token lines
+  -t                    add debugging support
+  -v                    write description (y.output)
+  -V                    show version information and exit
+Fri Mar 17 10:44:29 2023 - ERROR - Failed option: -d
+Fri Mar 17 10:44:30 2023 - ERROR - oe_test_byacc_byacc_02.sh line 44
+Usage: byacc [options] filename
+
+Options:
+  -b file_prefix        set filename prefix (default "y.")
+  -B                    create a backtracking parser
+  -d                    write definitions (.tab.h)
+  -i                    write interface (y.tab.i)
+  -g                    write a graphical description
+  -l                    suppress #line directives
+  -L                    enable position processing, e.g., "%locations"
+  -o output_file        (default ".tab.c")
+  -p symbol_prefix      set symbol prefix (default "yy")
+  -P                    create a reentrant parser, e.g., "%pure-parser"
+  -r                    produce separate code and table files (y.code.c)
+  -s                    suppress #define's for quoted names in %token lines
+  -t                    add debugging support
+  -v                    write description (y.output)
+  -V                    show version information and exit
+Fri Mar 17 10:44:31 2023 - ERROR - Failed option: -i
+Fri Mar 17 10:44:31 2023 - ERROR - oe_test_byacc_byacc_02.sh line 47
+Usage: byacc [options] filename
+
+Options:
+  -b file_prefix        set filename prefix (default "y.")
+  -B                    create a backtracking parser
+  -d                    write definitions (.tab.h)
+  -i                    write interface (y.tab.i)
+  -g                    write a graphical description
+  -l                    suppress #line directives
+  -L                    enable position processing, e.g., "%locations"
+  -o output_file        (default ".tab.c")
+  -p symbol_prefix      set symbol prefix (default "yy")
+  -P                    create a reentrant parser, e.g., "%pure-parser"
+  -r                    produce separate code and table files (y.code.c)
+  -s                    suppress #define's for quoted names in %token lines
+  -t                    add debugging support
+  -v                    write description (y.output)
+  -V                    show version information and exit
+Fri Mar 17 10:44:32 2023 - ERROR - Failed option: -s
+Fri Mar 17 10:44:32 2023 - ERROR - oe_test_byacc_byacc_02.sh line 50
+Usage: byacc [options] filename
+
+Options:
+  -b file_prefix        set filename prefix (default "y.")
+  -B                    create a backtracking parser
+  -d                    write definitions (.tab.h)
+  -i                    write interface (y.tab.i)
+  -g                    write a graphical description
+  -l                    suppress #line directives
+  -L                    enable position processing, e.g., "%locations"
+  -o output_file        (default ".tab.c")
+  -p symbol_prefix      set symbol prefix (default "yy")
+  -P                    create a reentrant parser, e.g., "%pure-parser"
+  -r                    produce separate code and table files (y.code.c)
+  -s                    suppress #define's for quoted names in %token lines
+  -t                    add debugging support
+  -v                    write description (y.output)
+  -V                    show version information and exit
+Fri Mar 17 10:44:33 2023 - ERROR - Failed option: -P
+Fri Mar 17 10:44:34 2023 - ERROR - oe_test_byacc_byacc_02.sh line 53
+Fri Mar 17 10:44:34 2023 - INFO  - Finish test!
+Fri Mar 17 10:44:35 2023 - ERROR - failed to execute the case.
+Fri Mar 17 10:44:35 2023 - INFO  - start environment cleanup.
+Fri Mar 17 10:44:52 2023 - INFO  - Finish environment cleanup!

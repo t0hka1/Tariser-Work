@@ -1,0 +1,32 @@
+Fri Mar 17 09:38:02 2023 - INFO  - start to run testcase:oe_test_acl_add_write_permissions.
+Fri Mar 17 09:38:17 2023 - ERROR - The case exit by code 4.
+Fri Mar 17 09:38:27 2023 - INFO  - End to run testcase:oe_test_acl_add_write_permissions.
+Fri Mar 17 09:38:28 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:38:32 2023 - INFO  - start to run testcase:oe_test_acl_change_mask.
+Fri Mar 17 09:38:47 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 09:38:57 2023 - INFO  - End to run testcase:oe_test_acl_change_mask.
+Fri Mar 17 09:38:58 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:39:01 2023 - INFO  - start to run testcase:oe_test_acl_check_create.
+Fri Mar 17 09:39:10 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 09:39:21 2023 - INFO  - End to run testcase:oe_test_acl_check_create.
+Fri Mar 17 09:39:21 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:39:25 2023 - INFO  - start to run testcase:oe_test_acl_defaulr_rule.
+Fri Mar 17 09:39:36 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 09:39:47 2023 - INFO  - End to run testcase:oe_test_acl_defaulr_rule.
+Fri Mar 17 09:39:47 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:39:51 2023 - INFO  - start to run testcase:oe_test_acl_only_root_permission.
+Fri Mar 17 09:40:06 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 09:40:17 2023 - INFO  - End to run testcase:oe_test_acl_only_root_permission.
+Fri Mar 17 09:40:17 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:40:21 2023 - INFO  - start to run testcase:oe_test_acl_chacl.
+Fri Mar 17 09:41:10 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:41:21 2023 - INFO  - End to run testcase:oe_test_acl_chacl.
+Fri Mar 17 09:41:21 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:41:25 2023 - INFO  - start to run testcase:oe_test_acl_getfacl.
+Fri Mar 17 09:42:12 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:42:23 2023 - INFO  - End to run testcase:oe_test_acl_getfacl.
+Fri Mar 17 09:42:24 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 09:42:27 2023 - INFO  - start to run testcase:oe_test_acl_setfacl.
+Fri Mar 17 09:43:16 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 09:43:27 2023 - INFO  - End to run testcase:oe_test_acl_setfacl.
+Fri Mar 17 09:43:27 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.

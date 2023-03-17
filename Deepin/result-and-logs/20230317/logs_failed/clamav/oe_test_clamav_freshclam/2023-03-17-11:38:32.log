@@ -1,0 +1,73 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:38:34 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 11:38:38 2023 - ERROR - pkgs:(clamav-update) not found
+cp: cannot stat '/etc/clamd.conf': No such file or directory
+Fri Mar 17 11:38:39 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:38:39 2023 - INFO  - Start to run test.
+oe_test_clamav_freshclam.sh: line 38: freshclam: command not found
+Fri Mar 17 11:38:40 2023 - ERROR - Execute freshclam failed.
+Fri Mar 17 11:38:40 2023 - ERROR - oe_test_clamav_freshclam.sh line 39
+oe_test_clamav_freshclam.sh: line 40: freshclam: command not found
+Fri Mar 17 11:38:41 2023 - ERROR - Execute freshclam --debug failed.
+Fri Mar 17 11:38:41 2023 - ERROR - oe_test_clamav_freshclam.sh line 41
+oe_test_clamav_freshclam.sh: line 42: freshclam: command not found
+Fri Mar 17 11:38:42 2023 - ERROR - Execute freshclam --quiet failed.
+Fri Mar 17 11:38:42 2023 - ERROR - oe_test_clamav_freshclam.sh line 43
+oe_test_clamav_freshclam.sh: line 44: freshclam: command not found
+Fri Mar 17 11:38:43 2023 - ERROR - Execute freshclam --no-warnings failed.
+Fri Mar 17 11:38:43 2023 - ERROR - oe_test_clamav_freshclam.sh line 45
+oe_test_clamav_freshclam.sh: line 46: freshclam: command not found
+Fri Mar 17 11:38:44 2023 - ERROR - Execute freshclam --show-progress failed.
+Fri Mar 17 11:38:44 2023 - ERROR - oe_test_clamav_freshclam.sh line 47
+oe_test_clamav_freshclam.sh: line 48: freshclam: command not found
+Fri Mar 17 11:38:45 2023 - ERROR - Execute freshclam -d -p pid_log failed.
+Fri Mar 17 11:38:45 2023 - ERROR - oe_test_clamav_freshclam.sh line 49
+oe_test_clamav_freshclam.sh: line 50: freshclam: command not found
+Fri Mar 17 11:38:46 2023 - ERROR - Execute freshclam -u root failed.
+Fri Mar 17 11:38:46 2023 - ERROR - oe_test_clamav_freshclam.sh line 51
+oe_test_clamav_freshclam.sh: line 52: freshclam: command not found
+Fri Mar 17 11:38:47 2023 - ERROR - Execute freshclam --no-dns failed.
+Fri Mar 17 11:38:47 2023 - ERROR - oe_test_clamav_freshclam.sh line 53
+oe_test_clamav_freshclam.sh: line 54: freshclam: command not found
+Fri Mar 17 11:38:48 2023 - ERROR - Execute freshclam -c 3 failed.
+Fri Mar 17 11:38:48 2023 - ERROR - oe_test_clamav_freshclam.sh line 55
+oe_test_clamav_freshclam.sh: line 56: freshclam: command not found
+Fri Mar 17 11:38:49 2023 - ERROR - Execute freshclam --datadir /opt failed.
+Fri Mar 17 11:38:49 2023 - ERROR - oe_test_clamav_freshclam.sh line 57
+oe_test_clamav_freshclam.sh: line 58: freshclam: command not found
+Fri Mar 17 11:38:50 2023 - ERROR - Execute freshclam --daemon-notify failed.
+Fri Mar 17 11:38:50 2023 - ERROR - oe_test_clamav_freshclam.sh line 59
+oe_test_clamav_freshclam.sh: line 60: freshclam: command not found
+Fri Mar 17 11:38:51 2023 - ERROR - Execute freshclam --update-db main -a localhost failed.
+Fri Mar 17 11:38:52 2023 - ERROR - oe_test_clamav_freshclam.sh line 61
+oe_test_clamav_freshclam.sh: line 64: freshclam: command not found
+Fri Mar 17 11:38:52 2023 - ERROR - Check freshclam --on-update-execute failed.
+Fri Mar 17 11:38:53 2023 - ERROR - oe_test_clamav_freshclam.sh line 65
+oe_test_clamav_freshclam.sh: line 66: freshclam: command not found
+Fri Mar 17 11:38:53 2023 - ERROR - Check freshclam --on-error-execute failed.
+Fri Mar 17 11:38:54 2023 - ERROR - oe_test_clamav_freshclam.sh line 67
+oe_test_clamav_freshclam.sh: line 68: freshclam: command not found
+Fri Mar 17 11:38:54 2023 - ERROR - Check freshclam --on-outdated-execute failed.
+Fri Mar 17 11:38:55 2023 - ERROR - oe_test_clamav_freshclam.sh line 69
+oe_test_clamav_freshclam.sh: line 71: freshclam: command not found
+Fri Mar 17 11:38:55 2023 - ERROR - Check freshclam version failed.
+Fri Mar 17 11:38:56 2023 - ERROR - oe_test_clamav_freshclam.sh line 72
+oe_test_clamav_freshclam.sh: line 73: freshclam: command not found
+Fri Mar 17 11:38:56 2023 - ERROR - Check freshclam help message failed.
+Fri Mar 17 11:38:57 2023 - ERROR - oe_test_clamav_freshclam.sh line 74
+oe_test_clamav_freshclam.sh: line 75: freshclam: command not found
+Fri Mar 17 11:38:57 2023 - ERROR - Check freshclam list mirrors failed.
+Fri Mar 17 11:38:58 2023 - ERROR - oe_test_clamav_freshclam.sh line 76
+Fri Mar 17 11:38:58 2023 - INFO  - End to run test.
+Fri Mar 17 11:38:59 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:38:59 2023 - INFO  - Start to restore the test environment.
+mv: cannot stat '/etc/clamd.conf.bak': No such file or directory
+Fri Mar 17 11:39:00 2023 - WARN  - no thing to do.
+Fri Mar 17 11:39:00 2023 - INFO  - End to restore the test environment.

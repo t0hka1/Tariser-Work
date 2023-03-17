@@ -1,0 +1,40 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:34:07 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 11:34:11 2023 - ERROR - pkgs:(clamav-server) not found
+mv: cannot stat '/etc/clamd.d/scan.conf': No such file or directory
+oe_test_clamav_clamdtop.sh: line 39: /etc/clamd.d/scan.conf: No such file or directory
+Failed to restart clamd@scan.service: Unit clamd@scan.service not found.
+Fri Mar 17 11:34:11 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:34:12 2023 - INFO  - Start to run test.
+oe_test_clamav_clamdtop.sh: line 48: clamdtop: command not found
+Fri Mar 17 11:34:12 2023 - ERROR - Connecting to localhost failed.
+Fri Mar 17 11:34:13 2023 - ERROR - oe_test_clamav_clamdtop.sh line 49
+oe_test_clamav_clamdtop.sh: line 50: clamdtop: command not found
+Fri Mar 17 11:34:14 2023 - ERROR - Connecting /run/clamd.scan/clamd.sock failed.
+Fri Mar 17 11:34:14 2023 - ERROR - oe_test_clamav_clamdtop.sh line 51
+oe_test_clamav_clamdtop.sh: line 52: clamdtop: command not found
+Fri Mar 17 11:34:15 2023 - ERROR - Check clamdtop version failed.
+Fri Mar 17 11:34:15 2023 - ERROR - oe_test_clamav_clamdtop.sh line 53
+oe_test_clamav_clamdtop.sh: line 54: clamdtop: command not found
+Fri Mar 17 11:34:16 2023 - ERROR - Check clamdtop help message failed.
+Fri Mar 17 11:34:16 2023 - ERROR - oe_test_clamav_clamdtop.sh line 55
+oe_test_clamav_clamdtop.sh: line 56: clamdtop: command not found
+Fri Mar 17 11:34:17 2023 - ERROR - Check clamdtop -c message failed.
+Fri Mar 17 11:34:17 2023 - ERROR - oe_test_clamav_clamdtop.sh line 57
+oe_test_clamav_clamdtop.sh: line 58: clamdtop: command not found
+Fri Mar 17 11:34:18 2023 - ERROR - Execute clamdtop -d failed.
+Fri Mar 17 11:34:18 2023 - ERROR - oe_test_clamav_clamdtop.sh line 59
+Fri Mar 17 11:34:19 2023 - INFO  - End to run test.
+Fri Mar 17 11:34:19 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:34:20 2023 - INFO  - Start to restore the test environment.
+mv: cannot stat '/etc/clamd.d/scan.conf.bak': No such file or directory
+Failed to restart clamd@scan.service: Unit clamd@scan.service not found.
+Fri Mar 17 11:34:20 2023 - WARN  - no thing to do.
+Fri Mar 17 11:34:21 2023 - INFO  - End to restore the test environment.

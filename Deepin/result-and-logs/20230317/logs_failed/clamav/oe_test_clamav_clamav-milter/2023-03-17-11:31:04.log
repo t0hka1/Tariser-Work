@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:31:06 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 11:31:09 2023 - ERROR - pkgs:(clamav-milter) not found
+mv: cannot stat '/etc/mail/clamav-milter.conf': No such file or directory
+oe_test_clamav_clamav-milter.sh: line 34: /etc/mail/clamav-milter.conf: No such file or directory
+Fri Mar 17 11:31:10 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:31:11 2023 - INFO  - Start to run test.
+Failed to start clamav-milter.service: Unit clamav-milter.service not found.
+Fri Mar 17 11:31:11 2023 - ERROR - Start clamav-milter.server failed.
+Fri Mar 17 11:31:12 2023 - ERROR - oe_test_clamav_clamav-milter.sh line 43
+Unit clamav-milter.service could not be found.
+Fri Mar 17 11:31:13 2023 - ERROR - Check clamav-milter.server active failed.
+Fri Mar 17 11:31:13 2023 - ERROR - oe_test_clamav_clamav-milter.sh line 45
+Failed to stop clamav-milter.service: Unit clamav-milter.service not loaded.
+Fri Mar 17 11:31:14 2023 - ERROR - Stop clamav-milter.server failed.
+Fri Mar 17 11:31:14 2023 - ERROR - oe_test_clamav_clamav-milter.sh line 47
+Unit clamav-milter.service could not be found.
+Fri Mar 17 11:31:15 2023 - ERROR - Start clamav-milter.server inactive failed.
+Fri Mar 17 11:31:15 2023 - ERROR - oe_test_clamav_clamav-milter.sh line 49
+oe_test_clamav_clamav-milter.sh: line 50: clamav-milter: command not found
+Fri Mar 17 11:31:16 2023 - ERROR - Check clamav-milter version failed.
+Fri Mar 17 11:31:16 2023 - ERROR - oe_test_clamav_clamav-milter.sh line 51
+oe_test_clamav_clamav-milter.sh: line 52: clamav-milter: command not found
+Fri Mar 17 11:31:17 2023 - ERROR - Check clamav-milter help message failed.
+Fri Mar 17 11:31:17 2023 - ERROR - oe_test_clamav_clamav-milter.sh line 53
+oe_test_clamav_clamav-milter.sh: line 54: clamav-milter: command not found
+Fri Mar 17 11:31:18 2023 - ERROR - Check /etc/mail/clamav-milter.conf config failed.
+Fri Mar 17 11:31:18 2023 - ERROR - oe_test_clamav_clamav-milter.sh line 55
+Fri Mar 17 11:31:19 2023 - INFO  - End to run test.
+Fri Mar 17 11:31:19 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:31:20 2023 - INFO  - Start to restore the test environment.
+mv: cannot stat '/etc/mail/clamav-milter.conf.bak': No such file or directory
+Fri Mar 17 11:31:20 2023 - WARN  - no thing to do.
+Fri Mar 17 11:31:21 2023 - INFO  - End to restore the test environment.

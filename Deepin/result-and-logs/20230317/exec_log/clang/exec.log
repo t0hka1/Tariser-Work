@@ -1,0 +1,12 @@
+Fri Mar 17 11:29:17 2023 - INFO  - start to run testcase:oe_test_clang_01.
+Fri Mar 17 11:36:14 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 11:36:25 2023 - INFO  - End to run testcase:oe_test_clang_01.
+Fri Mar 17 11:36:25 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 11:36:29 2023 - INFO  - start to run testcase:oe_test_clang_02.
+Fri Mar 17 11:37:26 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 11:37:37 2023 - INFO  - End to run testcase:oe_test_clang_02.
+Fri Mar 17 11:37:37 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 11:37:41 2023 - INFO  - start to run testcase:oe_test_clang_03.
+Fri Mar 17 11:37:57 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 11:38:08 2023 - INFO  - End to run testcase:oe_test_clang_03.
+Fri Mar 17 11:38:08 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
