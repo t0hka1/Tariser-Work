@@ -1,0 +1,16 @@
+Fri Mar 10 11:54:43 2023 - INFO  - start to run testcase:oe_test_kernel_cmd_01.
+Fri Mar 10 11:55:01 2023 - ERROR - The case exit by code 10.
+Fri Mar 10 11:55:12 2023 - INFO  - End to run testcase:oe_test_kernel_cmd_01.
+Fri Mar 10 11:55:12 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:55:16 2023 - INFO  - start to run testcase:oe_test_kernel_cmd_02.
+Fri Mar 10 11:55:33 2023 - ERROR - The case exit by code 10.
+Fri Mar 10 11:55:44 2023 - INFO  - End to run testcase:oe_test_kernel_cmd_02.
+Fri Mar 10 11:55:44 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:55:48 2023 - INFO  - start to run testcase:oe_test_kernel_cmd_03.
+Fri Mar 10 11:56:05 2023 - ERROR - The case exit by code 5.
+Fri Mar 10 11:56:16 2023 - INFO  - End to run testcase:oe_test_kernel_cmd_03.
+Fri Mar 10 11:56:16 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:56:20 2023 - INFO  - start to run testcase:oe_test_service_cpupower.
+Fri Mar 10 11:56:54 2023 - ERROR - The case exit by code 7.
+Fri Mar 10 11:57:05 2023 - INFO  - End to run testcase:oe_test_service_cpupower.
+Fri Mar 10 11:57:05 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

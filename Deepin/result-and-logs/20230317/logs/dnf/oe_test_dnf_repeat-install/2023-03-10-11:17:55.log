@@ -1,0 +1,216 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 11:17:58 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 10 11:18:18 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 10 11:18:19 2023 - INFO  - Start to run test.
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:20 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:20 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:21 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:21 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:22 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:23 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:23 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:24 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:24 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:25 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:25 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:26 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:27 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:27 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:28 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:28 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:29 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:30 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:30 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:31 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:31 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:32 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:32 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:33 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:34 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:34 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:35 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:35 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:36 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:37 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:37 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:38 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:38 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:39 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:40 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:40 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:41 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:41 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:42 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:43 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:43 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:44 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:44 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:45 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:46 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:46 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:47 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:47 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:48 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 37: dnf: command not found
+Fri Mar 10 11:18:49 2023 - ERROR - oe_test_dnf_repeat-install.sh line 38
+oe_test_dnf_repeat-install.sh: line 40: dnf: command not found
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:49 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:50 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:50 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:51 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:52 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:52 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:53 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:53 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:54 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:55 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:55 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:56 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:56 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:57 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:57 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:58 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:59 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:18:59 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:00 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:00 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:01 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:02 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:02 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:03 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:03 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:04 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:05 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:05 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:06 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:06 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:07 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:08 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:08 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:09 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:10 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:10 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:11 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:11 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:12 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:13 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:13 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:14 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:15 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:15 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:16 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:16 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:17 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:18 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:18 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+oe_test_dnf_repeat-install.sh: line 42: dnf: command not found
+Fri Mar 10 11:19:19 2023 - ERROR - oe_test_dnf_repeat-install.sh line 43
+Fri Mar 10 11:19:19 2023 - INFO  - End of the test.
+Fri Mar 10 11:19:20 2023 - ERROR - failed to execute the case.
+Fri Mar 10 11:19:20 2023 - INFO  - Start to restore the test environment.
+Fri Mar 10 11:19:36 2023 - INFO  - Finish restoring the test environment.

@@ -1,0 +1,83 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 12:01:31 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 10 12:01:35 2023 - INFO  - pkgs:(lvm2) is already installed
+Fri Mar 10 12:01:42 2023 - INFO  - End to prepare the test environment!
+Fri Mar 10 12:01:42 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+Fri Mar 10 12:01:43 2023 - ERROR - create PV failed
+Fri Mar 10 12:01:44 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 36
+Fri Mar 10 12:01:44 2023 - ERROR - create PV failed
+Fri Mar 10 12:01:45 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 38
+  No device found for /dev/.
+Fri Mar 10 12:01:46 2023 - ERROR - create VG failed
+Fri Mar 10 12:01:46 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 40
+Fri Mar 10 12:01:47 2023 - ERROR - create VG failed
+Fri Mar 10 12:01:48 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 42
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:01:48 2023 - ERROR - vgchange logicalvolume size failed
+Fri Mar 10 12:01:49 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 44
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  striped: Required device-mapper target(s) not detected in your kernel.
+  Run `lvcreate --help' for more information.
+Fri Mar 10 12:01:50 2023 - ERROR - create LV failed
+Fri Mar 10 12:01:50 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 46
+Fri Mar 10 12:01:51 2023 - ERROR - Maximum number of logical volumes (1) reached
+Fri Mar 10 12:01:51 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 48
+Fri Mar 10 12:01:52 2023 - ERROR - set maxphysicalvolumes failed
+Fri Mar 10 12:01:53 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 50
+  No device found for /dev/.
+Fri Mar 10 12:01:54 2023 - ERROR - create PV failed
+Fri Mar 10 12:01:54 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 52
+Fri Mar 10 12:01:56 2023 - ERROR - vgextend failed
+Fri Mar 10 12:01:56 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 54
+  Volume group "lv" not found
+  Cannot process volume group lv
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:01:57 2023 - ERROR - lvremove failed
+Fri Mar 10 12:01:57 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 56
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:01:58 2023 - ERROR - vgchange -u failed
+Fri Mar 10 12:01:59 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 58
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:02:00 2023 - ERROR - vgchange --resizeable no failed
+Fri Mar 10 12:02:00 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 60
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:02:01 2023 - ERROR - vgchange --resizeable yes failed
+Fri Mar 10 12:02:02 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 62
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:02:03 2023 - ERROR - vgchange add tag failed
+Fri Mar 10 12:02:03 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 64
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:02:04 2023 - ERROR - vgchange del tag failed
+Fri Mar 10 12:02:05 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 66
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 10 12:02:06 2023 - ERROR - vgchange --vgmetadatacopies all failed
+Fri Mar 10 12:02:06 2023 - ERROR - oe_test_lvm2_vgchange_001.sh line 68
+oe_test_lvm2_vgchange_001.sh: line 69: [23: command not found
+Fri Mar 10 12:02:07 2023 - INFO  - End executing testcase!
+Fri Mar 10 12:02:07 2023 - ERROR - failed to execute the case.
+Fri Mar 10 12:02:08 2023 - INFO  - Start environment cleanup.
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+  No device found for /dev/.
+Fri Mar 10 12:02:09 2023 - WARN  - no thing to do.
+Fri Mar 10 12:02:09 2023 - INFO  - Finish environment cleanup.

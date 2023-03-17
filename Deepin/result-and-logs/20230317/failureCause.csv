@@ -1,0 +1,202 @@
+测试套/软件包名,测试用例名,日志文件,原因,Broken testcase,pkg not found,preinstall absent,kernel module absent,file missing,systemd unit restart failure,systemd unit runtime error,systemd unit enable failure,timeout
+lvm2,oe_test_service_dm-event,2023-03-10-11:30:47.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+",1,0,1,0,0,1,0,0,0
+lvm2,oe_test_lvm2_pvmove_001,2023-03-10-11:55:01.log,"Broken testcase
+preinstall absent
+kernel module absent
+",1,0,1,1,0,0,0,0,0
+lvm2,oe_test_service_blk-availability,2023-03-10-11:29:58.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+",1,0,1,0,0,1,0,0,0
+lvm2,oe_test_service_lvm2-lvmpolld,2023-03-10-11:36:13.log,"Broken testcase
+systemd unit enable failure
+",1,0,0,0,0,0,0,1,0
+lvm2,oe_test_socket_lvm2-lvmpolld,2023-03-10-11:47:13.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_pvremove_001,2023-03-10-11:47:59.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+lvm2,oe_test_lvm2_pvresize_001,2023-03-10-11:53:34.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+lvm2,oe_test_lvm2_pvdisplay_001,2023-03-10-11:59:01.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_service_lvm2-lvmdbusd,2023-03-10-11:31:34.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+systemd unit runtime error
+",1,0,1,0,0,1,1,0,0
+lvm2,oe_test_lvm2_vgchange_002,2023-03-10-12:05:31.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_vgextend_002,2023-03-10-12:02:25.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_pvchange_001,2023-03-10-12:00:49.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_vgcreate_001,2023-03-10-11:55:49.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+lvm2,oe_test_lvm2_pvcreate_002,2023-03-10-11:51:15.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+lvm2,oe_test_lvm2_pvmove_002,2023-03-10-11:59:43.log,"Broken testcase
+kernel module absent
+",1,0,0,1,0,0,0,0,0
+lvm2,oe_test_lvm2_pvcreate_001,2023-03-10-11:54:15.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_vgdisplay_001,2023-03-10-11:57:34.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_pvdisplay_002,2023-03-10-11:56:51.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_vgexport_001,2023-03-10-12:04:38.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_vgextend_001,2023-03-10-12:03:25.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_vgrename_001,2023-03-10-11:58:18.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+lvm2,oe_test_lvm2_vgchange_001,2023-03-10-12:01:29.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+lvm2,oe_test_service_lvm2-monitor,2023-03-10-11:37:29.log,"Broken testcase
+systemd unit restart failure
+",1,0,0,0,0,1,0,0,0
+lvm2,oe_test_socket_dm-event,2023-03-10-11:46:26.log,"Broken testcase
+",1,0,0,0,0,0,0,0,0
+hostname,oe_test_service_nis-domainname,2023-03-10-11:09:30.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+",1,0,1,0,0,1,0,0,0
+net-tools,oe_test_service_arp-ethers,2023-03-10-11:01:46.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+",1,0,1,0,0,1,0,0,0
+dnf,oe_test_dnf_makecache_clean,2023-03-10-11:07:52.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_reinstall_repoinfo,2023-03-10-11:16:47.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_automatic,2023-03-10-11:06:22.log,"Broken testcase
+pkg not found
+",1,1,0,0,0,0,0,0,0
+dnf,oe_test_dnf_enhancement_exclude,2023-03-10-11:11:58.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_repeat-upgrade-downgrade,2023-03-10-11:19:53.log,"Broken testcase
+preinstall absent
+timeout
+",1,0,1,0,0,0,0,0,1
+dnf,oe_test_dnf_check_diffenert-packages,2023-03-10-11:07:03.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_priority,2023-03-10-11:15:17.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_alias,2023-03-10-11:04:35.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_assumeno_autoremove,2023-03-10-11:05:47.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_provides_randomwait,2023-03-10-11:15:42.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_distro-sync_dnf-3,2023-03-10-11:08:21.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_nobest_nodocs_nogpgcheck,2023-03-10-11:14:17.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_help_history_info,2023-03-10-11:12:27.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_repeat-install,2023-03-10-11:17:55.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_list_mark,2023-03-10-11:13:27.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_enabled_enablerepo,2023-03-10-11:09:21.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+dnf,oe_test_dnf_all-repos,2023-03-10-11:05:22.log,"Broken testcase
+preinstall absent
+",1,0,1,0,0,0,0,0,0
+openslp,oe_test_service_slpd,2023-03-17-08:39:51.log,"Broken testcase
+pkg not found
+preinstall absent
+systemd unit restart failure
+",1,1,1,0,0,1,0,0,0
+util-linux,oe_test_socket_uuidd,2023-03-10-11:24:32.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+util-linux,oe_test_service_uuidd,2023-03-10-11:23:39.log,"Broken testcase
+pkg not found
+preinstall absent
+systemd unit restart failure
+",1,1,1,0,0,1,0,0,0
+util-linux,oe_test_service_fstrim,2023-03-10-11:23:13.log,"Broken testcase
+systemd unit runtime error
+",1,0,0,0,0,0,1,0,0
+iputils,oe_test_service_ninfod,2023-03-10-11:17:28.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+",1,0,1,0,0,1,0,0,0
+iputils,oe_test_service_rdisc,2023-03-10-11:18:16.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+",1,0,1,0,0,1,0,0,0
+osc,oe_test_osc_06,2023-03-10-11:14:21.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+osc,oe_test_osc_01,2023-03-10-11:12:08.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+osc,oe_test_osc_04,2023-03-10-11:13:31.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+osc,oe_test_osc_03,2023-03-10-11:13:06.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+osc,oe_test_osc_05,2023-03-10-11:13:57.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+osc,oe_test_osc_07,2023-03-10-11:14:46.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+osc,oe_test_osc_build,2023-03-10-11:15:11.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+osc,oe_test_osc_02,2023-03-10-11:12:40.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+git,oe_test_socket_git,2023-03-10-11:52:01.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+kernel,oe_test_kernel_cmd_01,2023-03-10-11:54:43.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+kernel,oe_test_kernel_cmd_03,2023-03-10-11:55:49.log,"Broken testcase
+pkg not found
+",1,1,0,0,0,0,0,0,0
+kernel,oe_test_kernel_cmd_02,2023-03-10-11:55:17.log,"Broken testcase
+pkg not found
+preinstall absent
+",1,1,1,0,0,0,0,0,0
+kernel,oe_test_service_cpupower,2023-03-10-11:56:20.log,"Broken testcase
+preinstall absent
+systemd unit restart failure
+",1,0,1,0,0,1,0,0,0

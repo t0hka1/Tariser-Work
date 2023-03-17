@@ -1,0 +1,13 @@
+测试套/软件包名,测试用例总数,通过,未通过,备注,总测试套数,总测试用例数,总通过用例数,总未通过用例数
+lvm2,26,2,24,,12,74,12,62
+hostname,1,0,1
+net-tools,1,0,1
+cpio,1,1,0
+dnf,22,5,17
+openslp,1,0,1
+NetworkManager,4,4,0
+util-linux,3,0,3
+iputils,2,0,2
+osc,8,0,8
+git,1,0,1
+kernel,4,0,4

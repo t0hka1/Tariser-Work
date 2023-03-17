@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 11:55:20 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 10 11:55:23 2023 - ERROR - pkgs:(perf) not found
+Fri Mar 10 11:55:24 2023 - INFO  - End to prepare the test environment.
+Fri Mar 10 11:55:25 2023 - INFO  - Start to run test.
+Fri Mar 10 11:55:25 2023 - ERROR - oe_test_kernel_cmd_02.sh line 34
+oe_test_kernel_cmd_02.sh: line 35: tmon: command not found
+Fri Mar 10 11:55:26 2023 - ERROR - oe_test_kernel_cmd_02.sh line 36
+oe_test_kernel_cmd_02.sh: line 37: tmon: command not found
+Fri Mar 10 11:55:26 2023 - ERROR - oe_test_kernel_cmd_02.sh line 38
+oe_test_kernel_cmd_02.sh: line 39: tmon: command not found
+Fri Mar 10 11:55:27 2023 - ERROR - oe_test_kernel_cmd_02.sh line 40
+oe_test_kernel_cmd_02.sh: line 41: bpftool: command not found
+Fri Mar 10 11:55:27 2023 - ERROR - oe_test_kernel_cmd_02.sh line 42
+Fri Mar 10 11:55:28 2023 - ERROR - oe_test_kernel_cmd_02.sh line 44
+oe_test_kernel_cmd_02.sh: line 45: bpftool: command not found
+Fri Mar 10 11:55:29 2023 - ERROR - oe_test_kernel_cmd_02.sh line 46
+oe_test_kernel_cmd_02.sh: line 47: bpftool: command not found
+Fri Mar 10 11:55:29 2023 - ERROR - oe_test_kernel_cmd_02.sh line 48
+Fri Mar 10 11:55:30 2023 - ERROR - oe_test_kernel_cmd_02.sh line 50
+Fri Mar 10 11:55:30 2023 - ERROR - oe_test_kernel_cmd_02.sh line 52
+Fri Mar 10 11:55:31 2023 - INFO  - End of the test.
+Fri Mar 10 11:55:31 2023 - ERROR - failed to execute the case.
+Fri Mar 10 11:55:31 2023 - INFO  - Start to restore the tet environment.
+Fri Mar 10 11:55:32 2023 - WARN  - no thing to do.
+Fri Mar 10 11:55:32 2023 - INFO  - Finish to restore the tet environment.

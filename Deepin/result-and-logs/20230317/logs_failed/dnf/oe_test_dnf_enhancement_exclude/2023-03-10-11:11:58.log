@@ -1,0 +1,31 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 11:12:01 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 10 11:12:01 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 10 11:12:02 2023 - INFO  - Start to run test.
+oe_test_dnf_enhancement_exclude.sh: line 30: dnf: command not found
+Fri Mar 10 11:12:02 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 31
+oe_test_dnf_enhancement_exclude.sh: line 32: dnf: command not found
+Fri Mar 10 11:12:03 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 33
+oe_test_dnf_enhancement_exclude.sh: line 34: dnf: command not found
+Fri Mar 10 11:12:03 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 35
+oe_test_dnf_enhancement_exclude.sh: line 36: dnf: command not found
+Fri Mar 10 11:12:04 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 37
+oe_test_dnf_enhancement_exclude.sh: line 38: dnf: command not found
+Fri Mar 10 11:12:05 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 39
+grep: /etc/yum.repos.d/*.repo: No such file or directory
+sed: can't read /etc/yum.repos.d/*.repo: No such file or directory
+oe_test_dnf_enhancement_exclude.sh: line 45: dnf: command not found
+Fri Mar 10 11:12:05 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 46
+oe_test_dnf_enhancement_exclude.sh: line 47: rpm: command not found
+Fri Mar 10 11:12:06 2023 - ERROR - oe_test_dnf_enhancement_exclude.sh line 48
+Fri Mar 10 11:12:06 2023 - INFO  - End of the test.
+Fri Mar 10 11:12:07 2023 - ERROR - failed to execute the case.
+Fri Mar 10 11:12:07 2023 - INFO  - Start to restore the test environment.
+Fri Mar 10 11:12:11 2023 - INFO  - End of restore the test environment.

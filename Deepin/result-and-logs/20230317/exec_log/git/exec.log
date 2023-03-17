@@ -1,0 +1,4 @@
+Fri Mar 10 11:52:01 2023 - INFO  - start to run testcase:oe_test_socket_git.
+Fri Mar 10 11:52:40 2023 - ERROR - The case exit by code 8.
+Fri Mar 10 11:52:51 2023 - INFO  - End to run testcase:oe_test_socket_git.
+Fri Mar 10 11:52:51 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

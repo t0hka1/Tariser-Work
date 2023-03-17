@@ -1,0 +1,43 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 11:54:18 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 10 11:54:23 2023 - INFO  - pkgs:(lvm2) is already installed
+Fri Mar 10 11:54:30 2023 - INFO  - End to prepare the test environment!
+Fri Mar 10 11:54:30 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+Fri Mar 10 11:54:31 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 35
+  No device found for /dev/.
+Fri Mar 10 11:54:33 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 38
+Fri Mar 10 11:54:33 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 40
+  No device found for /dev/.
+Fri Mar 10 11:54:34 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 42
+  No device found for /dev/.
+Fri Mar 10 11:54:35 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 44
+  No device found for /dev/.
+Fri Mar 10 11:54:36 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 46
+  No device found for /dev/.
+Fri Mar 10 11:54:37 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 48
+  No device found for /dev/.
+Fri Mar 10 11:54:38 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 50
+  No device found for /dev/.
+Fri Mar 10 11:54:39 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 52
+  No device found for /dev/.
+Fri Mar 10 11:54:40 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 54
+  No device found for /dev/.
+Fri Mar 10 11:54:41 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 56
+  No device found for /dev/.
+Fri Mar 10 11:54:42 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 58
+  No device found for /dev/.
+Fri Mar 10 11:54:43 2023 - ERROR - oe_test_lvm2_pvcreate_001.sh line 60
+Fri Mar 10 11:54:43 2023 - INFO  - End executing testcase!
+Fri Mar 10 11:54:44 2023 - ERROR - failed to execute the case.
+Fri Mar 10 11:54:44 2023 - INFO  - Start environment cleanup.
+  No device found for /dev/.
+Fri Mar 10 11:54:45 2023 - WARN  - no thing to do.
+Fri Mar 10 11:54:45 2023 - INFO  - Finish environment cleanup.

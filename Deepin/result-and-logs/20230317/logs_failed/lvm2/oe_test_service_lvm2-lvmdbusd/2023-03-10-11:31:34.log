@@ -1,0 +1,46 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 11:31:37 2023 - INFO  - Start environmental preparation.
+Fri Mar 10 11:33:58 2023 - INFO  - End of environmental preparation!
+Fri Mar 10 11:33:58 2023 - INFO  - Start testing...
+Job for lvm2-lvmdbusd.service failed because the control process exited with error code.
+See "systemctl status lvm2-lvmdbusd.service" and "journalctl -xeu lvm2-lvmdbusd.service" for details.
+Fri Mar 10 11:33:59 2023 - ERROR - lvm2-lvmdbusd.service restart failed
+Fri Mar 10 11:34:00 2023 - ERROR - ../common/common_lib.sh line 34
+Fri Mar 10 11:34:06 2023 - ERROR - lvm2-lvmdbusd.service restart failed
+Fri Mar 10 11:34:07 2023 - ERROR - ../common/common_lib.sh line 37
+Fri Mar 10 11:34:14 2023 - ERROR - lvm2-lvmdbusd.service stop failed
+Fri Mar 10 11:34:14 2023 - ERROR - ../common/common_lib.sh line 42
+Job for lvm2-lvmdbusd.service failed because the control process exited with error code.
+See "systemctl status lvm2-lvmdbusd.service" and "journalctl -xeu lvm2-lvmdbusd.service" for details.
+Fri Mar 10 11:34:15 2023 - ERROR - lvm2-lvmdbusd.service start failed
+Fri Mar 10 11:34:16 2023 - ERROR - ../common/common_lib.sh line 44
+Fri Mar 10 11:34:22 2023 - ERROR - lvm2-lvmdbusd.service start failed
+Fri Mar 10 11:34:23 2023 - ERROR - ../common/common_lib.sh line 47
+find: ‘/etc/systemd/system/multi-user.target.wants/lvm2-lvmdbusd.service’: No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/lvm2-lvmdbusd.service → /lib/systemd/system/lvm2-lvmdbusd.service.
+/etc/systemd/system/multi-user.target.wants/lvm2-lvmdbusd.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 10 11:33:59 deepin-rv-builder-2 lvmdbusd[1574]: ModuleNotFoundError: No module named 'lvmdbusd'
+Mar 10 11:33:59 deepin-rv-builder-2 systemd[1]: lvm2-lvmdbusd.service: Main process exited, code=exited, status=1/FAILURE
+Mar 10 11:33:59 deepin-rv-builder-2 systemd[1]: lvm2-lvmdbusd.service: Failed with result 'exit-code'.
+Mar 10 11:33:59 deepin-rv-builder-2 systemd[1]: Failed to start LVM2 D-Bus service.
+Mar 10 11:34:15 deepin-rv-builder-2 lvmdbusd[1775]: ModuleNotFoundError: No module named 'lvmdbusd'
+Mar 10 11:34:15 deepin-rv-builder-2 systemd[1]: lvm2-lvmdbusd.service: Main process exited, code=exited, status=1/FAILURE
+Mar 10 11:34:15 deepin-rv-builder-2 systemd[1]: lvm2-lvmdbusd.service: Failed with result 'exit-code'.
+Mar 10 11:34:15 deepin-rv-builder-2 systemd[1]: Failed to start LVM2 D-Bus service.
+Fri Mar 10 11:34:35 2023 - ERROR - There is an error message for the log of lvm2-lvmdbusd.service
+Fri Mar 10 11:34:35 2023 - ERROR - ../common/common_lib.sh line 28
+Job for lvm2-lvmdbusd.service failed because the control process exited with error code.
+See "systemctl status lvm2-lvmdbusd.service" and "journalctl -xeu lvm2-lvmdbusd.service" for details.
+Failed to reload lvm2-lvmdbusd.service: Job type reload is not applicable for unit lvm2-lvmdbusd.service.
+Fri Mar 10 11:34:37 2023 - INFO  - Finish test!
+Fri Mar 10 11:34:37 2023 - ERROR - failed to execute the case.
+Fri Mar 10 11:34:38 2023 - INFO  - start environment cleanup.
+Fri Mar 10 11:35:57 2023 - INFO  - Finish environment cleanup!

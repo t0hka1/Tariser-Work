@@ -1,0 +1,104 @@
+Fri Mar 10 11:29:58 2023 - INFO  - start to run testcase:oe_test_service_blk-availability.
+Fri Mar 10 11:30:31 2023 - ERROR - The case exit by code 7.
+Fri Mar 10 11:30:41 2023 - INFO  - End to run testcase:oe_test_service_blk-availability.
+Fri Mar 10 11:30:42 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:30:46 2023 - INFO  - start to run testcase:oe_test_service_dm-event.
+Fri Mar 10 11:31:19 2023 - ERROR - The case exit by code 7.
+Fri Mar 10 11:31:29 2023 - INFO  - End to run testcase:oe_test_service_dm-event.
+Fri Mar 10 11:31:30 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:31:34 2023 - INFO  - start to run testcase:oe_test_service_lvm2-lvmdbusd.
+Fri Mar 10 11:35:58 2023 - ERROR - The case exit by code 6.
+Fri Mar 10 11:36:08 2023 - INFO  - End to run testcase:oe_test_service_lvm2-lvmdbusd.
+Fri Mar 10 11:36:09 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:36:13 2023 - INFO  - start to run testcase:oe_test_service_lvm2-lvmpolld.
+Fri Mar 10 11:37:13 2023 - ERROR - The case exit by code 1.
+Fri Mar 10 11:37:24 2023 - INFO  - End to run testcase:oe_test_service_lvm2-lvmpolld.
+Fri Mar 10 11:37:25 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:37:29 2023 - INFO  - start to run testcase:oe_test_service_lvm2-monitor.
+Fri Mar 10 11:37:59 2023 - ERROR - The case exit by code 6.
+Fri Mar 10 11:38:10 2023 - INFO  - End to run testcase:oe_test_service_lvm2-monitor.
+Fri Mar 10 11:38:11 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:38:15 2023 - INFO  - start to run testcase:oe_test_service_lvmlockd.
+Fri Mar 10 11:42:06 2023 - INFO  - The case exit by code 0.
+Fri Mar 10 11:42:17 2023 - INFO  - End to run testcase:oe_test_service_lvmlockd.
+Fri Mar 10 11:42:17 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 10 11:42:21 2023 - INFO  - start to run testcase:oe_test_service_lvmlocks.
+Fri Mar 10 11:46:11 2023 - INFO  - The case exit by code 0.
+Fri Mar 10 11:46:22 2023 - INFO  - End to run testcase:oe_test_service_lvmlocks.
+Fri Mar 10 11:46:22 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 10 11:46:26 2023 - INFO  - start to run testcase:oe_test_socket_dm-event.
+Fri Mar 10 11:46:58 2023 - ERROR - The case exit by code 6.
+Fri Mar 10 11:47:09 2023 - INFO  - End to run testcase:oe_test_socket_dm-event.
+Fri Mar 10 11:47:09 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:47:13 2023 - INFO  - start to run testcase:oe_test_socket_lvm2-lvmpolld.
+Fri Mar 10 11:47:44 2023 - ERROR - The case exit by code 6.
+Fri Mar 10 11:47:54 2023 - INFO  - End to run testcase:oe_test_socket_lvm2-lvmpolld.
+Fri Mar 10 11:47:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:47:59 2023 - INFO  - start to run testcase:oe_test_lvm2_pvremove_001.
+Fri Mar 10 11:51:00 2023 - ERROR - The case exit by code 13.
+Fri Mar 10 11:51:10 2023 - INFO  - End to run testcase:oe_test_lvm2_pvremove_001.
+Fri Mar 10 11:51:11 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:51:15 2023 - INFO  - start to run testcase:oe_test_lvm2_pvcreate_002.
+Fri Mar 10 11:53:18 2023 - ERROR - The case exit by code 8.
+Fri Mar 10 11:53:29 2023 - INFO  - End to run testcase:oe_test_lvm2_pvcreate_002.
+Fri Mar 10 11:53:29 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:53:33 2023 - INFO  - start to run testcase:oe_test_lvm2_pvresize_001.
+Fri Mar 10 11:53:59 2023 - ERROR - The case exit by code 8.
+Fri Mar 10 11:54:09 2023 - INFO  - End to run testcase:oe_test_lvm2_pvresize_001.
+Fri Mar 10 11:54:10 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:54:15 2023 - INFO  - start to run testcase:oe_test_lvm2_pvcreate_001.
+Fri Mar 10 11:54:46 2023 - ERROR - The case exit by code 13.
+Fri Mar 10 11:54:57 2023 - INFO  - End to run testcase:oe_test_lvm2_pvcreate_001.
+Fri Mar 10 11:54:57 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:55:01 2023 - INFO  - start to run testcase:oe_test_lvm2_pvmove_001.
+Fri Mar 10 11:55:34 2023 - ERROR - The case exit by code 9.
+Fri Mar 10 11:55:44 2023 - INFO  - End to run testcase:oe_test_lvm2_pvmove_001.
+Fri Mar 10 11:55:45 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:55:49 2023 - INFO  - start to run testcase:oe_test_lvm2_vgcreate_001.
+Fri Mar 10 11:56:35 2023 - ERROR - The case exit by code 24.
+Fri Mar 10 11:56:46 2023 - INFO  - End to run testcase:oe_test_lvm2_vgcreate_001.
+Fri Mar 10 11:56:46 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:56:50 2023 - INFO  - start to run testcase:oe_test_lvm2_pvdisplay_002.
+Fri Mar 10 11:57:18 2023 - ERROR - The case exit by code 11.
+Fri Mar 10 11:57:29 2023 - INFO  - End to run testcase:oe_test_lvm2_pvdisplay_002.
+Fri Mar 10 11:57:30 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:57:34 2023 - INFO  - start to run testcase:oe_test_lvm2_vgdisplay_001.
+Fri Mar 10 11:58:03 2023 - ERROR - The case exit by code 13.
+Fri Mar 10 11:58:13 2023 - INFO  - End to run testcase:oe_test_lvm2_vgdisplay_001.
+Fri Mar 10 11:58:14 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:58:18 2023 - INFO  - start to run testcase:oe_test_lvm2_vgrename_001.
+Fri Mar 10 11:58:45 2023 - ERROR - The case exit by code 11.
+Fri Mar 10 11:58:56 2023 - INFO  - End to run testcase:oe_test_lvm2_vgrename_001.
+Fri Mar 10 11:58:57 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:59:01 2023 - INFO  - start to run testcase:oe_test_lvm2_pvdisplay_001.
+Fri Mar 10 11:59:28 2023 - ERROR - The case exit by code 11.
+Fri Mar 10 11:59:38 2023 - INFO  - End to run testcase:oe_test_lvm2_pvdisplay_001.
+Fri Mar 10 11:59:39 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 11:59:43 2023 - INFO  - start to run testcase:oe_test_lvm2_pvmove_002.
+Fri Mar 10 12:00:34 2023 - ERROR - The case exit by code 12.
+Fri Mar 10 12:00:45 2023 - INFO  - End to run testcase:oe_test_lvm2_pvmove_002.
+Fri Mar 10 12:00:45 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 12:00:49 2023 - INFO  - start to run testcase:oe_test_lvm2_pvchange_001.
+Fri Mar 10 12:01:13 2023 - ERROR - The case exit by code 6.
+Fri Mar 10 12:01:24 2023 - INFO  - End to run testcase:oe_test_lvm2_pvchange_001.
+Fri Mar 10 12:01:24 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 12:01:28 2023 - INFO  - start to run testcase:oe_test_lvm2_vgchange_001.
+Fri Mar 10 12:02:10 2023 - ERROR - The case exit by code 17.
+Fri Mar 10 12:02:21 2023 - INFO  - End to run testcase:oe_test_lvm2_vgchange_001.
+Fri Mar 10 12:02:21 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 12:02:25 2023 - INFO  - start to run testcase:oe_test_lvm2_vgextend_002.
+Fri Mar 10 12:03:10 2023 - ERROR - The case exit by code 16.
+Fri Mar 10 12:03:21 2023 - INFO  - End to run testcase:oe_test_lvm2_vgextend_002.
+Fri Mar 10 12:03:22 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 12:03:25 2023 - INFO  - start to run testcase:oe_test_lvm2_vgextend_001.
+Fri Mar 10 12:04:23 2023 - ERROR - The case exit by code 25.
+Fri Mar 10 12:04:34 2023 - INFO  - End to run testcase:oe_test_lvm2_vgextend_001.
+Fri Mar 10 12:04:35 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 12:04:38 2023 - INFO  - start to run testcase:oe_test_lvm2_vgexport_001.
+Fri Mar 10 12:05:15 2023 - ERROR - The case exit by code 12.
+Fri Mar 10 12:05:26 2023 - INFO  - End to run testcase:oe_test_lvm2_vgexport_001.
+Fri Mar 10 12:05:27 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 10 12:05:30 2023 - INFO  - start to run testcase:oe_test_lvm2_vgchange_002.
+Fri Mar 10 12:06:01 2023 - ERROR - The case exit by code 9.
+Fri Mar 10 12:06:11 2023 - INFO  - End to run testcase:oe_test_lvm2_vgchange_002.
+Fri Mar 10 12:06:12 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
