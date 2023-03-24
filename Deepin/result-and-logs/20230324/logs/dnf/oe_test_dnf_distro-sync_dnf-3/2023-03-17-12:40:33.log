@@ -1,0 +1,30 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:40:35 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:40:54 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 12:40:55 2023 - INFO  - Start to run test.
+oe_test_dnf_distro-sync_dnf-3.sh: line 35: dnf: command not found
+Fri Mar 17 12:40:56 2023 - ERROR - oe_test_dnf_distro-sync_dnf-3.sh line 36
+oe_test_dnf_distro-sync_dnf-3.sh: line 37: dnf: command not found
+ls: cannot access '/usr/bin/dnf': No such file or directory
+Fri Mar 17 12:40:56 2023 - ERROR - oe_test_dnf_distro-sync_dnf-3.sh line 39
+ls: cannot access '/usr/bin/yum': No such file or directory
+Fri Mar 17 12:40:57 2023 - ERROR - oe_test_dnf_distro-sync_dnf-3.sh line 41
+oe_test_dnf_distro-sync_dnf-3.sh: line 42: dnf: command not found
+Fri Mar 17 12:40:57 2023 - ERROR - oe_test_dnf_distro-sync_dnf-3.sh line 43
+Fri Mar 17 12:40:58 2023 - ERROR - oe_test_dnf_distro-sync_dnf-3.sh line 45
+oe_test_dnf_distro-sync_dnf-3.sh: line 47: dnf: command not found
+Fri Mar 17 12:40:59 2023 - ERROR - oe_test_dnf_distro-sync_dnf-3.sh line 48
+find: '/var/cache/dnf/': No such file or directory
+Fri Mar 17 12:40:59 2023 - ERROR - oe_test_dnf_distro-sync_dnf-3.sh line 50
+Fri Mar 17 12:41:00 2023 - INFO  - End of the test.
+Fri Mar 17 12:41:00 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:41:01 2023 - INFO  - Start to restore the test environment.
+oe_test_dnf_distro-sync_dnf-3.sh: line 57: dnf: command not found
+Fri Mar 17 12:41:17 2023 - INFO  - Finish restoring the test environment.

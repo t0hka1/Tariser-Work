@@ -1,0 +1,31 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:40:28 2023 - INFO  - Start to run test.
+Failed to restart lvm2-lvmpolld.socket: Unit lvm2-lvmpolld.socket is masked.
+Fri Mar 17 16:40:28 2023 - ERROR - lvm2-lvmpolld.socket restart failed
+Fri Mar 17 16:40:29 2023 - ERROR - ../common/common_lib.sh line 34
+Fri Mar 17 16:40:35 2023 - ERROR - lvm2-lvmpolld.socket restart failed
+Fri Mar 17 16:40:36 2023 - ERROR - ../common/common_lib.sh line 37
+     Active: inactive (dead) since Fri 2023-03-17 16:38:31 UTC; 2min 10s ago
+Failed to start lvm2-lvmpolld.socket: Unit lvm2-lvmpolld.socket is masked.
+Fri Mar 17 16:40:42 2023 - ERROR - lvm2-lvmpolld.socket start failed
+Fri Mar 17 16:40:43 2023 - ERROR - ../common/common_lib.sh line 44
+Fri Mar 17 16:40:49 2023 - ERROR - lvm2-lvmpolld.socket start failed
+Fri Mar 17 16:40:50 2023 - ERROR - ../common/common_lib.sh line 47
+Fri Mar 17 16:40:50 2023 - INFO  - Unit is masked, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start lvm2-lvmpolld.socket: Unit lvm2-lvmpolld.socket is masked.
+Fri Mar 17 16:40:51 2023 - ERROR - Job type reload is not applicable for unit lvm2-lvmpolld.socket
+Fri Mar 17 16:40:52 2023 - ERROR - ../common/common_lib.sh line 91
+     Active: inactive (dead) since Fri 2023-03-17 16:38:31 UTC; 2min 20s ago
+Fri Mar 17 16:40:53 2023 - ERROR - lvm2-lvmpolld.socket reload causes the service status to change
+Fri Mar 17 16:40:53 2023 - ERROR - ../common/common_lib.sh line 95
+Fri Mar 17 16:40:54 2023 - INFO  - End of the test.
+Fri Mar 17 16:40:54 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:40:55 2023 - INFO  - oe_test_socket_lvm2-lvmpolld.sh post_test

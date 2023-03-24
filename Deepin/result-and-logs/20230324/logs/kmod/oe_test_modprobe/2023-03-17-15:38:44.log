@@ -1,0 +1,39 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:38:46 2023 - INFO  - Start to run test.
+Usage:
+	modprobe [options] [-i] [-b] modulename
+	modprobe [options] -a [-i] [-b] modulename [modulename...]
+	modprobe [options] -r [-i] modulename
+	modprobe [options] -r -a [-i] modulename [modulename...]
+	modprobe [options] -c
+	modprobe [options] --dump-modversions filename
+kmod version 29
+modprobe: FATAL: Module dm_log not found in directory /lib/modules/5.10.0-7.oe2203.riscv64
+Fri Mar 17 15:39:06 2023 - ERROR - oe_test_modprobe.sh line 37
+modprobe: FATAL: Module dm_log not found in directory /lib/modules/5.10.0-7.oe2203.riscv64
+Fri Mar 17 15:39:07 2023 - ERROR - oe_test_modprobe.sh line 39
+modprobe: FATAL: Module dm_cache not found in directory /lib/modules/5.10.0-7.oe2203.riscv64
+Fri Mar 17 15:39:07 2023 - ERROR - oe_test_modprobe.sh line 41
+Fri Mar 17 15:39:08 2023 - ERROR - oe_test_modprobe.sh line 43
+Fri Mar 17 15:39:09 2023 - ERROR - oe_test_modprobe.sh line 45
+modprobe: FATAL: Module dm_cache not found in directory /lib/modules/5.10.0-7.oe2203.riscv64
+Fri Mar 17 15:39:09 2023 - ERROR - oe_test_modprobe.sh line 47
+Fri Mar 17 15:39:10 2023 - ERROR - oe_test_modprobe.sh line 49
+modprobe: FATAL: Module dm_log not found in directory /lib/modules/5.10.0-7.oe2203.riscv64
+Fri Mar 17 15:39:10 2023 - ERROR - oe_test_modprobe.sh line 53
+Fri Mar 17 15:39:11 2023 - ERROR - oe_test_modprobe.sh line 55
+Fri Mar 17 15:39:12 2023 - ERROR - oe_test_modprobe.sh line 57
+modprobe: ERROR: missing parameters. See -h.
+Fri Mar 17 15:39:12 2023 - ERROR - oe_test_modprobe.sh line 60
+modprobe: ERROR: missing parameters. See -h.
+Fri Mar 17 15:39:13 2023 - ERROR - oe_test_modprobe.sh line 62
+Fri Mar 17 15:39:13 2023 - INFO  - End of the test.
+Fri Mar 17 15:39:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:39:14 2023 - INFO  - oe_test_modprobe.sh post_test

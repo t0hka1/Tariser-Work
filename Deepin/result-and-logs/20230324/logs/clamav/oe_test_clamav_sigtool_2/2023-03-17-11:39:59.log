@@ -1,0 +1,55 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:40:02 2023 - INFO  - Start to prepare the database config.
+cp: cannot stat '/var/lib/clamav/bytecode.cvd': No such file or directory
+cp: cannot stat '/var/lib/clamav/main.cvd': No such file or directory
+Fri Mar 17 11:40:07 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:40:08 2023 - INFO  - Start to run test.
+oe_test_clamav_sigtool_2.sh: line 41: sigtool: command not found
+Fri Mar 17 11:40:08 2023 - ERROR - Set --html-normalise failed.
+Fri Mar 17 11:40:09 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 42
+oe_test_clamav_sigtool_2.sh: line 43: sigtool: command not found
+Fri Mar 17 11:40:09 2023 - ERROR - Set --ascii-normalise failed.
+Fri Mar 17 11:40:10 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 44
+oe_test_clamav_sigtool_2.sh: line 45: sigtool: command not found
+Fri Mar 17 11:40:10 2023 - ERROR - Set --utf16-decode failed.
+Fri Mar 17 11:40:11 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 46
+oe_test_clamav_sigtool_2.sh: line 47: sigtool: command not found
+Fri Mar 17 11:40:11 2023 - ERROR - Set --vba failed.
+Fri Mar 17 11:40:12 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 48
+oe_test_clamav_sigtool_2.sh: line 49: sigtool: command not found
+Fri Mar 17 11:40:12 2023 - ERROR - Set --vba-hex failed.
+Fri Mar 17 11:40:13 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 50
+oe_test_clamav_sigtool_2.sh: line 53: sigtool: command not found
+Fri Mar 17 11:40:13 2023 - ERROR - Check compare failed.
+Fri Mar 17 11:40:14 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 54
+Fri Mar 17 11:40:14 2023 - ERROR - Check diff failed.
+Fri Mar 17 11:40:15 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 56
+oe_test_clamav_sigtool_2.sh: line 59: sigtool: command not found
+Fri Mar 17 11:40:16 2023 - ERROR - Set mdb failed.
+Fri Mar 17 11:40:16 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 60
+oe_test_clamav_sigtool_2.sh: line 61: sigtool: command not found
+Fri Mar 17 11:40:17 2023 - ERROR - Set imp failed.
+Fri Mar 17 11:40:17 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 62
+oe_test_clamav_sigtool_2.sh: line 64: sigtool: command not found
+Fri Mar 17 11:40:18 2023 - ERROR - Check sigtool --version failed.
+Fri Mar 17 11:40:18 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 65
+oe_test_clamav_sigtool_2.sh: line 66: sigtool: command not found
+Fri Mar 17 11:40:19 2023 - ERROR - Check sigtool -h failed.
+Fri Mar 17 11:40:19 2023 - ERROR - oe_test_clamav_sigtool_2.sh line 67
+Fri Mar 17 11:40:20 2023 - INFO  - End to run test.
+Fri Mar 17 11:40:20 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:40:20 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage clamav is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'clamav' has no installation candidate"
+Fri Mar 17 11:40:24 2023 - INFO  - End to restore the test environment.

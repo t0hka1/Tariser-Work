@@ -1,0 +1,44 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:54:26 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 17:54:30 2023 - ERROR - pkgs:(nfs-utils) not found
+Fri Mar 17 17:54:30 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 17:54:31 2023 - INFO  - Start to run test.
+Failed to restart nfs-client.target: Unit nfs-client.target not found.
+Fri Mar 17 17:54:31 2023 - ERROR - nfs-client.target restart failed
+Fri Mar 17 17:54:32 2023 - ERROR - ../common/common_lib.sh line 34
+Unit nfs-client.target could not be found.
+Fri Mar 17 17:54:38 2023 - ERROR - nfs-client.target restart failed
+Fri Mar 17 17:54:39 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop nfs-client.target: Unit nfs-client.target not loaded.
+Fri Mar 17 17:54:39 2023 - ERROR - nfs-client.target stop failed
+Fri Mar 17 17:54:40 2023 - ERROR - ../common/common_lib.sh line 39
+Unit nfs-client.target could not be found.
+Fri Mar 17 17:54:46 2023 - ERROR - nfs-client.target stop failed
+Fri Mar 17 17:54:47 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start nfs-client.target: Unit nfs-client.target not found.
+Fri Mar 17 17:54:47 2023 - ERROR - nfs-client.target start failed
+Fri Mar 17 17:54:48 2023 - ERROR - ../common/common_lib.sh line 44
+Unit nfs-client.target could not be found.
+Fri Mar 17 17:54:54 2023 - ERROR - nfs-client.target start failed
+Fri Mar 17 17:54:55 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for nfs-client.target: No such file or directory
+Fri Mar 17 17:54:55 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start nfs-client.target: Unit nfs-client.target not found.
+Fri Mar 17 17:54:56 2023 - ERROR - Job type reload is not applicable for unit nfs-client.target
+Fri Mar 17 17:54:57 2023 - ERROR - ../common/common_lib.sh line 91
+Unit nfs-client.target could not be found.
+Unit nfs-client.target could not be found.
+Fri Mar 17 17:54:58 2023 - INFO  - End of the test.
+Fri Mar 17 17:54:58 2023 - ERROR - failed to execute the case.
+Fri Mar 17 17:54:59 2023 - INFO  - start environment cleanup.
+oe_test_target_nfs-client.sh: line 42: systemtl: command not found
+Fri Mar 17 17:54:59 2023 - WARN  - no thing to do.
+Fri Mar 17 17:55:00 2023 - INFO  - Finish environment cleanup!

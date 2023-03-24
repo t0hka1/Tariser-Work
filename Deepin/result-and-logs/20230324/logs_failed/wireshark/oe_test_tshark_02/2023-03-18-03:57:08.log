@@ -1,0 +1,64 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 03:57:11 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 03:57:15 2023 - INFO  - pkgs:(wireshark) is already installed
+Sat Mar 18 03:57:15 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 03:57:16 2023 - INFO  - Start to run test.
+oe_test_tshark_02.sh: line 33: tshark: command not found
+capinfos: The file "tsfile7" doesn't exist.
+Sat Mar 18 03:57:22 2023 - ERROR - oe_test_tshark_02.sh line 36
+capinfos: The file "tsfile8" doesn't exist.
+Sat Mar 18 03:57:29 2023 - ERROR - oe_test_tshark_02.sh line 39
+Sat Mar 18 03:57:36 2023 - ERROR - oe_test_tshark_02.sh line 41
+capinfos: The file "tsfile9_*" doesn't exist.
+Sat Mar 18 03:57:36 2023 - ERROR - oe_test_tshark_02.sh line 43
+spawn tshark -i -b duration:6 -w tsfile10
+couldn't execute "tshark": no such file or directory
+    while executing
+"spawn tshark -i  -b duration:6 -w tsfile10"
+capinfos: The file "tsfile10_*" doesn't exist.
+Sat Mar 18 03:57:37 2023 - ERROR - oe_test_tshark_02.sh line 49
+spawn tshark -i -b interval:1 -w tsfile11
+couldn't execute "tshark": no such file or directory
+    while executing
+"spawn tshark -i  -b interval:1 -w tsfile11"
+capinfos: The file "tsfile11_*" doesn't exist.
+Sat Mar 18 03:57:38 2023 - ERROR - oe_test_tshark_02.sh line 55
+spawn tshark -i -b filesize:2 -w tsfile12
+couldn't execute "tshark": no such file or directory
+    while executing
+"spawn tshark -i  -b filesize:2 -w tsfile12"
+capinfos: The file "tsfile12_*" doesn't exist.
+Sat Mar 18 03:57:39 2023 - ERROR - oe_test_tshark_02.sh line 61
+spawn tshark -i -b files:2 -b filesize:1 -w tsfile13
+couldn't execute "tshark": no such file or directory
+    while executing
+"spawn tshark -i  -b files:2 -b filesize:1 -w tsfile13"
+capinfos: The file "tsfile13_*" doesn't exist.
+Sat Mar 18 03:57:40 2023 - ERROR - oe_test_tshark_02.sh line 68
+Sat Mar 18 03:57:40 2023 - ERROR - oe_test_tshark_02.sh line 69
+capinfos: The file "anyFile" doesn't exist.
+Sat Mar 18 03:57:47 2023 - ERROR - oe_test_tshark_02.sh line 72
+oe_test_tshark_02.sh: line 73: tshark: command not found
+Sat Mar 18 03:57:48 2023 - ERROR - oe_test_tshark_02.sh line 74
+capinfos: The file "tcpFile1" doesn't exist.
+Sat Mar 18 03:57:54 2023 - ERROR - oe_test_tshark_02.sh line 77
+capinfos: The file "tsfile14" doesn't exist.
+Sat Mar 18 03:58:07 2023 - ERROR - oe_test_tshark_02.sh line 81
+capinfos: The file "tsfile15" doesn't exist.
+Sat Mar 18 03:58:14 2023 - ERROR - oe_test_tshark_02.sh line 84
+capinfos: The file "tsfile16" doesn't exist.
+Sat Mar 18 03:58:20 2023 - ERROR - oe_test_tshark_02.sh line 87
+captype: The file "tsfile16" doesn't exist.
+Sat Mar 18 03:58:21 2023 - ERROR - oe_test_tshark_02.sh line 89
+Sat Mar 18 03:58:21 2023 - INFO  - End of the test.
+Sat Mar 18 03:58:22 2023 - ERROR - failed to execute the case.
+Sat Mar 18 03:58:22 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 03:58:23 2023 - WARN  - no thing to do.
+Sat Mar 18 03:58:23 2023 - INFO  - Finish restoring the test environment.

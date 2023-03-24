@@ -1,0 +1,27 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:47:58 2023 - INFO  - Start to prepare the test environment.
+oe_test_dnf_provides_randomwait.sh: line 31: dnf: command not found
+Fri Mar 17 12:48:21 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 12:48:22 2023 - INFO  - Start to run test.
+oe_test_dnf_provides_randomwait.sh: line 38: dnf: command not found
+Fri Mar 17 12:48:23 2023 - ERROR - oe_test_dnf_provides_randomwait.sh line 39
+oe_test_dnf_provides_randomwait.sh: line 40: rpm: command not found
+oe_test_dnf_provides_randomwait.sh: line 42: dnf: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 12:48:25 2023 - ERROR - oe_test_dnf_provides_randomwait.sh line 43
+/usr/bin/time: cannot run dnf: No such file or directory
+Fri Mar 17 12:48:26 2023 - ERROR - oe_test_dnf_provides_randomwait.sh line 49
+(standard_in) 1: syntax error
+Fri Mar 17 12:48:26 2023 - ERROR - oe_test_dnf_provides_randomwait.sh line 53
+Fri Mar 17 12:48:27 2023 - INFO  - End of the test.
+Fri Mar 17 12:48:28 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:48:29 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:48:50 2023 - INFO  - End of restore the test environment.

@@ -1,0 +1,83 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:04:02 2023 - INFO  - Start loading data!
+oe_test_luks_encrypted.sh: line 24: uuidgen: command not found
+Fri Mar 17 12:04:09 2023 - INFO  - Loading data is complete!
+Fri Mar 17 12:04:09 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 12:04:13 2023 - ERROR - pkgs:(clevis-udisks2) not found
+fdisk: cannot open /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj: No such file or directory
+
+Welcome to fdisk (util-linux 2.38).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Fri Mar 17 12:04:14 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 12:04:14 2023 - INFO  - Start executing testcase.
+Cannot open device /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1.
+Fri Mar 17 12:04:15 2023 - ERROR - Disk encryption failed
+Fri Mar 17 12:04:15 2023 - ERROR - oe_test_luks_encrypted.sh line 49
+Device /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1 does not exist or access denied.
+Fri Mar 17 12:04:16 2023 - ERROR - Disk mapping failed
+Fri Mar 17 12:04:16 2023 - ERROR - oe_test_luks_encrypted.sh line 51
+mke2fs 1.46.4 (18-Aug-2021)
+The file /dev/mapper/test_encrypted does not exist and no size was specified.
+Fri Mar 17 12:04:17 2023 - ERROR - Failed to format partition
+Fri Mar 17 12:04:17 2023 - ERROR - oe_test_luks_encrypted.sh line 53
+mount: /mnt/test_encrypted: special device /dev/mapper/test_encrypted does not exist.
+       dmesg(1) may have more information after failed mount system call.
+Fri Mar 17 12:04:18 2023 - ERROR - Disk mount failed
+Fri Mar 17 12:04:18 2023 - ERROR - oe_test_luks_encrypted.sh line 55
+Fri Mar 17 12:04:19 2023 - ERROR - Backup luksHeader information failed
+Fri Mar 17 12:04:20 2023 - ERROR - oe_test_luks_encrypted.sh line 57
+Failed to enable unit: Unit file tangd.socket does not exist.
+Fri Mar 17 12:04:23 2023 - ERROR - Failed to enable tangd.socket service
+Fri Mar 17 12:04:23 2023 - ERROR - oe_test_luks_encrypted.sh line 60
+Fri Mar 17 12:04:29 2023 - ERROR - Failed to display the 'Listen' property of tangd.socket
+Fri Mar 17 12:04:30 2023 - ERROR - oe_test_luks_encrypted.sh line 63
+Failed to start tangd.socket: Unit tangd.socket not found.
+Fri Mar 17 12:04:30 2023 - ERROR - Failed to start tangd.socket service
+Fri Mar 17 12:04:31 2023 - ERROR - oe_test_luks_encrypted.sh line 65
+oe_test_luks_encrypted.sh: line 66: curl: command not found
+Fri Mar 17 12:04:32 2023 - ERROR - Failed to transfer data to adv.jws file
+Fri Mar 17 12:04:32 2023 - ERROR - oe_test_luks_encrypted.sh line 67
+oe_test_luks_encrypted.sh: line 68: clevis: command not found
+Fri Mar 17 12:04:32 2023 - ERROR - Failed to encrypt data
+Fri Mar 17 12:04:33 2023 - ERROR - oe_test_luks_encrypted.sh line 69
+spawn luksmeta init -n -d /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1
+couldn't execute "luksmeta": no such file or directory
+    while executing
+"spawn luksmeta init -n -d /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1"
+oe_test_luks_encrypted.sh: line 90: luksmeta: command not found
+Fri Mar 17 12:04:38 2023 - ERROR - Failed to write data
+Fri Mar 17 12:04:39 2023 - ERROR - oe_test_luks_encrypted.sh line 91
+spawn clevis luks bind -d /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1 tang '{"url":"http://127.0.0.1:8009"}'
+couldn't execute "clevis": no such file or directory
+    while executing
+"spawn clevis luks bind -d /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1 tang '{"url":"http://127.0.0.1:8009"}'"
+Fri Mar 17 12:04:39 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 12:04:40 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:04:40 2023 - INFO  - start environment cleanup.
+spawn clevis luks unbind -d /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1 -s 1
+couldn't execute "clevis": no such file or directory
+    while executing
+"spawn clevis luks unbind -d /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1 -s 1"
+umount: /mnt/test_encrypted: not mounted.
+Cannot initialize device-mapper. Is dm_mod kernel module loaded?
+mke2fs 1.46.4 (18-Aug-2021)
+mkfs.ext4: invalid blocks 'vdc' on device '/dev/vdb'
+fdisk: cannot open /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj: No such file or directory
+
+Welcome to fdisk (util-linux 2.38).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Fri Mar 17 12:04:42 2023 - WARN  - no thing to do.
+mke2fs 1.46.4 (18-Aug-2021)
+mkfs.ext4: invalid blocks 'vdc' on device '/dev/vdb'
+Fri Mar 17 12:04:42 2023 - INFO  - Finish environment cleanup!

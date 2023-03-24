@@ -1,0 +1,24 @@
+Fri Mar 17 15:01:52 2023 - INFO  - start to run testcase:oe_test_binary_files_operation.
+Fri Mar 17 15:07:33 2023 - ERROR - The case exit by code 18.
+Fri Mar 17 15:07:43 2023 - INFO  - End to run testcase:oe_test_binary_files_operation.
+Fri Mar 17 15:07:44 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:07:48 2023 - INFO  - start to run testcase:oe_test_build-classpath.
+Fri Mar 17 15:11:52 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 15:12:03 2023 - INFO  - End to run testcase:oe_test_build-classpath.
+Fri Mar 17 15:12:04 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:12:08 2023 - INFO  - start to run testcase:oe_test_build-jar-repository.
+Fri Mar 17 15:15:31 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 15:15:42 2023 - INFO  - End to run testcase:oe_test_build-jar-repository.
+Fri Mar 17 15:15:42 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:15:46 2023 - INFO  - start to run testcase:oe_test_find-shade-jar.
+Fri Mar 17 15:19:36 2023 - ERROR - The case exit by code 4.
+Fri Mar 17 15:19:47 2023 - INFO  - End to run testcase:oe_test_find-shade-jar.
+Fri Mar 17 15:19:47 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:19:51 2023 - INFO  - start to run testcase:oe_test_gradle-local.
+Fri Mar 17 15:20:11 2023 - ERROR - The case exit by code 15.
+Fri Mar 17 15:20:22 2023 - INFO  - End to run testcase:oe_test_gradle-local.
+Fri Mar 17 15:20:22 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:20:26 2023 - INFO  - start to run testcase:oe_test_javapackages-local.
+Fri Mar 17 15:20:39 2023 - ERROR - The case exit by code 4.
+Fri Mar 17 15:20:50 2023 - INFO  - End to run testcase:oe_test_javapackages-local.
+Fri Mar 17 15:20:50 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

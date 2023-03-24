@@ -1,0 +1,71 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:03:16 2023 - INFO  - Start to prepare the test environment.
+../common/common_libmemcached.sh: line 30: memcached: command not found
+Fri Mar 17 16:03:27 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:03:28 2023 - INFO  - Start to run test.
+spawn telnet 127.0.0.1 11211
+couldn't execute "telnet": no such file or directory
+    while executing
+"spawn telnet 127.0.0.1 11211"
+oe_test_memcp.sh: line 39: memcat: command not found
+Fri Mar 17 16:03:29 2023 - ERROR - oe_test_memcp.sh line 40
+oe_test_memcp.sh: line 41: memcat: command not found
+Fri Mar 17 16:03:29 2023 - ERROR - oe_test_memcp.sh line 42
+Fri Mar 17 16:03:30 2023 - ERROR - oe_test_memcp.sh line 44
+Fri Mar 17 16:03:30 2023 - ERROR - oe_test_memcp.sh line 46
+spawn telnet 127.0.0.1 11211
+couldn't execute "telnet": no such file or directory
+    while executing
+"spawn telnet 127.0.0.1 11211"
+oe_test_memcp.sh: line 54: memcp: command not found
+Fri Mar 17 16:03:31 2023 - ERROR - oe_test_memcp.sh line 55
+oe_test_memcp.sh: line 56: memcp: command not found
+Fri Mar 17 16:03:32 2023 - ERROR - oe_test_memcp.sh line 57
+oe_test_memcp.sh: line 58: memcat: command not found
+Fri Mar 17 16:03:33 2023 - ERROR - oe_test_memcp.sh line 59
+oe_test_memcp.sh: line 60: memcp: command not found
+Fri Mar 17 16:03:33 2023 - ERROR - oe_test_memcp.sh line 61
+oe_test_memcp.sh: line 62: memcat: command not found
+Fri Mar 17 16:03:34 2023 - ERROR - oe_test_memcp.sh line 63
+oe_test_memcp.sh: line 64: memcat: command not found
+Fri Mar 17 16:03:34 2023 - ERROR - oe_test_memcp.sh line 65
+oe_test_memcp.sh: line 66: memcp: command not found
+Fri Mar 17 16:03:35 2023 - ERROR - oe_test_memcp.sh line 67
+oe_test_memcp.sh: line 68: memcat: command not found
+Fri Mar 17 16:03:35 2023 - ERROR - oe_test_memcp.sh line 69
+oe_test_memcp.sh: line 71: memcat: command not found
+Fri Mar 17 16:03:51 2023 - ERROR - oe_test_memcp.sh line 72
+oe_test_memcp.sh: line 73: memcp: command not found
+Fri Mar 17 16:03:52 2023 - ERROR - oe_test_memcp.sh line 74
+oe_test_memcp.sh: line 75: memcat: command not found
+Fri Mar 17 16:03:53 2023 - ERROR - oe_test_memcp.sh line 76
+oe_test_memcp.sh: line 77: memcp: command not found
+Fri Mar 17 16:03:53 2023 - ERROR - oe_test_memcp.sh line 78
+spawn telnet 127.0.0.1 11211
+couldn't execute "telnet": no such file or directory
+    while executing
+"spawn telnet 127.0.0.1 11211"
+oe_test_memcp.sh: line 86: memcat: command not found
+Fri Mar 17 16:03:54 2023 - ERROR - oe_test_memcp.sh line 87
+oe_test_memcp.sh: line 88: memcp: command not found
+Fri Mar 17 16:03:54 2023 - ERROR - oe_test_memcp.sh line 89
+oe_test_memcp.sh: line 90: memcat: command not found
+Fri Mar 17 16:03:55 2023 - ERROR - oe_test_memcp.sh line 91
+Fri Mar 17 16:03:55 2023 - INFO  - End of the test.
+Fri Mar 17 16:03:56 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:03:56 2023 - INFO  - Start to restore the test environment.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage libmemcached is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'libmemcached' has no installation candidate"
+Fri Mar 17 16:04:00 2023 - INFO  - Finish restoring the test environment.

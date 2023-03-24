@@ -1,0 +1,28 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:03:56 2023 - INFO  - Start to prepare the test environment.
+oe_test_sqlite_function_03.sh: line 21: sqlite3: command not found
+Fri Mar 17 23:03:56 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:03:57 2023 - INFO  - Start to run test.
+spawn sqlite3 ./test.db
+couldn't execute "sqlite3": no such file or directory
+    while executing
+"spawn sqlite3 ./test.db"
+awk: cannot open ./output.txt (No such file or directory)
+Fri Mar 17 23:03:58 2023 - ERROR - oe_test_sqlite_function_03.sh line 51
+awk: cannot open ./output.txt (No such file or directory)
+Fri Mar 17 23:03:58 2023 - ERROR - oe_test_sqlite_function_03.sh line 52
+awk: cannot open ./output.txt (No such file or directory)
+Fri Mar 17 23:03:59 2023 - ERROR - Missing actual error code.
+awk: cannot open ./output.txt (No such file or directory)
+Fri Mar 17 23:03:59 2023 - ERROR - Missing actual error code.
+Fri Mar 17 23:04:00 2023 - INFO  - End to run test.
+Fri Mar 17 23:04:00 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:04:01 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:04:01 2023 - INFO  - End to restore the test environment.

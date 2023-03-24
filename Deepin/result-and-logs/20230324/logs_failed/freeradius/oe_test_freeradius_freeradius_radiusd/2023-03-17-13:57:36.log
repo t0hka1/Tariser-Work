@@ -1,0 +1,56 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:57:38 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 13:57:42 2023 - ERROR - pkgs:(freeradius) not found
+Fri Mar 17 13:57:42 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 13:57:43 2023 - INFO  - Start to run test.
+oe_test_freeradius_freeradius_radiusd.sh: line 34: radiusd: command not found
+Fri Mar 17 13:57:44 2023 - ERROR - radiusd -d execution failed.
+Fri Mar 17 13:57:44 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 36
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_freeradius_freeradius_radiusd.sh: line 38: radiusd: command not found
+Fri Mar 17 13:57:45 2023 - ERROR - radiusd -D execution failed.
+Fri Mar 17 13:57:46 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 40
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_freeradius_freeradius_radiusd.sh: line 42: radiusd: command not found
+Fri Mar 17 13:57:46 2023 - ERROR - radiusd -f execution failed.
+Fri Mar 17 13:57:47 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 44
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_freeradius_freeradius_radiusd.sh: line 46: radiusd: command not found
+Fri Mar 17 13:57:48 2023 - ERROR - radiusd -h execution failed.
+Fri Mar 17 13:57:48 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 47
+oe_test_freeradius_freeradius_radiusd.sh: line 49: radiusd: command not found
+Fri Mar 17 13:57:50 2023 - ERROR - radiusd -i -p execution failed.
+Fri Mar 17 13:57:50 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 51
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_freeradius_freeradius_radiusd.sh: line 53: radiusd: command not found
+Fri Mar 17 13:57:51 2023 - ERROR - radiusd -l execution failed.
+Fri Mar 17 13:57:52 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 55
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+cp: cannot stat '/etc/raddb/radiusd.conf': No such file or directory
+oe_test_freeradius_freeradius_radiusd.sh: line 58: radiusd: command not found
+Fri Mar 17 13:57:59 2023 - ERROR - radiusd -n execution failed.
+Fri Mar 17 13:57:59 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 61
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_freeradius_freeradius_radiusd.sh: line 63: radiusd: command not found
+cat: /var/run/radiusd/radiusd.pid: No such file or directory
+oe_test_freeradius_freeradius_radiusd.sh: line 66: [: : integer expression expected
+Fri Mar 17 13:58:00 2023 - ERROR - radiusd -P execution failed.
+Fri Mar 17 13:58:01 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 67
+oe_test_freeradius_freeradius_radiusd.sh: line 68: kill: `': not a pid or valid job spec
+oe_test_freeradius_freeradius_radiusd.sh: line 69: radiusd: command not found
+oe_test_freeradius_freeradius_radiusd.sh: line 70: [: : integer expression expected
+Fri Mar 17 13:58:02 2023 - ERROR - radiusd -s execution failed.
+Fri Mar 17 13:58:02 2023 - ERROR - oe_test_freeradius_freeradius_radiusd.sh line 71
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Fri Mar 17 13:58:03 2023 - INFO  - End to run test.
+Fri Mar 17 13:58:04 2023 - ERROR - failed to execute the case.
+Fri Mar 17 13:58:04 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 13:58:05 2023 - WARN  - no thing to do.
+Fri Mar 17 13:58:06 2023 - INFO  - End to restore the test environment.

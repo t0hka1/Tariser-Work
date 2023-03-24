@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:23:05 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:23:31 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:23:32 2023 - INFO  - Start to run test.
+     -swiglib        - Report location of SWIG library and exit
+  $ swig -python interface.i
+  $ swig -Wall -python interface.i
+  $ swig @args.txt
+Note: 'swig -<lang> -help' displays options for a specific target language.
+extern double My_variable;
+extern double My_variable;
+int fact(int);
+C++ analysis...
+    jenv->ThrowNew(excep, msg);
+  SWIG_JavaDirectorPureVirtual,
+    { SWIG_JavaDirectorPureVirtual, "java/lang/RuntimeException" },
+/* attribute recognised by some compilers to avoid 'unused' warnings */
+#   pragma warning(disable : 4505) /* unreferenced local function has been removed */
+ * are aware a variable isn't used.  So we just silence that warning.
+# pragma warning disable 592
+  SWIG_JavaOutOfMemoryError = 1,
+  SWIG_JavaUnknownError,
+    { SWIG_JavaOutOfMemoryError, "java/lang/OutOfMemoryError" },
+    { SWIG_JavaUnknownError,  "java/lang/UnknownError" },
+    { (SWIG_JavaExceptionCodes)0,  "java/lang/UnknownError" }
+Copyright (c) 1995-1998
+Copyright (c) 1998-2005
+Copyright (c) 2005-2006
+Classes
+debug-module stage 3
+Fri Mar 17 23:23:37 2023 - INFO  - End to run test.
+Fri Mar 17 23:23:37 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 23:23:38 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:23:55 2023 - INFO  - End to restore the test environment.

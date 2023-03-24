@@ -1,0 +1,28 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:02:05 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:02:09 2023 - ERROR - pkgs:(java-1.8.0-openjdk*) not found
+Fri Mar 17 15:02:10 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:02:10 2023 - INFO  - Start to run test.
+Fri Mar 17 15:02:11 2023 - ERROR - oe_test_openjdk_java_javac.sh line 36
+oe_test_openjdk_java_javac.sh: line 37: javac: command not found
+oe_test_openjdk_java_javac.sh: line 38: java: command not found
+Fri Mar 17 15:02:11 2023 - ERROR - oe_test_openjdk_java_javac.sh line 39
+Fri Mar 17 15:02:12 2023 - ERROR - oe_test_openjdk_java_javac.sh line 41
+Fri Mar 17 15:02:13 2023 - ERROR - oe_test_openjdk_java_javac.sh line 43
+oe_test_openjdk_java_javac.sh: line 46: javac: command not found
+Fri Mar 17 15:02:13 2023 - ERROR - oe_test_openjdk_java_javac.sh line 47
+Fri Mar 17 15:02:14 2023 - ERROR - oe_test_openjdk_java_javac.sh line 51
+Fri Mar 17 15:02:14 2023 - ERROR - oe_test_openjdk_java_javac.sh line 53
+Fri Mar 17 15:02:15 2023 - ERROR - oe_test_openjdk_java_javac.sh line 55
+Fri Mar 17 15:02:15 2023 - INFO  - End to run test.
+Fri Mar 17 15:02:16 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:02:16 2023 - INFO  - Need't to restore the tet environment.
+Fri Mar 17 15:02:17 2023 - WARN  - no thing to do.
+Fri Mar 17 15:02:17 2023 - INFO  - End to restore the test environment.

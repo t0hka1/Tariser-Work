@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:48:32 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 13:48:36 2023 - ERROR - pkgs:(freeradius) not found
+ln: failed to create symbolic link '/etc/raddb/sites-enabled/control-socket': No such file or directory
+sed: can't read /etc/raddb/sites-enabled/control-socket: No such file or directory
+sed: can't read /etc/raddb/users: No such file or directory
+Failed to start radiusd.service: Unit radiusd.service not found.
+Fri Mar 17 13:48:39 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 13:48:39 2023 - INFO  - Start to run test.
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 42: raddebug: command not found
+Fri Mar 17 13:49:43 2023 - ERROR - raddebug -c execution failed.
+Fri Mar 17 13:49:43 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 48
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 49: raddebug: command not found
+Fri Mar 17 13:50:46 2023 - ERROR - raddebug -d execution failed.
+Fri Mar 17 13:50:47 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 55
+cp: cannot stat '/etc/raddb/radiusd.conf': No such file or directory
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 57: raddebug: command not found
+Fri Mar 17 13:51:50 2023 - ERROR - raddebug -n execution failed.
+Fri Mar 17 13:51:51 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 63
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 64: raddebug: command not found
+Fri Mar 17 13:52:54 2023 - ERROR - raddebug -D execution failed.
+Fri Mar 17 13:52:55 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 70
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 71: raddebug: command not found
+Fri Mar 17 13:53:58 2023 - ERROR - raddebug -i execution failed.
+Fri Mar 17 13:53:59 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 77
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 78: raddebug: command not found
+Fri Mar 17 13:55:02 2023 - ERROR - raddebug -I execution failed.
+Fri Mar 17 13:55:03 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 84
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 85: raddebug: command not found
+Fri Mar 17 13:56:06 2023 - ERROR - raddebug -f execution failed.
+Fri Mar 17 13:56:07 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 91
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 92: raddebug: command not found
+Fri Mar 17 13:56:12 2023 - ERROR - raddebug -t execution failed.
+Fri Mar 17 13:56:12 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 98
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 99: raddebug: command not found
+Fri Mar 17 13:57:16 2023 - ERROR - raddebug -u execution failed.
+Fri Mar 17 13:57:16 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 105
+oe_test_freeradius_freeradius_raddebugAndCheckrad.sh: line 106: checkrad: command not found
+Fri Mar 17 13:57:17 2023 - ERROR - checkrad execution failed.
+Fri Mar 17 13:57:17 2023 - ERROR - oe_test_freeradius_freeradius_raddebugAndCheckrad.sh line 109
+Fri Mar 17 13:57:18 2023 - INFO  - End to run test.
+Fri Mar 17 13:57:18 2023 - ERROR - failed to execute the case.
+Fri Mar 17 13:57:19 2023 - INFO  - Start to restore the test environment.
+Failed to stop radiusd.service: Unit radiusd.service not loaded.
+Fri Mar 17 13:57:19 2023 - WARN  - no thing to do.
+Fri Mar 17 13:57:20 2023 - INFO  - End to restore the test environment.

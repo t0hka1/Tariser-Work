@@ -1,0 +1,21 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:38:45 2023 - INFO  - Start to run test.
+Fri Mar 17 18:38:49 2023 - ERROR - oe_test_openssl_incorrect_public_private_key.sh line 27
+writing RSA key
+-----BEGIN PUBLIC KEY-----
+Fri Mar 17 18:38:50 2023 - ERROR - Incorrect public key succeeded in encrypting the file
+Fri Mar 17 18:38:50 2023 - ERROR - oe_test_openssl_incorrect_public_private_key.sh line 34
+The command rsautl was deprecated in version 3.0. Use 'pkeyutl' instead.
+Fri Mar 17 18:38:51 2023 - ERROR - The wrong private key successfully decrypted the file
+Fri Mar 17 18:38:52 2023 - ERROR - oe_test_openssl_incorrect_public_private_key.sh line 41
+Fri Mar 17 18:38:52 2023 - INFO  - End to run test.
+Fri Mar 17 18:38:53 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:38:53 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 18:38:54 2023 - INFO  - End to restore the test environment.

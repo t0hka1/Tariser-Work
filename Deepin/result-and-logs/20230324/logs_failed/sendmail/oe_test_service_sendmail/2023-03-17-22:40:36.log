@@ -1,0 +1,39 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:40:39 2023 - INFO  - Start environmental preparation.
+oe_test_service_sendmail.sh: line 30: rpm: command not found
+Fri Mar 17 22:44:39 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 22:44:39 2023 - INFO  - Start testing...
+     Active: active (running) since Fri 2023-03-17 22:45:55 UTC; 5s ago
+     Active: inactive (dead) since Fri 2023-03-17 22:46:05 UTC; 5s ago
+     Active: active (running) since Fri 2023-03-17 22:47:22 UTC; 5s ago
+sendmail.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install is-enabled sendmail
+.
+./oe_test_service_sm-client.sh
+./oe_test_service_sendmail.sh
+Fri Mar 17 22:47:49 2023 - ERROR - sendmail.service disable failed
+Fri Mar 17 22:47:50 2023 - ERROR - ../common/common_lib.sh line 67
+sendmail.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable sendmail
+.
+./oe_test_service_sm-client.sh
+./oe_test_service_sendmail.sh
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+sed: can't read /usr/lib/systemd/system/sendmail.service: No such file or directory
+Failed to reload sendmail.service: Job type reload is not applicable for unit sendmail.service.
+Fri Mar 17 22:48:12 2023 - ERROR - sendmail.service reload failed
+Fri Mar 17 22:48:13 2023 - ERROR - oe_test_service_sendmail.sh line 43
+     Active: active (running) since Fri 2023-03-17 22:47:22 UTC; 51s ago
+Fri Mar 17 22:48:14 2023 - INFO  - Finish test!
+Fri Mar 17 22:48:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 22:48:15 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/sendmail.service: No such file or directory
+Failed to reload sendmail.service: Job type reload is not applicable for unit sendmail.service.
+Fri Mar 17 22:48:42 2023 - INFO  - Finish environment cleanup!

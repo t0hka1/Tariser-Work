@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 03:56:03 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 03:56:06 2023 - INFO  - pkgs:(wireshark) is already installed
+Sat Mar 18 03:56:07 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 03:56:08 2023 - INFO  - Start to run test.
+oe_test_tshark_01.sh: line 35: tshark: command not found
+Sat Mar 18 03:56:08 2023 - ERROR - oe_test_tshark_01.sh line 36
+oe_test_tshark_01.sh: line 37: tshark: command not found
+Sat Mar 18 03:56:09 2023 - ERROR - oe_test_tshark_01.sh line 38
+oe_test_tshark_01.sh: line 39: tshark: command not found
+capinfos: The file "tsfile1" doesn't exist.
+Sat Mar 18 03:56:15 2023 - ERROR - oe_test_tshark_01.sh line 42
+spawn tshark -i -f tcp dst port 22 -c 15 -w tsfile2
+couldn't execute "tshark": no such file or directory
+    while executing
+"spawn tshark -i  -f "tcp dst port 22" -c 15 -w tsfile2"
+grep: tsfile2: No such file or directory
+Sat Mar 18 03:56:16 2023 - ERROR - oe_test_tshark_01.sh line 49
+capinfos: The file "tsfile2" doesn't exist.
+Sat Mar 18 03:56:17 2023 - ERROR - oe_test_tshark_01.sh line 51
+capinfos: The file "tsfile3" doesn't exist.
+Sat Mar 18 03:56:23 2023 - ERROR - oe_test_tshark_01.sh line 54
+capinfos: The file "tsfile4" doesn't exist.
+Sat Mar 18 03:56:30 2023 - ERROR - oe_test_tshark_01.sh line 57
+capinfos: The file "tsfile5" doesn't exist.
+Sat Mar 18 03:56:36 2023 - ERROR - oe_test_tshark_01.sh line 60
+oe_test_tshark_01.sh: line 62: tshark: command not found
+capinfos: The file "tsfile6" doesn't exist.
+Sat Mar 18 03:56:50 2023 - ERROR - oe_test_tshark_01.sh line 65
+Sat Mar 18 03:56:50 2023 - INFO  - End of the test.
+Sat Mar 18 03:56:51 2023 - ERROR - failed to execute the case.
+Sat Mar 18 03:56:51 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 03:56:52 2023 - WARN  - no thing to do.
+Sat Mar 18 03:56:52 2023 - INFO  - Finish restoring the test environment.

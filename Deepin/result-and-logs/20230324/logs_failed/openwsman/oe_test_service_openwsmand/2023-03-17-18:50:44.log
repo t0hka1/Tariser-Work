@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:50:47 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 18:50:51 2023 - ERROR - pkgs:(openwsman-server) not found
+spawn /etc/openwsman/owsmangencert.sh --force
+couldn't execute "/etc/openwsman/owsmangencert.sh": no such file or directory
+    while executing
+"spawn /etc/openwsman/owsmangencert.sh --force"
+Fri Mar 17 18:50:52 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 18:50:53 2023 - INFO  - Start testing...
+Failed to restart openwsmand.service: Unit openwsmand.service not found.
+Fri Mar 17 18:50:53 2023 - ERROR - openwsmand.service restart failed
+Fri Mar 17 18:50:54 2023 - ERROR - ../common/common_lib.sh line 34
+Unit openwsmand.service could not be found.
+Fri Mar 17 18:51:00 2023 - ERROR - openwsmand.service restart failed
+Fri Mar 17 18:51:01 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop openwsmand.service: Unit openwsmand.service not loaded.
+Fri Mar 17 18:51:02 2023 - ERROR - openwsmand.service stop failed
+Fri Mar 17 18:51:02 2023 - ERROR - ../common/common_lib.sh line 39
+Unit openwsmand.service could not be found.
+Fri Mar 17 18:51:08 2023 - ERROR - openwsmand.service stop failed
+Fri Mar 17 18:51:09 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start openwsmand.service: Unit openwsmand.service not found.
+Fri Mar 17 18:51:10 2023 - ERROR - openwsmand.service start failed
+Fri Mar 17 18:51:10 2023 - ERROR - ../common/common_lib.sh line 44
+Unit openwsmand.service could not be found.
+Fri Mar 17 18:51:16 2023 - ERROR - openwsmand.service start failed
+Fri Mar 17 18:51:17 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for openwsmand.service: No such file or directory
+Fri Mar 17 18:51:18 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start openwsmand.service: Unit openwsmand.service not found.
+Fri Mar 17 18:51:19 2023 - ERROR - Job type reload is not applicable for unit openwsmand.service
+Fri Mar 17 18:51:19 2023 - ERROR - ../common/common_lib.sh line 91
+Unit openwsmand.service could not be found.
+Unit openwsmand.service could not be found.
+Fri Mar 17 18:51:20 2023 - INFO  - Finish test!
+Fri Mar 17 18:51:21 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:51:21 2023 - INFO  - start environment cleanup.
+Failed to stop openwsmand.service: Unit openwsmand.service not loaded.
+Fri Mar 17 18:51:22 2023 - WARN  - no thing to do.
+Fri Mar 17 18:51:22 2023 - INFO  - Finish environment cleanup!

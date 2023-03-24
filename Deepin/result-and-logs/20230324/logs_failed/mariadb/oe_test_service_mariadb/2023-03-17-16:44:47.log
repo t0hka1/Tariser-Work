@@ -1,0 +1,49 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:44:50 2023 - INFO  - Start environmental preparation.
+mv: cannot stat '/etc/my.cnf': No such file or directory
+Fri Mar 17 16:47:52 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 16:47:53 2023 - INFO  - Start testing...
+     Active: active (running) since Fri 2023-03-17 16:47:57 UTC; 6s ago
+     Active: inactive (dead) since Fri 2023-03-17 16:48:04 UTC; 5s ago
+     Active: active (running) since Fri 2023-03-17 16:48:14 UTC; 6s ago
+find: ‘/etc/systemd/system/multi-user.target.wants/mariadb.service’: No such file or directory
+Synchronizing state of mariadb.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable mariadb
+Created symlink /etc/systemd/system/multi-user.target.wants/mariadb.service → /lib/systemd/system/mariadb.service.
+/etc/systemd/system/multi-user.target.wants/mariadb.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 17 16:47:56 deepin-rv-builder-2 mariadbd[1956]: 2023-03-17 16:47:56 0 [ERROR] Could not open mysql.plugin table: "Table 'mysql.plugin' doesn't exist". Some plugins may be not loaded
+Mar 17 16:47:56 deepin-rv-builder-2 mariadbd[1956]: 2023-03-17 16:47:56 0 [ERROR] Can't open and lock privilege tables: Table 'mysql.servers' doesn't exist
+Mar 17 16:47:57 deepin-rv-builder-2 mariadbd[1956]: 2023-03-17 16:47:57 0 [ERROR] Missing system table mysql.proxies_priv; please run mysql_upgrade to create it
+Mar 17 16:47:57 deepin-rv-builder-2 mariadbd[1956]: 2023-03-17 16:47:57 0 [ERROR] Missing system table mysql.roles_mapping; please run mysql_upgrade to create it
+Mar 17 16:47:57 deepin-rv-builder-2 mariadbd[1956]: 2023-03-17 16:47:57 0 [ERROR] Can't open the mysql.func table. Please run mysql_upgrade to create it.
+Mar 17 16:47:57 deepin-rv-builder-2 mariadbd[1956]: 2023-03-17 16:47:57 0 [ERROR] Cannot open mysql.event
+Mar 17 16:47:57 deepin-rv-builder-2 mariadbd[1956]: 2023-03-17 16:47:57 0 [ERROR] mariadbd: Event Scheduler: An error occurred when initializing system tables. Disabling the Event Scheduler.
+Mar 17 16:47:58 deepin-rv-builder-2 /etc/mysql/debian-start[1999]: Version check failed. Got the following error when calling the 'mysql' command line client
+Mar 17 16:47:58 deepin-rv-builder-2 /etc/mysql/debian-start[1999]: ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+Mar 17 16:47:58 deepin-rv-builder-2 /etc/mysql/debian-start[1999]: FATAL ERROR: Upgrade failed
+Mar 17 16:47:58 deepin-rv-builder-2 debian-start[2023]: ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+Mar 17 16:48:14 deepin-rv-builder-2 mariadbd[2312]: 2023-03-17 16:48:14 0 [ERROR] Could not open mysql.plugin table: "Table 'mysql.plugin' doesn't exist". Some plugins may be not loaded
+Mar 17 16:48:14 deepin-rv-builder-2 mariadbd[2312]: 2023-03-17 16:48:14 0 [ERROR] Can't open and lock privilege tables: Table 'mysql.servers' doesn't exist
+Mar 17 16:48:14 deepin-rv-builder-2 mariadbd[2312]: 2023-03-17 16:48:14 0 [ERROR] Missing system table mysql.proxies_priv; please run mysql_upgrade to create it
+Mar 17 16:48:14 deepin-rv-builder-2 mariadbd[2312]: 2023-03-17 16:48:14 0 [ERROR] Missing system table mysql.roles_mapping; please run mysql_upgrade to create it
+Mar 17 16:48:14 deepin-rv-builder-2 mariadbd[2312]: 2023-03-17 16:48:14 0 [ERROR] Can't open the mysql.func table. Please run mysql_upgrade to create it.
+Mar 17 16:48:14 deepin-rv-builder-2 mariadbd[2312]: 2023-03-17 16:48:14 0 [ERROR] Cannot open mysql.event
+Mar 17 16:48:14 deepin-rv-builder-2 mariadbd[2312]: 2023-03-17 16:48:14 0 [ERROR] mariadbd: Event Scheduler: An error occurred when initializing system tables. Disabling the Event Scheduler.
+Mar 17 16:48:15 deepin-rv-builder-2 debian-start[2410]: ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+Fri Mar 17 16:48:57 2023 - ERROR - There is an error message for the log of mariadb.service
+Fri Mar 17 16:48:57 2023 - ERROR - ../common/common_lib.sh line 28
+Failed to reload mariadb.service: Job type reload is not applicable for unit mariadb.service.
+     Active: active (running) since Fri 2023-03-17 16:48:14 UTC; 43s ago
+Fri Mar 17 16:48:58 2023 - INFO  - Finish test!
+Fri Mar 17 16:48:59 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:49:00 2023 - INFO  - start environment cleanup.
+mv: cannot stat '/etc/my.bak': No such file or directory
+Fri Mar 17 16:50:12 2023 - INFO  - Finish environment cleanup!

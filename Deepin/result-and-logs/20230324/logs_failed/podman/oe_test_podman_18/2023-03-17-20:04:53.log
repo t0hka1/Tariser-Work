@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:04:56 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 20:04:59 2023 - ERROR - pkgs:(podman-docker) not found
+../common/common_podman.sh: line 26: /etc/containers/registries.conf: No such file or directory
+oe_test_podman_18.sh: line 24: podman: command not found
+oe_test_podman_18.sh: line 25: podman: command not found
+Fri Mar 17 20:05:00 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:05:01 2023 - INFO  - Start to run test.
+oe_test_podman_18.sh: line 31: podman: command not found
+oe_test_podman_18.sh: line 31: podman: command not found
+Fri Mar 17 20:05:01 2023 - ERROR - oe_test_podman_18.sh line 32
+oe_test_podman_18.sh: line 33: podman: command not found
+Fri Mar 17 20:05:02 2023 - ERROR - oe_test_podman_18.sh line 34
+spawn podman login docker.io
+couldn't execute "podman": no such file or directory
+    while executing
+"spawn podman login docker.io "
+Fri Mar 17 20:05:03 2023 - ERROR - oe_test_podman_18.sh line 46
+oe_test_podman_18.sh: line 48: podman: command not found
+Fri Mar 17 20:05:03 2023 - ERROR - oe_test_podman_18.sh line 49
+spawn podman login --authfile authdir/myauths.json docker.io
+couldn't execute "podman": no such file or directory
+    while executing
+"spawn podman login --authfile authdir/myauths.json docker.io"
+Fri Mar 17 20:05:04 2023 - ERROR - oe_test_podman_18.sh line 61
+oe_test_podman_18.sh: line 63: podman: command not found
+Fri Mar 17 20:05:05 2023 - ERROR - oe_test_podman_18.sh line 64
+spawn podman login -u umohnani docker.io
+couldn't execute "podman": no such file or directory
+    while executing
+"spawn podman login -u umohnani docker.io"
+spawn podman login --tls-verify=false docker.io
+couldn't execute "podman": no such file or directory
+    while executing
+"spawn podman login --tls-verify=false docker.io"
+Fri Mar 17 20:05:06 2023 - ERROR - oe_test_podman_18.sh line 88
+oe_test_podman_18.sh: line 89: podman: command not found
+Fri Mar 17 20:05:07 2023 - ERROR - oe_test_podman_18.sh line 90
+Fri Mar 17 20:05:07 2023 - INFO  - End to run test.
+Fri Mar 17 20:05:08 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:05:08 2023 - INFO  - Start to restore the test environment.
+../common/common_podman.sh: line 38: podman: command not found
+../common/common_podman.sh: line 39: podman: command not found
+../common/common_podman.sh: line 40: podman: command not found
+Fri Mar 17 20:05:09 2023 - WARN  - no thing to do.
+Fri Mar 17 20:05:10 2023 - INFO  - End to restore the test environment.

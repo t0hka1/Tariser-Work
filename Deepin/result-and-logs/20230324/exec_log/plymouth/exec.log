@@ -1,0 +1,40 @@
+Fri Mar 17 19:17:19 2023 - INFO  - start to run testcase:oe_test_service_plymouth-halt.
+Fri Mar 17 19:17:52 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:18:03 2023 - INFO  - End to run testcase:oe_test_service_plymouth-halt.
+Fri Mar 17 19:18:04 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:18:08 2023 - INFO  - start to run testcase:oe_test_service_plymouth-kexec.
+Fri Mar 17 19:18:40 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:18:51 2023 - INFO  - End to run testcase:oe_test_service_plymouth-kexec.
+Fri Mar 17 19:18:51 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:18:55 2023 - INFO  - start to run testcase:oe_test_service_plymouth-poweroff.
+Fri Mar 17 19:19:26 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:19:37 2023 - INFO  - End to run testcase:oe_test_service_plymouth-poweroff.
+Fri Mar 17 19:19:37 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:19:41 2023 - INFO  - start to run testcase:oe_test_service_plymouth-quit.
+Fri Mar 17 19:20:12 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:20:23 2023 - INFO  - End to run testcase:oe_test_service_plymouth-quit.
+Fri Mar 17 19:20:23 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:20:27 2023 - INFO  - start to run testcase:oe_test_service_plymouth-quit-wait.
+Fri Mar 17 19:20:58 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:21:09 2023 - INFO  - End to run testcase:oe_test_service_plymouth-quit-wait.
+Fri Mar 17 19:21:10 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:21:13 2023 - INFO  - start to run testcase:oe_test_service_plymouth-read-write.
+Fri Mar 17 19:21:45 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:21:56 2023 - INFO  - End to run testcase:oe_test_service_plymouth-read-write.
+Fri Mar 17 19:21:56 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:22:00 2023 - INFO  - start to run testcase:oe_test_service_plymouth-reboot.
+Fri Mar 17 19:22:31 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:22:42 2023 - INFO  - End to run testcase:oe_test_service_plymouth-reboot.
+Fri Mar 17 19:22:43 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:22:46 2023 - INFO  - start to run testcase:oe_test_service_plymouth-start.
+Fri Mar 17 19:23:18 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:23:29 2023 - INFO  - End to run testcase:oe_test_service_plymouth-start.
+Fri Mar 17 19:23:29 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:23:33 2023 - INFO  - start to run testcase:oe_test_service_plymouth-switch-root.
+Fri Mar 17 19:24:05 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:24:16 2023 - INFO  - End to run testcase:oe_test_service_plymouth-switch-root.
+Fri Mar 17 19:24:17 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 19:24:20 2023 - INFO  - start to run testcase:oe_test_service_systemd-ask-password-plymouth.
+Fri Mar 17 19:24:52 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 19:25:02 2023 - INFO  - End to run testcase:oe_test_service_systemd-ask-password-plymouth.
+Fri Mar 17 19:25:03 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.

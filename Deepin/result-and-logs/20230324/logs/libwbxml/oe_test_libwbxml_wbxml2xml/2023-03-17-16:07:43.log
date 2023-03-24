@@ -1,0 +1,166 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:07:46 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:07:50 2023 - ERROR - pkgs:(libwbxml) not found
+Fri Mar 17 16:07:51 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:07:52 2023 - INFO  - Start to run test.
+oe_test_libwbxml_wbxml2xml.sh: line 35: xml2wbxml: command not found
+oe_test_libwbxml_wbxml2xml.sh: line 36: wbxml2xml: command not found
+Fri Mar 17 16:07:52 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 37
+grep: output.xml: No such file or directory
+Fri Mar 17 16:07:53 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 39
+diff: output.xml: No such file or directory
+Fri Mar 17 16:07:53 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 41
+cp: cannot stat 'output.xml': No such file or directory
+oe_test_libwbxml_wbxml2xml.sh: line 43: wbxml2xml: command not found
+Fri Mar 17 16:07:54 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 44
+grep: output.xml: No such file or directory
+Fri Mar 17 16:07:55 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 46
+oe_test_libwbxml_wbxml2xml.sh: line 47: wbxml2xml: command not found
+Fri Mar 17 16:07:55 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 48
+diff: output.xml: No such file or directory
+diff: output.xml-bak: No such file or directory
+Fri Mar 17 16:07:56 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 50
+oe_test_libwbxml_wbxml2xml.sh: line 51: wbxml2xml: command not found
+Fri Mar 17 16:07:56 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 52
+grep: output.xml: No such file or directory
+Fri Mar 17 16:07:57 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 54
+oe_test_libwbxml_wbxml2xml.sh: line 55: wbxml2xml: command not found
+Fri Mar 17 16:07:57 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 56
+wc: output.xml: No such file or directory
+Fri Mar 17 16:07:58 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 58
+oe_test_libwbxml_wbxml2xml.sh: line 60: wbxml2xml: command not found
+Fri Mar 17 16:07:59 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 61
+Fri Mar 17 16:07:59 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 63
+oe_test_libwbxml_wbxml2xml.sh: line 64: wbxml2xml: command not found
+Fri Mar 17 16:08:00 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 65
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:00 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 67
+oe_test_libwbxml_wbxml2xml.sh: line 68: wbxml2xml: command not found
+Fri Mar 17 16:08:01 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 69
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:01 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 71
+oe_test_libwbxml_wbxml2xml.sh: line 72: wbxml2xml: command not found
+Fri Mar 17 16:08:02 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 73
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:03 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 75
+oe_test_libwbxml_wbxml2xml.sh: line 76: wbxml2xml: command not found
+Fri Mar 17 16:08:03 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 77
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:04 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 79
+oe_test_libwbxml_wbxml2xml.sh: line 80: wbxml2xml: command not found
+Fri Mar 17 16:08:04 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 81
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:05 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 83
+oe_test_libwbxml_wbxml2xml.sh: line 84: wbxml2xml: command not found
+Fri Mar 17 16:08:05 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 85
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:06 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 87
+oe_test_libwbxml_wbxml2xml.sh: line 88: wbxml2xml: command not found
+Fri Mar 17 16:08:06 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 89
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:07 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 91
+oe_test_libwbxml_wbxml2xml.sh: line 92: wbxml2xml: command not found
+Fri Mar 17 16:08:07 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 93
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:08 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 95
+oe_test_libwbxml_wbxml2xml.sh: line 96: wbxml2xml: command not found
+Fri Mar 17 16:08:08 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 97
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:09 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 99
+oe_test_libwbxml_wbxml2xml.sh: line 100: wbxml2xml: command not found
+Fri Mar 17 16:08:10 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 101
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:10 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 103
+oe_test_libwbxml_wbxml2xml.sh: line 104: wbxml2xml: command not found
+Fri Mar 17 16:08:11 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 105
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:11 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 107
+oe_test_libwbxml_wbxml2xml.sh: line 108: wbxml2xml: command not found
+Fri Mar 17 16:08:12 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 109
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:12 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 111
+oe_test_libwbxml_wbxml2xml.sh: line 112: wbxml2xml: command not found
+Fri Mar 17 16:08:13 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 113
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:14 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 115
+oe_test_libwbxml_wbxml2xml.sh: line 116: wbxml2xml: command not found
+Fri Mar 17 16:08:14 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 117
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:15 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 119
+oe_test_libwbxml_wbxml2xml.sh: line 120: wbxml2xml: command not found
+Fri Mar 17 16:08:15 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 121
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:16 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 123
+oe_test_libwbxml_wbxml2xml.sh: line 124: wbxml2xml: command not found
+Fri Mar 17 16:08:17 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 125
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:17 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 127
+oe_test_libwbxml_wbxml2xml.sh: line 128: wbxml2xml: command not found
+Fri Mar 17 16:08:18 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 129
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:18 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 131
+oe_test_libwbxml_wbxml2xml.sh: line 132: wbxml2xml: command not found
+Fri Mar 17 16:08:19 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 133
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:20 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 135
+oe_test_libwbxml_wbxml2xml.sh: line 136: wbxml2xml: command not found
+Fri Mar 17 16:08:20 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 137
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:21 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 139
+oe_test_libwbxml_wbxml2xml.sh: line 140: wbxml2xml: command not found
+Fri Mar 17 16:08:21 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 141
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:22 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 143
+oe_test_libwbxml_wbxml2xml.sh: line 144: wbxml2xml: command not found
+Fri Mar 17 16:08:23 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 145
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:23 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 147
+oe_test_libwbxml_wbxml2xml.sh: line 148: wbxml2xml: command not found
+Fri Mar 17 16:08:24 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 149
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:24 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 151
+oe_test_libwbxml_wbxml2xml.sh: line 152: wbxml2xml: command not found
+Fri Mar 17 16:08:25 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 153
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:26 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 155
+oe_test_libwbxml_wbxml2xml.sh: line 156: wbxml2xml: command not found
+Fri Mar 17 16:08:26 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 157
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:27 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 159
+oe_test_libwbxml_wbxml2xml.sh: line 160: wbxml2xml: command not found
+Fri Mar 17 16:08:27 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 161
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:28 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 163
+oe_test_libwbxml_wbxml2xml.sh: line 164: wbxml2xml: command not found
+Fri Mar 17 16:08:28 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 165
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:29 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 167
+oe_test_libwbxml_wbxml2xml.sh: line 168: wbxml2xml: command not found
+Fri Mar 17 16:08:29 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 169
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:30 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 171
+oe_test_libwbxml_wbxml2xml.sh: line 172: wbxml2xml: command not found
+Fri Mar 17 16:08:30 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 173
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:31 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 175
+oe_test_libwbxml_wbxml2xml.sh: line 176: wbxml2xml: command not found
+Fri Mar 17 16:08:32 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 177
+grep: output.xml: No such file or directory
+Fri Mar 17 16:08:32 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 179
+oe_test_libwbxml_wbxml2xml.sh: line 181: wbxml2xml: command not found
+Fri Mar 17 16:08:33 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 182
+Fri Mar 17 16:08:33 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 184
+diff: output.xml: No such file or directory
+Fri Mar 17 16:08:34 2023 - ERROR - oe_test_libwbxml_wbxml2xml.sh line 186
+Fri Mar 17 16:08:34 2023 - INFO  - End to run test.
+Fri Mar 17 16:08:35 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:08:36 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 16:08:36 2023 - WARN  - no thing to do.
+Fri Mar 17 16:08:37 2023 - INFO  - End to restore the test environment.

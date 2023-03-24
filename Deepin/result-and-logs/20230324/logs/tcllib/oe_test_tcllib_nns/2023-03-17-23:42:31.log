@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:42:34 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:42:37 2023 - ERROR - pkgs:(tcllib) not found
+sed: can't read /etc/xinetd.d/echo-stream: No such file or directory
+Failed to restart xinetd.service: Unit xinetd.service not found.
+Fri Mar 17 23:42:38 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:42:39 2023 - INFO  - Start to run test.
+oe_test_tcllib_nns.sh: line 36: nns: command not found
+oe_test_tcllib_nns.sh: line 38: nnsd: command not found
+oe_test_tcllib_nns.sh: line 40: nns: command not found
+Fri Mar 17 23:43:21 2023 - ERROR - oe_test_tcllib_nns.sh line 41
+oe_test_tcllib_nns.sh: line 43: nnslog: command not found
+oe_test_tcllib_nns.sh: line 45: nns: command not found
+oe_test_tcllib_nns.sh: line 47: nns: command not found
+Fri Mar 17 23:44:22 2023 - ERROR - oe_test_tcllib_nns.sh line 48
+oe_test_tcllib_nns.sh: line 49: nns: command not found
+Fri Mar 17 23:44:23 2023 - ERROR - oe_test_tcllib_nns.sh line 50
+oe_test_tcllib_nns.sh: line 51: kill: (697) - No such process
+Fri Mar 17 23:44:23 2023 - ERROR - oe_test_tcllib_nns.sh line 52
+oe_test_tcllib_nns.sh: line 53: tcldocstrip: command not found
+Fri Mar 17 23:44:24 2023 - ERROR - oe_test_tcllib_nns.sh line 54
+oe_test_tcllib_nns.sh: line 55: tcldocstrip: command not found
+Fri Mar 17 23:44:24 2023 - ERROR - oe_test_tcllib_nns.sh line 56
+grep: outputfile: No such file or directory
+Fri Mar 17 23:44:25 2023 - ERROR - oe_test_tcllib_nns.sh line 58
+oe_test_tcllib_nns.sh: line 59: pt: command not found
+Fri Mar 17 23:44:25 2023 - ERROR - oe_test_tcllib_nns.sh line 60
+grep: calculator.tcl: No such file or directory
+Fri Mar 17 23:44:26 2023 - ERROR - oe_test_tcllib_nns.sh line 62
+Fri Mar 17 23:44:27 2023 - INFO  - End to run test.
+Fri Mar 17 23:44:27 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:44:28 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:44:28 2023 - WARN  - no thing to do.
+Fri Mar 17 23:44:29 2023 - INFO  - End to restore the test environment.

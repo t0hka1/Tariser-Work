@@ -1,0 +1,31 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:34:43 2023 - INFO  - Start to run test.
+Fri Mar 17 18:34:47 2023 - ERROR - oe_test_openssl_encrypte_decrypte_emails.sh line 31
+spawn openssl req -x509 -key rsakey.pem -days 365 -out mycert-rsa.pem -new
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:CH
+State or Province Name (full name) [Some-State]:shanxi
+Locality Name (eg, city) []:xian
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:openEuler
+Organizational Unit Name (eg, section) []:develop
+Common Name (e.g. server FQDN or YOUR name) []:www.openeuler.org
+Email Address []:public@openeuler.io
+into your certificate request.
+-----BEGIN CERTIFICATE-----
+Fri Mar 17 18:34:48 2023 - INFO  - End to run test.
+Fri Mar 17 18:34:49 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:34:49 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 18:34:50 2023 - INFO  - End to restore the test environment.

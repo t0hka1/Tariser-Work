@@ -1,0 +1,67 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:33:54 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 14:34:18 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 14:34:18 2023 - INFO  - Start to run test.
+spawn htop
+h
+qError opening terminal: unknown.
+spawn htop
+S qError opening terminal: unknown.
+spawn htop
+/htop
+qError opening terminal: unknown.
+spawn htop
+'92'htop
+qError opening terminal: unknown.
+spawn htop
+tqError opening terminal: unknown.
+spawn htop
+< qError opening terminal: unknown.
+spawn htop
+/htop
+93qError opening terminal: unknown.
+spawn htop
+/htop
+91qError opening terminal: unknown.
+spawn htop
+/htop
+k qError opening terminal: unknown.
+spawn htop
+cqError opening terminal: unknown.
+spawn htop
+UqError opening terminal: unknown.
+spawn htop
+sqqError opening terminal: unknown.
+spawn htop
+lqqError opening terminal: unknown.
+spawn htop
+IqError opening terminal: unknown.
+spawn htop
+tqError opening terminal: unknown.
+spawn htop
+t+qError opening terminal: unknown.
+spawn htop
+u qError opening terminal: unknown.
+spawn htop
+MqError opening terminal: unknown.
+spawn htop
+PqError opening terminal: unknown.
+spawn htop
+TqError opening terminal: unknown.
+spawn htop
+KqError opening terminal: unknown.
+spawn htop
+HqError opening terminal: unknown.
+spawn htop
+pqError opening terminal: unknown.
+Fri Mar 17 14:34:28 2023 - INFO  - End to run test.
+Fri Mar 17 14:34:29 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 14:34:30 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 14:34:48 2023 - INFO  - End to restore the test environment.

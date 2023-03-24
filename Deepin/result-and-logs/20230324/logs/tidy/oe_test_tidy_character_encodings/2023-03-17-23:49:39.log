@@ -1,0 +1,238 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:49:41 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 23:50:22 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 23:50:23 2023 - INFO  - Start testing...
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+&frac12;
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+&Scaron;
+WINDOWS-1252
+ISO-2022-KR
+UTF-8
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+&para;
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+&sect;
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+&boxV;
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+./tidied.html	UTF-16LE
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+./tidied.html	UTF-16BE
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+./tidied.html	UTF-16BE
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+Fri Mar 17 23:50:29 2023 - ERROR - Failed to use option: -big5
+Fri Mar 17 23:50:29 2023 - ERROR - oe_test_tidy_character_encodings.sh line 101
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+WINDOWS-1252
+Fri Mar 17 23:50:30 2023 - INFO  - Finish test!
+Fri Mar 17 23:50:31 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:50:31 2023 - INFO  - start environment cleanup.
+Fri Mar 17 23:50:50 2023 - INFO  - Finish environment cleanup!

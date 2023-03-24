@@ -1,0 +1,27 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:08:55 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:08:59 2023 - ERROR - pkgs:(libwbxml) not found
+Fri Mar 17 16:09:00 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:09:00 2023 - INFO  - Start to run test.
+oe_test_libwbxml_xml2wbxml.sh: line 35: xml2wbxml: command not found
+Fri Mar 17 16:09:01 2023 - ERROR - oe_test_libwbxml_xml2wbxml.sh line 36
+Fri Mar 17 16:09:01 2023 - ERROR - oe_test_libwbxml_xml2wbxml.sh line 38
+cp: cannot stat 'output.wbxml': No such file or directory
+oe_test_libwbxml_xml2wbxml.sh: line 40: xml2wbxml: command not found
+Fri Mar 17 16:09:02 2023 - ERROR - oe_test_libwbxml_xml2wbxml.sh line 41
+strings: 'output.wbxml': No such file
+oe_test_libwbxml_xml2wbxml.sh: line 44: xml2wbxml: command not found
+Fri Mar 17 16:09:03 2023 - ERROR - oe_test_libwbxml_xml2wbxml.sh line 45
+strings: 'output.wbxml': No such file
+Fri Mar 17 16:09:03 2023 - INFO  - End to run test.
+Fri Mar 17 16:09:04 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:09:04 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 16:09:05 2023 - WARN  - no thing to do.
+Fri Mar 17 16:09:05 2023 - INFO  - End to restore the test environment.

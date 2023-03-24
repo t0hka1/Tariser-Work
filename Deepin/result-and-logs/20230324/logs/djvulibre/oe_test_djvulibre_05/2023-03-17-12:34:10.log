@@ -1,0 +1,69 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:34:12 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:34:16 2023 - ERROR - pkgs:(djvulibre) not found
+spawn any2djvu test.pdf
+couldn't execute "any2djvu": no such file or directory
+    while executing
+"spawn any2djvu test.pdf"
+Fri Mar 17 12:34:17 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:34:18 2023 - ERROR - Check test.djvu not exist.
+Fri Mar 17 12:34:18 2023 - ERROR - oe_test_djvulibre_05.sh line 42
+Fri Mar 17 12:34:19 2023 - ERROR - Check djvused --help failed.
+Fri Mar 17 12:34:19 2023 - ERROR - oe_test_djvulibre_05.sh line 45
+oe_test_djvulibre_05.sh: line 46: djvused: command not found
+Fri Mar 17 12:34:20 2023 - ERROR - Check djvused -e failed.
+Fri Mar 17 12:34:20 2023 - ERROR - oe_test_djvulibre_05.sh line 47
+oe_test_djvulibre_05.sh: line 50: djvused: command not found
+Fri Mar 17 12:34:21 2023 - ERROR - Check djvused -f failed.
+Fri Mar 17 12:34:21 2023 - ERROR - oe_test_djvulibre_05.sh line 51
+Fri Mar 17 12:34:22 2023 - ERROR - Check djvuserve help failed.
+Fri Mar 17 12:34:22 2023 - ERROR - oe_test_djvulibre_05.sh line 54
+oe_test_djvulibre_05.sh: line 55: djvuserve: command not found
+Fri Mar 17 12:34:23 2023 - ERROR - Check djvused failed.
+Fri Mar 17 12:34:24 2023 - ERROR - oe_test_djvulibre_05.sh line 56
+Fri Mar 17 12:34:24 2023 - ERROR - Check djvutoxml --help failed.
+Fri Mar 17 12:34:25 2023 - ERROR - oe_test_djvulibre_05.sh line 59
+oe_test_djvulibre_05.sh: line 60: djvutoxml: command not found
+Fri Mar 17 12:34:25 2023 - ERROR - Check djvutoxml --with-anno failed.
+Fri Mar 17 12:34:26 2023 - ERROR - oe_test_djvulibre_05.sh line 61
+Fri Mar 17 12:34:26 2023 - ERROR - Check djvutoxml not exist.
+Fri Mar 17 12:34:26 2023 - ERROR - oe_test_djvulibre_05.sh line 63
+oe_test_djvulibre_05.sh: line 64: djvutoxml: command not found
+Fri Mar 17 12:34:27 2023 - ERROR - Check djvutoxml --with-text failed.
+Fri Mar 17 12:34:27 2023 - ERROR - oe_test_djvulibre_05.sh line 65
+Fri Mar 17 12:34:28 2023 - ERROR - Check djvutoxml1 not exist.
+Fri Mar 17 12:34:28 2023 - ERROR - oe_test_djvulibre_05.sh line 67
+oe_test_djvulibre_05.sh: line 68: djvutoxml: command not found
+Fri Mar 17 12:34:29 2023 - ERROR - Check djvutoxml --page failed.
+Fri Mar 17 12:34:29 2023 - ERROR - oe_test_djvulibre_05.sh line 69
+Fri Mar 17 12:34:30 2023 - ERROR - Check djvutoxml2 not exist.
+Fri Mar 17 12:34:30 2023 - ERROR - oe_test_djvulibre_05.sh line 71
+Fri Mar 17 12:34:31 2023 - ERROR - Check djvutxt failed.
+Fri Mar 17 12:34:31 2023 - ERROR - oe_test_djvulibre_05.sh line 74
+oe_test_djvulibre_05.sh: line 75: djvutxt: command not found
+Fri Mar 17 12:34:32 2023 - ERROR - Check djvutxt --page failed.
+Fri Mar 17 12:34:32 2023 - ERROR - oe_test_djvulibre_05.sh line 76
+Fri Mar 17 12:34:33 2023 - ERROR - Check djvutxt1 not exist.
+Fri Mar 17 12:34:33 2023 - ERROR - oe_test_djvulibre_05.sh line 78
+oe_test_djvulibre_05.sh: line 79: djvutxt: command not found
+Fri Mar 17 12:34:34 2023 - ERROR - Check djvutxt -detail=char failed.
+Fri Mar 17 12:34:34 2023 - ERROR - oe_test_djvulibre_05.sh line 80
+Fri Mar 17 12:34:35 2023 - ERROR - Check djvutxt2 not exist.
+Fri Mar 17 12:34:35 2023 - ERROR - oe_test_djvulibre_05.sh line 82
+oe_test_djvulibre_05.sh: line 83: djvutxt: command not found
+Fri Mar 17 12:34:36 2023 - ERROR - Check djvutxt -escape failed.
+Fri Mar 17 12:34:36 2023 - ERROR - oe_test_djvulibre_05.sh line 84
+Fri Mar 17 12:34:37 2023 - ERROR - Check djvutxt3 not exist.
+Fri Mar 17 12:34:37 2023 - ERROR - oe_test_djvulibre_05.sh line 86
+Fri Mar 17 12:34:38 2023 - INFO  - End to run test.
+Fri Mar 17 12:34:38 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:34:39 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:34:39 2023 - WARN  - no thing to do.
+Fri Mar 17 12:34:40 2023 - INFO  - End to restore the test environment.

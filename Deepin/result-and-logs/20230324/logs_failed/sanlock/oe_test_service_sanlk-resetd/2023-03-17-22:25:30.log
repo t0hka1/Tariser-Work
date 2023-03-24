@@ -1,0 +1,34 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:25:33 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 22:26:37 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 22:26:38 2023 - INFO  - Start testing...
+Fri Mar 17 22:26:45 2023 - ERROR - sanlk-resetd.service restart failed
+Fri Mar 17 22:26:46 2023 - ERROR - ../common/common_lib.sh line 37
+Fri Mar 17 22:26:52 2023 - ERROR - sanlk-resetd.service stop failed
+Fri Mar 17 22:26:53 2023 - ERROR - ../common/common_lib.sh line 42
+Fri Mar 17 22:27:00 2023 - ERROR - sanlk-resetd.service start failed
+Fri Mar 17 22:27:00 2023 - ERROR - ../common/common_lib.sh line 47
+/etc/systemd/system/multi-user.target.wants/sanlk-resetd.service
+Removed /etc/systemd/system/multi-user.target.wants/sanlk-resetd.service.
+find: ‘/etc/systemd/system/multi-user.target.wants/sanlk-resetd.service’: No such file or directory
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 17 22:26:38 deepin-rv-builder-2 sanlk-resetd[809]: setup_wdmd connect failed -111
+Mar 17 22:26:38 deepin-rv-builder-2 sanlk-resetd[809]: failed to set up wdmd
+Mar 17 22:26:39 deepin-rv-builder-2 systemd[1]: sanlk-resetd.service: Failed with result 'exit-code'.
+Mar 17 22:26:53 deepin-rv-builder-2 sanlk-resetd[1010]: setup_wdmd connect failed -111
+Mar 17 22:26:53 deepin-rv-builder-2 sanlk-resetd[1010]: failed to set up wdmd
+Mar 17 22:26:53 deepin-rv-builder-2 systemd[1]: sanlk-resetd.service: Failed with result 'exit-code'.
+Fri Mar 17 22:27:12 2023 - ERROR - There is an error message for the log of sanlk-resetd.service
+Fri Mar 17 22:27:13 2023 - ERROR - ../common/common_lib.sh line 28
+Failed to reload sanlk-resetd.service: Job type reload is not applicable for unit sanlk-resetd.service.
+Fri Mar 17 22:27:15 2023 - INFO  - Finish test!
+Fri Mar 17 22:27:15 2023 - ERROR - failed to execute the case.
+Fri Mar 17 22:27:16 2023 - INFO  - start environment cleanup.
+Fri Mar 17 22:28:08 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,86 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:08:50 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:08:54 2023 - ERROR - pkgs:(rubygem-rdoc) not found
+Successfully installed webrick-1.8.1
+Parsing documentation for webrick-1.8.1
+Installing ri documentation for webrick-1.8.1
+Done installing documentation for webrick after 10 seconds
+1 gem installed
+Fri Mar 17 22:09:12 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 22:09:12 2023 - INFO  - Start to run test.
+No entry for terminal type "unknown";
+using dumb terminal settings.
+Usage: ri [options] [name ...]
+No entry for terminal type "unknown";
+using dumb terminal settings.
+ri 6.3.3
+spawn ri --server
+No entry for terminal type "unknown";
+using dumb terminal settings.
+[2023-03-17 22:09:21] INFO  WEBrick 1.8.1
+[2023-03-17 22:09:21] INFO  ruby 3.0.3 (2021-11-24) [riscv64-linux-gnu]
+[2023-03-17 22:09:21] INFO  WEBrick::HTTPServer#start: pid=3111 port=8214
+^C[2023-03-17 22:09:22] INFO  going to shutdown ...
+[2023-03-17 22:09:22] INFO  WEBrick::HTTPServer#start done.
+[2023-03-17 22:09:21] INFO  WEBrick 1.8.1
+[2023-03-17 22:09:21] INFO  ruby 3.0.3 (2021-11-24) [riscv64-linux-gnu]
+[2023-03-17 22:09:21] INFO  WEBrick::HTTPServer#start: pid=3111 port=8214
+^C[2023-03-17 22:09:22] INFO  going to shutdown ...
+[2023-03-17 22:09:22] INFO  WEBrick::HTTPServer#start done.
+No entry for terminal type "unknown";
+using dumb terminal settings.
+/usr/share/ri/3.0.0/system
+/usr/share/ri/3.0.0/site
+spawn ri --profile
+No entry for terminal type "unknown";
+using dumb terminal settings.
+<internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require': [1mcannot load such file -- profile ([1;4mLoadError[m[1m)[m
+	from <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'
+	from /usr/lib/ruby/3.0.0/rdoc/ri/driver.rb:404:in `initialize'
+	from /usr/lib/ruby/3.0.0/rdoc/ri/driver.rb:389:in `new'
+	from /usr/lib/ruby/3.0.0/rdoc/ri/driver.rb:389:in `run'
+	from /usr/lib/ruby/gems/3.0.0/gems/rdoc-6.3.3/exe/ri:12:in `<top (required)>'
+	from /usr/bin/ri:23:in `load'
+	from /usr/bin/ri:23:in `<main>'
+expect: spawn id exp4 not open
+    while executing
+"expect eof"
+<internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require': [1mcannot load such file -- profile ([1;4mLoadError[m[1m)[m
+	from <internal:/usr/lib/ruby/vendor_ruby/rubygems/core_ext/kernel_require.rb>:85:in `require'
+	from /usr/lib/ruby/3.0.0/rdoc/ri/driver.rb:404:in `initialize'
+	from /usr/lib/ruby/3.0.0/rdoc/ri/driver.rb:389:in `new'
+	from /usr/lib/ruby/3.0.0/rdoc/ri/driver.rb:389:in `run'
+	from /usr/lib/ruby/gems/3.0.0/gems/rdoc-6.3.3/exe/ri:12:in `<top (required)>'
+	from /usr/bin/ri:23:in `load'
+	from /usr/bin/ri:23:in `<main>'
+expect: spawn id exp4 not open
+
+Generating RI format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_ri/doc...
+Parsing sources...
+No entry for terminal type "unknown";
+using dumb terminal settings.
+{:ancestors=>{"Customer"=>["Object"]},
+ :attributes=>{},
+ :class_methods=>{"Customer"=>["new"]},
+ :c_class_variables=>{},
+ :c_singleton_class_variables=>{},
+ :encoding=>#<Encoding:UTF-8>,
+ :instance_methods=>{"Customer"=>["display_details", "total_no_of_customers"]},
+ :main=>nil,
+ :modules=>["Customer"],
+ :pages=>[],
+ :title=>nil}
+Fri Mar 17 22:09:36 2023 - INFO  - End of the test.
+Fri Mar 17 22:09:36 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 22:09:37 2023 - INFO  - Start to restore the test environment.
+ERROR:  While executing gem ... (Gem::DependencyRemovalException)
+    Uninstallation aborted due to dependent gem(s)
+Fri Mar 17 22:09:40 2023 - WARN  - no thing to do.
+Fri Mar 17 22:09:40 2023 - INFO  - Finish restoring the test environment.

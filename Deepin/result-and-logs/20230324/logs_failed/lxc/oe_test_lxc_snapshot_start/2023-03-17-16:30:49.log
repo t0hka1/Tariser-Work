@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:30:52 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:30:55 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_snapshot_start.sh: line 29: rpm: command not found
+Fri Mar 17 16:30:56 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:30:56 2023 - INFO  - Start to run test.
+oe_test_lxc_snapshot_start.sh: line 35: lxc-create: command not found
+Fri Mar 17 16:30:57 2023 - ERROR - Failed to set up container.
+Fri Mar 17 16:30:57 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 36
+Fri Mar 17 16:30:58 2023 - ERROR - Check lxc-start --help failed.
+Fri Mar 17 16:30:59 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 38
+Fri Mar 17 16:30:59 2023 - ERROR - Check lxc-start --usage failed.
+Fri Mar 17 16:31:00 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 40
+oe_test_lxc_snapshot_start.sh: line 41: lxc-start: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:31:00 2023 - ERROR - Check lxc-start --version failed.
+Fri Mar 17 16:31:01 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 42
+oe_test_lxc_snapshot_start.sh: line 43: lxc-start: command not found
+Fri Mar 17 16:31:01 2023 - ERROR - Check lxc-start -n failed.
+Fri Mar 17 16:31:02 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 44
+oe_test_lxc_snapshot_start.sh: line 45: lxc-info: command not found
+Fri Mar 17 16:31:02 2023 - ERROR - Check lxc-info failed.
+Fri Mar 17 16:31:03 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 46
+Fri Mar 17 16:31:03 2023 - ERROR - Check lxc-snapshot --help failed.
+Fri Mar 17 16:31:04 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 49
+Fri Mar 17 16:31:04 2023 - ERROR - Check lxc-snapshot --usage failed.
+Fri Mar 17 16:31:05 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 51
+oe_test_lxc_snapshot_start.sh: line 52: lxc-snapshot: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:31:06 2023 - ERROR - Check lxc-snapshot --version failed.
+Fri Mar 17 16:31:06 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 53
+oe_test_lxc_snapshot_start.sh: line 54: lxc-snapshot: command not found
+Fri Mar 17 16:31:07 2023 - ERROR - Check lxc-snapshot -L failed.
+Fri Mar 17 16:31:07 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 55
+oe_test_lxc_snapshot_start.sh: line 56: lxc-stop: command not found
+Fri Mar 17 16:31:08 2023 - ERROR - Check lxc-stop -n failed.
+Fri Mar 17 16:31:08 2023 - ERROR - oe_test_lxc_snapshot_start.sh line 57
+Fri Mar 17 16:31:09 2023 - INFO  - End to run test.
+Fri Mar 17 16:31:09 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:31:10 2023 - INFO  - Start to restore the tet environment.
+oe_test_lxc_snapshot_start.sh: line 63: lxc-stop: command not found
+oe_test_lxc_snapshot_start.sh: line 64: lxc-destroy: command not found
+Fri Mar 17 16:31:10 2023 - WARN  - no thing to do.
+Fri Mar 17 16:31:11 2023 - INFO  - End to restore the tet environment.

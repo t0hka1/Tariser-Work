@@ -1,0 +1,30 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:44:28 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 10:44:33 2023 - ERROR - pkgs:(audit-help) not found
+Fri Mar 17 10:44:34 2023 - INFO  - End to prepare the environment
+Fri Mar 17 10:44:34 2023 - INFO  - Start to run test.
+Failed to restart auditd.service: Unit auditd.service not found.
+oe_test_audit_fetch_file_in_order.sh: line 36: auditctl: command not found
+Fri Mar 17 10:44:35 2023 - ERROR - delete failed
+Fri Mar 17 10:44:36 2023 - ERROR - oe_test_audit_fetch_file_in_order.sh line 37
+cp: cannot stat '/usr/share/doc/audit-help/rules/30-ospp-v42.rules': No such file or directory
+cp: cannot stat '/usr/share/doc/audit-help/rules/10-base-config.rules': No such file or directory
+oe_test_audit_fetch_file_in_order.sh: line 41: augenrules: command not found
+Fri Mar 17 10:44:38 2023 - ERROR - load failed
+Fri Mar 17 10:44:39 2023 - ERROR - oe_test_audit_fetch_file_in_order.sh line 42
+oe_test_audit_fetch_file_in_order.sh: line 43: auditctl: command not found
+Fri Mar 17 10:44:39 2023 - ERROR - add failed
+Fri Mar 17 10:44:40 2023 - ERROR - oe_test_audit_fetch_file_in_order.sh line 44
+Fri Mar 17 10:44:40 2023 - INFO  - End to run test.
+Fri Mar 17 10:44:41 2023 - ERROR - failed to execute the case.
+Fri Mar 17 10:44:41 2023 - INFO  - Start to restore the test environment.
+oe_test_audit_fetch_file_in_order.sh: line 50: auditctl: command not found
+Fri Mar 17 10:44:42 2023 - WARN  - no thing to do.
+Fri Mar 17 10:44:42 2023 - INFO  - End to restore the test environment.

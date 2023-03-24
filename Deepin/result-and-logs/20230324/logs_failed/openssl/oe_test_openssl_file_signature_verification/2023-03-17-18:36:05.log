@@ -1,0 +1,19 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:36:07 2023 - INFO  - Start to run test.
+Fri Mar 17 18:36:13 2023 - ERROR - oe_test_openssl_file_signature_verification.sh line 26
+Verified OK
+Fri Mar 17 18:36:17 2023 - ERROR - oe_test_openssl_file_signature_verification.sh line 37
+writing RSA key
+-----BEGIN PUBLIC KEY-----
+Verified OK
+Fri Mar 17 18:36:18 2023 - INFO  - End to run test.
+Fri Mar 17 18:36:19 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:36:19 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 18:36:20 2023 - INFO  - End to restore the test environment.

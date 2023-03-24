@@ -1,0 +1,1430 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:24:14 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:24:39 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:24:39 2023 - INFO  - Start to run test.
+SYMBOL TABLES start  =======================================
+SYMBOL TABLES finish =======================================
+SYMBOL TABLES SUMMARY start  =======================================
+SYMBOL TABLES SUMMARY finish =======================================
+SYMBOLS start  =======================================
+SYMBOLS finish =======================================
+CSYMBOLS start  =======================================
+CSYMBOLS finish =======================================
+LANGUAGE SYMBOLS start  =======================================
+LANGUAGE SYMBOLS finish =======================================
+:1:  . top . include
+/usr/share/swig4.0/swig.swg:317:  . top . include . include
+/usr/share/swig4.0/swigwarnings.swg:39:  . top . include . include . include
+/usr/share/swig4.0/swig.swg:318:  . top . include . include
+/usr/share/swig4.0/swigfragments.swg:13:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:26:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:30:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:34:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:43:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:55:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:66:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:74:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:78:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:82:  . top . include . include . fragment
+/usr/share/swig4.0/swigfragments.swg:86:  . top . include . include . fragment
+/usr/share/swig4.0/swig.swg:450:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:450:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:499:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:491:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:507:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:500:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:516:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:508:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:524:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:517:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:537:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:530:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:546:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:539:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:551:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:548:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:556:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:553:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:564:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:560:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:570:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:566:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:584:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:574:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:596:  . top . include . typemap
+/usr/share/swig4.0/swig.swg:586:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/swig.swg:702:  . top . include . insert
+:3:  . top . include
+/usr/share/swig4.0/java/java.swg:7:  . top . include . include
+/usr/share/swig4.0/java/javahead.swg:48:  . top . include . include . insert
+/usr/share/swig4.0/java/javahead.swg:69:  . top . include . include . insert
+/usr/share/swig4.0/java/javahead.swg:97:  . top . include . include . insert
+/usr/share/swig4.0/java/javahead.swg:103:  . top . include . include . insert
+/usr/share/swig4.0/java/java.swg:28:  . top . include . fragment
+/usr/share/swig4.0/java/java.swg:55:  . top . include . fragment
+/usr/share/swig4.0/java/java.swg:63:  . top . include . fragment
+/usr/share/swig4.0/java/java.swg:67:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:66:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:66:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:68:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:67:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:67:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:69:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:68:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:68:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:70:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:69:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:69:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:71:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:70:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:70:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:72:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:71:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:71:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:73:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:72:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:72:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:74:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:73:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:73:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:75:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:74:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:74:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:76:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:75:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:75:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:77:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:76:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:76:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:78:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:77:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:77:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:79:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:78:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:78:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:80:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:79:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:79:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:82:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:80:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:83:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:82:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:82:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:84:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:83:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:83:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:85:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:84:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:84:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:86:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:85:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:85:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:87:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:86:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:86:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:88:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:87:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:87:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:89:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:88:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:88:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:90:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:89:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:89:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:91:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:90:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:90:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:92:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:91:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:91:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:93:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:92:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:92:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:94:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:93:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:93:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:95:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:94:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:94:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:96:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:95:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:95:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:98:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:96:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:99:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:98:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:98:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:100:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:99:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:99:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:101:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:100:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:100:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:102:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:101:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:101:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:103:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:102:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:102:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:104:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:103:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:103:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:105:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:104:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:104:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:106:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:105:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:105:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:107:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:106:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:106:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:108:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:107:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:107:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:109:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:108:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:108:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:110:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:109:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:109:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:111:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:110:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:110:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:112:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:111:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:111:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:114:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:112:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:115:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:114:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:114:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:116:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:115:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:115:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:117:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:116:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:116:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:118:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:117:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:117:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:119:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:118:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:118:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:120:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:119:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:119:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:121:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:120:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:120:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:122:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:121:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:121:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:123:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:122:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:122:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:124:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:123:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:123:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:125:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:124:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:124:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:126:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:125:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:125:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:127:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:126:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:126:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:129:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:127:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:127:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:130:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:129:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:129:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:129:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:129:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:131:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:130:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:130:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:130:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:130:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:134:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:131:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:131:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:131:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:131:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:135:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:134:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:136:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:135:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:137:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:136:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:138:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:137:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:139:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:138:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:140:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:139:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:141:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:140:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:142:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:141:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:143:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:142:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:144:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:143:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:145:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:144:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:146:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:145:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:147:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:146:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:148:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:147:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:149:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:148:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:150:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:149:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:151:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:150:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:152:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:151:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:154:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:152:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:155:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:154:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:156:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:155:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:157:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:156:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:158:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:157:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:159:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:158:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:160:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:159:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:161:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:160:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:162:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:161:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:163:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:162:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:164:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:163:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:165:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:164:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:166:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:165:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:167:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:166:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:168:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:167:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:169:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:168:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:170:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:169:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:171:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:170:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:172:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:171:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:174:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:172:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:175:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:174:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:176:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:175:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:177:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:176:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:178:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:177:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:179:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:178:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:180:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:179:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:181:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:180:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:182:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:181:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:183:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:182:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:184:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:183:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:185:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:184:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:186:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:185:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:187:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:186:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:188:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:187:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:189:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:188:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:190:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:189:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:191:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:190:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:192:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:191:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:195:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:192:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:196:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:195:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:197:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:196:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:198:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:197:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:200:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:198:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:201:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:200:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:202:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:201:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:204:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:202:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:205:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:204:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:206:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:205:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:208:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:206:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:209:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:208:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:210:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:209:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:212:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:210:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:213:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:212:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:214:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:213:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:217:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:214:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:218:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:217:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:219:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:218:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:224:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:219:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:225:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:225:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:228:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:228:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:231:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:230:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:233:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:231:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:245:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:233:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:234:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:235:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:236:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:237:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:238:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:239:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:240:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:241:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:242:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:243:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:245:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:259:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:247:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:248:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:249:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:250:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:251:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:252:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:253:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:254:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:255:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:256:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:257:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:259:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:262:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:261:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:263:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:262:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:264:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:263:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:265:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:264:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:266:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:265:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:267:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:266:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:268:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:267:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:269:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:268:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:270:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:269:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:271:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:270:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:272:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:271:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:273:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:272:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:275:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:273:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:289:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:275:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:276:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:277:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:278:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:279:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:280:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:281:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:282:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:283:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:284:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:285:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:287:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:303:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:289:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:290:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:291:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:292:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:293:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:294:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:295:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:296:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:297:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:298:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:299:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:301:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:303:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:303:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:304:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:304:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:305:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:305:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:306:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:306:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:307:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:307:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:308:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:308:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:309:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:309:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:310:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:310:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:311:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:311:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:312:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:312:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:313:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:313:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:314:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:314:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:315:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:315:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:344:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:319:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:371:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:346:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:392:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:375:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:414:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:395:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:395:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:417:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:416:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:420:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:417:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:426:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:420:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:434:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:428:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:443:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:436:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:445:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:445:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:446:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:446:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:448:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:447:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:451:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:448:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:458:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:451:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:459:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:459:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:460:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:460:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:463:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:462:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:464:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:463:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:465:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:464:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:468:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:465:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:470:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:470:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:475:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:475:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:478:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:477:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:480:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:478:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:493:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:480:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:481:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:482:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:483:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:484:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:485:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:486:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:487:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:488:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:489:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:490:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:493:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:509:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:495:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:496:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:497:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:498:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:499:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:500:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:501:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:502:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:503:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:504:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:505:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:509:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:512:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:511:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:513:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:512:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:514:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:513:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:515:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:514:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:516:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:515:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:517:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:516:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:518:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:517:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:519:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:518:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:520:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:519:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:521:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:520:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:522:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:521:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:523:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:522:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:525:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:523:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:539:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:525:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:526:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:527:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:528:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:529:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:530:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:531:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:532:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:533:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:534:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:535:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:537:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:554:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:539:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:540:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:541:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:542:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:543:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:544:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:545:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:546:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:547:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:548:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:549:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:551:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:554:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:554:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:555:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:555:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:556:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:556:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:557:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:557:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:558:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:558:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:559:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:559:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:560:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:560:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:561:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:561:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:562:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:562:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:563:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:563:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:564:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:564:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:565:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:565:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:566:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:566:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:596:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:570:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:625:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:598:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:644:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:627:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:647:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:646:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:650:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:647:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:656:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:656:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:664:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:664:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:674:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:670:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:679:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:679:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:681:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:680:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:684:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:681:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:684:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:684:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:692:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:685:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:697:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:697:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:702:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:702:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:704:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:704:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:710:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:705:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:712:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:712:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:714:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:714:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:717:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:717:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:719:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:719:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:722:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:722:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:724:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:724:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:731:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:731:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:737:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:737:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:739:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:739:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:741:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:741:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:744:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:743:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:743:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:745:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:744:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:746:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:745:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:749:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:746:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:746:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:746:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:746:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:749:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:749:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:750:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:750:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:754:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:751:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:751:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:760:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:754:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:754:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:768:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:762:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:762:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:777:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:770:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:770:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:780:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:779:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:779:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:780:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:780:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:780:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:781:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:781:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:781:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:783:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:782:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:782:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:786:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:783:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:783:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:805:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:786:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:787:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:788:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:789:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:790:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:791:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:792:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:793:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:794:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:795:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:796:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:797:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:798:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:799:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:800:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:801:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:802:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:803:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:805:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:826:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:807:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:808:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:809:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:810:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:811:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:812:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:813:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:814:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:815:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:816:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:817:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:818:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:819:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:820:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:821:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:822:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:823:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:824:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:826:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:847:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:828:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:829:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:830:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:831:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:832:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:833:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:834:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:835:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:836:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:837:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:838:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:839:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:840:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:841:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:842:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:843:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:844:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:845:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:847:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:850:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:849:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:851:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:850:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:852:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:851:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:853:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:852:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:854:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:853:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:855:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:854:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:856:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:855:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:857:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:856:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:858:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:857:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:859:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:858:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:860:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:859:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:861:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:860:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:862:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:861:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:863:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:862:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:864:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:863:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:865:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:864:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:866:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:865:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:867:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:866:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:869:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:867:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:890:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:869:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:870:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:871:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:872:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:873:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:874:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:875:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:876:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:877:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:878:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:879:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:880:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:881:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:882:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:883:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:884:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:885:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:886:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:888:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:914:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:890:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:891:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:892:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:893:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:894:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:895:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:896:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:897:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:898:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:899:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:900:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:901:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:902:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:903:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:904:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:905:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:906:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:907:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:909:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:920:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:915:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:916:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:918:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:926:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:921:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:922:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:924:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:932:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:927:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:928:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:930:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:940:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:933:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:934:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:935:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:936:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:938:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:950:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:941:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:942:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:943:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:944:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:945:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:946:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:948:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:960:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:951:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:952:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:953:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:954:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:955:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:956:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:958:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:965:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:961:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:963:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:971:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:966:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:967:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:969:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:977:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:972:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:973:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:975:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:985:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:978:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:979:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:980:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:981:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:983:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:989:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:987:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:993:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:991:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:997:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:995:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1001:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:999:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1005:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1003:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1009:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1007:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1013:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1011:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1017:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1015:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1021:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1019:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1034:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1022:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1023:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1024:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1025:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1026:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1027:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1029:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1043:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1034:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1035:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1036:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1037:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1038:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1043:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1048:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1045:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1045:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1045:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1045:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1045:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1048:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1052:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1052:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1057:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1057:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1067:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1061:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1082:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1067:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1067:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1068:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1068:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1069:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1069:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1070:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1070:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1071:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1071:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1072:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1072:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1073:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1073:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1074:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1074:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1075:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1075:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1076:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1076:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1077:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1077:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1078:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1078:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1079:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1079:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1080:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1081:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1083:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1082:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1082:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1082:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1082:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1103:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1083:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1084:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1085:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1086:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1087:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1088:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1089:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1090:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1091:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1092:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1093:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1094:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1095:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1096:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1097:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1098:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1099:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1100:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1102:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1104:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1103:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1105:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1104:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1104:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1104:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1104:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1109:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1105:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1124:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1109:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1109:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1110:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1110:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1111:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1111:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1112:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1112:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1113:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1113:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1114:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1114:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1115:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1115:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1116:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1116:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1117:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1117:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1118:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1118:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1119:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1119:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1120:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1120:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1121:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1121:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1122:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1122:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1127:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1125:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1125:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1125:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1125:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1148:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1128:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1129:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1130:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1131:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1132:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1133:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1134:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1135:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1136:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1137:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1138:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1139:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1140:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1141:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1142:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1143:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1144:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1145:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1146:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1151:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1149:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1154:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1152:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1157:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1155:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1160:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1158:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1164:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1161:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1161:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1168:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1165:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1172:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1171:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1173:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1172:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1174:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1173:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1175:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1174:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1178:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1175:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1181:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1181:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1183:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1183:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1185:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1185:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1189:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1189:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1191:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1190:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1194:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1191:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1195:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1194:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1194:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1194:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1194:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1194:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1194:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1196:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1195:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1195:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1195:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1195:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1195:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1195:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1197:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1196:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1196:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1196:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1196:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1196:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1196:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1198:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1197:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1197:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1197:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1197:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1197:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1197:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1272:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1198:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1198:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1198:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1198:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1198:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1198:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1272:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1272:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1272:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1272:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1273:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1273:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1273:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1273:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1273:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1273:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1273:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1280:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1280:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1314:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1314:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1324:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1316:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1335:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1326:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1342:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1342:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1349:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1349:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1356:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1356:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1369:  . top . include . pragma
+/usr/share/swig4.0/java/java.swg:1373:  . top . include . pragma
+/usr/share/swig4.0/java/java.swg:1373:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1373:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1374:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1374:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1377:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1377:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1378:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1378:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1381:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1381:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1382:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1382:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1383:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1383:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1387:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1386:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1388:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1387:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1389:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1388:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1390:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1389:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1391:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1390:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1399:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1391:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1402:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1400:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1411:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1403:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1413:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1412:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1413:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1413:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1417:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1415:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1419:  . top . include . typemap
+/usr/share/swig4.0/java/java.swg:1419:  . top . include . typemap . typemapitem
+/usr/share/swig4.0/java/java.swg:1420:  . top . include . apply
+/usr/share/swig4.0/java/java.swg:1420:  . top . include . apply . typemapitem
+/usr/share/swig4.0/java/java.swg:1423:  . top . include . include
+/usr/share/swig4.0/java/java.swg:1426:  . top . include . include
+/usr/share/swig4.0/java/enumtypesafe.swg:11:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:10:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:12:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:11:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:14:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:12:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:16:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:16:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:17:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:17:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:21:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:21:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:23:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:22:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:24:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:23:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:26:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:24:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:28:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:26:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:30:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:30:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:33:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:32:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:35:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:33:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:39:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:38:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:40:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:39:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:42:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:40:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:42:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:42:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:43:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:43:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:45:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:45:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:47:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:46:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:48:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:47:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:50:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:48:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:52:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:50:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:54:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:54:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:57:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:56:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:59:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:57:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:63:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:62:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:64:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:63:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:65:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:64:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:66:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:65:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:75:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:66:  . top . include . include . typemap . typemapitem
+/usr/share/swig4.0/java/enumtypesafe.swg:114:  . top . include . include . typemap
+/usr/share/swig4.0/java/enumtypesafe.swg:114:  . top . include . include . typemap . typemapitem
+:4:  . top . include
+example.i:2:  . top . include . module
+example.i:9:  . top . include . insert
+example.i:11:  . top . include . cdecl
+example.i:12:  . top . include . cdecl
+example.i:13:  . top . include . cdecl
+example.i:14:  . top . include . cdecl
+debug-top stage 3
+SCOPES start  =======================================
+Type scope '' (0x3fb5a9e750)
+SCOPES finish =======================================
+---[ typemaps ]--------------------------------------------------------------
+example.i:11: Searching for a suitable 'globalin' typemap for: double My_variable
+example.i:11: Searching for a suitable 'jni' typemap for: double My_variable
+example.i:11: Searching for a suitable 'jtype' typemap for: double My_variable
+example.i:11: Searching for a suitable 'jstype' typemap for: double My_variable
+example.i:11: Searching for a suitable 'jni' typemap for: void My_variable
+example.i:11: Searching for a suitable 'jtype' typemap for: void My_variable
+example.i:11: Searching for a suitable 'default' typemap for: double My_variable
+example.i:11: Searching for a suitable 'arginit' typemap for: double My_variable
+example.i:11: Searching for a suitable 'in' typemap for: double My_variable
+example.i:11: Searching for a suitable 'typecheck' typemap for: double My_variable
+example.i:11: Searching for a suitable 'argout' typemap for: double My_variable
+example.i:11: Searching for a suitable 'check' typemap for: double My_variable
+example.i:11: Searching for a suitable 'freearg' typemap for: double My_variable
+example.i:11: Searching for a suitable 'except' typemap for: void My_variable
+example.i:11: Searching for a suitable 'out' typemap for: void My_variable
+example.i:11: Searching for a suitable 'ret' typemap for: void My_variable
+example.i:11: Searching for a suitable 'jstype' typemap for: double My_variable
+example.i:11: Searching for a suitable 'javain' typemap for: double My_variable
+example.i:11: Searching for a suitable 'jstype' typemap for: void My_variable
+example.i:11: Searching for a suitable 'javaout' typemap for: void My_variable
+example.i:11: Searching for a suitable 'jni' typemap for: double My_variable
+example.i:11: Searching for a suitable 'jtype' typemap for: double My_variable
+example.i:11: Searching for a suitable 'except' typemap for: double My_variable
+example.i:11: Searching for a suitable 'out' typemap for: double My_variable
+example.i:11: Searching for a suitable 'ret' typemap for: double My_variable
+example.i:11: Searching for a suitable 'jstype' typemap for: double My_variable
+example.i:11: Searching for a suitable 'javaout' typemap for: double My_variable
+example.i:12: Searching for a suitable 'jni' typemap for: int n
+example.i:12: Searching for a suitable 'jtype' typemap for: int n
+example.i:12: Searching for a suitable 'jstype' typemap for: int n
+example.i:12: Searching for a suitable 'jni' typemap for: int fact
+example.i:12: Searching for a suitable 'jtype' typemap for: int fact
+example.i:12: Searching for a suitable 'default' typemap for: int n
+example.i:12: Searching for a suitable 'arginit' typemap for: int n
+example.i:12: Searching for a suitable 'in' typemap for: int n
+example.i:12: Searching for a suitable 'typecheck' typemap for: int n
+example.i:12: Searching for a suitable 'argout' typemap for: int n
+example.i:12: Searching for a suitable 'check' typemap for: int n
+example.i:12: Searching for a suitable 'freearg' typemap for: int n
+example.i:12: Searching for a suitable 'except' typemap for: int fact
+example.i:12: Searching for a suitable 'out' typemap for: int fact
+example.i:12: Searching for a suitable 'ret' typemap for: int fact
+example.i:12: Searching for a suitable 'jstype' typemap for: int n
+example.i:12: Searching for a suitable 'javain' typemap for: int n
+example.i:12: Searching for a suitable 'jstype' typemap for: int fact
+example.i:12: Searching for a suitable 'javaout' typemap for: int fact
+example.i:13: Searching for a suitable 'jni' typemap for: int x
+example.i:13: Searching for a suitable 'jni' typemap for: int y
+example.i:13: Searching for a suitable 'jtype' typemap for: int x
+example.i:13: Searching for a suitable 'jtype' typemap for: int y
+example.i:13: Searching for a suitable 'jstype' typemap for: int x
+example.i:13: Searching for a suitable 'jstype' typemap for: int y
+example.i:13: Searching for a suitable 'jni' typemap for: int my_mod
+example.i:13: Searching for a suitable 'jtype' typemap for: int my_mod
+example.i:13: Searching for a suitable 'default' typemap for: int x
+example.i:13: Searching for a suitable 'default' typemap for: int y
+example.i:13: Searching for a suitable 'arginit' typemap for: int x
+example.i:13: Searching for a suitable 'arginit' typemap for: int y
+example.i:13: Searching for a suitable 'in' typemap for: int x
+example.i:13: Searching for a suitable 'in' typemap for: int y
+example.i:13: Searching for a suitable 'typecheck' typemap for: int x
+example.i:13: Searching for a suitable 'typecheck' typemap for: int y
+example.i:13: Searching for a suitable 'argout' typemap for: int x
+example.i:13: Searching for a suitable 'argout' typemap for: int y
+example.i:13: Searching for a suitable 'check' typemap for: int x
+example.i:13: Searching for a suitable 'check' typemap for: int y
+example.i:13: Searching for a suitable 'freearg' typemap for: int x
+example.i:13: Searching for a suitable 'freearg' typemap for: int y
+example.i:13: Searching for a suitable 'except' typemap for: int my_mod
+example.i:13: Searching for a suitable 'out' typemap for: int my_mod
+example.i:13: Searching for a suitable 'ret' typemap for: int my_mod
+example.i:13: Searching for a suitable 'jstype' typemap for: int x
+example.i:13: Searching for a suitable 'jstype' typemap for: int y
+example.i:13: Searching for a suitable 'javain' typemap for: int x
+example.i:13: Searching for a suitable 'javain' typemap for: int y
+example.i:13: Searching for a suitable 'jstype' typemap for: int my_mod
+example.i:13: Searching for a suitable 'javaout' typemap for: int my_mod
+example.i:14: Searching for a suitable 'jni' typemap for: char *get_time
+example.i:14: Searching for a suitable 'jtype' typemap for: char *get_time
+example.i:14: Searching for a suitable 'except' typemap for: char *get_time
+example.i:14: Searching for a suitable 'out' typemap for: char *get_time
+example.i:14: Searching for a suitable 'ret' typemap for: char *get_time
+example.i:14: Searching for a suitable 'jstype' typemap for: char *get_time
+example.i:14: Searching for a suitable 'javaout' typemap for: char *get_time
+Fri Mar 17 23:24:45 2023 - INFO  - End to run test.
+Fri Mar 17 23:24:45 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 23:24:46 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:25:03 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,47 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:37:59 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 11:38:02 2023 - ERROR - pkgs:(clamav-devel) not found
+Fri Mar 17 11:38:03 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:38:03 2023 - INFO  - Start to run test.
+oe_test_clamav_clamsubmit.sh: line 38: clamsubmit: command not found
+Fri Mar 17 11:38:04 2023 - ERROR - Set clamsubmit name failed.
+Fri Mar 17 11:38:04 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 39
+oe_test_clamav_clamsubmit.sh: line 40: clamsubmit: command not found
+Fri Mar 17 11:38:05 2023 - ERROR - Set clamsubmit email failed.
+Fri Mar 17 11:38:05 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 41
+oe_test_clamav_clamsubmit.sh: line 42: clamsubmit: command not found
+Fri Mar 17 11:38:06 2023 - ERROR - Check virush failed.
+Fri Mar 17 11:38:06 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 43
+oe_test_clamav_clamsubmit.sh: line 44: clamsubmit: command not found
+Fri Mar 17 11:38:07 2023 - ERROR - Check clamsubmit version failed.
+Fri Mar 17 11:38:07 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 45
+oe_test_clamav_clamsubmit.sh: line 46: clamsubmit: command not found
+Fri Mar 17 11:38:08 2023 - ERROR - Check clamsubmit help message failed.
+Fri Mar 17 11:38:08 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 47
+oe_test_clamav_clamsubmit.sh: line 50: clamav-config: command not found
+Fri Mar 17 11:38:09 2023 - ERROR - Check clambc help message failed.
+Fri Mar 17 11:38:09 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 51
+oe_test_clamav_clamsubmit.sh: line 52: clamav-config: command not found
+Fri Mar 17 11:38:10 2023 - ERROR - Check clambc help message failed.
+Fri Mar 17 11:38:10 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 53
+oe_test_clamav_clamsubmit.sh: line 54: clamav-config: command not found
+Fri Mar 17 11:38:11 2023 - ERROR - Check clambc help message failed.
+Fri Mar 17 11:38:12 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 55
+oe_test_clamav_clamsubmit.sh: line 56: clamav-config: command not found
+Fri Mar 17 11:38:12 2023 - ERROR - Check clambc help message failed.
+Fri Mar 17 11:38:12 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 57
+oe_test_clamav_clamsubmit.sh: line 58: clamav-config: command not found
+Fri Mar 17 11:38:13 2023 - ERROR - Check clambc help message failed.
+Fri Mar 17 11:38:13 2023 - ERROR - oe_test_clamav_clamsubmit.sh line 59
+Fri Mar 17 11:38:14 2023 - INFO  - End to run test.
+Fri Mar 17 11:38:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:38:15 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:38:15 2023 - WARN  - no thing to do.
+Fri Mar 17 11:38:16 2023 - INFO  - End to restore the test environment.

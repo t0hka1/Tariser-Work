@@ -1,0 +1,86 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:58:01 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 16:58:05 2023 - INFO  - pkgs:(lvm2) is already installed
+Fri Mar 17 16:58:12 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 16:58:12 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+Fri Mar 17 16:58:13 2023 - ERROR - create PV failed
+Fri Mar 17 16:58:14 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 35
+Fri Mar 17 16:58:15 2023 - ERROR - create PV failed
+Fri Mar 17 16:58:15 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 37
+  No device found for /dev/.
+Fri Mar 17 16:58:16 2023 - ERROR - create VG failed
+Fri Mar 17 16:58:17 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 39
+Fri Mar 17 16:58:17 2023 - ERROR - create VG failed
+Fri Mar 17 16:58:18 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 41
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:19 2023 - ERROR - failed to export VG test
+Fri Mar 17 16:58:19 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 43
+  Volume group "test" not found
+  Cannot process volume group test
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:20 2023 - ERROR - failed to export VG test
+Fri Mar 17 16:58:21 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 46
+  Volume group "test" not found
+  Cannot process volume group test
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:22 2023 - ERROR - failed to export VG test --reportformat basic
+Fri Mar 17 16:58:23 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 49
+  Volume group "test" not found
+  Cannot process volume group test
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:24 2023 - ERROR - failed to export VG test --reportformat basic
+Fri Mar 17 16:58:24 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 52
+  Volume group "test" not found
+  Cannot process volume group test
+  VG name on command line not found in list of VGs: test
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:25 2023 - ERROR - failed to export VG test -v
+Fri Mar 17 16:58:26 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 55
+  Volume group "test" not found
+  Cannot process volume group test
+  TEST MODE: Metadata will NOT be updated and volumes will not be (de)activated.
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:27 2023 - ERROR - failed to export VG test -t
+Fri Mar 17 16:58:28 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 58
+  Volume group "test" not found
+  Cannot process volume group test
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:29 2023 - ERROR - failed to export VG test -q
+Fri Mar 17 16:58:29 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 61
+  vgexport - Unregister volume group(s) from the system
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  LVM version:     2.03.11(2) (2021-01-08)
+  Volume group "test" not found
+  Cannot process volume group test
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:58:31 2023 - ERROR - failed to export VG test -d
+Fri Mar 17 16:58:31 2023 - ERROR - oe_test_lvm2_vgexport_001.sh line 68
+Fri Mar 17 16:58:32 2023 - INFO  - End executing testcase!
+Fri Mar 17 16:58:33 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:58:33 2023 - INFO  - Start environment cleanup.
+  Volume group "test" not found
+  Cannot process volume group test
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:58:35 2023 - WARN  - no thing to do.
+Fri Mar 17 16:58:35 2023 - INFO  - Finish environment cleanup.

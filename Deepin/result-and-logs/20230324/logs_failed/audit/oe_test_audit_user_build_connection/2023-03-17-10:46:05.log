@@ -1,0 +1,30 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:46:07 2023 - INFO  - Start to prepare the test environment.
+find: ‘/var/tmp/systemd-private-809238d607534ce29e0d0dc78dac4e7e-systemd-timesyncd.service-ZFwH4B’: Bad message
+find: ‘/proc/2409’: No such file or directory
+find: ‘/proc/4862’: No such file or directory
+sed: can't read : No such file or directory
+Failed to restart auditd.service: Unit auditd.service not found.
+Fri Mar 17 10:46:46 2023 - INFO  - pkgs:(gcc) is already installed
+Fri Mar 17 10:46:50 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 10:46:50 2023 - INFO  - Start to run test.
+Fri Mar 17 10:46:53 2023 - ERROR - grep failed
+Fri Mar 17 10:46:53 2023 - ERROR - oe_test_audit_user_build_connection.sh line 45
+oe_test_audit_user_build_connection.sh: line 46: auditctl: command not found
+Fri Mar 17 10:47:19 2023 - ERROR - i failed
+Fri Mar 17 10:47:19 2023 - ERROR - oe_test_audit_user_build_connection.sh line 57
+Fri Mar 17 10:47:20 2023 - INFO  - End to run test.
+Fri Mar 17 10:47:21 2023 - ERROR - failed to execute the case.
+Fri Mar 17 10:47:21 2023 - INFO  - Start to restore the test environment.
+sed: can't read : No such file or directory
+Failed to restart auditd.service: Unit auditd.service not found.
+oe_test_audit_user_build_connection.sh: line 75: auditctl: command not found
+Fri Mar 17 10:47:22 2023 - WARN  - no thing to do.
+Fri Mar 17 10:47:23 2023 - INFO  - End to restore the test environment.

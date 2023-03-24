@@ -1,0 +1,4 @@
+Fri Mar 17 22:22:46 2023 - INFO  - start to run testcase:oe_test_socket_saned.
+Fri Mar 17 22:23:25 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 22:23:36 2023 - INFO  - End to run testcase:oe_test_socket_saned.
+Fri Mar 17 22:23:36 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

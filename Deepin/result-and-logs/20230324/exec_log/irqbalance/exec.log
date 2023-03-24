@@ -1,0 +1,4 @@
+Fri Mar 17 14:58:15 2023 - INFO  - start to run testcase:oe_test_service_irqbalance.
+Fri Mar 17 14:58:47 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:58:57 2023 - INFO  - End to run testcase:oe_test_service_irqbalance.
+Fri Mar 17 14:58:58 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

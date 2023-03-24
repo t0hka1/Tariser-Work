@@ -1,0 +1,37 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:15:21 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 20:15:25 2023 - ERROR - pkgs:(qt5-qtbase-devel) not found
+oe_test_qt5-qttools_lrelease-qt5.sh: line 29: rpm: command not found
+Fri Mar 17 20:15:25 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:15:26 2023 - INFO  - Start to run test.
+oe_test_qt5-qttools_lrelease-qt5.sh: line 35: lrelease-qt5: command not found
+Fri Mar 17 20:15:26 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 36
+oe_test_qt5-qttools_lrelease-qt5.sh: line 37: lupdate-qt5: command not found
+oe_test_qt5-qttools_lrelease-qt5.sh: line 38: lrelease-qt5: command not found
+Fri Mar 17 20:15:27 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 39
+grep: hello.ts: No such file or directory
+Fri Mar 17 20:15:27 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 41
+oe_test_qt5-qttools_lrelease-qt5.sh: line 42: lrelease-qt5: command not found
+Fri Mar 17 20:15:28 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 43
+oe_test_qt5-qttools_lrelease-qt5.sh: line 44: lrelease-qt5: command not found
+Fri Mar 17 20:15:29 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 45
+oe_test_qt5-qttools_lrelease-qt5.sh: line 46: lrelease-qt5: command not found
+Fri Mar 17 20:15:29 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 47
+oe_test_qt5-qttools_lrelease-qt5.sh: line 48: lrelease-qt5: command not found
+grep: hello.qm: No such file or directory
+Fri Mar 17 20:15:30 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 50
+oe_test_qt5-qttools_lrelease-qt5.sh: line 51: lrelease-qt5: command not found
+oe_test_qt5-qttools_lrelease-qt5.sh: line 53: lrelease-qt5: command not found
+Fri Mar 17 20:15:30 2023 - ERROR - oe_test_qt5-qttools_lrelease-qt5.sh line 54
+Fri Mar 17 20:15:31 2023 - INFO  - End to run test.
+Fri Mar 17 20:15:31 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:15:32 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 20:15:32 2023 - WARN  - no thing to do.
+Fri Mar 17 20:15:33 2023 - INFO  - End to restore the test environment.

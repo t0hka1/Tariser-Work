@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:54:42 2023 - INFO  - Start loading data!
+Fri Mar 17 20:54:43 2023 - INFO  - Loading data is complete!
+Fri Mar 17 20:54:43 2023 - INFO  - Start environment preparation.
+Fri Mar 17 20:54:47 2023 - ERROR - pkgs:(podman-docker) not found
+../common/common_podman.sh: line 26: /etc/containers/registries.conf: No such file or directory
+oe_test_podman_DK_27.sh: line 30: docker: command not found
+Fri Mar 17 20:54:47 2023 - INFO  - Environmental preparation is over.
+Fri Mar 17 20:54:48 2023 - INFO  - Start executing testcase.
+oe_test_podman_DK_27.sh: line 37: docker: command not found
+Fri Mar 17 20:54:48 2023 - ERROR - oe_test_podman_DK_27.sh line 38
+oe_test_podman_DK_27.sh: line 40: docker: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 20:54:49 2023 - ERROR - oe_test_podman_DK_27.sh line 41
+oe_test_podman_DK_27.sh: line 42: docker: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 20:54:50 2023 - ERROR - oe_test_podman_DK_27.sh line 43
+oe_test_podman_DK_27.sh: line 44: docker: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 20:54:50 2023 - ERROR - oe_test_podman_DK_27.sh line 45
+oe_test_podman_DK_27.sh: line 46: docker: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 20:54:51 2023 - ERROR - oe_test_podman_DK_27.sh line 47
+oe_test_podman_DK_27.sh: line 48: docker: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 20:54:51 2023 - ERROR - oe_test_podman_DK_27.sh line 49
+oe_test_podman_DK_27.sh: line 50: docker: command not found
+Fri Mar 17 20:54:52 2023 - ERROR - oe_test_podman_DK_27.sh line 51
+Fri Mar 17 20:54:52 2023 - INFO  - End executing testcase.
+Fri Mar 17 20:54:53 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:54:53 2023 - INFO  - start environment cleanup.
+../common/common_podman.sh: line 38: podman: command not found
+../common/common_podman.sh: line 39: podman: command not found
+../common/common_podman.sh: line 40: podman: command not found
+Fri Mar 17 20:54:54 2023 - WARN  - no thing to do.
+Fri Mar 17 20:54:55 2023 - INFO  - Finish environment cleanup.

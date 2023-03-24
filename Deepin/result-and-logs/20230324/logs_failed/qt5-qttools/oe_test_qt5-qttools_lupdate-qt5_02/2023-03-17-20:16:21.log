@@ -1,0 +1,52 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:16:24 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 20:16:28 2023 - ERROR - pkgs:(qt5-qtbase-devel) not found
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 29: rpm: command not found
+Fri Mar 17 20:16:28 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:16:29 2023 - INFO  - Start to run test.
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 35: lupdate-qt5: command not found
+Fri Mar 17 20:16:29 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 36
+grep: hello.ts: No such file or directory
+Fri Mar 17 20:16:30 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 38
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 39: lupdate-qt5: command not found
+Fri Mar 17 20:16:30 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 40
+grep: hello.ts: No such file or directory
+Fri Mar 17 20:16:31 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 42
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 43: lupdate-qt5: command not found
+Fri Mar 17 20:16:32 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 44
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 45: lupdate-qt5: command not found
+Fri Mar 17 20:16:32 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 46
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 47: lupdate-qt5: command not found
+Fri Mar 17 20:16:33 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 48
+Fri Mar 17 20:16:33 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 50
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 51: lupdate-qt5: command not found
+Fri Mar 17 20:16:34 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 52
+grep: hello.ts: No such file or directory
+Fri Mar 17 20:16:34 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 54
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 55: lupdate-qt5: command not found
+Fri Mar 17 20:16:35 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 56
+grep: hello.ts: No such file or directory
+Fri Mar 17 20:16:35 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 58
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 59: lupdate-qt5: command not found
+Fri Mar 17 20:16:36 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 60
+grep: hello.ts: No such file or directory
+Fri Mar 17 20:16:36 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 62
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 63: lupdate-qt5: command not found
+Fri Mar 17 20:16:37 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 64
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 65: lupdate-qt5: command not found
+Fri Mar 17 20:16:38 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 66
+oe_test_qt5-qttools_lupdate-qt5_02.sh: line 68: lupdate-qt5: command not found
+Fri Mar 17 20:16:38 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 69
+Fri Mar 17 20:16:39 2023 - ERROR - oe_test_qt5-qttools_lupdate-qt5_02.sh line 71
+Fri Mar 17 20:16:39 2023 - INFO  - End to run test.
+Fri Mar 17 20:16:40 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:16:40 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 20:16:40 2023 - WARN  - no thing to do.
+Fri Mar 17 20:16:41 2023 - INFO  - End to restore the test environment.

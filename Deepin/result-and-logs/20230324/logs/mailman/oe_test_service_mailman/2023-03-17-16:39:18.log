@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:39:20 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 16:39:25 2023 - ERROR - pkgs:(mailman) not found
+spawn /usr/lib/mailman/bin/newlist mailman
+couldn't execute "/usr/lib/mailman/bin/newlist": no such file or directory
+    while executing
+"spawn /usr/lib/mailman/bin/newlist mailman"
+Fri Mar 17 16:39:26 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 16:39:26 2023 - INFO  - Start testing...
+Failed to restart mailman.service: Unit mailman.service not found.
+Fri Mar 17 16:39:27 2023 - ERROR - mailman.service restart failed
+Fri Mar 17 16:39:28 2023 - ERROR - ../common/common_lib.sh line 34
+Unit mailman.service could not be found.
+Fri Mar 17 16:39:34 2023 - ERROR - mailman.service restart failed
+Fri Mar 17 16:39:35 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop mailman.service: Unit mailman.service not loaded.
+Fri Mar 17 16:39:35 2023 - ERROR - mailman.service stop failed
+Fri Mar 17 16:39:36 2023 - ERROR - ../common/common_lib.sh line 39
+Unit mailman.service could not be found.
+Fri Mar 17 16:39:42 2023 - ERROR - mailman.service stop failed
+Fri Mar 17 16:39:43 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start mailman.service: Unit mailman.service not found.
+Fri Mar 17 16:39:43 2023 - ERROR - mailman.service start failed
+Fri Mar 17 16:39:44 2023 - ERROR - ../common/common_lib.sh line 44
+Unit mailman.service could not be found.
+Fri Mar 17 16:39:50 2023 - ERROR - mailman.service start failed
+Fri Mar 17 16:39:51 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for mailman.service: No such file or directory
+Fri Mar 17 16:39:51 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start mailman.service: Unit mailman.service not found.
+sed: can't read /usr/lib/systemd/system/mailman.service: No such file or directory
+Failed to reload mailman.service: Unit mailman.service not found.
+Fri Mar 17 16:39:58 2023 - ERROR - mailman.service reload failed
+Fri Mar 17 16:39:58 2023 - ERROR - oe_test_service_mailman.sh line 56
+Unit mailman.service could not be found.
+Fri Mar 17 16:39:59 2023 - ERROR - mailman.service reload causes the service status to change
+Fri Mar 17 16:39:59 2023 - ERROR - oe_test_service_mailman.sh line 58
+Fri Mar 17 16:40:00 2023 - INFO  - Finish test!
+Fri Mar 17 16:40:01 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:40:01 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/mailman.service: No such file or directory
+Failed to reload mailman.service: Unit mailman.service not found.
+Failed to stop mailman.service: Unit mailman.service not loaded.
+oe_test_service_mailman.sh: line 68: /usr/lib/mailman/bin/rmlist: No such file or directory
+Fri Mar 17 16:40:07 2023 - INFO  - Finish environment cleanup!

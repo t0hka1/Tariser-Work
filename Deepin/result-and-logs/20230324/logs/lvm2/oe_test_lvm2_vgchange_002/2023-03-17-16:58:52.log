@@ -1,0 +1,59 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:58:54 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 16:58:58 2023 - INFO  - pkgs:(lvm2) is already installed
+Fri Mar 17 16:59:04 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 16:59:05 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+Fri Mar 17 16:59:06 2023 - ERROR - create PV failed
+Fri Mar 17 16:59:06 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 35
+Fri Mar 17 16:59:07 2023 - ERROR - create PV failed
+Fri Mar 17 16:59:08 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 37
+  No device found for /dev/.
+Fri Mar 17 16:59:09 2023 - ERROR - create VG failed
+Fri Mar 17 16:59:10 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 39
+Fri Mar 17 16:59:10 2023 - ERROR - create VG failed
+Fri Mar 17 16:59:11 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 41
+  vgchange - Change volume group attributes
+  vgchange - Change volume group attributes
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  LVM version:     2.03.11(2) (2021-01-08)
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:59:13 2023 - ERROR - failed to test vgchange --poll y
+Fri Mar 17 16:59:13 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 49
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:59:14 2023 - ERROR - failed to test vgchange --refresh --autobackup y
+Fri Mar 17 16:59:14 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 51
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:59:15 2023 - ERROR - failed to test vgchange --refresh --sysinit
+Fri Mar 17 16:59:16 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 53
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:59:17 2023 - ERROR - failed to test vgchange --refresh --reportformat basic
+Fri Mar 17 16:59:17 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 55
+  Volume group "test" not found
+  Cannot process volume group test
+  {
+  }
+Fri Mar 17 16:59:18 2023 - ERROR - vgchange --refresh --reportformat json
+Fri Mar 17 16:59:18 2023 - ERROR - oe_test_lvm2_vgchange_002.sh line 57
+Fri Mar 17 16:59:19 2023 - INFO  - End executing testcase!
+Fri Mar 17 16:59:19 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:59:20 2023 - INFO  - Start environment cleanup.
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:59:21 2023 - WARN  - no thing to do.
+Fri Mar 17 16:59:21 2023 - INFO  - Finish environment cleanup.

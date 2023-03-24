@@ -1,0 +1,31 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:39:41 2023 - INFO  - Start to run test.
+Failed to restart dm-event.socket: Unit dm-event.socket is masked.
+Fri Mar 17 16:39:42 2023 - ERROR - dm-event.socket restart failed
+Fri Mar 17 16:39:43 2023 - ERROR - ../common/common_lib.sh line 34
+Fri Mar 17 16:39:49 2023 - ERROR - dm-event.socket restart failed
+Fri Mar 17 16:39:50 2023 - ERROR - ../common/common_lib.sh line 37
+     Active: inactive (dead) since Fri 2023-03-17 16:39:01 UTC; 54s ago
+Failed to start dm-event.socket: Unit dm-event.socket is masked.
+Fri Mar 17 16:39:56 2023 - ERROR - dm-event.socket start failed
+Fri Mar 17 16:39:57 2023 - ERROR - ../common/common_lib.sh line 44
+Fri Mar 17 16:40:03 2023 - ERROR - dm-event.socket start failed
+Fri Mar 17 16:40:04 2023 - ERROR - ../common/common_lib.sh line 47
+Fri Mar 17 16:40:04 2023 - INFO  - Unit is masked, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start dm-event.socket: Unit dm-event.socket is masked.
+Fri Mar 17 16:40:05 2023 - ERROR - Job type reload is not applicable for unit dm-event.socket
+Fri Mar 17 16:40:06 2023 - ERROR - ../common/common_lib.sh line 91
+     Active: inactive (dead) since Fri 2023-03-17 16:39:01 UTC; 1min 5s ago
+Fri Mar 17 16:40:07 2023 - ERROR - dm-event.socket reload causes the service status to change
+Fri Mar 17 16:40:07 2023 - ERROR - ../common/common_lib.sh line 95
+Fri Mar 17 16:40:08 2023 - INFO  - End of the test.
+Fri Mar 17 16:40:08 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:40:09 2023 - INFO  - oe_test_socket_dm-event.sh post_test

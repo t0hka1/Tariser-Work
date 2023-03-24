@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:03:40 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:03:44 2023 - ERROR - pkgs:(java-1.8.0-openjdk*) not found
+Fri Mar 17 15:03:45 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:03:45 2023 - INFO  - Start to run test.
+Fri Mar 17 15:03:46 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 35
+spawn jjs -strict
+couldn't execute "jjs": no such file or directory
+    while executing
+"spawn jjs -strict"
+    while executing
+Fri Mar 17 15:03:47 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 47
+Fri Mar 17 15:03:47 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 49
+spawn jjs
+couldn't execute "jjs": no such file or directory
+    while executing
+"spawn jjs"
+    while executing
+Fri Mar 17 15:03:48 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 61
+Fri Mar 17 15:03:49 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 63
+Fri Mar 17 15:03:49 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 66
+oe_test_openjdk_jjs_jmap.sh: line 67: jps: command not found
+Fri Mar 17 15:03:50 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 68
+Fri Mar 17 15:03:50 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 70
+Fri Mar 17 15:03:51 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 73
+oe_test_openjdk_jjs_jmap.sh: line 74: jrunscript: command not found
+Fri Mar 17 15:03:52 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 75
+oe_test_openjdk_jjs_jmap.sh: line 79: jrunscript: command not found
+Fri Mar 17 15:03:52 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 79
+spawn jjs
+couldn't execute "jjs": no such file or directory
+    while executing
+"spawn jjs"
+    while executing
+Fri Mar 17 15:03:53 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 91
+Fri Mar 17 15:03:54 2023 - ERROR - oe_test_openjdk_jjs_jmap.sh line 93
+Fri Mar 17 15:03:54 2023 - INFO  - End to run test.
+Fri Mar 17 15:03:55 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:03:55 2023 - INFO  - Need't to restore the tet environment.
+Fri Mar 17 15:03:55 2023 - WARN  - no thing to do.
+Fri Mar 17 15:03:56 2023 - INFO  - End to restore the test environment.

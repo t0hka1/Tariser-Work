@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:48:10 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 20:48:14 2023 - ERROR - pkgs:(podman-docker) not found
+../common/common_podman.sh: line 26: /etc/containers/registries.conf: No such file or directory
+oe_test_podman_DK_15.sh: line 24: podman: command not found
+oe_test_podman_DK_15.sh: line 25: podman: command not found
+Fri Mar 17 20:48:14 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:48:15 2023 - INFO  - Start to run test.
+oe_test_podman_DK_15.sh: line 31: docker: command not found
+oe_test_podman_DK_15.sh: line 32: docker: command not found
+Fri Mar 17 20:48:16 2023 - ERROR - oe_test_podman_DK_15.sh line 33
+oe_test_podman_DK_15.sh: line 34: docker: command not found
+Fri Mar 17 20:48:16 2023 - ERROR - oe_test_podman_DK_15.sh line 35
+oe_test_podman_DK_15.sh: line 36: docker: command not found
+oe_test_podman_DK_15.sh: line 37: docker: command not found
+Fri Mar 17 20:48:17 2023 - ERROR - oe_test_podman_DK_15.sh line 38
+oe_test_podman_DK_15.sh: line 39: docker: command not found
+oe_test_podman_DK_15.sh: line 40: docker: command not found
+Fri Mar 17 20:48:17 2023 - ERROR - oe_test_podman_DK_15.sh line 41
+oe_test_podman_DK_15.sh: line 42: docker: command not found
+oe_test_podman_DK_15.sh: line 43: docker: command not found
+Fri Mar 17 20:48:18 2023 - ERROR - oe_test_podman_DK_15.sh line 44
+oe_test_podman_DK_15.sh: line 45: docker: command not found
+Fri Mar 17 20:48:19 2023 - ERROR - oe_test_podman_DK_15.sh line 46
+oe_test_podman_DK_15.sh: line 47: docker: command not found
+oe_test_podman_DK_15.sh: line 48: docker: command not found
+Fri Mar 17 20:48:19 2023 - ERROR - oe_test_podman_DK_15.sh line 49
+oe_test_podman_DK_15.sh: line 50: docker: command not found
+grep: /var/lib/containers/storage/overlay-containers//userdata/artifacts/create-config: No such file or directory
+Fri Mar 17 20:48:20 2023 - ERROR - oe_test_podman_DK_15.sh line 52
+oe_test_podman_DK_15.sh: line 53: docker: command not found
+grep: /var/lib/containers/storage/overlay-containers//userdata/artifacts/create-config: No such file or directory
+Fri Mar 17 20:48:20 2023 - ERROR - oe_test_podman_DK_15.sh line 55
+Fri Mar 17 20:48:21 2023 - INFO  - End to run test.
+Fri Mar 17 20:48:21 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:48:22 2023 - INFO  - Start to restore the test environment.
+../common/common_podman.sh: line 38: podman: command not found
+../common/common_podman.sh: line 39: podman: command not found
+../common/common_podman.sh: line 40: podman: command not found
+Fri Mar 17 20:48:22 2023 - WARN  - no thing to do.
+Fri Mar 17 20:48:23 2023 - INFO  - End to restore the test environment.

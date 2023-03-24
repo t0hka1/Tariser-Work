@@ -1,0 +1,8 @@
+Sat Mar 18 00:21:23 2023 - INFO  - start to run testcase:oe_test_service_vsftpd.
+Sat Mar 18 00:23:46 2023 - ERROR - The case exit by code 1.
+Sat Mar 18 00:23:57 2023 - INFO  - End to run testcase:oe_test_service_vsftpd.
+Sat Mar 18 00:23:58 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 00:24:02 2023 - INFO  - start to run testcase:oe_test_target_vsftpd.
+Sat Mar 18 00:25:44 2023 - ERROR - The case exit by code 8.
+Sat Mar 18 00:25:55 2023 - INFO  - End to run testcase:oe_test_target_vsftpd.
+Sat Mar 18 00:25:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

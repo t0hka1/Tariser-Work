@@ -1,0 +1,47 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:28:55 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 09:28:59 2023 - ERROR - pkgs:(OpenEXR-devel) not found
+Fri Mar 17 09:28:59 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 09:29:00 2023 - INFO  - Start to run test.
+oe_test_OpenEXR_exrstdattr_02.sh: line 34: exrstdattr: command not found
+Fri Mar 17 09:29:00 2023 - ERROR - Check exrstdattr -longitude failed.
+Fri Mar 17 09:29:01 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 35
+oe_test_OpenEXR_exrstdattr_02.sh: line 36: exrstdattr: command not found
+Fri Mar 17 09:29:01 2023 - ERROR - Check exrstdattr -latitude failed.
+Fri Mar 17 09:29:02 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 37
+oe_test_OpenEXR_exrstdattr_02.sh: line 38: exrstdattr: command not found
+Fri Mar 17 09:29:02 2023 - ERROR - Check exrstdattr -altitude failed.
+Fri Mar 17 09:29:03 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 39
+oe_test_OpenEXR_exrstdattr_02.sh: line 40: exrstdattr: command not found
+Fri Mar 17 09:29:03 2023 - ERROR - Check exrstdattr -focus failed.
+Fri Mar 17 09:29:04 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 41
+oe_test_OpenEXR_exrstdattr_02.sh: line 42: exrstdattr: command not found
+Fri Mar 17 09:29:04 2023 - ERROR - Check exrstdattr -expTime failed.
+Fri Mar 17 09:29:05 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 43
+oe_test_OpenEXR_exrstdattr_02.sh: line 44: exrstdattr: command not found
+Fri Mar 17 09:29:05 2023 - ERROR - Check exrstdattr -aperture failed.
+Fri Mar 17 09:29:06 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 45
+oe_test_OpenEXR_exrstdattr_02.sh: line 46: exrstdattr: command not found
+Fri Mar 17 09:29:06 2023 - ERROR - Check exrstdattr -isoSpeed failed.
+Fri Mar 17 09:29:07 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 47
+oe_test_OpenEXR_exrstdattr_02.sh: line 48: exrstdattr: command not found
+Fri Mar 17 09:29:07 2023 - ERROR - Check exrstdattr -envmap failed.
+Fri Mar 17 09:29:08 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 49
+oe_test_OpenEXR_exrstdattr_02.sh: line 50: exrstdattr: command not found
+Fri Mar 17 09:29:08 2023 - ERROR - Check exrstdattr -keyCode failed.
+Fri Mar 17 09:29:09 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 51
+oe_test_OpenEXR_exrstdattr_02.sh: line 52: exrstdattr: command not found
+Fri Mar 17 09:29:09 2023 - ERROR - Check exrstdattr -timeCode failed.
+Fri Mar 17 09:29:10 2023 - ERROR - oe_test_OpenEXR_exrstdattr_02.sh line 53
+Fri Mar 17 09:29:10 2023 - INFO  - End to run test.
+Fri Mar 17 09:29:11 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:29:11 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 09:29:12 2023 - WARN  - no thing to do.
+Fri Mar 17 09:29:12 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:41:02 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:41:06 2023 - ERROR - pkgs:(targetcli) not found
+Fri Mar 17 23:41:06 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 23:41:07 2023 - INFO  - Start to run test.
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+Fri Mar 17 23:41:08 2023 - ERROR - oe_test_targetcli_03.sh line 51
+Fri Mar 17 23:41:08 2023 - ERROR - oe_test_targetcli_03.sh line 53
+grep: ./saveconfig.json: No such file or directory
+Fri Mar 17 23:41:09 2023 - ERROR - oe_test_targetcli_03.sh line 55
+oe_test_targetcli_03.sh: line 56: targetcli: command not found
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+Fri Mar 17 23:41:10 2023 - ERROR - oe_test_targetcli_03.sh line 76
+oe_test_targetcli_03.sh: line 77: targetcli: command not found
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+Fri Mar 17 23:41:11 2023 - ERROR - oe_test_targetcli_03.sh line 88
+oe_test_targetcli_03.sh: line 89: targetcli: command not found
+Fri Mar 17 23:41:12 2023 - ERROR - oe_test_targetcli_03.sh line 90
+oe_test_targetcli_03.sh: line 91: targetcli: command not found
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+Fri Mar 17 23:41:13 2023 - ERROR - oe_test_targetcli_03.sh line 109
+Fri Mar 17 23:41:14 2023 - INFO  - End of the test.
+Fri Mar 17 23:41:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:41:15 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:41:16 2023 - WARN  - no thing to do.
+Fri Mar 17 23:41:16 2023 - INFO  - Finish restoring the test environment.

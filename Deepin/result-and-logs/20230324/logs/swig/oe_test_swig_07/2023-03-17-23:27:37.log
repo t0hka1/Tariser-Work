@@ -1,0 +1,32 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:27:40 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:28:04 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:28:04 2023 - INFO  - Start to run test.
+  /usr/share/swig4.0/swig.swg \
+  /usr/share/swig4.0/swigwarnings.swg \
+  /usr/share/swig4.0/swigwarn.swg \
+  /usr/share/swig4.0/swigfragments.swg \
+  /usr/share/swig4.0/java/java.swg \
+  /usr/share/swig4.0/java/javahead.swg \
+  /usr/share/swig4.0/java/javakw.swg \
+  /usr/share/swig4.0/java/enumtypesafe.swg \
+example_wrap.c: \
+  example.i 
+SWIGEXPORT void JNICALL Java_exampleJNI_My_1variable_1set(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+SWIGEXPORT jdouble JNICALL Java_exampleJNI_My_1variable_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_exampleJNI_fact(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT jint JNICALL Java_exampleJNI_my_1mod(JNIEnv *jenv, jclass jcls, jint jarg1, jint jarg2) {
+SWIGEXPORT jstring JNICALL Java_exampleJNI_get_1time(JNIEnv *jenv, jclass jcls) {
+/* Contract support */
+#define SWIG_contract_assert(nullreturn, expr, msg) if (!(expr)) {SWIG_JavaThrowException(jenv, SWIG_JavaIllegalArgumentException, msg); return nullreturn; } else
+Fri Mar 17 23:28:09 2023 - INFO  - End to run test.
+Fri Mar 17 23:28:10 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 23:28:10 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:28:28 2023 - INFO  - End to restore the test environment.

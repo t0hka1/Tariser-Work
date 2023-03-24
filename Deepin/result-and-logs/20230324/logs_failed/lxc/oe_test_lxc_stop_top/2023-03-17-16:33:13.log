@@ -1,0 +1,50 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:33:16 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:33:19 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_stop_top.sh: line 29: rpm: command not found
+Fri Mar 17 16:33:20 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:33:21 2023 - INFO  - Start to run test.
+oe_test_lxc_stop_top.sh: line 35: lxc-create: command not found
+Fri Mar 17 16:33:21 2023 - ERROR - Failed to set up container.
+Fri Mar 17 16:33:22 2023 - ERROR - oe_test_lxc_stop_top.sh line 36
+Fri Mar 17 16:33:22 2023 - ERROR - Check lxc-stop --help failed.
+Fri Mar 17 16:33:23 2023 - ERROR - oe_test_lxc_stop_top.sh line 38
+Fri Mar 17 16:33:23 2023 - ERROR - Check lxc-stop --usage failed.
+Fri Mar 17 16:33:24 2023 - ERROR - oe_test_lxc_stop_top.sh line 40
+oe_test_lxc_stop_top.sh: line 41: lxc-stop: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:33:25 2023 - ERROR - Check lxc-stop --version failed.
+Fri Mar 17 16:33:25 2023 - ERROR - oe_test_lxc_stop_top.sh line 42
+oe_test_lxc_stop_top.sh: line 43: lxc-start: command not found
+Fri Mar 17 16:33:26 2023 - ERROR - Check lxc-start -n failed.
+Fri Mar 17 16:33:27 2023 - ERROR - oe_test_lxc_stop_top.sh line 44
+oe_test_lxc_stop_top.sh: line 45: lxc-stop: command not found
+Fri Mar 17 16:33:27 2023 - ERROR - Check lxc-stop -n failed.
+Fri Mar 17 16:33:28 2023 - ERROR - oe_test_lxc_stop_top.sh line 46
+oe_test_lxc_stop_top.sh: line 47: lxc-info: command not found
+Fri Mar 17 16:33:28 2023 - ERROR - Check lxc-info failed.
+Fri Mar 17 16:33:29 2023 - ERROR - oe_test_lxc_stop_top.sh line 48
+Fri Mar 17 16:33:29 2023 - ERROR - Check lxc-top --help failed.
+Fri Mar 17 16:33:30 2023 - ERROR - oe_test_lxc_stop_top.sh line 51
+Fri Mar 17 16:33:30 2023 - ERROR - Check lxc-top --usage failed.
+Fri Mar 17 16:33:31 2023 - ERROR - oe_test_lxc_stop_top.sh line 53
+oe_test_lxc_stop_top.sh: line 54: lxc-top: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:33:31 2023 - ERROR - Check lxc-top --version failed.
+Fri Mar 17 16:33:32 2023 - ERROR - oe_test_lxc_stop_top.sh line 55
+Fri Mar 17 16:33:33 2023 - INFO  - End to run test.
+Fri Mar 17 16:33:33 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:33:34 2023 - INFO  - Start to restore the tet environment.
+oe_test_lxc_stop_top.sh: line 61: lxc-stop: command not found
+oe_test_lxc_stop_top.sh: line 62: lxc-destroy: command not found
+Fri Mar 17 16:33:34 2023 - WARN  - no thing to do.
+Fri Mar 17 16:33:34 2023 - INFO  - End to restore the tet environment.

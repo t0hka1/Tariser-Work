@@ -1,0 +1,40 @@
+Fri Mar 17 15:00:51 2023 - INFO  - start to run testcase:oe_test_openjdk_appletviewer_clhsdb.
+Fri Mar 17 15:01:09 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 15:01:20 2023 - INFO  - End to run testcase:oe_test_openjdk_appletviewer_clhsdb.
+Fri Mar 17 15:01:20 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:01:24 2023 - INFO  - start to run testcase:oe_test_openjdk_javadoc_javah.
+Fri Mar 17 15:01:47 2023 - ERROR - The case exit by code 13.
+Fri Mar 17 15:01:58 2023 - INFO  - End to run testcase:oe_test_openjdk_javadoc_javah.
+Fri Mar 17 15:01:58 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:02:02 2023 - INFO  - start to run testcase:oe_test_openjdk_java_javac.
+Fri Mar 17 15:02:18 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 15:02:29 2023 - INFO  - End to run testcase:oe_test_openjdk_java_javac.
+Fri Mar 17 15:02:29 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:02:33 2023 - INFO  - start to run testcase:oe_test_openjdk_javap_jcmd.
+Fri Mar 17 15:02:49 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 15:03:00 2023 - INFO  - End to run testcase:oe_test_openjdk_javap_jcmd.
+Fri Mar 17 15:03:00 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:03:04 2023 - INFO  - start to run testcase:oe_test_openjdk_jdb_jdeps.
+Fri Mar 17 15:03:22 2023 - ERROR - The case exit by code 12.
+Fri Mar 17 15:03:33 2023 - INFO  - End to run testcase:oe_test_openjdk_jdb_jdeps.
+Fri Mar 17 15:03:33 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:03:37 2023 - INFO  - start to run testcase:oe_test_openjdk_jjs_jmap.
+Fri Mar 17 15:03:57 2023 - ERROR - The case exit by code 13.
+Fri Mar 17 15:04:07 2023 - INFO  - End to run testcase:oe_test_openjdk_jjs_jmap.
+Fri Mar 17 15:04:08 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:04:12 2023 - INFO  - start to run testcase:oe_test_openjdk_jsadebugd_jstack.
+Fri Mar 17 15:04:23 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 15:04:33 2023 - INFO  - End to run testcase:oe_test_openjdk_jsadebugd_jstack.
+Fri Mar 17 15:04:34 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 15:04:37 2023 - INFO  - start to run testcase:oe_test_openjdk_native2ascii_pack200.
+Fri Mar 17 15:04:58 2023 - ERROR - The case exit by code 15.
+Fri Mar 17 15:05:08 2023 - INFO  - End to run testcase:oe_test_openjdk_native2ascii_pack200.
+Fri Mar 17 15:05:09 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:05:13 2023 - INFO  - start to run testcase:oe_test_openjdk_rmic_rmid.
+Fri Mar 17 15:05:35 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 15:05:46 2023 - INFO  - End to run testcase:oe_test_openjdk_rmic_rmid.
+Fri Mar 17 15:05:46 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:05:50 2023 - INFO  - start to run testcase:oe_test_openjdk_servertool_unpack200.
+Fri Mar 17 15:06:10 2023 - ERROR - The case exit by code 12.
+Fri Mar 17 15:06:21 2023 - INFO  - End to run testcase:oe_test_openjdk_servertool_unpack200.
+Fri Mar 17 15:06:21 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

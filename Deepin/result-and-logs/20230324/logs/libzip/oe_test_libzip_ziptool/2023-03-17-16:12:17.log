@@ -1,0 +1,59 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:12:19 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:12:23 2023 - ERROR - pkgs:(libzip) not found
+oe_test_libzip_ziptool.sh: line 29: zip: command not found
+Fri Mar 17 16:12:23 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:12:24 2023 - INFO  - Start to run test.
+oe_test_libzip_ziptool.sh: line 35: ziptool: command not found
+Fri Mar 17 16:12:24 2023 - ERROR - oe_test_libzip_ziptool.sh line 36
+oe_test_libzip_ziptool.sh: line 37: ziptool: command not found
+Fri Mar 17 16:12:25 2023 - ERROR - oe_test_libzip_ziptool.sh line 38
+oe_test_libzip_ziptool.sh: line 39: ziptool: command not found
+Fri Mar 17 16:12:25 2023 - ERROR - oe_test_libzip_ziptool.sh line 40
+oe_test_libzip_ziptool.sh: line 41: unzip: command not found
+Fri Mar 17 16:12:26 2023 - ERROR - oe_test_libzip_ziptool.sh line 42
+oe_test_libzip_ziptool.sh: line 43: ziptool: command not found
+Fri Mar 17 16:12:27 2023 - ERROR - oe_test_libzip_ziptool.sh line 44
+oe_test_libzip_ziptool.sh: line 45: ziptool: command not found
+Fri Mar 17 16:12:27 2023 - ERROR - oe_test_libzip_ziptool.sh line 46
+oe_test_libzip_ziptool.sh: line 47: unzip: command not found
+oe_test_libzip_ziptool.sh: line 49: ziptool: command not found
+Fri Mar 17 16:12:28 2023 - ERROR - oe_test_libzip_ziptool.sh line 50
+oe_test_libzip_ziptool.sh: line 51: ziptool: command not found
+Fri Mar 17 16:12:28 2023 - ERROR - oe_test_libzip_ziptool.sh line 52
+oe_test_libzip_ziptool.sh: line 53: ziptool: command not found
+Fri Mar 17 16:12:29 2023 - ERROR - oe_test_libzip_ziptool.sh line 54
+oe_test_libzip_ziptool.sh: line 55: ziptool: command not found
+Fri Mar 17 16:12:29 2023 - ERROR - oe_test_libzip_ziptool.sh line 56
+oe_test_libzip_ziptool.sh: line 57: unzip: command not found
+Fri Mar 17 16:12:30 2023 - ERROR - oe_test_libzip_ziptool.sh line 58
+oe_test_libzip_ziptool.sh: line 59: ziptool: command not found
+Fri Mar 17 16:12:31 2023 - ERROR - oe_test_libzip_ziptool.sh line 60
+oe_test_libzip_ziptool.sh: line 61: ziptool: command not found
+Fri Mar 17 16:12:31 2023 - ERROR - oe_test_libzip_ziptool.sh line 62
+oe_test_libzip_ziptool.sh: line 63: ziptool: command not found
+Fri Mar 17 16:12:32 2023 - ERROR - oe_test_libzip_ziptool.sh line 64
+oe_test_libzip_ziptool.sh: line 65: ziptool: command not found
+Fri Mar 17 16:12:32 2023 - ERROR - oe_test_libzip_ziptool.sh line 66
+oe_test_libzip_ziptool.sh: line 67: ziptool: command not found
+Fri Mar 17 16:12:33 2023 - ERROR - oe_test_libzip_ziptool.sh line 68
+oe_test_libzip_ziptool.sh: line 69: ziptool: command not found
+Fri Mar 17 16:12:33 2023 - ERROR - oe_test_libzip_ziptool.sh line 70
+oe_test_libzip_ziptool.sh: line 71: ziptool: command not found
+Fri Mar 17 16:12:34 2023 - ERROR - oe_test_libzip_ziptool.sh line 72
+oe_test_libzip_ziptool.sh: line 73: ziptool: command not found
+Fri Mar 17 16:12:35 2023 - ERROR - oe_test_libzip_ziptool.sh line 74
+oe_test_libzip_ziptool.sh: line 75: ziptool: command not found
+Fri Mar 17 16:12:35 2023 - ERROR - oe_test_libzip_ziptool.sh line 76
+Fri Mar 17 16:12:36 2023 - INFO  - End of the test.
+Fri Mar 17 16:12:36 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:12:36 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 16:12:37 2023 - WARN  - no thing to do.
+Fri Mar 17 16:12:37 2023 - INFO  - Finish restoring the test environment.

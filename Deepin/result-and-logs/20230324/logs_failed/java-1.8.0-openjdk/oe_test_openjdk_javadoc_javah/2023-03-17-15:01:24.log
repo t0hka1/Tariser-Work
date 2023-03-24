@@ -1,0 +1,43 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:01:28 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:01:33 2023 - ERROR - pkgs:(java-1.8.0-openjdk*) not found
+Fri Mar 17 15:01:34 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:01:34 2023 - INFO  - Start to run test.
+oe_test_openjdk_javadoc_javah.sh: line 35: javadoc: command not found
+Fri Mar 17 15:01:35 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 36
+oe_test_openjdk_javadoc_javah.sh: line 37: javadoc: command not found
+Fri Mar 17 15:01:36 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 38
+find: ‘public’: No such file or directory
+Fri Mar 17 15:01:37 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 40
+oe_test_openjdk_javadoc_javah.sh: line 41: javadoc: command not found
+Fri Mar 17 15:01:37 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 42
+find: ‘protected’: No such file or directory
+Fri Mar 17 15:01:38 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 44
+oe_test_openjdk_javadoc_javah.sh: line 45: javadoc: command not found
+Fri Mar 17 15:01:39 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 46
+find: ‘private’: No such file or directory
+Fri Mar 17 15:01:39 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 48
+oe_test_openjdk_javadoc_javah.sh: line 49: javadoc: command not found
+Fri Mar 17 15:01:40 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 50
+find: ‘package’: No such file or directory
+Fri Mar 17 15:01:41 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 52
+oe_test_openjdk_javadoc_javah.sh: line 54: javah: command not found
+Fri Mar 17 15:01:41 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 55
+oe_test_openjdk_javadoc_javah.sh: line 56: javah: command not found
+Fri Mar 17 15:01:42 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 57
+oe_test_openjdk_javadoc_javah.sh: line 58: javah: command not found
+Fri Mar 17 15:01:43 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 59
+find: ‘Hello.h’: No such file or directory
+Fri Mar 17 15:01:43 2023 - ERROR - oe_test_openjdk_javadoc_javah.sh line 61
+Fri Mar 17 15:01:44 2023 - INFO  - End to run test.
+Fri Mar 17 15:01:45 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:01:45 2023 - INFO  - Need't to restore the tet environment.
+Fri Mar 17 15:01:46 2023 - WARN  - no thing to do.
+Fri Mar 17 15:01:46 2023 - INFO  - End to restore the test environment.

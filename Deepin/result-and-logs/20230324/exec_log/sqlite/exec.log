@@ -1,0 +1,68 @@
+Fri Mar 17 22:59:12 2023 - INFO  - start to run testcase:oe_test_sqlite_alter_01.
+Fri Mar 17 22:59:19 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 22:59:30 2023 - INFO  - End to run testcase:oe_test_sqlite_alter_01.
+Fri Mar 17 22:59:30 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 22:59:34 2023 - INFO  - start to run testcase:oe_test_sqlite_command_01.
+Fri Mar 17 22:59:43 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 22:59:54 2023 - INFO  - End to run testcase:oe_test_sqlite_command_01.
+Fri Mar 17 22:59:54 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 22:59:58 2023 - INFO  - start to run testcase:oe_test_sqlite_command_02.
+Fri Mar 17 23:00:06 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:00:17 2023 - INFO  - End to run testcase:oe_test_sqlite_command_02.
+Fri Mar 17 23:00:18 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:00:22 2023 - INFO  - start to run testcase:oe_test_sqlite_command_03.
+Fri Mar 17 23:00:28 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 23:00:39 2023 - INFO  - End to run testcase:oe_test_sqlite_command_03.
+Fri Mar 17 23:00:39 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:00:43 2023 - INFO  - start to run testcase:oe_test_sqlite_command_04.
+Fri Mar 17 23:00:50 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 23:01:01 2023 - INFO  - End to run testcase:oe_test_sqlite_command_04.
+Fri Mar 17 23:01:01 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:01:05 2023 - INFO  - start to run testcase:oe_test_sqlite_command_05.
+Fri Mar 17 23:01:12 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:01:23 2023 - INFO  - End to run testcase:oe_test_sqlite_command_05.
+Fri Mar 17 23:01:24 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:01:28 2023 - INFO  - start to run testcase:oe_test_sqlite_command_06.
+Fri Mar 17 23:01:44 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:01:54 2023 - INFO  - End to run testcase:oe_test_sqlite_command_06.
+Fri Mar 17 23:01:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:01:59 2023 - INFO  - start to run testcase:oe_test_sqlite_command_07.
+Fri Mar 17 23:02:06 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:02:17 2023 - INFO  - End to run testcase:oe_test_sqlite_command_07.
+Fri Mar 17 23:02:17 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:02:21 2023 - INFO  - start to run testcase:oe_test_sqlite_command_08.
+Fri Mar 17 23:02:29 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:02:40 2023 - INFO  - End to run testcase:oe_test_sqlite_command_08.
+Fri Mar 17 23:02:40 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:02:44 2023 - INFO  - start to run testcase:oe_test_sqlite_delete_01.
+Fri Mar 17 23:02:52 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:03:02 2023 - INFO  - End to run testcase:oe_test_sqlite_delete_01.
+Fri Mar 17 23:03:03 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:03:07 2023 - INFO  - start to run testcase:oe_test_sqlite_function_01.
+Fri Mar 17 23:03:15 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:03:25 2023 - INFO  - End to run testcase:oe_test_sqlite_function_01.
+Fri Mar 17 23:03:26 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:03:30 2023 - INFO  - start to run testcase:oe_test_sqlite_function_02.
+Fri Mar 17 23:03:37 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:03:48 2023 - INFO  - End to run testcase:oe_test_sqlite_function_02.
+Fri Mar 17 23:03:48 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:03:52 2023 - INFO  - start to run testcase:oe_test_sqlite_function_03.
+Fri Mar 17 23:04:02 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:04:13 2023 - INFO  - End to run testcase:oe_test_sqlite_function_03.
+Fri Mar 17 23:04:13 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:04:17 2023 - INFO  - start to run testcase:oe_test_sqlite_function_04.
+Fri Mar 17 23:04:24 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:04:35 2023 - INFO  - End to run testcase:oe_test_sqlite_function_04.
+Fri Mar 17 23:04:35 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:04:39 2023 - INFO  - start to run testcase:oe_test_sqlite_update_01.
+Fri Mar 17 23:04:47 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 23:04:57 2023 - INFO  - End to run testcase:oe_test_sqlite_update_01.
+Fri Mar 17 23:04:58 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:05:02 2023 - INFO  - start to run testcase:oe_test_sqlite_select_05.
+Fri Mar 17 23:05:09 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 23:05:20 2023 - INFO  - End to run testcase:oe_test_sqlite_select_05.
+Fri Mar 17 23:05:21 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:05:24 2023 - INFO  - start to run testcase:oe_test_sqlite_create_06.
+Fri Mar 17 23:05:31 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 23:05:41 2023 - INFO  - End to run testcase:oe_test_sqlite_create_06.
+Fri Mar 17 23:05:42 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.

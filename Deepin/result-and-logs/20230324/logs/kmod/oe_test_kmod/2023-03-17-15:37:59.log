@@ -1,0 +1,20 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:38:02 2023 - INFO  - Start to run test.
+Usage:
+	kmod [options] command [command_options]
+kmod version 29
+Usage:
+	help [options] command [command_options]
+Module                  Size  Used by
+Warning: /lib/modules/5.10.0-7.oe2203.riscv64/modules.devname not found - ignoring
+Fri Mar 17 15:38:03 2023 - ERROR - oe_test_kmod.sh line 33
+Fri Mar 17 15:38:03 2023 - INFO  - End of the test.
+Fri Mar 17 15:38:04 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:38:04 2023 - INFO  - oe_test_kmod.sh post_test

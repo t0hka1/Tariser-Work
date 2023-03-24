@@ -1,0 +1,70 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:26:11 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 10:26:15 2023 - ERROR - pkgs:(bcrypt) not found
+Fri Mar 17 10:26:16 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 10:26:16 2023 - INFO  - Start to run test.
+spawn bcrypt -o test1
+couldn't execute "bcrypt": no such file or directory
+    while executing
+"spawn bcrypt -o test1"
+couldn't execute "bcrypt": no such file or directory
+    while executing
+spawn bcrypt -c test2
+couldn't execute "bcrypt": no such file or directory
+    while executing
+"spawn bcrypt -c test2"
+Fri Mar 17 10:26:18 2023 - ERROR - oe_test_bcrypt.sh line 52
+grep: test2.bfe: No such file or directory
+Fri Mar 17 10:26:18 2023 - ERROR - oe_test_bcrypt.sh line 54
+Fri Mar 17 10:26:19 2023 - ERROR - oe_test_bcrypt.sh line 56
+spawn bcrypt -r test3
+couldn't execute "bcrypt": no such file or directory
+    while executing
+"spawn bcrypt -r test3"
+Fri Mar 17 10:26:20 2023 - ERROR - oe_test_bcrypt.sh line 64
+grep: test3.bfe: No such file or directory
+Fri Mar 17 10:26:20 2023 - ERROR - oe_test_bcrypt.sh line 66
+spawn bcrypt -r test4 test5
+couldn't execute "bcrypt": no such file or directory
+    while executing
+"spawn bcrypt -r test4 test5"
+Fri Mar 17 10:26:21 2023 - ERROR - oe_test_bcrypt.sh line 76
+grep: test4.bfe: No such file or directory
+Fri Mar 17 10:26:22 2023 - ERROR - oe_test_bcrypt.sh line 78
+grep: test5.bfe: No such file or directory
+Fri Mar 17 10:26:22 2023 - ERROR - oe_test_bcrypt.sh line 80
+spawn bcrypt -s3 test6
+couldn't execute "bcrypt": no such file or directory
+    while executing
+"spawn bcrypt -s3 test6"
+Fri Mar 17 10:26:23 2023 - ERROR - oe_test_bcrypt.sh line 90
+grep: test6.bfe: No such file or directory
+Fri Mar 17 10:26:24 2023 - ERROR - oe_test_bcrypt.sh line 92
+Fri Mar 17 10:26:24 2023 - ERROR - oe_test_bcrypt.sh line 94
+spawn bcrypt -s0 test7
+couldn't execute "bcrypt": no such file or directory
+    while executing
+"spawn bcrypt -s0 test7"
+Fri Mar 17 10:26:25 2023 - ERROR - oe_test_bcrypt.sh line 102
+grep: test7.bfe: No such file or directory
+Fri Mar 17 10:26:26 2023 - ERROR - oe_test_bcrypt.sh line 104
+Fri Mar 17 10:26:26 2023 - ERROR - oe_test_bcrypt.sh line 106
+spawn bcrypt -s0 -r test8
+couldn't execute "bcrypt": no such file or directory
+    while executing
+"spawn bcrypt -s0 -r test8"
+Fri Mar 17 10:26:27 2023 - ERROR - oe_test_bcrypt.sh line 114
+grep: test8.bfe: No such file or directory
+Fri Mar 17 10:26:28 2023 - ERROR - oe_test_bcrypt.sh line 116
+Fri Mar 17 10:26:28 2023 - INFO  - End of the test.
+Fri Mar 17 10:26:29 2023 - ERROR - failed to execute the case.
+Fri Mar 17 10:26:29 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 10:26:30 2023 - WARN  - no thing to do.
+Fri Mar 17 10:26:31 2023 - INFO  - Finish restoring the test environment.

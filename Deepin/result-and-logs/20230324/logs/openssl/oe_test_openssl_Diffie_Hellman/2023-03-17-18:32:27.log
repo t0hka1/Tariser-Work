@@ -1,0 +1,19 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:32:30 2023 - INFO  - Start to run test.
+Generating DH parameters, 1024 bit long safe prime
+....+...........................................+..............+...........................................+.............++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*++*
+-----BEGIN DH PARAMETERS-----
+dhparam: Unknown option: -C
+dhparam: Use -help for summary.
+Fri Mar 17 18:32:32 2023 - ERROR - oe_test_openssl_Diffie_Hellman.sh line 28
+Fri Mar 17 18:32:33 2023 - INFO  - End to run test.
+Fri Mar 17 18:32:33 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:32:34 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 18:32:34 2023 - INFO  - End to restore the test environment.

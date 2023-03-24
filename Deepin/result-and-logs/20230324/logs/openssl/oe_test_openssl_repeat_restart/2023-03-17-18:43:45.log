@@ -1,0 +1,270 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:43:48 2023 - INFO  - Start to config params of the case.
+cp: cannot stat '/etc/pki/tls/openssl.cnf': No such file or directory
+sed: can't read /etc/pki/tls/openssl.cnf: No such file or directory
+Fri Mar 17 18:43:49 2023 - INFO  - End to config params of the case.
+Fri Mar 17 18:43:49 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 18:43:52 2023 - ERROR - pkgs:(mod_ssl) not found
+Fri Mar 17 18:43:55 2023 - ERROR - common/common_openssl.sh line 36
+spawn openssl req -x509 -key /etc/pki/CA/private/cakey.pem -days 365 -out /etc/pki/CA/cacert.pem -new
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:CN
+State or Province Name (full name) [Some-State]:shanxi
+Locality Name (eg, city) []:xian
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:openEuler
+Organizational Unit Name (eg, section) []:develop
+Common Name (e.g. server FQDN or YOUR name) []:www.openeuler.org
+Email Address []:public@openeuler.io
+into your certificate request.
+-----BEGIN CERTIFICATE-----
+mkdir: cannot create directory ‘/etc/httpd/ssl’: No such file or directory
+genrsa: Can't open "/etc/httpd/ssl/httpd.key" for writing, No such file or directory
+Fri Mar 17 18:43:56 2023 - ERROR - common/common_openssl.sh line 68
+grep: /etc/httpd/ssl/httpd.key: No such file or directory
+Fri Mar 17 18:43:57 2023 - ERROR - common/common_openssl.sh line 70
+couldn't open "/etc/httpd/ssl/testlog2": no such file or directory
+    while executing
+"log_file /etc/httpd/ssl/testlog2"
+grep: /etc/httpd/ssl/testlog2: No such file or directory
+Fri Mar 17 18:43:58 2023 - ERROR - common/common_openssl.sh line 96
+grep: /etc/httpd/ssl/httpd.csr: No such file or directory
+Fri Mar 17 18:43:58 2023 - ERROR - common/common_openssl.sh line 98
+couldn't open "/etc/httpd/ssl/testlog3": no such file or directory
+    while executing
+"log_file /etc/httpd/ssl/testlog3"
+grep: /etc/httpd/ssl/testlog3: No such file or directory
+Fri Mar 17 18:43:59 2023 - ERROR - common/common_openssl.sh line 115
+grep: /etc/httpd/ssl/httpd.crt: No such file or directory
+Fri Mar 17 18:44:00 2023 - ERROR - common/common_openssl.sh line 117
+sed: can't read /etc/httpd/conf.d/ssl.conf: No such file or directory
+sed: can't read /etc/httpd/conf.d/ssl.conf: No such file or directory
+sed: can't read /etc/httpd/conf.d/ssl.conf: No such file or directory
+sed: can't read /etc/httpd/conf.d/ssl.conf: No such file or directory
+sed: can't read /etc/httpd/conf/httpd.conf: No such file or directory
+sed: can't read /etc/httpd/conf/httpd.conf: No such file or directory
+cp: cannot stat '/usr/share/httpd/noindex/index.html': No such file or directory
+common/common_openssl.sh: line 132: setenforce: command not found
+Fri Mar 17 18:44:01 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 18:44:01 2023 - INFO  - Start to run test.
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:02 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:04 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:05 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:07 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:08 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:10 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:11 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:13 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:14 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:16 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:17 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:20 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:20 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:23 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:23 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:26 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:26 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:29 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:29 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:32 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:32 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:35 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:35 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:38 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:38 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:41 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:41 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:44 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:44 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:47 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:47 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:50 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:50 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:53 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:53 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:56 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:56 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:44:59 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:44:59 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:02 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:03 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:05 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:06 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:08 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:09 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:11 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:12 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:14 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:15 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:17 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:18 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:20 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:21 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:23 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:23 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:26 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:26 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:29 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:29 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:32 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:32 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:34 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:35 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:37 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:38 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:40 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:41 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:43 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:44 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:46 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:47 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:49 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:50 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:52 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:53 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:55 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:56 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:45:58 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:45:59 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:01 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:01 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:04 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:04 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:07 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:07 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:10 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:10 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:13 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:13 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:16 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:16 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:19 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:20 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:22 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:23 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:25 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:26 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:28 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Failed to restart httpd.service: Unit httpd.service not found.
+Fri Mar 17 18:46:29 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 46
+Unit httpd.service could not be found.
+Fri Mar 17 18:46:31 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 49
+Fri Mar 17 18:46:32 2023 - ERROR - oe_test_openssl_repeat_restart.sh line 53
+Fri Mar 17 18:46:32 2023 - INFO  - End to run test.
+Fri Mar 17 18:46:33 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:46:33 2023 - INFO  - Start to restore the test environment.
+mv: cannot stat '/etc/pki/tls/openssl.cnf.bak': No such file or directory
+mv: cannot stat '/etc/pki/tls/openssl.cnf.bak': No such file or directory
+Failed to stop httpd.service: Unit httpd.service not loaded.
+Fri Mar 17 18:46:34 2023 - WARN  - no thing to do.
+Fri Mar 17 18:46:35 2023 - INFO  - End to restore the test environment.

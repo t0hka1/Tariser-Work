@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:03:24 2023 - INFO  - Start loading data!
+Fri Mar 17 12:03:31 2023 - INFO  - Loading data is complete!
+Fri Mar 17 12:03:31 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 12:03:35 2023 - ERROR - pkgs:(cryptsetup-reencrypt) not found
+fdisk: cannot open /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj: No such file or directory
+
+Welcome to fdisk (util-linux 2.38).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Fri Mar 17 12:03:36 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 12:03:36 2023 - INFO  - Start executing testcase.
+Cannot open device /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1.
+Fri Mar 17 12:03:37 2023 - ERROR - Disk encryption failed
+Fri Mar 17 12:03:38 2023 - ERROR - oe_test_encrypt_data.sh line 44
+Device /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj1 does not exist or access denied.
+Fri Mar 17 12:03:38 2023 - ERROR - Disk mapping failed
+Fri Mar 17 12:03:39 2023 - ERROR - oe_test_encrypt_data.sh line 46
+mke2fs 1.46.4 (18-Aug-2021)
+The file /dev/mapper/test_encrypted does not exist and no size was specified.
+Fri Mar 17 12:03:39 2023 - ERROR - Failed to format partition
+Fri Mar 17 12:03:40 2023 - ERROR - oe_test_encrypt_data.sh line 48
+mount: /mnt/test_encrypted: special device /dev/mapper/test_encrypted does not exist.
+       dmesg(1) may have more information after failed mount system call.
+Fri Mar 17 12:03:40 2023 - ERROR - Disk mount failed
+Fri Mar 17 12:03:41 2023 - ERROR - oe_test_encrypt_data.sh line 50
+Fri Mar 17 12:03:41 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 12:03:42 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:03:42 2023 - INFO  - start environment cleanup.
+umount: /mnt/test_encrypted: not mounted.
+Cannot initialize device-mapper. Is dm_mod kernel module loaded?
+mke2fs 1.46.4 (18-Aug-2021)
+mkfs.ext4: invalid blocks 'vdc' on device '/dev/vdb'
+fdisk: cannot open /dev/vdb vdc vdd vde vdf vdg vdh vdi vdj: No such file or directory
+
+Welcome to fdisk (util-linux 2.38).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Fri Mar 17 12:03:43 2023 - WARN  - no thing to do.
+mke2fs 1.46.4 (18-Aug-2021)
+mkfs.ext4: invalid blocks 'vdc' on device '/dev/vdb'
+Fri Mar 17 12:03:44 2023 - INFO  - Finish environment cleanup!

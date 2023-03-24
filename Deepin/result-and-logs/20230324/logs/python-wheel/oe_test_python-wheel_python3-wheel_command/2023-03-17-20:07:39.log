@@ -1,0 +1,89 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:07:42 2023 - INFO  - Start to prepare the test environment.
+running bdist_egg
+running egg_info
+creating wjfpkg.egg-info
+writing wjfpkg.egg-info/PKG-INFO
+writing dependency_links to wjfpkg.egg-info/dependency_links.txt
+writing entry points to wjfpkg.egg-info/entry_points.txt
+writing top-level names to wjfpkg.egg-info/top_level.txt
+writing manifest file 'wjfpkg.egg-info/SOURCES.txt'
+reading manifest file 'wjfpkg.egg-info/SOURCES.txt'
+writing manifest file 'wjfpkg.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-riscv64/egg
+running install_lib
+running build_py
+creating build
+creating build/lib
+creating build/lib/wjfpkg
+copying wjfpkg/wjf.py -> build/lib/wjfpkg
+copying wjfpkg/__init__.py -> build/lib/wjfpkg
+creating build/bdist.linux-riscv64
+creating build/bdist.linux-riscv64/egg
+creating build/bdist.linux-riscv64/egg/wjfpkg
+copying build/lib/wjfpkg/wjf.py -> build/bdist.linux-riscv64/egg/wjfpkg
+copying build/lib/wjfpkg/__init__.py -> build/bdist.linux-riscv64/egg/wjfpkg
+byte-compiling build/bdist.linux-riscv64/egg/wjfpkg/wjf.py to wjf.cpython-310.pyc
+byte-compiling build/bdist.linux-riscv64/egg/wjfpkg/__init__.py to __init__.cpython-310.pyc
+creating build/bdist.linux-riscv64/egg/EGG-INFO
+copying wjfpkg.egg-info/PKG-INFO -> build/bdist.linux-riscv64/egg/EGG-INFO
+copying wjfpkg.egg-info/SOURCES.txt -> build/bdist.linux-riscv64/egg/EGG-INFO
+copying wjfpkg.egg-info/dependency_links.txt -> build/bdist.linux-riscv64/egg/EGG-INFO
+copying wjfpkg.egg-info/entry_points.txt -> build/bdist.linux-riscv64/egg/EGG-INFO
+copying wjfpkg.egg-info/top_level.txt -> build/bdist.linux-riscv64/egg/EGG-INFO
+zip_safe flag not set; analyzing archive contents...
+creating dist
+creating 'dist/wjfpkg-1.0-py3.10.egg' and adding 'build/bdist.linux-riscv64/egg' to it
+removing 'build/bdist.linux-riscv64/egg' (and everything under it)
+Fri Mar 17 20:07:49 2023 - INFO  - pkgs:(python3-wheel) is already installed
+oe_test_python-wheel_python3-wheel_command.sh: line 39: rpm: command not found
+expr: syntax error: unexpected argument ‘0.32’
+oe_test_python-wheel_python3-wheel_command.sh: line 39: [: : integer expression expected
+Fri Mar 17 20:07:50 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:07:50 2023 - INFO  - Start to run test.
+oe_test_python-wheel_python3-wheel_command.sh: line 50: wheel-3: command not found
+Fri Mar 17 20:07:51 2023 - ERROR - wheel-3 -h execution failed.
+Fri Mar 17 20:07:51 2023 - ERROR - oe_test_python-wheel_python3-wheel_command.sh line 51
+oe_test_python-wheel_python3-wheel_command.sh: line 52: wheel-3: command not found
+Fri Mar 17 20:07:52 2023 - ERROR - wheel-3 --help execution failed.
+Fri Mar 17 20:07:52 2023 - ERROR - oe_test_python-wheel_python3-wheel_command.sh line 53
+oe_test_python-wheel_python3-wheel_command.sh: line 54: wheel-3: command not found
+Fri Mar 17 20:07:53 2023 - ERROR - wheel-3 help execution failed.
+Fri Mar 17 20:07:53 2023 - ERROR - oe_test_python-wheel_python3-wheel_command.sh line 55
+oe_test_python-wheel_python3-wheel_command.sh: line 56: wheel-3: command not found
+oe_test_python-wheel_python3-wheel_command.sh: line 56: rpm: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 20:07:54 2023 - ERROR - wheel-3 version execution failed.
+Fri Mar 17 20:07:55 2023 - ERROR - oe_test_python-wheel_python3-wheel_command.sh line 57
+oe_test_python-wheel_python3-wheel_command.sh: line 58: rpm: command not found
+expr: syntax error: unexpected argument ‘0.32’
+oe_test_python-wheel_python3-wheel_command.sh: line 58: [: : integer expression expected
+Fri Mar 17 20:07:55 2023 - INFO  - Start to run run_new_version().
+./python3-wheel_pre.sh: line 35: wheel-3: command not found
+Fri Mar 17 20:07:56 2023 - ERROR - wheel-3 convert execution failed.
+Fri Mar 17 20:07:56 2023 - ERROR - ./python3-wheel_pre.sh line 38
+./python3-wheel_pre.sh: line 39: wheel-3: command not found
+Fri Mar 17 20:07:57 2023 - ERROR - wheel-3 unpack execution failed.
+Fri Mar 17 20:07:57 2023 - ERROR - ./python3-wheel_pre.sh line 41
+./python3-wheel_pre.sh: line 43: wheel-3: command not found
+Fri Mar 17 20:07:58 2023 - ERROR - wheel-3 pack execution failed.
+Fri Mar 17 20:07:58 2023 - ERROR - ./python3-wheel_pre.sh line 45
+Fri Mar 17 20:07:59 2023 - INFO  - End to run run_new_version().
+Fri Mar 17 20:07:59 2023 - INFO  - End to run test.
+Fri Mar 17 20:08:00 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:08:00 2023 - INFO  - Start to restore the test environment.
+oe_test_python-wheel_python3-wheel_command.sh: line 70: rpm: command not found
+expr: syntax error: unexpected argument ‘0.32’
+oe_test_python-wheel_python3-wheel_command.sh: line 70: [: : integer expression expected
+Fri Mar 17 20:08:01 2023 - INFO  - Start to run clean_new_version().
+Fri Mar 17 20:08:01 2023 - INFO  - End to run clean_new_version().
+Fri Mar 17 20:08:02 2023 - WARN  - no thing to do.
+Fri Mar 17 20:08:03 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,71 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:44:37 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 19:44:41 2023 - ERROR - pkgs:(procinfo) not found
+Fri Mar 17 19:44:42 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 19:44:42 2023 - INFO  - Start to run test.
+oe_test_procinfo_02.sh: line 51: procinfo: command not found
+Fri Mar 17 19:44:43 2023 - ERROR - No option test fails
+Fri Mar 17 19:44:43 2023 - ERROR - oe_test_procinfo_02.sh line 52
+oe_test_procinfo_02.sh: line 55: procinfo: command not found
+Fri Mar 17 19:44:44 2023 - ERROR - Option test -b fails
+Fri Mar 17 19:44:44 2023 - ERROR - oe_test_procinfo_02.sh line 56
+oe_test_procinfo_02.sh: line 58: procinfo: command not found
+Fri Mar 17 19:44:45 2023 - ERROR - Option test -s fails
+Fri Mar 17 19:44:45 2023 - ERROR - oe_test_procinfo_02.sh line 59
+oe_test_procinfo_02.sh: line 61: procinfo: command not found
+Fri Mar 17 19:44:46 2023 - ERROR - Option test -m fails
+Fri Mar 17 19:44:46 2023 - ERROR - oe_test_procinfo_02.sh line 62
+oe_test_procinfo_02.sh: line 64: procinfo: command not found
+Fri Mar 17 19:44:47 2023 - ERROR - Option test -a fails
+Fri Mar 17 19:44:47 2023 - ERROR - oe_test_procinfo_02.sh line 65
+oe_test_procinfo_02.sh: line 67: procinfo: command not found
+Fri Mar 17 19:44:48 2023 - ERROR - Option test -i fails
+Fri Mar 17 19:44:48 2023 - ERROR - oe_test_procinfo_02.sh line 68
+spawn procinfo -n1
+couldn't execute "procinfo": no such file or directory
+    while executing
+"spawn procinfo -n1"
+Fri Mar 17 19:44:49 2023 - ERROR - Option test -nN fails
+Fri Mar 17 19:44:49 2023 - ERROR - oe_test_procinfo_02.sh line 74
+spawn procinfo -d
+couldn't execute "procinfo": no such file or directory
+    while executing
+"spawn procinfo -d"
+Fri Mar 17 19:44:50 2023 - ERROR - Option test -d fails
+Fri Mar 17 19:44:51 2023 - ERROR - oe_test_procinfo_02.sh line 80
+spawn procinfo -D
+couldn't execute "procinfo": no such file or directory
+    while executing
+"spawn procinfo -D"
+Fri Mar 17 19:44:52 2023 - ERROR - Option test -D fails
+Fri Mar 17 19:44:52 2023 - ERROR - oe_test_procinfo_02.sh line 86
+spawn procinfo -SD
+couldn't execute "procinfo": no such file or directory
+    while executing
+"spawn procinfo -SD"
+Fri Mar 17 19:44:53 2023 - ERROR - Option test -S fails
+Fri Mar 17 19:44:53 2023 - ERROR - oe_test_procinfo_02.sh line 92
+oe_test_procinfo_02.sh: line 94: procinfo: command not found
+Fri Mar 17 19:44:54 2023 - ERROR - Option test -r fails
+Fri Mar 17 19:44:55 2023 - ERROR - oe_test_procinfo_02.sh line 95
+oe_test_procinfo_02.sh: line 97: procinfo: command not found
+Fri Mar 17 19:44:55 2023 - ERROR - Option test -Ffile fails
+Fri Mar 17 19:44:56 2023 - ERROR - oe_test_procinfo_02.sh line 98
+oe_test_procinfo_02.sh: line 100: procinfo: command not found
+Fri Mar 17 19:44:56 2023 - ERROR - Option test -v fails
+Fri Mar 17 19:44:57 2023 - ERROR - oe_test_procinfo_02.sh line 101
+oe_test_procinfo_02.sh: line 103: procinfo: command not found
+Fri Mar 17 19:44:57 2023 - ERROR - Option test -h fails
+Fri Mar 17 19:44:58 2023 - ERROR - oe_test_procinfo_02.sh line 104
+Fri Mar 17 19:44:58 2023 - INFO  - End to run test.
+Fri Mar 17 19:44:59 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:44:59 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 19:45:00 2023 - WARN  - no thing to do.
+Fri Mar 17 19:45:00 2023 - INFO  - End to restore the test environment.

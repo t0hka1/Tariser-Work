@@ -1,0 +1,20 @@
+Fri Mar 17 19:03:37 2023 - INFO  - start to run testcase:oe_test_p7zip_7za_001.
+Fri Mar 17 19:04:18 2023 - ERROR - The case exit by code 12.
+Fri Mar 17 19:04:29 2023 - INFO  - End to run testcase:oe_test_p7zip_7za_001.
+Fri Mar 17 19:04:29 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 19:04:33 2023 - INFO  - start to run testcase:oe_test_p7zip_7za_002.
+Fri Mar 17 19:04:57 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 19:05:08 2023 - INFO  - End to run testcase:oe_test_p7zip_7za_002.
+Fri Mar 17 19:05:08 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 19:05:12 2023 - INFO  - start to run testcase:oe_test_p7zip_7za_003.
+Fri Mar 17 19:05:31 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 19:05:42 2023 - INFO  - End to run testcase:oe_test_p7zip_7za_003.
+Fri Mar 17 19:05:43 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 19:05:46 2023 - INFO  - start to run testcase:oe_test_p7zip_7za_004.
+Fri Mar 17 19:06:07 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 19:06:18 2023 - INFO  - End to run testcase:oe_test_p7zip_7za_004.
+Fri Mar 17 19:06:18 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 19:06:22 2023 - INFO  - start to run testcase:oe_test_p7zip_7za_005.
+Fri Mar 17 19:06:48 2023 - ERROR - The case exit by code 13.
+Fri Mar 17 19:06:58 2023 - INFO  - End to run testcase:oe_test_p7zip_7za_005.
+Fri Mar 17 19:06:59 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

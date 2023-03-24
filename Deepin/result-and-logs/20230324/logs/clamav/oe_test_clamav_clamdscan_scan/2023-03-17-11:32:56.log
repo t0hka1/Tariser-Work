@@ -1,0 +1,49 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:32:59 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 11:33:02 2023 - ERROR - pkgs:(clamav-server) not found
+mv: cannot stat '/etc/clamd.d/scan.conf': No such file or directory
+oe_test_clamav_clamdscan_scan.sh: line 37: /etc/clamd.d/scan.conf: No such file or directory
+Failed to restart clamd@scan.service: Unit clamd@scan.service not found.
+Fri Mar 17 11:33:03 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:33:04 2023 - INFO  - Start to run test.
+oe_test_clamav_clamdscan_scan.sh: line 49: clamdscan: command not found
+Fri Mar 17 11:33:04 2023 - ERROR - Check clamdscan  -v -l clamdscan_log /var/lib/clamav failed.
+Fri Mar 17 11:33:05 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 50
+oe_test_clamav_clamdscan_scan.sh: line 51: clamdscan: command not found
+Fri Mar 17 11:33:05 2023 - ERROR - Check clamdscan --quiet failed.
+Fri Mar 17 11:33:06 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 52
+oe_test_clamav_clamdscan_scan.sh: line 53: clamdscan: command not found
+Fri Mar 17 11:33:06 2023 - ERROR - Check clamdscan --remove failed.
+Fri Mar 17 11:33:07 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 54
+oe_test_clamav_clamdscan_scan.sh: line 55: clamdscan: command not found
+Fri Mar 17 11:33:07 2023 - ERROR - Check clamdscan --move failed.
+Fri Mar 17 11:33:08 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 56
+oe_test_clamav_clamdscan_scan.sh: line 57: clamdscan: command not found
+Fri Mar 17 11:33:08 2023 - ERROR - Check clamdscan --copy failed.
+Fri Mar 17 11:33:09 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 58
+oe_test_clamav_clamdscan_scan.sh: line 59: clamdscan: command not found
+Fri Mar 17 11:33:09 2023 - ERROR - Check clamdscan --config-file failed.
+Fri Mar 17 11:33:10 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 60
+oe_test_clamav_clamdscan_scan.sh: line 61: clamdscan: command not found
+Fri Mar 17 11:33:10 2023 - ERROR - Check clamdscan -i failed.
+Fri Mar 17 11:33:11 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 62
+oe_test_clamav_clamdscan_scan.sh: line 63: clamdscan: command not found
+Fri Mar 17 11:33:11 2023 - ERROR - Check clamdscan --no-summary failed.
+Fri Mar 17 11:33:12 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 64
+oe_test_clamav_clamdscan_scan.sh: line 65: clamdscan: command not found
+Fri Mar 17 11:33:12 2023 - ERROR - Check clamdscan --file-list failed.
+Fri Mar 17 11:33:13 2023 - ERROR - oe_test_clamav_clamdscan_scan.sh line 66
+Fri Mar 17 11:33:13 2023 - INFO  - End to run test.
+Fri Mar 17 11:33:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:33:14 2023 - INFO  - Start to restore the test environment.
+mv: cannot stat '/etc/clamd.d/scan.conf.bak': No such file or directory
+Failed to restart clamd@scan.service: Unit clamd@scan.service not found.
+Fri Mar 17 11:33:15 2023 - WARN  - no thing to do.
+Fri Mar 17 11:33:16 2023 - INFO  - End to restore the test environment.

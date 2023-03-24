@@ -1,0 +1,52 @@
+Fri Mar 17 16:25:36 2023 - INFO  - start to run testcase:oe_test_service_lxc-net.
+Fri Mar 17 16:26:16 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 16:26:26 2023 - INFO  - End to run testcase:oe_test_service_lxc-net.
+Fri Mar 17 16:26:27 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:26:31 2023 - INFO  - start to run testcase:oe_test_service_lxc.
+Fri Mar 17 16:27:22 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 16:27:32 2023 - INFO  - End to run testcase:oe_test_service_lxc.
+Fri Mar 17 16:27:33 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:27:37 2023 - INFO  - start to run testcase:oe_test_lxc_create_attach.
+Fri Mar 17 16:27:59 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 16:28:09 2023 - INFO  - End to run testcase:oe_test_lxc_create_attach.
+Fri Mar 17 16:28:10 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:28:14 2023 - INFO  - start to run testcase:oe_test_lxc_ls_monitor.
+Fri Mar 17 16:28:40 2023 - ERROR - The case exit by code 12.
+Fri Mar 17 16:28:50 2023 - INFO  - End to run testcase:oe_test_lxc_ls_monitor.
+Fri Mar 17 16:28:51 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:28:55 2023 - INFO  - start to run testcase:oe_test_lxc_unfreeze_destroy.
+Fri Mar 17 16:29:19 2023 - ERROR - The case exit by code 13.
+Fri Mar 17 16:29:30 2023 - INFO  - End to run testcase:oe_test_lxc_unfreeze_destroy.
+Fri Mar 17 16:29:31 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:29:34 2023 - INFO  - start to run testcase:oe_test_lxc_autostart_cgroup.
+Fri Mar 17 16:29:57 2023 - ERROR - The case exit by code 11.
+Fri Mar 17 16:30:08 2023 - INFO  - End to run testcase:oe_test_lxc_autostart_cgroup.
+Fri Mar 17 16:30:08 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:30:12 2023 - INFO  - start to run testcase:oe_test_lxc_device_copy.
+Fri Mar 17 16:30:34 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 16:30:45 2023 - INFO  - End to run testcase:oe_test_lxc_device_copy.
+Fri Mar 17 16:30:45 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:30:49 2023 - INFO  - start to run testcase:oe_test_lxc_snapshot_start.
+Fri Mar 17 16:31:11 2023 - ERROR - The case exit by code 11.
+Fri Mar 17 16:31:22 2023 - INFO  - End to run testcase:oe_test_lxc_snapshot_start.
+Fri Mar 17 16:31:23 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:31:27 2023 - INFO  - start to run testcase:oe_test_lxc_unshare_update.
+Fri Mar 17 16:31:50 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 16:32:01 2023 - INFO  - End to run testcase:oe_test_lxc_unshare_update.
+Fri Mar 17 16:32:01 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:32:05 2023 - INFO  - start to run testcase:oe_test_lxc_checkconfig_console.
+Fri Mar 17 16:32:25 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 16:32:36 2023 - INFO  - End to run testcase:oe_test_lxc_checkconfig_console.
+Fri Mar 17 16:32:37 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:32:40 2023 - INFO  - start to run testcase:oe_test_lxc_execute_freeze.
+Fri Mar 17 16:32:58 2023 - ERROR - The case exit by code 6.
+Fri Mar 17 16:33:09 2023 - INFO  - End to run testcase:oe_test_lxc_execute_freeze.
+Fri Mar 17 16:33:09 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:33:13 2023 - INFO  - start to run testcase:oe_test_lxc_stop_top.
+Fri Mar 17 16:33:35 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 16:33:46 2023 - INFO  - End to run testcase:oe_test_lxc_stop_top.
+Fri Mar 17 16:33:46 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 16:33:50 2023 - INFO  - start to run testcase:oe_test_lxc_info.
+Fri Mar 17 16:34:16 2023 - ERROR - The case exit by code 13.
+Fri Mar 17 16:34:26 2023 - INFO  - End to run testcase:oe_test_lxc_info.
+Fri Mar 17 16:34:27 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

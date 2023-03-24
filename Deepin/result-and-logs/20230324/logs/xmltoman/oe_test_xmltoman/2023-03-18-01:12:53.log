@@ -1,0 +1,20 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 01:12:55 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 01:13:20 2023 - INFO  - End to prepare the test environment.
+Sat Mar 18 01:13:20 2023 - INFO  - Start to run test.
+world body 
+Couldn't open encmap gb2312.enc:
+No such file or directory
+ at /usr/lib/riscv64-linux-gnu/perl5/5.34/XML/Parser.pm line 187.
+<body text="#000000" link="#0000ff" bgcolor="#ffffff">
+Sat Mar 18 01:13:22 2023 - INFO  - End to run test.
+Sat Mar 18 01:13:23 2023 - INFO  - succeed to execute the case.
+Sat Mar 18 01:13:23 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 01:13:40 2023 - INFO  - End to restore the test environment.

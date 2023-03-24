@@ -1,0 +1,50 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:26:48 2023 - INFO  - Start environmental preparation.
+cp: cannot stat '/etc/dhcp/dhcpd.conf': No such file or directory
+Cannot find device ""
+Fri Mar 17 12:26:49 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 12:26:49 2023 - INFO  - Start testing...
+Failed to restart dhcpd.service: Unit dhcpd.service not found.
+Fri Mar 17 12:26:50 2023 - ERROR - dhcpd.service restart failed
+Fri Mar 17 12:26:51 2023 - ERROR - ../common/common_lib.sh line 34
+Unit dhcpd.service could not be found.
+Fri Mar 17 12:26:57 2023 - ERROR - dhcpd.service restart failed
+Fri Mar 17 12:26:57 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop dhcpd.service: Unit dhcpd.service not loaded.
+Fri Mar 17 12:26:58 2023 - ERROR - dhcpd.service stop failed
+Fri Mar 17 12:26:58 2023 - ERROR - ../common/common_lib.sh line 39
+Unit dhcpd.service could not be found.
+Fri Mar 17 12:27:05 2023 - ERROR - dhcpd.service stop failed
+Fri Mar 17 12:27:05 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start dhcpd.service: Unit dhcpd.service not found.
+Fri Mar 17 12:27:06 2023 - ERROR - dhcpd.service start failed
+Fri Mar 17 12:27:06 2023 - ERROR - ../common/common_lib.sh line 44
+Unit dhcpd.service could not be found.
+Fri Mar 17 12:27:13 2023 - ERROR - dhcpd.service start failed
+Fri Mar 17 12:27:13 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for dhcpd.service: No such file or directory
+Fri Mar 17 12:27:14 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start dhcpd.service: Unit dhcpd.service not found.
+Fri Mar 17 12:27:15 2023 - ERROR - Job type reload is not applicable for unit dhcpd.service
+Fri Mar 17 12:27:15 2023 - ERROR - ../common/common_lib.sh line 91
+Unit dhcpd.service could not be found.
+Unit dhcpd.service could not be found.
+Fri Mar 17 12:27:16 2023 - INFO  - Finish test!
+Fri Mar 17 12:27:17 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:27:17 2023 - INFO  - start environment cleanup.
+Failed to stop dhcpd.service: Unit dhcpd.service not loaded.
+mv: cannot stat '/etc/dhcp/dhcpd.bak': No such file or directory
+Warning: Executing wildcard deletion to stay compatible with old scripts.
+         Explicitly specify the prefix length (192.168.0.1/32) to avoid this warning.
+         This special behaviour is likely to disappear in further releases,
+         fix your scripts!
+Cannot find device ""
+Fri Mar 17 12:27:18 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,35 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:58:40 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 11:58:44 2023 - ERROR - pkgs:(cppcheck) not found
+Fri Mar 17 11:58:45 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 11:58:45 2023 - INFO  - Start to run test.
+Fri Mar 17 11:58:46 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 36
+Fri Mar 17 11:58:46 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 38
+Fri Mar 17 11:58:47 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 40
+Fri Mar 17 11:58:48 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 42
+oe_test_cppcheck-htmlreport.sh: line 43: cppcheck-htmlreport: command not found
+Fri Mar 17 11:58:48 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 44
+oe_test_cppcheck-htmlreport.sh: line 45: cppcheck-htmlreport: command not found
+Fri Mar 17 11:58:49 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 46
+grep: testErr1/index.html: No such file or directory
+Fri Mar 17 11:58:49 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 48
+oe_test_cppcheck-htmlreport.sh: line 49: cppcheck-htmlreport: command not found
+Fri Mar 17 11:58:50 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 50
+grep: testErr2/index.html: No such file or directory
+Fri Mar 17 11:58:50 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 52
+oe_test_cppcheck-htmlreport.sh: line 53: cppcheck-htmlreport: command not found
+Fri Mar 17 11:58:51 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 54
+grep: testErr3/index.html: No such file or directory
+Fri Mar 17 11:58:51 2023 - ERROR - oe_test_cppcheck-htmlreport.sh line 56
+Fri Mar 17 11:58:52 2023 - INFO  - End of the test.
+Fri Mar 17 11:58:53 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:58:53 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:58:54 2023 - WARN  - no thing to do.
+Fri Mar 17 11:58:54 2023 - INFO  - Finish restoring the test environment.

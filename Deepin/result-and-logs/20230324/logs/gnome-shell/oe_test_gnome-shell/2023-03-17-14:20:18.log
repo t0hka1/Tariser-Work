@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:20:21 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 14:20:27 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 14:20:27 2023 - INFO  - Start to run test.
+oe_test_gnome-shell.sh: line 36: gnome-shell: command not found
+Fri Mar 17 14:20:28 2023 - ERROR - Check gnome-shell --list-mode failed.
+Fri Mar 17 14:20:28 2023 - ERROR - oe_test_gnome-shell.sh line 37
+oe_test_gnome-shell.sh: line 38: gnome-shell: command not found
+Fri Mar 17 14:20:29 2023 - ERROR - Check gnome-shell --version failed.
+Fri Mar 17 14:20:29 2023 - ERROR - oe_test_gnome-shell.sh line 39
+oe_test_gnome-shell.sh: line 40: gnome-shell: command not found
+Fri Mar 17 14:20:30 2023 - ERROR - Check gnome-shell -h failed.
+Fri Mar 17 14:20:31 2023 - ERROR - oe_test_gnome-shell.sh line 41
+oe_test_gnome-shell.sh: line 42: gnome-shell: command not found
+Fri Mar 17 14:20:31 2023 - ERROR - Check gnome-shell --help-all failed.
+Fri Mar 17 14:20:32 2023 - ERROR - oe_test_gnome-shell.sh line 43
+oe_test_gnome-shell.sh: line 44: gnome-shell-perf-tool: command not found
+Fri Mar 17 14:20:33 2023 - ERROR - Check gnome-shell-perf-tool --version failed.
+Fri Mar 17 14:20:33 2023 - ERROR - oe_test_gnome-shell.sh line 45
+oe_test_gnome-shell.sh: line 46: gnome-shell-perf-tool: command not found
+Fri Mar 17 14:20:34 2023 - ERROR - Check gnome-shell-perf-tool -h failed.
+Fri Mar 17 14:20:34 2023 - ERROR - oe_test_gnome-shell.sh line 47
+oe_test_gnome-shell.sh: line 48: gnome-shell-extension-tool: command not found
+Fri Mar 17 14:20:35 2023 - ERROR - Check gnome-shell-extension-tool -h failed.
+Fri Mar 17 14:20:35 2023 - ERROR - oe_test_gnome-shell.sh line 49
+Fri Mar 17 14:20:36 2023 - INFO  - End to run test.
+Fri Mar 17 14:20:36 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:20:37 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage gnome-shell is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'gnome-shell' has no installation candidate"
+Fri Mar 17 14:20:40 2023 - INFO  - End to restore the test environment.

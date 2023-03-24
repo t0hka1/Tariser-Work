@@ -1,0 +1,71 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:53:25 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 00:53:29 2023 - INFO  - pkgs:(wireshark) is already installed
+Sat Mar 18 00:53:29 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 00:53:30 2023 - INFO  - Start to run test.
+Usage: captype <infile> ...
+Captype (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)
+
+Copyright 1998-2021 Gerald Combs <gerald@wireshark.org> and contributors.
+License GPLv2+: GNU GPL version 2 or later <https://www.gnu.org/licenses/gpl-2.0.html>
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiled (64-bit) with GLib 2.72.1, with zlib 1.2.11.
+
+Running on Linux 5.10.0-7.oe2203.riscv64, with 8029 MB of physical memory, with
+locale LC_CTYPE=C.UTF-8, LC_NUMERIC=C, LC_TIME=C, LC_COLLATE=C, LC_MONETARY=C,
+LC_MESSAGES=C, LC_PAPER=C, LC_NAME=C, LC_ADDRESS=C, LC_TELEPHONE=C,
+LC_MEASUREMENT=C, LC_IDENTIFICATION=C, with zlib 1.2.11, binary plugins
+supported (0 loaded).
+
+Built using gcc 11.2.0.
+Capturing on 'eth0'
+File: testfile1
+
+Packets: 3 
+Packets: 5 
+Packets: 7 
+Packets: 9 
+Packets: 10 
+Packets: 11 
+Packets: 12 
+Packets: 14 
+Packets: 16 
+Packets: 17 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+testfile1: pcapng
+Capturing on 'eth0'
+File: testfile16
+
+Packets: 2 
+Packets: 3 
+Packets: 5 
+Packets: 6 
+Packets: 7 
+Packets: 9 
+Packets: 11 
+Packets: 12 
+Packets: 13 
+Packets: 15 
+Packets: 16 
+Packets: 17 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+testfile16: pcap
+Sat Mar 18 01:23:23 2023 - ERROR - Timeout : Command 'bash oe_test_captype.sh' timed out after 1799.9996856479997 seconds
+Sat Mar 18 01:23:23 2023 - INFO  - End of the test.
+Sat Mar 18 01:23:24 2023 - INFO  - succeed to execute the case.
+Sat Mar 18 01:23:24 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 01:23:25 2023 - WARN  - no thing to do.
+Sat Mar 18 01:23:25 2023 - INFO  - Finish restoring the test environment.

@@ -1,0 +1,45 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:49:08 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:49:11 2023 - ERROR - pkgs:(sos) not found
+Fri Mar 17 22:49:12 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 22:49:13 2023 - INFO  - Start to run test.
+oe_test_sosreport_03.sh: line 35: sosreport: command not found
+Fri Mar 17 22:49:13 2023 - ERROR - oe_test_sosreport_03.sh line 36
+spawn sosreport --log-size 10
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport --log-size 10"
+Fri Mar 17 22:49:14 2023 - ERROR - oe_test_sosreport_03.sh line 46
+spawn sosreport -n dnf,rpm,selinux,dovecot
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport -n dnf,rpm,selinux,dovecot"
+Fri Mar 17 22:49:15 2023 - ERROR - oe_test_sosreport_03.sh line 56
+spawn sosreport --no-report
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport --no-report "
+Fri Mar 17 22:49:16 2023 - ERROR - oe_test_sosreport_03.sh line 66
+ls: cannot access '/var/tmp/sosreport-localhost-no-report-2023-03-17-*.tar.xz': No such file or directory
+tar: option requires an argument -- 'f'
+Try 'tar --help' or 'tar --usage' for more information.
+spawn sosreport --note testnote
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport --note "testnote""
+Fri Mar 17 22:49:17 2023 - ERROR - oe_test_sosreport_03.sh line 80
+oe_test_sosreport_03.sh: line 81: sosreport: command not found
+Fri Mar 17 22:49:18 2023 - ERROR - oe_test_sosreport_03.sh line 82
+Fri Mar 17 22:49:19 2023 - ERROR - oe_test_sosreport_03.sh line 84
+Fri Mar 17 22:49:19 2023 - INFO  - End of the test.
+Fri Mar 17 22:49:20 2023 - ERROR - failed to execute the case.
+Fri Mar 17 22:49:20 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 22:49:21 2023 - WARN  - no thing to do.
+Fri Mar 17 22:49:21 2023 - INFO  - Finish restoring the test environment.

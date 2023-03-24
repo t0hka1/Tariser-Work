@@ -1,0 +1,52 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:05:40 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 14:05:45 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 14:05:46 2023 - INFO  - Start testing...
+Failed to restart gdm.service: Unit gdm.service not found.
+Fri Mar 17 14:05:47 2023 - ERROR - gdm.service restart failed
+Fri Mar 17 14:05:47 2023 - ERROR - ../common/common_lib.sh line 34
+Unit gdm.service could not be found.
+Fri Mar 17 14:05:54 2023 - ERROR - gdm.service restart failed
+Fri Mar 17 14:05:54 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop gdm.service: Unit gdm.service not loaded.
+Fri Mar 17 14:05:55 2023 - ERROR - gdm.service stop failed
+Fri Mar 17 14:05:55 2023 - ERROR - ../common/common_lib.sh line 39
+Unit gdm.service could not be found.
+Fri Mar 17 14:06:02 2023 - ERROR - gdm.service stop failed
+Fri Mar 17 14:06:02 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start gdm.service: Unit gdm.service not found.
+Fri Mar 17 14:06:03 2023 - ERROR - gdm.service start failed
+Fri Mar 17 14:06:03 2023 - ERROR - ../common/common_lib.sh line 44
+Unit gdm.service could not be found.
+Fri Mar 17 14:06:10 2023 - ERROR - gdm.service start failed
+Fri Mar 17 14:06:10 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for gdm.service: No such file or directory
+Fri Mar 17 14:06:11 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start gdm.service: Unit gdm.service not found.
+sed: can't read /usr/lib/systemd/system/gdm.service: No such file or directory
+Failed to reload gdm.service: Unit gdm.service not found.
+Fri Mar 17 14:06:23 2023 - ERROR - gdm.service reload failed
+Fri Mar 17 14:06:24 2023 - ERROR - oe_test_service_gdm.sh line 41
+Unit gdm.service could not be found.
+Fri Mar 17 14:06:24 2023 - ERROR - gdm.service reload causes the service status to change
+Fri Mar 17 14:06:25 2023 - ERROR - oe_test_service_gdm.sh line 43
+Fri Mar 17 14:06:25 2023 - INFO  - Finish test!
+Fri Mar 17 14:06:26 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:06:26 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/gdm.service: No such file or directory
+Failed to reload gdm.service: Unit gdm.service not found.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage gdm is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'gdm' has no installation candidate"
+Fri Mar 17 14:06:36 2023 - INFO  - Finish environment cleanup!

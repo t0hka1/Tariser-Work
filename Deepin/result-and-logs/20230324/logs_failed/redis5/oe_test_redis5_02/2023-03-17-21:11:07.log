@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:11:09 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 21:11:14 2023 - ERROR - pkgs:(redis5) not found
+Failed to start redis.service: Unit redis.service not found.
+Fri Mar 17 21:11:14 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 21:11:15 2023 - INFO  - Start executing testcase!
+Unit redis.service could not be found.
+oe_test_redis5_02.sh: line 36: redis-cli: command not found
+Fri Mar 17 21:11:22 2023 - ERROR - oe_test_redis5_02.sh line 37
+oe_test_redis5_02.sh: line 38: redis-cli: command not found
+Fri Mar 17 21:11:22 2023 - ERROR - oe_test_redis5_02.sh line 39
+oe_test_redis5_02.sh: line 40: redis-cli: command not found
+Fri Mar 17 21:11:23 2023 - ERROR - oe_test_redis5_02.sh line 41
+oe_test_redis5_02.sh: line 42: redis-cli: command not found
+Fri Mar 17 21:11:23 2023 - ERROR - oe_test_redis5_02.sh line 43
+spawn redis-cli -h 127.0.0.1 -p 6379
+couldn't execute "redis-cli": no such file or directory
+    while executing
+"spawn redis-cli -h 127.0.0.1 -p 6379"
+ls: cannot access '/var/lib/redis': No such file or directory
+Fri Mar 17 21:11:30 2023 - ERROR - oe_test_redis5_02.sh line 60
+oe_test_redis5_02.sh: line 61: redis-check-rdb: command not found
+Fri Mar 17 21:11:31 2023 - ERROR - oe_test_redis5_02.sh line 62
+sed: can't read /etc/redis.conf: No such file or directory
+Fri Mar 17 21:11:31 2023 - ERROR - oe_test_redis5_02.sh line 64
+oe_test_redis5_02.sh: line 65: redis-cli: command not found
+Fri Mar 17 21:11:32 2023 - ERROR - oe_test_redis5_02.sh line 66
+oe_test_redis5_02.sh: line 67: redis-cli: command not found
+Fri Mar 17 21:11:33 2023 - ERROR - oe_test_redis5_02.sh line 68
+cp: cannot stat '/var/lib/redis/appendonly.aof': No such file or directory
+Fri Mar 17 21:11:39 2023 - ERROR - oe_test_redis5_02.sh line 71
+oe_test_redis5_02.sh: line 72: redis-check-aof: command not found
+Fri Mar 17 21:11:39 2023 - ERROR - oe_test_redis5_02.sh line 73
+root         981     916  0 21:11 ?        00:00:00 grep 978
+Fri Mar 17 21:11:40 2023 - INFO  - End of testcase execution!
+Fri Mar 17 21:11:41 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:11:41 2023 - INFO  - Start environment cleanup.
+oe_test_redis5_02.sh: line 84: kill: (978) - No such process
+Failed to stop redis.service: Unit redis.service not loaded.
+Fri Mar 17 21:11:42 2023 - WARN  - no thing to do.
+Fri Mar 17 21:11:42 2023 - INFO  - Finish environment cleanup.

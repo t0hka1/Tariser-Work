@@ -1,0 +1,8 @@
+Fri Mar 17 23:12:59 2023 - INFO  - start to run testcase:oe_test_service_strongswan.
+Fri Mar 17 23:15:51 2023 - ERROR - The case exit by code 6.
+Fri Mar 17 23:16:02 2023 - INFO  - End to run testcase:oe_test_service_strongswan.
+Fri Mar 17 23:16:02 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:16:07 2023 - INFO  - start to run testcase:oe_test_service_strongswan-swanctl.
+Fri Mar 17 23:18:32 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 23:18:43 2023 - INFO  - End to run testcase:oe_test_service_strongswan-swanctl.
+Fri Mar 17 23:18:44 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

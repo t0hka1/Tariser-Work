@@ -1,0 +1,84 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:55:10 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 15:55:12 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 15:55:12 2023 - INFO  - Start to run test.
+usage: capsh [args ...]
+  --help         this message (or try 'man capsh')
+  --print        display capability relevant state
+  --decode=xxx   decode a hex string to a list of caps
+  --supports=xxx exit 1 if capability xxx unsupported
+  --has-p=xxx    exit 1 if capability xxx not permitted
+  --has-i=xxx    exit 1 if capability xxx not inheritable
+  --drop=xxx     remove xxx,.. capabilities from bset
+  --dropped=xxx  exit 1 unless bounding cap xxx dropped
+  --has-ambient  exit 1 unless ambient vector supported
+  --has-a=xxx    exit 1 if capability xxx not ambient
+  --addamb=xxx   add xxx,... capabilities to ambient set
+  --delamb=xxx   remove xxx,... capabilities from ambient
+  --noamb        reset (drop) all ambient capabilities
+  --caps=xxx     set caps as per cap_from_text()
+  --inh=xxx      set xxx,.. inheritable set
+  --secbits=<n>  write a new value for securebits
+  --iab=...      use cap_iab_from_text() to set iab
+  --keep=<n>     set keep-capability bit to <n>
+  --uid=<n>      set uid to <n> (hint: id <username>)
+  --cap-uid=<n>  libcap cap_setuid() to change uid
+  --is-uid=<n>   exit 1 if uid != <n>
+  --gid=<n>      set gid to <n> (hint: id <username>)
+  --is-gid=<n>   exit 1 if gid != <n>
+  --groups=g,... set the supplemental groups
+  --user=<name>  set uid,gid and groups to that of user
+  --chroot=path  chroot(2) to this path
+  --modes        list libcap named capability modes
+  --mode=<xxx>   set capability mode to <xxx>
+  --inmode=<xxx> exit 1 if current mode is not <xxx>
+  --killit=<n>   send signal(n) to child
+  --forkfor=<n>  fork and make child sleep for <n> sec
+  --shell=/xx/yy use /xx/yy instead of /bin/bash for --
+  ==             re-exec(capsh) with args as for --
+  --             remaining arguments are for /bin/bash
+                 (without -- [capsh] will simply exit(0))
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=1.50 ms
+
+--- 127.0.0.1 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 1.497/1.497/1.497/0.000 ms
+test20230317155510
+test20230317155510
+root
+root
+./ping cap_net_admin,cap_net_raw=eip
+usage: getcaps <pid> [<pid> ...]
+
+  This program displays the capabilities on the queried process(es).
+  The capabilities are displayed in the cap_from_text(3) format.
+
+  Optional arguments:
+     --help or --usage     display this message.
+     --verbose             use a more verbose output format.
+     --ugly or --legacy    use the archaic legacy output format.
+
+[Copyright (c) 1997-8,2007,2019 Andrew G. Morgan  <morgan@kernel.org>]
+usage: getcaps <pid> [<pid> ...]
+
+  This program displays the capabilities on the queried process(es).
+  The capabilities are displayed in the cap_from_text(3) format.
+
+  Optional arguments:
+     --help or --usage     display this message.
+     --verbose             use a more verbose output format.
+     --ugly or --legacy    use the archaic legacy output format.
+
+[Copyright (c) 1997-8,2007,2019 Andrew G. Morgan  <morgan@kernel.org>]
+Fri Mar 17 15:55:14 2023 - INFO  - End to run test.
+Fri Mar 17 15:55:15 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 15:55:15 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 15:55:16 2023 - INFO  - End to restore the test environment.

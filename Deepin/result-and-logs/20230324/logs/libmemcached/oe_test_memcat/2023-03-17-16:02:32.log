@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:02:35 2023 - INFO  - Start to prepare the test environment.
+../common/common_libmemcached.sh: line 30: memcached: command not found
+Fri Mar 17 16:02:46 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:02:46 2023 - INFO  - Start to run test.
+oe_test_memcat.sh: line 30: memcat: command not found
+Fri Mar 17 16:02:47 2023 - ERROR - oe_test_memcat.sh line 31
+oe_test_memcat.sh: line 32: memcat: command not found
+Fri Mar 17 16:02:48 2023 - ERROR - oe_test_memcat.sh line 33
+oe_test_memcat.sh: line 34: memcat: command not found
+Fri Mar 17 16:02:48 2023 - ERROR - oe_test_memcat.sh line 35
+spawn telnet 127.0.0.1 11211
+couldn't execute "telnet": no such file or directory
+    while executing
+"spawn telnet 127.0.0.1 11211"
+oe_test_memcat.sh: line 43: memcat: command not found
+Fri Mar 17 16:02:49 2023 - ERROR - oe_test_memcat.sh line 44
+oe_test_memcat.sh: line 45: memcat: command not found
+Fri Mar 17 16:02:50 2023 - ERROR - oe_test_memcat.sh line 46
+oe_test_memcat.sh: line 47: memcat: command not found
+Fri Mar 17 16:02:50 2023 - ERROR - oe_test_memcat.sh line 48
+oe_test_memcat.sh: line 49: memcat: command not found
+Fri Mar 17 16:02:51 2023 - ERROR - oe_test_memcat.sh line 50
+oe_test_memcat.sh: line 51: memcat: command not found
+Fri Mar 17 16:02:51 2023 - ERROR - oe_test_memcat.sh line 52
+oe_test_memcat.sh: line 53: memcat: command not found
+Fri Mar 17 16:02:52 2023 - ERROR - oe_test_memcat.sh line 54
+oe_test_memcat.sh: line 55: memcat: command not found
+Fri Mar 17 16:02:52 2023 - ERROR - oe_test_memcat.sh line 56
+Fri Mar 17 16:02:53 2023 - ERROR - oe_test_memcat.sh line 58
+Fri Mar 17 16:02:53 2023 - INFO  - End of the test.
+Fri Mar 17 16:02:54 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:02:54 2023 - INFO  - Start to restore the test environment.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage libmemcached is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'libmemcached' has no installation candidate"
+Fri Mar 17 16:02:58 2023 - INFO  - Finish restoring the test environment.

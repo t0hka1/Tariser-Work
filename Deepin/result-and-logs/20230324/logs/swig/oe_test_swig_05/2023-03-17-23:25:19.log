@@ -1,0 +1,566 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:25:21 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:25:45 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:25:46 2023 - INFO  - Start to run test.
+example.i:11: Typemap for double My_variable (jni) : %typemap(jni) double
+example.i:11: Typemap for double My_variable (jtype) : %typemap(jtype) double
+example.i:11: Typemap for double My_variable (jstype) : %typemap(jstype) double
+example.i:11: Typemap for void My_variable (jni) : %typemap(jni) void
+example.i:11: Typemap for void My_variable (jtype) : %typemap(jtype) void
+example.i:11: Typemap for double My_variable (in) : %typemap(in) double
+example.i:11: Typemap for double My_variable (typecheck) : %typemap(typecheck) double
+example.i:11: Typemap for void My_variable (out) : %typemap(out) void
+example.i:11: Typemap for double My_variable (jstype) : %typemap(jstype) double
+example.i:11: Typemap for double My_variable (javain) : %typemap(javain) double
+example.i:11: Typemap for void My_variable (jstype) : %typemap(jstype) void
+example.i:11: Typemap for void My_variable (javaout) : %typemap(javaout) void
+example.i:11: Typemap for double My_variable (jni) : %typemap(jni) double
+example.i:11: Typemap for double My_variable (jtype) : %typemap(jtype) double
+example.i:11: Typemap for double My_variable (out) : %typemap(out) double
+example.i:11: Typemap for double My_variable (jstype) : %typemap(jstype) double
+example.i:11: Typemap for double My_variable (javaout) : %typemap(javaout) double
+example.i:12: Typemap for int n (jni) : %typemap(jni) int
+example.i:12: Typemap for int n (jtype) : %typemap(jtype) int
+example.i:12: Typemap for int n (jstype) : %typemap(jstype) int
+example.i:12: Typemap for int fact (jni) : %typemap(jni) int
+example.i:12: Typemap for int fact (jtype) : %typemap(jtype) int
+example.i:12: Typemap for int n (in) : %typemap(in) int
+example.i:12: Typemap for int n (typecheck) : %typemap(typecheck) int
+example.i:12: Typemap for int fact (out) : %typemap(out) int
+example.i:12: Typemap for int n (jstype) : %typemap(jstype) int
+example.i:12: Typemap for int n (javain) : %typemap(javain) int
+example.i:12: Typemap for int fact (jstype) : %typemap(jstype) int
+example.i:12: Typemap for int fact (javaout) : %typemap(javaout) int
+example.i:13: Typemap for int x (jni) : %typemap(jni) int
+example.i:13: Typemap for int y (jni) : %typemap(jni) int
+example.i:13: Typemap for int x (jtype) : %typemap(jtype) int
+example.i:13: Typemap for int y (jtype) : %typemap(jtype) int
+example.i:13: Typemap for int x (jstype) : %typemap(jstype) int
+example.i:13: Typemap for int y (jstype) : %typemap(jstype) int
+example.i:13: Typemap for int my_mod (jni) : %typemap(jni) int
+example.i:13: Typemap for int my_mod (jtype) : %typemap(jtype) int
+example.i:13: Typemap for int x (in) : %typemap(in) int
+example.i:13: Typemap for int y (in) : %typemap(in) int
+example.i:13: Typemap for int x (typecheck) : %typemap(typecheck) int
+example.i:13: Typemap for int y (typecheck) : %typemap(typecheck) int
+example.i:13: Typemap for int my_mod (out) : %typemap(out) int
+example.i:13: Typemap for int x (jstype) : %typemap(jstype) int
+example.i:13: Typemap for int y (jstype) : %typemap(jstype) int
+example.i:13: Typemap for int x (javain) : %typemap(javain) int
+example.i:13: Typemap for int y (javain) : %typemap(javain) int
+example.i:13: Typemap for int my_mod (jstype) : %typemap(jstype) int
+example.i:13: Typemap for int my_mod (javaout) : %typemap(javaout) int
+example.i:14: Typemap for char *get_time (jni) : %typemap(jni) char *
+example.i:14: Typemap for char *get_time (jtype) : %typemap(jtype) char *
+example.i:14: Typemap for char *get_time (out) : %typemap(out) char *
+example.i:14: Typemap for char *get_time (jstype) : %typemap(jstype) char *
+example.i:14: Typemap for char *get_time (javaout) : %typemap(javaout) char *
+/* template workaround for compilers that cannot correctly implement the C++ standard */
+#ifndef SWIGTEMPLATEDISAMBIGUATOR
+#  define SWIGTEMPLATEDISAMBIGUATOR template
+#  define SWIGTEMPLATEDISAMBIGUATOR template
+#  define SWIGTEMPLATEDISAMBIGUATOR
+  SWIG_JavaDirectorPureVirtual,
+    { SWIG_JavaDirectorPureVirtual, "java/lang/RuntimeException" },
+  jclass excep;
+  static const SWIG_JavaExceptions_t java_exceptions[] = {
+    { SWIG_JavaOutOfMemoryError, "java/lang/OutOfMemoryError" },
+    { SWIG_JavaIOException, "java/io/IOException" },
+    { SWIG_JavaRuntimeException, "java/lang/RuntimeException" },
+    { SWIG_JavaIndexOutOfBoundsException, "java/lang/IndexOutOfBoundsException" },
+    { SWIG_JavaArithmeticException, "java/lang/ArithmeticException" },
+    { SWIG_JavaIllegalArgumentException, "java/lang/IllegalArgumentException" },
+    { SWIG_JavaNullPointerException, "java/lang/NullPointerException" },
+    { SWIG_JavaDirectorPureVirtual, "java/lang/RuntimeException" },
+    { SWIG_JavaUnknownError,  "java/lang/UnknownError" },
+    { SWIG_JavaIllegalStateException, "java/lang/IllegalStateException" },
+    { (SWIG_JavaExceptionCodes)0,  "java/lang/UnknownError" }
+  };
+  const SWIG_JavaExceptions_t *except_ptr = java_exceptions;
+
+  while (except_ptr->code != code && except_ptr->code)
+    except_ptr++;
+
+  (*jenv)->ExceptionClear(jenv);
+  excep = (*jenv)->FindClass(jenv, except_ptr->java_exception);
+// Support for throwing D exceptions from C/C++.
+// Callback for returning strings to D without leaking memory.
+ * swig.swg
+  typemap code by hand.  Alternatively, you can use the
+  Now, using a typemap
+    %typemap(check) int direction {
+ * %rename predicates
+  Warnings messages used in typemaps. Message names will be the same
+    %typemapmsg(CHARLEAK,<msg>);
+  you use the message in your typemap as
+    %typemap(varin,warning=SWIGWARN_TYPEMAP_CHARLEAK_MSG) char * 
+/* -- Type system and typemaps -- */
+	/* mostly used in directorout typemaps */
+%endoffile
+%endoffile
+%endoffile
+ * Function/method overloading support.   This is done through typemaps,
+ * Default char * and C array typemaps
+/* Set up the typemap for handling new return strings */
+%typemap(newfree) char * "free($1);";
+/* Default typemap for handling char * members */
+%typemap(memberin) char * {
+%typemap(memberin,warning=        "451:Setting a const char * variable may leak memory." ) const char * {
+%typemap(globalin) char * {
+%typemap(globalin,warning=        "451:Setting a const char * variable may leak memory." ) const char * {
+%typemap(memberin) char [ANY] {
+%typemap(globalin) char [ANY] {
+%typemap(memberin) char [] {
+%typemap(globalin) char [] {
+/* memberin/globalin typemap for arrays. */
+%typemap(memberin) SWIGTYPE [ANY] {
+%typemap(globalin) SWIGTYPE [ANY] {
+/* memberin/globalin typemap for double arrays. */
+%typemap(memberin) SWIGTYPE [ANY][ANY] {
+%typemap(globalin) SWIGTYPE [ANY][ANY] {
+ * make massive changes to typemaps and other parts of the SWIG code generator.
+%endoffile
+ * Java typemaps
+ * that the same typemaps can be used for generating code for both C and C++. The SWIG preprocessor can expand
+ * the macros thereby generating the correct calling convention. It is thus essential that all typemaps that
+%endoffile
+/* The jni, jtype and jstype typemaps work together and so there should be one of each. 
+ * The jni typemap contains the JNI type used in the JNI (C/C++) code. 
+ * The jtype typemap contains the Java type used in the JNI intermediary class. 
+ * The jstype typemap contains the Java type used in the Java proxy classes, type wrapper classes and module class. */
+%typemap(jni) bool,               const bool &               "jboolean"
+%typemap(jni) char,               const char &               "jchar"
+%typemap(jni) signed char,        const signed char &        "jbyte"
+%typemap(jni) unsigned char,      const unsigned char &      "jshort"
+%typemap(jni) short,              const short &              "jshort"
+%typemap(jni) unsigned short,     const unsigned short &     "jint"
+%typemap(jni) int,                const int &                "jint"
+%typemap(jni) unsigned int,       const unsigned int &       "jlong"
+%typemap(jni) long,               const long &               "jint"
+%typemap(jni) unsigned long,      const unsigned long &      "jlong"
+%typemap(jni) long long,          const long long &          "jlong"
+%typemap(jni) unsigned long long, const unsigned long long & "jobject"
+%typemap(jni) float,              const float &              "jfloat"
+%typemap(jni) double,             const double &             "jdouble"
+%typemap(jni) void                                           "void"
+%typemap(jtype) bool,               const bool &               "boolean"
+%typemap(jtype) char,               const char &               "char"
+%typemap(jtype) signed char,        const signed char &        "byte"
+%typemap(jtype) unsigned char,      const unsigned char &      "short"
+%typemap(jtype) short,              const short &              "short"
+%typemap(jtype) unsigned short,     const unsigned short &     "int"
+%typemap(jtype) int,                const int &                "int"
+%typemap(jtype) unsigned int,       const unsigned int &       "long"
+%typemap(jtype) long,               const long &               "int"
+%typemap(jtype) unsigned long,      const unsigned long &      "long"
+%typemap(jtype) long long,          const long long &          "long"
+%typemap(jtype) unsigned long long, const unsigned long long & "java.math.BigInteger"
+%typemap(jtype) float,              const float &              "float"
+%typemap(jtype) double,             const double &             "double"
+%typemap(jtype) void                                           "void"
+%typemap(jstype) bool,               const bool &               "boolean"
+%typemap(jstype) char,               const char &               "char"
+%typemap(jstype) signed char,        const signed char &        "byte"
+%typemap(jstype) unsigned char,      const unsigned char &      "short"
+%typemap(jstype) short,              const short &              "short"
+%typemap(jstype) unsigned short,     const unsigned short &     "int"
+%typemap(jstype) int,                const int &                "int"
+%typemap(jstype) unsigned int,       const unsigned int &       "long"
+%typemap(jstype) long,               const long &               "int"
+%typemap(jstype) unsigned long,      const unsigned long &      "long"
+%typemap(jstype) long long,          const long long &          "long"
+%typemap(jstype) unsigned long long, const unsigned long long & "java.math.BigInteger"
+%typemap(jstype) float,              const float &              "float"
+%typemap(jstype) double,             const double &             "double"
+%typemap(jstype) void                                           "void"
+%typemap(jboxtype) bool,               const bool &               "Boolean"
+%typemap(jboxtype) char,               const char &               "Character"
+%typemap(jboxtype) signed char,        const signed char &        "Byte"
+%typemap(jboxtype) unsigned char,      const unsigned char &      "Short"
+%typemap(jboxtype) short,              const short &              "Short"
+%typemap(jboxtype) unsigned short,     const unsigned short &     "Integer"
+%typemap(jboxtype) int,                const int &                "Integer"
+%typemap(jboxtype) unsigned int,       const unsigned int &       "Long"
+%typemap(jboxtype) long,               const long &               "Integer"
+%typemap(jboxtype) unsigned long,      const unsigned long &      "Long"
+%typemap(jboxtype) long long,          const long long &          "Long"
+%typemap(jboxtype) unsigned long long, const unsigned long long & "java.math.BigInteger"
+%typemap(jboxtype) float,              const float &              "Float"
+%typemap(jboxtype) double,             const double &             "Double"
+%typemap(jni) char *, char *&, char[ANY], char[]               "jstring"
+%typemap(jtype) char *, char *&, char[ANY], char[]               "String"
+%typemap(jstype) char *, char *&, char[ANY], char[]               "String"
+%typemap(jni) jboolean      "jboolean"
+%typemap(jni) jchar         "jchar"
+%typemap(jni) jbyte         "jbyte"
+%typemap(jni) jshort        "jshort"
+%typemap(jni) jint          "jint"
+%typemap(jni) jlong         "jlong"
+%typemap(jni) jfloat        "jfloat"
+%typemap(jni) jdouble       "jdouble"
+%typemap(jni) jstring       "jstring"
+%typemap(jni) jobject       "jobject"
+%typemap(jni) jbooleanArray "jbooleanArray"
+%typemap(jni) jcharArray    "jcharArray"
+%typemap(jni) jbyteArray    "jbyteArray"
+%typemap(jni) jshortArray   "jshortArray"
+%typemap(jni) jintArray     "jintArray"
+%typemap(jni) jlongArray    "jlongArray"
+%typemap(jni) jfloatArray   "jfloatArray"
+%typemap(jni) jdoubleArray  "jdoubleArray"
+%typemap(jni) jobjectArray  "jobjectArray"
+%typemap(jtype) jboolean      "boolean"
+%typemap(jtype) jchar         "char"
+%typemap(jtype) jbyte         "byte"
+%typemap(jtype) jshort        "short"
+%typemap(jtype) jint          "int"
+%typemap(jtype) jlong         "long"
+%typemap(jtype) jfloat        "float"
+%typemap(jtype) jdouble       "double"
+%typemap(jtype) jstring       "String"
+%typemap(jtype) jobject       "java.lang.Object"
+%typemap(jtype) jbooleanArray "boolean[]"
+%typemap(jtype) jcharArray    "char[]"
+%typemap(jtype) jbyteArray    "byte[]"
+%typemap(jtype) jshortArray   "short[]"
+%typemap(jtype) jintArray     "int[]"
+%typemap(jtype) jlongArray    "long[]"
+%typemap(jtype) jfloatArray   "float[]"
+%typemap(jtype) jdoubleArray  "double[]"
+%typemap(jtype) jobjectArray  "java.lang.Object[]"
+%typemap(jstype) jboolean      "boolean"
+%typemap(jstype) jchar         "char"
+%typemap(jstype) jbyte         "byte"
+%typemap(jstype) jshort        "short"
+%typemap(jstype) jint          "int"
+%typemap(jstype) jlong         "long"
+%typemap(jstype) jfloat        "float"
+%typemap(jstype) jdouble       "double"
+%typemap(jstype) jstring       "String"
+%typemap(jstype) jobject       "java.lang.Object"
+%typemap(jstype) jbooleanArray "boolean[]"
+%typemap(jstype) jcharArray    "char[]"
+%typemap(jstype) jbyteArray    "byte[]"
+%typemap(jstype) jshortArray   "short[]"
+%typemap(jstype) jintArray     "int[]"
+%typemap(jstype) jlongArray    "long[]"
+%typemap(jstype) jfloatArray   "float[]"
+%typemap(jstype) jdoubleArray  "double[]"
+%typemap(jstype) jobjectArray  "java.lang.Object[]"
+%typemap(jni) SWIGTYPE "jlong"
+%typemap(jtype) SWIGTYPE "long"
+%typemap(jstype) SWIGTYPE "$&javaclassname"
+%typemap(jboxtype) SWIGTYPE "$typemap(jstype, $1_type)"
+%typemap(jni) SWIGTYPE [] "jlong"
+%typemap(jtype) SWIGTYPE [] "long"
+%typemap(jstype) SWIGTYPE [] "$javaclassname"
+%typemap(jni) SWIGTYPE * "jlong"
+%typemap(jtype) SWIGTYPE * "long"
+%typemap(jstype) SWIGTYPE * "$javaclassname"
+%typemap(jni) SWIGTYPE & "jlong"
+%typemap(jtype) SWIGTYPE & "long"
+%typemap(jstype) SWIGTYPE & "$javaclassname"
+%typemap(jni) SWIGTYPE && "jlong"
+%typemap(jtype) SWIGTYPE && "long"
+%typemap(jstype) SWIGTYPE && "$javaclassname"
+%typemap(jni) SWIGTYPE (CLASS::*) "jstring"
+%typemap(jtype) SWIGTYPE (CLASS::*) "String"
+%typemap(jstype) SWIGTYPE (CLASS::*) "$javaclassname"
+/* The following are the in, out, freearg, argout typemaps. These are the JNI code generating typemaps for converting from Java to C and visa versa. */
+%typemap(in) bool
+%typemap(directorout) bool
+%typemap(javadirectorin) bool "$jniinput"
+%typemap(javadirectorout) bool "$javacall"
+%typemap(in) char, 
+%typemap(directorout) char, 
+%typemap(directorin, descriptor="Z") bool             "$input = (jboolean) $1;"
+%typemap(directorin, descriptor="C") char             "$input = (jint) $1;"
+%typemap(directorin, descriptor="B") signed char      "$input = (jbyte) $1;"
+%typemap(directorin, descriptor="S") unsigned char    "$input = (jshort) $1;"
+%typemap(directorin, descriptor="S") short            "$input = (jshort) $1;"
+%typemap(directorin, descriptor="I") unsigned short   "$input = (jint) $1;"
+%typemap(directorin, descriptor="I") int              "$input = (jint) $1;"
+%typemap(directorin, descriptor="J") unsigned int     "$input = (jlong) $1;"
+%typemap(directorin, descriptor="I") long             "$input = (jint) $1;"
+%typemap(directorin, descriptor="J") unsigned long    "$input = (jlong) $1;"
+%typemap(directorin, descriptor="J") long long        "$input = (jlong) $1;"
+%typemap(directorin, descriptor="F") float            "$input = (jfloat) $1;"
+%typemap(directorin, descriptor="D") double           "$input = (jdouble) $1;"
+%typemap(javadirectorin) char, 
+%typemap(javadirectorout) char, 
+%typemap(out) bool           %{ $result = (jboolean)$1; %}
+%typemap(out) char           %{ $result = (jchar)$1; %}
+%typemap(out) signed char    %{ $result = (jbyte)$1; %}
+%typemap(out) unsigned char  %{ $result = (jshort)$1; %}
+%typemap(out) short          %{ $result = (jshort)$1; %}
+%typemap(out) unsigned short %{ $result = (jint)$1; %}
+%typemap(out) int            %{ $result = (jint)$1; %}
+%typemap(out) unsigned int   %{ $result = (jlong)$1; %}
+%typemap(out) long           %{ $result = (jint)$1; %}
+%typemap(out) unsigned long  %{ $result = (jlong)$1; %}
+%typemap(out) long long      %{ $result = (jlong)$1; %}
+%typemap(out) float          %{ $result = (jfloat)$1; %}
+%typemap(out) double         %{ $result = (jdouble)$1; %}
+%typemap(in) unsigned long long { 
+%typemap(directorout) unsigned long long { 
+%typemap(out) unsigned long long { 
+/* Convert to BigInteger (see out typemap) */
+%typemap(directorin, descriptor="Ljava/math/BigInteger;", noblock=1) unsigned long long, const unsigned long long & {
+%typemap(javadirectorin) unsigned long long "$jniinput"
+%typemap(javadirectorout) unsigned long long "$javacall"
+%typemap(in, noblock=1) char * {
+%typemap(directorout, noblock=1, warning= "473:Returning a pointer or reference in a director method is not recommended." ) char * {
+%typemap(directorin, descriptor="Ljava/lang/String;", noblock=1) char * {
+%typemap(freearg, noblock=1) char * { if ($1) (*jenv)->ReleaseStringUTFChars(jenv, $input, (const char *)$1); }
+%typemap(out, noblock=1) char * { if ($1) $result = (*jenv)->NewStringUTF(jenv, (const char *)$1); }
+%typemap(javadirectorin) char * "$jniinput"
+%typemap(javadirectorout) char * "$javacall"
+%typemap(in, noblock=1) char *& ($*1_ltype temp = 0) {
+%typemap(freearg, noblock=1) char *& { if ($1 && *$1) (*jenv)->ReleaseStringUTFChars(jenv, $input, (const char *)*$1); }
+%typemap(out, noblock=1) char *& { if (*$1) $result = (*jenv)->NewStringUTF(jenv, (const char *)*$1); }
+%typemap(out) void ""
+%typemap(javadirectorin) void "$jniinput"
+%typemap(javadirectorout) void "$javacall"
+%typemap(directorin, descriptor="V") void ""
+%typemap(in) const bool & ($*1_ltype temp)
+%typemap(directorout,warning=   "470:Thread/reentrant unsafe wrapping, consider returning by value instead." ) const bool &
+%typemap(javadirectorin) const bool & "$jniinput"
+%typemap(javadirectorout) const bool & "$javacall"
+%typemap(in) const char & ($*1_ltype temp), 
+%typemap(directorout,warning=   "470:Thread/reentrant unsafe wrapping, consider returning by value instead." ) const char &,
+%typemap(directorin, descriptor="Z") const bool &           "$input = (jboolean)$1;"
+%typemap(directorin, descriptor="C") const char &           "$input = (jchar)$1;"
+%typemap(directorin, descriptor="B") const signed char &    "$input = (jbyte)$1;"
+%typemap(directorin, descriptor="S") const unsigned char &  "$input = (jshort)$1;"
+%typemap(directorin, descriptor="S") const short &          "$input = (jshort)$1;"
+%typemap(directorin, descriptor="I") const unsigned short & "$input = (jint)$1;"
+%typemap(directorin, descriptor="I") const int &            "$input = (jint)$1;"
+%typemap(directorin, descriptor="J") const unsigned int &   "$input = (jlong)$1;"
+%typemap(directorin, descriptor="I") const long &           "$input = (jint)$1;"
+%typemap(directorin, descriptor="J") const unsigned long &  "$input = (jlong)$1;"
+%typemap(directorin, descriptor="J") const long long &      "$input = (jlong)$1;"
+%typemap(directorin, descriptor="F") const float &          "$input = (jfloat)$1;"
+%typemap(directorin, descriptor="D") const double &         "$input = (jdouble)$1;"
+%typemap(javadirectorin) const char & ($*1_ltype temp), 
+%typemap(javadirectorout) const char & ($*1_ltype temp), 
+%typemap(out) const bool &           %{ $result = (jboolean)*$1; %}
+%typemap(out) const char &           %{ $result = (jchar)*$1; %}
+%typemap(out) const signed char &    %{ $result = (jbyte)*$1; %}
+%typemap(out) const unsigned char &  %{ $result = (jshort)*$1; %}
+%typemap(out) const short &          %{ $result = (jshort)*$1; %}
+%typemap(out) const unsigned short & %{ $result = (jint)*$1; %}
+%typemap(out) const int &            %{ $result = (jint)*$1; %}
+%typemap(out) const unsigned int &   %{ $result = (jlong)*$1; %}
+%typemap(out) const long &           %{ $result = (jint)*$1; %}
+%typemap(out) const unsigned long &  %{ $result = (jlong)*$1; %}
+%typemap(out) const long long &      %{ $result = (jlong)*$1; %}
+%typemap(out) const float &          %{ $result = (jfloat)*$1; %}
+%typemap(out) const double &         %{ $result = (jdouble)*$1; %}
+%typemap(in) const unsigned long long & ($*1_ltype temp) { 
+%typemap(directorout,warning=   "470:Thread/reentrant unsafe wrapping, consider returning by value instead." ) const unsigned long long & { 
+%typemap(out) const unsigned long long & { 
+%typemap(javadirectorin) const unsigned long long & "$jniinput"
+%typemap(javadirectorout) const unsigned long long & "$javacall"
+%typemap(in) SWIGTYPE ($&1_type argp)
+%typemap(directorout) SWIGTYPE ($&1_type argp)
+%typemap(out) SWIGTYPE 
+%typemap(directorin,descriptor="L$packagepath/$&javaclassname;") SWIGTYPE 
+%typemap(javadirectorin) SWIGTYPE "new $&javaclassname($jniinput, true)"
+%typemap(javadirectorout) SWIGTYPE "$&javaclassname.getCPtr($javacall)"
+%typemap(in) SWIGTYPE * %{ $1 = *($&1_ltype)&$input; %}
+%typemap(in, fragment="SWIG_UnPackData") SWIGTYPE (CLASS::*) { 
+%typemap(in) SWIGTYPE & %{ $1 = *($&1_ltype)&$input;
+%typemap(in) SWIGTYPE && %{ $1 = *($&1_ltype)&$input;
+%typemap(out) SWIGTYPE *
+%typemap(out, fragment="SWIG_PackData", noblock=1) SWIGTYPE (CLASS::*) {
+%typemap(out) SWIGTYPE &
+%typemap(out) SWIGTYPE &&
+%typemap(directorout, warning= "473:Returning a pointer or reference in a director method is not recommended." ) SWIGTYPE *
+%typemap(directorout, warning= "473:Returning a pointer or reference in a director method is not recommended." ) SWIGTYPE (CLASS::*)
+%typemap(directorin,descriptor="L$packagepath/$javaclassname;") SWIGTYPE *
+%typemap(directorin,descriptor="L$packagepath/$javaclassname;") SWIGTYPE (CLASS::*)
+%typemap(directorout, warning= "473:Returning a pointer or reference in a director method is not recommended." ) SWIGTYPE &
+%typemap(directorout, warning= "473:Returning a pointer or reference in a director method is not recommended." ) SWIGTYPE &&
+%typemap(directorin,descriptor="L$packagepath/$javaclassname;") SWIGTYPE &
+%typemap(directorin,descriptor="L$packagepath/$javaclassname;") SWIGTYPE &&
+%typemap(javadirectorin) SWIGTYPE *, SWIGTYPE (CLASS::*) "($jniinput == 0) ? null : new $javaclassname($jniinput, false)"
+%typemap(javadirectorin) SWIGTYPE & "new $javaclassname($jniinput, false)"
+%typemap(javadirectorin) SWIGTYPE && "new $javaclassname($jniinput, false)"
+%typemap(javadirectorout) SWIGTYPE *, SWIGTYPE (CLASS::*), SWIGTYPE &, SWIGTYPE && "$javaclassname.getCPtr($javacall)"
+%typemap(in) SWIGTYPE [] %{ $1 = *($&1_ltype)&$input; %}
+%typemap(out) SWIGTYPE [] %{ *($&1_ltype)&$result = $1; %} 
+%typemap(freearg) SWIGTYPE [ANY], SWIGTYPE [] ""
+%typemap(in, noblock=1) char[ANY], char[] {
+%typemap(directorout, noblock=1) char[ANY], char[] {
+%typemap(directorin, descriptor="Ljava/lang/String;", noblock=1) char[ANY], char[] {
+%typemap(argout) char[ANY], char[] ""
+%typemap(freearg, noblock=1) char[ANY], char[] { if ($1) (*jenv)->ReleaseStringUTFChars(jenv, $input, (const char *)$1); }
+%typemap(out, noblock=1) char[ANY], char[] { if ($1) $result = (*jenv)->NewStringUTF(jenv, (const char *)$1); }
+%typemap(javadirectorin) char[ANY], char[] "$jniinput"
+%typemap(javadirectorout) char[ANY], char[] "$javacall"
+%typemap(in) jboolean,
+%typemap(directorout) jboolean,
+%typemap(out) jboolean,
+%typemap(directorin,descriptor="Z")  jboolean       "$input = $1;"
+%typemap(directorin,descriptor="C")  jchar          "$input = $1;"
+%typemap(directorin,descriptor="B")  jbyte          "$input = $1;"
+%typemap(directorin,descriptor="S")  jshort         "$input = $1;"
+%typemap(directorin,descriptor="I")  jint           "$input = $1;"
+%typemap(directorin,descriptor="J")  jlong          "$input = $1;"
+%typemap(directorin,descriptor="F")  jfloat         "$input = $1;"
+%typemap(directorin,descriptor="D")  jdouble        "$input = $1;"
+%typemap(directorin,descriptor="Ljava/lang/String;")            jstring        "$input = $1;"
+%typemap(directorin,descriptor="Ljava/lang/Object;",nouse="1")  jobject        "$input = $1;"
+%typemap(directorin,descriptor="[Z")  jbooleanArray "$input = $1;"
+%typemap(directorin,descriptor="[C")  jcharArray    "$input = $1;"
+%typemap(directorin,descriptor="[B")  jbyteArray    "$input = $1;"
+%typemap(directorin,descriptor="[S")  jshortArray   "$input = $1;"
+%typemap(directorin,descriptor="[I")  jintArray     "$input = $1;"
+%typemap(directorin,descriptor="[J")  jlongArray    "$input = $1;"
+%typemap(directorin,descriptor="[F")  jfloatArray   "$input = $1;"
+%typemap(directorin,descriptor="[D")  jdoubleArray  "$input = $1;"
+%typemap(directorin,descriptor="[Ljava/lang/Object;",nouse="1") jobjectArray   "$input = $1;"
+%typemap(javadirectorin) jboolean,
+%typemap(javadirectorout) jboolean,
+/* Typecheck typemaps - The purpose of these is merely to issue a warning for overloaded C++ functions 
+ %typemap(typecheck, precedence=         15    )  /* Java boolean */
+ %typemap(typecheck, precedence=        130    )  /* Java char */
+ %typemap(typecheck, precedence=         25    )  /* Java byte */
+ %typemap(typecheck, precedence=        35    )  /* Java short */
+ %typemap(typecheck, precedence=        45    )  /* Java int */
+ %typemap(typecheck, precedence=        55    )  /* Java long */
+ %typemap(typecheck, precedence=       65    )  /* Java BigInteger */
+ %typemap(typecheck, precedence=        80    )  /* Java float */
+ %typemap(typecheck, precedence=       90    )  /* Java double */
+ %typemap(typecheck, precedence=      140    )  /* Java String */
+ %typemap(typecheck, precedence=       1015    )  /* Java boolean[] */
+ %typemap(typecheck, precedence=       1130    )  /* Java char[] */
+ %typemap(typecheck, precedence=       1025    )  /* Java byte[] */
+ %typemap(typecheck, precedence=      1035    )  /* Java short[] */
+ %typemap(typecheck, precedence=      1045    )  /* Java int[] */
+ %typemap(typecheck, precedence=      1055    )  /* Java long[] */
+ %typemap(typecheck, precedence=      1080    )  /* Java float[] */
+ %typemap(typecheck, precedence=     1090    )  /* Java double[] */
+ %typemap(typecheck, precedence=     1150    )  /* Java jobject[] */
+ %typemap(typecheck, precedence=      0     )  /* Default */
+%typemap(throws) int, 
+%typemap(throws) SWIGTYPE, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE *, SWIGTYPE [], SWIGTYPE [ANY]
+%typemap(throws) char *
+%typemap(throws) Swig::DirectorException
+%typemap(directorthrows) Swig::DirectorException ""
+/* The javain typemap is used for converting function parameter types from the type 
+%typemap(javain) bool,               const bool &,
+%typemap(javain) char *, char *&, char[ANY], char[] "$javainput"
+%typemap(javain) jboolean,
+%typemap(javain) SWIGTYPE "$&javaclassname.getCPtr($javainput)"
+%typemap(javain) SWIGTYPE *, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE [] "$javaclassname.getCPtr($javainput)"
+%typemap(javain) SWIGTYPE (CLASS::*) "$javaclassname.getCMemberPtr($javainput)"
+/* The javaout typemap is used for converting function return types from the return type
+%typemap(javaout) bool,               const bool &,
+%typemap(javaout) char *, char *&, char[ANY], char[] {
+%typemap(javaout) jboolean,
+%typemap(javaout) void {
+%typemap(javaout) SWIGTYPE {
+%typemap(javaout) SWIGTYPE & {
+%typemap(javaout) SWIGTYPE && {
+%typemap(javaout) SWIGTYPE *, SWIGTYPE [] {
+%typemap(javaout) SWIGTYPE (CLASS::*) {
+/* Pointer reference typemaps */
+%typemap(jni) SWIGTYPE *const& "jlong"
+%typemap(jtype) SWIGTYPE *const& "long"
+%typemap(jstype) SWIGTYPE *const& "$*javaclassname"
+%typemap(javain) SWIGTYPE *const& "$*javaclassname.getCPtr($javainput)"
+%typemap(javaout) SWIGTYPE *const& {
+%typemap(in) SWIGTYPE *const& ($*1_ltype temp = 0)
+%typemap(out) SWIGTYPE *const&
+%typemap(directorin,descriptor="L$packagepath/$*javaclassname;") SWIGTYPE *const&
+%typemap(directorout, warning=   "470:Thread/reentrant unsafe wrapping, consider returning by value instead." ) SWIGTYPE *const&
+%typemap(javadirectorin) SWIGTYPE *const& "($jniinput == 0) ? null : new $*javaclassname($jniinput, false)"
+%typemap(javadirectorout) SWIGTYPE *const& "$*javaclassname.getCPtr($javacall)"
+%typemap(javabase)             SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE [], SWIGTYPE (CLASS::*) ""
+%typemap(javaclassmodifiers)   SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE [], SWIGTYPE (CLASS::*) "public class"
+%typemap(javacode)             SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE [], SWIGTYPE (CLASS::*) ""
+%typemap(javaimports)          SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE [], SWIGTYPE (CLASS::*) ""
+%typemap(javainterfaces)       SWIGTYPE, SWIGTYPE *, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE [], SWIGTYPE (CLASS::*) ""
+/* javabody typemaps */
+/* Set the default javabody typemaps to use protected visibility.
+%typemap(javabody) SWIGTYPE %{
+%typemap(javabody_derived) SWIGTYPE %{
+%typemap(javabody) SWIGTYPE *, SWIGTYPE &, SWIGTYPE &&, SWIGTYPE [] %{
+%typemap(javabody) SWIGTYPE (CLASS::*) %{
+%typemap(javafinalize) SWIGTYPE %{
+ * Java constructor typemaps:
+ * The javaconstruct typemap is inserted when a proxy class's constructor is generated.
+ * This typemap allows control over what code is executed in the constructor as
+ * The SWIG_PROXY_CONSTRUCTOR macro defines the javaconstruct typemap for a proxy
+%typemap(javaconstruct,directorconnect="\n    $imclassname.$javaclazznamedirector_connect(this, swigCPtr, true, true);") SWIGTYPE {
+%typemap(javadestruct, methodname="delete", methodmodifiers="public synchronized", parameters="") SWIGTYPE {
+%typemap(javadestruct_derived, methodname="delete", methodmodifiers="public synchronized", parameters="") SWIGTYPE {
+%typemap(directordisconnect, methodname="swigDirectorDisconnect") SWIGTYPE %{
+%typemap(directorowner_release, methodname="swigReleaseOwnership") SWIGTYPE %{
+%typemap(directorowner_take, methodname="swigTakeOwnership") SWIGTYPE %{
+/* Some ANSI C typemaps */
+/* Array reference typemaps */
+%typemap(jni)     (const char *STRING, size_t LENGTH) "jbyteArray"
+%typemap(jtype)   (const char *STRING, size_t LENGTH) "byte[]"
+%typemap(jstype)  (const char *STRING, size_t LENGTH) "byte[]"
+%typemap(javain)  (const char *STRING, size_t LENGTH) "$javainput"
+%typemap(freearg) (const char *STRING, size_t LENGTH) ""
+%typemap(in)      (const char *STRING, size_t LENGTH) {
+%typemap(argout)  (const char *STRING, size_t LENGTH) {
+%typemap(directorin, descriptor="[B", noblock=1) (const char *STRING, size_t LENGTH) {
+%typemap(javadirectorin, descriptor="[B") (const char *STRING, size_t LENGTH) "$jniinput"
+%typemap(argout)  (char *STRING, size_t LENGTH) {
+%typemap(directorargout, noblock=1) (char *STRING, size_t LENGTH)
+%endoffile
+// const enum SWIGTYPE & typemaps
+%typemap(jni) const enum SWIGTYPE & "jint"
+%typemap(jtype) const enum SWIGTYPE & "int"
+%typemap(jstype) const enum SWIGTYPE & "$*javaclassname"
+%typemap(in) const enum SWIGTYPE & ($*1_ltype temp)
+%typemap(out) const enum SWIGTYPE &  %{ $result = (jint)*$1; %}
+%typemap(directorout,warning=   "470:Thread/reentrant unsafe wrapping, consider returning by value instead." ) const enum SWIGTYPE &
+%typemap(directorin, descriptor="L$packagepath/$*javaclassname;") const enum SWIGTYPE & "$input = (jint)$1;"
+%typemap(javadirectorin) const enum SWIGTYPE & "$*javaclassname.swigToEnum($jniinput)"
+%typemap(javadirectorout) const enum SWIGTYPE & "($javacall).swigValue()"
+ %typemap(typecheck, precedence=      0     )  const enum SWIGTYPE & ""
+%typemap(throws) const enum SWIGTYPE &
+%typemap(javain) const enum SWIGTYPE & "$javainput.swigValue()"
+%typemap(javaout) const enum SWIGTYPE & {
+// enum SWIGTYPE typemaps
+%typemap(jni) enum SWIGTYPE "jint"
+%typemap(jtype) enum SWIGTYPE "int"
+%typemap(jstype) enum SWIGTYPE "$javaclassname"
+%typemap(in) enum SWIGTYPE  %{ $1 = ($1_ltype)$input; %}
+%typemap(out) enum SWIGTYPE  %{ $result = (jint)$1; %}
+%typemap(directorout) enum SWIGTYPE  %{ $result = ($1_ltype)$input; %}
+%typemap(directorin, descriptor="L$packagepath/$javaclassname;") enum SWIGTYPE "$input = (jint) $1;"
+%typemap(javadirectorin) enum SWIGTYPE "$javaclassname.swigToEnum($jniinput)"
+%typemap(javadirectorout) enum SWIGTYPE "($javacall).swigValue()"
+ %typemap(typecheck, precedence=      0     )  enum SWIGTYPE ""
+%typemap(throws) enum SWIGTYPE
+%typemap(javain) enum SWIGTYPE "$javainput.swigValue()"
+%typemap(javaout) enum SWIGTYPE {
+%typemap(javaclassmodifiers) enum SWIGTYPE "public final $static class"
+%typemap(javabase)           enum SWIGTYPE ""
+%typemap(javacode)           enum SWIGTYPE ""
+%typemap(javaimports)        enum SWIGTYPE ""
+%typemap(javainterfaces)     enum SWIGTYPE ""
+ * values are specified then a lengthy linear search through all possible enums might occur. Specific typemaps could be
+%typemap(javabody) enum SWIGTYPE %{
+%endoffile
+%endoffile
+%endoffile
+ * Version 6
+  int arg1 ; int arg2 ; int result; (void)jenv; (void)jcls; arg1 = (int)jarg1;  arg2 = (int)jarg2; 
+Fri Mar 17 23:25:51 2023 - INFO  - End to run test.
+Fri Mar 17 23:25:51 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 23:25:52 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:26:10 2023 - INFO  - End to restore the test environment.

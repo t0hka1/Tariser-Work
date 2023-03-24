@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:03:40 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 19:04:00 2023 - INFO  - pkgs:(p7zip tar) is already installed
+Fri Mar 17 19:04:01 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 19:04:01 2023 - INFO  - Start testing...
+oe_test_p7zip_7za_001.sh: line 39: 7za: command not found
+Fri Mar 17 19:04:02 2023 - ERROR - test failed with --help
+Fri Mar 17 19:04:02 2023 - ERROR - oe_test_p7zip_7za_001.sh line 40
+oe_test_p7zip_7za_001.sh: line 43: 7za: command not found
+Fri Mar 17 19:04:03 2023 - ERROR - test failed with a
+Fri Mar 17 19:04:03 2023 - ERROR - oe_test_p7zip_7za_001.sh line 44
+oe_test_p7zip_7za_001.sh: line 46: 7za: command not found
+Fri Mar 17 19:04:04 2023 - ERROR - test failed with b
+Fri Mar 17 19:04:04 2023 - ERROR - oe_test_p7zip_7za_001.sh line 47
+oe_test_p7zip_7za_001.sh: line 49: 7za: command not found
+Fri Mar 17 19:04:05 2023 - ERROR - test failed with l
+Fri Mar 17 19:04:06 2023 - ERROR - oe_test_p7zip_7za_001.sh line 50
+oe_test_p7zip_7za_001.sh: line 52: 7za: command not found
+Fri Mar 17 19:04:06 2023 - ERROR - test failed with d
+Fri Mar 17 19:04:07 2023 - ERROR - oe_test_p7zip_7za_001.sh line 53
+oe_test_p7zip_7za_001.sh: line 55: 7za: command not found
+Fri Mar 17 19:04:08 2023 - ERROR - test failed with e
+Fri Mar 17 19:04:08 2023 - ERROR - oe_test_p7zip_7za_001.sh line 56
+oe_test_p7zip_7za_001.sh: line 58: 7za: command not found
+Fri Mar 17 19:04:09 2023 - ERROR - test failed with h
+Fri Mar 17 19:04:09 2023 - ERROR - oe_test_p7zip_7za_001.sh line 59
+oe_test_p7zip_7za_001.sh: line 61: 7za: command not found
+Fri Mar 17 19:04:10 2023 - ERROR - test failed with i
+Fri Mar 17 19:04:11 2023 - ERROR - oe_test_p7zip_7za_001.sh line 62
+oe_test_p7zip_7za_001.sh: line 64: 7za: command not found
+Fri Mar 17 19:04:11 2023 - ERROR - test failed with rn
+Fri Mar 17 19:04:12 2023 - ERROR - oe_test_p7zip_7za_001.sh line 65
+oe_test_p7zip_7za_001.sh: line 67: 7za: command not found
+Fri Mar 17 19:04:12 2023 - ERROR - test failed with t
+Fri Mar 17 19:04:13 2023 - ERROR - oe_test_p7zip_7za_001.sh line 68
+oe_test_p7zip_7za_001.sh: line 71: 7za: command not found
+Fri Mar 17 19:04:13 2023 - ERROR - test failed with u
+Fri Mar 17 19:04:14 2023 - ERROR - oe_test_p7zip_7za_001.sh line 72
+oe_test_p7zip_7za_001.sh: line 74: 7za: command not found
+Fri Mar 17 19:04:15 2023 - ERROR - test failed with x
+Fri Mar 17 19:04:15 2023 - ERROR - oe_test_p7zip_7za_001.sh line 75
+Fri Mar 17 19:04:16 2023 - INFO  - Finish test!
+Fri Mar 17 19:04:16 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:04:17 2023 - INFO  - start environment cleanup.
+Fri Mar 17 19:04:17 2023 - WARN  - no thing to do.
+Fri Mar 17 19:04:18 2023 - INFO  - Finish environment cleanup!

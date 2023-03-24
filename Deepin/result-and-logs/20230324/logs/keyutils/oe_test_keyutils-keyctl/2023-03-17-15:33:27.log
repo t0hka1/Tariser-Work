@@ -1,0 +1,23 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:33:30 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 15:33:35 2023 - INFO  - pkgs:(keyutils) is already installed
+Fri Mar 17 15:33:35 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:33:36 2023 - INFO  - Start testing...
+keyctl from keyutils-1.6.1 (Built 2020-02-10)
+have_capabilities=1
+798732152
+798732152: --alswrv     0     0 user: mykey:hello
+798732152
+zebra
+Fri Mar 17 15:33:37 2023 - INFO  - Finish testing!
+Fri Mar 17 15:33:37 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 15:33:38 2023 - INFO  - start environment cleanup.
+Fri Mar 17 15:33:38 2023 - WARN  - no thing to do.
+Fri Mar 17 15:33:39 2023 - INFO  - Finish environment cleanup!

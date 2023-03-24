@@ -1,0 +1,121 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:50:58 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 19:51:02 2023 - ERROR - pkgs:(psacct) not found
+Fri Mar 17 19:51:03 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 19:51:03 2023 - INFO  - Start to run test.
+Unit psacct.service could not be found.
+Fri Mar 17 19:51:04 2023 - ERROR - log message: Failed to run command: systemctl status psacct.service --no-pager
+Fri Mar 17 19:51:05 2023 - ERROR - oe_test_psacct.sh line 37
+Unit psacct.service could not be found.
+Failed to start psacct.service: Unit psacct.service not found.
+Fri Mar 17 19:51:05 2023 - ERROR - log message: Failed to run command: systemctl start psacct.service
+Fri Mar 17 19:51:06 2023 - ERROR - oe_test_psacct.sh line 42
+oe_test_psacct.sh: line 43: ac: command not found
+Fri Mar 17 19:51:06 2023 - ERROR - log message: Failed to run command: ac -V
+Fri Mar 17 19:51:07 2023 - ERROR - oe_test_psacct.sh line 44
+oe_test_psacct.sh: line 45: ac: command not found
+Fri Mar 17 19:51:08 2023 - ERROR - log message: Failed to run command: ac
+Fri Mar 17 19:51:08 2023 - ERROR - oe_test_psacct.sh line 46
+oe_test_psacct.sh: line 47: ac: command not found
+Fri Mar 17 19:51:09 2023 - ERROR - log message: Failed to run command: ac -f /var/log/wtmp
+Fri Mar 17 19:51:09 2023 - ERROR - oe_test_psacct.sh line 48
+oe_test_psacct.sh: line 49: ac: command not found
+Fri Mar 17 19:51:10 2023 - ERROR - log message: Failed to run command: ac --complain
+Fri Mar 17 19:51:10 2023 - ERROR - oe_test_psacct.sh line 50
+oe_test_psacct.sh: line 51: ac: command not found
+Fri Mar 17 19:51:11 2023 - ERROR - log message: Failed to run command: ac --reboots
+Fri Mar 17 19:51:11 2023 - ERROR - oe_test_psacct.sh line 52
+oe_test_psacct.sh: line 53: ac: command not found
+Fri Mar 17 19:51:12 2023 - ERROR - log message: Failed to run command: ac --supplants
+Fri Mar 17 19:51:13 2023 - ERROR - oe_test_psacct.sh line 54
+oe_test_psacct.sh: line 55: ac: command not found
+Fri Mar 17 19:51:13 2023 - ERROR - log message: Failed to run command: ac --timewarps
+Fri Mar 17 19:51:14 2023 - ERROR - oe_test_psacct.sh line 56
+oe_test_psacct.sh: line 57: ac: command not found
+Fri Mar 17 19:51:14 2023 - ERROR - log message: Failed to run command: ac --compatibility
+Fri Mar 17 19:51:15 2023 - ERROR - oe_test_psacct.sh line 58
+oe_test_psacct.sh: line 59: ac: command not found
+Fri Mar 17 19:51:15 2023 - ERROR - log message: Failed to run command: ac -a
+Fri Mar 17 19:51:16 2023 - ERROR - oe_test_psacct.sh line 60
+oe_test_psacct.sh: line 61: ac: command not found
+Fri Mar 17 19:51:16 2023 - ERROR - log message: Failed to run command: ac -d
+Fri Mar 17 19:51:17 2023 - ERROR - oe_test_psacct.sh line 62
+oe_test_psacct.sh: line 63: ac: command not found
+Fri Mar 17 19:51:18 2023 - ERROR - log message: Failed to run command: ac -d --print-year
+Fri Mar 17 19:51:18 2023 - ERROR - oe_test_psacct.sh line 64
+oe_test_psacct.sh: line 65: ac: command not found
+Fri Mar 17 19:51:19 2023 - ERROR - log message: Failed to run command: ac -d --print-zeros
+Fri Mar 17 19:51:19 2023 - ERROR - oe_test_psacct.sh line 66
+oe_test_psacct.sh: line 67: ac: command not found
+Fri Mar 17 19:51:20 2023 - ERROR - log message: Failed to run command: ac -p
+Fri Mar 17 19:51:20 2023 - ERROR - oe_test_psacct.sh line 68
+oe_test_psacct.sh: line 69: ac: command not found
+Fri Mar 17 19:51:21 2023 - ERROR - log message: Failed to run command: ac root
+Fri Mar 17 19:51:22 2023 - ERROR - oe_test_psacct.sh line 70
+oe_test_psacct.sh: line 71: ac: command not found
+Fri Mar 17 19:51:22 2023 - ERROR - log message: Failed to run command: ac --debug
+Fri Mar 17 19:51:23 2023 - ERROR - oe_test_psacct.sh line 72
+oe_test_psacct.sh: line 73: sa: command not found
+Fri Mar 17 19:51:23 2023 - ERROR - log message: Failed to run command: sa -V
+Fri Mar 17 19:51:24 2023 - ERROR - oe_test_psacct.sh line 74
+oe_test_psacct.sh: line 75: sa: command not found
+Fri Mar 17 19:51:24 2023 - ERROR - log message: Failed to run command: sa /var/account/pacct
+Fri Mar 17 19:51:25 2023 - ERROR - oe_test_psacct.sh line 76
+oe_test_psacct.sh: line 77: sa: command not found
+Fri Mar 17 19:51:25 2023 - ERROR - log message: Failed to run command: sa
+Fri Mar 17 19:51:26 2023 - ERROR - oe_test_psacct.sh line 78
+oe_test_psacct.sh: line 79: sa: command not found
+Fri Mar 17 19:51:26 2023 - ERROR - log message: Failed to run command: sa -u
+Fri Mar 17 19:51:27 2023 - ERROR - oe_test_psacct.sh line 80
+oe_test_psacct.sh: line 81: sa: command not found
+Fri Mar 17 19:51:28 2023 - ERROR - log message: Failed to run command: sa -m
+Fri Mar 17 19:51:28 2023 - ERROR - oe_test_psacct.sh line 82
+oe_test_psacct.sh: line 83: sa: command not found
+Fri Mar 17 19:51:29 2023 - ERROR - log message: Failed to run command: sa -c
+Fri Mar 17 19:51:29 2023 - ERROR - oe_test_psacct.sh line 84
+oe_test_psacct.sh: line 85: sa: command not found
+Fri Mar 17 19:51:30 2023 - ERROR - log message: Failed to run command: sa --debug
+Fri Mar 17 19:51:30 2023 - ERROR - oe_test_psacct.sh line 86
+oe_test_psacct.sh: line 87: accton: command not found
+Fri Mar 17 19:51:31 2023 - ERROR - log message: Failed to run command: accton -V
+Fri Mar 17 19:51:31 2023 - ERROR - oe_test_psacct.sh line 88
+oe_test_psacct.sh: line 89: accton: command not found
+Fri Mar 17 19:51:32 2023 - ERROR - log message: Failed to run command: accton /var/account/pacct
+Fri Mar 17 19:51:32 2023 - ERROR - oe_test_psacct.sh line 90
+oe_test_psacct.sh: line 91: accton: command not found
+Fri Mar 17 19:51:33 2023 - ERROR - log message: Failed to run command: accton on
+Fri Mar 17 19:51:33 2023 - ERROR - oe_test_psacct.sh line 92
+oe_test_psacct.sh: line 93: lastcomm: command not found
+Fri Mar 17 19:51:34 2023 - ERROR - log message: Failed to run command: lastcomm -V
+Fri Mar 17 19:51:34 2023 - ERROR - oe_test_psacct.sh line 94
+oe_test_psacct.sh: line 95: lastcomm: command not found
+Fri Mar 17 19:51:35 2023 - ERROR - log message: Failed to run command: lastcomm
+Fri Mar 17 19:51:35 2023 - ERROR - oe_test_psacct.sh line 96
+oe_test_psacct.sh: line 97: lastcomm: command not found
+Fri Mar 17 19:51:36 2023 - ERROR - log message: Failed to run command: lastcomm -f /var/account/pacct
+Fri Mar 17 19:51:36 2023 - ERROR - oe_test_psacct.sh line 98
+oe_test_psacct.sh: line 99: lastcomm: command not found
+Fri Mar 17 19:51:37 2023 - ERROR - log message: Failed to run command: lastcomm sa
+Fri Mar 17 19:51:37 2023 - ERROR - oe_test_psacct.sh line 100
+oe_test_psacct.sh: line 101: accton: command not found
+Fri Mar 17 19:51:38 2023 - ERROR - log message: Failed to run command: accton off
+Fri Mar 17 19:51:38 2023 - ERROR - oe_test_psacct.sh line 102
+Failed to restart psacct.service: Unit psacct.service not found.
+Fri Mar 17 19:51:39 2023 - ERROR - log message: Failed to run command: systemctl restart psacct.service
+Fri Mar 17 19:51:39 2023 - ERROR - oe_test_psacct.sh line 104
+Failed to stop psacct.service: Unit psacct.service not loaded.
+Fri Mar 17 19:51:40 2023 - ERROR - log message: Failed to run command: systemctl stop psacct.service
+Fri Mar 17 19:51:40 2023 - ERROR - oe_test_psacct.sh line 106
+Fri Mar 17 19:51:41 2023 - INFO  - End to run test.
+Fri Mar 17 19:51:41 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:51:42 2023 - INFO  - Start to restore the test environment.
+oe_test_psacct.sh: line 113: [: -eq: unary operator expected
+Fri Mar 17 19:51:42 2023 - WARN  - no thing to do.
+Fri Mar 17 19:51:43 2023 - INFO  - End to restore the test environment.

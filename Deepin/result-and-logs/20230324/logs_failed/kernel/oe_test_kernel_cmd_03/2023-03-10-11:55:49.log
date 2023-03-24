@@ -1,0 +1,34 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 11:55:51 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 10 11:55:55 2023 - ERROR - pkgs:(perf) not found
+Fri Mar 10 11:55:55 2023 - INFO  - End to prepare the test environment.
+Fri Mar 10 11:55:56 2023 - INFO  - Start to run test.
+/usr/bin/perf: line 13: exec: perf_5.10: not found
+E: linux-perf-5.10 is not installed.
+Fri Mar 10 11:55:57 2023 - ERROR - oe_test_kernel_cmd_03.sh line 34
+/usr/bin/perf: line 13: exec: perf_5.10: not found
+E: linux-perf-5.10 is not installed.
+Fri Mar 10 11:55:57 2023 - ERROR - oe_test_kernel_cmd_03.sh line 36
+/usr/bin/perf: line 13: exec: perf_5.10: not found
+E: linux-perf-5.10 is not installed.
+/usr/bin/perf: line 13: exec: perf_5.10: not found
+E: linux-perf-5.10 is not installed.
+Fri Mar 10 11:56:00 2023 - ERROR - oe_test_kernel_cmd_03.sh line 46
+/usr/bin/perf: line 13: exec: perf_5.10: not found
+E: linux-perf-5.10 is not installed.
+Fri Mar 10 11:56:01 2023 - ERROR - oe_test_kernel_cmd_03.sh line 48
+/usr/bin/perf: line 13: exec: perf_5.10: not found
+E: linux-perf-5.10 is not installed.
+Fri Mar 10 11:56:02 2023 - ERROR - oe_test_kernel_cmd_03.sh line 50
+Fri Mar 10 11:56:02 2023 - INFO  - End of the test.
+Fri Mar 10 11:56:03 2023 - ERROR - failed to execute the case.
+Fri Mar 10 11:56:03 2023 - INFO  - Start to restore the tet environment.
+Fri Mar 10 11:56:04 2023 - WARN  - no thing to do.
+Fri Mar 10 11:56:04 2023 - INFO  - Finish to restore the tet environment.

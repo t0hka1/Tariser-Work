@@ -1,0 +1,24 @@
+Fri Mar 17 18:22:57 2023 - INFO  - start to run testcase:oe_test_openscap_01.
+Fri Mar 17 18:23:19 2023 - ERROR - The case exit by code 17.
+Fri Mar 17 18:23:29 2023 - INFO  - End to run testcase:oe_test_openscap_01.
+Fri Mar 17 18:23:30 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 18:23:34 2023 - INFO  - start to run testcase:oe_test_scanning_system.
+Fri Mar 17 18:23:46 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 18:23:57 2023 - INFO  - End to run testcase:oe_test_scanning_system.
+Fri Mar 17 18:23:57 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 18:24:01 2023 - INFO  - start to run testcase:oe_test_scanning_remote_system.
+Fri Mar 17 18:24:18 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 18:24:29 2023 - INFO  - End to run testcase:oe_test_scanning_remote_system.
+Fri Mar 17 18:24:30 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 18:24:34 2023 - INFO  - start to run testcase:oe_test_ensure_security_compliance.
+Fri Mar 17 18:24:48 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 18:24:58 2023 - INFO  - End to run testcase:oe_test_ensure_security_compliance.
+Fri Mar 17 18:24:59 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 18:25:03 2023 - INFO  - start to run testcase:oe_test_assess_safety_compliance.
+Fri Mar 17 18:25:21 2023 - ERROR - The case exit by code 4.
+Fri Mar 17 18:25:32 2023 - INFO  - End to run testcase:oe_test_assess_safety_compliance.
+Fri Mar 17 18:25:33 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 18:25:36 2023 - INFO  - start to run testcase:oe_test_fix_anisible.
+Fri Mar 17 18:25:49 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 18:26:00 2023 - INFO  - End to run testcase:oe_test_fix_anisible.
+Fri Mar 17 18:26:00 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

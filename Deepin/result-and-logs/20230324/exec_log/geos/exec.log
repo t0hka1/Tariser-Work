@@ -1,0 +1,4 @@
+Fri Mar 17 14:11:23 2023 - INFO  - start to run testcase:oe_test_geos_commandAndbaseFun.
+Fri Mar 17 14:11:51 2023 - ERROR - The case exit by code 12.
+Fri Mar 17 14:12:01 2023 - INFO  - End to run testcase:oe_test_geos_commandAndbaseFun.
+Fri Mar 17 14:12:02 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

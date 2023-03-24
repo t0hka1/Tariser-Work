@@ -1,0 +1,91 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:00:08 2023 - INFO  - Start to prepare the test environment.
+Traceback (most recent call last):
+  File "/usr/bin/pip3", line 33, in <module>
+    sys.exit(load_entry_point('pip==20.3.4', 'console_scripts', 'pip3')())
+  File "/usr/lib/python3/dist-packages/pip/_internal/cli/main.py", line 73, in main
+    command = create_command(cmd_name, isolated=("--isolated" in cmd_args))
+  File "/usr/lib/python3/dist-packages/pip/_internal/commands/__init__.py", line 105, in create_command
+    module = importlib.import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/usr/lib/python3/dist-packages/pip/_internal/commands/install.py", line 17, in <module>
+    from pip._internal.cli.req_command import RequirementCommand, with_cleanup
+  File "/usr/lib/python3/dist-packages/pip/_internal/cli/req_command.py", line 23, in <module>
+    from pip._internal.req.constructors import (
+  File "/usr/lib/python3/dist-packages/pip/_internal/req/__init__.py", line 10, in <module>
+    from .req_install import InstallRequirement
+  File "/usr/lib/python3/dist-packages/pip/_internal/req/req_install.py", line 18, in <module>
+    from pip._vendor.pep517.wrappers import Pep517HookCaller
+ModuleNotFoundError: No module named 'pip._vendor.pep517'
+Fri Mar 17 20:01:11 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 20:01:11 2023 - INFO  - Start to run test.
+oe_test_keyring-python3.sh: line 38: keyring-python3: command not found
+Fri Mar 17 20:01:12 2023 - ERROR - oe_test_keyring-python3.sh line 39
+oe_test_keyring-python3.sh: line 40: keyring-python3: command not found
+Fri Mar 17 20:01:12 2023 - ERROR - oe_test_keyring-python3.sh line 41
+spawn keyring-python3 set system username -b
+couldn't execute "keyring-python3": no such file or directory
+    while executing
+"spawn keyring-python3 set system username -b "
+oe_test_keyring-python3.sh: line 48: keyring-python3: command not found
+Fri Mar 17 20:01:17 2023 - ERROR - oe_test_keyring-python3.sh line 49
+spawn keyring-python3 del system username -b
+couldn't execute "keyring-python3": no such file or directory
+    while executing
+"spawn keyring-python3 del system username -b "
+oe_test_keyring-python3.sh: line 55: keyring-python3: command not found
+Fri Mar 17 20:01:18 2023 - ERROR - oe_test_keyring-python3.sh line 56
+spawn keyring-python3 set system username -b -p demo
+couldn't execute "keyring-python3": no such file or directory
+    while executing
+"spawn keyring-python3 set system username -b  -p demo"
+oe_test_keyring-python3.sh: line 62: keyring-python3: command not found
+Fri Mar 17 20:01:19 2023 - ERROR - oe_test_keyring-python3.sh line 63
+spawn keyring-python3 del system username -b -p demo
+couldn't execute "keyring-python3": no such file or directory
+    while executing
+"spawn keyring-python3 del system username -b  -p demo"
+oe_test_keyring-python3.sh: line 69: keyring-python3: command not found
+Fri Mar 17 20:01:20 2023 - ERROR - oe_test_keyring-python3.sh line 70
+Fri Mar 17 20:01:20 2023 - INFO  - End of the test.
+Fri Mar 17 20:01:21 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:01:21 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/usr/bin/pip3", line 33, in <module>
+    sys.exit(load_entry_point('pip==20.3.4', 'console_scripts', 'pip3')())
+  File "/usr/lib/python3/dist-packages/pip/_internal/cli/main.py", line 73, in main
+    command = create_command(cmd_name, isolated=("--isolated" in cmd_args))
+  File "/usr/lib/python3/dist-packages/pip/_internal/commands/__init__.py", line 105, in create_command
+    module = importlib.import_module(module_path)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/usr/lib/python3/dist-packages/pip/_internal/commands/uninstall.py", line 6, in <module>
+    from pip._internal.cli.req_command import SessionCommandMixin
+  File "/usr/lib/python3/dist-packages/pip/_internal/cli/req_command.py", line 23, in <module>
+    from pip._internal.req.constructors import (
+  File "/usr/lib/python3/dist-packages/pip/_internal/req/__init__.py", line 10, in <module>
+    from .req_install import InstallRequirement
+  File "/usr/lib/python3/dist-packages/pip/_internal/req/req_install.py", line 18, in <module>
+    from pip._vendor.pep517.wrappers import Pep517HookCaller
+ModuleNotFoundError: No module named 'pip._vendor.pep517'
+Fri Mar 17 20:02:08 2023 - INFO  - Finish restoring the test environment.

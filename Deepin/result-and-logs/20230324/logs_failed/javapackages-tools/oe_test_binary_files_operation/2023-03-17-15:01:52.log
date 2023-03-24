@@ -1,0 +1,61 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:01:55 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:02:00 2023 - INFO  - pkgs:(tar) is already installed
+../common/common_javapackages-tools.sh: line 30: rpm: command not found
+Fri Mar 17 15:06:27 2023 - ERROR - pkgs:(log4j) not found
+Fri Mar 17 15:06:28 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 15:06:28 2023 - INFO  - Start to run test.
+hello/
+hello/Hello.java
+hello/junit-3.8.2.jar
+hello/junit.jar
+oe_test_binary_files_operation.sh: line 48: clean-binary-files: command not found
+Fri Mar 17 15:06:29 2023 - ERROR - oe_test_binary_files_operation.sh line 49
+Fri Mar 17 15:06:30 2023 - ERROR - oe_test_binary_files_operation.sh line 51
+Fri Mar 17 15:06:31 2023 - ERROR - oe_test_binary_files_operation.sh line 53
+oe_test_binary_files_operation.sh: line 54: check-binary-files: command not found
+Fri Mar 17 15:06:32 2023 - ERROR - oe_test_binary_files_operation.sh line 55
+oe_test_binary_files_operation.sh: line 57: clean-binary-files: command not found
+Fri Mar 17 15:06:32 2023 - ERROR - oe_test_binary_files_operation.sh line 58
+Fri Mar 17 15:06:33 2023 - ERROR - oe_test_binary_files_operation.sh line 60
+oe_test_binary_files_operation.sh: line 61: check-binary-files: command not found
+Fri Mar 17 15:06:34 2023 - ERROR - oe_test_binary_files_operation.sh line 64
+tar (child): hello-clean-clean.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+Fri Mar 17 15:06:35 2023 - ERROR - oe_test_binary_files_operation.sh line 68
+oe_test_binary_files_operation.sh: line 69: create-jar-links: command not found
+Fri Mar 17 15:06:35 2023 - ERROR - oe_test_binary_files_operation.sh line 70
+ls: cannot access 'hello': No such file or directory
+Fri Mar 17 15:06:36 2023 - ERROR - oe_test_binary_files_operation.sh line 72
+oe_test_binary_files_operation.sh: line 73: create-jar-links: command not found
+Fri Mar 17 15:06:37 2023 - ERROR - oe_test_binary_files_operation.sh line 74
+Fri Mar 17 15:06:37 2023 - ERROR - oe_test_binary_files_operation.sh line 76
+mv: cannot stat 'hello': No such file or directory
+tar (child): hello-clean-clean-clean.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+ls: cannot access 'hello': No such file or directory
+Fri Mar 17 15:06:38 2023 - ERROR - oe_test_binary_files_operation.sh line 80
+oe_test_binary_files_operation.sh: line 81: create-jar-links: command not found
+Fri Mar 17 15:06:38 2023 - ERROR - oe_test_binary_files_operation.sh line 82
+ls: cannot access 'hello': No such file or directory
+Fri Mar 17 15:06:39 2023 - ERROR - oe_test_binary_files_operation.sh line 84
+oe_test_binary_files_operation.sh: line 86: create-jar-links: command not found
+Fri Mar 17 15:06:40 2023 - ERROR - oe_test_binary_files_operation.sh line 87
+Fri Mar 17 15:06:40 2023 - ERROR - oe_test_binary_files_operation.sh line 89
+oe_test_binary_files_operation.sh: line 90: diff-jars: command not found
+Fri Mar 17 15:06:41 2023 - ERROR - oe_test_binary_files_operation.sh line 91
+Fri Mar 17 15:06:42 2023 - INFO  - End of the test.
+Fri Mar 17 15:06:42 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:06:43 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 15:07:32 2023 - INFO  - Finish restoring the test environment.

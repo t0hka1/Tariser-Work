@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:29:54 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:30:18 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:30:19 2023 - INFO  - Start to run test.
+  typedef long long __int64;
+typedef enum {
+typedef struct {
+oe_test_swig_09.sh: line 38: rpm: command not found
+
+SWIG Version 4.0.2
+
+Compiled with g++ [riscv64-unknown-linux-gnu]
+
+Configured options: +pcre
+
+Please see http://www.swig.org for reporting bugs and further information
+/* attribute recognised by some compilers to avoid 'unused' warnings */
+#   pragma warning(disable : 4505) /* unreferenced local function has been removed */
+ * are aware a variable isn't used.  So we just silence that warning.
+# pragma warning disable 592
+ * are aware a variable isn't used.  So we just silence that warning.
+  SWIG_JavaOutOfMemoryError = 1,
+  SWIG_JavaOutOfMemoryError = 1,
+  SWIG_JavaUnknownError,
+    { SWIG_JavaOutOfMemoryError, "java/lang/OutOfMemoryError" },
+    { SWIG_JavaUnknownError,  "java/lang/UnknownError" },
+    { (SWIG_JavaExceptionCodes)0,  "java/lang/UnknownError" }
+#ifndef SWIG_MSC_UNSUPPRESS_4505
+#   pragma warning(disable : 4505) /* unreferenced local function has been removed */
+<?xml version="1.0" ?> 
+ * tclrun.swg
+Fri Mar 17 23:30:27 2023 - INFO  - End to run test.
+Fri Mar 17 23:30:28 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 23:30:29 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:30:46 2023 - INFO  - End to restore the test environment.

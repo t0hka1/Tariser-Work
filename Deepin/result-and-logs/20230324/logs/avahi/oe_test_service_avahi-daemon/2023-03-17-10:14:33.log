@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:14:35 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 10:14:40 2023 - ERROR - pkgs:(avahi) not found
+Fri Mar 17 10:14:41 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 10:14:41 2023 - INFO  - Start testing...
+Failed to restart avahi-daemon.service: Unit avahi-daemon.service not found.
+Fri Mar 17 10:14:42 2023 - ERROR - avahi-daemon.service restart failed
+Fri Mar 17 10:14:42 2023 - ERROR - ../common/common_lib.sh line 34
+Unit avahi-daemon.service could not be found.
+Fri Mar 17 10:14:49 2023 - ERROR - avahi-daemon.service restart failed
+Fri Mar 17 10:14:50 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop avahi-daemon.service: Unit avahi-daemon.service not loaded.
+Fri Mar 17 10:14:50 2023 - ERROR - avahi-daemon.service stop failed
+Fri Mar 17 10:14:51 2023 - ERROR - ../common/common_lib.sh line 39
+Unit avahi-daemon.service could not be found.
+Fri Mar 17 10:14:57 2023 - ERROR - avahi-daemon.service stop failed
+Fri Mar 17 10:14:58 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start avahi-daemon.service: Unit avahi-daemon.service not found.
+Fri Mar 17 10:14:58 2023 - ERROR - avahi-daemon.service start failed
+Fri Mar 17 10:14:59 2023 - ERROR - ../common/common_lib.sh line 44
+Unit avahi-daemon.service could not be found.
+Fri Mar 17 10:15:05 2023 - ERROR - avahi-daemon.service start failed
+Fri Mar 17 10:15:06 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for avahi-daemon.service: No such file or directory
+Fri Mar 17 10:15:06 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start avahi-daemon.service: Unit avahi-daemon.service not found.
+sed: can't read /usr/lib/systemd/system/avahi-daemon.service: No such file or directory
+Failed to reload avahi-daemon.service: Unit avahi-daemon.service not found.
+Fri Mar 17 10:15:13 2023 - ERROR - avahi-daemon.service reload failed
+Fri Mar 17 10:15:13 2023 - ERROR - oe_test_service_avahi-daemon.sh line 40
+Unit avahi-daemon.service could not be found.
+Fri Mar 17 10:15:14 2023 - ERROR - avahi-daemon.service reload causes the service status to change
+Fri Mar 17 10:15:15 2023 - ERROR - oe_test_service_avahi-daemon.sh line 42
+Fri Mar 17 10:15:15 2023 - INFO  - Finish test!
+Fri Mar 17 10:15:16 2023 - ERROR - failed to execute the case.
+Fri Mar 17 10:15:16 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/avahi-daemon.service: No such file or directory
+Failed to reload avahi-daemon.service: Unit avahi-daemon.service not found.
+Fri Mar 17 10:15:23 2023 - WARN  - no thing to do.
+Fri Mar 17 10:15:23 2023 - INFO  - Finish environment cleanup!

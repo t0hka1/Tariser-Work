@@ -1,0 +1,109 @@
+Fri Mar 17 21:41:58 2023 - INFO  - start to run testcase:oe_test_rsyslog_abnormal_config.
+Fri Mar 17 21:42:10 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:42:21 2023 - INFO  - End to run testcase:oe_test_rsyslog_abnormal_config.
+Fri Mar 17 21:42:21 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:42:25 2023 - INFO  - start to run testcase:oe_test_rsyslog_abnormal_template.
+Fri Mar 17 21:43:04 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 21:43:15 2023 - INFO  - End to run testcase:oe_test_rsyslog_abnormal_template.
+Fri Mar 17 21:43:15 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:43:19 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_attribute.
+Fri Mar 17 21:43:56 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 21:44:07 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_attribute.
+Fri Mar 17 21:44:07 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:44:11 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_discard.
+Fri Mar 17 21:44:29 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:44:40 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_discard.
+Fri Mar 17 21:44:40 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:44:44 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_facility.
+Fri Mar 17 21:45:39 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:45:49 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_facility.
+Fri Mar 17 21:45:50 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:45:53 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_httpd.
+Fri Mar 17 21:48:57 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 21:49:08 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_httpd.
+Fri Mar 17 21:49:09 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:49:13 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_imfile.
+Fri Mar 17 21:49:30 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:49:41 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_imfile.
+Fri Mar 17 21:49:42 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:49:45 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_postgreSQL.
+Fri Mar 17 21:50:05 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 21:50:16 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_postgreSQL.
+Fri Mar 17 21:50:17 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:50:21 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_priority.
+Fri Mar 17 21:51:07 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:51:17 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_priority.
+Fri Mar 17 21:51:18 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:51:22 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_rainerscript.
+Fri Mar 17 21:51:38 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 21:51:48 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_rainerscript.
+Fri Mar 17 21:51:49 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:51:53 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_relp.
+Fri Mar 17 21:52:47 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 21:52:58 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_relp.
+Fri Mar 17 21:52:59 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:53:02 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_shell.
+Fri Mar 17 21:53:32 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:53:42 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_shell.
+Fri Mar 17 21:53:43 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:53:47 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_tcp.
+Fri Mar 17 21:54:23 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 21:54:34 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_tcp.
+Fri Mar 17 21:54:34 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:54:38 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_tcp_firewall.
+Fri Mar 17 21:55:15 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 21:55:26 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_tcp_firewall.
+Fri Mar 17 21:55:26 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:55:30 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_template.
+Fri Mar 17 21:55:52 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:56:03 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_template.
+Fri Mar 17 21:56:03 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:56:07 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_udp.
+Fri Mar 17 21:56:33 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 21:56:43 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_udp.
+Fri Mar 17 21:56:44 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:56:48 2023 - INFO  - start to run testcase:oe_test_rsyslog_function_wildcard.
+Fri Mar 17 21:57:13 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 21:57:23 2023 - INFO  - End to run testcase:oe_test_rsyslog_function_wildcard.
+Fri Mar 17 21:57:24 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:57:28 2023 - INFO  - start to run testcase:oe_test_rsyslog_parameter01.
+Fri Mar 17 21:57:47 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:57:58 2023 - INFO  - End to run testcase:oe_test_rsyslog_parameter01.
+Fri Mar 17 21:57:59 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:58:02 2023 - INFO  - start to run testcase:oe_test_rsyslog_parameter02.
+Fri Mar 17 21:58:15 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:58:26 2023 - INFO  - End to run testcase:oe_test_rsyslog_parameter02.
+Fri Mar 17 21:58:27 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:58:30 2023 - INFO  - start to run testcase:oe_test_rsyslog_parameter03.
+Fri Mar 17 21:58:42 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 21:58:53 2023 - INFO  - End to run testcase:oe_test_rsyslog_parameter03.
+Fri Mar 17 21:58:54 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 21:58:57 2023 - INFO  - start to run testcase:oe_test_rsyslog_parameter04.
+Fri Mar 17 21:59:12 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 21:59:22 2023 - INFO  - End to run testcase:oe_test_rsyslog_parameter04.
+Fri Mar 17 21:59:23 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:59:27 2023 - INFO  - start to run testcase:oe_test_rsyslog_reliability_lenght.
+Fri Mar 17 22:00:04 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 22:00:14 2023 - INFO  - End to run testcase:oe_test_rsyslog_reliability_lenght.
+Fri Mar 17 22:00:15 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 22:00:19 2023 - INFO  - start to run testcase:oe_test_rsyslog_reliability_network.
+Fri Mar 17 22:30:21 2023 - WARN  - The case execution timeout.
+Fri Mar 17 22:30:21 2023 - ERROR - The case exit by code 143.
+Fri Mar 17 22:30:32 2023 - INFO  - End to run testcase:oe_test_rsyslog_reliability_network.
+Fri Mar 17 22:30:33 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 22:30:36 2023 - INFO  - start to run testcase:oe_test_rsyslog_reliability_operation.
+Fri Mar 17 22:30:38 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 22:30:49 2023 - INFO  - End to run testcase:oe_test_rsyslog_reliability_operation.
+Fri Mar 17 22:30:49 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 22:30:53 2023 - INFO  - start to run testcase:oe_test_rsyslog_reliability_restart.
+Fri Mar 17 22:33:16 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 22:33:27 2023 - INFO  - End to run testcase:oe_test_rsyslog_reliability_restart.
+Fri Mar 17 22:33:28 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 22:33:32 2023 - INFO  - start to run testcase:oe_test_rsyslog_reliability_tcp.
+Fri Mar 17 22:34:52 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 22:35:03 2023 - INFO  - End to run testcase:oe_test_rsyslog_reliability_tcp.
+Fri Mar 17 22:35:03 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 22:35:07 2023 - INFO  - start to run testcase:oe_test_service_rsyslog.
+Fri Mar 17 22:35:51 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 22:36:02 2023 - INFO  - End to run testcase:oe_test_service_rsyslog.
+Fri Mar 17 22:36:03 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.

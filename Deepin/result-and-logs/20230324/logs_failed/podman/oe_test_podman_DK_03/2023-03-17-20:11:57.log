@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:12:00 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 20:12:03 2023 - ERROR - pkgs:(podman-docker) not found
+../common/common_podman.sh: line 26: /etc/containers/registries.conf: No such file or directory
+oe_test_podman_DK_03.sh: line 24: podman: command not found
+oe_test_podman_DK_03.sh: line 25: podman: command not found
+Fri Mar 17 20:12:04 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:12:05 2023 - INFO  - Start to run test.
+Fri Mar 17 20:12:05 2023 - ERROR - oe_test_podman_DK_03.sh line 32
+oe_test_podman_DK_03.sh: line 33: docker: command not found
+Fri Mar 17 20:12:06 2023 - ERROR - oe_test_podman_DK_03.sh line 34
+Fri Mar 17 20:12:06 2023 - ERROR - oe_test_podman_DK_03.sh line 36
+oe_test_podman_DK_03.sh: line 37: docker: command not found
+Fri Mar 17 20:12:07 2023 - ERROR - oe_test_podman_DK_03.sh line 38
+grep: /tmp/myimage/manifest.json: No such file or directory
+Fri Mar 17 20:12:07 2023 - ERROR - oe_test_podman_DK_03.sh line 40
+oe_test_podman_DK_03.sh: line 41: docker: command not found
+Fri Mar 17 20:12:08 2023 - ERROR - oe_test_podman_DK_03.sh line 42
+grep: /tmp/myimage/manifest.json: No such file or directory
+Fri Mar 17 20:12:08 2023 - ERROR - oe_test_podman_DK_03.sh line 44
+Fri Mar 17 20:12:09 2023 - ERROR - oe_test_podman_DK_03.sh line 48
+Fri Mar 17 20:12:10 2023 - ERROR - oe_test_podman_DK_03.sh line 50
+Fri Mar 17 20:12:10 2023 - ERROR - oe_test_podman_DK_03.sh line 52
+oe_test_podman_DK_03.sh: line 54: docker: command not found
+Fri Mar 17 20:12:11 2023 - ERROR - oe_test_podman_DK_03.sh line 55
+Fri Mar 17 20:12:11 2023 - ERROR - oe_test_podman_DK_03.sh line 57
+Fri Mar 17 20:12:12 2023 - INFO  - End to run test.
+Fri Mar 17 20:12:12 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:12:13 2023 - INFO  - Start to restore the test environment.
+../common/common_podman.sh: line 38: podman: command not found
+../common/common_podman.sh: line 39: podman: command not found
+../common/common_podman.sh: line 40: podman: command not found
+Fri Mar 17 20:12:13 2023 - WARN  - no thing to do.
+Fri Mar 17 20:12:14 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,32 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:58:07 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 15:58:11 2023 - ERROR - pkgs:(nc) not found
+Fri Mar 17 15:58:12 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:58:13 2023 - INFO  - Start executing testcase.
+su: warning: cannot change directory to /home/example: No such file or directory
+nc: Permission denied
+Failed to set capabilities on file `/bin/ncat' (No such file or directory)
+The value of the capability argument is not permitted for a file. Or the file is not a regular (non-symlink) file
+Fri Mar 17 15:58:17 2023 - ERROR - Failed to set cap
+Fri Mar 17 15:58:17 2023 - ERROR - oe_test_acl_bind_port.sh line 42
+su: warning: cannot change directory to /home/example: No such file or directory
+nc: Permission denied
+Fri Mar 17 15:58:21 2023 - ERROR - Failed to get process PID
+Fri Mar 17 15:58:21 2023 - ERROR - oe_test_acl_bind_port.sh line 46
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Fri Mar 17 15:58:22 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 15:58:22 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:58:23 2023 - INFO  - start environment cleanup.
+Failed to set capabilities on file `/bin/ncat' (No such file or directory)
+The value of the capability argument is not permitted for a file. Or the file is not a regular (non-symlink) file
+userdel: example mail spool (/var/mail/example) not found
+userdel: example home directory (/home/example) not found
+Fri Mar 17 15:58:24 2023 - WARN  - no thing to do.
+Fri Mar 17 15:58:24 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,198 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:06:13 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:06:17 2023 - ERROR - pkgs:(rubygem-rdoc) not found
+Fri Mar 17 22:06:18 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 22:06:18 2023 - INFO  - Start to run test.
+6.3.3
+Usage: rdoc [options] [names...]
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc...
+Parsing sources...
+Parsing sources...
+Parsing sources...
+100% [ 1/ 1]  ../common/main.rb
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc...
+Copying static files
+Rendering the index page...
+Outputting to /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/index.html
+Generating class documentation in /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc
+  working on Customer (Customer.html)
+  rendering /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/Customer.html
+Outputting to /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/Customer.html
+Generating file documentation in /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc
+  working on ../common/main.rb (/root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/__/common/main_rb.html)
+Rendering the Table of Contents...
+Outputting to /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/table_of_contents.html
+Generating JSON index
+  writing search index to js/search_index.js
+  generating class search index
+    Customer
+  generating method search index
+    Customer#display_details
+    Customer::new
+    Customer#total_no_of_customers
+  generating pages search index
+Compressing generated JSON index
+Reading the JSON index file from /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/search_index.js
+Writing gzipped search index to /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/search_index.js.gz
+Reading the original js file from /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/navigation.js
+Writing gzipped file to /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/navigation.js.gz
+Reading the original js file from /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/searcher.js
+Writing gzipped file to /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/searcher.js.gz
+
+mkdir -p ./css
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/css/fonts.css ./css/fonts.css
+mkdir -p ./fonts
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/fonts/Lato-Light.ttf ./fonts/Lato-Light.ttf
+mkdir -p ./fonts
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/fonts/Lato-LightItalic.ttf ./fonts/Lato-LightItalic.ttf
+mkdir -p ./fonts
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/fonts/Lato-Regular.ttf ./fonts/Lato-Regular.ttf
+mkdir -p ./fonts
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/fonts/Lato-RegularItalic.ttf ./fonts/Lato-RegularItalic.ttf
+mkdir -p ./fonts
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/fonts/SourceCodePro-Bold.ttf ./fonts/SourceCodePro-Bold.ttf
+mkdir -p ./fonts
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/fonts/SourceCodePro-Regular.ttf ./fonts/SourceCodePro-Regular.ttf
+mkdir -p ./css
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/css/rdoc.css ./css/rdoc.css
+mkdir -p js
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/js/darkfish.js js/darkfish.js
+mkdir -p js
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/js/jquery.js js/jquery.js
+mkdir -p js
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/js/search.js js/search.js
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/add.png images/add.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/arrow_up.png images/arrow_up.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/brick.png images/brick.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/brick_link.png images/brick_link.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/bug.png images/bug.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/bullet_black.png images/bullet_black.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/bullet_toggle_minus.png images/bullet_toggle_minus.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/bullet_toggle_plus.png images/bullet_toggle_plus.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/date.png images/date.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/delete.png images/delete.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/find.png images/find.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/loadingAnimation.gif images/loadingAnimation.gif
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/macFFBgHack.png images/macFFBgHack.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/package.png images/package.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/page_green.png images/page_green.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/page_white_text.png images/page_white_text.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/page_white_width.png images/page_white_width.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/plugin.png images/plugin.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/ruby.png images/ruby.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/tag_blue.png images/tag_blue.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/tag_green.png images/tag_green.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/transparent.png images/transparent.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/wrench.png images/wrench.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/wrench_orange.png images/wrench_orange.png
+mkdir -p images
+ln /usr/lib/ruby/3.0.0/rdoc/generator/template/darkfish/images/zoom.png images/zoom.png
+mkdir -p /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js
+install -c -p -m 644 js/navigation.js /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/navigation.js
+install -c -p -m 644 js/searcher.js /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc/js/searcher.js
+
+  Files:      1
+
+  Classes:    1 (1 undocumented)
+  Modules:    0 (0 undocumented)
+  Constants:  0 (0 undocumented)
+  Attributes: 0 (0 undocumented)
+  Methods:    3 (3 undocumented)
+
+  Total:      4 (4 undocumented)
+    0.00% documented
+
+  Elapsed: 0.7s
+
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc...
+Parsing sources...
+
+Generating RI format into /root/.local/share/rdoc...
+Parsing sources...
+Fri Mar 17 22:06:57 2023 - ERROR - oe_test_rdoc_01.sh line 65
+Fri Mar 17 22:06:58 2023 - ERROR - oe_test_rdoc_01.sh line 67
+
+Generating RI format into /usr/share/ri/3.0.0/site...
+Parsing sources...
+Fri Mar 17 22:07:02 2023 - ERROR - oe_test_rdoc_01.sh line 71
+Fri Mar 17 22:07:03 2023 - ERROR - oe_test_rdoc_01.sh line 73
+Parsing sources...
+100% [ 1/ 1]  ../common/main.rb
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc...
+
+
+  Files:      1
+
+  Classes:    1 (1 undocumented)
+  Modules:    0 (0 undocumented)
+  Constants:  0 (0 undocumented)
+  Attributes: 0 (0 undocumented)
+  Methods:    3 (3 undocumented)
+
+  Total:      4 (4 undocumented)
+    0.00% documented
+
+  Elapsed: 0.7s
+
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+Parsing sources...
+100% [ 1/ 1]  ../common/main.rb
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_01/doc...
+
+
+  Files:      1
+
+  Classes:    1 (1 undocumented)
+  Modules:    0 (0 undocumented)
+  Constants:  0 (0 undocumented)
+  Attributes: 0 (0 undocumented)
+  Methods:    3 (3 undocumented)
+
+  Total:      4 (4 undocumented)
+    0.00% documented
+
+  Elapsed: 0.6s
+
+Fri Mar 17 22:07:12 2023 - INFO  - End of the test.
+Fri Mar 17 22:07:13 2023 - ERROR - failed to execute the case.
+Fri Mar 17 22:07:13 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 22:07:14 2023 - WARN  - no thing to do.
+Fri Mar 17 22:07:15 2023 - INFO  - Finish restoring the test environment.

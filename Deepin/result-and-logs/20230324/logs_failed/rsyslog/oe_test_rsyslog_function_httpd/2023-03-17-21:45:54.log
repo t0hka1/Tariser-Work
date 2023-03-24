@@ -1,0 +1,26 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:45:56 2023 - INFO  - Start to prepare the test environment.
+oe_test_rsyslog_function_httpd.sh: line 29: setenforce: command not found
+Failed to stop iptables.service: Unit iptables.service not loaded.
+Failed to restart httpd.service: Unit httpd.service not found.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:48:21 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:48:22 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 21:48:23 2023 - INFO  - Start to run test.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:48:24 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:48:25 2023 - ERROR - oe_test_rsyslog_function_httpd.sh line 68
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:48:46 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:48:47 2023 - ERROR - oe_test_rsyslog_function_httpd.sh line 71
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:48:48 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:48:48 2023 - ERROR - oe_test_rsyslog_function_httpd.sh line 73
+Fri Mar 17 21:48:49 2023 - INFO  - End to run test.
+Fri Mar 17 21:48:49 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:48:50 2023 - INFO  - Start to restore the test environment.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:48:55 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:48:56 2023 - INFO  - End to restore the test environment.

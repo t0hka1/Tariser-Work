@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:33:22 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 18:33:50 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 18:33:51 2023 - INFO  - Start to run test.
+      <P>Hello world!
+<HTML>
+   <HEAD>
+      <TITLE>My first HTML document</TITLE>
+   </HEAD>
+   <BODY>
+      <P>Hello world!
+   </BODY>
+</HTML>
+oe_test_opensp_ospam_spam.sh: line 43: rpm: command not found
+Fri Mar 17 18:34:05 2023 - ERROR - oe_test_opensp_ospam_spam.sh line 44
+Usage: ospam [OPTION] SYSID...
+      <P>Hello world!
+      <P>Hello world!
+      <P>Hello world!
+      <P>Hello world!
+      <P>Hello world!
+      <P>Hello world!
+Fri Mar 17 18:34:40 2023 - INFO  - End of the test.
+Fri Mar 17 18:34:40 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:34:41 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 18:35:01 2023 - INFO  - Finish restoring the test environment.

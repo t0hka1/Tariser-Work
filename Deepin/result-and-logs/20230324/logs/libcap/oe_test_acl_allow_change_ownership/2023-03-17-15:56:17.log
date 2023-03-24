@@ -1,0 +1,23 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:56:20 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 15:56:20 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:56:21 2023 - INFO  - Start executing testcase.
+New password: Retype new password: passwd: password updated successfully
+-rw-r--r-- 1 root root 0 Mar 17 15:56 /tmp/test
+su: warning: cannot change directory to /home/example: No such file or directory
+chown: changing ownership of '/tmp/test': Operation not permitted
+su: warning: cannot change directory to /home/example: No such file or directory
+-rw-r--r-- 1 example example 0 Mar 17 15:56 /tmp/test
+Fri Mar 17 15:56:23 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 15:56:24 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 15:56:24 2023 - INFO  - start environment cleanup.
+userdel: example mail spool (/var/mail/example) not found
+userdel: example home directory (/home/example) not found
+Fri Mar 17 15:56:26 2023 - INFO  - Finish environment cleanup!

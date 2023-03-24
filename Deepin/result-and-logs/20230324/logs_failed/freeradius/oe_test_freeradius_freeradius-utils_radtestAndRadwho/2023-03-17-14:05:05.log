@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:05:08 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 14:05:11 2023 - ERROR - pkgs:(freeradius-utils) not found
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 39: /etc/raddb/users: No such file or directory
+Failed to start radiusd.service: Unit radiusd.service not found.
+Fri Mar 17 14:05:15 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 14:05:16 2023 - INFO  - Start to run test.
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 49: radtest: command not found
+Fri Mar 17 14:05:17 2023 - ERROR - radtest -d execution failed.
+Fri Mar 17 14:05:18 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 50
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 51: radtest: command not found
+Fri Mar 17 14:05:18 2023 - ERROR - radtest -t execution failed.
+Fri Mar 17 14:05:19 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 52
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 53: radtest: command not found
+Fri Mar 17 14:05:20 2023 - ERROR - radtest -P execution failed.
+Fri Mar 17 14:05:20 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 54
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 55: radtest: command not found
+Fri Mar 17 14:05:21 2023 - ERROR - radtest -x execution failed.
+Fri Mar 17 14:05:22 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 56
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 57: radtest: command not found
+Fri Mar 17 14:05:22 2023 - ERROR - radtest -4 execution failed.
+Fri Mar 17 14:05:23 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 58
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 59: radtest: command not found
+Fri Mar 17 14:05:24 2023 - ERROR - radtest -6 execution failed.
+Fri Mar 17 14:05:24 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 60
+Failed to stop radiusd.service: Unit radiusd.service not loaded.
+touch: cannot touch '/var/log/radius/radutmp': No such file or directory
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 63: radwho: command not found
+Fri Mar 17 14:05:25 2023 - ERROR - radwho -c execution failed.
+Fri Mar 17 14:05:26 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 64
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 65: radwho: command not found
+Fri Mar 17 14:05:26 2023 - ERROR - radwho -d execution failed.
+Fri Mar 17 14:05:27 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 66
+oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh: line 67: radwho: command not found
+Fri Mar 17 14:05:27 2023 - ERROR - radwho -F execution failed.
+Fri Mar 17 14:05:28 2023 - ERROR - oe_test_freeradius_freeradius-utils_radtestAndRadwho.sh line 68
+Fri Mar 17 14:05:29 2023 - INFO  - End to run test.
+Fri Mar 17 14:05:29 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:05:30 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 14:05:30 2023 - WARN  - no thing to do.
+Fri Mar 17 14:05:31 2023 - INFO  - End to restore the test environment.

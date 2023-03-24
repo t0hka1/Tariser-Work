@@ -1,0 +1,26 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:20:29 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:20:32 2023 - ERROR - pkgs:(javapackages-local) not found
+Fri Mar 17 15:20:33 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 15:20:33 2023 - INFO  - Start to run test.
+oe_test_javapackages-local.sh: line 35: abs2rel: command not found
+Fri Mar 17 15:20:34 2023 - ERROR - oe_test_javapackages-local.sh line 36
+oe_test_javapackages-local.sh: line 37: abs2rel: command not found
+Fri Mar 17 15:20:35 2023 - ERROR - oe_test_javapackages-local.sh line 38
+oe_test_javapackages-local.sh: line 39: gradle-local: command not found
+oe_test_javapackages-local.sh: line 40: xmvn-builddep: command not found
+Fri Mar 17 15:20:35 2023 - ERROR - oe_test_javapackages-local.sh line 41
+oe_test_javapackages-local.sh: line 42: xmvn-builddep: command not found
+Fri Mar 17 15:20:36 2023 - ERROR - oe_test_javapackages-local.sh line 43
+Fri Mar 17 15:20:36 2023 - INFO  - End of the test.
+Fri Mar 17 15:20:37 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:20:37 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 15:20:38 2023 - WARN  - no thing to do.
+Fri Mar 17 15:20:38 2023 - INFO  - Finish restoring the test environment.

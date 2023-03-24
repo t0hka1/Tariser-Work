@@ -1,0 +1,8 @@
+Fri Mar 17 19:57:26 2023 - INFO  - start to run testcase:oe_test_keyring.
+Fri Mar 17 19:59:50 2023 - ERROR - The case exit by code 4.
+Fri Mar 17 20:00:01 2023 - INFO  - End to run testcase:oe_test_keyring.
+Fri Mar 17 20:00:01 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 20:00:05 2023 - INFO  - start to run testcase:oe_test_keyring-python3.
+Fri Mar 17 20:02:08 2023 - ERROR - The case exit by code 6.
+Fri Mar 17 20:02:19 2023 - INFO  - End to run testcase:oe_test_keyring-python3.
+Fri Mar 17 20:02:20 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

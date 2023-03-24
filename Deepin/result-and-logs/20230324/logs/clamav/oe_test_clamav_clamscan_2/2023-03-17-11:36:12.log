@@ -1,0 +1,106 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:36:15 2023 - INFO  - Start to prepare the database config.
+cp: cannot stat '/var/lib/clamav/main.cvd': No such file or directory
+Fri Mar 17 11:36:21 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:36:21 2023 - INFO  - Start to run test.
+oe_test_clamav_clamscan_2.sh: line 41: clamscan: command not found
+Fri Mar 17 11:36:22 2023 - ERROR - Check clamscan --alert-macros=no failed.
+Fri Mar 17 11:36:22 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 42
+oe_test_clamav_clamscan_2.sh: line 43: clamscan: command not found
+Fri Mar 17 11:36:23 2023 - ERROR - Check clamscan --max-scansize=40 failed.
+Fri Mar 17 11:36:23 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 44
+oe_test_clamav_clamscan_2.sh: line 45: clamscan: command not found
+Fri Mar 17 11:36:24 2023 - ERROR - Check clamscan --exclude=REGEX failed.
+Fri Mar 17 11:36:25 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 46
+oe_test_clamav_clamscan_2.sh: line 47: clamscan: command not found
+Fri Mar 17 11:36:25 2023 - ERROR - Check clamscan --exclude-pua=CAT failed.
+Fri Mar 17 11:36:26 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 48
+oe_test_clamav_clamscan_2.sh: line 49: clamscan: command not found
+Fri Mar 17 11:36:26 2023 - ERROR - Check clamscan --pcre-max-filesize=50 failed.
+Fri Mar 17 11:36:27 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 50
+oe_test_clamav_clamscan_2.sh: line 51: clamscan: command not found
+Fri Mar 17 11:36:27 2023 - ERROR - Check clamscan --bell -i failed.
+Fri Mar 17 11:36:28 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 52
+oe_test_clamav_clamscan_2.sh: line 53: clamscan: command not found
+Fri Mar 17 11:36:28 2023 - ERROR - Check clamscan -i --remove --recursive /opt --max-dir-recursion=5 -l test_clamscan.log failed.
+Fri Mar 17 11:36:29 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 54
+oe_test_clamav_clamscan_2.sh: line 55: clamscan: command not found
+Fri Mar 17 11:36:29 2023 - ERROR - Check clamscan --no-summary -ri /opt failed.
+Fri Mar 17 11:36:30 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 56
+oe_test_clamav_clamscan_2.sh: line 57: clamscan: command not found
+Fri Mar 17 11:36:30 2023 - ERROR - Check clamscan  -r --move=test_virus_collection/ /opt/ failed.
+Fri Mar 17 11:36:31 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 58
+oe_test_clamav_clamscan_2.sh: line 59: clamscan: command not found
+Fri Mar 17 11:36:31 2023 - ERROR - Check clamscan  -r --copy=test_virus_collection/ /opt/ failed.
+Fri Mar 17 11:36:32 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 60
+oe_test_clamav_clamscan_2.sh: line 61: clamscan: command not found
+Fri Mar 17 11:36:32 2023 - ERROR - Check clamscan --max-dir-recursion=5 failed.
+Fri Mar 17 11:36:33 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 62
+oe_test_clamav_clamscan_2.sh: line 64: clamscan: command not found
+Fri Mar 17 11:36:33 2023 - ERROR - Check clamscan --official-db-only failed.
+Fri Mar 17 11:36:34 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 65
+oe_test_clamav_clamscan_2.sh: line 66: clamscan: command not found
+Fri Mar 17 11:36:34 2023 - ERROR - Check clamscan --log test_log.log failed.
+Fri Mar 17 11:36:35 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 67
+oe_test_clamav_clamscan_2.sh: line 68: clamscan: command not found
+Fri Mar 17 11:36:35 2023 - ERROR - Check clamscan --alert-exceeds-max failed.
+Fri Mar 17 11:36:36 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 69
+oe_test_clamav_clamscan_2.sh: line 70: clamscan: command not found
+Fri Mar 17 11:36:36 2023 - ERROR - Check clamscan --max-recursion 1024 --max-dir-recursion 10 --max-embeddedpe 10 --max-htmlnormalize 10 failed.
+Fri Mar 17 11:36:37 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 71
+oe_test_clamav_clamscan_2.sh: line 72: clamscan: command not found
+Fri Mar 17 11:36:37 2023 - ERROR - Check clamscan --allmatch test_virus_collection --include=REGEX --include-dir=REGEX --max-htmlnotags 5 --max-scriptnormalize 5 failed.
+Fri Mar 17 11:36:38 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 73
+oe_test_clamav_clamscan_2.sh: line 74: clamscan: command not found
+Fri Mar 17 11:36:39 2023 - ERROR - Check clamscan -z test_virus_collection --cross-fs /opt --max-filesize 1024 --max-ziptypercg 5 failed.
+Fri Mar 17 11:36:39 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 75
+oe_test_clamav_clamscan_2.sh: line 76: clamscan: command not found
+Fri Mar 17 11:36:40 2023 - ERROR - Check clamscan --follow-dir-symlinks 0 --max-scansize 1024 failed.
+Fri Mar 17 11:36:40 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 77
+oe_test_clamav_clamscan_2.sh: line 78: clamscan: command not found
+Fri Mar 17 11:36:41 2023 - ERROR - Check clamscan --follow-file-symlinks 0 --max-files 1024 --max-ziptypercg 5 failed.
+Fri Mar 17 11:36:41 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 79
+oe_test_clamav_clamscan_2.sh: line 80: clamscan: command not found
+Fri Mar 17 11:36:42 2023 - ERROR - Check clamscan --file-list /opt --exclude-dir=REGEX --max-partitions 5 --max-iconspe 5 failed.
+Fri Mar 17 11:36:42 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 81
+oe_test_clamav_clamscan_2.sh: line 83: clamscan: command not found
+Fri Mar 17 11:36:43 2023 - ERROR - Check clamscan --bytecode test_virus_collection --bytecode-timeout 50 --max-rechwp3 5 failed.
+Fri Mar 17 11:36:43 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 84
+oe_test_clamav_clamscan_2.sh: line 85: clamscan: command not found
+Fri Mar 17 11:36:44 2023 - ERROR - Check clamscan --bytecode-unsigned test_virus_collection --statistics bytecode --pcre-match-limit 5 failed.
+Fri Mar 17 11:36:44 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 86
+oe_test_clamav_clamscan_2.sh: line 87: clamscan: command not found
+Fri Mar 17 11:36:45 2023 - ERROR - Check clamscan --detect-pua test_virus_collection  --pcre-recmatch-limit 5 --phishing-sigs test_virus_collection --statistics pcre failed.
+Fri Mar 17 11:36:45 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 88
+oe_test_clamav_clamscan_2.sh: line 89: clamscan: command not found
+Fri Mar 17 11:36:46 2023 - ERROR - Check clamscan --include-pua=CAT --detect-structured test_virus_collection --structured-ssn-format=2 --pcre-max-filesize 5 --statistics none failed.
+Fri Mar 17 11:36:46 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 90
+oe_test_clamav_clamscan_2.sh: line 91: clamscan: command not found
+Fri Mar 17 11:36:47 2023 - ERROR - Check clamscan --structured-ssn-count 1 --structured-cc-count 1 --scan-mail test_virus_collection --disable-cache failed.
+Fri Mar 17 11:36:47 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 92
+oe_test_clamav_clamscan_2.sh: line 94: clamscan: command not found
+Fri Mar 17 11:36:48 2023 - ERROR - Check clamscan --phishing-scan-urls test_virus_collection --heuristic-alerts test_virus_collection --heuristic-scan-precedence test_virus_collection failed.
+Fri Mar 17 11:36:48 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 95
+oe_test_clamav_clamscan_2.sh: line 96: clamscan: command not found
+Fri Mar 17 11:36:49 2023 - ERROR - Check clamscan --normalize test_virus_collection --scan-pe test_virus_collection --alert-encrypted-doc test_virus_collection --alert-macros test_virus_collection failed.
+Fri Mar 17 11:36:49 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 97
+oe_test_clamav_clamscan_2.sh: line 98: clamscan: command not found
+Fri Mar 17 11:36:50 2023 - ERROR - Check clamscan --alert-phishing-ssl test_virus_collection --alert-phishing-cloak test_virus_collection --alert-partition-intersection test_virus_collection --nocerts --dumpcerts --max-scantime 100 failed.
+Fri Mar 17 11:36:50 2023 - ERROR - oe_test_clamav_clamscan_2.sh line 99
+Fri Mar 17 11:36:51 2023 - INFO  - End to run test.
+Fri Mar 17 11:36:51 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:36:52 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage clamav is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'clamav' has no installation candidate"
+Fri Mar 17 11:36:55 2023 - INFO  - End to restore the test environment.

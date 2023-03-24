@@ -1,0 +1,70 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:31:03 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:31:07 2023 - ERROR - pkgs:(ImageMagick) not found
+Fri Mar 17 12:31:08 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:31:09 2023 - INFO  - Start to run test.
+oe_test_djvulibre_01.sh: line 35: any2djvu: command not found
+Fri Mar 17 12:31:09 2023 - ERROR - Check any2djvu --help failed.
+Fri Mar 17 12:31:10 2023 - ERROR - oe_test_djvulibre_01.sh line 36
+spawn any2djvu http://barak.pearlmutter.net/papers mesh-preprint.ps.gz
+couldn't execute "any2djvu": no such file or directory
+    while executing
+"spawn any2djvu http://barak.pearlmutter.net/papers mesh-preprint.ps.gz"
+Fri Mar 17 12:31:11 2023 - ERROR - Check any2djvu failed.
+Fri Mar 17 12:31:11 2023 - ERROR - oe_test_djvulibre_01.sh line 44
+Fri Mar 17 12:31:12 2023 - ERROR - Check mesh-preprint.djvu not exist.
+Fri Mar 17 12:31:12 2023 - ERROR - oe_test_djvulibre_01.sh line 46
+spawn any2djvu test.pdf
+couldn't execute "any2djvu": no such file or directory
+    while executing
+"spawn any2djvu test.pdf"
+Fri Mar 17 12:31:13 2023 - ERROR - Check any2djvu test.pdf failed.
+Fri Mar 17 12:31:14 2023 - ERROR - oe_test_djvulibre_01.sh line 53
+Fri Mar 17 12:31:15 2023 - ERROR - Check test.djvu not exist.
+Fri Mar 17 12:31:15 2023 - ERROR - oe_test_djvulibre_01.sh line 55
+Fri Mar 17 12:31:16 2023 - ERROR - Check bzz --help failed.
+Fri Mar 17 12:31:17 2023 - ERROR - oe_test_djvulibre_01.sh line 58
+oe_test_djvulibre_01.sh: line 59: bzz: command not found
+Fri Mar 17 12:31:18 2023 - ERROR - Check bzz -e failed.
+Fri Mar 17 12:31:18 2023 - ERROR - oe_test_djvulibre_01.sh line 60
+oe_test_djvulibre_01.sh: line 61: bzz: command not found
+oe_test_djvulibre_01.sh: line 62: bzz: command not found
+Fri Mar 17 12:31:19 2023 - ERROR - Check bzz -d failed.
+Fri Mar 17 12:31:19 2023 - ERROR - oe_test_djvulibre_01.sh line 63
+Fri Mar 17 12:31:20 2023 - ERROR - Check c44 --help failed.
+Fri Mar 17 12:31:21 2023 - ERROR - oe_test_djvulibre_01.sh line 66
+oe_test_djvulibre_01.sh: line 67: c44: command not found
+Fri Mar 17 12:31:22 2023 - ERROR - Check c44 -crcbdelay failed.
+Fri Mar 17 12:31:22 2023 - ERROR - oe_test_djvulibre_01.sh line 68
+Fri Mar 17 12:31:23 2023 - ERROR - Check test1.djvu not exist.
+Fri Mar 17 12:31:23 2023 - ERROR - oe_test_djvulibre_01.sh line 70
+oe_test_djvulibre_01.sh: line 71: c44: command not found
+Fri Mar 17 12:31:24 2023 - ERROR - Check c44 -crcbfull failed.
+Fri Mar 17 12:31:24 2023 - ERROR - oe_test_djvulibre_01.sh line 72
+Fri Mar 17 12:31:25 2023 - ERROR - Check test2.djvu not exist.
+Fri Mar 17 12:31:25 2023 - ERROR - oe_test_djvulibre_01.sh line 74
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `test.pbm' @ error/convert.c/ConvertImageCommand/3229.
+oe_test_djvulibre_01.sh: line 76: c44: command not found
+Fri Mar 17 12:31:26 2023 - ERROR - Check c44 -crcbhalf failed.
+Fri Mar 17 12:31:27 2023 - ERROR - oe_test_djvulibre_01.sh line 77
+Fri Mar 17 12:31:27 2023 - ERROR - Check test4.djvu not exist.
+Fri Mar 17 12:31:28 2023 - ERROR - oe_test_djvulibre_01.sh line 79
+oe_test_djvulibre_01.sh: line 80: c44: command not found
+Fri Mar 17 12:31:28 2023 - ERROR - Check c44 -crcbnone failed.
+Fri Mar 17 12:31:29 2023 - ERROR - oe_test_djvulibre_01.sh line 81
+Fri Mar 17 12:31:29 2023 - ERROR - Check test5.djvu not exist.
+Fri Mar 17 12:31:30 2023 - ERROR - oe_test_djvulibre_01.sh line 83
+Fri Mar 17 12:31:30 2023 - INFO  - End to run test.
+Fri Mar 17 12:31:31 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:31:31 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:31:32 2023 - WARN  - no thing to do.
+Fri Mar 17 12:31:32 2023 - INFO  - End to restore the test environment.

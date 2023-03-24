@@ -1,0 +1,12 @@
+Sat Mar 18 00:22:26 2023 - INFO  - start to run testcase:oe_test_service_watchdog.
+Sat Mar 18 00:23:09 2023 - ERROR - The case exit by code 7.
+Sat Mar 18 00:23:20 2023 - INFO  - End to run testcase:oe_test_service_watchdog.
+Sat Mar 18 00:23:20 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 00:23:24 2023 - INFO  - start to run testcase:oe_test_service_watchdog-ping.
+Sat Mar 18 00:24:04 2023 - ERROR - The case exit by code 7.
+Sat Mar 18 00:24:15 2023 - INFO  - End to run testcase:oe_test_service_watchdog-ping.
+Sat Mar 18 00:24:16 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 00:24:19 2023 - INFO  - start to run testcase:oe_test_watchdog_001.
+Sat Mar 18 00:24:36 2023 - ERROR - The case exit by code 6.
+Sat Mar 18 00:24:47 2023 - INFO  - End to run testcase:oe_test_watchdog_001.
+Sat Mar 18 00:24:47 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

@@ -1,0 +1,22 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:32:46 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 15:33:06 2023 - INFO  - pkgs:(keyutils gcc make) is already installed
+Fri Mar 17 15:33:07 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:33:07 2023 - INFO  - Start testing...
+~/GitRepo/mugen-debian-riscv/testcases/cli-test/keyutils/common ~/GitRepo/mugen-debian-riscv/testcases/cli-test/keyutils
+gcc -lkeyutils t_request_key.c -o test_key
+t_request_key.c:4:10: fatal error: keyutils.h: No such file or directory
+    4 | #include <keyutils.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:4: all] Error 1
+Fri Mar 17 15:33:09 2023 - INFO  - start environment cleanup.
+Fri Mar 17 15:33:10 2023 - WARN  - no thing to do.
+Fri Mar 17 15:33:10 2023 - INFO  - Finish environment cleanup!

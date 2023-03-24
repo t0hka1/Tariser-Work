@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 03:55:07 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 03:55:11 2023 - INFO  - pkgs:(wireshark) is already installed
+Sat Mar 18 03:55:12 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 03:55:12 2023 - INFO  - Start to run test.
+Usage: randpkt [-b maxbytes] [-c count] [-t type] [-r] filename
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: 100 bytes
+Number of packets:   100
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+randpkt: Frame has a network type that differs from the network type of earlier packets, which isn't supported in a "Wireshark/tcpdump/... - pcap" file.
+File encapsulation:  Ethernet
+Packet size limit:   file hdr: 100 bytes
+Usage: reordercap [options] <infile> <outfile>
+100 frames, 0 out of order
+Not writing output file because input file is already in order.
+File name:           randomfile1_A
+Sat Mar 18 03:55:14 2023 - INFO  - End of the test.
+Sat Mar 18 03:55:15 2023 - INFO  - succeed to execute the case.
+Sat Mar 18 03:55:15 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 03:55:16 2023 - WARN  - no thing to do.
+Sat Mar 18 03:55:16 2023 - INFO  - Finish restoring the test environment.

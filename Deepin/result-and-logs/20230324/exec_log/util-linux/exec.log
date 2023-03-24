@@ -1,0 +1,12 @@
+Sat Mar 18 00:14:19 2023 - INFO  - start to run testcase:oe_test_service_fstrim.
+Sat Mar 18 00:14:29 2023 - ERROR - The case exit by code 2.
+Sat Mar 18 00:14:40 2023 - INFO  - End to run testcase:oe_test_service_fstrim.
+Sat Mar 18 00:14:41 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 00:14:45 2023 - INFO  - start to run testcase:oe_test_service_uuidd.
+Sat Mar 18 00:15:24 2023 - ERROR - The case exit by code 7.
+Sat Mar 18 00:15:34 2023 - INFO  - End to run testcase:oe_test_service_uuidd.
+Sat Mar 18 00:15:35 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 00:15:39 2023 - INFO  - start to run testcase:oe_test_socket_uuidd.
+Sat Mar 18 00:16:16 2023 - ERROR - The case exit by code 7.
+Sat Mar 18 00:16:26 2023 - INFO  - End to run testcase:oe_test_socket_uuidd.
+Sat Mar 18 00:16:27 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

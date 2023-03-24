@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:48:06 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 23:48:10 2023 - ERROR - pkgs:(tftp-server) not found
+Fri Mar 17 23:48:11 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 23:48:11 2023 - INFO  - Start to run test.
+Failed to restart tftp.socket: Unit tftp.socket not found.
+Fri Mar 17 23:48:12 2023 - ERROR - tftp.socket restart failed
+Fri Mar 17 23:48:13 2023 - ERROR - ../common/common_lib.sh line 34
+Unit tftp.socket could not be found.
+Fri Mar 17 23:48:19 2023 - ERROR - tftp.socket restart failed
+Fri Mar 17 23:48:19 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop tftp.socket: Unit tftp.socket not loaded.
+Fri Mar 17 23:48:20 2023 - ERROR - tftp.socket stop failed
+Fri Mar 17 23:48:21 2023 - ERROR - ../common/common_lib.sh line 39
+Unit tftp.socket could not be found.
+Fri Mar 17 23:48:27 2023 - ERROR - tftp.socket stop failed
+Fri Mar 17 23:48:28 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start tftp.socket: Unit tftp.socket not found.
+Fri Mar 17 23:48:28 2023 - ERROR - tftp.socket start failed
+Fri Mar 17 23:48:29 2023 - ERROR - ../common/common_lib.sh line 44
+Unit tftp.socket could not be found.
+Fri Mar 17 23:48:35 2023 - ERROR - tftp.socket start failed
+Fri Mar 17 23:48:36 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for tftp.socket: No such file or directory
+Fri Mar 17 23:48:36 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start tftp.socket: Unit tftp.socket not found.
+Fri Mar 17 23:48:37 2023 - ERROR - oe_test_socket_tftp.sh line 38
+Unit tftp.socket could not be found.
+Fri Mar 17 23:48:38 2023 - ERROR - oe_test_socket_tftp.sh line 40
+Fri Mar 17 23:48:38 2023 - INFO  - End of the test.
+Fri Mar 17 23:48:39 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:48:39 2023 - INFO  - start environment cleanup.
+Fri Mar 17 23:48:40 2023 - WARN  - no thing to do.
+Fri Mar 17 23:48:41 2023 - INFO  - Finish environment cleanup!

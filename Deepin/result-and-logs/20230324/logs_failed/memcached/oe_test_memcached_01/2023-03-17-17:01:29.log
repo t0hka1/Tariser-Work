@@ -1,0 +1,50 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:01:32 2023 - INFO  - Start to prepare the test environment.
+Failed to start memcached.service: Unit memcached.service not found.
+Fri Mar 17 17:01:38 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 17:01:38 2023 - INFO  - Start to run test.
+oe_test_memcached_01.sh: line 33: memcached: command not found
+Fri Mar 17 17:01:39 2023 - ERROR - oe_test_memcached_01.sh line 34
+root         472     465  0 17:01 ?        00:00:00 sh -c sudo bash mugen.sh -f memcached -r oe_test_memcached_01 2>&1 | tee -a exec.log
+root         473     472  1 17:01 ?        00:00:00 sudo bash mugen.sh -f memcached -r oe_test_memcached_01
+root         475     473  2 17:01 ?        00:00:00 bash mugen.sh -f memcached -r oe_test_memcached_01
+root         519     475  7 17:01 ?        00:00:00 python3 /root/GitRepo/mugen-debian-riscv/libs/locallibs/sleep_wait.py --time 30m --cmd bash oe_test_memcached_01.sh --mode 1
+root         520     519  0 17:01 ?        00:00:00 /bin/sh -c bash oe_test_memcached_01.sh
+root         521     520  2 17:01 ?        00:00:00 bash oe_test_memcached_01.sh
+root         550     521  0 17:01 ?        00:00:00 grep memcached
+oe_test_memcached_01.sh: line 37: memcached: command not found
+Fri Mar 17 17:01:40 2023 - ERROR - oe_test_memcached_01.sh line 38
+oe_test_memcached_01.sh: line 39: memcached: command not found
+Fri Mar 17 17:01:40 2023 - ERROR - oe_test_memcached_01.sh line 40
+oe_test_memcached_01.sh: line 42: memcached: command not found
+Fri Mar 17 17:01:41 2023 - ERROR - oe_test_memcached_01.sh line 43
+oe_test_memcached_01.sh: line 44: memcached: command not found
+Fri Mar 17 17:01:41 2023 - ERROR - oe_test_memcached_01.sh line 45
+oe_test_memcached_01.sh: line 46: memcached: command not found
+Fri Mar 17 17:01:42 2023 - ERROR - oe_test_memcached_01.sh line 47
+oe_test_memcached_01.sh: line 48: memcached-tool: command not found
+Fri Mar 17 17:01:42 2023 - ERROR - oe_test_memcached_01.sh line 49
+oe_test_memcached_01.sh: line 50: memcached: command not found
+Fri Mar 17 17:01:43 2023 - ERROR - oe_test_memcached_01.sh line 51
+oe_test_memcached_01.sh: line 52: memcached: command not found
+Fri Mar 17 17:01:43 2023 - ERROR - oe_test_memcached_01.sh line 53
+oe_test_memcached_01.sh: line 54: memcached-tool: command not found
+Fri Mar 17 17:01:44 2023 - ERROR - oe_test_memcached_01.sh line 55
+Fri Mar 17 17:01:45 2023 - INFO  - End to run test.
+Fri Mar 17 17:01:45 2023 - ERROR - failed to execute the case.
+Fri Mar 17 17:01:46 2023 - INFO  - Start to restore the test environment.
+Failed to stop memcached.service: Unit memcached.service not loaded.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: '\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nSome packages could not be installed. This may mean that you have\nrequested an impossible situation or if you are using the unstable\ndistribution that some required packages have not yet been created\nor been moved out of Incoming.\nThe following information may help to resolve the situation:\n\nThe following packages have unmet dependencies:\n memcached : Depends: libssl1.1 but it is not installable\nE: Unable to correct problems, you have held broken packages.'
+Fri Mar 17 17:01:49 2023 - INFO  - End to restore the test environment.

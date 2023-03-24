@@ -1,0 +1,16 @@
+Fri Mar 17 23:39:55 2023 - INFO  - start to run testcase:oe_test_targetcli_01.
+Fri Mar 17 23:40:14 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 23:40:25 2023 - INFO  - End to run testcase:oe_test_targetcli_01.
+Fri Mar 17 23:40:25 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:40:30 2023 - INFO  - start to run testcase:oe_test_targetcli_02.
+Fri Mar 17 23:40:44 2023 - ERROR - The case exit by code 3.
+Fri Mar 17 23:40:55 2023 - INFO  - End to run testcase:oe_test_targetcli_02.
+Fri Mar 17 23:40:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:40:59 2023 - INFO  - start to run testcase:oe_test_targetcli_03.
+Fri Mar 17 23:41:17 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 23:41:27 2023 - INFO  - End to run testcase:oe_test_targetcli_03.
+Fri Mar 17 23:41:28 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:41:32 2023 - INFO  - start to run testcase:oe_test_targetcli_04.
+Fri Mar 17 23:42:02 2023 - ERROR - The case exit by code 30.
+Fri Mar 17 23:42:12 2023 - INFO  - End to run testcase:oe_test_targetcli_04.
+Fri Mar 17 23:42:13 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

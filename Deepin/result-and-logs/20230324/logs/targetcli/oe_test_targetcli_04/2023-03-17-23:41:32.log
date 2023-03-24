@@ -1,0 +1,87 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:41:35 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:41:39 2023 - ERROR - pkgs:(targetcli) not found
+Fri Mar 17 23:41:40 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 23:41:41 2023 - INFO  - Start to run test.
+oe_test_targetcli_04.sh: line 36: targetcli: command not found
+Fri Mar 17 23:41:41 2023 - ERROR - oe_test_targetcli_04.sh line 37
+Fri Mar 17 23:41:42 2023 - ERROR - oe_test_targetcli_04.sh line 39
+oe_test_targetcli_04.sh: line 44: [: missing `]'
+oe_test_targetcli_04.sh: line 73: targetcli: command not found
+Fri Mar 17 23:41:42 2023 - ERROR - oe_test_targetcli_04.sh line 74
+oe_test_targetcli_04.sh: line 75: targetcli: command not found
+Fri Mar 17 23:41:43 2023 - ERROR - oe_test_targetcli_04.sh line 76
+oe_test_targetcli_04.sh: line 77: targetcli: command not found
+Fri Mar 17 23:41:43 2023 - ERROR - oe_test_targetcli_04.sh line 78
+oe_test_targetcli_04.sh: line 79: targetcli: command not found
+Fri Mar 17 23:41:44 2023 - ERROR - oe_test_targetcli_04.sh line 80
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+Fri Mar 17 23:41:45 2023 - ERROR - oe_test_targetcli_04.sh line 89
+oe_test_targetcli_04.sh: line 90: targetcli: command not found
+Fri Mar 17 23:41:45 2023 - ERROR - oe_test_targetcli_04.sh line 91
+oe_test_targetcli_04.sh: line 92: targetcli: command not found
+Fri Mar 17 23:41:46 2023 - ERROR - oe_test_targetcli_04.sh line 93
+oe_test_targetcli_04.sh: line 94: targetcli: command not found
+oe_test_targetcli_04.sh: line 96: targetcli: command not found
+Fri Mar 17 23:41:47 2023 - ERROR - oe_test_targetcli_04.sh line 97
+spawn targetcli
+couldn't execute "targetcli": no such file or directory
+    while executing
+"spawn targetcli"
+Fri Mar 17 23:41:47 2023 - ERROR - oe_test_targetcli_04.sh line 106
+oe_test_targetcli_04.sh: line 107: targetcli: command not found
+Fri Mar 17 23:41:48 2023 - ERROR - oe_test_targetcli_04.sh line 108
+oe_test_targetcli_04.sh: line 109: targetcli: command not found
+Fri Mar 17 23:41:49 2023 - ERROR - oe_test_targetcli_04.sh line 110
+oe_test_targetcli_04.sh: line 111: targetcli: command not found
+Fri Mar 17 23:41:49 2023 - ERROR - oe_test_targetcli_04.sh line 112
+oe_test_targetcli_04.sh: line 113: targetcli: command not found
+Fri Mar 17 23:41:50 2023 - ERROR - oe_test_targetcli_04.sh line 114
+Fri Mar 17 23:41:50 2023 - ERROR - oe_test_targetcli_04.sh line 116
+oe_test_targetcli_04.sh: line 117: targetcli: command not found
+Fri Mar 17 23:41:51 2023 - ERROR - oe_test_targetcli_04.sh line 118
+oe_test_targetcli_04.sh: line 119: targetcli: command not found
+Fri Mar 17 23:41:51 2023 - ERROR - oe_test_targetcli_04.sh line 120
+oe_test_targetcli_04.sh: line 121: targetcli: command not found
+Fri Mar 17 23:41:52 2023 - ERROR - oe_test_targetcli_04.sh line 122
+oe_test_targetcli_04.sh: line 123: targetcli: command not found
+Fri Mar 17 23:41:53 2023 - ERROR - oe_test_targetcli_04.sh line 124
+oe_test_targetcli_04.sh: line 125: targetcli: command not found
+Fri Mar 17 23:41:53 2023 - ERROR - oe_test_targetcli_04.sh line 126
+oe_test_targetcli_04.sh: line 127: targetcli: command not found
+Fri Mar 17 23:41:54 2023 - ERROR - oe_test_targetcli_04.sh line 128
+oe_test_targetcli_04.sh: line 129: targetcli: command not found
+oe_test_targetcli_04.sh: line 130: targetcli: command not found
+Fri Mar 17 23:41:54 2023 - ERROR - oe_test_targetcli_04.sh line 131
+oe_test_targetcli_04.sh: line 132: targetcli: command not found
+Fri Mar 17 23:41:55 2023 - ERROR - oe_test_targetcli_04.sh line 133
+oe_test_targetcli_04.sh: line 134: targetcli: command not found
+Fri Mar 17 23:41:56 2023 - ERROR - oe_test_targetcli_04.sh line 135
+grep: /etc/target/saveconfig.json: No such file or directory
+Fri Mar 17 23:41:56 2023 - ERROR - oe_test_targetcli_04.sh line 137
+oe_test_targetcli_04.sh: line 138: targetcli: command not found
+oe_test_targetcli_04.sh: line 139: targetcli: command not found
+oe_test_targetcli_04.sh: line 141: targetcli: command not found
+Fri Mar 17 23:41:57 2023 - ERROR - oe_test_targetcli_04.sh line 142
+oe_test_targetcli_04.sh: line 143: targetcli: command not found
+Fri Mar 17 23:41:57 2023 - ERROR - oe_test_targetcli_04.sh line 144
+oe_test_targetcli_04.sh: line 145: targetcli: command not found
+Fri Mar 17 23:41:58 2023 - ERROR - oe_test_targetcli_04.sh line 146
+oe_test_targetcli_04.sh: line 147: targetcli: command not found
+Fri Mar 17 23:41:59 2023 - ERROR - oe_test_targetcli_04.sh line 148
+Fri Mar 17 23:41:59 2023 - INFO  - End of the test.
+Fri Mar 17 23:42:00 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:42:00 2023 - INFO  - Start to restore the test environment.
+oe_test_targetcli_04.sh: line 155: targetcli: command not found
+Fri Mar 17 23:42:01 2023 - WARN  - no thing to do.
+Fri Mar 17 23:42:01 2023 - INFO  - Finish restoring the test environment.

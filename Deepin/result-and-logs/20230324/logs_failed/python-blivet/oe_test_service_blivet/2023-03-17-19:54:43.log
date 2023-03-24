@@ -1,0 +1,44 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:54:46 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 19:54:50 2023 - ERROR - pkgs:(python3-blivet) not found
+Fri Mar 17 19:54:51 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 19:54:51 2023 - INFO  - Start testing...
+Failed to restart blivet.service: Unit blivet.service not found.
+Fri Mar 17 19:54:52 2023 - ERROR - blivet.service restart failed
+Fri Mar 17 19:54:53 2023 - ERROR - ../common/common_lib.sh line 34
+Unit blivet.service could not be found.
+Fri Mar 17 19:54:59 2023 - ERROR - blivet.service restart failed
+Fri Mar 17 19:55:00 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop blivet.service: Unit blivet.service not loaded.
+Fri Mar 17 19:55:00 2023 - ERROR - blivet.service stop failed
+Fri Mar 17 19:55:01 2023 - ERROR - ../common/common_lib.sh line 39
+Unit blivet.service could not be found.
+Fri Mar 17 19:55:07 2023 - ERROR - blivet.service stop failed
+Fri Mar 17 19:55:08 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start blivet.service: Unit blivet.service not found.
+Fri Mar 17 19:55:08 2023 - ERROR - blivet.service start failed
+Fri Mar 17 19:55:09 2023 - ERROR - ../common/common_lib.sh line 44
+Unit blivet.service could not be found.
+Fri Mar 17 19:55:15 2023 - ERROR - blivet.service start failed
+Fri Mar 17 19:55:16 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for blivet.service: No such file or directory
+Fri Mar 17 19:55:16 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start blivet.service: Unit blivet.service not found.
+Fri Mar 17 19:55:17 2023 - ERROR - Job type reload is not applicable for unit blivet.service
+Fri Mar 17 19:55:18 2023 - ERROR - ../common/common_lib.sh line 91
+Unit blivet.service could not be found.
+Unit blivet.service could not be found.
+Fri Mar 17 19:55:19 2023 - INFO  - Finish test!
+Fri Mar 17 19:55:19 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:55:20 2023 - INFO  - start environment cleanup.
+Failed to stop blivet.service: Unit blivet.service not loaded.
+Fri Mar 17 19:55:20 2023 - WARN  - no thing to do.
+Fri Mar 17 19:55:21 2023 - INFO  - Finish environment cleanup!

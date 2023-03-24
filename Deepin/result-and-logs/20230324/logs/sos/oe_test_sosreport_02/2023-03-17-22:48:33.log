@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:48:35 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:48:39 2023 - ERROR - pkgs:(sos) not found
+Fri Mar 17 22:48:39 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 22:48:40 2023 - INFO  - Start to run test.
+spawn sosreport --debug
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport --debug"
+Fri Mar 17 22:48:41 2023 - ERROR - oe_test_sosreport_02.sh line 44
+spawn sosreport --desc test description content
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport --desc "test description content" "
+Fri Mar 17 22:48:42 2023 - ERROR - oe_test_sosreport_02.sh line 54
+spawn sosreport --experimental
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport --experimental"
+Fri Mar 17 22:48:43 2023 - ERROR - oe_test_sosreport_02.sh line 64
+spawn sosreport -e dnf,rpm,selinux,dovecot
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport -e dnf,rpm,selinux,dovecot"
+Fri Mar 17 22:48:44 2023 - ERROR - oe_test_sosreport_02.sh line 74
+oe_test_sosreport_02.sh: line 75: sosreport: command not found
+Fri Mar 17 22:48:44 2023 - ERROR - oe_test_sosreport_02.sh line 76
+spawn sosreport -k dnf.history
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport -k dnf.history"
+Fri Mar 17 22:48:45 2023 - ERROR - oe_test_sosreport_02.sh line 86
+spawn sosreport --label test-label
+couldn't execute "sosreport": no such file or directory
+    while executing
+"spawn sosreport --label test-label"
+Fri Mar 17 22:48:46 2023 - ERROR - oe_test_sosreport_02.sh line 96
+oe_test_sosreport_02.sh: line 97: sosreport: command not found
+Fri Mar 17 22:48:47 2023 - ERROR - oe_test_sosreport_02.sh line 98
+Fri Mar 17 22:48:47 2023 - INFO  - End of the test.
+Fri Mar 17 22:48:48 2023 - ERROR - failed to execute the case.
+Fri Mar 17 22:48:48 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 22:48:49 2023 - WARN  - no thing to do.
+Fri Mar 17 22:48:49 2023 - INFO  - Finish restoring the test environment.

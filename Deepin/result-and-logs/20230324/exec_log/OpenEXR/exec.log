@@ -1,0 +1,28 @@
+Fri Mar 17 09:25:45 2023 - INFO  - start to run testcase:oe_test_OpenEXR_cmd.
+Fri Mar 17 09:26:10 2023 - ERROR - The case exit by code 12.
+Fri Mar 17 09:26:21 2023 - INFO  - End to run testcase:oe_test_OpenEXR_cmd.
+Fri Mar 17 09:26:21 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:26:25 2023 - INFO  - start to run testcase:oe_test_OpenEXR_exrenvmap_exrmakepreview.
+Fri Mar 17 09:26:48 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 09:26:59 2023 - INFO  - End to run testcase:oe_test_OpenEXR_exrenvmap_exrmakepreview.
+Fri Mar 17 09:26:59 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:27:03 2023 - INFO  - start to run testcase:oe_test_OpenEXR_exrenvmap.
+Fri Mar 17 09:27:24 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 09:27:35 2023 - INFO  - End to run testcase:oe_test_OpenEXR_exrenvmap.
+Fri Mar 17 09:27:35 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:27:39 2023 - INFO  - start to run testcase:oe_test_OpenEXR_exrmaketiled.
+Fri Mar 17 09:28:01 2023 - ERROR - The case exit by code 11.
+Fri Mar 17 09:28:12 2023 - INFO  - End to run testcase:oe_test_OpenEXR_exrmaketiled.
+Fri Mar 17 09:28:12 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:28:16 2023 - INFO  - start to run testcase:oe_test_OpenEXR_exrstdattr_01.
+Fri Mar 17 09:28:37 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 09:28:48 2023 - INFO  - End to run testcase:oe_test_OpenEXR_exrstdattr_01.
+Fri Mar 17 09:28:48 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:28:52 2023 - INFO  - start to run testcase:oe_test_OpenEXR_exrstdattr_02.
+Fri Mar 17 09:29:13 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 09:29:24 2023 - INFO  - End to run testcase:oe_test_OpenEXR_exrstdattr_02.
+Fri Mar 17 09:29:24 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 09:29:27 2023 - INFO  - start to run testcase:oe_test_OpenEXR_exrstdattr_03.
+Fri Mar 17 09:29:45 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 09:29:55 2023 - INFO  - End to run testcase:oe_test_OpenEXR_exrstdattr_03.
+Fri Mar 17 09:29:56 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

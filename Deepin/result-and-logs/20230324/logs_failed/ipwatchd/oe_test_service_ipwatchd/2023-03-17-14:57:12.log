@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:57:15 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 14:57:20 2023 - INFO  - pkgs:(ipwatchd) is already installed
+Fri Mar 17 14:57:21 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 14:57:21 2023 - INFO  - Start testing...
+     Active: active (running) since Fri 2023-03-17 14:58:50 UTC; 5s ago
+     Active: inactive (dead) since Fri 2023-03-17 14:58:57 UTC; 5s ago
+     Active: active (running) since Fri 2023-03-17 14:59:04 UTC; 5s ago
+ipwatchd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install is-enabled ipwatchd
+.
+./oe_test_service_ipwatchd.sh
+Fri Mar 17 14:59:28 2023 - ERROR - ipwatchd.service disable failed
+Fri Mar 17 14:59:29 2023 - ERROR - ../common/common_lib.sh line 67
+ipwatchd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable ipwatchd
+.
+./oe_test_service_ipwatchd.sh
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to reload ipwatchd.service: Job type reload is not applicable for unit ipwatchd.service.
+     Active: active (running) since Fri 2023-03-17 14:59:04 UTC; 41s ago
+Fri Mar 17 14:59:46 2023 - INFO  - Finish test!
+Fri Mar 17 14:59:47 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:59:47 2023 - INFO  - start environment cleanup.
+Fri Mar 17 14:59:48 2023 - WARN  - no thing to do.
+Fri Mar 17 14:59:48 2023 - INFO  - Finish environment cleanup!

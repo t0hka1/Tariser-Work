@@ -1,0 +1,18 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:33:21 2023 - INFO  - Start to run test.
+Fri Mar 17 18:33:26 2023 - ERROR - oe_test_openssl_empty_private_key.sh line 27
+writing RSA key
+-----BEGIN PUBLIC KEY-----
+The command rsautl was deprecated in version 3.0. Use 'pkeyutl' instead.
+Fri Mar 17 18:33:27 2023 - ERROR - oe_test_openssl_empty_private_key.sh line 36
+Fri Mar 17 18:33:28 2023 - INFO  - End to run test.
+Fri Mar 17 18:33:28 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:33:29 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 18:33:30 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,26 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 10 11:23:16 2023 - INFO  - Start environmental preparation.
+Job for fstrim.service failed because the control process exited with error code.
+See "systemctl status fstrim.service" and "journalctl -xeu fstrim.service" for details.
+Fri Mar 10 11:23:18 2023 - INFO  - End of environmental preparation!
+Fri Mar 10 11:23:18 2023 - INFO  - Start testing...
+     Active: failed (Result: exit-code) since Fri 2023-03-10 11:23:17 UTC; 1s ago
+Fri Mar 10 11:23:19 2023 - ERROR - There is an error for the status of fstrim.service
+Fri Mar 10 11:23:20 2023 - ERROR - ../common/common_lib.sh line 54
+Fri Mar 10 11:23:21 2023 - INFO  - The unit files have no installation config,This means they are not meant to be enabled using systemctl.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 10 11:23:17 deepin-rv-builder-2 fstrim[542]: fstrim: /: FITRIM ioctl failed: Structure needs cleaning
+Mar 10 11:23:17 deepin-rv-builder-2 systemd[1]: fstrim.service: Failed with result 'exit-code'.
+Mar 10 11:23:17 deepin-rv-builder-2 systemd[1]: Failed to start Discard unused blocks on filesystems from /etc/fstab.
+Fri Mar 10 11:23:21 2023 - ERROR - There is an error message for the log of fstrim.service
+Fri Mar 10 11:23:22 2023 - ERROR - ../common/common_lib.sh line 57
+Fri Mar 10 11:23:22 2023 - INFO  - Finish test!
+Fri Mar 10 11:23:23 2023 - ERROR - failed to execute the case.
+Fri Mar 10 11:23:23 2023 - INFO  - oe_test_service_fstrim.sh post_test

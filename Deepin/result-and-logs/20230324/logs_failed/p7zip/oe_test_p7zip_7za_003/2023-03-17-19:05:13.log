@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:05:15 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 19:05:19 2023 - INFO  - pkgs:(p7zip tar) is already installed
+file1
+file2
+tmp_empty_dir/
+Fri Mar 17 19:05:20 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 19:05:21 2023 - INFO  - Start testing...
+oe_test_p7zip_7za_003.sh: line 46: 7za: command not found
+Fri Mar 17 19:05:21 2023 - ERROR - test failed with -slt
+Fri Mar 17 19:05:22 2023 - ERROR - oe_test_p7zip_7za_003.sh line 47
+oe_test_p7zip_7za_003.sh: line 50: 7za: command not found
+Fri Mar 17 19:05:22 2023 - ERROR - test failed with -snh
+Fri Mar 17 19:05:23 2023 - ERROR - oe_test_p7zip_7za_003.sh line 51
+oe_test_p7zip_7za_003.sh: line 53: 7za: command not found
+Fri Mar 17 19:05:23 2023 - ERROR - test failed with -snl
+Fri Mar 17 19:05:24 2023 - ERROR - oe_test_p7zip_7za_003.sh line 54
+oe_test_p7zip_7za_003.sh: line 56: 7za: command not found
+Fri Mar 17 19:05:24 2023 - ERROR - test failed with -so
+Fri Mar 17 19:05:25 2023 - ERROR - oe_test_p7zip_7za_003.sh line 57
+oe_test_p7zip_7za_003.sh: line 59: 7za: command not found
+oe_test_p7zip_7za_003.sh: line 62: 7za: command not found
+Fri Mar 17 19:05:26 2023 - ERROR - test failed with -spe
+Fri Mar 17 19:05:26 2023 - ERROR - oe_test_p7zip_7za_003.sh line 63
+oe_test_p7zip_7za_003.sh: line 65: 7za: command not found
+Fri Mar 17 19:05:27 2023 - ERROR - test failed with -spf
+Fri Mar 17 19:05:27 2023 - ERROR - oe_test_p7zip_7za_003.sh line 66
+oe_test_p7zip_7za_003.sh: line 68: 7za: command not found
+Fri Mar 17 19:05:28 2023 - ERROR - test failed with -ssc
+Fri Mar 17 19:05:28 2023 - ERROR - oe_test_p7zip_7za_003.sh line 69
+Fri Mar 17 19:05:29 2023 - INFO  - Finish test!
+Fri Mar 17 19:05:29 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:05:30 2023 - INFO  - start environment cleanup.
+Fri Mar 17 19:05:30 2023 - WARN  - no thing to do.
+Fri Mar 17 19:05:31 2023 - INFO  - Finish environment cleanup!

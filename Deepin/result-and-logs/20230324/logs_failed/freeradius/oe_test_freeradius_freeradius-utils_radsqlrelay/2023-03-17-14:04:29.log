@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:04:31 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 14:04:35 2023 - ERROR - pkgs:(freeradius-mysql) not found
+Failed to start mysqld.service: Unit mysqld.service not found.
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 32: mysqladmin: command not found
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 33: mysql: command not found
+sed: can't read /etc/raddb/mods-available/sql: No such file or directory
+sed: can't read /etc/raddb/mods-available/sql: No such file or directory
+sed: can't read /etc/raddb/mods-available/sql: No such file or directory
+sed: can't read /etc/raddb/mods-available/sql: No such file or directory
+sed: can't read /etc/raddb/mods-available/sql: No such file or directory
+sed: can't read /etc/raddb/mods-available/sql: No such file or directory
+ln: failed to create symbolic link '/etc/raddb/mods-enabled/': No such file or directory
+Fri Mar 17 14:04:38 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 14:04:39 2023 - INFO  - Start to run test.
+Fri Mar 17 14:04:39 2023 - ERROR - radsqlrelay -? execution failed.
+Fri Mar 17 14:04:40 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsqlrelay.sh line 53
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 54: radsqlrelay: command not found
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 55: mysql: command not found
+Fri Mar 17 14:04:41 2023 - ERROR - radsqlrelay -1 -d -b -h -p -u execution failed.
+Fri Mar 17 14:04:41 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsqlrelay.sh line 58
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 60: mysql: command not found
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 64: radsqlrelay: command not found
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 65: mysql: command not found
+Fri Mar 17 14:04:42 2023 - ERROR - radsqlrelay -f execution failed.
+Fri Mar 17 14:04:42 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsqlrelay.sh line 68
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 69: mysql: command not found
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 73: radsqlrelay: command not found
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 74: mysql: command not found
+Fri Mar 17 14:04:43 2023 - ERROR - radsqlrelay -P execution failed.
+Fri Mar 17 14:04:43 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsqlrelay.sh line 77
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 78: mysql: command not found
+oe_test_freeradius_freeradius-utils_radsqlrelay.sh: line 82: radsqlrelay: command not found
+Fri Mar 17 14:04:44 2023 - ERROR - radsqlrelay -x execution failed.
+Fri Mar 17 14:04:44 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsqlrelay.sh line 83
+Fri Mar 17 14:04:45 2023 - INFO  - End to run test.
+Fri Mar 17 14:04:45 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:04:46 2023 - INFO  - Start to restore the test environment.
+Failed to stop mysqld.service: Unit mysqld.service not loaded.
+Fri Mar 17 14:04:49 2023 - WARN  - no thing to do.
+Fri Mar 17 14:04:50 2023 - INFO  - End to restore the test environment.

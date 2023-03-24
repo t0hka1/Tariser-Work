@@ -1,0 +1,66 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:57:54 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 11:57:59 2023 - ERROR - pkgs:(cppcheck) not found
+Fri Mar 17 11:58:00 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 11:58:01 2023 - INFO  - Start to run test.
+oe_test_cppcheck.sh: line 42: cppcheck: command not found
+Fri Mar 17 11:58:01 2023 - ERROR - oe_test_cppcheck.sh line 43
+oe_test_cppcheck.sh: line 44: cppcheck: command not found
+Fri Mar 17 11:58:02 2023 - ERROR - oe_test_cppcheck.sh line 45
+oe_test_cppcheck.sh: line 46: cppcheck: command not found
+Fri Mar 17 11:58:02 2023 - ERROR - oe_test_cppcheck.sh line 47
+oe_test_cppcheck.sh: line 48: cppcheck: command not found
+Fri Mar 17 11:58:03 2023 - ERROR - oe_test_cppcheck.sh line 49
+oe_test_cppcheck.sh: line 50: cppcheck: command not found
+Fri Mar 17 11:58:04 2023 - ERROR - oe_test_cppcheck.sh line 53
+Fri Mar 17 11:58:04 2023 - ERROR - oe_test_cppcheck.sh line 55
+Fri Mar 17 11:58:05 2023 - ERROR - oe_test_cppcheck.sh line 57
+Fri Mar 17 11:58:05 2023 - ERROR - oe_test_cppcheck.sh line 59
+oe_test_cppcheck.sh: line 60: cppcheck: command not found
+Fri Mar 17 11:58:06 2023 - ERROR - oe_test_cppcheck.sh line 61
+oe_test_cppcheck.sh: line 62: cppcheck: command not found
+Fri Mar 17 11:58:07 2023 - ERROR - oe_test_cppcheck.sh line 63
+oe_test_cppcheck.sh: line 64: cppcheck: command not found
+Fri Mar 17 11:58:07 2023 - ERROR - oe_test_cppcheck.sh line 65
+Fri Mar 17 11:58:08 2023 - ERROR - oe_test_cppcheck.sh line 67
+oe_test_cppcheck.sh: line 68: cppcheck: command not found
+Fri Mar 17 11:58:08 2023 - ERROR - oe_test_cppcheck.sh line 69
+oe_test_cppcheck.sh: line 70: cppcheck: command not found
+Fri Mar 17 11:58:09 2023 - ERROR - oe_test_cppcheck.sh line 71
+oe_test_cppcheck.sh: line 72: cppcheck: command not found
+Fri Mar 17 11:58:09 2023 - ERROR - oe_test_cppcheck.sh line 73
+oe_test_cppcheck.sh: line 74: cppcheck: command not found
+Fri Mar 17 11:58:10 2023 - ERROR - oe_test_cppcheck.sh line 75
+oe_test_cppcheck.sh: line 76: cppcheck: command not found
+Fri Mar 17 11:58:11 2023 - ERROR - oe_test_cppcheck.sh line 77
+Fri Mar 17 11:58:11 2023 - ERROR - oe_test_cppcheck.sh line 79
+Fri Mar 17 11:58:12 2023 - ERROR - oe_test_cppcheck.sh line 81
+Fri Mar 17 11:58:12 2023 - ERROR - oe_test_cppcheck.sh line 83
+Fri Mar 17 11:58:13 2023 - ERROR - oe_test_cppcheck.sh line 85
+oe_test_cppcheck.sh: line 86: cppcheck: command not found
+Fri Mar 17 11:58:14 2023 - ERROR - oe_test_cppcheck.sh line 87
+Fri Mar 17 11:58:14 2023 - ERROR - oe_test_cppcheck.sh line 89
+Fri Mar 17 11:58:15 2023 - ERROR - oe_test_cppcheck.sh line 91
+Fri Mar 17 11:58:16 2023 - ERROR - oe_test_cppcheck.sh line 93
+Fri Mar 17 11:58:16 2023 - ERROR - oe_test_cppcheck.sh line 95
+oe_test_cppcheck.sh: line 96: cppcheck: command not found
+Fri Mar 17 11:58:17 2023 - ERROR - oe_test_cppcheck.sh line 97
+oe_test_cppcheck.sh: line 99: cppcheck: command not found
+oe_test_cppcheck.sh: line 105: cppcheck: command not found
+Fri Mar 17 11:58:18 2023 - ERROR - oe_test_cppcheck.sh line 106
+oe_test_cppcheck.sh: line 107: cppcheck: command not found
+Fri Mar 17 11:58:18 2023 - ERROR - oe_test_cppcheck.sh line 108
+oe_test_cppcheck.sh: line 109: cppcheck: command not found
+Fri Mar 17 11:58:19 2023 - ERROR - oe_test_cppcheck.sh line 110
+Fri Mar 17 11:58:19 2023 - INFO  - End of the test.
+Fri Mar 17 11:58:20 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:58:20 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:58:21 2023 - WARN  - no thing to do.
+Fri Mar 17 11:58:21 2023 - INFO  - Finish restoring the test environment.

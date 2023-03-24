@@ -1,0 +1,59 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:28:58 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:29:01 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_unfreeze_destroy.sh: line 29: rpm: command not found
+Fri Mar 17 16:29:02 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:29:02 2023 - INFO  - Start to run test.
+oe_test_lxc_unfreeze_destroy.sh: line 35: lxc-create: command not found
+Fri Mar 17 16:29:03 2023 - ERROR - Failed to set up container.
+Fri Mar 17 16:29:03 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 36
+oe_test_lxc_unfreeze_destroy.sh: line 37: lxc-start: command not found
+Fri Mar 17 16:29:04 2023 - ERROR - Check lxc-unfreeze --help failed.
+Fri Mar 17 16:29:05 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 39
+Fri Mar 17 16:29:05 2023 - ERROR - Check lxc-unfreeze --usage failed.
+Fri Mar 17 16:29:06 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 41
+oe_test_lxc_unfreeze_destroy.sh: line 42: lxc-unfreeze: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:29:06 2023 - ERROR - Check lxc-unfreeze --version failed.
+Fri Mar 17 16:29:07 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 43
+oe_test_lxc_unfreeze_destroy.sh: line 44: lxc-freeze: command not found
+Fri Mar 17 16:29:07 2023 - ERROR - Check lxc-freeze failed.
+Fri Mar 17 16:29:08 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 45
+oe_test_lxc_unfreeze_destroy.sh: line 46: lxc-info: command not found
+Fri Mar 17 16:29:08 2023 - ERROR - Check lxc-info failed.
+Fri Mar 17 16:29:09 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 47
+oe_test_lxc_unfreeze_destroy.sh: line 48: lxc-unfreeze: command not found
+Fri Mar 17 16:29:09 2023 - ERROR - Check lxc-unfreeze failed.
+Fri Mar 17 16:29:10 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 49
+oe_test_lxc_unfreeze_destroy.sh: line 50: lxc-info: command not found
+Fri Mar 17 16:29:10 2023 - ERROR - Check lxc-info failed.
+Fri Mar 17 16:29:11 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 51
+Fri Mar 17 16:29:12 2023 - ERROR - Check lxc-destroy --help failed.
+Fri Mar 17 16:29:12 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 54
+Fri Mar 17 16:29:13 2023 - ERROR - Check lxc-destroy --usage failed.
+Fri Mar 17 16:29:13 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 56
+oe_test_lxc_unfreeze_destroy.sh: line 57: lxc-destroy: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:29:14 2023 - ERROR - Check lxc-destroy --version failed.
+Fri Mar 17 16:29:14 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 58
+oe_test_lxc_unfreeze_destroy.sh: line 59: lxc-stop: command not found
+Fri Mar 17 16:29:15 2023 - ERROR - Check lxc-stop failed.
+Fri Mar 17 16:29:15 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 60
+oe_test_lxc_unfreeze_destroy.sh: line 61: lxc-destroy: command not found
+Fri Mar 17 16:29:16 2023 - ERROR - Check lxc-destroy -n failed.
+Fri Mar 17 16:29:16 2023 - ERROR - oe_test_lxc_unfreeze_destroy.sh line 62
+oe_test_lxc_unfreeze_destroy.sh: line 63: lxc-ls: command not found
+Fri Mar 17 16:29:17 2023 - INFO  - End to run test.
+Fri Mar 17 16:29:17 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:29:18 2023 - INFO  - Start to restore the tet environment.
+Fri Mar 17 16:29:18 2023 - WARN  - no thing to do.
+Fri Mar 17 16:29:19 2023 - INFO  - End to restore the tet environment.

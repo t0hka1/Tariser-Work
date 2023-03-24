@@ -1,0 +1,37 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:25:43 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:25:47 2023 - ERROR - pkgs:(kernel-tools) not found
+Fri Mar 17 15:25:48 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:25:49 2023 - INFO  - Start to run test.
+oe_test_kernel_cmd_01.sh: line 33: cpupower: command not found
+Fri Mar 17 15:25:49 2023 - ERROR - oe_test_kernel_cmd_01.sh line 34
+oe_test_kernel_cmd_01.sh: line 35: cpupower: command not found
+Fri Mar 17 15:25:50 2023 - ERROR - oe_test_kernel_cmd_01.sh line 36
+oe_test_kernel_cmd_01.sh: line 37: cpupower: command not found
+Fri Mar 17 15:25:51 2023 - ERROR - oe_test_kernel_cmd_01.sh line 38
+oe_test_kernel_cmd_01.sh: line 40: cpupower: command not found
+oe_test_kernel_cmd_01.sh: line 41: cpupower: command not found
+Fri Mar 17 15:25:52 2023 - ERROR - oe_test_kernel_cmd_01.sh line 42
+oe_test_kernel_cmd_01.sh: line 43: cpupower: command not found
+Fri Mar 17 15:25:52 2023 - ERROR - oe_test_kernel_cmd_01.sh line 44
+oe_test_kernel_cmd_01.sh: line 45: cpupower: command not found
+oe_test_kernel_cmd_01.sh: line 47: cpupower: command not found
+Fri Mar 17 15:25:53 2023 - ERROR - oe_test_kernel_cmd_01.sh line 48
+oe_test_kernel_cmd_01.sh: line 49: cpupower: command not found
+Fri Mar 17 15:25:53 2023 - ERROR - oe_test_kernel_cmd_01.sh line 50
+oe_test_kernel_cmd_01.sh: line 51: cpupower: command not found
+Fri Mar 17 15:25:54 2023 - ERROR - oe_test_kernel_cmd_01.sh line 52
+Fri Mar 17 15:25:54 2023 - ERROR - oe_test_kernel_cmd_01.sh line 54
+Fri Mar 17 15:25:55 2023 - ERROR - oe_test_kernel_cmd_01.sh line 56
+Fri Mar 17 15:25:56 2023 - INFO  - End of the test.
+Fri Mar 17 15:25:56 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:25:57 2023 - INFO  - Start to restore the tet environment.
+Fri Mar 17 15:25:57 2023 - WARN  - no thing to do.
+Fri Mar 17 15:25:58 2023 - INFO  - Finish to restore the tet environment.

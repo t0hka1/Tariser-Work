@@ -1,0 +1,15 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:55:59 2023 - INFO  - Start executing testcase.
+/usr/bin/less cap_dac_override=eip
+/usr/bin/less cap_dac_read_search=eip
+Fri Mar 17 15:56:00 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 15:56:01 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 15:56:01 2023 - INFO  - start environment cleanup.
+Fri Mar 17 15:56:02 2023 - INFO  - Finish environment cleanup!

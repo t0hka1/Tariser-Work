@@ -1,0 +1,35 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:37:59 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:38:03 2023 - INFO  - pkgs:(vim) is already installed
+oe_test_dnf_assumeno_autoremove.sh: line 30: rpm: command not found
+Fri Mar 17 12:38:03 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:38:04 2023 - INFO  - Start to run test.
+Fri Mar 17 12:38:04 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 37
+oe_test_dnf_assumeno_autoremove.sh: line 38: rpm: command not found
+Fri Mar 17 12:38:05 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 39
+oe_test_dnf_assumeno_autoremove.sh: line 40: dnf: command not found
+Fri Mar 17 12:38:06 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 41
+oe_test_dnf_assumeno_autoremove.sh: line 42: rpm: command not found
+oe_test_dnf_assumeno_autoremove.sh: line 44: dnf: command not found
+Fri Mar 17 12:38:07 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 45
+oe_test_dnf_assumeno_autoremove.sh: line 46: dnf: command not found
+Fri Mar 17 12:38:07 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 47
+oe_test_dnf_assumeno_autoremove.sh: line 48: dnf: command not found
+Fri Mar 17 12:38:08 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 49
+oe_test_dnf_assumeno_autoremove.sh: line 50: dnf: command not found
+Fri Mar 17 12:38:08 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 51
+oe_test_dnf_assumeno_autoremove.sh: line 52: dnf: command not found
+Fri Mar 17 12:38:09 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 53
+Fri Mar 17 12:38:10 2023 - ERROR - oe_test_dnf_assumeno_autoremove.sh line 55
+Fri Mar 17 12:38:10 2023 - INFO  - End of the test.
+Fri Mar 17 12:38:11 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:38:11 2023 - INFO  - Start to restore the test environment.
+oe_test_dnf_assumeno_autoremove.sh: line 63: dnf: command not found
+Fri Mar 17 12:38:16 2023 - INFO  - Finish restoring the test environment.

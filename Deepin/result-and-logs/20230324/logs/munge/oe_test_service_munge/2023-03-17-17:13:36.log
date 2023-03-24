@@ -1,0 +1,27 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:13:39 2023 - INFO  - Start environmental preparation.
+oe_test_service_munge.sh: line 30: create-munge-key: command not found
+Fri Mar 17 17:14:21 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 17:14:22 2023 - INFO  - Start testing...
+     Active: active (running) since Fri 2023-03-17 17:14:22 UTC; 5s ago
+     Active: inactive (dead) since Fri 2023-03-17 17:14:29 UTC; 5s ago
+     Active: active (running) since Fri 2023-03-17 17:14:35 UTC; 5s ago
+find: ‘/etc/systemd/system/multi-user.target.wants/munge.service’: No such file or directory
+Synchronizing state of munge.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable munge
+Created symlink /etc/systemd/system/multi-user.target.wants/munge.service → /lib/systemd/system/munge.service.
+/etc/systemd/system/multi-user.target.wants/munge.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to reload munge.service: Job type reload is not applicable for unit munge.service.
+     Active: active (running) since Fri 2023-03-17 17:14:35 UTC; 40s ago
+Fri Mar 17 17:15:16 2023 - INFO  - Finish test!
+Fri Mar 17 17:15:16 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 17:15:17 2023 - INFO  - start environment cleanup.
+Fri Mar 17 17:15:42 2023 - INFO  - Finish environment cleanup!

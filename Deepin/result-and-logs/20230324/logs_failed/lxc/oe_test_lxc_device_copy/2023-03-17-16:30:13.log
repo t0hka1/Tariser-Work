@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:30:15 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:30:19 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_device_copy.sh: line 29: rpm: command not found
+Fri Mar 17 16:30:20 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:30:20 2023 - INFO  - Start to run test.
+oe_test_lxc_device_copy.sh: line 35: lxc-create: command not found
+Fri Mar 17 16:30:21 2023 - ERROR - Failed to set up container.
+Fri Mar 17 16:30:21 2023 - ERROR - oe_test_lxc_device_copy.sh line 36
+Fri Mar 17 16:30:22 2023 - ERROR - Check lxc-copy --help failed.
+Fri Mar 17 16:30:22 2023 - ERROR - oe_test_lxc_device_copy.sh line 38
+Fri Mar 17 16:30:23 2023 - ERROR - Check lxc-copy --usage failed.
+Fri Mar 17 16:30:23 2023 - ERROR - oe_test_lxc_device_copy.sh line 40
+oe_test_lxc_device_copy.sh: line 41: lxc-copy: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:30:24 2023 - ERROR - Check lxc-copy --version failed.
+Fri Mar 17 16:30:25 2023 - ERROR - oe_test_lxc_device_copy.sh line 42
+oe_test_lxc_device_copy.sh: line 43: lxc-copy: command not found
+Fri Mar 17 16:30:25 2023 - ERROR - Check lxc-copy -s failed.
+Fri Mar 17 16:30:26 2023 - ERROR - oe_test_lxc_device_copy.sh line 44
+oe_test_lxc_device_copy.sh: line 45: lxc-ls: command not found
+Fri Mar 17 16:30:26 2023 - ERROR - Check lxc-ls failed.
+Fri Mar 17 16:30:27 2023 - ERROR - oe_test_lxc_device_copy.sh line 46
+oe_test_lxc_device_copy.sh: line 47: lxc-start: command not found
+Fri Mar 17 16:30:27 2023 - ERROR - Failed to start container.
+Fri Mar 17 16:30:28 2023 - ERROR - oe_test_lxc_device_copy.sh line 48
+Fri Mar 17 16:30:28 2023 - ERROR - Check lxc-device --help failed.
+Fri Mar 17 16:30:29 2023 - ERROR - oe_test_lxc_device_copy.sh line 50
+Fri Mar 17 16:30:29 2023 - ERROR - Check lxc-device --usage failed.
+Fri Mar 17 16:30:30 2023 - ERROR - oe_test_lxc_device_copy.sh line 52
+oe_test_lxc_device_copy.sh: line 53: lxc-device: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:30:30 2023 - ERROR - Check lxc-device --version failed.
+Fri Mar 17 16:30:31 2023 - ERROR - oe_test_lxc_device_copy.sh line 54
+Fri Mar 17 16:30:31 2023 - INFO  - End to run test.
+Fri Mar 17 16:30:32 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:30:32 2023 - INFO  - Start to restore the tet environment.
+oe_test_lxc_device_copy.sh: line 60: lxc-stop: command not found
+oe_test_lxc_device_copy.sh: line 61: lxc-destroy: command not found
+oe_test_lxc_device_copy.sh: line 62: lxc-destroy: command not found
+Fri Mar 17 16:30:33 2023 - WARN  - no thing to do.
+Fri Mar 17 16:30:33 2023 - INFO  - End to restore the tet environment.

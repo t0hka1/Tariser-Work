@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:38:09 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 12:38:45 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 12:38:46 2023 - INFO  - Start testing...
+Job for dnsmasq.service failed because the control process exited with error code.
+See "systemctl status dnsmasq.service" and "journalctl -xeu dnsmasq.service" for details.
+Fri Mar 17 12:38:47 2023 - ERROR - dnsmasq.service restart failed
+Fri Mar 17 12:38:48 2023 - ERROR - ../common/common_lib.sh line 34
+Fri Mar 17 12:38:54 2023 - ERROR - dnsmasq.service restart failed
+Fri Mar 17 12:38:55 2023 - ERROR - ../common/common_lib.sh line 37
+Fri Mar 17 12:39:02 2023 - ERROR - dnsmasq.service stop failed
+Fri Mar 17 12:39:02 2023 - ERROR - ../common/common_lib.sh line 42
+Job for dnsmasq.service failed because the control process exited with error code.
+See "systemctl status dnsmasq.service" and "journalctl -xeu dnsmasq.service" for details.
+Fri Mar 17 12:39:04 2023 - ERROR - dnsmasq.service start failed
+Fri Mar 17 12:39:04 2023 - ERROR - ../common/common_lib.sh line 44
+Fri Mar 17 12:39:11 2023 - ERROR - dnsmasq.service start failed
+Fri Mar 17 12:39:11 2023 - ERROR - ../common/common_lib.sh line 47
+find: ‘/etc/systemd/system/multi-user.target.wants/dnsmasq.service’: No such file or directory
+Synchronizing state of dnsmasq.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable dnsmasq
+Created symlink /etc/systemd/system/multi-user.target.wants/dnsmasq.service → /lib/systemd/system/dnsmasq.service.
+/etc/systemd/system/multi-user.target.wants/dnsmasq.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 17 12:38:47 deepin-rv-builder-2 dnsmasq[660]: dnsmasq: failed to create listening socket for port 53: Address already in use
+Mar 17 12:38:47 deepin-rv-builder-2 dnsmasq[660]: failed to create listening socket for port 53: Address already in use
+Mar 17 12:38:47 deepin-rv-builder-2 dnsmasq[660]: FAILED to start up
+Mar 17 12:38:47 deepin-rv-builder-2 systemd[1]: dnsmasq.service: Failed with result 'exit-code'.
+Mar 17 12:38:47 deepin-rv-builder-2 systemd[1]: Failed to start dnsmasq - A lightweight DHCP and caching DNS server.
+Mar 17 12:39:03 deepin-rv-builder-2 dnsmasq[892]: dnsmasq: failed to create listening socket for port 53: Address already in use
+Mar 17 12:39:03 deepin-rv-builder-2 dnsmasq[892]: failed to create listening socket for port 53: Address already in use
+Mar 17 12:39:03 deepin-rv-builder-2 dnsmasq[892]: FAILED to start up
+Mar 17 12:39:03 deepin-rv-builder-2 systemd[1]: dnsmasq.service: Failed with result 'exit-code'.
+Mar 17 12:39:03 deepin-rv-builder-2 systemd[1]: Failed to start dnsmasq - A lightweight DHCP and caching DNS server.
+Fri Mar 17 12:39:47 2023 - ERROR - There is an error message for the log of dnsmasq.service
+Fri Mar 17 12:39:48 2023 - ERROR - ../common/common_lib.sh line 28
+Job for dnsmasq.service failed because the control process exited with error code.
+See "systemctl status dnsmasq.service" and "journalctl -xeu dnsmasq.service" for details.
+Fri Mar 17 12:39:50 2023 - ERROR - Job type reload is not applicable for unit dnsmasq.service
+Fri Mar 17 12:39:50 2023 - ERROR - ../common/common_lib.sh line 91
+Fri Mar 17 12:39:51 2023 - INFO  - Finish test!
+Fri Mar 17 12:39:52 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:39:52 2023 - INFO  - start environment cleanup.
+Fri Mar 17 12:40:12 2023 - INFO  - Finish environment cleanup!

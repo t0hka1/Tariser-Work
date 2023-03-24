@@ -1,0 +1,27 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:18:14 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 19:18:18 2023 - ERROR - pkgs:(php-dbg) not found
+Fri Mar 17 19:18:18 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 19:18:19 2023 - INFO  - Start to run test.
+spawn phpdbg --help
+couldn't execute "phpdbg": no such file or directory
+    while executing
+"spawn phpdbg --help"
+oe_test_phpdbg.sh: line 40: phpdbg: command not found
+Fri Mar 17 19:18:20 2023 - ERROR - oe_test_phpdbg.sh line 41
+spawn phpdbg
+couldn't execute "phpdbg": no such file or directory
+    while executing
+"spawn phpdbg"
+Fri Mar 17 19:18:21 2023 - INFO  - End of the test.
+Fri Mar 17 19:18:21 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:18:21 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 19:18:22 2023 - WARN  - no thing to do.
+Fri Mar 17 19:18:22 2023 - INFO  - Finish restoring the test environment.

@@ -1,0 +1,129 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:57:12 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 15:57:12 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:57:13 2023 - INFO  - Start executing testcase.
+New password: Retype new password: passwd: password updated successfully
+==> ./oe_test_acl_allow_change_nochange.sh <==
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    su - example -c 'chattr -i /home/example/test'
+    setcap -r /usr/bin/chattr
+    rm -rf /home/example/test
+    userdel -rf example
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_acl_allow_change_ownership.sh <==
+}
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    rm -rf /tmp/test
+    setcap -r /bin/chown
+    userdel -rf example
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_acl_bind_port.sh <==
+}
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    setcap -r /bin/ncat
+    userdel -rf example
+    APT_REMOVE nc
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_acl_ignore_dal_across.sh <==
+    LOG_INFO "Finish testcase execution."
+}
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    setcap -r /usr/bin/less
+    userdel -rf example
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_acl_manage_net.sh <==
+}
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    ifconfig $net_card:1 down
+    setcap -r /sbin/ifconfig
+    userdel -rf example
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_acl_ordinary_users_setgid.sh <==
+}
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    su - example -c 'chattr -i /home/example/test'
+    setcap -r /usr/bin/chattr
+    userdel -rf example
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_acl_send_kill_notbelong.sh <==
+    LOG_INFO "Finish testcase execution."
+}
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    setcap -r /bin/kill
+    userdel -rf example
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_acl_verwrite_previous_rules.sh <==
+    CHECK_RESULT $? 0 0 "Failed to get cap"
+    LOG_INFO "Finish testcase execution."
+}
+
+function post_test() {
+    LOG_INFO "start environment cleanup."
+    setcap -r /usr/bin/less
+    LOG_INFO "Finish environment cleanup!"
+}
+main "$@"
+
+==> ./oe_test_libcap.sh <==
+function post_test() {
+    LOG_INFO "Start to restore the test environment."
+
+    userdel $user
+    rm -r ./ping
+
+    LOG_INFO "End to restore the test environment."
+}
+
+main "$@"
+su: warning: cannot change directory to /home/example: No such file or directory
+kill: (1099): Operation not permitted
+su: warning: cannot change directory to /home/example: No such file or directory
+/root/GitRepo/mugen-debian-riscv/libs/locallibs/common_lib_python.sh: line 164:  1099 Killed                  nohup tail -f ./*
+Fri Mar 17 15:57:20 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 15:57:20 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 15:57:21 2023 - INFO  - start environment cleanup.
+userdel: example mail spool (/var/mail/example) not found
+userdel: example home directory (/home/example) not found
+Fri Mar 17 15:57:22 2023 - INFO  - Finish environment cleanup!

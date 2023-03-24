@@ -1,0 +1,88 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 02:54:33 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 02:54:38 2023 - INFO  - pkgs:(wireshark bc) is already installed
+Sat Mar 18 02:54:38 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 02:54:39 2023 - INFO  - Start to run test.
+Capturing on 'eth0'
+File: testfile6
+
+Packets: 2 
+Packets: 3 
+Packets: 5 
+Packets: 7 
+Packets: 10 
+Packets: 14 
+Packets: 16 
+Packets: 18 
+Packets: 19 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+Number of packets:   20
+Packet size limit:   inferred: 22 bytes - 114 bytes (range)
+Capturing on 'eth0'
+File: testfile7
+
+Packets captured: 0
+Packets received/dropped on interface 'eth0': 0/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (0.0%)
+Capture duration:    n/a
+grep: invalid option -- '.'
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Sat Mar 18 03:18:56 2023 - ERROR - oe_test_editcap_02.sh line 52
+Sat Mar 18 03:24:31 2023 - ERROR - Timeout : Command 'bash oe_test_editcap_02.sh' timed out after 1799.999799698 seconds
+Capturing on 'eth0'
+File: testfile8
+
+Packets: 4 
+Packets: 6 
+Packets: 7 
+Packets captured: 7
+Packets received/dropped on interface 'eth0': 7/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+File size:           1300 bytes
+File size:           1192 bytes
+Number of packets:   2
+Number of packets:   2
+Number of packets:   2
+Number of packets:   1
+capinfos: The file "testfile7_B_*" doesn't exist.
+Sat Mar 18 03:24:34 2023 - ERROR - oe_test_editcap_02.sh line 67
+Capturing on 'eth0'
+File: testfile2
+
+Packets: 4 
+Packets: 6 
+Packets: 10 
+Packets: 14 
+Packets: 16 
+Packets: 18 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+testfile2: pcapng
+testfile2_D: pcap
+Capturing on 'eth0'
+File: testfile1
+
+Packets: 2 
+Packets: 4 
+Packets: 6 
+Packets: 8 
+Packets: 18 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+File encapsulation:  Ethernet
+File encapsulation:  Apple IP-over-IEEE 1394
+Sat Mar 18 03:55:33 2023 - INFO  - End of the test.
+Sat Mar 18 03:55:33 2023 - ERROR - failed to execute the case.
+Sat Mar 18 03:55:34 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 03:55:34 2023 - WARN  - no thing to do.
+Sat Mar 18 03:55:35 2023 - INFO  - Finish restoring the test environment.

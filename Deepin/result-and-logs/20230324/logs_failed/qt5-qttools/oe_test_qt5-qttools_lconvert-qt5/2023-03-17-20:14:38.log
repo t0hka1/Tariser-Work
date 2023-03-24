@@ -1,0 +1,69 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:14:41 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 20:14:45 2023 - ERROR - pkgs:(qt5-qtbase-devel) not found
+oe_test_qt5-qttools_lconvert-qt5.sh: line 29: rpm: command not found
+oe_test_qt5-qttools_lconvert-qt5.sh: line 30: rpm: command not found
+cp: missing destination file operand after './'
+Try 'cp --help' for more information.
+Fri Mar 17 20:14:46 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:14:46 2023 - INFO  - Start to run test.
+oe_test_qt5-qttools_lconvert-qt5.sh: line 37: lconvert-qt5: command not found
+Fri Mar 17 20:14:47 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 38
+oe_test_qt5-qttools_lconvert-qt5.sh: line 39: lconvert-qt5: command not found
+Fri Mar 17 20:14:47 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 40
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:48 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 42
+oe_test_qt5-qttools_lconvert-qt5.sh: line 43: lconvert-qt5: command not found
+Fri Mar 17 20:14:48 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 44
+grep: swedish.ts: No such file or directory
+Fri Mar 17 20:14:49 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 46
+oe_test_qt5-qttools_lconvert-qt5.sh: line 47: lconvert-qt5: command not found
+Fri Mar 17 20:14:50 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 48
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:50 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 50
+oe_test_qt5-qttools_lconvert-qt5.sh: line 51: lconvert-qt5: command not found
+Fri Mar 17 20:14:51 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 52
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:51 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 54
+oe_test_qt5-qttools_lconvert-qt5.sh: line 55: lconvert-qt5: command not found
+Fri Mar 17 20:14:52 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 56
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:53 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 58
+oe_test_qt5-qttools_lconvert-qt5.sh: line 59: lconvert-qt5: command not found
+Fri Mar 17 20:14:53 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 60
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:54 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 62
+oe_test_qt5-qttools_lconvert-qt5.sh: line 63: lconvert-qt5: command not found
+Fri Mar 17 20:14:54 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 64
+grep: swedish: No such file or directory
+oe_test_qt5-qttools_lconvert-qt5.sh: line 67: lconvert-qt5: command not found
+Fri Mar 17 20:14:55 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 68
+grep: swedish: No such file or directory
+oe_test_qt5-qttools_lconvert-qt5.sh: line 71: lconvert-qt5: command not found
+Fri Mar 17 20:14:55 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 72
+grep: swedish: No such file or directory
+oe_test_qt5-qttools_lconvert-qt5.sh: line 76: lconvert-qt5: command not found
+Fri Mar 17 20:14:56 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 77
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:57 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 79
+oe_test_qt5-qttools_lconvert-qt5.sh: line 80: lconvert-qt5: command not found
+Fri Mar 17 20:14:57 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 81
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:58 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 83
+oe_test_qt5-qttools_lconvert-qt5.sh: line 84: lconvert-qt5: command not found
+Fri Mar 17 20:14:58 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 85
+grep: swedish: No such file or directory
+Fri Mar 17 20:14:59 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 87
+Fri Mar 17 20:15:00 2023 - ERROR - oe_test_qt5-qttools_lconvert-qt5.sh line 89
+Fri Mar 17 20:15:00 2023 - INFO  - End to run test.
+Fri Mar 17 20:15:00 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:15:01 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 20:15:02 2023 - WARN  - no thing to do.
+Fri Mar 17 20:15:02 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,26 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:53:50 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 21:53:54 2023 - INFO  - pkgs:(net-tools) is already installed
+Failed to stop iptables.service: Unit iptables.service not loaded.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:53:54 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:53:55 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 21:53:55 2023 - INFO  - Start to run test.
+tcp        0      0 0.0.0.0:514             0.0.0.0:*               LISTEN      4099/rsyslogd       
+tcp6       0      0 :::514                  :::*                    LISTEN      4099/rsyslogd       
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:53:57 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:53:57 2023 - ERROR - oe_test_rsyslog_function_tcp.sh line 50
+Fri Mar 17 21:54:19 2023 - ERROR - oe_test_rsyslog_function_tcp.sh line 53
+Fri Mar 17 21:54:19 2023 - INFO  - End to run test.
+Fri Mar 17 21:54:20 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:54:20 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 21:54:21 2023 - WARN  - no thing to do.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:54:21 2023 - ERROR - Failed in remote CMD operation:1
+Failed to start iptables.service: Unit iptables.service not found.
+Fri Mar 17 21:54:23 2023 - INFO  - End to restore the test environment.

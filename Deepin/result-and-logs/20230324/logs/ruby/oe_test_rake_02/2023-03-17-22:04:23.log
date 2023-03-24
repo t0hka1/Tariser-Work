@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:04:26 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:04:29 2023 - ERROR - pkgs:(rubygem-rake) not found
+Fri Mar 17 22:04:30 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 22:04:31 2023 - INFO  - Start to run test.
+hello
+hello
+Turned off alarm. Would have liked 5 more minutes, though.
+Turned off alarm. Would have liked 5 more minutes, though.
+Turned off alarm. Would have liked 5 more minutes, though.
+Turned off alarm. Would have liked 5 more minutes, though.
+Turned off alarm. Would have liked 5 more minutes, though.
+spawn rake root:clean_tmp -j 4
+Delete ./tmp/file1? y
+y
+Delete ./tmp/file2? Delete ./tmp/file3? y
+q
+Turned off alarm. Would have liked 5 more minutes, though.
+** Invoke morning:ready_for_the_day (first_time)
+** Invoke morning:turn_off_alarm (first_time)
+** Execute (dry run) morning:turn_off_alarm
+** Invoke morning:groom_myself (first_time)
+** Execute (dry run) morning:groom_myself
+** Invoke morning:make_coffee (first_time)
+** Execute (dry run) morning:make_coffee
+** Invoke morning:walk_dog (first_time)
+** Execute (dry run) morning:walk_dog
+** Execute (dry run) morning:ready_for_the_day
+Turned off alarm. Would have liked 5 more minutes, though.
+No Rakefile found (looking for: rakefile, Rakefile, rakefile.rb, Rakefile.rb)
+Fri Mar 17 22:04:59 2023 - INFO  - End of the test.
+Fri Mar 17 22:05:00 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 22:05:00 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 22:05:01 2023 - WARN  - no thing to do.
+Fri Mar 17 22:05:01 2023 - INFO  - Finish restoring the test environment.

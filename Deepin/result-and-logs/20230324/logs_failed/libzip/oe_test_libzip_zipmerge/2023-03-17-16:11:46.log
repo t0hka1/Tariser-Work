@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:11:49 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:11:53 2023 - ERROR - pkgs:(libzip) not found
+oe_test_libzip_zipmerge.sh: line 33: zip: command not found
+oe_test_libzip_zipmerge.sh: line 34: zip: command not found
+cp: cannot stat 'testdir2.zip': No such file or directory
+oe_test_libzip_zipmerge.sh: line 37: zip: command not found
+cp: cannot stat 'testdir4.zip': No such file or directory
+cp: cannot stat 'testdir1.zip': No such file or directory
+cp: cannot stat 'testdir2.zip': No such file or directory
+cp: cannot stat 'testdir2.zip': No such file or directory
+Fri Mar 17 16:11:54 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:11:54 2023 - INFO  - Start to run test.
+oe_test_libzip_zipmerge.sh: line 47: zipmerge: command not found
+Fri Mar 17 16:11:55 2023 - ERROR - oe_test_libzip_zipmerge.sh line 48
+oe_test_libzip_zipmerge.sh: line 49: zipmerge: command not found
+oe_test_libzip_zipmerge.sh: line 49: rpm: command not found
+Fri Mar 17 16:11:56 2023 - ERROR - oe_test_libzip_zipmerge.sh line 52
+oe_test_libzip_zipmerge.sh: line 53: zipmerge: command not found
+Fri Mar 17 16:11:56 2023 - ERROR - oe_test_libzip_zipmerge.sh line 54
+oe_test_libzip_zipmerge.sh: line 55: zipmerge: command not found
+Fri Mar 17 16:11:57 2023 - ERROR - oe_test_libzip_zipmerge.sh line 57
+grep: tmp2/testdir2/testfile2: No such file or directory
+oe_test_libzip_zipmerge.sh: line 60: zipmerge: command not found
+Fri Mar 17 16:11:57 2023 - ERROR - oe_test_libzip_zipmerge.sh line 62
+oe_test_libzip_zipmerge.sh: line 63: zipmerge: command not found
+Fri Mar 17 16:11:58 2023 - ERROR - oe_test_libzip_zipmerge.sh line 65
+oe_test_libzip_zipmerge.sh: line 66: zipmerge: command not found
+Fri Mar 17 16:11:58 2023 - ERROR - oe_test_libzip_zipmerge.sh line 68
+Fri Mar 17 16:11:59 2023 - INFO  - End of the test.
+Fri Mar 17 16:11:59 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:12:00 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 16:12:00 2023 - WARN  - no thing to do.
+Fri Mar 17 16:12:01 2023 - INFO  - Finish restoring the test environment.

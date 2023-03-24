@@ -1,0 +1,45 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:32:08 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:32:11 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_checkconfig_console.sh: line 29: rpm: command not found
+Fri Mar 17 16:32:12 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:32:13 2023 - INFO  - Start to run test.
+oe_test_lxc_checkconfig_console.sh: line 35: lxc-checkconfig: command not found
+Fri Mar 17 16:32:13 2023 - ERROR - Check lxc-checkconfig failed.
+Fri Mar 17 16:32:14 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 36
+Fri Mar 17 16:32:14 2023 - ERROR - Check lxc-checkpoint --help failed.
+Fri Mar 17 16:32:15 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 39
+Fri Mar 17 16:32:15 2023 - ERROR - Check lxc-checkpoint --usage failed.
+Fri Mar 17 16:32:16 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 41
+oe_test_lxc_checkconfig_console.sh: line 42: lxc-checkpoint: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:32:16 2023 - ERROR - Check lxc-checkpoint --version failed.
+Fri Mar 17 16:32:17 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 43
+oe_test_lxc_checkconfig_console.sh: line 45: lxc-config: command not found
+Fri Mar 17 16:32:17 2023 - ERROR - Check lxc-config -h failed.
+Fri Mar 17 16:32:18 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 46
+oe_test_lxc_checkconfig_console.sh: line 47: lxc-config: command not found
+Fri Mar 17 16:32:18 2023 - ERROR - Check lxc-config -l failed.
+Fri Mar 17 16:32:19 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 48
+Fri Mar 17 16:32:20 2023 - ERROR - Check lxc-console --help failed.
+Fri Mar 17 16:32:20 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 51
+Fri Mar 17 16:32:21 2023 - ERROR - Check lxc-console --usage failed.
+Fri Mar 17 16:32:21 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 53
+oe_test_lxc_checkconfig_console.sh: line 54: lxc-console: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:32:22 2023 - ERROR - Check lxc-console --version failed.
+Fri Mar 17 16:32:22 2023 - ERROR - oe_test_lxc_checkconfig_console.sh line 55
+Fri Mar 17 16:32:23 2023 - INFO  - End to run test.
+Fri Mar 17 16:32:23 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:32:24 2023 - INFO  - Start to restore the tet environment.
+Fri Mar 17 16:32:24 2023 - WARN  - no thing to do.
+Fri Mar 17 16:32:25 2023 - INFO  - End to restore the tet environment.

@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:20:42 2023 - INFO  - Start environmental preparation.
+Failed to stop firewalld.service: Unit firewalld.service not loaded.
+Failed to disable unit: Unit file firewalld.service does not exist.
+common/common.sh: line 26: getenforce: command not found
+passwd: unrecognized option '--stdin'
+Usage: passwd [options] [LOGIN]
+
+Options:
+  -a, --all                     report password status on all accounts
+  -d, --delete                  delete the password for the named account
+  -e, --expire                  force expire the password for the named account
+  -h, --help                    display this help message and exit
+  -k, --keep-tokens             change password only if expired
+  -i, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -l, --lock                    lock the password of the named account
+  -n, --mindays MIN_DAYS        set minimum number of days before password
+                                change to MIN_DAYS
+  -q, --quiet                   quiet mode
+  -r, --repository REPOSITORY   change password in REPOSITORY repository
+  -R, --root CHROOT_DIR         directory to chroot into
+  -S, --status                  report password status on the named account
+  -u, --unlock                  unlock the password of the named account
+  -w, --warndays WARN_DAYS      set expiration warning days to WARN_DAYS
+  -x, --maxdays MAX_DAYS        set maximum number of days before password
+                                change to MAX_DAYS
+
+/root/GitRepo/mugen-debian-riscv/testcases/cli-test/mysql
+Fri Mar 17 17:20:48 2023 - ERROR - pkgs:(mysql) not found
+common/common.sh: line 45: rpm: command not found
+Fri Mar 17 17:20:48 2023 - INFO  - start environment cleanup.
+sed: can't read /etc/my.cnf: No such file or directory
+Failed to reload mysql.service: Unit mysql.service not found.
+Failed to stop mysql.service: Unit mysql.service not loaded.
+userdel: mysql mail spool (/var/mail/mysql) not found
+userdel: mysql home directory (/home/mysql) not found
+Failed to start firewalld.service: Unit firewalld.service not found.
+Failed to enable unit: Unit file firewalld.service does not exist.
+Fri Mar 17 17:20:56 2023 - WARN  - no thing to do.
+Fri Mar 17 17:20:56 2023 - INFO  - Finish environment cleanup!

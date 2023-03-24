@@ -1,0 +1,44 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:18:43 2023 - INFO  - Start environmental preparation.
+Sat Mar 18 00:18:47 2023 - ERROR - pkgs:(vdo) not found
+Sat Mar 18 00:18:47 2023 - INFO  - End of environmental preparation!
+Sat Mar 18 00:18:48 2023 - INFO  - Start testing...
+Failed to restart vdo.service: Unit vdo.service not found.
+Sat Mar 18 00:18:49 2023 - ERROR - vdo.service restart failed
+Sat Mar 18 00:18:49 2023 - ERROR - ../common/common_lib.sh line 34
+Unit vdo.service could not be found.
+Sat Mar 18 00:18:56 2023 - ERROR - vdo.service restart failed
+Sat Mar 18 00:18:56 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop vdo.service: Unit vdo.service not loaded.
+Sat Mar 18 00:18:57 2023 - ERROR - vdo.service stop failed
+Sat Mar 18 00:18:57 2023 - ERROR - ../common/common_lib.sh line 39
+Unit vdo.service could not be found.
+Sat Mar 18 00:19:04 2023 - ERROR - vdo.service stop failed
+Sat Mar 18 00:19:04 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start vdo.service: Unit vdo.service not found.
+Sat Mar 18 00:19:05 2023 - ERROR - vdo.service start failed
+Sat Mar 18 00:19:05 2023 - ERROR - ../common/common_lib.sh line 44
+Unit vdo.service could not be found.
+Sat Mar 18 00:19:12 2023 - ERROR - vdo.service start failed
+Sat Mar 18 00:19:12 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for vdo.service: No such file or directory
+Sat Mar 18 00:19:13 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start vdo.service: Unit vdo.service not found.
+Sat Mar 18 00:19:14 2023 - ERROR - Job type reload is not applicable for unit vdo.service
+Sat Mar 18 00:19:15 2023 - ERROR - ../common/common_lib.sh line 91
+Unit vdo.service could not be found.
+Unit vdo.service could not be found.
+Sat Mar 18 00:19:16 2023 - INFO  - Finish test!
+Sat Mar 18 00:19:16 2023 - ERROR - failed to execute the case.
+Sat Mar 18 00:19:17 2023 - INFO  - start environment cleanup.
+Failed to stop vdo.service: Unit vdo.service not loaded.
+Sat Mar 18 00:19:17 2023 - WARN  - no thing to do.
+Sat Mar 18 00:19:18 2023 - INFO  - Finish environment cleanup!

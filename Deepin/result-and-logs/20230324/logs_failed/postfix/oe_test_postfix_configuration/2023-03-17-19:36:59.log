@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:37:02 2023 - INFO  - Start environment preparation.
+Fri Mar 17 19:37:07 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 19:37:07 2023 - INFO  - Start testing...
+Failed to start postfix.service: Unit postfix.service not found.
+Fri Mar 17 19:37:08 2023 - ERROR - start fail
+Fri Mar 17 19:37:09 2023 - ERROR - oe_test_postfix_configuration.sh line 36
+Unit postfix.service could not be found.
+Fri Mar 17 19:37:09 2023 - ERROR - postfix not active
+Fri Mar 17 19:37:10 2023 - ERROR - oe_test_postfix_configuration.sh line 38
+oe_test_postfix_configuration.sh: line 39: postconf: command not found
+Fri Mar 17 19:37:10 2023 - ERROR - check fail
+Fri Mar 17 19:37:11 2023 - ERROR - oe_test_postfix_configuration.sh line 40
+oe_test_postfix_configuration.sh: line 41: postconf: command not found
+Fri Mar 17 19:37:11 2023 - ERROR - check fail
+Fri Mar 17 19:37:12 2023 - ERROR - oe_test_postfix_configuration.sh line 42
+Fri Mar 17 19:37:12 2023 - INFO  - Finish test!
+Fri Mar 17 19:37:13 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:37:13 2023 - INFO  - start environment cleanup.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage postfix is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'postfix' has no installation candidate"
+Fri Mar 17 19:37:16 2023 - INFO  - Finish environment cleanup!

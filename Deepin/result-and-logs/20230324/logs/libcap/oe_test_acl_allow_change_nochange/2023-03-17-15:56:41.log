@@ -1,0 +1,32 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:56:44 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 15:56:45 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:56:45 2023 - INFO  - Start executing testcase.
+New password: Retype new password: passwd: password updated successfully
+su: warning: cannot change directory to /home/example: No such file or directory
+touch: cannot touch '/home/example/test': No such file or directory
+su: warning: cannot change directory to /home/example: No such file or directory
+chattr: No such file or directory while trying to stat /home/example/test
+su: warning: cannot change directory to /home/example: No such file or directory
+chattr: No such file or directory while trying to stat /home/example/test
+Fri Mar 17 15:56:48 2023 - ERROR - Privilege grant failed
+Fri Mar 17 15:56:49 2023 - ERROR - oe_test_acl_allow_change_nochange.sh line 40
+su: warning: cannot change directory to /home/example: No such file or directory
+lsattr: No such file or directory while trying to stat /home/example/test
+Fri Mar 17 15:56:50 2023 - ERROR - Failed to view ----i---------e----- field in file properties
+Fri Mar 17 15:56:50 2023 - ERROR - oe_test_acl_allow_change_nochange.sh line 42
+Fri Mar 17 15:56:51 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 15:56:51 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:56:52 2023 - INFO  - start environment cleanup.
+su: warning: cannot change directory to /home/example: No such file or directory
+chattr: No such file or directory while trying to stat /home/example/test
+userdel: example mail spool (/var/mail/example) not found
+userdel: example home directory (/home/example) not found
+Fri Mar 17 15:56:53 2023 - INFO  - Finish environment cleanup!

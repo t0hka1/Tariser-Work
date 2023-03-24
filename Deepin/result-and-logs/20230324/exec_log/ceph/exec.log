@@ -1,0 +1,36 @@
+Fri Mar 17 10:51:53 2023 - INFO  - start to run testcase:oe_test_service_rbdmap.
+Fri Mar 17 10:56:38 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 10:56:49 2023 - INFO  - End to run testcase:oe_test_service_rbdmap.
+Fri Mar 17 10:56:49 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 10:56:54 2023 - INFO  - start to run testcase:oe_test_target_ceph-fuse.
+Fri Mar 17 10:57:38 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 10:57:48 2023 - INFO  - End to run testcase:oe_test_target_ceph-fuse.
+Fri Mar 17 10:57:49 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 10:57:53 2023 - INFO  - start to run testcase:oe_test_target_ceph-mds.
+Fri Mar 17 10:58:34 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 10:58:45 2023 - INFO  - End to run testcase:oe_test_target_ceph-mds.
+Fri Mar 17 10:58:46 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 10:58:50 2023 - INFO  - start to run testcase:oe_test_target_ceph-mgr.
+Fri Mar 17 10:59:31 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 10:59:42 2023 - INFO  - End to run testcase:oe_test_target_ceph-mgr.
+Fri Mar 17 10:59:43 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 10:59:47 2023 - INFO  - start to run testcase:oe_test_target_ceph-mon.
+Fri Mar 17 11:06:06 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 11:06:17 2023 - INFO  - End to run testcase:oe_test_target_ceph-mon.
+Fri Mar 17 11:06:18 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 11:06:22 2023 - INFO  - start to run testcase:oe_test_target_ceph-osd.
+Fri Mar 17 11:14:59 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 11:15:10 2023 - INFO  - End to run testcase:oe_test_target_ceph-osd.
+Fri Mar 17 11:15:11 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 11:15:15 2023 - INFO  - start to run testcase:oe_test_target_ceph-radosgw.
+Fri Mar 17 11:15:55 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 11:16:05 2023 - INFO  - End to run testcase:oe_test_target_ceph-radosgw.
+Fri Mar 17 11:16:06 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 11:16:09 2023 - INFO  - start to run testcase:oe_test_target_ceph-rbd-mirror.
+Fri Mar 17 11:21:19 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 11:21:30 2023 - INFO  - End to run testcase:oe_test_target_ceph-rbd-mirror.
+Fri Mar 17 11:21:30 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Fri Mar 17 11:21:34 2023 - INFO  - start to run testcase:oe_test_target_ceph.
+Fri Mar 17 11:27:13 2023 - INFO  - The case exit by code 0.
+Fri Mar 17 11:27:24 2023 - INFO  - End to run testcase:oe_test_target_ceph.
+Fri Mar 17 11:27:24 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.

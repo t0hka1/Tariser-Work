@@ -1,0 +1,8 @@
+Fri Mar 17 20:32:59 2023 - INFO  - start to run testcase:oe_test_service_rasdaemon.
+Fri Mar 17 20:33:37 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 20:33:48 2023 - INFO  - End to run testcase:oe_test_service_rasdaemon.
+Fri Mar 17 20:33:48 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 20:33:53 2023 - INFO  - start to run testcase:oe_test_service_ras-mc-ctl.
+Fri Mar 17 20:34:30 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 20:34:41 2023 - INFO  - End to run testcase:oe_test_service_ras-mc-ctl.
+Fri Mar 17 20:34:42 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

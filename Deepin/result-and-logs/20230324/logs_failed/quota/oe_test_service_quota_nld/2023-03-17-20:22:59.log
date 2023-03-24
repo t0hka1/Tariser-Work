@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:23:02 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 20:23:32 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 20:23:33 2023 - INFO  - Start testing...
+Failed to restart quota_nld.service: Unit quota_nld.service not found.
+Fri Mar 17 20:23:33 2023 - ERROR - quota_nld.service restart failed
+Fri Mar 17 20:23:34 2023 - ERROR - ../common/common_lib.sh line 34
+Unit quota_nld.service could not be found.
+Fri Mar 17 20:23:40 2023 - ERROR - quota_nld.service restart failed
+Fri Mar 17 20:23:41 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop quota_nld.service: Unit quota_nld.service not loaded.
+Fri Mar 17 20:23:41 2023 - ERROR - quota_nld.service stop failed
+Fri Mar 17 20:23:42 2023 - ERROR - ../common/common_lib.sh line 39
+Unit quota_nld.service could not be found.
+Fri Mar 17 20:23:48 2023 - ERROR - quota_nld.service stop failed
+Fri Mar 17 20:23:49 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start quota_nld.service: Unit quota_nld.service not found.
+Fri Mar 17 20:23:49 2023 - ERROR - quota_nld.service start failed
+Fri Mar 17 20:23:50 2023 - ERROR - ../common/common_lib.sh line 44
+Unit quota_nld.service could not be found.
+Fri Mar 17 20:23:56 2023 - ERROR - quota_nld.service start failed
+Fri Mar 17 20:23:57 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for quota_nld.service: No such file or directory
+Fri Mar 17 20:23:58 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start quota_nld.service: Unit quota_nld.service not found.
+Fri Mar 17 20:23:58 2023 - ERROR - Job type reload is not applicable for unit quota_nld.service
+Fri Mar 17 20:23:59 2023 - ERROR - ../common/common_lib.sh line 91
+Unit quota_nld.service could not be found.
+Unit quota_nld.service could not be found.
+Fri Mar 17 20:24:00 2023 - INFO  - Finish test!
+Fri Mar 17 20:24:00 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:24:01 2023 - INFO  - start environment cleanup.
+Failed to stop quota_nld.service: Unit quota_nld.service not loaded.
+Fri Mar 17 20:24:45 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:04:40 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:04:44 2023 - ERROR - pkgs:(java-1.8.0-openjdk*) not found
+Fri Mar 17 15:04:44 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:04:45 2023 - INFO  - Start to run test.
+oe_test_openjdk_native2ascii_pack200.sh: line 36: native2ascii: command not found
+Fri Mar 17 15:04:46 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 37
+grep: u.txt: No such file or directory
+Fri Mar 17 15:04:46 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 39
+oe_test_openjdk_native2ascii_pack200.sh: line 40: native2ascii: command not found
+Fri Mar 17 15:04:47 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 41
+oe_test_openjdk_native2ascii_pack200.sh: line 42: native2ascii: command not found
+Fri Mar 17 15:04:47 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 43
+grep: i.txt: No such file or directory
+Fri Mar 17 15:04:48 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 45
+oe_test_openjdk_native2ascii_pack200.sh: line 46: javac: command not found
+oe_test_openjdk_native2ascii_pack200.sh: line 47: pack200: command not found
+Fri Mar 17 15:04:48 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 48
+oe_test_openjdk_native2ascii_pack200.sh: line 49: pack200: command not found
+Fri Mar 17 15:04:49 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 50
+oe_test_openjdk_native2ascii_pack200.sh: line 51: jar: command not found
+Fri Mar 17 15:04:50 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 52
+find: ‘Hello.jar’: No such file or directory
+Fri Mar 17 15:04:50 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 54
+oe_test_openjdk_native2ascii_pack200.sh: line 55: pack200: command not found
+Fri Mar 17 15:04:51 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 56
+find: ‘Hello.jar.pack.gz’: No such file or directory
+Fri Mar 17 15:04:51 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 58
+oe_test_openjdk_native2ascii_pack200.sh: line 60: unpack200: command not found
+Fri Mar 17 15:04:52 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 61
+find: ‘Hello.jar’: No such file or directory
+Fri Mar 17 15:04:53 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 63
+oe_test_openjdk_native2ascii_pack200.sh: line 65: pack200: command not found
+Fri Mar 17 15:04:53 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 66
+find: ‘Hello.jar.pack.gz’: No such file or directory
+Fri Mar 17 15:04:54 2023 - ERROR - oe_test_openjdk_native2ascii_pack200.sh line 68
+Fri Mar 17 15:04:55 2023 - INFO  - End to run test.
+Fri Mar 17 15:04:55 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:04:56 2023 - INFO  - Need't to restore the tet environment.
+Fri Mar 17 15:04:56 2023 - WARN  - no thing to do.
+Fri Mar 17 15:04:57 2023 - INFO  - End to restore the test environment.

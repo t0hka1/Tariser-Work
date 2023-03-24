@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:58:08 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 11:58:09 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 11:58:10 2023 - INFO  - Start to run test.
+Fri Mar 17 11:58:10 2023 - INFO  - Test: cracklib-check
+Fri Mar 17 11:58:11 2023 - INFO  - cracklib: Test a very simple password
+Fri Mar 17 11:58:11 2023 - INFO  - cracklib: Test a simple/dictionary password
+Fri Mar 17 11:58:12 2023 - INFO  - cracklib: Testing simplistic password
+Fri Mar 17 11:58:13 2023 - INFO  - cracklib: Testing a complicated password
+Fri Mar 17 11:58:13 2023 - INFO  - Test: cracklib-format
+Fri Mar 17 11:58:14 2023 - ERROR - cracklib-foramt result error...
+Fri Mar 17 11:58:15 2023 - ERROR - oe_test_cracklib.sh line 77
+Fri Mar 17 11:58:15 2023 - INFO  - Test: mkdict
+Fri Mar 17 11:58:16 2023 - ERROR - mkdict result error...
+Fri Mar 17 11:58:17 2023 - ERROR - oe_test_cracklib.sh line 84
+Fri Mar 17 11:58:17 2023 - INFO  - Test: cracklib-packer
+6 6
+Fri Mar 17 11:58:18 2023 - INFO  - Test: packer
+oe_test_cracklib.sh: line 95: packer: command not found
+Fri Mar 17 11:58:18 2023 - ERROR - packer failed...
+Fri Mar 17 11:58:19 2023 - ERROR - oe_test_cracklib.sh line 96
+Fri Mar 17 11:58:20 2023 - ERROR - packer error: data is not exist...
+Fri Mar 17 11:58:20 2023 - ERROR - oe_test_cracklib.sh line 98
+Fri Mar 17 11:58:21 2023 - INFO  - Test: cracklib-unpacker
+Fri Mar 17 11:58:21 2023 - ERROR - cracklib-unpacker result error...
+Fri Mar 17 11:58:22 2023 - ERROR - oe_test_cracklib.sh line 105
+Fri Mar 17 11:58:22 2023 - INFO  - Test: create-cracklib-dict
+/usr/share/cracklib/pw_dict.pwd: No such file or directory
+PWOpen: Invalid argument
+Fri Mar 17 11:58:23 2023 - ERROR - Failed to backup original data...
+Fri Mar 17 11:58:23 2023 - ERROR - oe_test_cracklib.sh line 110
+1 1
+0 0
+/var/cache/cracklib/cracklib_dict: error reading header
+Fri Mar 17 11:58:25 2023 - ERROR - create-cracklib-dict error...
+Fri Mar 17 11:58:25 2023 - ERROR - oe_test_cracklib.sh line 120
+6 6
+Fri Mar 17 11:58:26 2023 - INFO  - End of the test.
+Fri Mar 17 11:58:27 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:58:27 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:58:28 2023 - INFO  - Finish restoring the test environment.

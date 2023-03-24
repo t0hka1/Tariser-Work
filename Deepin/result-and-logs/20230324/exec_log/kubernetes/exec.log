@@ -1,0 +1,20 @@
+Fri Mar 17 15:47:30 2023 - INFO  - start to run testcase:oe_test_service_kube-controller-manager.
+Fri Mar 17 15:47:42 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 15:47:53 2023 - INFO  - End to run testcase:oe_test_service_kube-controller-manager.
+Fri Mar 17 15:47:54 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:47:57 2023 - INFO  - start to run testcase:oe_test_service_kube-scheduler.
+Fri Mar 17 15:48:08 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 15:48:19 2023 - INFO  - End to run testcase:oe_test_service_kube-scheduler.
+Fri Mar 17 15:48:20 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:48:23 2023 - INFO  - start to run testcase:oe_test_service_kubelet.
+Fri Mar 17 15:49:02 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 15:49:12 2023 - INFO  - End to run testcase:oe_test_service_kubelet.
+Fri Mar 17 15:49:13 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:49:17 2023 - INFO  - start to run testcase:oe_test_service_kube-proxy.
+Fri Mar 17 15:49:28 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 15:49:39 2023 - INFO  - End to run testcase:oe_test_service_kube-proxy.
+Fri Mar 17 15:49:40 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:49:43 2023 - INFO  - start to run testcase:oe_test_service_kube-apiserver.
+Fri Mar 17 15:49:54 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 15:50:05 2023 - INFO  - End to run testcase:oe_test_service_kube-apiserver.
+Fri Mar 17 15:50:05 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

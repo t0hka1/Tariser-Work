@@ -1,0 +1,28 @@
+Fri Mar 17 15:35:51 2023 - INFO  - start to run testcase:oe_test_depmod.
+Fri Mar 17 15:37:06 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 15:37:17 2023 - INFO  - End to run testcase:oe_test_depmod.
+Fri Mar 17 15:37:17 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:37:21 2023 - INFO  - start to run testcase:oe_test_insmod-lsmod.
+Fri Mar 17 15:37:44 2023 - ERROR - The case exit by code 4.
+Fri Mar 17 15:37:54 2023 - INFO  - End to run testcase:oe_test_insmod-lsmod.
+Fri Mar 17 15:37:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:37:59 2023 - INFO  - start to run testcase:oe_test_kmod.
+Fri Mar 17 15:38:05 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 15:38:16 2023 - INFO  - End to run testcase:oe_test_kmod.
+Fri Mar 17 15:38:16 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:38:20 2023 - INFO  - start to run testcase:oe_test_modinfo.
+Fri Mar 17 15:38:29 2023 - ERROR - The case exit by code 6.
+Fri Mar 17 15:38:39 2023 - INFO  - End to run testcase:oe_test_modinfo.
+Fri Mar 17 15:38:40 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:38:43 2023 - INFO  - start to run testcase:oe_test_modprobe.
+Fri Mar 17 15:39:15 2023 - ERROR - The case exit by code 12.
+Fri Mar 17 15:39:26 2023 - INFO  - End to run testcase:oe_test_modprobe.
+Fri Mar 17 15:39:26 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:39:30 2023 - INFO  - start to run testcase:oe_test_rmmod.
+Fri Mar 17 15:39:38 2023 - ERROR - The case exit by code 5.
+Fri Mar 17 15:39:49 2023 - INFO  - End to run testcase:oe_test_rmmod.
+Fri Mar 17 15:39:50 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 15:39:53 2023 - INFO  - start to run testcase:oe_test_weak-modules.
+Fri Mar 17 15:40:23 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 15:40:34 2023 - INFO  - End to run testcase:oe_test_weak-modules.
+Fri Mar 17 15:40:34 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

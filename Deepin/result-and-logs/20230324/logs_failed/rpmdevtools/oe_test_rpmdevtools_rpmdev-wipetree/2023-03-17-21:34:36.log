@@ -1,0 +1,125 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:34:38 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 21:34:42 2023 - ERROR - pkgs:(rpmdevtools) not found
+mkdir: cannot create directory ‘/home/user_test’: Permission denied
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 31: dnf: command not found
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 32: yumdownloader: command not found
+chown: cannot access '*rpm': No such file or directory
+chmod: cannot access '*rpm': No such file or directory
+mv: cannot stat '*rpm': No such file or directory
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 37: yumdownloader: command not found
+cp: cannot stat '*rpm': No such file or directory
+cp: cannot stat '*rpm': No such file or directory
+cp: cannot stat '*rpm': No such file or directory
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 45: yumdownloader: command not found
+Fri Mar 17 21:34:45 2023 - INFO  - End of environmental preparation.
+Fri Mar 17 21:34:45 2023 - INFO  - Start to run test.
+Fri Mar 17 21:34:46 2023 - ERROR - Failed pre_test
+Fri Mar 17 21:34:46 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 56
+sh: 1: rpmdev-wipetree: not found
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 61: rpmelfsym: command not found
+Fri Mar 17 21:34:47 2023 - ERROR - Failed option: -p
+Fri Mar 17 21:34:48 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 62
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 63: rpmelfsym: command not found
+Fri Mar 17 21:34:48 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:34:49 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 64
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 65: rpmelfsym: command not found
+Fri Mar 17 21:34:49 2023 - ERROR - Failed option: -a
+Fri Mar 17 21:34:50 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 66
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 68: rpmfile: command not found
+Fri Mar 17 21:34:51 2023 - ERROR - Failed option: -p
+Fri Mar 17 21:34:51 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 69
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 70: rpmfile: command not found
+Fri Mar 17 21:34:52 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:34:52 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 71
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 72: rpmfile: command not found
+Fri Mar 17 21:34:53 2023 - ERROR - Failed option: -a
+Fri Mar 17 21:34:53 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 73
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 75: rpminfo: command not found
+Fri Mar 17 21:34:54 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:34:54 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 76
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 77: rpminfo: command not found
+Fri Mar 17 21:34:55 2023 - ERROR - Failed option: -v
+Fri Mar 17 21:34:55 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 78
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 79: rpminfo: command not found
+Fri Mar 17 21:34:56 2023 - ERROR - Failed option: -q
+Fri Mar 17 21:34:57 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 80
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 81: rpminfo: command not found
+Fri Mar 17 21:34:57 2023 - ERROR - Failed option: -qq
+Fri Mar 17 21:34:58 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 82
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 83: rpminfo: command not found
+Fri Mar 17 21:34:58 2023 - ERROR - Failed option: -i -o
+Fri Mar 17 21:34:59 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 85
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 86: rpminfo: command not found
+Fri Mar 17 21:35:00 2023 - ERROR - Failed option: -e
+Fri Mar 17 21:35:00 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 87
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 88: rpminfo: command not found
+Fri Mar 17 21:35:01 2023 - ERROR - Failed option: -l
+Fri Mar 17 21:35:01 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 89
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 90: rpminfo: command not found
+Fri Mar 17 21:35:02 2023 - ERROR - Failed option: -p
+Fri Mar 17 21:35:02 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 91
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 92: rpminfo: command not found
+Fri Mar 17 21:35:03 2023 - ERROR - Failed option: -np
+Fri Mar 17 21:35:03 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 93
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 94: rpminfo: command not found
+Fri Mar 17 21:35:04 2023 - ERROR - Failed option: -P
+Fri Mar 17 21:35:04 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 95
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 96: rpminfo: command not found
+Fri Mar 17 21:35:05 2023 - ERROR - Failed option: -nP
+Fri Mar 17 21:35:05 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 97
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 98: rpminfo: command not found
+Fri Mar 17 21:35:06 2023 - ERROR - Failed option: -r
+Fri Mar 17 21:35:06 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 99
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 100: rpminfo: command not found
+Fri Mar 17 21:35:07 2023 - ERROR - Failed option: -ro
+Fri Mar 17 21:35:07 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 101
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 102: rpminfo: command not found
+ls: cannot access 'record1*': No such file or directory
+Fri Mar 17 21:35:08 2023 - ERROR - Failed option: -s 
+Fri Mar 17 21:35:09 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 105
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 106: rpminfo: command not found
+Fri Mar 17 21:35:09 2023 - ERROR - Failed option: -t
+Fri Mar 17 21:35:10 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 107
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 108: rpminfo: command not found
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 110: rpmls: command not found
+Fri Mar 17 21:35:10 2023 - ERROR - Failed command: rpmls
+Fri Mar 17 21:35:11 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 111
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 113: rpmpeek: command not found
+Fri Mar 17 21:35:11 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:35:12 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 114
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 115: rpmpeek: command not found
+Fri Mar 17 21:35:12 2023 - ERROR - Failed command: rpmpeek
+Fri Mar 17 21:35:13 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 116
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 117: rpmpeek: command not found
+Fri Mar 17 21:35:13 2023 - ERROR - Failed option: -n
+Fri Mar 17 21:35:14 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 118
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 120: rpmsodiff: command not found
+Fri Mar 17 21:35:14 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:35:15 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 121
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 122: rpmsodiff: command not found
+Fri Mar 17 21:35:15 2023 - ERROR - Failed command: rpmsodiff
+Fri Mar 17 21:35:16 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 123
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 125: rpmsoname: command not found
+Fri Mar 17 21:35:17 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:35:17 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 126
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 127: rpmsoname: command not found
+Fri Mar 17 21:35:18 2023 - ERROR - Failed option: -p
+Fri Mar 17 21:35:18 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 128
+oe_test_rpmdevtools_rpmdev-wipetree.sh: line 129: rpmsoname: command not found
+Fri Mar 17 21:35:19 2023 - ERROR - Failed command: rpmsoname
+Fri Mar 17 21:35:19 2023 - ERROR - oe_test_rpmdevtools_rpmdev-wipetree.sh line 130
+Fri Mar 17 21:35:20 2023 - INFO  - End to run test.
+Fri Mar 17 21:35:20 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:35:21 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 21:35:21 2023 - WARN  - no thing to do.
+userdel: user_test mail spool (/var/mail/user_test) not found
+userdel: user_test home directory (/home/user_test) not found
+Fri Mar 17 21:35:22 2023 - INFO  - End to restore the test environment.

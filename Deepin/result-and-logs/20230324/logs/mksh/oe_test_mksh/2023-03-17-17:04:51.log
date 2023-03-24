@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:04:54 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 17:05:24 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 17:05:24 2023 - INFO  - Start to run test.
+hU
+Hello World
+./test1.sh: can't find tty fd: No such device or address
+./test1.sh: warning: won't have full job control
+imU
+lhU
+Hello World
+./test2.sh[1]: cd: restricted shell - can't cd
+Hello World
+hU
+Hello World
+./test1.sh: can't find tty fd: No such device or address
+./test1.sh: warning: won't have full job control
+imU
+lhU
+Hello World
+./test2.sh[1]: cd: restricted shell - can't cd
+Hello World
+Fri Mar 17 17:05:26 2023 - INFO  - End to run test.
+Fri Mar 17 17:05:27 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 17:05:28 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 17:05:46 2023 - INFO  - End to restore the test environment.

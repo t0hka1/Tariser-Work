@@ -1,0 +1,16 @@
+Fri Mar 17 21:38:13 2023 - INFO  - start to run testcase:oe_test_service_rrdcached.
+Fri Mar 17 21:38:13 2023 - INFO  - start to run testcase:oe_test_service_rrdcached.
+Fri Mar 17 21:38:51 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 21:38:52 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 21:39:02 2023 - INFO  - End to run testcase:oe_test_service_rrdcached.
+Fri Mar 17 21:39:02 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:39:03 2023 - INFO  - End to run testcase:oe_test_service_rrdcached.
+Fri Mar 17 21:39:04 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:39:06 2023 - INFO  - start to run testcase:oe_test_socket_rrdcached.
+Fri Mar 17 21:39:07 2023 - INFO  - start to run testcase:oe_test_socket_rrdcached.
+Fri Mar 17 21:39:43 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 21:39:44 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 21:39:53 2023 - INFO  - End to run testcase:oe_test_socket_rrdcached.
+Fri Mar 17 21:39:54 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:39:55 2023 - INFO  - End to run testcase:oe_test_socket_rrdcached.
+Fri Mar 17 21:39:55 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

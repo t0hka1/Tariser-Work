@@ -1,0 +1,73 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:32:34 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:32:38 2023 - ERROR - pkgs:(djvulibre) not found
+spawn any2djvu test.pdf
+couldn't execute "any2djvu": no such file or directory
+    while executing
+"spawn any2djvu test.pdf"
+Fri Mar 17 12:32:39 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:32:39 2023 - ERROR - Check test.djvu not exist.
+Fri Mar 17 12:32:40 2023 - ERROR - oe_test_djvulibre_03.sh line 42
+Fri Mar 17 12:32:40 2023 - ERROR - Check ddjvu --help failed.
+Fri Mar 17 12:32:41 2023 - ERROR - oe_test_djvulibre_03.sh line 45
+oe_test_djvulibre_03.sh: line 46: ddjvu: command not found
+Fri Mar 17 12:32:41 2023 - ERROR - Check ddjvu -verbose failed.
+Fri Mar 17 12:32:42 2023 - ERROR - oe_test_djvulibre_03.sh line 47
+Fri Mar 17 12:32:42 2023 - ERROR - Check ddjvu1 not exist.
+Fri Mar 17 12:32:42 2023 - ERROR - oe_test_djvulibre_03.sh line 49
+oe_test_djvulibre_03.sh: line 50: ddjvu: command not found
+Fri Mar 17 12:32:43 2023 - ERROR - Check ddjvu -format=pgm failed.
+Fri Mar 17 12:32:44 2023 - ERROR - oe_test_djvulibre_03.sh line 51
+Fri Mar 17 12:32:44 2023 - ERROR - Check ddjvu1.pgm not exist.
+Fri Mar 17 12:32:44 2023 - ERROR - oe_test_djvulibre_03.sh line 53
+oe_test_djvulibre_03.sh: line 54: ddjvu: command not found
+Fri Mar 17 12:32:45 2023 - ERROR - Check ddjvu -aspect=no failed.
+Fri Mar 17 12:32:45 2023 - ERROR - oe_test_djvulibre_03.sh line 55
+Fri Mar 17 12:32:46 2023 - ERROR - Check ddjvu2 not exist.
+Fri Mar 17 12:32:46 2023 - ERROR - oe_test_djvulibre_03.sh line 57
+oe_test_djvulibre_03.sh: line 58: ddjvu: command not found
+Fri Mar 17 12:32:47 2023 - ERROR - Check ddjvu -mode=mask failed.
+Fri Mar 17 12:32:47 2023 - ERROR - oe_test_djvulibre_03.sh line 59
+Fri Mar 17 12:32:48 2023 - ERROR - Check ddjvu3 not exist.
+Fri Mar 17 12:32:48 2023 - ERROR - oe_test_djvulibre_03.sh line 61
+oe_test_djvulibre_03.sh: line 62: ddjvu: command not found
+Fri Mar 17 12:32:49 2023 - ERROR - Check ddjvu -mode=foreground failed.
+Fri Mar 17 12:32:49 2023 - ERROR - oe_test_djvulibre_03.sh line 63
+Fri Mar 17 12:32:50 2023 - ERROR - Check ddjvu4 not exist.
+Fri Mar 17 12:32:50 2023 - ERROR - oe_test_djvulibre_03.sh line 65
+oe_test_djvulibre_03.sh: line 66: ddjvu: command not found
+Fri Mar 17 12:32:51 2023 - ERROR - Check ddjvu -mode=background failed.
+Fri Mar 17 12:32:51 2023 - ERROR - oe_test_djvulibre_03.sh line 67
+Fri Mar 17 12:32:52 2023 - ERROR - Check ddjvu5 not exist.
+Fri Mar 17 12:32:52 2023 - ERROR - oe_test_djvulibre_03.sh line 69
+oe_test_djvulibre_03.sh: line 70: ddjvu: command not found
+Fri Mar 17 12:32:53 2023 - ERROR - Check ddjvu -skip failed.
+Fri Mar 17 12:32:53 2023 - ERROR - oe_test_djvulibre_03.sh line 71
+Fri Mar 17 12:32:53 2023 - ERROR - Check ddjvu6 not exist.
+Fri Mar 17 12:32:54 2023 - ERROR - oe_test_djvulibre_03.sh line 73
+Fri Mar 17 12:32:54 2023 - ERROR - Check djvm --help failed.
+Fri Mar 17 12:32:55 2023 - ERROR - oe_test_djvulibre_03.sh line 76
+Fri Mar 17 12:32:56 2023 - ERROR - Check djvmcvt --help failed.
+Fri Mar 17 12:32:56 2023 - ERROR - oe_test_djvulibre_03.sh line 79
+oe_test_djvulibre_03.sh: line 80: djvmcvt: command not found
+Fri Mar 17 12:32:56 2023 - ERROR - Check djvmcvt -b failed.
+Fri Mar 17 12:32:57 2023 - ERROR - oe_test_djvulibre_03.sh line 81
+Fri Mar 17 12:32:58 2023 - ERROR - Check djvmcvt.djvu not exist.
+Fri Mar 17 12:32:58 2023 - ERROR - oe_test_djvulibre_03.sh line 83
+oe_test_djvulibre_03.sh: line 84: djvmcvt: command not found
+Fri Mar 17 12:32:58 2023 - ERROR - Check djvmcvt -i failed.
+Fri Mar 17 12:32:59 2023 - ERROR - oe_test_djvulibre_03.sh line 85
+Fri Mar 17 12:32:59 2023 - ERROR - Check djvmcvt1.djvu not exist.
+Fri Mar 17 12:33:00 2023 - ERROR - oe_test_djvulibre_03.sh line 87
+Fri Mar 17 12:33:00 2023 - INFO  - End to run test.
+Fri Mar 17 12:33:01 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:33:01 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:33:02 2023 - WARN  - no thing to do.
+Fri Mar 17 12:33:02 2023 - INFO  - End to restore the test environment.

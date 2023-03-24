@@ -1,0 +1,45 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:19:13 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:19:16 2023 - ERROR - pkgs:(rubygem-bundler) not found
+oe_test_rubygem-bundler_bundle_12.sh: line 29: bundle: command not found
+Fri Mar 17 22:19:17 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 22:19:17 2023 - INFO  - Start to run test.
+oe_test_rubygem-bundler_bundle_12.sh: line 35: bundle: command not found
+Fri Mar 17 22:19:18 2023 - ERROR - Check bundle lock --minor failed.
+Fri Mar 17 22:19:18 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 36
+oe_test_rubygem-bundler_bundle_12.sh: line 37: bundle: command not found
+Fri Mar 17 22:19:19 2023 - ERROR - Check bundle lock --minor failed.
+Fri Mar 17 22:19:20 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 38
+oe_test_rubygem-bundler_bundle_12.sh: line 39: bundle: command not found
+Fri Mar 17 22:19:20 2023 - ERROR - Check bundle lock --minor failed.
+Fri Mar 17 22:19:21 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 40
+oe_test_rubygem-bundler_bundle_12.sh: line 41: bundle: command not found
+Fri Mar 17 22:19:21 2023 - ERROR - Check bundle lock --minor failed.
+Fri Mar 17 22:19:22 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 42
+oe_test_rubygem-bundler_bundle_12.sh: line 43: bundle: command not found
+Fri Mar 17 22:19:22 2023 - ERROR - Check bundle lock --minor failed.
+Fri Mar 17 22:19:23 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 44
+oe_test_rubygem-bundler_bundle_12.sh: line 45: bundle: command not found
+Fri Mar 17 22:19:23 2023 - ERROR - Check bundle lock --minor failed.
+Fri Mar 17 22:19:24 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 46
+oe_test_rubygem-bundler_bundle_12.sh: line 47: bundle: command not found
+Fri Mar 17 22:19:24 2023 - ERROR - Check bundle platform failed.
+Fri Mar 17 22:19:25 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 48
+oe_test_rubygem-bundler_bundle_12.sh: line 49: bundle: command not found
+Fri Mar 17 22:19:25 2023 - ERROR - Check bundle platform --ruby failed.
+Fri Mar 17 22:19:26 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 50
+oe_test_rubygem-bundler_bundle_12.sh: line 51: bundle: command not found
+Fri Mar 17 22:19:26 2023 - ERROR - Check bundle cache failed.
+Fri Mar 17 22:19:27 2023 - ERROR - oe_test_rubygem-bundler_bundle_12.sh line 52
+Fri Mar 17 22:19:27 2023 - INFO  - End to run test.
+Fri Mar 17 22:19:28 2023 - ERROR - failed to execute the case.
+Fri Mar 17 22:19:28 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 22:19:29 2023 - WARN  - no thing to do.
+Fri Mar 17 22:19:29 2023 - INFO  - End to restore the test environment.

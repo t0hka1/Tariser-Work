@@ -1,0 +1,28 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:33:39 2023 - INFO  - Start environment preparation.
+../common/lib.sh: line 29: rpm: command not found
+Fri Mar 17 15:34:04 2023 - ERROR - pkgs:(java--devel) not found
+Fri Mar 17 15:36:59 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:36:59 2023 - INFO  - Start testing...
+The JAVA_HOME environment variable is not defined correctly
+This environment variable is needed to run this program
+NB: JAVA_HOME should point to a JDK not a JRE
+Fri Mar 17 15:37:01 2023 - ERROR - oe_test_junit5_junit4.sh line 38
+The JAVA_HOME environment variable is not defined correctly
+This environment variable is needed to run this program
+NB: JAVA_HOME should point to a JDK not a JRE
+Fri Mar 17 15:37:02 2023 - ERROR - oe_test_junit5_junit4.sh line 40
+Fri Mar 17 15:37:02 2023 - ERROR - oe_test_junit5_junit4.sh line 42
+Fri Mar 17 15:37:03 2023 - ERROR - oe_test_junit5_junit4.sh line 44
+/root/GitRepo/mugen-debian-riscv/testcases/cli-test/junit5/oe_test_junit5_junit4
+Fri Mar 17 15:37:05 2023 - INFO  - Finish test!
+Fri Mar 17 15:37:05 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:37:06 2023 - INFO  - start environment cleanup.
+Fri Mar 17 15:38:16 2023 - INFO  - Finish environment cleanup!

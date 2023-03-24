@@ -1,0 +1,101 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:54:43 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 18:55:03 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 18:55:04 2023 - INFO  - Start to run test.
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test1.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:04 2023 - ERROR - oe_test_optipng_02.sh line 39
+Fri Mar 17 18:55:05 2023 - ERROR - Filter failure
+Fri Mar 17 18:55:05 2023 - ERROR - oe_test_optipng_02.sh line 41
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test2.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:06 2023 - ERROR - oe_test_optipng_02.sh line 43
+Fri Mar 17 18:55:07 2023 - ERROR - Interlaced scan failed
+Fri Mar 17 18:55:07 2023 - ERROR - oe_test_optipng_02.sh line 45
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test2.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:08 2023 - ERROR - oe_test_optipng_02.sh line 47
+Fri Mar 17 18:55:09 2023 - ERROR - Non-interlaced scan failed
+Fri Mar 17 18:55:09 2023 - ERROR - oe_test_optipng_02.sh line 49
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test3.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:10 2023 - ERROR - oe_test_optipng_02.sh line 51
+Fri Mar 17 18:55:10 2023 - ERROR - Failed to set zlib
+Fri Mar 17 18:55:11 2023 - ERROR - oe_test_optipng_02.sh line 53
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test4.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:12 2023 - ERROR - oe_test_optipng_02.sh line 55
+Fri Mar 17 18:55:12 2023 - ERROR - Report printing failed
+Fri Mar 17 18:55:13 2023 - ERROR - oe_test_optipng_02.sh line 57
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test5.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:13 2023 - ERROR - oe_test_optipng_02.sh line 59
+Fri Mar 17 18:55:14 2023 - ERROR - Failed to set nb or nc or np or nx
+Fri Mar 17 18:55:15 2023 - ERROR - oe_test_optipng_02.sh line 61
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test6.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:15 2023 - ERROR - oe_test_optipng_02.sh line 63
+** Warning: The option -log is deprecated; use shell redirection
+
+** Processing: test7.png
+Error: Unrecognized image file format
+
+** Status report
+1 file(s) have been processed.
+1 error(s) have been encountered.
+Fri Mar 17 18:55:16 2023 - ERROR - oe_test_optipng_02.sh line 67
+Fri Mar 17 18:55:16 2023 - ERROR - Failed to delete metadata
+Fri Mar 17 18:55:17 2023 - ERROR - oe_test_optipng_02.sh line 69
+Fri Mar 17 18:55:17 2023 - INFO  - End to run test.
+Fri Mar 17 18:55:18 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:55:18 2023 - INFO  - start environment cleanup.
+Fri Mar 17 18:55:34 2023 - INFO  - Finish environment cleanup!

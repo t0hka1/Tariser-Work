@@ -1,0 +1,18 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:06:44 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 13:06:45 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 13:06:46 2023 - INFO  - Start testing...
+find: ‘/etc/systemd/system/multi-user.target.wants/e2scrub_reap.service’: No such file or directory
+Created symlink /etc/systemd/system/multi-user.target.wants/e2scrub_reap.service → /lib/systemd/system/e2scrub_reap.service.
+/etc/systemd/system/multi-user.target.wants/e2scrub_reap.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Fri Mar 17 13:06:57 2023 - INFO  - Finish test!
+Fri Mar 17 13:06:58 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 13:06:58 2023 - INFO  - oe_test_service_e2scrub_reap.sh post_test

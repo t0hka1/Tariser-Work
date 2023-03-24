@@ -1,0 +1,46 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:51:36 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 16:51:39 2023 - INFO  - pkgs:(lvm2) is already installed
+Fri Mar 17 16:51:47 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 16:51:47 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+Fri Mar 17 16:51:48 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 35
+Fri Mar 17 16:51:49 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 37
+  No device found for /dev/.
+Fri Mar 17 16:51:50 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 39
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:51:51 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 41
+Fri Mar 17 16:51:52 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 43
+  No command with matching syntax recognised.  Run 'vgrename --help' for more information.
+Fri Mar 17 16:51:53 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 47
+Fri Mar 17 16:51:53 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 49
+  Volume group "new" not found
+  Cannot process volume group new
+Fri Mar 17 16:51:54 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 51
+Fri Mar 17 16:51:55 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 53
+  Volume group "test" not found
+  Cannot process volume group test
+Fri Mar 17 16:51:56 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 55
+Fri Mar 17 16:51:57 2023 - ERROR - oe_test_lvm2_vgrename_001.sh line 57
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  LVM version:     2.03.11(2) (2021-01-08)
+  vgrename - Rename a volume group
+Fri Mar 17 16:51:58 2023 - INFO  - End executing testcase!
+Fri Mar 17 16:51:58 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:51:59 2023 - INFO  - Start environment cleanup.
+  Volume group "new" not found
+  Cannot process volume group new
+  No device found for /dev/.
+Fri Mar 17 16:52:00 2023 - WARN  - no thing to do.
+Fri Mar 17 16:52:00 2023 - INFO  - Finish environment cleanup.

@@ -1,0 +1,56 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:28:17 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:28:21 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_ls_monitor.sh: line 29: rpm: command not found
+Fri Mar 17 16:28:22 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:28:23 2023 - INFO  - Start to run test.
+oe_test_lxc_ls_monitor.sh: line 35: lxc-create: command not found
+Fri Mar 17 16:28:23 2023 - ERROR - Failed to set up container.
+Fri Mar 17 16:28:24 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 36
+Fri Mar 17 16:28:24 2023 - ERROR - Check lxc-ls --help failed.
+Fri Mar 17 16:28:25 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 38
+Fri Mar 17 16:28:25 2023 - ERROR - Check lxc-ls --usage failed.
+Fri Mar 17 16:28:26 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 40
+oe_test_lxc_ls_monitor.sh: line 41: lxc-ls: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:28:26 2023 - ERROR - Check lxc-ls --version failed.
+Fri Mar 17 16:28:27 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 42
+oe_test_lxc_ls_monitor.sh: line 43: lxc-ls: command not found
+Fri Mar 17 16:28:28 2023 - ERROR - Failed to list myEuler1.
+Fri Mar 17 16:28:28 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 44
+oe_test_lxc_ls_monitor.sh: line 45: lxc-ls: command not found
+Fri Mar 17 16:28:29 2023 - ERROR - Check lxc-ls --stopped failed.
+Fri Mar 17 16:28:29 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 46
+oe_test_lxc_ls_monitor.sh: line 47: lxc-start: command not found
+Fri Mar 17 16:28:30 2023 - ERROR - Check lxc-start -n failed.
+Fri Mar 17 16:28:30 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 48
+oe_test_lxc_ls_monitor.sh: line 49: lxc-ls: command not found
+Fri Mar 17 16:28:31 2023 - ERROR - Check lxc-ls --running failed.
+Fri Mar 17 16:28:32 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 50
+oe_test_lxc_ls_monitor.sh: line 51: lxc-ls: command not found
+Fri Mar 17 16:28:32 2023 - ERROR - Check lxc-ls --defined failed.
+Fri Mar 17 16:28:33 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 52
+Fri Mar 17 16:28:33 2023 - ERROR - Check lxc-monitor --help failed.
+Fri Mar 17 16:28:34 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 55
+Fri Mar 17 16:28:34 2023 - ERROR - Check lxc-monitor --usage failed.
+Fri Mar 17 16:28:35 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 57
+oe_test_lxc_ls_monitor.sh: line 58: lxc-monitor: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:28:36 2023 - ERROR - Check lxc-monitor --version failed.
+Fri Mar 17 16:28:36 2023 - ERROR - oe_test_lxc_ls_monitor.sh line 59
+Fri Mar 17 16:28:37 2023 - INFO  - End to run test.
+Fri Mar 17 16:28:37 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:28:38 2023 - INFO  - Start to restore the tet environment.
+oe_test_lxc_ls_monitor.sh: line 65: lxc-stop: command not found
+oe_test_lxc_ls_monitor.sh: line 66: lxc-destroy: command not found
+Fri Mar 17 16:28:38 2023 - WARN  - no thing to do.
+Fri Mar 17 16:28:39 2023 - INFO  - End to restore the tet environment.

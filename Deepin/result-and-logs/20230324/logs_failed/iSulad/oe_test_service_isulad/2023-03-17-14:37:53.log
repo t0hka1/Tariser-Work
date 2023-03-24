@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:37:55 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 14:38:00 2023 - ERROR - pkgs:(iSulad) not found
+Fri Mar 17 14:38:01 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 14:38:01 2023 - INFO  - Start to run test.
+Failed to restart isulad.service: Unit isulad.service not found.
+Fri Mar 17 14:38:02 2023 - ERROR - isulad.service restart failed
+Fri Mar 17 14:38:02 2023 - ERROR - ../common/common_lib.sh line 34
+Unit isulad.service could not be found.
+Fri Mar 17 14:38:09 2023 - ERROR - isulad.service restart failed
+Fri Mar 17 14:38:09 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop isulad.service: Unit isulad.service not loaded.
+Fri Mar 17 14:38:10 2023 - ERROR - isulad.service stop failed
+Fri Mar 17 14:38:11 2023 - ERROR - ../common/common_lib.sh line 39
+Unit isulad.service could not be found.
+Fri Mar 17 14:38:17 2023 - ERROR - isulad.service stop failed
+Fri Mar 17 14:38:18 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start isulad.service: Unit isulad.service not found.
+Fri Mar 17 14:38:18 2023 - ERROR - isulad.service start failed
+Fri Mar 17 14:38:19 2023 - ERROR - ../common/common_lib.sh line 44
+Unit isulad.service could not be found.
+Fri Mar 17 14:38:25 2023 - ERROR - isulad.service start failed
+Fri Mar 17 14:38:26 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for isulad.service: No such file or directory
+Fri Mar 17 14:38:26 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start isulad.service: Unit isulad.service not found.
+sed: can't read /usr/lib/systemd/system/isulad.service: No such file or directory
+Failed to reload isulad.service: Unit isulad.service not found.
+Fri Mar 17 14:38:34 2023 - ERROR - isulad.service reload failed
+Fri Mar 17 14:38:34 2023 - ERROR - oe_test_service_isulad.sh line 40
+Unit isulad.service could not be found.
+Fri Mar 17 14:38:35 2023 - ERROR - isulad.service reload causes the service status to change
+Fri Mar 17 14:38:36 2023 - ERROR - oe_test_service_isulad.sh line 42
+Fri Mar 17 14:38:36 2023 - INFO  - End to run test.
+Fri Mar 17 14:38:37 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:38:37 2023 - INFO  - Start to restore the test environment.
+sed: can't read /usr/lib/systemd/system/isulad.service: No such file or directory
+Failed to reload isulad.service: Unit isulad.service not found.
+Fri Mar 17 14:38:44 2023 - WARN  - no thing to do.
+Fri Mar 17 14:38:44 2023 - INFO  - End to restore the test environment.

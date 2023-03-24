@@ -1,0 +1,35 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:50:09 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 16:50:13 2023 - INFO  - pkgs:(lvm2) is already installed
+Fri Mar 17 16:50:20 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 16:50:20 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+Fri Mar 17 16:50:21 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 35
+Fri Mar 17 16:50:22 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 37
+Fri Mar 17 16:50:23 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 39
+Fri Mar 17 16:50:24 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 41
+Fri Mar 17 16:50:25 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 43
+Fri Mar 17 16:50:25 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 45
+Fri Mar 17 16:50:26 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 47
+Fri Mar 17 16:50:27 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 49
+  pvdisplay - Display various attributes of physical volume(s)
+  pvdisplay
+  TEST MODE: Metadata will NOT be updated and volumes will not be (de)activated.
+Fri Mar 17 16:50:28 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 53
+Fri Mar 17 16:50:29 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 55
+Fri Mar 17 16:50:30 2023 - ERROR - oe_test_lvm2_pvdisplay_002.sh line 57
+  pvdisplay - Display various attributes of physical volume(s)
+  pvdisplay
+Fri Mar 17 16:50:31 2023 - INFO  - End executing testcase!
+Fri Mar 17 16:50:31 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:50:32 2023 - INFO  - Start environment cleanup.
+  No device found for /dev/.
+Fri Mar 17 16:50:33 2023 - WARN  - no thing to do.
+Fri Mar 17 16:50:33 2023 - INFO  - Finish environment cleanup.

@@ -1,0 +1,50 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:10:21 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 18:12:03 2023 - INFO  - pkgs:(open-iscsi net-tools) is already installed
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 140, in <module>
+    exitcode, output = apt_install(args.pkgs, args.node, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 49, in apt_install
+    conn = ssh_cmd.pssh_conn(
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/ssh_cmd.py", line 53, in pssh_conn
+    conn.connect(ip, port, user, password, timeout=timeout)
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 203, in _families_and_addresses
+    addrinfos = socket.getaddrinfo(
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/get_test_device.py", line 127, in <module>
+    print(get_test_disk(args.node))
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/get_test_device.py", line 98, in get_test_disk
+    conn = ssh_cmd.pssh_conn(
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/ssh_cmd.py", line 53, in pssh_conn
+    conn.connect(ip, port, user, password, timeout=timeout)
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 203, in _families_and_addresses
+    addrinfos = socket.getaddrinfo(
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+cat: /sys/class/net//address: No such file or directory
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 18:12:10 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 18:12:11 2023 - WARN  - the connect port using the default configuration
+spawn scp -P 22 -r ./common/target_config.json @:/etc/target/saveconfig.json
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
+Fri Mar 17 18:12:12 2023 - ERROR - Failed in remote SCP operation: 255
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 18:12:16 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 18:12:21 2023 - INFO  - Start to restore the test environment.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 18:12:22 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 18:12:22 2023 - WARN  - no thing to do.
+Fri Mar 17 18:12:23 2023 - INFO  - Finish restoring the test environment.

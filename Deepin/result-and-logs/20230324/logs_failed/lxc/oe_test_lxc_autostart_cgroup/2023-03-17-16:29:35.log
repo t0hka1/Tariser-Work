@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:29:37 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:29:41 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_autostart_cgroup.sh: line 29: rpm: command not found
+Fri Mar 17 16:29:41 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:29:42 2023 - INFO  - Start to run test.
+oe_test_lxc_autostart_cgroup.sh: line 35: lxc-create: command not found
+Fri Mar 17 16:29:43 2023 - ERROR - Failed to set up container.
+Fri Mar 17 16:29:43 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 36
+oe_test_lxc_autostart_cgroup.sh: line 37: lxc-start: command not found
+Fri Mar 17 16:29:44 2023 - ERROR - Failed to start container.
+Fri Mar 17 16:29:44 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 38
+Fri Mar 17 16:29:45 2023 - ERROR - Check lxc-autostart --help failed.
+Fri Mar 17 16:29:45 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 41
+Fri Mar 17 16:29:46 2023 - ERROR - Check lxc-autostart --usage failed.
+Fri Mar 17 16:29:46 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 43
+oe_test_lxc_autostart_cgroup.sh: line 44: lxc-autostart: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:29:47 2023 - ERROR - Check lxc-autostart --version failed.
+Fri Mar 17 16:29:47 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 45
+oe_test_lxc_autostart_cgroup.sh: line 46: lxc-autostart: command not found
+Fri Mar 17 16:29:48 2023 - ERROR - Check lxc-autostart -L failed.
+Fri Mar 17 16:29:48 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 47
+oe_test_lxc_autostart_cgroup.sh: line 48: lxc-autostart: command not found
+Fri Mar 17 16:29:49 2023 - ERROR - Check lxc-autostart -r failed.
+Fri Mar 17 16:29:49 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 49
+Fri Mar 17 16:29:50 2023 - ERROR - Check lxc-cgroup --help failed.
+Fri Mar 17 16:29:51 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 52
+Fri Mar 17 16:29:51 2023 - ERROR - Check lxc-cgroup --usage failed.
+Fri Mar 17 16:29:52 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 54
+oe_test_lxc_autostart_cgroup.sh: line 55: lxc-cgroup: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:29:52 2023 - ERROR - Check lxc-cgroup --version failed.
+Fri Mar 17 16:29:53 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 56
+oe_test_lxc_autostart_cgroup.sh: line 57: lxc-cgroup: command not found
+Fri Mar 17 16:29:53 2023 - ERROR - Check lxc-cgroup -n failed.
+Fri Mar 17 16:29:54 2023 - ERROR - oe_test_lxc_autostart_cgroup.sh line 58
+Fri Mar 17 16:29:55 2023 - INFO  - End to run test.
+Fri Mar 17 16:29:55 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:29:55 2023 - INFO  - Start to restore the tet environment.
+oe_test_lxc_autostart_cgroup.sh: line 64: lxc-stop: command not found
+oe_test_lxc_autostart_cgroup.sh: line 65: lxc-destroy: command not found
+Fri Mar 17 16:29:56 2023 - WARN  - no thing to do.
+Fri Mar 17 16:29:57 2023 - INFO  - End to restore the tet environment.

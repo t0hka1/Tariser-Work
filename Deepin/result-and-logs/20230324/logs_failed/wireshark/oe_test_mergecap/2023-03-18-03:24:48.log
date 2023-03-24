@@ -1,0 +1,43 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 03:24:51 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 03:24:55 2023 - INFO  - pkgs:(wireshark) is already installed
+Sat Mar 18 03:24:55 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 03:24:56 2023 - INFO  - Start to run test.
+Usage: mergecap [options] -w <outfile>|- <infile> [<infile> ...]
+Mergecap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)
+
+Copyright 1998-2021 Gerald Combs <gerald@wireshark.org> and contributors.
+License GPLv2+: GNU GPL version 2 or later <https://www.gnu.org/licenses/gpl-2.0.html>
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiled (64-bit) with GLib 2.72.1, with zlib 1.2.11.
+
+Running on Linux 5.10.0-7.oe2203.riscv64, with 8029 MB of physical memory, with
+locale C, with zlib 1.2.11, binary plugins supported (0 loaded).
+
+Built using gcc 11.2.0.
+Capturing on 'eth0'
+File: testfile1
+
+Packets: 2 
+Packets: 3 
+Packets: 6 
+Packets: 7 
+Packets: 10 
+Packets: 14 
+Packets: 16 
+Packets: 17 
+Packets: 18 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+Number of packets:   20
+Sat Mar 18 03:54:49 2023 - ERROR - Timeout : Command 'bash oe_test_mergecap.sh' timed out after 1799.9994750080004 seconds

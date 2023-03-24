@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:15:40 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 00:16:01 2023 - INFO  - pkgs:(uuid vim) is already installed
+Sat Mar 18 00:16:02 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 00:16:02 2023 - INFO  - Start to run test.
+116f7204-c522-11ed-a11c-525400114501
+c6e82eb0-a35c-45ae-a1fe-89f5af7d9841
+2f67490d-55a4-395e-b540-457195f7aa95
+6bd69026-2b9c-5629-82dd-f92f408b660e
+10
+11f9e696-c522-11ed-8590-525400114501
+11faeaa0-c522-11ed-8dac-525400114501
+11fb0120-c522-11ed-aca4-525400114501
+11fb0684-c522-11ed-a0a6-525400114501
+11fb0a08-c522-11ed-a8f4-525400114501
+11fb0d82-c522-11ed-ad86-525400114501
+11fb10de-c522-11ed-acaa-525400114501
+11fb1444-c522-11ed-9cb1-525400114501
+11fb17aa-c522-11ed-9fc2-525400114501
+11fb1b1a-c522-11ed-8dd0-525400114501
+00000000: 1202 04ca c522 11ed b8c5 5254 0011 4501  ....."....RT..E.
+1216362a-c522-11ed-ba42-525400114501
+122fdd82-c522-11ed-a82e-525400114501
+encode: STR:     122fdd82-c522-11ed-a82e-525400114501
+        SIV:     24174634649672891561236184267653989633
+decode: variant: DCE 1.1, ISO/IEC 11578:1996
+        version: 1 (time and node based)
+        content: time:  2023-03-18 00:16:04.304013.0 UTC
+                 clock: 10286 (usually random)
+                 node:  52:54:00:11:45:01 (local unicast)
+Sat Mar 18 00:16:05 2023 - INFO  - End of the test.
+Sat Mar 18 00:16:05 2023 - INFO  - succeed to execute the case.
+Sat Mar 18 00:16:06 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 00:16:06 2023 - WARN  - no thing to do.
+Sat Mar 18 00:16:07 2023 - INFO  - Finish restoring the test environment.

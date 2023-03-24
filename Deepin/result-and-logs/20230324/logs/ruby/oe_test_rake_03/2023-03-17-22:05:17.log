@@ -1,0 +1,54 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:05:20 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:05:24 2023 - ERROR - pkgs:(rubygem-rake) not found
+Fri Mar 17 22:05:24 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 22:05:25 2023 - INFO  - Start to run test.
+rake default
+    morning:turn_off_alarm
+rake morning:groom_myself
+rake morning:make_coffee
+rake morning:ready_for_the_day
+    turn_off_alarm
+    groom_myself
+    make_coffee
+    walk_dog
+rake morning:turn_off_alarm
+rake morning:walk_dog
+rake root:clean_tmp
+Hello world
+Dog walked.
+2, 3, 5, 7
+Turned off alarm. Would have liked 5 more minutes, though.
+Brushed teeth.
+Showered.
+Shaved.
+Turned off alarm. Would have liked 5 more minutes, though.
+** Invoke morning:make_coffee (first_time)
+** Execute morning:make_coffee
+Made 2 cups of coffee. Shakes are gone.
+rake morning:groom_myself       # Groom myself
+rake morning:make_coffee        # Make coffee
+rake morning:ready_for_the_day  # Ready for the day
+rake morning:turn_off_alarm     # Turn off alarm
+rake morning:walk_dog           # Walk dog
+Turned off alarm. Would have liked 5 more minutes, though.
+rake default                        /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rake_03/rakefile:50:in `<top (required)>'
+rake morning:groom_myself           /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rake_03/rakefile:27:in `block in <top (required)>'
+rake morning:make_coffee            /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rake_03/rakefile:34:in `block in <top (required)>'
+rake morning:ready_for_the_day      /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rake_03/rakefile:45:in `block in <top (required)>'
+rake morning:turn_off_alarm         /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rake_03/rakefile:22:in `block in <top (required)>'
+rake morning:walk_dog               /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rake_03/rakefile:40:in `block in <top (required)>'
+rake root:clean_tmp                 /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rake_03/rakefile:3:in `block in <top (required)>'
+Turned off alarm. Would have liked 5 more minutes, though.
+Fri Mar 17 22:05:53 2023 - INFO  - End of the test.
+Fri Mar 17 22:05:53 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 22:05:54 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 22:05:54 2023 - WARN  - no thing to do.
+Fri Mar 17 22:05:55 2023 - INFO  - Finish restoring the test environment.

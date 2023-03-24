@@ -1,0 +1,16 @@
+Fri Mar 17 21:08:44 2023 - INFO  - start to run testcase:oe_test_service_redis5-sentinel.
+Fri Mar 17 21:09:23 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 21:09:34 2023 - INFO  - End to run testcase:oe_test_service_redis5-sentinel.
+Fri Mar 17 21:09:35 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:09:39 2023 - INFO  - start to run testcase:oe_test_service_redis5.
+Fri Mar 17 21:10:17 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 21:10:27 2023 - INFO  - End to run testcase:oe_test_service_redis5.
+Fri Mar 17 21:10:28 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:10:31 2023 - INFO  - start to run testcase:oe_test_redis5_01.
+Fri Mar 17 21:10:51 2023 - ERROR - The case exit by code 15.
+Fri Mar 17 21:11:02 2023 - INFO  - End to run testcase:oe_test_redis5_01.
+Fri Mar 17 21:11:03 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:11:06 2023 - INFO  - start to run testcase:oe_test_redis5_02.
+Fri Mar 17 21:11:43 2023 - ERROR - The case exit by code 11.
+Fri Mar 17 21:11:54 2023 - INFO  - End to run testcase:oe_test_redis5_02.
+Fri Mar 17 21:11:54 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

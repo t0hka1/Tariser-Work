@@ -1,0 +1,36 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:02:35 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:02:39 2023 - ERROR - pkgs:(java-1.8.0-openjdk*) not found
+Fri Mar 17 15:02:40 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:02:40 2023 - INFO  - Start to run test.
+oe_test_openjdk_javap_jcmd.sh: line 35: javac: command not found
+oe_test_openjdk_javap_jcmd.sh: line 36: javap: command not found
+Fri Mar 17 15:02:41 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 37
+oe_test_openjdk_javap_jcmd.sh: line 38: javap: command not found
+Fri Mar 17 15:02:42 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 39
+oe_test_openjdk_javap_jcmd.sh: line 40: javap: command not found
+Fri Mar 17 15:02:42 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 41
+oe_test_openjdk_javap_jcmd.sh: line 42: javap: command not found
+Fri Mar 17 15:02:43 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 43
+oe_test_openjdk_javap_jcmd.sh: line 44: javap: command not found
+Fri Mar 17 15:02:43 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 45
+oe_test_openjdk_javap_jcmd.sh: line 46: javap: command not found
+Fri Mar 17 15:02:44 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 47
+oe_test_openjdk_javap_jcmd.sh: line 48: javap: command not found
+Fri Mar 17 15:02:45 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 49
+oe_test_openjdk_javap_jcmd.sh: line 51: jcmd: command not found
+Fri Mar 17 15:02:45 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 52
+oe_test_openjdk_javap_jcmd.sh: line 53: jcmd: command not found
+Fri Mar 17 15:02:46 2023 - ERROR - oe_test_openjdk_javap_jcmd.sh line 54
+Fri Mar 17 15:02:46 2023 - INFO  - End to run test.
+Fri Mar 17 15:02:47 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:02:47 2023 - INFO  - Need't to restore the tet environment.
+Fri Mar 17 15:02:48 2023 - WARN  - no thing to do.
+Fri Mar 17 15:02:48 2023 - INFO  - End to restore the test environment.

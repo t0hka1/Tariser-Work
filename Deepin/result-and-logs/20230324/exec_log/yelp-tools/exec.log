@@ -1,0 +1,12 @@
+Sat Mar 18 01:15:46 2023 - INFO  - start to run testcase:oe_test_yelp-build.
+Sat Mar 18 01:16:07 2023 - ERROR - The case exit by code 6.
+Sat Mar 18 01:16:18 2023 - INFO  - End to run testcase:oe_test_yelp-build.
+Sat Mar 18 01:16:18 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 01:16:22 2023 - INFO  - start to run testcase:oe_test_yelp-check.
+Sat Mar 18 01:16:38 2023 - ERROR - The case exit by code 2.
+Sat Mar 18 01:16:49 2023 - INFO  - End to run testcase:oe_test_yelp-check.
+Sat Mar 18 01:16:49 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 01:16:53 2023 - INFO  - start to run testcase:oe_test_yelp-new.
+Sat Mar 18 01:17:11 2023 - ERROR - The case exit by code 4.
+Sat Mar 18 01:17:22 2023 - INFO  - End to run testcase:oe_test_yelp-new.
+Sat Mar 18 01:17:23 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

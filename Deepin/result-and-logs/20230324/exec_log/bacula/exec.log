@@ -1,0 +1,12 @@
+Fri Mar 17 10:21:41 2023 - INFO  - start to run testcase:oe_test_service_bacula-dir.
+Fri Mar 17 10:22:21 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 10:22:32 2023 - INFO  - End to run testcase:oe_test_service_bacula-dir.
+Fri Mar 17 10:22:32 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 10:22:36 2023 - INFO  - start to run testcase:oe_test_service_bacula-fd.
+Fri Mar 17 10:23:14 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 10:23:24 2023 - INFO  - End to run testcase:oe_test_service_bacula-fd.
+Fri Mar 17 10:23:25 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 10:23:29 2023 - INFO  - start to run testcase:oe_test_service_bacula-sd.
+Fri Mar 17 10:24:06 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 10:24:17 2023 - INFO  - End to run testcase:oe_test_service_bacula-sd.
+Fri Mar 17 10:24:17 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

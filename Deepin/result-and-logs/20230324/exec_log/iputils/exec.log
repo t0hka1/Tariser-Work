@@ -1,0 +1,8 @@
+Fri Mar 17 14:54:52 2023 - INFO  - start to run testcase:oe_test_service_ninfod.
+Fri Mar 17 14:55:24 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:55:35 2023 - INFO  - End to run testcase:oe_test_service_ninfod.
+Fri Mar 17 14:55:36 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:55:40 2023 - INFO  - start to run testcase:oe_test_service_rdisc.
+Fri Mar 17 14:56:11 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:56:22 2023 - INFO  - End to run testcase:oe_test_service_rdisc.
+Fri Mar 17 14:56:22 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

@@ -1,0 +1,24 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:50:24 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 21:50:27 2023 - INFO  - pkgs:(rsyslog) is already installed
+Fri Mar 17 21:50:28 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 21:50:29 2023 - INFO  - Start to run test.
+Mar 17 21:50:29 deepin-rv-builder-2 emerg: testemerg29649
+Mar 17 21:50:34 deepin-rv-builder-2 alert: testalert34118
+Mar 17 21:50:38 deepin-rv-builder-2 crit: testcrit38375
+Mar 17 21:50:42 deepin-rv-builder-2 err: testerr42623
+Mar 17 21:50:47 deepin-rv-builder-2 warning: testwarning46948
+Mar 17 21:50:51 deepin-rv-builder-2 notice: testnotice51239
+Mar 17 21:50:55 deepin-rv-builder-2 info: testinfo55560
+Mar 17 21:51:00 deepin-rv-builder-2 debug: testdebug59987
+Fri Mar 17 21:51:04 2023 - INFO  - End to run test.
+Fri Mar 17 21:51:04 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 21:51:05 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 21:51:06 2023 - INFO  - End to restore the test environment.

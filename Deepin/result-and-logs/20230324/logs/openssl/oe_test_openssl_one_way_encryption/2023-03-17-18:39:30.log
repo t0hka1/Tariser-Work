@@ -1,0 +1,14 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:39:33 2023 - INFO  - Start to run test.
+SHA1(word)= 09:fa:c8:db:fd:27:bd:9b:4d:23:a0:0e:b6:48:aa:75:17:89:53:6d
+Fri Mar 17 18:39:33 2023 - INFO  - End to run test.
+Fri Mar 17 18:39:34 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 18:39:34 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 18:39:35 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,52 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 01:09:57 2023 - INFO  - Start environmental preparation.
+Sat Mar 18 01:10:02 2023 - INFO  - End of environmental preparation!
+Sat Mar 18 01:10:03 2023 - INFO  - Start testing...
+Failed to restart xinetd.service: Unit xinetd.service not found.
+Sat Mar 18 01:10:04 2023 - ERROR - xinetd.service restart failed
+Sat Mar 18 01:10:04 2023 - ERROR - ../common/common_lib.sh line 34
+Unit xinetd.service could not be found.
+Sat Mar 18 01:10:11 2023 - ERROR - xinetd.service restart failed
+Sat Mar 18 01:10:11 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop xinetd.service: Unit xinetd.service not loaded.
+Sat Mar 18 01:10:12 2023 - ERROR - xinetd.service stop failed
+Sat Mar 18 01:10:12 2023 - ERROR - ../common/common_lib.sh line 39
+Unit xinetd.service could not be found.
+Sat Mar 18 01:10:19 2023 - ERROR - xinetd.service stop failed
+Sat Mar 18 01:10:19 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start xinetd.service: Unit xinetd.service not found.
+Sat Mar 18 01:10:20 2023 - ERROR - xinetd.service start failed
+Sat Mar 18 01:10:20 2023 - ERROR - ../common/common_lib.sh line 44
+Unit xinetd.service could not be found.
+Sat Mar 18 01:10:27 2023 - ERROR - xinetd.service start failed
+Sat Mar 18 01:10:27 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for xinetd.service: No such file or directory
+Sat Mar 18 01:10:28 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start xinetd.service: Unit xinetd.service not found.
+sed: can't read /usr/lib/systemd/system/xinetd.service: No such file or directory
+Failed to reload xinetd.service: Unit xinetd.service not found.
+Sat Mar 18 01:10:34 2023 - ERROR - xinetd.service reload failed
+Sat Mar 18 01:10:34 2023 - ERROR - oe_test_service_xinetd.sh line 40
+Unit xinetd.service could not be found.
+Sat Mar 18 01:10:35 2023 - ERROR - xinetd.service reload causes the service status to change
+Sat Mar 18 01:10:36 2023 - ERROR - oe_test_service_xinetd.sh line 42
+Sat Mar 18 01:10:36 2023 - INFO  - Finish test!
+Sat Mar 18 01:10:37 2023 - ERROR - failed to execute the case.
+Sat Mar 18 01:10:37 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/xinetd.service: No such file or directory
+Failed to reload xinetd.service: Unit xinetd.service not found.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage xinetd is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'xinetd' has no installation candidate"
+Sat Mar 18 01:10:46 2023 - INFO  - Finish environment cleanup!

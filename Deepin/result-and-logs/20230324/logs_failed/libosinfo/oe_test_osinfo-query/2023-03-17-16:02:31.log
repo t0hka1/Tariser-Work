@@ -1,0 +1,29 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:02:33 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:02:37 2023 - ERROR - pkgs:(libosinfo) not found
+Fri Mar 17 16:02:37 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:02:38 2023 - INFO  - Start to run test.
+oe_test_osinfo-query.sh: line 35: osinfo-query: command not found
+Fri Mar 17 16:02:39 2023 - ERROR - oe_test_osinfo-query.sh line 36
+oe_test_osinfo-query.sh: line 37: osinfo-query: command not found
+Fri Mar 17 16:02:39 2023 - ERROR - oe_test_osinfo-query.sh line 38
+oe_test_osinfo-query.sh: line 39: osinfo-query: command not found
+Fri Mar 17 16:02:40 2023 - ERROR - oe_test_osinfo-query.sh line 40
+oe_test_osinfo-query.sh: line 41: osinfo-query: command not found
+Fri Mar 17 16:02:40 2023 - ERROR - oe_test_osinfo-query.sh line 42
+oe_test_osinfo-query.sh: line 43: osinfo-query: command not found
+Fri Mar 17 16:02:41 2023 - ERROR - oe_test_osinfo-query.sh line 44
+oe_test_osinfo-query.sh: line 45: osinfo-query: command not found
+Fri Mar 17 16:02:42 2023 - ERROR - oe_test_osinfo-query.sh line 46
+Fri Mar 17 16:02:42 2023 - INFO  - End of the test.
+Fri Mar 17 16:02:43 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:02:43 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 16:02:43 2023 - WARN  - no thing to do.
+Fri Mar 17 16:02:44 2023 - INFO  - Finish restoring the test environment.

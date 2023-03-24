@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:09:00 2023 - INFO  - Start to prepare the test environment.
+../common/common_libmemcached.sh: line 30: memcached: command not found
+Fri Mar 17 16:09:11 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:09:12 2023 - INFO  - Start to run test.
+spawn telnet 127.0.0.1 11211
+couldn't execute "telnet": no such file or directory
+    while executing
+"spawn telnet 127.0.0.1 11211"
+oe_test_memtouch.sh: line 39: memexist: command not found
+Fri Mar 17 16:09:13 2023 - ERROR - oe_test_memtouch.sh line 40
+oe_test_memtouch.sh: line 41: memtouch: command not found
+Fri Mar 17 16:09:13 2023 - ERROR - oe_test_memtouch.sh line 42
+oe_test_memtouch.sh: line 43: memtouch: command not found
+Fri Mar 17 16:09:14 2023 - ERROR - oe_test_memtouch.sh line 44
+oe_test_memtouch.sh: line 45: memtouch: command not found
+Fri Mar 17 16:09:15 2023 - ERROR - oe_test_memtouch.sh line 46
+oe_test_memtouch.sh: line 47: memtouch: command not found
+Fri Mar 17 16:09:15 2023 - ERROR - oe_test_memtouch.sh line 48
+oe_test_memtouch.sh: line 50: memtouch: command not found
+Fri Mar 17 16:09:31 2023 - ERROR - oe_test_memtouch.sh line 51
+oe_test_memtouch.sh: line 52: memtouch: command not found
+Fri Mar 17 16:09:32 2023 - ERROR - oe_test_memtouch.sh line 53
+Fri Mar 17 16:09:33 2023 - INFO  - End of the test.
+Fri Mar 17 16:09:33 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:09:34 2023 - INFO  - Start to restore the test environment.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage libmemcached is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'libmemcached' has no installation candidate"
+Fri Mar 17 16:09:38 2023 - INFO  - Finish restoring the test environment.

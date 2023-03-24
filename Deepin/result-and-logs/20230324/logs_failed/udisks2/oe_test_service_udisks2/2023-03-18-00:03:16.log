@@ -1,0 +1,32 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:03:19 2023 - INFO  - Start environmental preparation.
+Sat Mar 18 00:03:24 2023 - INFO  - pkgs:(udisks2) is already installed
+Sat Mar 18 00:03:25 2023 - INFO  - End of environmental preparation!
+Sat Mar 18 00:03:25 2023 - INFO  - Start testing...
+     Active: active (running) since Sat 2023-03-18 00:03:27 UTC; 5s ago
+     Active: inactive (dead) since Sat 2023-03-18 00:03:33 UTC; 5s ago
+     Active: active (running) since Sat 2023-03-18 00:03:40 UTC; 5s ago
+find: ‘/etc/systemd/system/graphical.target.wants/udisks2.service’: No such file or directory
+Created symlink /etc/systemd/system/graphical.target.wants/udisks2.service → /lib/systemd/system/udisks2.service.
+/etc/systemd/system/graphical.target.wants/udisks2.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 18 00:03:26 deepin-rv-builder-2 udisksd[550]: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+Mar 18 00:03:26 deepin-rv-builder-2 udisksd[550]: Failed to load the 'mdraid' libblockdev plugin
+Mar 18 00:03:40 deepin-rv-builder-2 udisksd[571]: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
+Mar 18 00:03:40 deepin-rv-builder-2 udisksd[571]: Failed to load the 'mdraid' libblockdev plugin
+Sat Mar 18 00:03:58 2023 - ERROR - There is an error message for the log of udisks2.service
+Sat Mar 18 00:03:59 2023 - ERROR - ../common/common_lib.sh line 28
+Failed to reload udisks2.service: Job type reload is not applicable for unit udisks2.service.
+     Active: active (running) since Sat 2023-03-18 00:03:40 UTC; 19s ago
+Sat Mar 18 00:04:00 2023 - INFO  - Finish test!
+Sat Mar 18 00:04:00 2023 - ERROR - failed to execute the case.
+Sat Mar 18 00:04:01 2023 - INFO  - start environment cleanup.
+Sat Mar 18 00:04:01 2023 - WARN  - no thing to do.
+Sat Mar 18 00:04:02 2023 - INFO  - Finish environment cleanup!

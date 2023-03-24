@@ -1,0 +1,16 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:11:08 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:11:12 2023 - ERROR - pkgs:(jetty) not found
+Fri Mar 17 15:11:13 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 15:11:14 2023 - INFO  - Start to run test.
+oe_test_jetty_start.sh: line 33: cd: /usr/share/jetty/demo-base: No such file or directory
+Fri Mar 17 15:11:14 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 15:11:15 2023 - WARN  - no thing to do.
+Fri Mar 17 15:11:15 2023 - INFO  - Finish restoring the test environment.

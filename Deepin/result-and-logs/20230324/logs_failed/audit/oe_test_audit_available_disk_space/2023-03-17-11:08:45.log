@@ -1,0 +1,229 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:08:48 2023 - INFO  - Start to prepare the test environment.
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+sed: can't read /etc/audit/auditd.conf: No such file or directory
+Failed to restart auditd.service: Unit auditd.service not found.
+Fri Mar 17 11:08:50 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 11:08:51 2023 - INFO  - Start to run test.
+df: /tmp/log/audit/: No such file or directory
+dd: invalid number: ‘’
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:08:53 2023 - ERROR -  add rules failed
+Fri Mar 17 11:08:54 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:08:54 2023 - ERROR - second failed
+Fri Mar 17 11:08:55 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:09:13 2023 - ERROR - search first
+Fri Mar 17 11:09:13 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:09:15 2023 - ERROR -  add rules failed
+Fri Mar 17 11:09:16 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:09:17 2023 - ERROR - second failed
+Fri Mar 17 11:09:17 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:09:35 2023 - ERROR - search first
+Fri Mar 17 11:09:36 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:09:38 2023 - ERROR -  add rules failed
+Fri Mar 17 11:09:39 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:09:39 2023 - ERROR - second failed
+Fri Mar 17 11:09:40 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:09:58 2023 - ERROR - search first
+Fri Mar 17 11:09:59 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:10:01 2023 - ERROR -  add rules failed
+Fri Mar 17 11:10:02 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:10:02 2023 - ERROR - second failed
+Fri Mar 17 11:10:03 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:10:21 2023 - ERROR - search first
+Fri Mar 17 11:10:21 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:10:24 2023 - ERROR -  add rules failed
+Fri Mar 17 11:10:24 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:10:25 2023 - ERROR - second failed
+Fri Mar 17 11:10:25 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:10:43 2023 - ERROR - search first
+Fri Mar 17 11:10:43 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:10:46 2023 - ERROR -  add rules failed
+Fri Mar 17 11:10:46 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:10:47 2023 - ERROR - second failed
+Fri Mar 17 11:10:47 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:11:05 2023 - ERROR - search first
+Fri Mar 17 11:11:05 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:11:08 2023 - ERROR -  add rules failed
+Fri Mar 17 11:11:08 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:11:09 2023 - ERROR - second failed
+Fri Mar 17 11:11:10 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:11:27 2023 - ERROR - search first
+Fri Mar 17 11:11:28 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:11:30 2023 - ERROR -  add rules failed
+Fri Mar 17 11:11:30 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:11:31 2023 - ERROR - second failed
+Fri Mar 17 11:11:32 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:11:49 2023 - ERROR - search first
+Fri Mar 17 11:11:50 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:11:53 2023 - ERROR -  add rules failed
+Fri Mar 17 11:11:53 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:11:54 2023 - ERROR - second failed
+Fri Mar 17 11:11:54 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:12:12 2023 - ERROR - search first
+Fri Mar 17 11:12:12 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:12:15 2023 - ERROR -  add rules failed
+Fri Mar 17 11:12:15 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:12:17 2023 - ERROR - second failed
+Fri Mar 17 11:12:17 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Fri Mar 17 11:12:34 2023 - ERROR - search first
+Fri Mar 17 11:12:35 2023 - ERROR - oe_test_audit_available_disk_space.sh line 40
+Fri Mar 17 11:12:37 2023 - ERROR - grep logging first failed
+Fri Mar 17 11:12:38 2023 - ERROR - oe_test_audit_available_disk_space.sh line 44
+df: /tmp/log/audit/: No such file or directory
+dd: invalid number: ‘’
+../common/comlib.sh: line 35: auditctl: command not found
+Fri Mar 17 11:12:38 2023 - ERROR -  add rules failed
+Fri Mar 17 11:12:39 2023 - ERROR - ../common/comlib.sh line 36
+../common/comlib.sh: line 41: auditctl: command not found
+Fri Mar 17 11:12:40 2023 - ERROR - second failed
+Fri Mar 17 11:12:40 2023 - ERROR - ../common/comlib.sh line 42
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+../common/comlib.sh: line 44: ausearch: command not found
+Unit auditd.service could not be found.
+Fri Mar 17 11:13:04 2023 - ERROR - grep active failed
+Fri Mar 17 11:13:05 2023 - ERROR - oe_test_audit_available_disk_space.sh line 50
+Unit auditd.service could not be found.
+Fri Mar 17 11:13:11 2023 - ERROR - grep logging second failed
+Fri Mar 17 11:13:12 2023 - ERROR - oe_test_audit_available_disk_space.sh line 53
+Fri Mar 17 11:13:12 2023 - INFO  - End to run test.
+Fri Mar 17 11:13:13 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:13:13 2023 - INFO  - Start to restore the test environment.
+sed: can't read : No such file or directory
+sed: can't read : No such file or directory
+Failed to restart auditd.service: Unit auditd.service not found.
+Fri Mar 17 11:13:14 2023 - INFO  - End to restore the test environment.

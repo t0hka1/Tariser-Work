@@ -1,0 +1,520 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:00:44 2023 - INFO  - Start environmental preparation.
+Sat Mar 18 00:01:05 2023 - INFO  - End of environmental preparation!
+Sat Mar 18 00:01:06 2023 - INFO  - Start testing...
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <img> inserting "alt" attribute using value "description"
+line 1 column 1 - Warning: <img> lacks "src" attribute
+Info: Document content looks like HTML5
+Tidy found 5 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<img alt="description">
+line 2 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 1 warning and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.6.0">
+<title></title>
+</head>
+<body>
+</body>
+</html>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <img> inserting "alt" attribute using value "description"
+line 1 column 1 - Warning: <img> lacks "src" attribute
+Info: Document content looks like HTML5
+Tidy found 5 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<img alt="description">
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<a name="2" id="2">hi</a>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<a name="2" id="2">hi</a>
+line 1 column 7 - Warning: trimming empty <b>
+line 1 column 7 - Warning: trimming empty <b>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+You are recommended to use CSS to specify the font and
+properties such as its size and color. This will reduce
+the size of HTML files and make them easier to maintain
+compared with using <FONT> elements.
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+ span.hi1 {color: #0000FF}
+<span class="hi1">blue</span>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+You are recommended to use CSS to specify the font and
+properties such as its size and color. This will reduce
+the size of HTML files and make them easier to maintain
+compared with using <FONT> elements.
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+ span.hi1 {color: #0000FF}
+<span class="hi1">blue</span>
+line 2 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 1 warning and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.6.0">
+<title></title>
+</head>
+<body>
+</body>
+</html>
+line 2 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 1 warning and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.6.0">
+<title></title>
+</head>
+<body>
+</body>
+</html>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<p>hi</p>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: plain text isn't allowed in <head> elements
+line 1 column 1 - Info: <head> previously mentioned
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<p>hi</p>
+<a href="http:\\openeuler.org"></a>
+<a href="http:\\openeuler.org"></a>
+line 1 column 8 - Info: tidy replaced adjacent "-" with "="
+line 2 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 1 warning and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<!--=hi=-->
+line 1 column 8 - Info: tidy replaced adjacent "-" with "="
+line 2 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 1 warning and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<!--=hi=-->
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 7 - Warning: found <style> tag in <body>! fix-style-tags: yes to move.
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<style type="text/css">
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 7 - Warning: found <style> tag in <body>! fix-style-tags: yes to move.
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<style type="text/css">
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+URIs must be properly escaped, they must not contain unescaped
+characters below U+0021 including the space character and not
+above U+007E. Tidy escapes the URI for you as recommended by
+HTML 4.01 section B.2.1 and XML 1.0 section 4.2.2. Some user agents
+use another algorithm to escape such URIs and some server-sided
+scripts depend on that. If you want to depend on that, you must
+escape the URI on your own. For more information please refer to
+http://www.w3.org/International/O-URL-and-ident.html
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<a href="http://shangcode.cn/拥抱开源">yeah</a>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+URIs must be properly escaped, they must not contain unescaped
+characters below U+0021 including the space character and not
+above U+007E. Tidy escapes the URI for you as recommended by
+HTML 4.01 section B.2.1 and XML 1.0 section 4.2.2. Some user agents
+use another algorithm to escape such URIs and some server-sided
+scripts depend on that. If you want to depend on that, you must
+escape the URI on your own. For more information please refer to
+http://www.w3.org/International/O-URL-and-ident.html
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<a href="http://shangcode.cn/拥抱开源">yeah</a>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <p> attribute "id" has invalid value "a "
+<p id="a ">hi</p>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <p> attribute "id" has invalid value "a "
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<p id="a ">hi</p>
+line 1 column 1 - Warning: <p> dropping value "right" for repeated attribute "align"
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <p> attribute "align" not allowed for HTML5
+Info: Document content looks like HTML5
+Tidy found 5 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<p align="left">hi</p>
+line 1 column 1 - Warning: <p> dropping value "right" for repeated attribute "align"
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <p> attribute "align" not allowed for HTML5
+Info: Document content looks like HTML5
+Tidy found 5 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<p align="left">hi</p>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <p> attribute "align" not allowed for HTML5
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<p ALIGN="left">hi</p>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+line 1 column 1 - Warning: <p> attribute "align" not allowed for HTML5
+Info: Document content looks like HTML5
+Tidy found 4 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<p ALIGN="left">hi</p>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<P>hi</P>
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting implicit <body>
+line 1 column 1 - Warning: inserting missing 'title' element
+Info: Document content looks like HTML5
+Tidy found 3 warnings and 0 errors!
+
+
+About HTML Tidy: https://github.com/htacg/tidy-html5
+Bug reports and comments: https://github.com/htacg/tidy-html5/issues
+Official mailing list: https://lists.w3.org/Archives/Public/public-htacg/
+Latest HTML specification: http://dev.w3.org/html5/spec-author-view/
+Validate your HTML documents: http://validator.w3.org/nu/
+Lobby your company to join the W3C: http://www.w3.org/Consortium
+
+Do you speak a language other than English, or a different variant of 
+English? Consider helping us to localize HTML Tidy. For details please see 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md
+<P>hi</P>
+Sat Mar 18 00:01:12 2023 - INFO  - Finish test!
+Sat Mar 18 00:01:12 2023 - INFO  - succeed to execute the case.
+Sat Mar 18 00:01:13 2023 - INFO  - start environment cleanup.
+Sat Mar 18 00:01:30 2023 - INFO  - Finish environment cleanup!

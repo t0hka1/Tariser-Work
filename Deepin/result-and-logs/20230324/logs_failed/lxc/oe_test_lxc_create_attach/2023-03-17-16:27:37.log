@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:27:39 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:27:43 2023 - ERROR - pkgs:(lxcfs-tools) not found
+oe_test_lxc_create_attach.sh: line 29: rpm: command not found
+Fri Mar 17 16:27:44 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:27:44 2023 - INFO  - Start to run test.
+Fri Mar 17 16:27:45 2023 - ERROR - Check lxc-create --help failed.
+Fri Mar 17 16:27:45 2023 - ERROR - oe_test_lxc_create_attach.sh line 36
+Fri Mar 17 16:27:46 2023 - ERROR - Check lxc-create --usage failed.
+Fri Mar 17 16:27:47 2023 - ERROR - oe_test_lxc_create_attach.sh line 38
+oe_test_lxc_create_attach.sh: line 39: lxc-create: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:27:47 2023 - ERROR - Check lxc-create --version failed.
+Fri Mar 17 16:27:48 2023 - ERROR - oe_test_lxc_create_attach.sh line 40
+oe_test_lxc_create_attach.sh: line 41: lxc-create: command not found
+Fri Mar 17 16:27:48 2023 - ERROR - Failed to set up container.
+Fri Mar 17 16:27:49 2023 - ERROR - oe_test_lxc_create_attach.sh line 42
+Fri Mar 17 16:27:50 2023 - ERROR - Check lxc-attach --help failed.
+Fri Mar 17 16:27:50 2023 - ERROR - oe_test_lxc_create_attach.sh line 44
+Fri Mar 17 16:27:51 2023 - ERROR - Check lxc-attach --usage failed.
+Fri Mar 17 16:27:51 2023 - ERROR - oe_test_lxc_create_attach.sh line 46
+oe_test_lxc_create_attach.sh: line 47: lxc-attach: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 16:27:52 2023 - ERROR - Check lxc-attach --version failed.
+Fri Mar 17 16:27:52 2023 - ERROR - oe_test_lxc_create_attach.sh line 48
+oe_test_lxc_create_attach.sh: line 49: lxc-start: command not found
+spawn lxc-attach -n myEuler1
+couldn't execute "lxc-attach": no such file or directory
+    while executing
+"spawn lxc-attach -n myEuler1"
+    while executing
+Fri Mar 17 16:27:53 2023 - ERROR - Check lxc-attach -n failed.
+Fri Mar 17 16:27:54 2023 - ERROR - oe_test_lxc_create_attach.sh line 58
+Fri Mar 17 16:27:54 2023 - ERROR - Failed to exit container.
+Fri Mar 17 16:27:55 2023 - ERROR - oe_test_lxc_create_attach.sh line 60
+Fri Mar 17 16:27:55 2023 - INFO  - End to run test.
+Fri Mar 17 16:27:56 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:27:56 2023 - INFO  - Start to restore the tet environment.
+oe_test_lxc_create_attach.sh: line 67: lxc-stop: command not found
+oe_test_lxc_create_attach.sh: line 68: lxc-destroy: command not found
+Fri Mar 17 16:27:57 2023 - WARN  - no thing to do.
+Fri Mar 17 16:27:58 2023 - INFO  - End to restore the tet environment.

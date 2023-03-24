@@ -1,0 +1,39 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:05:00 2023 - INFO  - Start to prepare the test environment.
+../common/common_libmemcached.sh: line 30: memcached: command not found
+Fri Mar 17 16:05:11 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:05:12 2023 - INFO  - Start to run test.
+oe_test_memexist.sh: line 30: memexist: command not found
+Fri Mar 17 16:05:12 2023 - ERROR - oe_test_memexist.sh line 31
+oe_test_memexist.sh: line 32: memexist: command not found
+Fri Mar 17 16:05:13 2023 - ERROR - oe_test_memexist.sh line 33
+spawn telnet 127.0.0.1 11211
+couldn't execute "telnet": no such file or directory
+    while executing
+"spawn telnet 127.0.0.1 11211"
+oe_test_memexist.sh: line 43: memexist: command not found
+Fri Mar 17 16:05:14 2023 - ERROR - oe_test_memexist.sh line 44
+oe_test_memexist.sh: line 45: memexist: command not found
+Fri Mar 17 16:05:14 2023 - ERROR - oe_test_memexist.sh line 46
+oe_test_memexist.sh: line 47: memexist: command not found
+Fri Mar 17 16:05:15 2023 - ERROR - oe_test_memexist.sh line 48
+oe_test_memexist.sh: line 49: memexist: command not found
+Fri Mar 17 16:05:15 2023 - ERROR - oe_test_memexist.sh line 50
+Fri Mar 17 16:05:16 2023 - INFO  - End of the test.
+Fri Mar 17 16:05:16 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:05:17 2023 - INFO  - Start to restore the test environment.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage libmemcached is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'libmemcached' has no installation candidate"
+Fri Mar 17 16:05:20 2023 - INFO  - Finish restoring the test environment.

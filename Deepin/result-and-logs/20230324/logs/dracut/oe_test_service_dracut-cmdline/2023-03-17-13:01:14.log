@@ -1,0 +1,16 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:01:17 2023 - INFO  - Start testing...
+Unit dracut-cmdline.service could not be found.
+Failed to get unit file state for dracut-cmdline.service: No such file or directory
+Fri Mar 17 13:01:18 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Fri Mar 17 13:01:19 2023 - INFO  - Finish test!
+Fri Mar 17 13:01:19 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 13:01:20 2023 - INFO  - oe_test_service_dracut-cmdline.sh post_test

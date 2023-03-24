@@ -1,0 +1,58 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:55:03 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 12:55:07 2023 - ERROR - pkgs:(dovecot) not found
+New password: Retype new password: passwd: password updated successfully
+Failed to restart dovecot.service: Unit dovecot.service not found.
+Fri Mar 17 12:55:09 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 12:55:09 2023 - INFO  - Start to run test.
+oe_test_dovecot_doveadm_2.sh: line 40: doveadm: command not found
+Fri Mar 17 12:55:10 2023 - ERROR - Check doveadm config failed.
+Fri Mar 17 12:55:10 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 41
+oe_test_dovecot_doveadm_2.sh: line 42: doveadm: command not found
+Fri Mar 17 12:55:11 2023 - ERROR - Check doveadm instance list failed.
+Fri Mar 17 12:55:11 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 43
+oe_test_dovecot_doveadm_2.sh: line 44: doveadm: command not found
+Fri Mar 17 12:55:12 2023 - ERROR - Check doveadm instance remove failed.
+Fri Mar 17 12:55:12 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 45
+oe_test_dovecot_doveadm_2.sh: line 46: doveadm: command not found
+Fri Mar 17 12:55:13 2023 - ERROR - Check doveadm penalty failed.
+Fri Mar 17 12:55:13 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 47
+oe_test_dovecot_doveadm_2.sh: line 48: doveadm: command not found
+Fri Mar 17 12:55:14 2023 - ERROR - Check doveadm proxy list failed.
+Fri Mar 17 12:55:14 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 49
+oe_test_dovecot_doveadm_2.sh: line 50: doveadm: command not found
+Fri Mar 17 12:55:15 2023 - ERROR - Check doveadm proxy kick 127.0.0.1 failed.
+Fri Mar 17 12:55:15 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 51
+oe_test_dovecot_doveadm_2.sh: line 52: doveadm: command not found
+Fri Mar 17 12:55:16 2023 - ERROR - Check doveadm auth cache flush failed.
+Fri Mar 17 12:55:16 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 53
+oe_test_dovecot_doveadm_2.sh: line 54: doveadm: command not found
+Fri Mar 17 12:55:17 2023 - ERROR - Check doveadm auth login failed.
+Fri Mar 17 12:55:17 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 55
+oe_test_dovecot_doveadm_2.sh: line 56: doveadm: command not found
+Fri Mar 17 12:55:18 2023 - ERROR - Check doveadm auth test failed.
+Fri Mar 17 12:55:18 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 57
+oe_test_dovecot_doveadm_2.sh: line 58: dovecot-sysreport: command not found
+Fri Mar 17 12:55:19 2023 - ERROR - Check doveadm-sysreport failed.
+Fri Mar 17 12:55:19 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 59
+ls: cannot access 'dovecot-sysreport*': No such file or directory
+Fri Mar 17 12:55:20 2023 - ERROR - The report doesn't exist.
+Fri Mar 17 12:55:20 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 61
+oe_test_dovecot_doveadm_2.sh: line 62: doveadm: command not found
+Fri Mar 17 12:55:21 2023 - ERROR - Check doveadm reload failed.
+Fri Mar 17 12:55:21 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 63
+oe_test_dovecot_doveadm_2.sh: line 64: doveadm: command not found
+Fri Mar 17 12:55:22 2023 - ERROR - Check doveadm stop failed.
+Fri Mar 17 12:55:22 2023 - ERROR - oe_test_dovecot_doveadm_2.sh line 65
+Fri Mar 17 12:55:23 2023 - INFO  - End to run test.
+Fri Mar 17 12:55:23 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:55:24 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:55:25 2023 - WARN  - no thing to do.
+Fri Mar 17 12:55:25 2023 - INFO  - End to restore the test environment.

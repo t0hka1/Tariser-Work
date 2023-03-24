@@ -1,0 +1,23 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:31:04 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:31:28 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:31:29 2023 - INFO  - Start to run test.
+ * changes to this file unless you know what you are doing--modify the SWIG
+extern int my_mod(int x, int y);
+SWIGEXPORT jint JNICALL Java_exampleJNI_my_1mod(JNIEnv *jenv, jclass jcls, jint jarg1, jint jarg2) {
+  result = (int)my_mod(arg1,arg2);
+oe_test_swig_10.sh: line 48: example.java: command not found
+PCRE Version: 8.39 2016-06-14
+Files example_wrap.c and example_wrap.c-bak differ
+/usr/share/swig4.0
+Fri Mar 17 23:31:34 2023 - INFO  - End to run test.
+Fri Mar 17 23:31:34 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 23:31:35 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:31:52 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,51 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 18:24:04 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 18:24:08 2023 - ERROR - pkgs:(scap-security-guide) not found
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 140, in <module>
+    exitcode, output = apt_install(args.pkgs, args.node, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 49, in apt_install
+    conn = ssh_cmd.pssh_conn(
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/ssh_cmd.py", line 53, in pssh_conn
+    conn.connect(ip, port, user, password, timeout=timeout)
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 203, in _families_and_addresses
+    addrinfos = socket.getaddrinfo(
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+Fri Mar 17 18:24:11 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 18:24:12 2023 - INFO  - Start executing testcase.
+spawn oscap-ssh @ 22 oval eval --report /tmp/remote-vulnerability.html /usr/share/xml/scap/ssg/content/ssg-ol7-oval.xml
+couldn't execute "oscap-ssh": no such file or directory
+    while executing
+"spawn oscap-ssh @ 22 oval eval --report /tmp/remote-vulnerability.html /usr/share/xml/scap/ssg/content/ssg-ol7-oval.xml"
+grep: /tmp/remote-vulnerability.html: No such file or directory
+Fri Mar 17 18:24:13 2023 - ERROR - oe_test_scanning_remote_system.sh line 57
+Fri Mar 17 18:24:13 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 18:24:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 18:24:14 2023 - INFO  - start environment cleanup.
+Fri Mar 17 18:24:15 2023 - WARN  - no thing to do.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 106, in apt_remove
+    conn = ssh_cmd.pssh_conn(
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/ssh_cmd.py", line 53, in pssh_conn
+    conn.connect(ip, port, user, password, timeout=timeout)
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 340, in connect
+    to_try = list(self._families_and_addresses(hostname, port))
+  File "/usr/lib/python3/dist-packages/paramiko/client.py", line 203, in _families_and_addresses
+    addrinfos = socket.getaddrinfo(
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+Fri Mar 17 18:24:18 2023 - INFO  - Finish environment cleanup!

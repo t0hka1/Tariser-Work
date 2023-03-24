@@ -1,0 +1,24 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:15:49 2023 - INFO  - Start to prepare the test environment.
+../common/common_javapackages-tools.sh: line 30: rpm: command not found
+Fri Mar 17 15:18:41 2023 - ERROR - pkgs:(log4j) not found
+Fri Mar 17 15:18:42 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 15:18:43 2023 - INFO  - Start to run test.
+oe_test_find-shade-jar.sh: line 30: find-jar: command not found
+Fri Mar 17 15:18:43 2023 - ERROR - oe_test_find-shade-jar.sh line 31
+oe_test_find-shade-jar.sh: line 32: find-jar: command not found
+Fri Mar 17 15:18:44 2023 - ERROR - oe_test_find-shade-jar.sh line 33
+oe_test_find-shade-jar.sh: line 35: shade-jar: command not found
+Fri Mar 17 15:18:45 2023 - ERROR - oe_test_find-shade-jar.sh line 36
+Fri Mar 17 15:18:46 2023 - ERROR - oe_test_find-shade-jar.sh line 38
+Fri Mar 17 15:18:46 2023 - INFO  - End of the test.
+Fri Mar 17 15:18:47 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:18:47 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 15:19:35 2023 - INFO  - Finish restoring the test environment.

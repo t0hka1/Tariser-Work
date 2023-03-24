@@ -1,0 +1,8 @@
+Fri Mar 17 23:23:46 2023 - INFO  - start to run testcase:oe_test_service_sysprof2.
+Fri Mar 17 23:24:25 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 23:24:35 2023 - INFO  - End to run testcase:oe_test_service_sysprof2.
+Fri Mar 17 23:24:36 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 23:24:40 2023 - INFO  - start to run testcase:oe_test_service_sysprof3.
+Fri Mar 17 23:25:17 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 23:25:28 2023 - INFO  - End to run testcase:oe_test_service_sysprof3.
+Fri Mar 17 23:25:28 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

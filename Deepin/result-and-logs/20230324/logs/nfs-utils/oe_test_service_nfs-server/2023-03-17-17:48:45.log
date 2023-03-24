@@ -1,0 +1,49 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:48:48 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 17:48:51 2023 - ERROR - pkgs:(nfs-utils) not found
+Fri Mar 17 17:48:52 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 17:48:52 2023 - INFO  - Start testing...
+Failed to restart nfs-server.service: Unit nfs-server.service not found.
+Fri Mar 17 17:48:53 2023 - ERROR - nfs-server.service restart failed
+Fri Mar 17 17:48:53 2023 - ERROR - ../common/common_lib.sh line 34
+Unit nfs-server.service could not be found.
+Fri Mar 17 17:49:00 2023 - ERROR - nfs-server.service restart failed
+Fri Mar 17 17:49:00 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop nfs-server.service: Unit nfs-server.service not loaded.
+Fri Mar 17 17:49:01 2023 - ERROR - nfs-server.service stop failed
+Fri Mar 17 17:49:01 2023 - ERROR - ../common/common_lib.sh line 39
+Unit nfs-server.service could not be found.
+Fri Mar 17 17:49:08 2023 - ERROR - nfs-server.service stop failed
+Fri Mar 17 17:49:08 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start nfs-server.service: Unit nfs-server.service not found.
+Fri Mar 17 17:49:09 2023 - ERROR - nfs-server.service start failed
+Fri Mar 17 17:49:09 2023 - ERROR - ../common/common_lib.sh line 44
+Unit nfs-server.service could not be found.
+Fri Mar 17 17:49:15 2023 - ERROR - nfs-server.service start failed
+Fri Mar 17 17:49:16 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for nfs-server.service: No such file or directory
+Fri Mar 17 17:49:17 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start nfs-server.service: Unit nfs-server.service not found.
+sed: can't read /usr/lib/systemd/system/nfs-server.service: No such file or directory
+Failed to reload nfs-server.service: Unit nfs-server.service not found.
+Fri Mar 17 17:49:23 2023 - ERROR - nfs-server.service reload failed
+Fri Mar 17 17:49:23 2023 - ERROR - oe_test_service_nfs-server.sh line 40
+Unit nfs-server.service could not be found.
+Fri Mar 17 17:49:24 2023 - ERROR - nfs-server.service reload causes the service status to change
+Fri Mar 17 17:49:24 2023 - ERROR - oe_test_service_nfs-server.sh line 42
+Fri Mar 17 17:49:25 2023 - INFO  - Finish test!
+Fri Mar 17 17:49:25 2023 - ERROR - failed to execute the case.
+Fri Mar 17 17:49:26 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/nfs-server.service: No such file or directory
+Failed to reload nfs-server.service: Unit nfs-server.service not found.
+Failed to stop nfs-server.service: Unit nfs-server.service not loaded.
+Fri Mar 17 17:49:32 2023 - WARN  - no thing to do.
+Fri Mar 17 17:49:32 2023 - INFO  - Finish environment cleanup!

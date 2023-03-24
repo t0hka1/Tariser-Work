@@ -1,0 +1,8 @@
+Fri Mar 17 19:43:41 2023 - INFO  - start to run testcase:oe_test_procinfo_01.
+Fri Mar 17 19:44:19 2023 - ERROR - The case exit by code 18.
+Fri Mar 17 19:44:30 2023 - INFO  - End to run testcase:oe_test_procinfo_01.
+Fri Mar 17 19:44:30 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 19:44:34 2023 - INFO  - start to run testcase:oe_test_procinfo_02.
+Fri Mar 17 19:45:01 2023 - ERROR - The case exit by code 14.
+Fri Mar 17 19:45:11 2023 - INFO  - End to run testcase:oe_test_procinfo_02.
+Fri Mar 17 19:45:12 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

@@ -1,0 +1,73 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:43:48 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 11:43:52 2023 - ERROR - pkgs:(gcc-c+) not found
+Fri Mar 17 11:43:52 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 11:43:53 2023 - INFO  - Start to run test.
+oe_test_cmake.sh: line 30: cmake: command not found
+Fri Mar 17 11:43:54 2023 - ERROR - oe_test_cmake.sh line 31
+oe_test_cmake.sh: line 32: cmake: command not found
+Fri Mar 17 11:43:54 2023 - ERROR - oe_test_cmake.sh line 33
+oe_test_cmake.sh: line 34: cmake: command not found
+Fri Mar 17 11:43:55 2023 - ERROR - oe_test_cmake.sh line 35
+oe_test_cmake.sh: line 36: cmake: command not found
+Fri Mar 17 11:43:56 2023 - ERROR - oe_test_cmake.sh line 37
+oe_test_cmake.sh: line 38: cmake: command not found
+Fri Mar 17 11:43:56 2023 - ERROR - oe_test_cmake.sh line 39
+oe_test_cmake.sh: line 40: cmake: command not found
+Fri Mar 17 11:43:57 2023 - ERROR - oe_test_cmake.sh line 41
+oe_test_cmake.sh: line 42: cmake: command not found
+Fri Mar 17 11:43:57 2023 - ERROR - oe_test_cmake.sh line 43
+Fri Mar 17 11:43:58 2023 - ERROR - oe_test_cmake.sh line 45
+Fri Mar 17 11:43:58 2023 - ERROR - oe_test_cmake.sh line 47
+oe_test_cmake.sh: line 48: cmake: command not found
+Fri Mar 17 11:43:59 2023 - ERROR - oe_test_cmake.sh line 49
+Fri Mar 17 11:43:59 2023 - ERROR - oe_test_cmake.sh line 51
+Fri Mar 17 11:44:00 2023 - ERROR - oe_test_cmake.sh line 53
+oe_test_cmake.sh: line 55: cmake: command not found
+Fri Mar 17 11:44:00 2023 - ERROR - oe_test_cmake.sh line 56
+Fri Mar 17 11:44:01 2023 - ERROR - oe_test_cmake.sh line 58
+Fri Mar 17 11:44:01 2023 - ERROR - oe_test_cmake.sh line 60
+oe_test_cmake.sh: line 62: cmake: command not found
+Fri Mar 17 11:44:02 2023 - ERROR - oe_test_cmake.sh line 63
+Fri Mar 17 11:44:03 2023 - ERROR - oe_test_cmake.sh line 65
+Fri Mar 17 11:44:03 2023 - ERROR - oe_test_cmake.sh line 67
+oe_test_cmake.sh: line 69: cmake: command not found
+Fri Mar 17 11:44:04 2023 - ERROR - oe_test_cmake.sh line 70
+Fri Mar 17 11:44:04 2023 - ERROR - oe_test_cmake.sh line 72
+Fri Mar 17 11:44:05 2023 - ERROR - oe_test_cmake.sh line 74
+oe_test_cmake.sh: line 76: cmake: command not found
+Fri Mar 17 11:44:05 2023 - ERROR - oe_test_cmake.sh line 77
+Fri Mar 17 11:44:06 2023 - ERROR - oe_test_cmake.sh line 79
+oe_test_cmake.sh: line 82: cmake: command not found
+Fri Mar 17 11:44:06 2023 - ERROR - oe_test_cmake.sh line 83
+oe_test_cmake.sh: line 84: cmake: command not found
+Fri Mar 17 11:44:07 2023 - ERROR - oe_test_cmake.sh line 85
+oe_test_cmake.sh: line 87: cmake: command not found
+Fri Mar 17 11:44:07 2023 - ERROR - oe_test_cmake.sh line 88
+Fri Mar 17 11:44:08 2023 - ERROR - oe_test_cmake.sh line 90
+Fri Mar 17 11:44:08 2023 - ERROR - oe_test_cmake.sh line 92
+oe_test_cmake.sh: line 93: cmake: command not found
+Fri Mar 17 11:44:09 2023 - ERROR - oe_test_cmake.sh line 94
+Fri Mar 17 11:44:10 2023 - ERROR - oe_test_cmake.sh line 96
+oe_test_cmake.sh: line 97: ./main: No such file or directory
+Fri Mar 17 11:44:10 2023 - ERROR - oe_test_cmake.sh line 98
+oe_test_cmake.sh: line 99: cmake: command not found
+Fri Mar 17 11:44:11 2023 - ERROR - oe_test_cmake.sh line 100
+oe_test_cmake.sh: line 101: cmake: command not found
+Fri Mar 17 11:44:11 2023 - ERROR - oe_test_cmake.sh line 102
+oe_test_cmake.sh: line 104: cmake: command not found
+Fri Mar 17 11:44:12 2023 - ERROR - oe_test_cmake.sh line 105
+Fri Mar 17 11:44:12 2023 - ERROR - oe_test_cmake.sh line 107
+Fri Mar 17 11:44:13 2023 - ERROR - oe_test_cmake.sh line 109
+Fri Mar 17 11:44:13 2023 - INFO  - End of the test.
+Fri Mar 17 11:44:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:44:14 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 11:44:15 2023 - WARN  - no thing to do.
+Fri Mar 17 11:44:16 2023 - INFO  - Finish restoring the test environment.

@@ -1,0 +1,61 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:10:07 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 19:10:11 2023 - ERROR - pkgs:(perl-Net-Server) not found
+Fri Mar 17 19:10:13 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 19:10:14 2023 - INFO  - Start testing...
+oe_test_perl-Net-Server.sh: line 44: net-server: command not found
+Fri Mar 17 19:10:17 2023 - ERROR - L47: Fork No Pass 
+Fri Mar 17 19:10:17 2023 - ERROR - oe_test_perl-Net-Server.sh line 47
+perl: no process found
+Fri Mar 17 19:10:18 2023 - ERROR - L51: INET No Pass. Output Error.
+Fri Mar 17 19:10:18 2023 - ERROR - oe_test_perl-Net-Server.sh line 51
+oe_test_perl-Net-Server.sh: line 55: net-server: command not found
+Fri Mar 17 19:10:22 2023 - ERROR - L58: MultiType No Pass
+Fri Mar 17 19:10:23 2023 - ERROR - oe_test_perl-Net-Server.sh line 58
+perl: no process found
+oe_test_perl-Net-Server.sh: line 61: net-server: command not found
+Fri Mar 17 19:10:26 2023 - ERROR - L64: Multiplex No Pass
+Fri Mar 17 19:10:27 2023 - ERROR - oe_test_perl-Net-Server.sh line 64
+perl: no process found
+oe_test_perl-Net-Server.sh: line 67: net-server: command not found
+Fri Mar 17 19:10:30 2023 - ERROR - L70: PreForkSimple No Pass
+Fri Mar 17 19:10:30 2023 - ERROR - oe_test_perl-Net-Server.sh line 70
+perl: no process found
+oe_test_perl-Net-Server.sh: line 73: net-server: command not found
+Fri Mar 17 19:10:33 2023 - ERROR - L76: PreFork No Pass
+Fri Mar 17 19:10:34 2023 - ERROR - oe_test_perl-Net-Server.sh line 76
+perl: no process found
+oe_test_perl-Net-Server.sh: line 79: net-server: command not found
+Fri Mar 17 19:10:37 2023 - ERROR - L82: Single No Pass
+Fri Mar 17 19:10:37 2023 - ERROR - oe_test_perl-Net-Server.sh line 82
+perl: no process found
+oe_test_perl-Net-Server.sh: line 85: net-server: command not found
+Fri Mar 17 19:10:40 2023 - ERROR - L88: Http No Pass
+Fri Mar 17 19:10:41 2023 - ERROR - oe_test_perl-Net-Server.sh line 88
+perl: no process found
+oe_test_perl-Net-Server.sh: line 91: net-server: command not found
+Fri Mar 17 19:10:44 2023 - ERROR - L94: app No Pass
+Fri Mar 17 19:10:45 2023 - ERROR - oe_test_perl-Net-Server.sh line 94
+Fri Mar 17 19:10:45 2023 - ERROR - L96: app No Pass. Failed to get data from net-server
+Fri Mar 17 19:10:46 2023 - ERROR - oe_test_perl-Net-Server.sh line 96
+perl: no process found
+oe_test_perl-Net-Server.sh: line 99: net-server: command not found
+Fri Mar 17 19:10:49 2023 - ERROR - L102: IPv4 No Pass
+Fri Mar 17 19:10:49 2023 - ERROR - oe_test_perl-Net-Server.sh line 102
+perl: no process found
+oe_test_perl-Net-Server.sh: line 105: net-server: command not found
+Fri Mar 17 19:10:53 2023 - ERROR - L108: IPv6 No Pass
+Fri Mar 17 19:10:53 2023 - ERROR - oe_test_perl-Net-Server.sh line 108
+Fri Mar 17 19:10:54 2023 - INFO  - Finish test!
+Fri Mar 17 19:10:54 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:10:55 2023 - INFO  - start environment cleanup.
+perl: no process found
+Fri Mar 17 19:10:55 2023 - WARN  - no thing to do.
+Fri Mar 17 19:10:56 2023 - INFO  - Finish environment cleanup!

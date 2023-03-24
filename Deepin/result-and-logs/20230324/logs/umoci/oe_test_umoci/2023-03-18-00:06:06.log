@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:06:09 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 00:06:13 2023 - ERROR - pkgs:(umoci) not found
+Sat Mar 18 00:06:13 2023 - INFO  - End to prepare the test environment.
+Sat Mar 18 00:06:14 2023 - INFO  - Start to run test.
+oe_test_umoci.sh: line 37: umoci: command not found
+ls: cannot access 'new_image': No such file or directory
+Sat Mar 18 00:06:15 2023 - ERROR - Check umoci init failed
+Sat Mar 18 00:06:15 2023 - ERROR - oe_test_umoci.sh line 39
+oe_test_umoci.sh: line 40: umoci: command not found
+Sat Mar 18 00:06:16 2023 - ERROR - Check umoci new failed
+Sat Mar 18 00:06:16 2023 - ERROR - oe_test_umoci.sh line 41
+oe_test_umoci.sh: line 42: umoci: command not found
+Sat Mar 18 00:06:17 2023 - ERROR - Check umoci list failed
+Sat Mar 18 00:06:17 2023 - ERROR - oe_test_umoci.sh line 43
+oe_test_umoci.sh: line 44: umoci: command not found
+Sat Mar 18 00:06:18 2023 - ERROR - Check umoci config failed
+Sat Mar 18 00:06:18 2023 - ERROR - oe_test_umoci.sh line 45
+oe_test_umoci.sh: line 46: umoci: command not found
+Sat Mar 18 00:06:19 2023 - ERROR - Check umoci rm failed
+Sat Mar 18 00:06:19 2023 - ERROR - oe_test_umoci.sh line 47
+Sat Mar 18 00:06:20 2023 - INFO  - End to run test.
+Sat Mar 18 00:06:21 2023 - ERROR - failed to execute the case.
+Sat Mar 18 00:06:21 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 00:06:22 2023 - WARN  - no thing to do.
+Sat Mar 18 00:06:22 2023 - INFO  - End to restore the test environment.

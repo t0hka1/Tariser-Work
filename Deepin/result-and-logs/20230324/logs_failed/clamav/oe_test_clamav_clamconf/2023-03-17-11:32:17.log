@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:32:20 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 11:32:26 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:32:26 2023 - INFO  - Start to run test.
+oe_test_clamav_clamconf.sh: line 37: clamconf: command not found
+Fri Mar 17 11:32:27 2023 - ERROR - Execute clamconf -g clamd.d/scan.conf failed.
+Fri Mar 17 11:32:27 2023 - ERROR - oe_test_clamav_clamconf.sh line 38
+oe_test_clamav_clamconf.sh: line 39: clamconf: command not found
+Fri Mar 17 11:32:28 2023 - ERROR - Execute clamconf -g freshclam.conf failed.
+Fri Mar 17 11:32:28 2023 - ERROR - oe_test_clamav_clamconf.sh line 40
+oe_test_clamav_clamconf.sh: line 41: clamconf: command not found
+Fri Mar 17 11:32:29 2023 - ERROR - Execute clamconf -g mail/clamav-milter.conf failed.
+Fri Mar 17 11:32:29 2023 - ERROR - oe_test_clamav_clamconf.sh line 42
+oe_test_clamav_clamconf.sh: line 44: clamconf: command not found
+Fri Mar 17 11:32:30 2023 - ERROR - Execute clamconf -g clamd.d/scan.conf failed.
+Fri Mar 17 11:32:30 2023 - ERROR - oe_test_clamav_clamconf.sh line 45
+oe_test_clamav_clamconf.sh: line 46: clamconf: command not found
+Fri Mar 17 11:32:31 2023 - ERROR - Execute clamconf -g freshclam.conf failed.
+Fri Mar 17 11:32:31 2023 - ERROR - oe_test_clamav_clamconf.sh line 47
+oe_test_clamav_clamconf.sh: line 48: clamconf: command not found
+Fri Mar 17 11:32:32 2023 - ERROR - Execute clamconf -g mail/clamav-milter.conf failed.
+Fri Mar 17 11:32:33 2023 - ERROR - oe_test_clamav_clamconf.sh line 49
+oe_test_clamav_clamconf.sh: line 51: clamconf: command not found
+Fri Mar 17 11:32:33 2023 - ERROR - Check clamconf version failed.
+Fri Mar 17 11:32:34 2023 - ERROR - oe_test_clamav_clamconf.sh line 52
+oe_test_clamav_clamconf.sh: line 53: clamconf: command not found
+Fri Mar 17 11:32:34 2023 - ERROR - Check clamconf help message failed.
+Fri Mar 17 11:32:35 2023 - ERROR - oe_test_clamav_clamconf.sh line 54
+oe_test_clamav_clamconf.sh: line 55: clamconf: command not found
+Fri Mar 17 11:32:35 2023 - ERROR - Check clamconf non-default config failed.
+Fri Mar 17 11:32:36 2023 - ERROR - oe_test_clamav_clamconf.sh line 56
+Fri Mar 17 11:32:36 2023 - INFO  - End to run test.
+Fri Mar 17 11:32:37 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:32:37 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage clamav is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'clamav' has no installation candidate"
+Fri Mar 17 11:32:40 2023 - INFO  - End to restore the test environment.

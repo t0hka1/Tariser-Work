@@ -1,0 +1,43 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:17:40 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 19:17:44 2023 - ERROR - pkgs:(php-devel) not found
+Fri Mar 17 19:17:45 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 19:17:45 2023 - INFO  - Start to run test.
+oe_test_php-config.sh: line 35: php-config: command not found
+Fri Mar 17 19:17:46 2023 - ERROR - oe_test_php-config.sh line 36
+oe_test_php-config.sh: line 37: php-config: command not found
+Fri Mar 17 19:17:46 2023 - ERROR - oe_test_php-config.sh line 38
+oe_test_php-config.sh: line 39: php-config: command not found
+Fri Mar 17 19:17:47 2023 - ERROR - oe_test_php-config.sh line 40
+oe_test_php-config.sh: line 41: php-config: command not found
+Fri Mar 17 19:17:47 2023 - ERROR - oe_test_php-config.sh line 42
+oe_test_php-config.sh: line 43: php-config: command not found
+Fri Mar 17 19:17:48 2023 - ERROR - oe_test_php-config.sh line 44
+oe_test_php-config.sh: line 45: php-config: command not found
+Fri Mar 17 19:17:49 2023 - ERROR - oe_test_php-config.sh line 46
+oe_test_php-config.sh: line 47: php-config: command not found
+Fri Mar 17 19:17:49 2023 - ERROR - oe_test_php-config.sh line 48
+oe_test_php-config.sh: line 49: php-config: command not found
+Fri Mar 17 19:17:50 2023 - ERROR - oe_test_php-config.sh line 50
+oe_test_php-config.sh: line 51: php-config: command not found
+Fri Mar 17 19:17:50 2023 - ERROR - oe_test_php-config.sh line 52
+oe_test_php-config.sh: line 53: php-config: command not found
+Fri Mar 17 19:17:51 2023 - ERROR - oe_test_php-config.sh line 54
+oe_test_php-config.sh: line 55: php-config: command not found
+Fri Mar 17 19:17:52 2023 - ERROR - oe_test_php-config.sh line 56
+oe_test_php-config.sh: line 57: php-config: command not found
+Fri Mar 17 19:17:52 2023 - ERROR - oe_test_php-config.sh line 58
+oe_test_php-config.sh: line 59: php-config: command not found
+Fri Mar 17 19:17:53 2023 - ERROR - oe_test_php-config.sh line 60
+Fri Mar 17 19:17:53 2023 - INFO  - End of the test.
+Fri Mar 17 19:17:54 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:17:54 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 19:17:54 2023 - WARN  - no thing to do.
+Fri Mar 17 19:17:55 2023 - INFO  - Finish restoring the test environment.

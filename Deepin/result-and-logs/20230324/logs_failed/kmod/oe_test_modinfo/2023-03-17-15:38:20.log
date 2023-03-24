@@ -1,0 +1,38 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:38:22 2023 - INFO  - Start to run test.
+	modinfo [options] filename [args]
+	-a, --author                Print only 'author'
+	-d, --description           Print only 'description'
+	-l, --license               Print only 'license'
+	-p, --parameters            Print only 'parm'
+	-n, --filename              Print only 'filename'
+	-0, --null                  Use \0 instead of \n
+	-F, --field=FIELD           Print only provided FIELD
+	-k, --set-version=VERSION   Use VERSION instead of `uname -r`
+	-b, --basedir=DIR           Use DIR as filesystem root for /lib/modules
+	-V, --version               Show version
+	-h, --help                  Show this help
+kmod version 29
+Module                  Size  Used by
+modinfo: ERROR: Module alias dm_log not found.
+Fri Mar 17 15:38:23 2023 - ERROR - oe_test_modinfo.sh line 31
+modinfo: ERROR: Module alias dm_log not found.
+Fri Mar 17 15:38:24 2023 - ERROR - oe_test_modinfo.sh line 33
+modinfo: ERROR: Module alias dm_log not found.
+Fri Mar 17 15:38:25 2023 - ERROR - oe_test_modinfo.sh line 35
+modinfo: ERROR: Module alias raid1 not found.
+Fri Mar 17 15:38:25 2023 - ERROR - oe_test_modinfo.sh line 37
+modinfo: ERROR: Module alias dm_log not found.
+Fri Mar 17 15:38:26 2023 - ERROR - oe_test_modinfo.sh line 39
+modinfo: ERROR: Module alias dm_log not found.
+Fri Mar 17 15:38:26 2023 - ERROR - oe_test_modinfo.sh line 41
+Fri Mar 17 15:38:27 2023 - INFO  - End of the test.
+Fri Mar 17 15:38:27 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:38:28 2023 - INFO  - oe_test_modinfo.sh post_test

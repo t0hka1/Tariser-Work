@@ -1,0 +1,82 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:07:33 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 22:07:37 2023 - ERROR - pkgs:(rubygem-rdoc) not found
+Fri Mar 17 22:07:38 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 22:07:38 2023 - INFO  - Start to run test.
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+Parsing sources...
+  Classes:    1 (1 undocumented)
+  Modules:    0 (0 undocumented)
+  Constants:  0 (0 undocumented)
+  Attributes: 0 (0 undocumented)
+  Methods:    3 (3 undocumented)
+  Total:      4 (4 undocumented)
+    0.00% documented
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+100% [ 1/ 1]  ../common/main.rb
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+Parsing sources...
+could not find template test
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+  Total:      4 (4 undocumented)
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+uh-oh! RDoc had a problem:
+wrong number of arguments (given 3, expected 2)
+
+run with --debug for full backtrace
+Parsing sources...
+grep: doc/main.rb: No such file or directory
+Fri Mar 17 22:08:00 2023 - ERROR - oe_test_rdoc_02.sh line 50
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+Parsing sources...
+<title>my rdoc document</title>
+<p>This is the API documentation for my rdoc document.
+<title>class Customer - my rdoc document</title>
+<title>Table of Contents - my rdoc document</title>
+<h1 class="class">Table of Contents - my rdoc document</h1>
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+Parsing sources...
+
+Generating POT format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+Parsing sources...
+
+Generating RI format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/doc...
+Parsing sources...
+In files:
+  class Customer
+    # in file ../common/main.rb:5
+    def self.new(id, name, addr); end
+    # in file ../common/main.rb:10
+    def display_details(); end
+    # in file ../common/main.rb:15
+    def total_no_of_customers(); end
+In files:
+  class Customer
+    # in file ../common/main.rb:5
+    def self.new(id, name, addr); end
+    # in file ../common/main.rb:10
+    def display_details(); end
+    # in file ../common/main.rb:15
+    def total_no_of_customers(); end
+
+Generating Darkfish format into /root/GitRepo/mugen-debian-riscv/testcases/cli-test/ruby/oe_test_rdoc_02/mydoc...
+Parsing sources...
+Fri Mar 17 22:08:29 2023 - INFO  - End of the test.
+Fri Mar 17 22:08:30 2023 - ERROR - failed to execute the case.
+Fri Mar 17 22:08:30 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 22:08:31 2023 - WARN  - no thing to do.
+Fri Mar 17 22:08:31 2023 - INFO  - Finish restoring the test environment.

@@ -1,0 +1,128 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:49:06 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 16:49:10 2023 - INFO  - pkgs:(lvm2) is already installed
+Fri Mar 17 16:49:17 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 16:49:17 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+  No device found for /dev/.
+  No device found for /dev/.
+Fri Mar 17 16:49:18 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 36
+  Cannot use /dev/: device not found.
+Fri Mar 17 16:49:19 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 38
+  No device found for /dev/.
+Fri Mar 17 16:49:20 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 40
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:22 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 43
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  striped: Required device-mapper target(s) not detected in your kernel.
+  Run `lvcreate --help' for more information.
+Fri Mar 17 16:49:22 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 45
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  striped: Required device-mapper target(s) not detected in your kernel.
+  Run `lvcreate --help' for more information.
+Fri Mar 17 16:49:23 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 47
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  striped: Required device-mapper target(s) not detected in your kernel.
+  Run `lvcreate --help' for more information.
+Fri Mar 17 16:49:24 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 49
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  striped: Required device-mapper target(s) not detected in your kernel.
+  Run `lvcreate --help' for more information.
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:25 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 55
+  No device found for /dev/.
+Fri Mar 17 16:49:27 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 57
+Fri Mar 17 16:49:28 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 59
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:29 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 62
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:30 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 65
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:31 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 68
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:33 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 71
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:34 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 74
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:35 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 77
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:37 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 81
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:38 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 84
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:39 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 87
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:41 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 90
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:42 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 93
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:43 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 96
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:45 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 99
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+Fri Mar 17 16:49:46 2023 - ERROR - oe_test_lvm2_vgcreate_001.sh line 102
+  Volume group "test" not found
+  Cannot process volume group test
+oe_test_lvm2_vgcreate_001.sh: line 105: ["23": command not found
+  vgcreate - Create a volume group
+Fri Mar 17 16:49:47 2023 - INFO  - End executing testcase!
+Fri Mar 17 16:49:47 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:49:48 2023 - INFO  - Start environment cleanup.
+  Volume group "test" not found
+  Cannot process volume group test
+  No device found for /dev/.
+  No device found for /dev/.
+  No device found for /dev/.
+Fri Mar 17 16:49:49 2023 - WARN  - no thing to do.
+Fri Mar 17 16:49:50 2023 - INFO  - Finish environment cleanup.

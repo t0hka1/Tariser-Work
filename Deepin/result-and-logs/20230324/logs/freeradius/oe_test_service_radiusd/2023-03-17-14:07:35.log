@@ -1,0 +1,46 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:07:37 2023 - INFO  - Start testing...
+Fri Mar 17 14:07:40 2023 - ERROR - pkgs:(freeradius) not found
+Failed to restart radiusd.service: Unit radiusd.service not found.
+Fri Mar 17 14:07:41 2023 - ERROR - radiusd.service restart failed
+Fri Mar 17 14:07:42 2023 - ERROR - ../common/common_lib.sh line 34
+Unit radiusd.service could not be found.
+Fri Mar 17 14:07:48 2023 - ERROR - radiusd.service restart failed
+Fri Mar 17 14:07:49 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop radiusd.service: Unit radiusd.service not loaded.
+Fri Mar 17 14:07:49 2023 - ERROR - radiusd.service stop failed
+Fri Mar 17 14:07:50 2023 - ERROR - ../common/common_lib.sh line 39
+Unit radiusd.service could not be found.
+Fri Mar 17 14:07:56 2023 - ERROR - radiusd.service stop failed
+Fri Mar 17 14:07:57 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start radiusd.service: Unit radiusd.service not found.
+Fri Mar 17 14:07:57 2023 - ERROR - radiusd.service start failed
+Fri Mar 17 14:07:58 2023 - ERROR - ../common/common_lib.sh line 44
+Unit radiusd.service could not be found.
+Fri Mar 17 14:08:04 2023 - ERROR - radiusd.service start failed
+Fri Mar 17 14:08:05 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for radiusd.service: No such file or directory
+Fri Mar 17 14:08:05 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start radiusd.service: Unit radiusd.service not found.
+sed: can't read /usr/lib/systemd/system/radiusd.service: No such file or directory
+Failed to reload radiusd.service: Unit radiusd.service not found.
+Fri Mar 17 14:08:11 2023 - ERROR - radiusd.service reload failed
+Fri Mar 17 14:08:12 2023 - ERROR - oe_test_service_radiusd.sh line 35
+Unit radiusd.service could not be found.
+Fri Mar 17 14:08:13 2023 - ERROR - radiusd.service reload causes the service status to change
+Fri Mar 17 14:08:13 2023 - ERROR - oe_test_service_radiusd.sh line 37
+Fri Mar 17 14:08:14 2023 - INFO  - Finish test!
+Fri Mar 17 14:08:14 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:08:15 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/radiusd.service: No such file or directory
+Failed to reload radiusd.service: Unit radiusd.service not found.
+Fri Mar 17 14:08:23 2023 - WARN  - no thing to do.
+Fri Mar 17 14:08:23 2023 - INFO  - Finish environment cleanup!

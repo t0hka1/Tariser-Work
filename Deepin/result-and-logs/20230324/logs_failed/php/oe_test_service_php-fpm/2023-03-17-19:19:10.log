@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:19:13 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 19:19:18 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 19:19:19 2023 - INFO  - Start testing...
+Failed to restart php-fpm.service: Unit php-fpm.service not found.
+Fri Mar 17 19:19:19 2023 - ERROR - php-fpm.service restart failed
+Fri Mar 17 19:19:20 2023 - ERROR - ../common/common_lib.sh line 34
+Unit php-fpm.service could not be found.
+Fri Mar 17 19:19:26 2023 - ERROR - php-fpm.service restart failed
+Fri Mar 17 19:19:27 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop php-fpm.service: Unit php-fpm.service not loaded.
+Fri Mar 17 19:19:27 2023 - ERROR - php-fpm.service stop failed
+Fri Mar 17 19:19:28 2023 - ERROR - ../common/common_lib.sh line 39
+Unit php-fpm.service could not be found.
+Fri Mar 17 19:19:34 2023 - ERROR - php-fpm.service stop failed
+Fri Mar 17 19:19:35 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start php-fpm.service: Unit php-fpm.service not found.
+Fri Mar 17 19:19:35 2023 - ERROR - php-fpm.service start failed
+Fri Mar 17 19:19:36 2023 - ERROR - ../common/common_lib.sh line 44
+Unit php-fpm.service could not be found.
+Fri Mar 17 19:19:42 2023 - ERROR - php-fpm.service start failed
+Fri Mar 17 19:19:43 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for php-fpm.service: No such file or directory
+Fri Mar 17 19:19:43 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start php-fpm.service: Unit php-fpm.service not found.
+sed: can't read /usr/lib/systemd/system/php-fpm.service: No such file or directory
+Failed to reload php-fpm.service: Unit php-fpm.service not found.
+Fri Mar 17 19:19:50 2023 - ERROR - php-fpm.service reload failed
+Fri Mar 17 19:19:50 2023 - ERROR - oe_test_service_php-fpm.sh line 40
+Unit php-fpm.service could not be found.
+Fri Mar 17 19:19:51 2023 - ERROR - php-fpm.service reload causes the service status to change
+Fri Mar 17 19:19:51 2023 - ERROR - oe_test_service_php-fpm.sh line 42
+Fri Mar 17 19:19:52 2023 - INFO  - Finish test!
+Fri Mar 17 19:19:52 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:19:53 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/php-fpm.service: No such file or directory
+Failed to reload php-fpm.service: Unit php-fpm.service not found.
+Failed to stop php-fpm.service: Unit php-fpm.service not loaded.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: '\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nSome packages could not be installed. This may mean that you have\nrequested an impossible situation or if you are using the unstable\ndistribution that some required packages have not yet been created\nor been moved out of Incoming.\nThe following information may help to resolve the situation:\n\nThe following packages have unmet dependencies:\n php-fpm : Depends: php7.4-fpm but it is not installable\nE: Unable to correct problems, you have held broken packages.'
+Fri Mar 17 19:20:01 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,30 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:42:28 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 21:42:32 2023 - INFO  - pkgs:(net-tools) is already installed
+Failed to stop iptables.service: Unit iptables.service not loaded.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:42:33 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:42:34 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 21:42:34 2023 - INFO  - Start to run test.
+tcp        0      0 0.0.0.0:514             0.0.0.0:*               LISTEN      654/rsyslogd        
+tcp6       0      0 :::514                  :::*                    LISTEN      654/rsyslogd        
+Fri Mar 17 21:42:36 2023 - WARN  - the connect port using the default configuration
+spawn scp -P 22 -r client.conf @:/etc/rsyslog.d/client.conf
+ssh: Could not resolve hostname : Name or service not known
+scp: Connection closed
+Fri Mar 17 21:42:37 2023 - ERROR - Failed in remote SCP operation: 255
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:42:38 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:42:39 2023 - ERROR - oe_test_rsyslog_abnormal_template.sh line 55
+Fri Mar 17 21:43:00 2023 - ERROR - oe_test_rsyslog_abnormal_template.sh line 58
+Fri Mar 17 21:43:00 2023 - INFO  - End to run test.
+Fri Mar 17 21:43:01 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:43:01 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 21:43:02 2023 - WARN  - no thing to do.
+Usage: sshcmd.sh -c "command" -i "remote machinet ip" [-u login_user] [-p login_password] [-o port] [-t timeout]Fri Mar 17 21:43:03 2023 - ERROR - Failed in remote CMD operation:1
+Fri Mar 17 21:43:03 2023 - INFO  - End to restore the test environment.

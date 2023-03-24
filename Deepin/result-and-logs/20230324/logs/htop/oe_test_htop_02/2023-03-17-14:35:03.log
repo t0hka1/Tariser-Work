@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:35:06 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 14:35:26 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 14:35:27 2023 - INFO  - Start to run test.
+spawn htop -d 12
+qError opening terminal: unknown.
+spawn htop -C
+qError opening terminal: unknown.
+spawn htop -p 1
+qError opening terminal: unknown.
+spawn htop -s PID
+qError opening terminal: unknown.
+spawn htop -u root
+qError opening terminal: unknown.
+spawn htop -U
+qError opening terminal: unknown.
+spawn htop -t
+qError opening terminal: unknown.
+spawn htop -m
+qhtop: invalid option -- 'm'
+htop 3.2.2
+See 'man htop' for more information.
+Fri Mar 17 14:35:30 2023 - INFO  - End to run test.
+Fri Mar 17 14:35:31 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 14:35:31 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 14:35:50 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,56 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:28:27 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 12:28:32 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 12:28:33 2023 - INFO  - Start testing...
+netns0
+netns1
+Error: Unknown device type.
+Cannot find device "vnet0"
+Cannot find device "vnet1"
+Cannot find device "vnet0"
+Cannot find device "vnet1"
+Cannot find device "vnet0"
+Fri Mar 17 12:28:35 2023 - ERROR - vnet0 add ip fail
+Fri Mar 17 12:28:36 2023 - ERROR - oe_test_allocate_ipv4_addresses_dhcpd.sh line 59
+Fri Mar 17 12:28:38 2023 - ERROR - vnet0 add ip fail
+Fri Mar 17 12:28:39 2023 - ERROR - oe_test_allocate_ipv4_addresses_dhcpd.sh line 62
+exec of "dhcpd" failed: No such file or directory
+Fri Mar 17 12:28:39 2023 - ERROR - start dhcpd fail
+Fri Mar 17 12:28:40 2023 - ERROR - oe_test_allocate_ipv4_addresses_dhcpd.sh line 64
+Fri Mar 17 12:28:43 2023 - ERROR - allocate ipv4 addr fail
+Fri Mar 17 12:28:44 2023 - ERROR - oe_test_allocate_ipv4_addresses_dhcpd.sh line 68
+Fri Mar 17 12:28:44 2023 - INFO  - Finish testing!
+Fri Mar 17 12:28:44 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:28:45 2023 - INFO  - start environment cleanup.
+Cannot find device "vnet0"
+Cannot find device "vnet1"
+
+Usage:
+ kill [options] <pid> [...]
+
+Options:
+ <pid> [...]            send signal to every <pid> listed
+ -<signal>, -s, --signal <signal>
+                        specify the <signal> to be sent
+ -q, --queue <value>    integer value to be sent with the signal
+ -l, --list=[<signal>]  list all signal names, or convert one to a name
+ -L, --table            list all signal names in a nice table
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see kill(1).
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage dhcp is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'dhcp' has no installation candidate"
+Fri Mar 17 12:28:49 2023 - INFO  - Finish environment cleanup!

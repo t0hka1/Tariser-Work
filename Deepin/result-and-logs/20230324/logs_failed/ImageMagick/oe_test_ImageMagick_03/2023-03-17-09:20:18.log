@@ -1,0 +1,47 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:20:20 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 09:20:24 2023 - ERROR - pkgs:(ImageMagick) not found
+Fri Mar 17 09:20:25 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 09:20:25 2023 - INFO  - Start to run test.
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `result.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:20:26 2023 - ERROR - oe_test_ImageMagick_03.sh line 34
+Fri Mar 17 09:20:26 2023 - ERROR - oe_test_ImageMagick_03.sh line 36
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `test3-final.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:20:27 2023 - ERROR - oe_test_ImageMagick_03.sh line 38
+Fri Mar 17 09:20:27 2023 - ERROR - oe_test_ImageMagick_03.sh line 40
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `hello.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:20:29 2023 - ERROR - oe_test_ImageMagick_03.sh line 43
+Fri Mar 17 09:20:29 2023 - ERROR - oe_test_ImageMagick_03.sh line 45
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:20:30 2023 - ERROR - oe_test_ImageMagick_03.sh line 47
+Fri Mar 17 09:20:30 2023 - ERROR - oe_test_ImageMagick_03.sh line 49
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar1.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:20:31 2023 - ERROR - oe_test_ImageMagick_03.sh line 51
+Fri Mar 17 09:20:31 2023 - ERROR - oe_test_ImageMagick_03.sh line 53
+convert-im6.q16: unable to load module `/usr/lib/riscv64-linux-gnu/ImageMagick-6.9.11/modules-Q16/coders/jpeg.la': file not found @ error/module.c/OpenModule/1315.
+convert-im6.q16: no decode delegate for this image format `JPG' @ error/constitute.c/ReadImage/575.
+convert-im6.q16: no images defined `bar2.jpg' @ error/convert.c/ConvertImageCommand/3229.
+Fri Mar 17 09:20:32 2023 - ERROR - oe_test_ImageMagick_03.sh line 55
+Fri Mar 17 09:20:32 2023 - ERROR - oe_test_ImageMagick_03.sh line 57
+Fri Mar 17 09:20:33 2023 - INFO  - End to run test.
+Fri Mar 17 09:20:33 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:20:34 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 09:20:34 2023 - WARN  - no thing to do.
+Fri Mar 17 09:20:35 2023 - INFO  - End to restore the test environment.

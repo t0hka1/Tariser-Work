@@ -1,0 +1,21 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:02:02 2023 - INFO  - Start to run test.
+spawn sqlite3 ./test.db
+couldn't execute "sqlite3": no such file or directory
+    while executing
+"spawn sqlite3 ./test.db"
+wc: ./output.txt: No such file or directory
+Fri Mar 17 23:02:03 2023 - ERROR - oe_test_sqlite_command_07.sh line 50
+wc: ./output1.txt: No such file or directory
+Fri Mar 17 23:02:04 2023 - ERROR - oe_test_sqlite_command_07.sh line 51
+Fri Mar 17 23:02:04 2023 - INFO  - End to run test.
+Fri Mar 17 23:02:04 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:02:05 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:02:05 2023 - INFO  - End to restore the test environment.

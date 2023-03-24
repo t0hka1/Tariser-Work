@@ -1,0 +1,30 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:55:32 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 11:55:37 2023 - ERROR - pkgs:(docker-engine) not found
+oe_test_container-exception-logger.sh: line 33: wget: command not found
+oe_test_container-exception-logger.sh: line 34: openEuler-docker.riscv64.tar.xz: No such file or directory
+oe_test_container-exception-logger.sh: line 35: docker: command not found
+oe_test_container-exception-logger.sh: line 42: docker: command not found
+Fri Mar 17 11:55:38 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 11:55:38 2023 - INFO  - Start testing...
+Fri Mar 17 11:55:39 2023 - ERROR - test failed without option
+Fri Mar 17 11:55:39 2023 - ERROR - oe_test_container-exception-logger.sh line 50
+Fri Mar 17 11:55:40 2023 - ERROR - test failed with option --help
+Fri Mar 17 11:55:40 2023 - ERROR - oe_test_container-exception-logger.sh line 53
+Fri Mar 17 11:55:41 2023 - ERROR - test failed with option --no-tag
+Fri Mar 17 11:55:42 2023 - ERROR - oe_test_container-exception-logger.sh line 56
+Fri Mar 17 11:55:42 2023 - ERROR - test failed with option --tag
+Fri Mar 17 11:55:43 2023 - ERROR - oe_test_container-exception-logger.sh line 59
+Fri Mar 17 11:55:43 2023 - INFO  - Finish test!
+Fri Mar 17 11:55:44 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:55:45 2023 - INFO  - start environment cleanup.
+oe_test_container-exception-logger.sh: line 66: docker: command not found
+Fri Mar 17 11:55:45 2023 - WARN  - no thing to do.
+Fri Mar 17 11:55:46 2023 - INFO  - Finish environment cleanup!

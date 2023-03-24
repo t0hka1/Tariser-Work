@@ -1,0 +1,36 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:38:31 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 13:39:19 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 13:39:19 2023 - INFO  - Start testing...
+Fri Mar 17 13:39:27 2023 - ERROR - bmc-watchdog.service restart failed
+Fri Mar 17 13:39:27 2023 - ERROR - ../common/common_lib.sh line 37
+Fri Mar 17 13:39:34 2023 - ERROR - bmc-watchdog.service stop failed
+Fri Mar 17 13:39:34 2023 - ERROR - ../common/common_lib.sh line 42
+Job for bmc-watchdog.service failed because a timeout was exceeded.
+See "systemctl status bmc-watchdog.service" and "journalctl -xeu bmc-watchdog.service" for details.
+Fri Mar 17 13:49:36 2023 - ERROR - bmc-watchdog.service start failed
+Fri Mar 17 13:49:36 2023 - ERROR - ../common/common_lib.sh line 44
+Fri Mar 17 13:49:43 2023 - ERROR - bmc-watchdog.service start failed
+Fri Mar 17 13:49:43 2023 - ERROR - ../common/common_lib.sh line 47
+/etc/systemd/system/multi-user.target.wants/bmc-watchdog.service
+Removed /etc/systemd/system/multi-user.target.wants/bmc-watchdog.service.
+find: ‘/etc/systemd/system/multi-user.target.wants/bmc-watchdog.service’: No such file or directory
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Mar 17 13:39:20 deepin-rv-builder-2 systemd[1]: bmc-watchdog.service: Failed with result 'signal'.
+Mar 17 13:39:35 deepin-rv-builder-2 systemd[1]: bmc-watchdog.service: Failed to parse PID from file /run/bmc-watchdog.pid: Invalid argument
+Mar 17 13:49:35 deepin-rv-builder-2 systemd[1]: bmc-watchdog.service: Failed with result 'timeout'.
+Mar 17 13:49:35 deepin-rv-builder-2 systemd[1]: Failed to start BMC Watchdog Timer Daemon.
+Fri Mar 17 13:49:56 2023 - ERROR - There is an error message for the log of bmc-watchdog.service
+Fri Mar 17 13:49:56 2023 - ERROR - ../common/common_lib.sh line 28
+Failed to reload bmc-watchdog.service: Job type reload is not applicable for unit bmc-watchdog.service.
+Fri Mar 17 13:49:58 2023 - INFO  - Finish test!
+Fri Mar 17 13:49:59 2023 - ERROR - failed to execute the case.
+Fri Mar 17 13:49:59 2023 - INFO  - start environment cleanup.
+Fri Mar 17 13:50:49 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,72 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:33:07 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 21:33:11 2023 - ERROR - pkgs:(rpmdevtools) not found
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 29: dnf: command not found
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 30: yumdownloader: command not found
+Fri Mar 17 21:33:12 2023 - INFO  - End of environmental preparation.
+Fri Mar 17 21:33:12 2023 - INFO  - Start to run test.
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 38: rpmdev-rmdevelrpms: command not found
+Fri Mar 17 21:33:13 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:33:13 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 39
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 40: rpmdev-rmdevelrpms: command not found
+Fri Mar 17 21:33:14 2023 - ERROR - Failed option: -v
+Fri Mar 17 21:33:14 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 41
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 42: rpmdev-rmdevelrpms: command not found
+Fri Mar 17 21:33:15 2023 - ERROR - Fail option: -l
+Fri Mar 17 21:33:15 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 43
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 44: rpmdev-rmdevelrpms: command not found
+Fri Mar 17 21:33:16 2023 - ERROR - Fail option: --qf
+Fri Mar 17 21:33:16 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 45
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 46: rpmdev-rmdevelrpms: command not found
+Fri Mar 17 21:33:17 2023 - ERROR - Fail option: -y
+Fri Mar 17 21:33:18 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 47
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 49: rpmdev-setuptree: command not found
+Fri Mar 17 21:33:18 2023 - ERROR - Failed command: rpmdev-setuptree
+Fri Mar 17 21:33:19 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 51
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 53: rpmdev-sha1: command not found
+expr: syntax error: missing argument after ‘length’
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 55: test: ==: unary operator expected
+Fri Mar 17 21:33:19 2023 - ERROR - Failed command: rpmdev-sha1
+Fri Mar 17 21:33:20 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 56
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 58: rpmdev-sha224: command not found
+expr: syntax error: missing argument after ‘length’
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 60: test: ==: unary operator expected
+Fri Mar 17 21:33:21 2023 - ERROR - Failed command: rpmdev-sha224
+Fri Mar 17 21:33:21 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 61
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 63: rpmdev-sha256: command not found
+expr: syntax error: missing argument after ‘length’
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 65: test: ==: unary operator expected
+Fri Mar 17 21:33:22 2023 - ERROR - Failed command: rpmdev-sha256
+Fri Mar 17 21:33:22 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 66
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 68: rpmdev-sha384: command not found
+expr: syntax error: missing argument after ‘length’
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 70: test: ==: unary operator expected
+Fri Mar 17 21:33:23 2023 - ERROR - Failed command: rpmdev-sha384
+Fri Mar 17 21:33:24 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 71
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 73: rpmdev-sha512: command not found
+expr: syntax error: missing argument after ‘length’
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 75: test: ==: unary operator expected
+Fri Mar 17 21:33:24 2023 - ERROR - Failed command: rpmdev-sha512
+Fri Mar 17 21:33:25 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 76
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 78: rpmdev-sort: command not found
+ls: cannot access '*rpm': No such file or directory
+Fri Mar 17 21:33:25 2023 - ERROR - Failed command: rpmdev-sort
+Fri Mar 17 21:33:26 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 78
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 79: rpmdev-sort: command not found
+Fri Mar 17 21:33:26 2023 - ERROR - Failed option: rpmdev-sort -h
+Fri Mar 17 21:33:27 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 80
+oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh: line 82: rpmdev-sum: command not found
+Fri Mar 17 21:33:28 2023 - ERROR - Failed command: rpmdev-sum
+Fri Mar 17 21:33:28 2023 - ERROR - oe_test_rpmdevtools_rpmdev-rmdevelrpms.sh line 83
+Fri Mar 17 21:33:29 2023 - INFO  - End to run test.
+Fri Mar 17 21:33:29 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:33:30 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 21:33:31 2023 - WARN  - no thing to do.
+Fri Mar 17 21:33:31 2023 - INFO  - End to restore the test environment.

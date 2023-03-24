@@ -1,0 +1,138 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:27:52 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 00:27:56 2023 - INFO  - pkgs:(wireshark) is already installed
+Sat Mar 18 00:27:57 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 00:27:58 2023 - INFO  - Start to run test.
+Usage: capinfos [options] <infile> ...
+Capinfos (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)
+
+Copyright 1998-2021 Gerald Combs <gerald@wireshark.org> and contributors.
+License GPLv2+: GNU GPL version 2 or later <https://www.gnu.org/licenses/gpl-2.0.html>
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Compiled (64-bit) with GLib 2.72.1, with zlib 1.2.11.
+
+Running on Linux 5.10.0-7.oe2203.riscv64, with 8029 MB of physical memory, with
+locale LC_CTYPE=C.UTF-8, LC_NUMERIC=C, LC_TIME=C, LC_COLLATE=C, LC_MONETARY=C,
+LC_MESSAGES=C, LC_PAPER=C, LC_NAME=C, LC_ADDRESS=C, LC_TELEPHONE=C,
+LC_MEASUREMENT=C, LC_IDENTIFICATION=C, with zlib 1.2.11, binary plugins
+supported (0 loaded).
+
+Built using gcc 11.2.0.
+Capturing on 'eth0'
+File: testfile1
+
+Packets: 1 
+Packets: 2 
+Packets: 3 
+Packets: 4 
+Packets: 6 
+Packets: 8 
+Packets: 10 
+Packets: 11 
+Packets: 12 
+Packets: 14 
+Packets: 16 
+Packets: 17 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+Interface #0 info:
+File name:           testfile1
+File timestamp precision:  nanoseconds (9)
+Capture oper-sys:    Linux 5.10.0-7.oe2203.riscv64
+Capture application: Dumpcap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)
+Capturing on 'eth0'
+File: testfile17
+
+Packets: 2 
+Packets: 4 
+Packets: 5 
+Packets: 6 
+Packets: 7 
+Packets: 9 
+Packets: 11 
+Packets: 12 
+Packets: 13 
+Packets: 15 
+Packets: 16 
+Packets: 17 
+Packets: 18 
+Packets: 20 
+Packets captured: 20
+Packets received/dropped on interface 'eth0': 20/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+Capture comment:     test dumpcap usage
+Number of packets:   20
+File size:           2688 bytes
+Capture duration:    883.033212252 seconds
+First packet time:   2023-03-18 00:28:06.514222753
+Last packet time:    2023-03-18 00:42:49.547435005
+Data byte rate:      1 bytes/s
+Average packet size: 84.90 bytes
+Average packet rate: 0 packets/s
+File name:           testfile1
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+File timestamp precision:  nanoseconds (9)
+Packet size limit:   file hdr: (not set)
+Number of packets:   20
+File size:           2688 bytes
+Data size:           1698 bytes
+Capture duration:    883.033212252 seconds
+First packet time:   2023-03-18 00:28:06.514222753
+Last packet time:    2023-03-18 00:42:49.547435005
+Data byte rate:      1 bytes/s
+Data bit rate:       15 bits/s
+Average packet size: 84.90 bytes
+Average packet rate: 0 packets/s
+Strict time order:   True
+Capture oper-sys:    Linux 5.10.0-7.oe2203.riscv64
+Capture application: Dumpcap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)
+Interface #0 info:
+                     Capture length = 262144
+                     Number of packets = 20
+File name	File type	File encapsulation	File time precision	Packet size limit	Packet size limit min (inferred)	Packet size limit max (inferred)	Number of packets	File size (bytes)	Data size (bytes)	Capture duration (seconds)	Start time	End time	Data byte rate (bytes/sec)	Data bit rate (bits/sec)	Average packet size (bytes)	Average packet rate (packets/sec)	SHA256	RIPEMD160	SHA1	Strict time order	Capture hardware	Capture oper-sys	Capture application	Capture comment
+testfile1	Wireshark/... - pcapng	Ethernet	nanoseconds	(not set)	n/a	n/a	20	2688	1698	883.033212252	2023-03-18 00:28:06.514222753	2023-03-18 00:42:49.547435005	1.92	15.38	84.90	0.02	57e1d70ba81760b3febeb92673dcc5c4583a3d5a8a7470c21cb1aa33ae1a456a	9923f4f1eede7c8d8434c327505747f6f4408be5	8f54a5b532aa6b1097b19accd3dc04ac9040ade2	True		Linux 5.10.0-7.oe2203.riscv64	Dumpcap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)	
+File name	File type	File encapsulation	File time precision	Packet size limit	Packet size limit min (inferred)	Packet size limit max (inferred)	Number of packets	File size (bytes)	Data size (bytes)	Capture duration (seconds)	Start time	End time	Data byte rate (bytes/sec)	Data bit rate (bits/sec)	Average packet size (bytes)	Average packet rate (packets/sec)	SHA256	RIPEMD160	SHA1	Strict time order	Capture hardware	Capture oper-sys	Capture application	Capture comment
+File name	File type	File encapsulation	File time precision	Packet size limit	Packet size limit min (inferred)	Packet size limit max (inferred)	Number of packets	File size (bytes)	Data size (bytes)	Capture duration (seconds)	Start time	End time	Data byte rate (bytes/sec)	Data bit rate (bits/sec)	Average packet size (bytes)	Average packet rate (packets/sec)	SHA256	RIPEMD160	SHA1	Strict time order	Capture hardware	Capture oper-sys	Capture application	Capture comment
+testfile1	Wireshark/... - pcapng	Ethernet	nanoseconds	(not set)	n/a	n/a	20	2688	1698	883.033212252	2023-03-18 00:28:06.514222753	2023-03-18 00:42:49.547435005	1.92	15.38	84.90	0.02	57e1d70ba81760b3febeb92673dcc5c4583a3d5a8a7470c21cb1aa33ae1a456a	9923f4f1eede7c8d8434c327505747f6f4408be5	8f54a5b532aa6b1097b19accd3dc04ac9040ade2	True		Linux 5.10.0-7.oe2203.riscv64	Dumpcap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)	
+File name,File type,File encapsulation,File time precision,Packet size limit,Packet size limit min (inferred),Packet size limit max (inferred),Number of packets,File size (bytes),Data size (bytes),Capture duration (seconds),Start time,End time,Data byte rate (bytes/sec),Data bit rate (bits/sec),Average packet size (bytes),Average packet rate (packets/sec),SHA256,RIPEMD160,SHA1,Strict time order,Capture hardware,Capture oper-sys,Capture application,Capture comment
+testfile1,Wireshark/... - pcapng,Ethernet,nanoseconds,(not set),n/a,n/a,20,2688,1698,883.033212252,2023-03-18 00:28:06.514222753,2023-03-18 00:42:49.547435005,1.92,15.38,84.90,0.02,57e1d70ba81760b3febeb92673dcc5c4583a3d5a8a7470c21cb1aa33ae1a456a,9923f4f1eede7c8d8434c327505747f6f4408be5,8f54a5b532aa6b1097b19accd3dc04ac9040ade2,True,,Linux 5.10.0-7.oe2203.riscv64,Dumpcap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1),
+File name File type File encapsulation File time precision Packet size limit Packet size limit min (inferred) Packet size limit max (inferred) Number of packets File size (bytes) Data size (bytes) Capture duration (seconds) Start time End time Data byte rate (bytes/sec) Data bit rate (bits/sec) Average packet size (bytes) Average packet rate (packets/sec) SHA256 RIPEMD160 SHA1 Strict time order Capture hardware Capture oper-sys Capture application Capture comment
+testfile1 Wireshark/... - pcapng Ethernet nanoseconds (not set) n/a n/a 20 2688 1698 883.033212252 2023-03-18 00:28:06.514222753 2023-03-18 00:42:49.547435005 1.92 15.38 84.90 0.02 57e1d70ba81760b3febeb92673dcc5c4583a3d5a8a7470c21cb1aa33ae1a456a 9923f4f1eede7c8d8434c327505747f6f4408be5 8f54a5b532aa6b1097b19accd3dc04ac9040ade2 True  Linux 5.10.0-7.oe2203.riscv64 Dumpcap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1) 
+File name:           testfile1
+File type:           Wireshark/... - pcapng
+File encapsulation:  Ethernet
+File timestamp precision:  nanoseconds (9)
+Packet size limit:   file hdr: (not set)
+Number of packets:   20
+File size:           2688 bytes
+Data size:           1698 bytes
+Capture duration:    883.033212252 seconds
+First packet time:   2023-03-18 00:28:06.514222753
+Last packet time:    2023-03-18 00:42:49.547435005
+Data byte rate:      1 bytes/s
+Data bit rate:       15 bits/s
+Average packet size: 84.90 bytes
+Average packet rate: 0 packets/s
+Strict time order:   True
+Capture oper-sys:    Linux 5.10.0-7.oe2203.riscv64
+Capture application: Dumpcap (Wireshark) 3.4.9 (Git v3.4.9 packaged as 3.4.9-1)
+Interface #0 info:
+                     Capture length = 262144
+                     Number of packets = 20
+Sat Mar 18 00:53:05 2023 - INFO  - End of the test.
+Sat Mar 18 00:53:05 2023 - INFO  - succeed to execute the case.
+Sat Mar 18 00:53:06 2023 - INFO  - Start to restore the test environment.
+Sat Mar 18 00:53:06 2023 - WARN  - no thing to do.
+Sat Mar 18 00:53:07 2023 - INFO  - Finish restoring the test environment.

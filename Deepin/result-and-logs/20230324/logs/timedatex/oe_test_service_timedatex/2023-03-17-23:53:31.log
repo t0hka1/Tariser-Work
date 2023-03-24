@@ -1,0 +1,45 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:53:34 2023 - INFO  - Start environmental preparation.
+Unit timedatex.service does not exist, proceeding anyway.
+oe_test_service_timedatex.sh: line 26: getenforce: command not found
+Fri Mar 17 23:53:40 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 23:53:40 2023 - INFO  - Start testing...
+Failed to restart timedatex.service: Unit timedatex.service not found.
+Fri Mar 17 23:53:41 2023 - ERROR - timedatex.service restart failed
+Fri Mar 17 23:53:42 2023 - ERROR - ../common/common_lib.sh line 34
+Unit timedatex.service could not be found.
+Fri Mar 17 23:53:48 2023 - ERROR - timedatex.service restart failed
+Fri Mar 17 23:53:49 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop timedatex.service: Unit timedatex.service not loaded.
+Fri Mar 17 23:53:49 2023 - ERROR - timedatex.service stop failed
+Fri Mar 17 23:53:50 2023 - ERROR - ../common/common_lib.sh line 39
+Unit timedatex.service could not be found.
+Fri Mar 17 23:53:56 2023 - ERROR - timedatex.service stop failed
+Fri Mar 17 23:53:57 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start timedatex.service: Unit timedatex.service not found.
+Fri Mar 17 23:53:57 2023 - ERROR - timedatex.service start failed
+Fri Mar 17 23:53:58 2023 - ERROR - ../common/common_lib.sh line 44
+Unit timedatex.service could not be found.
+Fri Mar 17 23:54:04 2023 - ERROR - timedatex.service start failed
+Fri Mar 17 23:54:05 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for timedatex.service: No such file or directory
+Fri Mar 17 23:54:06 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start timedatex.service: Unit timedatex.service not found.
+Fri Mar 17 23:54:07 2023 - ERROR - Job type reload is not applicable for unit timedatex.service
+Fri Mar 17 23:54:07 2023 - ERROR - ../common/common_lib.sh line 91
+Unit timedatex.service could not be found.
+Unit timedatex.service could not be found.
+Fri Mar 17 23:54:08 2023 - INFO  - Finish test!
+Fri Mar 17 23:54:09 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:54:09 2023 - INFO  - start environment cleanup.
+Unit timedatex.service does not exist, proceeding anyway.
+Created symlink /etc/systemd/system/timedatex.service → /dev/null.
+Fri Mar 17 23:54:15 2023 - INFO  - Finish environment cleanup!

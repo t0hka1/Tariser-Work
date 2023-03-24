@@ -1,0 +1,8 @@
+Sat Mar 18 00:15:37 2023 - INFO  - start to run testcase:oe_test_uuid_1.
+Sat Mar 18 00:16:07 2023 - INFO  - The case exit by code 0.
+Sat Mar 18 00:16:18 2023 - INFO  - End to run testcase:oe_test_uuid_1.
+Sat Mar 18 00:16:19 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.
+Sat Mar 18 00:16:22 2023 - INFO  - start to run testcase:oe_test_uuid_2.
+Sat Mar 18 00:16:35 2023 - INFO  - The case exit by code 0.
+Sat Mar 18 00:16:45 2023 - INFO  - End to run testcase:oe_test_uuid_2.
+Sat Mar 18 00:16:46 2023 - INFO  - A total of 1 use cases were executed, with 1 successes and 0 failures.

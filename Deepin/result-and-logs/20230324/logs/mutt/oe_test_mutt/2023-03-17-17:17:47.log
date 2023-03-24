@@ -1,0 +1,42 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:17:50 2023 - INFO  - Start to prepare the test environment.
+find: '/var/tmp/systemd-private-809238d607534ce29e0d0dc78dac4e7e-systemd-timesyncd.service-ZFwH4B': Bad message
+cp: missing destination file operand after '/root/.muttrc'
+Try 'cp --help' for more information.
+Fri Mar 17 17:18:26 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 17:18:27 2023 - INFO  - Start to run test.
+oe_test_mutt.sh: line 47: mutt: command not found
+Fri Mar 17 17:18:27 2023 - ERROR - oe_test_mutt.sh line 48
+oe_test_mutt.sh: line 49: mutt: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 17:18:28 2023 - ERROR - oe_test_mutt.sh line 50
+oe_test_mutt.sh: line 51: mutt: command not found
+grep: /root/sent: No such file or directory
+Fri Mar 17 17:18:28 2023 - ERROR - oe_test_mutt.sh line 53
+oe_test_mutt.sh: line 54: mutt: command not found
+grep: /root/sent: No such file or directory
+Fri Mar 17 17:18:29 2023 - ERROR - oe_test_mutt.sh line 56
+oe_test_mutt.sh: line 57: mutt: command not found
+grep: /root/sent: No such file or directory
+Fri Mar 17 17:18:30 2023 - ERROR - oe_test_mutt.sh line 59
+oe_test_mutt.sh: line 61: mutt: command not found
+grep: /root/sent: No such file or directory
+Fri Mar 17 17:18:30 2023 - ERROR - oe_test_mutt.sh line 63
+Fri Mar 17 17:18:31 2023 - INFO  - End of the test.
+Fri Mar 17 17:18:31 2023 - ERROR - failed to execute the case.
+Fri Mar 17 17:18:32 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage mutt is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'mutt' has no installation candidate"
+Fri Mar 17 17:18:35 2023 - INFO  - Finish restoring the test environment.

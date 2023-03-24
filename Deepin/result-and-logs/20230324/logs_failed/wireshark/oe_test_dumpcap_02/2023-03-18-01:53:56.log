@@ -1,0 +1,87 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 01:53:59 2023 - INFO  - Start to prepare the test environment.
+Sat Mar 18 01:54:03 2023 - INFO  - pkgs:(wireshark) is already installed
+Sat Mar 18 01:54:03 2023 - INFO  - Finish preparing the test environment.
+Sat Mar 18 01:54:04 2023 - INFO  - Start to run test.
+Capturing on 'eth0'
+File: testfile6
+
+Packets: 2 
+Packets captured: 2
+Packets received/dropped on interface 'eth0': 2/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+Number of packets:   2
+Capturing on 'eth0'
+File: testfile7
+
+Packets captured: 0
+Packets received/dropped on interface 'eth0': 0/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (0.0%)
+Capture duration:    n/a
+Capturing on 'eth0'
+File: testfile8
+
+Packets: 2 
+Packets: 4 
+Packets: 7 
+Packets captured: 7
+Packets received/dropped on interface 'eth0': 7/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+File size:           1208 bytes
+Capturing on 'eth0'
+File: testfile9_00001_20230318020137
+
+Packets: 4 
+Packets: 6 
+Packets: 6 File: testfile9_00002_20230318021120
+
+Packets: 8 
+Packets: 9 
+Packets: 11 
+Packets: 12 
+Packets captured: 12
+Packets received/dropped on interface 'eth0': 12/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+Capturing on 'eth0'
+File: testfile10
+
+Packets: 3 
+Packets: 6 
+Packets captured: 6
+Packets received/dropped on interface 'eth0': 6/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+File name:           testfile10
+Sat Mar 18 02:23:57 2023 - ERROR - Timeout : Command 'bash oe_test_dumpcap_02.sh' timed out after 1799.9992742100003 seconds
+spawn dumpcap -i 1 -b duration:1 -w testfile11
+Capturing on 'eth0'
+File: testfile11_00001_20230318022358
+Packets: 2 Packets: 4 Packets: 4 File: testfile11_00002_20230318022359
+Packets: 4 File: testfile11_00003_20230318022400
+Packets: 4 File: testfile11_00004_20230318022401
+Packets: 4 File: testfile11_00005_20230318022402
+^CPackets captured: 4
+Packets received/dropped on interface 'eth0': 4/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)
+testfile11_00001_20230318022358
+testfile11_00002_20230318022359
+testfile11_00003_20230318022400
+testfile11_00004_20230318022401
+testfile11_00005_20230318022402
+spawn dumpcap -i 3 -b interval:1 -w testfile12
+Capturing on 'Loopback: lo'
+File: testfile12_00001_20230318022403
+Packets: 0 File: testfile12_00002_20230318022404
+Packets: 0 File: testfile12_00003_20230318022405
+Packets: 0 File: testfile12_00004_20230318022406
+Packets: 0 File: testfile12_00005_20230318022407
+Packets: 0 File: testfile12_00006_20230318022408
+^CPackets captured: 0
+Packets received/dropped on interface 'Loopback: lo': 0/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (0.0%)
+testfile12_00001_20230318022403
+testfile12_00002_20230318022404
+testfile12_00003_20230318022405
+testfile12_00004_20230318022406
+testfile12_00005_20230318022407
+testfile12_00006_20230318022408
+spawn dumpcap -i eth0 -b filesize:2 -w testfile13

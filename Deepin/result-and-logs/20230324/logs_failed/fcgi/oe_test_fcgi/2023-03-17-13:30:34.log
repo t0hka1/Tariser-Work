@@ -1,0 +1,50 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:30:37 2023 - INFO  - Start to config params of the case.
+Fri Mar 17 13:30:39 2023 - INFO  - End to config params of the case.
+Fri Mar 17 13:30:40 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 13:30:44 2023 - ERROR - pkgs:(fcgi) not found
+./common/common_lib.sh: line 26: wget: command not found
+tar (child): 2.4.2.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+./common/common_lib.sh: line 29: cd: ./fcgi2-2.4.2: No such file or directory
+./common/common_lib.sh: line 38: examples/echo.c: No such file or directory
+./common/common_lib.sh: line 40: ./autogen.sh: No such file or directory
+./common/common_lib.sh: line 41: ./configure: No such file or directory
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
+Fri Mar 17 13:30:45 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 13:30:45 2023 - INFO  - Start to run test.
+oe_test_fcgi.sh: line 47: cgi-fcgi: command not found
+Fri Mar 17 13:30:46 2023 - ERROR - cgi-fcgi execute connect command unsuccessfully
+Fri Mar 17 13:30:47 2023 - ERROR - oe_test_fcgi.sh line 48
+oe_test_fcgi.sh: line 50: cgi-fcgi: command not found
+Fri Mar 17 13:30:47 2023 - ERROR - cgi-fcgi execute start command unsuccessfully, maybe the address connName is already in use
+Fri Mar 17 13:30:48 2023 - ERROR - oe_test_fcgi.sh line 51
+oe_test_fcgi.sh: line 53: cgi-fcgi: command not found
+Fri Mar 17 13:30:48 2023 - ERROR - cgi-fcgi execute bind command unsuccessfully
+Fri Mar 17 13:30:49 2023 - ERROR - oe_test_fcgi.sh line 54
+oe_test_fcgi.sh: line 56: cgi-fcgi: command not found
+Fri Mar 17 13:30:49 2023 - ERROR - cgi-fcgi execute cmdFile command unsuccessfully
+Fri Mar 17 13:30:50 2023 - ERROR - oe_test_fcgi.sh line 57
+Fri Mar 17 13:30:50 2023 - INFO  - End to run test.
+Fri Mar 17 13:30:51 2023 - ERROR - failed to execute the case.
+Fri Mar 17 13:30:51 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 13:30:52 2023 - WARN  - no thing to do.
+Fri Mar 17 13:30:52 2023 - INFO  - End to restore the test environment.

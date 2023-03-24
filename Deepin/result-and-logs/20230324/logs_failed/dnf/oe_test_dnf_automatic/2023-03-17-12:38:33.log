@@ -1,0 +1,47 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:38:35 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:38:39 2023 - ERROR - pkgs:(dnf-automatic) not found
+Fri Mar 17 12:38:40 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:38:40 2023 - INFO  - Start to run test.
+Fri Mar 17 12:38:41 2023 - ERROR - oe_test_dnf_automatic.sh line 36
+Failed to start dnf-automatic-notifyonly.timer: Unit dnf-automatic-notifyonly.timer not found.
+Fri Mar 17 12:38:42 2023 - ERROR - oe_test_dnf_automatic.sh line 38
+Unit dnf-automatic-notifyonly.timer could not be found.
+Fri Mar 17 12:38:42 2023 - ERROR - oe_test_dnf_automatic.sh line 40
+Fri Mar 17 12:38:43 2023 - ERROR - oe_test_dnf_automatic.sh line 42
+Failed to start dnf-automatic-download.timer: Unit dnf-automatic-download.timer not found.
+Fri Mar 17 12:38:44 2023 - ERROR - oe_test_dnf_automatic.sh line 44
+Unit dnf-automatic-download.timer could not be found.
+Fri Mar 17 12:38:44 2023 - ERROR - oe_test_dnf_automatic.sh line 46
+Fri Mar 17 12:38:45 2023 - ERROR - oe_test_dnf_automatic.sh line 48
+Failed to start dnf-automatic-install.timer: Unit dnf-automatic-install.timer not found.
+Fri Mar 17 12:38:46 2023 - ERROR - oe_test_dnf_automatic.sh line 50
+Unit dnf-automatic-install.timer could not be found.
+Fri Mar 17 12:38:46 2023 - ERROR - oe_test_dnf_automatic.sh line 52
+Fri Mar 17 12:38:47 2023 - ERROR - oe_test_dnf_automatic.sh line 54
+Failed to stop dnf-automatic-notifyonly.timer: Unit dnf-automatic-notifyonly.timer not loaded.
+Fri Mar 17 12:38:48 2023 - ERROR - oe_test_dnf_automatic.sh line 56
+Unit dnf-automatic-notifyonly.timer could not be found.
+Fri Mar 17 12:38:48 2023 - ERROR - oe_test_dnf_automatic.sh line 58
+Fri Mar 17 12:38:49 2023 - ERROR - oe_test_dnf_automatic.sh line 60
+Failed to stop dnf-automatic-download.timer: Unit dnf-automatic-download.timer not loaded.
+Fri Mar 17 12:38:50 2023 - ERROR - oe_test_dnf_automatic.sh line 62
+Unit dnf-automatic-download.timer could not be found.
+Fri Mar 17 12:38:51 2023 - ERROR - oe_test_dnf_automatic.sh line 64
+Fri Mar 17 12:38:52 2023 - ERROR - oe_test_dnf_automatic.sh line 66
+Failed to stop dnf-automatic-install.timer: Unit dnf-automatic-install.timer not loaded.
+Fri Mar 17 12:38:52 2023 - ERROR - oe_test_dnf_automatic.sh line 68
+Unit dnf-automatic-install.timer could not be found.
+Fri Mar 17 12:38:53 2023 - ERROR - oe_test_dnf_automatic.sh line 70
+Fri Mar 17 12:38:53 2023 - INFO  - End of the test.
+Fri Mar 17 12:38:54 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:38:55 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:38:55 2023 - WARN  - no thing to do.
+Fri Mar 17 12:38:56 2023 - INFO  - End to restore the test environment.

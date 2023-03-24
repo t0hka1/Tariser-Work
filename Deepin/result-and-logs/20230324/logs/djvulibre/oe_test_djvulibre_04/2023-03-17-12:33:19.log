@@ -1,0 +1,81 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:33:21 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:33:25 2023 - ERROR - pkgs:(djvulibre) not found
+spawn any2djvu test.pdf
+couldn't execute "any2djvu": no such file or directory
+    while executing
+"spawn any2djvu test.pdf"
+Fri Mar 17 12:33:26 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:33:26 2023 - INFO  - Start to run test.
+Fri Mar 17 12:33:27 2023 - ERROR - Check test.djvu not exist.
+Fri Mar 17 12:33:27 2023 - ERROR - oe_test_djvulibre_04.sh line 43
+Fri Mar 17 12:33:28 2023 - ERROR - Check djvudump failed.
+Fri Mar 17 12:33:28 2023 - ERROR - oe_test_djvulibre_04.sh line 46
+Fri Mar 17 12:33:29 2023 - ERROR - Check djvuextract --help failed.
+Fri Mar 17 12:33:29 2023 - ERROR - oe_test_djvulibre_04.sh line 49
+Fri Mar 17 12:33:30 2023 - ERROR - Check djvumake --help failed.
+Fri Mar 17 12:33:31 2023 - ERROR - oe_test_djvulibre_04.sh line 52
+Fri Mar 17 12:33:31 2023 - ERROR - Check djvups --help failed.
+Fri Mar 17 12:33:32 2023 - ERROR - oe_test_djvulibre_04.sh line 55
+oe_test_djvulibre_04.sh: line 56: djvups: command not found
+Fri Mar 17 12:33:32 2023 - ERROR - Check djvups -color=yes failed.
+Fri Mar 17 12:33:33 2023 - ERROR - oe_test_djvulibre_04.sh line 57
+Fri Mar 17 12:33:33 2023 - ERROR - Check djvups1.ps not exist.
+Fri Mar 17 12:33:34 2023 - ERROR - oe_test_djvulibre_04.sh line 59
+oe_test_djvulibre_04.sh: line 60: djvups: command not found
+Fri Mar 17 12:33:34 2023 - ERROR - Check djvups -color=no failed.
+Fri Mar 17 12:33:35 2023 - ERROR - oe_test_djvulibre_04.sh line 61
+Fri Mar 17 12:33:35 2023 - ERROR - Check djvups2.ps not exist.
+Fri Mar 17 12:33:36 2023 - ERROR - oe_test_djvulibre_04.sh line 63
+oe_test_djvulibre_04.sh: line 64: djvups: command not found
+Fri Mar 17 12:33:36 2023 - ERROR - Check djvups -verbose failed.
+Fri Mar 17 12:33:37 2023 - ERROR - oe_test_djvulibre_04.sh line 65
+Fri Mar 17 12:33:37 2023 - ERROR - Check djvups.ps not exist.
+Fri Mar 17 12:33:38 2023 - ERROR - oe_test_djvulibre_04.sh line 67
+oe_test_djvulibre_04.sh: line 68: djvups: command not found
+Fri Mar 17 12:33:38 2023 - ERROR - Check djvups -format=ps failed.
+Fri Mar 17 12:33:39 2023 - ERROR - oe_test_djvulibre_04.sh line 69
+Fri Mar 17 12:33:39 2023 - ERROR - Check djvups3.ps not exist.
+Fri Mar 17 12:33:40 2023 - ERROR - oe_test_djvulibre_04.sh line 71
+oe_test_djvulibre_04.sh: line 72: djvups: command not found
+Fri Mar 17 12:33:40 2023 - ERROR - Check djvups -level=2 failed.
+Fri Mar 17 12:33:40 2023 - ERROR - oe_test_djvulibre_04.sh line 73
+Fri Mar 17 12:33:41 2023 - ERROR - Check djvups4.ps not exist.
+Fri Mar 17 12:33:41 2023 - ERROR - oe_test_djvulibre_04.sh line 75
+oe_test_djvulibre_04.sh: line 76: djvups: command not found
+Fri Mar 17 12:33:42 2023 - ERROR - Check djvups -orient=portrait failed.
+Fri Mar 17 12:33:42 2023 - ERROR - oe_test_djvulibre_04.sh line 77
+Fri Mar 17 12:33:43 2023 - ERROR - Check djvups42.ps not exist.
+Fri Mar 17 12:33:43 2023 - ERROR - oe_test_djvulibre_04.sh line 79
+oe_test_djvulibre_04.sh: line 80: djvups: command not found
+Fri Mar 17 12:33:44 2023 - ERROR - Check djvups -mode=color failed.
+Fri Mar 17 12:33:44 2023 - ERROR - oe_test_djvulibre_04.sh line 81
+Fri Mar 17 12:33:45 2023 - ERROR - Check djvups5.ps not exist.
+Fri Mar 17 12:33:45 2023 - ERROR - oe_test_djvulibre_04.sh line 83
+oe_test_djvulibre_04.sh: line 84: djvups: command not found
+Fri Mar 17 12:33:46 2023 - ERROR - Check djvups -zoom=25 failed.
+Fri Mar 17 12:33:46 2023 - ERROR - oe_test_djvulibre_04.sh line 85
+Fri Mar 17 12:33:47 2023 - ERROR - Check djvups6.ps not exist.
+Fri Mar 17 12:33:47 2023 - ERROR - oe_test_djvulibre_04.sh line 87
+oe_test_djvulibre_04.sh: line 88: djvups: command not found
+Fri Mar 17 12:33:48 2023 - ERROR - Check djvups -bookletfold=18+200 failed.
+Fri Mar 17 12:33:48 2023 - ERROR - oe_test_djvulibre_04.sh line 89
+Fri Mar 17 12:33:49 2023 - ERROR - Check djvups7.ps not exist.
+Fri Mar 17 12:33:49 2023 - ERROR - oe_test_djvulibre_04.sh line 91
+oe_test_djvulibre_04.sh: line 92: djvups: command not found
+Fri Mar 17 12:33:49 2023 - ERROR - Check djvups -booklet=no failed.
+Fri Mar 17 12:33:50 2023 - ERROR - oe_test_djvulibre_04.sh line 93
+Fri Mar 17 12:33:51 2023 - ERROR - Check djvups31.ps not exist.
+Fri Mar 17 12:33:51 2023 - ERROR - oe_test_djvulibre_04.sh line 95
+Fri Mar 17 12:33:52 2023 - INFO  - End to run test.
+Fri Mar 17 12:33:52 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:33:52 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:33:53 2023 - WARN  - no thing to do.
+Fri Mar 17 12:33:54 2023 - INFO  - End to restore the test environment.

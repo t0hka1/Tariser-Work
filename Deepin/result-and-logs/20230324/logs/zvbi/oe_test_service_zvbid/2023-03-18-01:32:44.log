@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 01:32:47 2023 - INFO  - Start environmental preparation.
+Sat Mar 18 01:33:17 2023 - INFO  - End of environmental preparation!
+Sat Mar 18 01:33:17 2023 - INFO  - Start testing...
+Failed to restart zvbid.service: Unit zvbid.service not found.
+Sat Mar 18 01:33:18 2023 - ERROR - zvbid.service restart failed
+Sat Mar 18 01:33:19 2023 - ERROR - ../common/common_lib.sh line 34
+Unit zvbid.service could not be found.
+Sat Mar 18 01:33:25 2023 - ERROR - zvbid.service restart failed
+Sat Mar 18 01:33:25 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop zvbid.service: Unit zvbid.service not loaded.
+Sat Mar 18 01:33:26 2023 - ERROR - zvbid.service stop failed
+Sat Mar 18 01:33:27 2023 - ERROR - ../common/common_lib.sh line 39
+Unit zvbid.service could not be found.
+Sat Mar 18 01:33:33 2023 - ERROR - zvbid.service stop failed
+Sat Mar 18 01:33:34 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start zvbid.service: Unit zvbid.service not found.
+Sat Mar 18 01:33:34 2023 - ERROR - zvbid.service start failed
+Sat Mar 18 01:33:35 2023 - ERROR - ../common/common_lib.sh line 44
+Unit zvbid.service could not be found.
+Sat Mar 18 01:33:41 2023 - ERROR - zvbid.service start failed
+Sat Mar 18 01:33:42 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for zvbid.service: No such file or directory
+Sat Mar 18 01:33:42 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start zvbid.service: Unit zvbid.service not found.
+Sat Mar 18 01:33:43 2023 - ERROR - Job type reload is not applicable for unit zvbid.service
+Sat Mar 18 01:33:44 2023 - ERROR - ../common/common_lib.sh line 91
+Unit zvbid.service could not be found.
+Unit zvbid.service could not be found.
+Sat Mar 18 01:33:45 2023 - INFO  - Finish test!
+Sat Mar 18 01:33:45 2023 - ERROR - failed to execute the case.
+Sat Mar 18 01:33:46 2023 - INFO  - start environment cleanup.
+Sat Mar 18 01:34:02 2023 - INFO  - Finish environment cleanup!

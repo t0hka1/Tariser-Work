@@ -1,0 +1,66 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:01:34 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:01:39 2023 - ERROR - pkgs:(cronie) not found
+oe_test_cronie.sh: line 33: /home/test_user/test.sh: No such file or directory
+chmod: cannot access '/home/test_user/test.sh': No such file or directory
+no crontab for root
+oe_test_cronie.sh: line 36: /home/test_user/cron.bak: No such file or directory
+Fri Mar 17 12:01:40 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:01:40 2023 - INFO  - Start to run test.
+crontab: invalid option -- 'V'
+crontab: usage error: unrecognized option
+usage:	crontab [-u user] file
+	crontab [ -u user ] [ -i ] { -e | -l | -r }
+		(default operation is replace, per 1003.2)
+	-e	(edit user's crontab)
+	-l	(list user's crontab)
+	-r	(delete user's crontab)
+	-i	(prompt before deleting user's crontab)
+Fri Mar 17 12:01:41 2023 - ERROR - log message: Failed to run command: crontab -V
+Fri Mar 17 12:01:41 2023 - ERROR - oe_test_cronie.sh line 43
+* * * * * /root/GitRepo/mugen-debian-riscv/testcases/cli-test/cronie/test.sh
+3
+no crontab for root
+cp: cannot stat '/home/test_user/cron.bak': No such file or directory
+oe_test_cronie.sh: line 57: /home/test_user/cron.test: No such file or directory
+Fri Mar 17 12:04:13 2023 - ERROR - log message: Failed to run command: echo "* * * * * /home/""$USER_NAME""/test.sh" >> /home/"$USER_NAME"/cron.test && crontab /home/"$USER_NAME"/cron.test
+Fri Mar 17 12:04:13 2023 - ERROR - oe_test_cronie.sh line 58
+no crontab for test_user
+Fri Mar 17 12:04:14 2023 - ERROR - log message: Failed to run command: crontab -u "$USER_NAME" -l
+Fri Mar 17 12:04:15 2023 - ERROR - oe_test_cronie.sh line 60
+cat: /home/test_user/rst.txt: No such file or directory
+Fri Mar 17 12:06:46 2023 - ERROR - log message: The service may not be running properly
+Fri Mar 17 12:06:46 2023 - ERROR - oe_test_cronie.sh line 63
+no crontab for test_user
+Fri Mar 17 12:06:47 2023 - ERROR - log message: Failed to run command: echo -ne 'Y' | crontab -u "$USER_NAME" -ri
+Fri Mar 17 12:06:48 2023 - ERROR - oe_test_cronie.sh line 65
+oe_test_cronie.sh: line 66: crond: command not found
+Fri Mar 17 12:06:48 2023 - ERROR - log message: Failed to run command: crond -V
+Fri Mar 17 12:06:49 2023 - ERROR - oe_test_cronie.sh line 67
+oe_test_cronie.sh: line 68: cronnext: command not found
+Fri Mar 17 12:06:49 2023 - ERROR - log message: Failed to run command: cronnext -h
+Fri Mar 17 12:06:50 2023 - ERROR - oe_test_cronie.sh line 69
+oe_test_cronie.sh: line 70: cronnext: command not found
+Fri Mar 17 12:06:50 2023 - ERROR - log message: Failed to run command: cronnext -V
+Fri Mar 17 12:06:51 2023 - ERROR - oe_test_cronie.sh line 71
+oe_test_cronie.sh: line 72: anacron: command not found
+Fri Mar 17 12:06:51 2023 - ERROR - log message: Failed to run command: anacron -h
+Fri Mar 17 12:06:52 2023 - ERROR - oe_test_cronie.sh line 73
+oe_test_cronie.sh: line 74: anacron: command not found
+Fri Mar 17 12:06:52 2023 - ERROR - log message: Failed to run command: anacron -V
+Fri Mar 17 12:06:53 2023 - ERROR - oe_test_cronie.sh line 75
+Fri Mar 17 12:06:53 2023 - INFO  - End to run test.
+Fri Mar 17 12:06:54 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:06:54 2023 - INFO  - Start to restore the test environment.
+/home/test_user/cron.bak: No such file or directory
+Fri Mar 17 12:06:55 2023 - WARN  - no thing to do.
+userdel: test_user mail spool (/var/mail/test_user) not found
+userdel: test_user home directory (/home/test_user) not found
+Fri Mar 17 12:06:56 2023 - INFO  - End to restore the test environment.

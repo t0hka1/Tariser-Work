@@ -1,0 +1,59 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:11:26 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 14:11:30 2023 - ERROR - pkgs:(geos-devel) not found
+Fri Mar 17 14:11:31 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 14:11:31 2023 - INFO  - Start to run test.
+oe_test_geos_commandAndbaseFun.sh: line 36: geos-config: command not found
+Fri Mar 17 14:11:32 2023 - ERROR - geos-config --prefix execution failed.
+Fri Mar 17 14:11:32 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 37
+oe_test_geos_commandAndbaseFun.sh: line 38: geos-config: command not found
+oe_test_geos_commandAndbaseFun.sh: line 38: rpm: command not found
+Fri Mar 17 14:11:33 2023 - ERROR - geos-config --version execution failed.
+Fri Mar 17 14:11:34 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 39
+oe_test_geos_commandAndbaseFun.sh: line 40: geos-config: command not found
+Fri Mar 17 14:11:34 2023 - ERROR - geos-config --libs execution failed.
+Fri Mar 17 14:11:35 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 41
+oe_test_geos_commandAndbaseFun.sh: line 42: geos-config: command not found
+Fri Mar 17 14:11:35 2023 - ERROR - geos-config --clibs execution failed.
+Fri Mar 17 14:11:36 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 43
+oe_test_geos_commandAndbaseFun.sh: line 44: geos-config: command not found
+Fri Mar 17 14:11:36 2023 - ERROR - geos-config --cclibs execution failed.
+Fri Mar 17 14:11:37 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 45
+oe_test_geos_commandAndbaseFun.sh: line 46: geos-config: command not found
+Fri Mar 17 14:11:38 2023 - ERROR - geos-config --static-clibs execution failed.
+Fri Mar 17 14:11:38 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 47
+oe_test_geos_commandAndbaseFun.sh: line 48: geos-config: command not found
+Fri Mar 17 14:11:39 2023 - ERROR - geos-config --static-cclibs execution failed.
+Fri Mar 17 14:11:39 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 49
+oe_test_geos_commandAndbaseFun.sh: line 50: geos-config: command not found
+Fri Mar 17 14:11:40 2023 - ERROR - geos-config --cflags execution failed.
+Fri Mar 17 14:11:40 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 51
+oe_test_geos_commandAndbaseFun.sh: line 52: geos-config: command not found
+Fri Mar 17 14:11:41 2023 - ERROR - geos-config --ldflags execution failed.
+Fri Mar 17 14:11:42 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 53
+oe_test_geos_commandAndbaseFun.sh: line 54: geos-config: command not found
+Fri Mar 17 14:11:42 2023 - ERROR - geos-config --includes execution failed.
+Fri Mar 17 14:11:43 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 55
+geos_test.cpp:3:10: fatal error: geos.h: No such file or directory
+    3 | #include "geos.h"
+      |          ^~~~~~~~
+compilation terminated.
+oe_test_geos_commandAndbaseFun.sh: line 57: ./geos_test: No such file or directory
+oe_test_geos_commandAndbaseFun.sh: line 58: rpm: command not found
+Fri Mar 17 14:11:46 2023 - ERROR - geos-config base func execution failed.
+Fri Mar 17 14:11:46 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 59
+oe_test_geos_commandAndbaseFun.sh: line 60: geos-config: command not found
+Fri Mar 17 14:11:47 2023 - ERROR - geos-config --jtsport execution failed.
+Fri Mar 17 14:11:48 2023 - ERROR - oe_test_geos_commandAndbaseFun.sh line 61
+Fri Mar 17 14:11:48 2023 - INFO  - End to run test.
+Fri Mar 17 14:11:49 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:11:49 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 14:11:49 2023 - WARN  - no thing to do.
+Fri Mar 17 14:11:50 2023 - INFO  - End to restore the test environment.

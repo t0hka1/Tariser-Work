@@ -1,0 +1,37 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:06:18 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:06:23 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:06:24 2023 - INFO  - Start to run test.
+oe_test_memping.sh: line 35: memping: command not found
+Fri Mar 17 16:06:25 2023 - ERROR - oe_test_memping.sh line 36
+oe_test_memping.sh: line 37: memping: command not found
+Fri Mar 17 16:06:25 2023 - ERROR - oe_test_memping.sh line 38
+oe_test_memping.sh: line 39: memping: command not found
+Fri Mar 17 16:06:26 2023 - ERROR - oe_test_memping.sh line 40
+oe_test_memping.sh: line 41: memcached: command not found
+Fri Mar 17 16:06:26 2023 - ERROR - oe_test_memping.sh line 42
+Fri Mar 17 16:06:33 2023 - ERROR - oe_test_memping.sh line 47
+oe_test_memping.sh: line 48: memping: command not found
+Fri Mar 17 16:06:33 2023 - ERROR - oe_test_memping.sh line 49
+oe_test_memping.sh: line 50: memping: command not found
+Fri Mar 17 16:06:34 2023 - ERROR - oe_test_memping.sh line 51
+oe_test_memping.sh: line 52: memping: command not found
+Fri Mar 17 16:06:34 2023 - ERROR - oe_test_memping.sh line 53
+Fri Mar 17 16:06:35 2023 - INFO  - End of the test.
+Fri Mar 17 16:06:35 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:06:36 2023 - INFO  - Start to restore the test environment.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage libmemcached is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'libmemcached' has no installation candidate"
+Fri Mar 17 16:06:39 2023 - INFO  - Finish restoring the test environment.

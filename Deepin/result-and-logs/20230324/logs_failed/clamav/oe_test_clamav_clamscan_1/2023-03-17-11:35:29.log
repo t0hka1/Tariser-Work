@@ -1,0 +1,55 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 11:35:32 2023 - INFO  - Start to prepare the database config.
+oe_test_clamav_clamscan_1.sh: line 31: sigtool: command not found
+Fri Mar 17 11:35:38 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 11:35:39 2023 - INFO  - Start to run test.
+oe_test_clamav_clamscan_1.sh: line 39: clamscan: command not found
+Fri Mar 17 11:35:40 2023 - ERROR - Check clamscan version failed.
+Fri Mar 17 11:35:40 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 40
+oe_test_clamav_clamscan_1.sh: line 41: clamscan: command not found
+Fri Mar 17 11:35:41 2023 - ERROR - Check clamscan help failed.
+Fri Mar 17 11:35:41 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 42
+oe_test_clamav_clamscan_1.sh: line 43: clamscan: command not found
+Fri Mar 17 11:35:42 2023 - ERROR - Check clamscan -a failed.
+Fri Mar 17 11:35:43 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 44
+oe_test_clamav_clamscan_1.sh: line 45: clamscan: command not found
+Fri Mar 17 11:35:43 2023 - ERROR - Check clamscan -v failed.
+Fri Mar 17 11:35:44 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 46
+oe_test_clamav_clamscan_1.sh: line 47: clamscan: command not found
+Fri Mar 17 11:35:44 2023 - ERROR - Check clamscan --debug failed.
+Fri Mar 17 11:35:45 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 48
+oe_test_clamav_clamscan_1.sh: line 49: clamscan: command not found
+Fri Mar 17 11:35:45 2023 - ERROR - Check clamscan --quiet --stdout failed.
+Fri Mar 17 11:35:46 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 50
+oe_test_clamav_clamscan_1.sh: line 51: clamscan: command not found
+Fri Mar 17 11:35:46 2023 - ERROR - Check clamscan --no-summary failed.
+Fri Mar 17 11:35:47 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 52
+oe_test_clamav_clamscan_1.sh: line 53: clamscan: command not found
+Fri Mar 17 11:35:48 2023 - ERROR - Check clamscan -i failed.
+Fri Mar 17 11:35:48 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 54
+oe_test_clamav_clamscan_1.sh: line 55: clamscan: command not found
+Fri Mar 17 11:35:49 2023 - ERROR - Check clamscan --bell failed.
+Fri Mar 17 11:35:49 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 56
+oe_test_clamav_clamscan_1.sh: line 57: clamscan: command not found
+Fri Mar 17 11:35:50 2023 - ERROR - Check clamscan -r failed.
+Fri Mar 17 11:35:51 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 58
+oe_test_clamav_clamscan_1.sh: line 59: clamscan: command not found
+Fri Mar 17 11:35:51 2023 - ERROR - Check clamscan -o failed.
+Fri Mar 17 11:35:52 2023 - ERROR - oe_test_clamav_clamscan_1.sh line 60
+Fri Mar 17 11:35:52 2023 - INFO  - End to run test.
+Fri Mar 17 11:35:53 2023 - ERROR - failed to execute the case.
+Fri Mar 17 11:35:53 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage clamav is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'clamav' has no installation candidate"
+Fri Mar 17 11:35:57 2023 - INFO  - End to restore the test environment.

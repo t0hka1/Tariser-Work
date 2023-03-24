@@ -1,0 +1,44 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:41:45 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 17:41:49 2023 - ERROR - pkgs:(nfs-utils) not found
+Fri Mar 17 17:41:50 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 17:41:50 2023 - INFO  - Start testing...
+Failed to restart auth-rpcgss-module.service: Unit auth-rpcgss-module.service not found.
+Fri Mar 17 17:41:51 2023 - ERROR - auth-rpcgss-module.service restart failed
+Fri Mar 17 17:41:51 2023 - ERROR - ../common/common_lib.sh line 34
+Unit auth-rpcgss-module.service could not be found.
+Fri Mar 17 17:41:58 2023 - ERROR - auth-rpcgss-module.service restart failed
+Fri Mar 17 17:41:58 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop auth-rpcgss-module.service: Unit auth-rpcgss-module.service not loaded.
+Fri Mar 17 17:41:59 2023 - ERROR - auth-rpcgss-module.service stop failed
+Fri Mar 17 17:41:59 2023 - ERROR - ../common/common_lib.sh line 39
+Unit auth-rpcgss-module.service could not be found.
+Fri Mar 17 17:42:06 2023 - ERROR - auth-rpcgss-module.service stop failed
+Fri Mar 17 17:42:06 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start auth-rpcgss-module.service: Unit auth-rpcgss-module.service not found.
+Fri Mar 17 17:42:07 2023 - ERROR - auth-rpcgss-module.service start failed
+Fri Mar 17 17:42:07 2023 - ERROR - ../common/common_lib.sh line 44
+Unit auth-rpcgss-module.service could not be found.
+Fri Mar 17 17:42:14 2023 - ERROR - auth-rpcgss-module.service start failed
+Fri Mar 17 17:42:14 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for auth-rpcgss-module.service: No such file or directory
+Fri Mar 17 17:42:15 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start auth-rpcgss-module.service: Unit auth-rpcgss-module.service not found.
+Fri Mar 17 17:42:16 2023 - ERROR - Job type reload is not applicable for unit auth-rpcgss-module.service
+Fri Mar 17 17:42:16 2023 - ERROR - ../common/common_lib.sh line 91
+Unit auth-rpcgss-module.service could not be found.
+Unit auth-rpcgss-module.service could not be found.
+Fri Mar 17 17:42:17 2023 - INFO  - Finish test!
+Fri Mar 17 17:42:18 2023 - ERROR - failed to execute the case.
+Fri Mar 17 17:42:18 2023 - INFO  - start environment cleanup.
+Failed to stop auth-rpcgss-module.service: Unit auth-rpcgss-module.service not loaded.
+Fri Mar 17 17:42:19 2023 - WARN  - no thing to do.
+Fri Mar 17 17:42:20 2023 - INFO  - Finish environment cleanup!

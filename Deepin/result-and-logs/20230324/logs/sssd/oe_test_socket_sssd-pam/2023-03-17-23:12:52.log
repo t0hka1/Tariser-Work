@@ -1,0 +1,49 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:12:54 2023 - INFO  - Start environmental preparation.
+sed: can't read /etc/sssd/sssd.conf: No such file or directory
+Fri Mar 17 23:12:59 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 23:13:00 2023 - INFO  - Start testing...
+Failed to restart sssd-pam.socket: Unit sssd-pam.socket not found.
+Fri Mar 17 23:13:01 2023 - ERROR - sssd-pam.socket restart failed
+Fri Mar 17 23:13:01 2023 - ERROR - ../common/common_lib.sh line 34
+Unit sssd-pam.socket could not be found.
+Fri Mar 17 23:13:07 2023 - ERROR - sssd-pam.socket restart failed
+Fri Mar 17 23:13:08 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop sssd-pam.socket: Unit sssd-pam.socket not loaded.
+Fri Mar 17 23:13:09 2023 - ERROR - sssd-pam.socket stop failed
+Fri Mar 17 23:13:09 2023 - ERROR - ../common/common_lib.sh line 39
+Unit sssd-pam.socket could not be found.
+Fri Mar 17 23:13:15 2023 - ERROR - sssd-pam.socket stop failed
+Fri Mar 17 23:13:16 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start sssd-pam.socket: Unit sssd-pam.socket not found.
+Fri Mar 17 23:13:17 2023 - ERROR - sssd-pam.socket start failed
+Fri Mar 17 23:13:17 2023 - ERROR - ../common/common_lib.sh line 44
+Unit sssd-pam.socket could not be found.
+Fri Mar 17 23:13:23 2023 - ERROR - sssd-pam.socket start failed
+Fri Mar 17 23:13:24 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for sssd-pam.socket: No such file or directory
+Fri Mar 17 23:13:24 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start sssd-pam.socket: Unit sssd-pam.socket not found.
+Fri Mar 17 23:13:25 2023 - ERROR - Job type reload is not applicable for unit sssd-pam.socket
+Fri Mar 17 23:13:26 2023 - ERROR - ../common/common_lib.sh line 91
+Unit sssd-pam.socket could not be found.
+Unit sssd-pam.socket could not be found.
+Fri Mar 17 23:13:27 2023 - INFO  - Finish test!
+Fri Mar 17 23:13:27 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:13:28 2023 - INFO  - start environment cleanup.
+Failed to stop sssd-pam.socket: Unit sssd-pam.socket not loaded.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage sssd is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'sssd' has no installation candidate"
+Fri Mar 17 23:13:31 2023 - INFO  - Finish environment cleanup!

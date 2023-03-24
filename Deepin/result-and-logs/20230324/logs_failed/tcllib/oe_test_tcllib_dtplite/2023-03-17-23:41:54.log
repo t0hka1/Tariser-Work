@@ -1,0 +1,54 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:41:57 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 23:42:01 2023 - ERROR - pkgs:(tcllib) not found
+sed: can't read /etc/xinetd.d/echo-stream: No such file or directory
+Failed to restart xinetd.service: Unit xinetd.service not found.
+Fri Mar 17 23:42:02 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 23:42:02 2023 - INFO  - Start to run test.
+oe_test_tcllib_dtplite.sh: line 40: dtplite: command not found
+Fri Mar 17 23:42:03 2023 - ERROR - oe_test_tcllib_dtplite.sh line 41
+grep: example.html: No such file or directory
+Fri Mar 17 23:42:03 2023 - ERROR - oe_test_tcllib_dtplite.sh line 43
+oe_test_tcllib_dtplite.sh: line 46: dtplite: command not found
+Fri Mar 17 23:42:04 2023 - ERROR - oe_test_tcllib_dtplite.sh line 47
+grep: toc.html: No such file or directory
+Fri Mar 17 23:42:05 2023 - ERROR - oe_test_tcllib_dtplite.sh line 49
+oe_test_tcllib_dtplite.sh: line 50: dtplite: command not found
+Fri Mar 17 23:42:05 2023 - ERROR - oe_test_tcllib_dtplite.sh line 51
+grep: example.html: No such file or directory
+oe_test_tcllib_dtplite.sh: line 54: dtplite: command not found
+Fri Mar 17 23:42:06 2023 - ERROR - oe_test_tcllib_dtplite.sh line 55
+grep: example.ext: No such file or directory
+Fri Mar 17 23:42:06 2023 - ERROR - oe_test_tcllib_dtplite.sh line 57
+oe_test_tcllib_dtplite.sh: line 58: dtplite: command not found
+Fri Mar 17 23:42:07 2023 - ERROR - oe_test_tcllib_dtplite.sh line 59
+grep: example.html: No such file or directory
+Fri Mar 17 23:42:07 2023 - ERROR - oe_test_tcllib_dtplite.sh line 61
+oe_test_tcllib_dtplite.sh: line 62: dtplite: command not found
+Fri Mar 17 23:42:08 2023 - ERROR - oe_test_tcllib_dtplite.sh line 63
+grep: example.html: No such file or directory
+Fri Mar 17 23:42:08 2023 - ERROR - oe_test_tcllib_dtplite.sh line 65
+oe_test_tcllib_dtplite.sh: line 66: dtplite: command not found
+Fri Mar 17 23:42:09 2023 - ERROR - oe_test_tcllib_dtplite.sh line 67
+grep: example.html: No such file or directory
+Fri Mar 17 23:42:10 2023 - ERROR - oe_test_tcllib_dtplite.sh line 69
+oe_test_tcllib_dtplite.sh: line 70: dtplite: command not found
+Fri Mar 17 23:42:10 2023 - ERROR - oe_test_tcllib_dtplite.sh line 71
+grep: example.html: No such file or directory
+Fri Mar 17 23:42:11 2023 - ERROR - oe_test_tcllib_dtplite.sh line 73
+oe_test_tcllib_dtplite.sh: line 74: dtplite: command not found
+Fri Mar 17 23:42:11 2023 - ERROR - oe_test_tcllib_dtplite.sh line 75
+grep: exampledoc: No such file or directory
+Fri Mar 17 23:42:12 2023 - ERROR - oe_test_tcllib_dtplite.sh line 77
+Fri Mar 17 23:42:12 2023 - INFO  - End to run test.
+Fri Mar 17 23:42:13 2023 - ERROR - failed to execute the case.
+Fri Mar 17 23:42:13 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 23:42:14 2023 - WARN  - no thing to do.
+Fri Mar 17 23:42:15 2023 - INFO  - End to restore the test environment.

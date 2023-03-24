@@ -1,0 +1,22 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:55:35 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 15:55:36 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:55:36 2023 - INFO  - Start executing testcase.
+New password: Retype new password: passwd: password updated successfully
+/etc/shadow: Permission denied
+/usr/bin/less cap_dac_override=eip
+su: warning: cannot change directory to /home/example: No such file or directory
+root:$y$j9T$/O5PIQ9W5oCrr1fcA7per1$FOsTMX2E5qTxuUh9dmOnC5A8rWvrIF5LzR.7emWxu1D:19425:0:99999:7:::
+Fri Mar 17 15:55:39 2023 - INFO  - Finish testcase execution.
+Fri Mar 17 15:55:39 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 15:55:40 2023 - INFO  - start environment cleanup.
+userdel: example mail spool (/var/mail/example) not found
+userdel: example home directory (/home/example) not found
+Fri Mar 17 15:55:41 2023 - INFO  - Finish environment cleanup!

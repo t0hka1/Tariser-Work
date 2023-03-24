@@ -1,0 +1,85 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:18:37 2023 - INFO  - Start to config params of the case.
+oe_test_logwatch.sh: line 24: rpm: command not found
+Fri Mar 17 16:18:37 2023 - INFO  - End to config params of the case.
+Fri Mar 17 16:18:38 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 16:18:42 2023 - ERROR - pkgs:(dovecot) not found
+oe_test_logwatch.sh: line 43: /usr/share/logwatch/default.conf/logwatch.conf: No such file or directory
+Failed to start dovecot.service: Unit dovecot.service not found.
+oe_test_logwatch.sh: line 45: flag: command not found
+oe_test_logwatch.sh: line 46: getenforce: command not found
+oe_test_logwatch.sh: line 46: []: command not found
+Failed to start postfix.service: Unit postfix.service not found.
+Fri Mar 17 16:18:43 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 16:18:44 2023 - INFO  - Start to run test.
+oe_test_logwatch.sh: line 58: logwatch: command not found
+Fri Mar 17 16:18:45 2023 - ERROR - logwatch version Test --version FAILED.
+Fri Mar 17 16:18:45 2023 - ERROR - oe_test_logwatch.sh line 59
+Fri Mar 17 16:18:46 2023 - ERROR - logwatch help Test --help FAILED.
+Fri Mar 17 16:18:46 2023 - ERROR - oe_test_logwatch.sh line 63
+Fri Mar 17 16:18:47 2023 - ERROR - logwatch usage Test --usage FAILED.
+Fri Mar 17 16:18:48 2023 - ERROR - oe_test_logwatch.sh line 66
+oe_test_logwatch.sh: line 69: logwatch: command not found
+Fri Mar 17 16:18:48 2023 - ERROR - logwatch normal service Test --service --range
+                         --detail --output --format --encode FAILED.
+Fri Mar 17 16:18:49 2023 - ERROR - oe_test_logwatch.sh line 71
+oe_test_logwatch.sh: line 75: logwatch: command not found
+Fri Mar 17 16:18:49 2023 - ERROR - logwatch normal service in html format Test --service --range 
+                         --detail --debug --output --format --encode FAILED.
+Fri Mar 17 16:18:50 2023 - ERROR - oe_test_logwatch.sh line 77
+oe_test_logwatch.sh: line 81: logwatch: command not found
+oe_test_logwatch.sh: line 85: logwatch: command not found
+grep: ./logwatch_log.txt: No such file or directory
+Fri Mar 17 16:18:50 2023 - ERROR - logwatch save to file test --logfile --range --detail
+                         --debug --output --filename --format --encode FAILED.
+Fri Mar 17 16:18:51 2023 - ERROR - oe_test_logwatch.sh line 88
+oe_test_logwatch.sh: line 92: logwatch: command not found
+Fri Mar 17 16:18:51 2023 - ERROR - logwatch sendmail test --service --range --detail --output 
+                         --logdir --mailto --subject --hostformat --encode FAILED.
+                         position 1
+Fri Mar 17 16:18:52 2023 - ERROR - oe_test_logwatch.sh line 94
+grep: /var/spool/mail/root: No such file or directory
+Fri Mar 17 16:18:58 2023 - ERROR - logwatch sendmail test --service --range --detail --output 
+                            --logdir --mailto --subject --hostformat --encode FAILED.
+                            position 2
+Fri Mar 17 16:18:59 2023 - ERROR - oe_test_logwatch.sh line 99
+oe_test_logwatch.sh: line 104: logwatch: command not found
+Fri Mar 17 16:18:59 2023 - ERROR - logwatch sendmail to multi host test --service --range
+                        --detail --output --mailto --subject --hostformat FAILED.
+                        position 1
+Fri Mar 17 16:19:00 2023 - ERROR - oe_test_logwatch.sh line 106
+grep: /var/spool/mail/root: No such file or directory
+Fri Mar 17 16:19:06 2023 - ERROR - logwatch sendmail to multi host test --service --range
+                        --detail --output --mailto --subject --hostformat FAILED. 
+                        position 2
+Fri Mar 17 16:19:06 2023 - ERROR - oe_test_logwatch.sh line 112
+grep: /var/spool/mail/mufiyemailuser: No such file or directory
+Fri Mar 17 16:19:07 2023 - ERROR - logwatch sendmail to multi host test --service --range
+                        --detail --output --mailto --subject --hostformat FAILED.
+                        position 3
+Fri Mar 17 16:19:08 2023 - ERROR - oe_test_logwatch.sh line 117
+oe_test_logwatch.sh: line 122: logwatch: command not found
+Fri Mar 17 16:19:08 2023 - ERROR - logwatch hosname argument test --service --range
+                         --detail --hostname FAILED.
+Fri Mar 17 16:19:09 2023 - ERROR - oe_test_logwatch.sh line 123
+oe_test_logwatch.sh: line 127: logwatch: command not found
+oe_test_logwatch.sh: line 132: logwatch: command not found
+oe_test_logwatch.sh: line 138: logwatch: command not found
+oe_test_logwatch.sh: line 138: logwatch: command not found
+oe_test_logwatch.sh: line 138: [0: command not found
+Fri Mar 17 16:19:10 2023 - INFO  - End to run test.
+Fri Mar 17 16:19:10 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:19:11 2023 - INFO  - Start to restore the test environment.
+sed: can't read /usr/share/logwatch/default.conf/logwatch.conf: No such file or directory
+Failed to stop dovecot.service: Unit dovecot.service not loaded.
+Failed to stop postfix.service: Unit postfix.service not loaded.
+Fri Mar 17 16:19:12 2023 - WARN  - no thing to do.
+oe_test_logwatch.sh: line 154: [: missing `]'
+Fri Mar 17 16:19:13 2023 - INFO  - End to restore the test environment.

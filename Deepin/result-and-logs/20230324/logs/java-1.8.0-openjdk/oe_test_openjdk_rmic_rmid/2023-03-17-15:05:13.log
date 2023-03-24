@@ -1,0 +1,33 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:05:16 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:05:20 2023 - ERROR - pkgs:(java-1.8.0-openjdk*) not found
+Fri Mar 17 15:05:21 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:05:21 2023 - INFO  - Start to run test.
+oe_test_openjdk_rmic_rmid.sh: line 35: rmic: command not found
+Fri Mar 17 15:05:22 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 36
+Fri Mar 17 15:05:23 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 38
+oe_test_openjdk_rmic_rmid.sh: line 39: rmid: command not found
+oe_test_openjdk_rmic_rmid.sh: line 41: rmid: command not found
+Fri Mar 17 15:05:27 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 42
+find: ‘portlog’: No such file or directory
+Fri Mar 17 15:05:27 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 44
+Fri Mar 17 15:05:28 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 47
+oe_test_openjdk_rmic_rmid.sh: line 49: schemagen: command not found
+Fri Mar 17 15:05:29 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 50
+oe_test_openjdk_rmic_rmid.sh: line 51: schemagen: command not found
+Fri Mar 17 15:05:29 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 52
+oe_test_openjdk_rmic_rmid.sh: line 53: schemagen: command not found
+Fri Mar 17 15:05:30 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 54
+Fri Mar 17 15:05:31 2023 - ERROR - oe_test_openjdk_rmic_rmid.sh line 57
+Fri Mar 17 15:05:31 2023 - INFO  - End to run test.
+Fri Mar 17 15:05:32 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:05:32 2023 - INFO  - Need't to restore the tet environment.
+Fri Mar 17 15:05:33 2023 - WARN  - no thing to do.
+Fri Mar 17 15:05:34 2023 - INFO  - End to restore the test environment.

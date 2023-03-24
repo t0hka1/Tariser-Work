@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:19:54 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:19:58 2023 - ERROR - pkgs:(gradle-local) not found
+Fri Mar 17 15:19:58 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 15:19:59 2023 - INFO  - Start to run test.
+oe_test_gradle-local.sh: line 35: gradle-local: command not found
+Fri Mar 17 15:20:00 2023 - ERROR - oe_test_gradle-local.sh line 36
+oe_test_gradle-local.sh: line 37: gradle-local: command not found
+Fri Mar 17 15:20:00 2023 - ERROR - oe_test_gradle-local.sh line 38
+oe_test_gradle-local.sh: line 39: gradle-local: command not found
+Fri Mar 17 15:20:01 2023 - ERROR - oe_test_gradle-local.sh line 40
+oe_test_gradle-local.sh: line 41: gradle-local: command not found
+Fri Mar 17 15:20:01 2023 - ERROR - oe_test_gradle-local.sh line 42
+oe_test_gradle-local.sh: line 43: gradle-local: command not found
+Fri Mar 17 15:20:02 2023 - ERROR - oe_test_gradle-local.sh line 44
+oe_test_gradle-local.sh: line 45: gradle-local: command not found
+Fri Mar 17 15:20:03 2023 - ERROR - oe_test_gradle-local.sh line 46
+oe_test_gradle-local.sh: line 47: gradle-local: command not found
+oe_test_gradle-local.sh: line 49: gradle-local: command not found
+Fri Mar 17 15:20:03 2023 - ERROR - oe_test_gradle-local.sh line 50
+oe_test_gradle-local.sh: line 51: gradle-local: command not found
+Fri Mar 17 15:20:04 2023 - ERROR - oe_test_gradle-local.sh line 52
+oe_test_gradle-local.sh: line 53: gradle-local: command not found
+Fri Mar 17 15:20:04 2023 - ERROR - oe_test_gradle-local.sh line 54
+oe_test_gradle-local.sh: line 55: gradle-local: command not found
+Fri Mar 17 15:20:05 2023 - ERROR - oe_test_gradle-local.sh line 56
+oe_test_gradle-local.sh: line 57: gradle-local: command not found
+Fri Mar 17 15:20:05 2023 - ERROR - oe_test_gradle-local.sh line 58
+oe_test_gradle-local.sh: line 59: gradle-local: command not found
+Fri Mar 17 15:20:06 2023 - ERROR - oe_test_gradle-local.sh line 60
+oe_test_gradle-local.sh: line 61: gradle-local: command not found
+Fri Mar 17 15:20:06 2023 - ERROR - oe_test_gradle-local.sh line 62
+oe_test_gradle-local.sh: line 63: gradle-local: command not found
+oe_test_gradle-local.sh: line 63: gradle-local: command not found
+Fri Mar 17 15:20:07 2023 - ERROR - oe_test_gradle-local.sh line 64
+spawn gradle-local base --scan
+couldn't execute "gradle-local": no such file or directory
+    while executing
+"spawn gradle-local base --scan"
+oe_test_gradle-local.sh: line 70: gradle-local: command not found
+Fri Mar 17 15:20:08 2023 - ERROR - oe_test_gradle-local.sh line 71
+Fri Mar 17 15:20:08 2023 - INFO  - End of the test.
+Fri Mar 17 15:20:09 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:20:09 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 15:20:10 2023 - WARN  - no thing to do.
+Fri Mar 17 15:20:10 2023 - INFO  - Finish restoring the test environment.

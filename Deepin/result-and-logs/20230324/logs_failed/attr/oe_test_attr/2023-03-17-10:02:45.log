@@ -1,0 +1,45 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 10:02:48 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 10:02:49 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 10:02:49 2023 - INFO  - Start to run test.
+oe_test_attr.sh: line 30: attr: command not found
+Fri Mar 17 10:02:50 2023 - ERROR - add attr failed
+Fri Mar 17 10:02:50 2023 - ERROR - oe_test_attr.sh line 31
+oe_test_attr.sh: line 32: attr: command not found
+Fri Mar 17 10:02:51 2023 - ERROR - get attr failed
+Fri Mar 17 10:02:51 2023 - ERROR - oe_test_attr.sh line 33
+oe_test_attr.sh: line 34: attr: command not found
+Fri Mar 17 10:02:52 2023 - ERROR - list attr failed
+Fri Mar 17 10:02:52 2023 - ERROR - oe_test_attr.sh line 35
+oe_test_attr.sh: line 36: attr: command not found
+Fri Mar 17 10:02:53 2023 - ERROR - remove attr failed
+Fri Mar 17 10:02:54 2023 - ERROR - oe_test_attr.sh line 37
+oe_test_attr.sh: line 38: attr: command not found
+Fri Mar 17 10:02:54 2023 - ERROR - add attr by link failed
+Fri Mar 17 10:02:55 2023 - ERROR - oe_test_attr.sh line 39
+oe_test_attr.sh: line 40: attr: command not found
+Fri Mar 17 10:02:55 2023 - ERROR - add attr by root failed
+Fri Mar 17 10:02:56 2023 - ERROR - oe_test_attr.sh line 41
+oe_test_attr.sh: line 42: attr: command not found
+Fri Mar 17 10:02:57 2023 - ERROR - add attr by securty failed
+Fri Mar 17 10:02:57 2023 - ERROR - oe_test_attr.sh line 43
+oe_test_attr.sh: line 44: setfattr: command not found
+Fri Mar 17 10:02:58 2023 - ERROR - set attr failed
+Fri Mar 17 10:02:58 2023 - ERROR - oe_test_attr.sh line 45
+oe_test_attr.sh: line 46: getfattr: command not found
+Fri Mar 17 10:02:59 2023 - ERROR - get attr failed
+Fri Mar 17 10:02:59 2023 - ERROR - oe_test_attr.sh line 47
+oe_test_attr.sh: line 48: setfattr: command not found
+Fri Mar 17 10:03:00 2023 - ERROR - remove attr failed
+Fri Mar 17 10:03:01 2023 - ERROR - oe_test_attr.sh line 49
+Fri Mar 17 10:03:01 2023 - INFO  - End to run test.
+Fri Mar 17 10:03:02 2023 - ERROR - failed to execute the case.
+Fri Mar 17 10:03:02 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 10:03:03 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,24 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 22:59:37 2023 - INFO  - Start to run test.
+spawn sqlite3 ./test.db
+couldn't execute "sqlite3": no such file or directory
+    while executing
+"spawn sqlite3 ./test.db"
+/root/GitRepo/mugen-debian-riscv/testcases/cli-test/sqlite/oe_test_sqlite_command_01
+spawn sqlite3 ./test.db
+couldn't execute "sqlite3": no such file or directory
+    while executing
+"spawn sqlite3 ./test.db"
+/root/GitRepo/mugen-debian-riscv/testcases/cli-test/sqlite/oe_test_sqlite_command_01
+Fri Mar 17 22:59:41 2023 - INFO  - End to run test.
+Fri Mar 17 22:59:41 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 22:59:42 2023 - INFO  - Start to restore the test environment.
+rm: cannot remove './test.db': No such file or directory
+Fri Mar 17 22:59:43 2023 - INFO  - End to restore the test environment.

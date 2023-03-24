@@ -1,0 +1,20 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:56:50 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 21:56:54 2023 - INFO  - pkgs:(rsyslog) is already installed
+Fri Mar 17 21:56:55 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 21:56:55 2023 - INFO  - Start to run test.
+Fri Mar 17 21:57:00 2023 - ERROR - oe_test_rsyslog_function_wildcard.sh line 40
+logger: unknown facility name: new
+Fri Mar 17 21:57:05 2023 - ERROR - Missing actual error code.
+Fri Mar 17 21:57:10 2023 - ERROR - oe_test_rsyslog_function_wildcard.sh line 56
+Fri Mar 17 21:57:10 2023 - INFO  - End to run test.
+Fri Mar 17 21:57:10 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:57:11 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 21:57:12 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,20 @@
+Fri Mar 17 21:32:14 2023 - INFO  - start to run testcase:oe_test_rpmdevtools_rpmargs.
+Fri Mar 17 21:32:49 2023 - ERROR - The case exit by code 18.
+Fri Mar 17 21:33:00 2023 - INFO  - End to run testcase:oe_test_rpmdevtools_rpmargs.
+Fri Mar 17 21:33:00 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:33:04 2023 - INFO  - start to run testcase:oe_test_rpmdevtools_rpmdev-rmdevelrpms.
+Fri Mar 17 21:33:32 2023 - ERROR - The case exit by code 14.
+Fri Mar 17 21:33:43 2023 - INFO  - End to run testcase:oe_test_rpmdevtools_rpmdev-rmdevelrpms.
+Fri Mar 17 21:33:43 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:33:47 2023 - INFO  - start to run testcase:oe_test_rpmdevtools_rpmdev-vercmp.
+Fri Mar 17 21:34:20 2023 - ERROR - The case exit by code 21.
+Fri Mar 17 21:34:31 2023 - INFO  - End to run testcase:oe_test_rpmdevtools_rpmdev-vercmp.
+Fri Mar 17 21:34:32 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:34:36 2023 - INFO  - start to run testcase:oe_test_rpmdevtools_rpmdev-wipetree.
+Fri Mar 17 21:35:23 2023 - ERROR - The case exit by code 31.
+Fri Mar 17 21:35:34 2023 - INFO  - End to run testcase:oe_test_rpmdevtools_rpmdev-wipetree.
+Fri Mar 17 21:35:34 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 21:35:38 2023 - INFO  - start to run testcase:oe_test_rpmdevtools_rpmdev-bumpspec.
+Fri Mar 17 21:36:08 2023 - ERROR - The case exit by code 18.
+Fri Mar 17 21:36:19 2023 - INFO  - End to run testcase:oe_test_rpmdevtools_rpmdev-bumpspec.
+Fri Mar 17 21:36:20 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

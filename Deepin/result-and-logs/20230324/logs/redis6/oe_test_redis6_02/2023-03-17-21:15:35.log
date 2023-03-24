@@ -1,0 +1,36 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:15:38 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 21:15:42 2023 - ERROR - pkgs:(redis6) not found
+Failed to start redis.service: Unit redis.service not found.
+Fri Mar 17 21:15:43 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 21:15:43 2023 - INFO  - Start executing testcase!
+Unit redis.service could not be found.
+Fri Mar 17 21:15:44 2023 - ERROR - oe_test_redis6_02.sh line 35
+oe_test_redis6_02.sh: line 36: redis-cli: command not found
+Fri Mar 17 21:15:44 2023 - ERROR - oe_test_redis6_02.sh line 37
+oe_test_redis6_02.sh: line 38: redis-cli: command not found
+Fri Mar 17 21:15:45 2023 - ERROR - oe_test_redis6_02.sh line 39
+oe_test_redis6_02.sh: line 40: redis-cli: command not found
+Fri Mar 17 21:15:46 2023 - ERROR - oe_test_redis6_02.sh line 41
+oe_test_redis6_02.sh: line 42: redis-cli: command not found
+Fri Mar 17 21:15:46 2023 - ERROR - oe_test_redis6_02.sh line 43
+spawn redis-cli -h 127.0.0.1 -p 6379
+couldn't execute "redis-cli": no such file or directory
+    while executing
+"spawn redis-cli -h 127.0.0.1 -p 6379"
+Fri Mar 17 21:15:47 2023 - ERROR - oe_test_redis6_02.sh line 58
+oe_test_redis6_02.sh: line 59: redis-check-rdb: command not found
+Fri Mar 17 21:15:48 2023 - ERROR - oe_test_redis6_02.sh line 60
+Fri Mar 17 21:15:48 2023 - INFO  - End of testcase execution!
+Fri Mar 17 21:15:49 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:15:49 2023 - INFO  - Start environment cleanup.
+Failed to stop redis.service: Unit redis.service not loaded.
+Fri Mar 17 21:15:50 2023 - WARN  - no thing to do.
+Fri Mar 17 21:15:51 2023 - INFO  - Finish environment cleanup.

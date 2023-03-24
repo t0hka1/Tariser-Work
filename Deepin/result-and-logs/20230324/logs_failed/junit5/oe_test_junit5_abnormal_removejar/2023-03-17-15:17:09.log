@@ -1,0 +1,23 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:17:12 2023 - INFO  - Start environment preparation.
+../common/lib.sh: line 29: rpm: command not found
+Fri Mar 17 15:17:38 2023 - ERROR - pkgs:(java--devel) not found
+Fri Mar 17 15:17:39 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 15:17:40 2023 - INFO  - Start testing...
+oe_test_junit5_abnormal_removejar.sh: line 30: javac: command not found
+Fri Mar 17 15:17:40 2023 - ERROR - oe_test_junit5_abnormal_removejar.sh line 31
+oe_test_junit5_abnormal_removejar.sh: line 32: java: command not found
+Fri Mar 17 15:17:41 2023 - ERROR - oe_test_junit5_abnormal_removejar.sh line 33
+oe_test_junit5_abnormal_removejar.sh: line 35: javac: command not found
+oe_test_junit5_abnormal_removejar.sh: line 37: java: command not found
+Fri Mar 17 15:17:42 2023 - INFO  - Finish test!
+Fri Mar 17 15:17:42 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:17:43 2023 - INFO  - start environment cleanup.
+Fri Mar 17 15:17:58 2023 - INFO  - Finish environment cleanup!

@@ -1,0 +1,48 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 00:31:53 2023 - INFO  - Start to prepare the test environment!
+Sat Mar 18 00:32:14 2023 - INFO  - End to prepare the test environment!
+Sat Mar 18 00:32:14 2023 - INFO  - Start to run test.
+x265 [info]: HEVC encoder version 3.5+1-f0c1022b6
+x265 [info]: build info [Linux][GCC 11.2.0][32 bit][noasm] 8bit+10bit+12bit
+Executable Options:
+Output Options:
+Input Options:
+x265 [info]: HEVC encoder version 3.5+1-f0c1022b6
+x265 [info]: build info [Linux][GCC 11.2.0][32 bit][noasm] 8bit+10bit+12bit
+x265 [info]: using cpu capabilities: none!
+y4m  [info]: 176x144 fps 30000/1001 i420p8 sar 128:117 frames 0 - 197 of 198
+raw  [info]: output file: file0
+x265 [info]: HEVC encoder version 3.5+1-f0c1022b6
+x265 [info]: build info [Linux][GCC 11.2.0][32 bit][noasm] 8bit+10bit+12bit
+x265 [error]: y4m: frame header missing
+x265 [info]: using cpu capabilities: none!
+x265 [info]: Main profile, Level-2 (Main tier)
+x265 [info]: Thread pool created using 8 threads
+x265 [info]: Slices                              : 1
+x265 [info]: frame threads / pool features       : 3 / wpp(3 rows)
+x265 [warning]: Source height < 720p; disabling lookahead-slices
+x265 [info]: Coding QT: max CU size, min CU size : 64 / 8
+x265 [info]: Residual QT: max TU size, max depth : 32 / 1 inter / 1 intra
+x265 [info]: ME / range / subpel / merge         : hex / 57 / 2 / 3
+x265 [info]: Keyframe min / max / scenecut / bias  : 25 / 250 / 40 / 5.00 
+x265 [info]: Lookahead / bframes / badapt        : 20 / 4 / 2
+x265 [info]: b-pyramid / weightp / weightb       : 1 / 1 / 0
+x265 [info]: References / ref-limit  cu / depth  : 3 / off / on
+x265 [info]: AQ: mode / str / qg-size / cu-tree  : 2 / 1.0 / 32 / 1
+x265 [info]: Rate Control / qCompress            : CRF-28.0 / 0.60
+x265 [info]: tools: rd=3 psy-rd=2.00 early-skip rskip mode=1 signhide tmvp
+x265 [info]: tools: b-intra strong-intra-smoothing deblock sao
+[0.5%] 1/198 frames, 1.26 fps, 1333.54 kb/s, eta 0:02:35                                                                                  x265 [info]: frame I:      1, Avg QP:34.64  kb/s: 795.52  
+x265 [info]: consecutive B-frames: 100.0% 0.0% 0.0% 0.0% 0.0% 
+
+encoded 1 frames in 0.57s (1.76 fps), 795.52 kb/s, Avg QP:34.64
+x265 [warning]: Source height < 720p; disabling lookahead-slices
+y4m  [info]: 176x144 fps 66000/1000 i420p8 sar 128:117 frames 0 - 197 of 198
+Sat Mar 18 01:01:50 2023 - ERROR - Timeout : Command 'bash oe_test_x265.sh' timed out after 1799.999566089 seconds

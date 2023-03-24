@@ -1,0 +1,286 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:14:14 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:14:38 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 15:14:39 2023 - INFO  - Start to run test.
+Usage:	jq [options] <jq filter> [file...]
+jq-1.6
+[{"name":"站长工具","url":"http://tool.chinaz.com","address":{"city":"厦门","country":"中国"},"arrayBrowser":[{"name":"Google","url":"http://www.google.com"},{"name":"Baidu","url":"http://www.baidu.com"}]},{"name":"站长之家","url":"http://tool.zzhome.com","address":{"city":"大连","country":"中国"},"arrayBrowser":[{"name":"360","url":"http://www.so.com"},{"name":"bing","url":"http://www.bing.com"}]}]
+null
+  {
+    "name": "站长工具",
+    "url": "http://tool.chinaz.com",
+    "address": {
+      "city": "厦门",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "Google",
+        "url": "http://www.google.com"
+      },
+      {
+        "name": "Baidu",
+        "url": "http://www.baidu.com"
+      }
+    ]
+  },
+  {
+    "name": "站长之家",
+    "url": "http://tool.zzhome.com",
+    "address": {
+      "city": "大连",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "360",
+        "url": "http://www.so.com"
+      },
+      {
+        "name": "bing",
+        "url": "http://www.bing.com"
+      }
+    ]
+  }
+[
+  [
+    {
+      "name": "站长工具",
+      "url": "http://tool.chinaz.com",
+      "address": {
+        "city": "厦门",
+        "country": "中国"
+      },
+      "arrayBrowser": [
+        {
+          "name": "Google",
+          "url": "http://www.google.com"
+        },
+        {
+          "name": "Baidu",
+          "url": "http://www.baidu.com"
+        }
+      ]
+    },
+    {
+      "name": "站长之家",
+      "url": "http://tool.zzhome.com",
+      "address": {
+        "city": "大连",
+        "country": "中国"
+      },
+      "arrayBrowser": [
+        {
+          "name": "360",
+          "url": "http://www.so.com"
+        },
+        {
+          "name": "bing",
+          "url": "http://www.bing.com"
+        }
+      ]
+    }
+  ]
+]
+[
+  {
+    "name": "站长工具",
+    "url": "http://tool.chinaz.com",
+    "address": {
+      "city": "厦门",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "Google",
+        "url": "http://www.google.com"
+      },
+      {
+        "name": "Baidu",
+        "url": "http://www.baidu.com"
+      }
+    ]
+  },
+  {
+    "name": "站长之家",
+    "url": "http://tool.zzhome.com",
+    "address": {
+      "city": "大连",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "360",
+        "url": "http://www.so.com"
+      },
+      {
+        "name": "bing",
+        "url": "http://www.bing.com"
+      }
+    ]
+  }
+]
+"[{\"name\":\"站长工具\",\"url\":\"http://tool.chinaz.com\",\"address\":{\"city\":\"厦门\",\"country\":\"中国\"},\"arrayBrowser\":[{\"name\":\"Google\",\"url\":\"http://www.google.com\"},{\"name\":\"Baidu\",\"url\":\"http://www.baidu.com\"}]},{\"name\":\"站长之家\",\"url\":\"http://tool.zzhome.com\",\"address\":{\"city\":\"大连\",\"country\":\"中国\"},\"arrayBrowser\":[{\"name\":\"360\",\"url\":\"http://www.so.com\"},{\"name\":\"bing\",\"url\":\"http://www.bing.com\"}]}]"
+[1;39m[
+  [1;39m{
+    [0m[34;1m"name"[0m[1;39m: [0m[0;32m"站长工具"[0m[1;39m,
+    [0m[34;1m"url"[0m[1;39m: [0m[0;32m"http://tool.chinaz.com"[0m[1;39m,
+    [0m[34;1m"address"[0m[1;39m: [0m[1;39m{
+      [0m[34;1m"city"[0m[1;39m: [0m[0;32m"厦门"[0m[1;39m,
+      [0m[34;1m"country"[0m[1;39m: [0m[0;32m"中国"[0m[1;39m
+    [1;39m}[0m[1;39m,
+    [0m[34;1m"arrayBrowser"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"name"[0m[1;39m: [0m[0;32m"Google"[0m[1;39m,
+        [0m[34;1m"url"[0m[1;39m: [0m[0;32m"http://www.google.com"[0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"name"[0m[1;39m: [0m[0;32m"Baidu"[0m[1;39m,
+        [0m[34;1m"url"[0m[1;39m: [0m[0;32m"http://www.baidu.com"[0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m,
+  [1;39m{
+    [0m[34;1m"name"[0m[1;39m: [0m[0;32m"站长之家"[0m[1;39m,
+    [0m[34;1m"url"[0m[1;39m: [0m[0;32m"http://tool.zzhome.com"[0m[1;39m,
+    [0m[34;1m"address"[0m[1;39m: [0m[1;39m{
+      [0m[34;1m"city"[0m[1;39m: [0m[0;32m"大连"[0m[1;39m,
+      [0m[34;1m"country"[0m[1;39m: [0m[0;32m"中国"[0m[1;39m
+    [1;39m}[0m[1;39m,
+    [0m[34;1m"arrayBrowser"[0m[1;39m: [0m[1;39m[
+      [1;39m{
+        [0m[34;1m"name"[0m[1;39m: [0m[0;32m"360"[0m[1;39m,
+        [0m[34;1m"url"[0m[1;39m: [0m[0;32m"http://www.so.com"[0m[1;39m
+      [1;39m}[0m[1;39m,
+      [1;39m{
+        [0m[34;1m"name"[0m[1;39m: [0m[0;32m"bing"[0m[1;39m,
+        [0m[34;1m"url"[0m[1;39m: [0m[0;32m"http://www.bing.com"[0m[1;39m
+      [1;39m}[0m[1;39m
+    [1;39m][0m[1;39m
+  [1;39m}[0m[1;39m
+[1;39m][0m
+[
+  {
+    "name": "站长工具",
+    "url": "http://tool.chinaz.com",
+    "address": {
+      "city": "厦门",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "Google",
+        "url": "http://www.google.com"
+      },
+      {
+        "name": "Baidu",
+        "url": "http://www.baidu.com"
+      }
+    ]
+  },
+  {
+    "name": "站长之家",
+    "url": "http://tool.zzhome.com",
+    "address": {
+      "city": "大连",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "360",
+        "url": "http://www.so.com"
+      },
+      {
+        "name": "bing",
+        "url": "http://www.bing.com"
+      }
+    ]
+  }
+]
+[
+  {
+    "address": {
+      "city": "厦门",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "Google",
+        "url": "http://www.google.com"
+      },
+      {
+        "name": "Baidu",
+        "url": "http://www.baidu.com"
+      }
+    ],
+    "name": "站长工具",
+    "url": "http://tool.chinaz.com"
+  },
+  {
+    "address": {
+      "city": "大连",
+      "country": "中国"
+    },
+    "arrayBrowser": [
+      {
+        "name": "360",
+        "url": "http://www.so.com"
+      },
+      {
+        "name": "bing",
+        "url": "http://www.bing.com"
+      }
+    ],
+    "name": "站长之家",
+    "url": "http://tool.zzhome.com"
+  }
+]
+[
+	{
+		"name": "站长工具",
+		"url": "http://tool.chinaz.com",
+		"address": {
+			"city": "厦门",
+			"country": "中国"
+		},
+		"arrayBrowser": [
+			{
+				"name": "Google",
+				"url": "http://www.google.com"
+			},
+			{
+				"name": "Baidu",
+				"url": "http://www.baidu.com"
+			}
+		]
+	},
+	{
+		"name": "站长之家",
+		"url": "http://tool.zzhome.com",
+		"address": {
+			"city": "大连",
+			"country": "中国"
+		},
+		"arrayBrowser": [
+			{
+				"name": "360",
+				"url": "http://www.so.com"
+			},
+			{
+				"name": "bing",
+				"url": "http://www.bing.com"
+			}
+		]
+	}
+]
+Fri Mar 17 15:14:44 2023 - INFO  - End of the test.
+Fri Mar 17 15:14:45 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 15:14:45 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 15:15:04 2023 - INFO  - Finish restoring the test environment.

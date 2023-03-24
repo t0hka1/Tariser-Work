@@ -1,0 +1,16 @@
+Fri Mar 17 14:49:59 2023 - INFO  - start to run testcase:oe_test_service_iprdump.
+Fri Mar 17 14:50:31 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:50:42 2023 - INFO  - End to run testcase:oe_test_service_iprdump.
+Fri Mar 17 14:50:42 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:50:47 2023 - INFO  - start to run testcase:oe_test_service_iprinit.
+Fri Mar 17 14:51:18 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:51:29 2023 - INFO  - End to run testcase:oe_test_service_iprinit.
+Fri Mar 17 14:51:29 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:51:33 2023 - INFO  - start to run testcase:oe_test_service_iprupdate.
+Fri Mar 17 14:52:04 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:52:15 2023 - INFO  - End to run testcase:oe_test_service_iprupdate.
+Fri Mar 17 14:52:15 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:52:19 2023 - INFO  - start to run testcase:oe_test_target_iprutils.
+Fri Mar 17 14:52:49 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 14:53:00 2023 - INFO  - End to run testcase:oe_test_target_iprutils.
+Fri Mar 17 14:53:01 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

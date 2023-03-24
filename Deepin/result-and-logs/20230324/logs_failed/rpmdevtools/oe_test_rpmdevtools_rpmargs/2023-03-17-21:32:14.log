@@ -1,0 +1,82 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 21:32:17 2023 - INFO  - Start environment preparation.
+Fri Mar 17 21:32:22 2023 - ERROR - pkgs:(rpmdevtools) not found
+oe_test_rpmdevtools_rpmargs.sh: line 29: dnf: command not found
+oe_test_rpmdevtools_rpmargs.sh: line 30: dnf: command not found
+oe_test_rpmdevtools_rpmargs.sh: line 31: yumdownloader: command not found
+cp: cannot stat '*.rpm': No such file or directory
+cp: cannot stat '*.rpm': No such file or directory
+cp: cannot stat '*.rpm': No such file or directory
+oe_test_rpmdevtools_rpmargs.sh: line 39: dnf: command not found
+oe_test_rpmdevtools_rpmargs.sh: line 41: yumdownloader: command not found
+Fri Mar 17 21:32:24 2023 - INFO  - End of environmental preparation.
+Fri Mar 17 21:32:24 2023 - INFO  - Start to run test.
+oe_test_rpmdevtools_rpmargs.sh: line 49: rpmargs: command not found
+Fri Mar 17 21:32:25 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:32:25 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 50
+oe_test_rpmdevtools_rpmargs.sh: line 51: rpmargs: command not found
+Fri Mar 17 21:32:26 2023 - ERROR - Failed option: -a
+Fri Mar 17 21:32:27 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 52
+oe_test_rpmdevtools_rpmargs.sh: line 53: rpmargs: command not found
+Fri Mar 17 21:32:27 2023 - ERROR - Failed option: -p
+Fri Mar 17 21:32:28 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 54
+oe_test_rpmdevtools_rpmargs.sh: line 56: rpmdev-checksig: command not found
+Fri Mar 17 21:32:29 2023 - ERROR - Failed command:rpmdev-checksig
+Fri Mar 17 21:32:29 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 57
+oe_test_rpmdevtools_rpmargs.sh: line 59: rpmdev-cksum: command not found
+Fri Mar 17 21:32:30 2023 - ERROR - Failed command: rpmdev-cksum
+Fri Mar 17 21:32:30 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 60
+oe_test_rpmdevtools_rpmargs.sh: line 62: rpmdev-diff: command not found
+Fri Mar 17 21:32:31 2023 - ERROR - Failed option: -v
+Fri Mar 17 21:32:32 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 63
+oe_test_rpmdevtools_rpmargs.sh: line 64: rpmdev-diff: command not found
+Fri Mar 17 21:32:32 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:32:33 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 65
+oe_test_rpmdevtools_rpmargs.sh: line 66: rpmdev-diff: command not found
+Fri Mar 17 21:32:34 2023 - ERROR - Failed option: -c
+Fri Mar 17 21:32:34 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 67
+oe_test_rpmdevtools_rpmargs.sh: line 68: rpmdev-diff: command not found
+Fri Mar 17 21:32:35 2023 - ERROR - Failed option: -l
+Fri Mar 17 21:32:35 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 69
+oe_test_rpmdevtools_rpmargs.sh: line 70: rpmdev-diff: command not found
+Fri Mar 17 21:32:36 2023 - ERROR - Failed option: -L
+Fri Mar 17 21:32:36 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 71
+oe_test_rpmdevtools_rpmargs.sh: line 72: rpmdev-diff: command not found
+Fri Mar 17 21:32:37 2023 - ERROR - Failed option: -m
+Fri Mar 17 21:32:37 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 73
+oe_test_rpmdevtools_rpmargs.sh: line 74: rpmdev-diff: command not found
+Fri Mar 17 21:32:38 2023 - ERROR - Failed option: -y
+Fri Mar 17 21:32:39 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 75
+oe_test_rpmdevtools_rpmargs.sh: line 77: rpmdev-extract: command not found
+oe_test_rpmdevtools_rpmargs.sh: line 78: test: oe_test_rpmdevtools_rpmargs.sh: binary operator expected
+Fri Mar 17 21:32:39 2023 - ERROR - Failed option: -q
+Fri Mar 17 21:32:40 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 79
+oe_test_rpmdevtools_rpmargs.sh: line 80: rpmdev-extract: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 21:32:40 2023 - ERROR - Failed option: -f
+Fri Mar 17 21:32:41 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 81
+oe_test_rpmdevtools_rpmargs.sh: line 82: rpmdev-extract: command not found
+Fri Mar 17 21:32:41 2023 - ERROR - Failed option: -C
+Fri Mar 17 21:32:42 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 84
+oe_test_rpmdevtools_rpmargs.sh: line 85: rpmdev-extract: command not found
+Fri Mar 17 21:32:43 2023 - ERROR - Failed option: -h
+Fri Mar 17 21:32:43 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 86
+oe_test_rpmdevtools_rpmargs.sh: line 87: rpmdev-extract: command not found
+Fri Mar 17 21:32:44 2023 - ERROR - Failed option: -v
+Fri Mar 17 21:32:44 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 88
+oe_test_rpmdevtools_rpmargs.sh: line 90: rpmdev-md5: command not found
+Fri Mar 17 21:32:45 2023 - ERROR - Failed command: rpmdev-md5
+Fri Mar 17 21:32:45 2023 - ERROR - oe_test_rpmdevtools_rpmargs.sh line 91
+Fri Mar 17 21:32:46 2023 - INFO  - End to run test.
+Fri Mar 17 21:32:47 2023 - ERROR - failed to execute the case.
+Fri Mar 17 21:32:47 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 21:32:48 2023 - WARN  - no thing to do.
+Fri Mar 17 21:32:48 2023 - INFO  - End to restore the test environment.

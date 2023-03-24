@@ -1,0 +1,40 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:03:43 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 13:03:44 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 13:03:44 2023 - INFO  - Start testing...
+Failed to restart dracut-shutdown.service: Unit dracut-shutdown.service not found.
+Fri Mar 17 13:03:45 2023 - ERROR - dracut-shutdown.service restart failed
+Fri Mar 17 13:03:45 2023 - ERROR - oe_test_service_dracut-shutdown.sh line 32
+Unit dracut-shutdown.service could not be found.
+Fri Mar 17 13:03:52 2023 - ERROR - dracut-shutdown.service restart failed
+Fri Mar 17 13:03:52 2023 - ERROR - oe_test_service_dracut-shutdown.sh line 35
+Failed to stop dracut-shutdown.service: Unit dracut-shutdown.service not loaded.
+Fri Mar 17 13:03:53 2023 - ERROR - dracut-shutdown.service stop failed
+Fri Mar 17 13:03:53 2023 - ERROR - oe_test_service_dracut-shutdown.sh line 37
+Unit dracut-shutdown.service could not be found.
+Fri Mar 17 13:04:00 2023 - ERROR - dracut-shutdown.service stop failed
+Fri Mar 17 13:04:00 2023 - ERROR - oe_test_service_dracut-shutdown.sh line 40
+Failed to start dracut-shutdown.service: Unit dracut-shutdown.service not found.
+Fri Mar 17 13:04:01 2023 - ERROR - dracut-shutdown.service start failed
+Fri Mar 17 13:04:01 2023 - ERROR - oe_test_service_dracut-shutdown.sh line 43
+Unit dracut-shutdown.service could not be found.
+Fri Mar 17 13:04:07 2023 - ERROR - dracut-shutdown.service start failed
+Fri Mar 17 13:04:08 2023 - ERROR - oe_test_service_dracut-shutdown.sh line 46
+Failed to get unit file state for dracut-shutdown.service: No such file or directory
+Fri Mar 17 13:04:09 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start dracut-shutdown.service: Unit dracut-shutdown.service not found.
+Fri Mar 17 13:04:09 2023 - ERROR - Job type reload is not applicable for unit dracut-shutdown.service
+Fri Mar 17 13:04:10 2023 - ERROR - ../common/common_lib.sh line 91
+Unit dracut-shutdown.service could not be found.
+Unit dracut-shutdown.service could not be found.
+Fri Mar 17 13:04:11 2023 - INFO  - Finish test!
+Fri Mar 17 13:04:11 2023 - ERROR - failed to execute the case.
+Fri Mar 17 13:04:12 2023 - INFO  - oe_test_service_dracut-shutdown.sh post_test

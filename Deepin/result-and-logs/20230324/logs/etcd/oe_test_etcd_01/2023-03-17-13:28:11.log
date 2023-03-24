@@ -1,0 +1,54 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:28:13 2023 - INFO  - Start to prepare the test environment.
+Failed to start etcd.service: Unit etcd.service not found.
+Fri Mar 17 13:28:19 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 13:28:19 2023 - INFO  - Start to run test.
+Unit etcd.service could not be found.
+Fri Mar 17 13:28:20 2023 - ERROR - Check etcd.service start failed
+Fri Mar 17 13:28:20 2023 - ERROR - oe_test_etcd_01.sh line 35
+Fri Mar 17 13:28:21 2023 - ERROR - Check etcd --help failed.
+Fri Mar 17 13:28:21 2023 - ERROR - oe_test_etcd_01.sh line 37
+oe_test_etcd_01.sh: line 38: etcd: command not found
+oe_test_etcd_01.sh: line 38: test: : unary operator expected
+Fri Mar 17 13:28:22 2023 - ERROR - Check etcd --version failed.
+Fri Mar 17 13:28:22 2023 - ERROR - oe_test_etcd_01.sh line 39
+oe_test_etcd_01.sh: line 40: etcdctl: command not found
+oe_test_etcd_01.sh: line 40: test: : unary operator expected
+Fri Mar 17 13:28:23 2023 - ERROR - Check etcdctl version failed.
+Fri Mar 17 13:28:24 2023 - ERROR - oe_test_etcd_01.sh line 41
+oe_test_etcd_01.sh: line 42: etcdctl: command not found
+Fri Mar 17 13:28:24 2023 - ERROR - Check etcdctl help failed.
+Fri Mar 17 13:28:25 2023 - ERROR - oe_test_etcd_01.sh line 43
+oe_test_etcd_01.sh: line 44: etcdctl: command not found
+Fri Mar 17 13:28:25 2023 - ERROR - Check etcdctl --endpoints put command failed.
+Fri Mar 17 13:28:26 2023 - ERROR - oe_test_etcd_01.sh line 45
+oe_test_etcd_01.sh: line 46: etcdctl: command not found
+Fri Mar 17 13:28:26 2023 - ERROR - Check etcdctl --endpoints get command failed.
+Fri Mar 17 13:28:27 2023 - ERROR - oe_test_etcd_01.sh line 47
+oe_test_etcd_01.sh: line 48: etcdctl: command not found
+Fri Mar 17 13:28:27 2023 - ERROR - Check etcdctl --endpoints get -w=json command failed.
+Fri Mar 17 13:28:28 2023 - ERROR - oe_test_etcd_01.sh line 49
+oe_test_etcd_01.sh: line 50: etcdctl: command not found
+Fri Mar 17 13:28:28 2023 - ERROR - Check etcdctl --endpoints del command failed.
+Fri Mar 17 13:28:29 2023 - ERROR - oe_test_etcd_01.sh line 51
+oe_test_etcd_01.sh: line 52: etcdctl: command not found
+Fri Mar 17 13:28:30 2023 - ERROR - Check etcdctl --endpoints del command failed.
+Fri Mar 17 13:28:30 2023 - ERROR - oe_test_etcd_01.sh line 53
+Fri Mar 17 13:28:31 2023 - INFO  - End to run test.
+Fri Mar 17 13:28:31 2023 - ERROR - failed to execute the case.
+Fri Mar 17 13:28:32 2023 - INFO  - Start to restore the test environment.
+Failed to stop etcd.service: Unit etcd.service not loaded.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage etcd is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'etcd' has no installation candidate"
+Fri Mar 17 13:28:35 2023 - INFO  - End to restore the test environment.

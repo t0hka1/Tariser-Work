@@ -1,0 +1,55 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:17:04 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 19:17:08 2023 - ERROR - pkgs:(php-devel) not found
+Fri Mar 17 19:17:08 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 19:17:09 2023 - INFO  - Start to run test.
+oe_test_php-cgi_phpize.sh: line 35: php-cgi: command not found
+Fri Mar 17 19:17:10 2023 - ERROR - oe_test_php-cgi_phpize.sh line 36
+oe_test_php-cgi_phpize.sh: line 37: php-cgi: command not found
+Fri Mar 17 19:17:10 2023 - ERROR - oe_test_php-cgi_phpize.sh line 38
+spawn php-cgi -a
+couldn't execute "php-cgi": no such file or directory
+    while executing
+"spawn php-cgi -a"
+oe_test_php-cgi_phpize.sh: line 44: php-cgi: command not found
+Fri Mar 17 19:17:11 2023 - ERROR - oe_test_php-cgi_phpize.sh line 45
+oe_test_php-cgi_phpize.sh: line 46: php-cgi: command not found
+Fri Mar 17 19:17:12 2023 - ERROR - oe_test_php-cgi_phpize.sh line 47
+oe_test_php-cgi_phpize.sh: line 48: php-cgi: command not found
+Fri Mar 17 19:17:12 2023 - ERROR - oe_test_php-cgi_phpize.sh line 49
+oe_test_php-cgi_phpize.sh: line 50: php-cgi: command not found
+Fri Mar 17 19:17:13 2023 - ERROR - oe_test_php-cgi_phpize.sh line 51
+oe_test_php-cgi_phpize.sh: line 52: php-cgi: command not found
+Fri Mar 17 19:17:14 2023 - ERROR - oe_test_php-cgi_phpize.sh line 53
+oe_test_php-cgi_phpize.sh: line 54: php-cgi: command not found
+Fri Mar 17 19:17:14 2023 - ERROR - oe_test_php-cgi_phpize.sh line 55
+oe_test_php-cgi_phpize.sh: line 56: php-cgi: command not found
+Fri Mar 17 19:17:15 2023 - ERROR - oe_test_php-cgi_phpize.sh line 57
+oe_test_php-cgi_phpize.sh: line 58: php-cgi: command not found
+Fri Mar 17 19:17:15 2023 - ERROR - oe_test_php-cgi_phpize.sh line 59
+oe_test_php-cgi_phpize.sh: line 60: php-cgi: command not found
+Fri Mar 17 19:17:16 2023 - ERROR - oe_test_php-cgi_phpize.sh line 61
+oe_test_php-cgi_phpize.sh: line 62: php-cgi: command not found
+Fri Mar 17 19:17:16 2023 - ERROR - oe_test_php-cgi_phpize.sh line 63
+oe_test_php-cgi_phpize.sh: line 64: php-cgi: command not found
+Fri Mar 17 19:17:17 2023 - ERROR - oe_test_php-cgi_phpize.sh line 65
+oe_test_php-cgi_phpize.sh: line 66: php-cgi: command not found
+Fri Mar 17 19:17:17 2023 - ERROR - oe_test_php-cgi_phpize.sh line 67
+oe_test_php-cgi_phpize.sh: line 69: phpize: command not found
+Fri Mar 17 19:17:18 2023 - ERROR - oe_test_php-cgi_phpize.sh line 70
+oe_test_php-cgi_phpize.sh: line 71: phpize: command not found
+Fri Mar 17 19:17:19 2023 - ERROR - oe_test_php-cgi_phpize.sh line 72
+oe_test_php-cgi_phpize.sh: line 73: phpize: command not found
+Fri Mar 17 19:17:19 2023 - ERROR - oe_test_php-cgi_phpize.sh line 74
+Fri Mar 17 19:17:20 2023 - INFO  - End of the test.
+Fri Mar 17 19:17:20 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:17:21 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 19:17:21 2023 - WARN  - no thing to do.
+Fri Mar 17 19:17:22 2023 - INFO  - Finish restoring the test environment.

@@ -1,0 +1,41 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:03:07 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 15:03:10 2023 - ERROR - pkgs:(java-1.8.0-openjdk*) not found
+Fri Mar 17 15:03:11 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 15:03:12 2023 - INFO  - Start to run test.
+oe_test_openjdk_jdb_jdeps.sh: line 35: jdb: command not found
+Fri Mar 17 15:03:12 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 36
+oe_test_openjdk_jdb_jdeps.sh: line 37: javac: command not found
+Fri Mar 17 15:03:13 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 38
+spawn jdb
+couldn't execute "jdb": no such file or directory
+    while executing
+"spawn jdb"
+    while executing
+Fri Mar 17 15:03:14 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 49
+Fri Mar 17 15:03:14 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 51
+Fri Mar 17 15:03:15 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 53
+oe_test_openjdk_jdb_jdeps.sh: line 55: jdeps: command not found
+Fri Mar 17 15:03:15 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 56
+oe_test_openjdk_jdb_jdeps.sh: line 57: jdeps: command not found
+Fri Mar 17 15:03:16 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 58
+oe_test_openjdk_jdb_jdeps.sh: line 60: jfr: command not found
+Fri Mar 17 15:03:17 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 61
+oe_test_openjdk_jdb_jdeps.sh: line 62: jfr: command not found
+Fri Mar 17 15:03:17 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 63
+Fri Mar 17 15:03:18 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 66
+oe_test_openjdk_jdb_jdeps.sh: line 67: jhat: command not found
+Fri Mar 17 15:03:18 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 68
+Fri Mar 17 15:03:19 2023 - ERROR - oe_test_openjdk_jdb_jdeps.sh line 71
+Fri Mar 17 15:03:19 2023 - INFO  - End to run test.
+Fri Mar 17 15:03:20 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:03:20 2023 - INFO  - Need't to restore the tet environment.
+Fri Mar 17 15:03:21 2023 - WARN  - no thing to do.
+Fri Mar 17 15:03:21 2023 - INFO  - End to restore the test environment.

@@ -1,0 +1,26 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:39:33 2023 - INFO  - Start to run test.
+Usage:
+	rmmod [options] modulename ...
+kmod version 29
+modprobe: WARNING: Module dm_log not found in directory /lib/modules/5.10.0-7.oe2203.riscv64
+modprobe: WARNING: Module dm_mirror not found in directory /lib/modules/5.10.0-7.oe2203.riscv64
+Fri Mar 17 15:39:34 2023 - ERROR - oe_test_rmmod.sh line 29
+rmmod: ERROR: ../libkmod/libkmod-module.c:799 kmod_module_remove_module() could not remove 'dm_mirror': No such file or directory
+rmmod: ERROR: could not remove module dm_mirror: No such file or directory
+Fri Mar 17 15:39:34 2023 - ERROR - oe_test_rmmod.sh line 31
+Fri Mar 17 15:39:35 2023 - ERROR - oe_test_rmmod.sh line 35
+rmmod: ERROR: Module dm_log is not currently loaded
+rmmod: ERROR: Module dm_region_hash is not currently loaded
+Fri Mar 17 15:39:36 2023 - ERROR - oe_test_rmmod.sh line 41
+Fri Mar 17 15:39:36 2023 - ERROR - oe_test_rmmod.sh line 43
+Fri Mar 17 15:39:37 2023 - INFO  - End of the test.
+Fri Mar 17 15:39:37 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:39:38 2023 - INFO  - oe_test_rmmod.sh post_test

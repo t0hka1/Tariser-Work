@@ -1,0 +1,47 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:28:41 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 17:28:45 2023 - ERROR - pkgs:(gnutls-utils) not found
+Fri Mar 17 17:28:46 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 17:28:47 2023 - INFO  - Start to run test.
+oe_test_nbdkit_01.sh: line 35: nbdkit: command not found
+Fri Mar 17 17:28:47 2023 - ERROR - oe_test_nbdkit_01.sh line 36
+oe_test_nbdkit_01.sh: line 37: nbdkit: command not found
+Fri Mar 17 17:28:48 2023 - ERROR - oe_test_nbdkit_01.sh line 38
+oe_test_nbdkit_01.sh: line 39: nbdkit: command not found
+oe_test_nbdkit_01.sh: line 41: kill: (552) - No such process
+Fri Mar 17 17:28:49 2023 - ERROR - oe_test_nbdkit_01.sh line 42
+oe_test_nbdkit_01.sh: line 43: nbdkit: command not found
+Fri Mar 17 17:28:49 2023 - ERROR - oe_test_nbdkit_01.sh line 44
+oe_test_nbdkit_01.sh: line 45: kill: (559) - No such process
+Fri Mar 17 17:28:50 2023 - ERROR - oe_test_nbdkit_01.sh line 46
+oe_test_nbdkit_01.sh: line 47: nbdkit: command not found
+oe_test_nbdkit_01.sh: line 49: kill: (565) - No such process
+Fri Mar 17 17:28:51 2023 - ERROR - oe_test_nbdkit_01.sh line 50
+oe_test_nbdkit_01.sh: line 51: nbdkit: command not found
+Fri Mar 17 17:28:51 2023 - ERROR - oe_test_nbdkit_01.sh line 52
+oe_test_nbdkit_01.sh: line 53: kill: (572) - No such process
+Fri Mar 17 17:28:52 2023 - ERROR - oe_test_nbdkit_01.sh line 54
+oe_test_nbdkit_01.sh: line 55: nbdkit: command not found
+Fri Mar 17 17:28:53 2023 - ERROR - oe_test_nbdkit_01.sh line 56
+oe_test_nbdkit_01.sh: line 57: kill: (584) - No such process
+Fri Mar 17 17:28:53 2023 - ERROR - oe_test_nbdkit_01.sh line 58
+oe_test_nbdkit_01.sh: line 59: nbdkit: command not found
+Fri Mar 17 17:28:54 2023 - ERROR - oe_test_nbdkit_01.sh line 60
+oe_test_nbdkit_01.sh: line 61: kill: (591) - No such process
+Fri Mar 17 17:28:55 2023 - ERROR - oe_test_nbdkit_01.sh line 62
+oe_test_nbdkit_01.sh: line 63: nbdkit: command not found
+Fri Mar 17 17:28:55 2023 - ERROR - oe_test_nbdkit_01.sh line 64
+oe_test_nbdkit_01.sh: line 65: kill: (598) - No such process
+Fri Mar 17 17:28:56 2023 - ERROR - oe_test_nbdkit_01.sh line 66
+Fri Mar 17 17:28:56 2023 - INFO  - End to run test.
+Fri Mar 17 17:28:57 2023 - ERROR - failed to execute the case.
+Fri Mar 17 17:28:57 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 17:28:58 2023 - WARN  - no thing to do.
+Fri Mar 17 17:28:58 2023 - INFO  - End to restore the test environment.

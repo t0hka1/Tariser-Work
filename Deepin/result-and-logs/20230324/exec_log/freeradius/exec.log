@@ -1,0 +1,72 @@
+Fri Mar 17 13:48:29 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius_raddebugAndCheckrad.
+Fri Mar 17 13:57:20 2023 - ERROR - The case exit by code 10.
+Fri Mar 17 13:57:31 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius_raddebugAndCheckrad.
+Fri Mar 17 13:57:32 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 13:57:35 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius_radiusd.
+Fri Mar 17 13:58:06 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 13:58:17 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius_radiusd.
+Fri Mar 17 13:58:17 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 13:58:21 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius_radiusdAndRadmin.
+Fri Mar 17 13:58:45 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 13:58:55 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius_radiusdAndRadmin.
+Fri Mar 17 13:58:56 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 13:58:59 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radclient.
+Fri Mar 17 13:59:22 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 13:59:33 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radclient.
+Fri Mar 17 13:59:33 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 13:59:37 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radclient2.
+Fri Mar 17 13:59:58 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:00:08 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radclient2.
+Fri Mar 17 14:00:09 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:00:12 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_rad_counter.
+Fri Mar 17 14:00:34 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:00:45 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_rad_counter.
+Fri Mar 17 14:00:45 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:00:49 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radcryptAndRadeapclient.
+Fri Mar 17 14:01:11 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 14:01:22 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radcryptAndRadeapclient.
+Fri Mar 17 14:01:22 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:01:26 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radeapclient.
+Fri Mar 17 14:01:48 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:01:59 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radeapclient.
+Fri Mar 17 14:01:59 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:02:03 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radlast.
+Fri Mar 17 14:02:24 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 14:02:35 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radlast.
+Fri Mar 17 14:02:35 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:02:39 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radlastAndRadsniff.
+Fri Mar 17 14:03:01 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 14:03:12 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radlastAndRadsniff.
+Fri Mar 17 14:03:13 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:03:16 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radsniff.
+Fri Mar 17 14:03:38 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 14:03:49 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radsniff.
+Fri Mar 17 14:03:50 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:03:53 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radsniff2.
+Fri Mar 17 14:04:13 2023 - ERROR - The case exit by code 7.
+Fri Mar 17 14:04:24 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radsniff2.
+Fri Mar 17 14:04:25 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:04:28 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radsqlrelay.
+Fri Mar 17 14:04:50 2023 - ERROR - The case exit by code 5.
+Fri Mar 17 14:05:01 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radsqlrelay.
+Fri Mar 17 14:05:02 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:05:05 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radtestAndRadwho.
+Fri Mar 17 14:05:31 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 14:05:42 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radtestAndRadwho.
+Fri Mar 17 14:05:43 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:05:46 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radwho.
+Fri Mar 17 14:06:07 2023 - ERROR - The case exit by code 9.
+Fri Mar 17 14:06:18 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radwho.
+Fri Mar 17 14:06:18 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:06:22 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_radzap.
+Fri Mar 17 14:06:43 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 14:06:54 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_radzap.
+Fri Mar 17 14:06:54 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:06:58 2023 - INFO  - start to run testcase:oe_test_freeradius_freeradius-utils_rlm_ippool_toolAndSmbencrypt.
+Fri Mar 17 14:07:19 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 14:07:30 2023 - INFO  - End to run testcase:oe_test_freeradius_freeradius-utils_rlm_ippool_toolAndSmbencrypt.
+Fri Mar 17 14:07:30 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 14:07:34 2023 - INFO  - start to run testcase:oe_test_service_radiusd.
+Fri Mar 17 14:08:24 2023 - ERROR - The case exit by code 8.
+Fri Mar 17 14:08:35 2023 - INFO  - End to run testcase:oe_test_service_radiusd.
+Fri Mar 17 14:08:35 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

@@ -1,0 +1,49 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 14:03:56 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 14:03:59 2023 - ERROR - pkgs:(freeradius-utils) not found
+Failed to start radiusd.service: Unit radiusd.service not found.
+Fri Mar 17 14:04:02 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 14:04:02 2023 - INFO  - Start to run test.
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 39: radsniff: command not found
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 41: radsniff: command not found
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 43: radsniff: command not found
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 45: radsniff: command not found
+Fri Mar 17 14:04:03 2023 - ERROR - radsniff -s execution failed.
+Fri Mar 17 14:04:03 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsniff2.sh line 46
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 47: radsniff: command not found
+grep: Trailing backslash
+Fri Mar 17 14:04:04 2023 - ERROR - radsniff -S execution failed.
+Fri Mar 17 14:04:05 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsniff2.sh line 48
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 49: radsniff: command not found
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 49: rpm: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 14:04:05 2023 - ERROR - radsniff -v execution failed.
+Fri Mar 17 14:04:06 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsniff2.sh line 50
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 51: radsniff: command not found
+xxd: /tmp/test.pcap: No such file or directory
+grep: Trailing backslash
+Fri Mar 17 14:04:06 2023 - ERROR - radsniff -w execution failed.
+Fri Mar 17 14:04:07 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsniff2.sh line 53
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 54: radsniff: command not found
+Fri Mar 17 14:04:08 2023 - ERROR - radsniff -x execution failed.
+Fri Mar 17 14:04:08 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsniff2.sh line 55
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 56: radsniff: command not found
+Fri Mar 17 14:04:09 2023 - ERROR - radsniff -W execution failed.
+Fri Mar 17 14:04:09 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsniff2.sh line 57
+oe_test_freeradius_freeradius-utils_radsniff2.sh: line 58: radsniff: command not found
+Fri Mar 17 14:04:10 2023 - ERROR - radsniff -T execution failed.
+Fri Mar 17 14:04:10 2023 - ERROR - oe_test_freeradius_freeradius-utils_radsniff2.sh line 59
+Fri Mar 17 14:04:11 2023 - INFO  - End to run test.
+Fri Mar 17 14:04:11 2023 - ERROR - failed to execute the case.
+Fri Mar 17 14:04:12 2023 - INFO  - Start to restore the test environment.
+Failed to stop radiusd.service: Unit radiusd.service not loaded.
+Fri Mar 17 14:04:12 2023 - WARN  - no thing to do.
+Fri Mar 17 14:04:13 2023 - INFO  - End to restore the test environment.

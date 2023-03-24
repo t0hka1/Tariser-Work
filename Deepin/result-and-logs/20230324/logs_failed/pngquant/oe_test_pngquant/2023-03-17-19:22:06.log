@@ -1,0 +1,64 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:22:09 2023 - INFO  - Start to prepare the test environment.
+oe_test_pngquant.sh: line 26: wget: command not found
+cp: cannot stat 'test.png': No such file or directory
+Fri Mar 17 19:22:13 2023 - ERROR - pkgs:(libimagequant) not found
+Fri Mar 17 19:22:14 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 19:22:14 2023 - INFO  - Start to run test.
+oe_test_pngquant.sh: line 42: pngquant: command not found
+Fri Mar 17 19:22:15 2023 - ERROR - Failed to run command: pngquant --help
+Fri Mar 17 19:22:15 2023 - ERROR - oe_test_pngquant.sh line 43
+oe_test_pngquant.sh: line 45: pngquant: command not found
+Fri Mar 17 19:22:16 2023 - ERROR - Failed to run command: pngquant --verbose
+Fri Mar 17 19:22:16 2023 - ERROR - oe_test_pngquant.sh line 47
+oe_test_pngquant.sh: line 50: pngquant: command not found
+Fri Mar 17 19:22:17 2023 - ERROR - Failed to run command: pngquant test.png
+Fri Mar 17 19:22:18 2023 - ERROR - oe_test_pngquant.sh line 52
+oe_test_pngquant.sh: line 54: test.png: No such file or directory
+Fri Mar 17 19:22:18 2023 - ERROR - Failed to test stdin and stdout
+Fri Mar 17 19:22:19 2023 - ERROR - oe_test_pngquant.sh line 56
+oe_test_pngquant.sh: line 59: pngquant: command not found
+Fri Mar 17 19:22:19 2023 - ERROR - Failed to test more than one file
+Fri Mar 17 19:22:20 2023 - ERROR - oe_test_pngquant.sh line 61
+oe_test_pngquant.sh: line 64: pngquant: command not found
+Fri Mar 17 19:22:20 2023 - ERROR - Failed to run command: pngquant --posterize
+Fri Mar 17 19:22:21 2023 - ERROR - oe_test_pngquant.sh line 65
+oe_test_pngquant.sh: line 68: pngquant: command not found
+Fri Mar 17 19:22:21 2023 - ERROR - Failed to run command: pngquant --strip
+Fri Mar 17 19:22:22 2023 - ERROR - oe_test_pngquant.sh line 70
+oe_test_pngquant.sh: line 72: pngquant: command not found
+Fri Mar 17 19:22:22 2023 - ERROR - Failed to run command: pngquant --ext
+Fri Mar 17 19:22:23 2023 - ERROR - oe_test_pngquant.sh line 74
+oe_test_pngquant.sh: line 76: pngquant: command not found
+Fri Mar 17 19:22:23 2023 - ERROR - Failed to run command: pngquant --output
+Fri Mar 17 19:22:24 2023 - ERROR - oe_test_pngquant.sh line 78
+oe_test_pngquant.sh: line 81: pngquant: command not found
+Fri Mar 17 19:22:24 2023 - ERROR - Failed to test option [ncolors]
+Fri Mar 17 19:22:25 2023 - ERROR - oe_test_pngquant.sh line 83
+oe_test_pngquant.sh: line 85: pngquant: command not found
+Fri Mar 17 19:22:25 2023 - ERROR - Failed to run command: pngquant --force
+Fri Mar 17 19:22:26 2023 - ERROR - oe_test_pngquant.sh line 87
+oe_test_pngquant.sh: line 90: pngquant: command not found
+Fri Mar 17 19:22:26 2023 - ERROR - Failed to run command: pngquant --skip-if-larger
+Fri Mar 17 19:22:27 2023 - ERROR - oe_test_pngquant.sh line 92
+oe_test_pngquant.sh: line 94: pngquant: command not found
+Fri Mar 17 19:22:27 2023 - ERROR - Failed to run command: pngquant --nofs
+Fri Mar 17 19:22:28 2023 - ERROR - oe_test_pngquant.sh line 96
+oe_test_pngquant.sh: line 99: pngquant: command not found
+Fri Mar 17 19:22:28 2023 - ERROR - Failed to run command: pngquant --quality
+Fri Mar 17 19:22:29 2023 - ERROR - oe_test_pngquant.sh line 101
+oe_test_pngquant.sh: line 104: pngquant: command not found
+Fri Mar 17 19:22:30 2023 - ERROR - Failed to run command: pngquant --speed
+Fri Mar 17 19:22:30 2023 - ERROR - oe_test_pngquant.sh line 106
+Fri Mar 17 19:22:31 2023 - INFO  - End to run test.
+Fri Mar 17 19:22:31 2023 - ERROR - failed to execute the case.
+Fri Mar 17 19:22:32 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 19:22:32 2023 - WARN  - no thing to do.
+Fri Mar 17 19:22:33 2023 - INFO  - End to restore the test environment.

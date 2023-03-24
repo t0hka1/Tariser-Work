@@ -1,0 +1,4 @@
+Fri Mar 17 14:57:12 2023 - INFO  - start to run testcase:oe_test_service_ipwatchd.
+Fri Mar 17 14:59:49 2023 - ERROR - The case exit by code 1.
+Fri Mar 17 15:00:00 2023 - INFO  - End to run testcase:oe_test_service_ipwatchd.
+Fri Mar 17 15:00:00 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

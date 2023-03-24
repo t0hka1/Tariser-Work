@@ -1,0 +1,54 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:51:21 2023 - INFO  - Start loading data!
+Fri Mar 17 20:51:21 2023 - INFO  - Loading data is complete!
+Fri Mar 17 20:51:22 2023 - INFO  - Start environment preparation.
+Fri Mar 17 20:51:25 2023 - ERROR - pkgs:(podman-docker) not found
+../common/common_podman.sh: line 26: /etc/containers/registries.conf: No such file or directory
+oe_test_podman_DK_21.sh: line 30: docker: command not found
+Fri Mar 17 20:51:26 2023 - INFO  - Environmental preparation is over.
+Fri Mar 17 20:51:26 2023 - INFO  - Start executing testcase.
+oe_test_podman_DK_21.sh: line 36: docker: command not found
+Fri Mar 17 20:51:27 2023 - ERROR - oe_test_podman_DK_21.sh line 37
+oe_test_podman_DK_21.sh: line 38: docker: command not found
+Fri Mar 17 20:51:27 2023 - ERROR - oe_test_podman_DK_21.sh line 39
+oe_test_podman_DK_21.sh: line 40: docker: command not found
+Fri Mar 17 20:51:28 2023 - ERROR - oe_test_podman_DK_21.sh line 41
+oe_test_podman_DK_21.sh: line 42: docker: command not found
+Fri Mar 17 20:51:28 2023 - ERROR - oe_test_podman_DK_21.sh line 43
+oe_test_podman_DK_21.sh: line 44: docker: command not found
+Fri Mar 17 20:51:29 2023 - ERROR - oe_test_podman_DK_21.sh line 45
+oe_test_podman_DK_21.sh: line 46: docker: command not found
+Fri Mar 17 20:51:30 2023 - ERROR - oe_test_podman_DK_21.sh line 47
+oe_test_podman_DK_21.sh: line 48: docker: command not found
+Fri Mar 17 20:51:30 2023 - ERROR - oe_test_podman_DK_21.sh line 49
+oe_test_podman_DK_21.sh: line 50: docker: command not found
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+Fri Mar 17 20:51:31 2023 - ERROR - oe_test_podman_DK_21.sh line 51
+oe_test_podman_DK_21.sh: line 52: docker: command not found
+Fri Mar 17 20:51:31 2023 - ERROR - oe_test_podman_DK_21.sh line 53
+oe_test_podman_DK_21.sh: line 54: docker: command not found
+Fri Mar 17 20:51:32 2023 - ERROR - oe_test_podman_DK_21.sh line 55
+oe_test_podman_DK_21.sh: line 56: docker: command not found
+Fri Mar 17 20:51:32 2023 - ERROR - oe_test_podman_DK_21.sh line 57
+oe_test_podman_DK_21.sh: line 58: docker: command not found
+Fri Mar 17 20:51:33 2023 - ERROR - oe_test_podman_DK_21.sh line 59
+oe_test_podman_DK_21.sh: line 60: docker: command not found
+Fri Mar 17 20:51:33 2023 - ERROR - oe_test_podman_DK_21.sh line 61
+oe_test_podman_DK_21.sh: line 62: docker: command not found
+Fri Mar 17 20:51:34 2023 - ERROR - oe_test_podman_DK_21.sh line 63
+Fri Mar 17 20:51:34 2023 - INFO  - End executing testcase.
+Fri Mar 17 20:51:35 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:51:35 2023 - INFO  - start environment cleanup.
+../common/common_podman.sh: line 38: podman: command not found
+../common/common_podman.sh: line 39: podman: command not found
+../common/common_podman.sh: line 40: podman: command not found
+Fri Mar 17 20:51:36 2023 - WARN  - no thing to do.
+Fri Mar 17 20:51:36 2023 - INFO  - Finish environment cleanup.

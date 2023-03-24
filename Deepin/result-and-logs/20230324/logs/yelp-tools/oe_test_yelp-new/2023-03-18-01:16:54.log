@@ -1,0 +1,32 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 01:16:56 2023 - INFO  - Start to prepare the test environment.
+oe_test_yelp-new.sh: line 30: wget: command not found
+Sat Mar 18 01:17:02 2023 - INFO  - End to prepare the test environment.
+Sat Mar 18 01:17:02 2023 - INFO  - Start to run test.
+oe_test_yelp-new.sh: line 37: yelp-new: command not found
+Sat Mar 18 01:17:03 2023 - ERROR - stub failed
+Sat Mar 18 01:17:03 2023 - ERROR - oe_test_yelp-new.sh line 38
+Sat Mar 18 01:17:04 2023 - ERROR - find first failed
+Sat Mar 18 01:17:04 2023 - ERROR - oe_test_yelp-new.sh line 40
+oe_test_yelp-new.sh: line 41: yelp-new: command not found
+Sat Mar 18 01:17:05 2023 - ERROR - tmpl failed
+Sat Mar 18 01:17:05 2023 - ERROR - oe_test_yelp-new.sh line 42
+Sat Mar 18 01:17:06 2023 - ERROR - find second failed
+Sat Mar 18 01:17:06 2023 - ERROR - oe_test_yelp-new.sh line 44
+Sat Mar 18 01:17:07 2023 - INFO  - End to run test.
+Sat Mar 18 01:17:07 2023 - ERROR - failed to execute the case.
+Sat Mar 18 01:17:08 2023 - INFO  - Start to restore the test environment.
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: '\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nSome packages could not be installed. This may mean that you have\nrequested an impossible situation or if you are using the unstable\ndistribution that some required packages have not yet been created\nor been moved out of Incoming.\nThe following information may help to resolve the situation:\n\nThe following packages have unmet dependencies:\n yelp : Depends: libjavascriptcoregtk-4.0-18 (>= 2.36.0) but 2.34.1.1-1+deepin+0u1 is to be installed\n        Recommends: docbook-xml but it is not going to be installed\n        Recommends: fonts-dejavu but it is not going to be installed\nE: Unable to correct problems, you have held broken packages.'
+Sat Mar 18 01:17:11 2023 - INFO  - End to restore the test environment.

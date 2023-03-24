@@ -1,0 +1,8 @@
+Fri Mar 17 11:57:51 2023 - INFO  - start to run testcase:oe_test_cppcheck.
+Fri Mar 17 11:58:22 2023 - ERROR - The case exit by code 30.
+Fri Mar 17 11:58:33 2023 - INFO  - End to run testcase:oe_test_cppcheck.
+Fri Mar 17 11:58:33 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 11:58:37 2023 - INFO  - start to run testcase:oe_test_cppcheck-htmlreport.
+Fri Mar 17 11:58:55 2023 - ERROR - The case exit by code 11.
+Fri Mar 17 11:59:05 2023 - INFO  - End to run testcase:oe_test_cppcheck-htmlreport.
+Fri Mar 17 11:59:06 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

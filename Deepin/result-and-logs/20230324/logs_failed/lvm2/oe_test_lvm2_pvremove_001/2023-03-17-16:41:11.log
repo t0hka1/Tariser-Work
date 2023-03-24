@@ -1,0 +1,54 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:41:13 2023 - INFO  - Start to prepare the test environment!
+Fri Mar 17 16:42:57 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 16:42:57 2023 - INFO  - Start executing testcase!
+  No device found for /dev/.
+Fri Mar 17 16:42:58 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 36
+  No device found for /dev/.
+Fri Mar 17 16:42:59 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 38
+  No device found for /dev/.
+Fri Mar 17 16:43:00 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 40
+  No device found for /dev/.
+Fri Mar 17 16:43:01 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 42
+  No device found for /dev/.
+Fri Mar 17 16:43:02 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 44
+  No device found for /dev/.
+Fri Mar 17 16:43:04 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 46
+  No device found for /dev/.
+Fri Mar 17 16:43:05 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 48
+  No device found for /dev/.
+Fri Mar 17 16:43:06 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 50
+  No device found for /dev/.
+Fri Mar 17 16:43:07 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 52
+  No device found for /dev/.
+Fri Mar 17 16:43:08 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 54
+  No device found for /dev/.
+Fri Mar 17 16:43:09 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 56
+  /dev/mapper/control: open failed: No such device
+  Failure to communicate with kernel device-mapper driver.
+  Check that device-mapper is available in the kernel.
+  Incompatible libdevmapper 1.02.175 (2021-01-08) and kernel driver (unknown version).
+  LVM version:     2.03.11(2) (2021-01-08)
+  No device found for /dev/.
+Fri Mar 17 16:43:10 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 60
+oe_test_lvm2_pvremove_001.sh: line 61: [23: command not found
+  No device found for /dev/.
+Fri Mar 17 16:43:11 2023 - ERROR - oe_test_lvm2_pvremove_001.sh line 74
+  pvremove PV ...
+        e.g. PV, VG, LV, Size, Number, String, Tag.
+        PV
+        For commands managing physical extents, a PV positional arg
+        PV[:PE-PE]... is start and end range (inclusive),
+        PV[:PE+PE]... is start and length range (counting from 0).
+        tags in place of a VG, LV or PV.
+Fri Mar 17 16:43:12 2023 - INFO  - End executing testcase!
+Fri Mar 17 16:43:12 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:43:13 2023 - INFO  - Start environment cleanup.
+Fri Mar 17 16:44:13 2023 - INFO  - Finish environment cleanup.

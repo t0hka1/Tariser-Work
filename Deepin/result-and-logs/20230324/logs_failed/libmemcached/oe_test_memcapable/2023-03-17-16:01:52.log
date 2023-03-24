@@ -1,0 +1,43 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 16:01:54 2023 - INFO  - Start to prepare the test environment.
+../common/common_libmemcached.sh: line 30: memcached: command not found
+Fri Mar 17 16:02:05 2023 - INFO  - Finish preparing the test environment.
+Fri Mar 17 16:02:06 2023 - INFO  - Start to run test.
+oe_test_memcapable.sh: line 30: memcapable: command not found
+Fri Mar 17 16:02:07 2023 - ERROR - oe_test_memcapable.sh line 31
+oe_test_memcapable.sh: line 32: memcapable: command not found
+Fri Mar 17 16:02:07 2023 - ERROR - oe_test_memcapable.sh line 33
+oe_test_memcapable.sh: line 34: memcapable: command not found
+Fri Mar 17 16:02:08 2023 - ERROR - oe_test_memcapable.sh line 35
+spawn memcapable -p 11211 -P
+couldn't execute "memcapable": no such file or directory
+    while executing
+"spawn memcapable -p 11211 -P"
+oe_test_memcapable.sh: line 46: memcapable: command not found
+Fri Mar 17 16:02:09 2023 - ERROR - oe_test_memcapable.sh line 47
+oe_test_memcapable.sh: line 48: memcapable: command not found
+Fri Mar 17 16:02:09 2023 - ERROR - oe_test_memcapable.sh line 49
+oe_test_memcapable.sh: line 50: memcapable: command not found
+Fri Mar 17 16:02:10 2023 - ERROR - oe_test_memcapable.sh line 51
+oe_test_memcapable.sh: line 52: memcapable: command not found
+Fri Mar 17 16:02:11 2023 - ERROR - oe_test_memcapable.sh line 53
+oe_test_memcapable.sh: line 54: memcapable: command not found
+Fri Mar 17 16:02:11 2023 - ERROR - oe_test_memcapable.sh line 55
+Fri Mar 17 16:02:12 2023 - INFO  - End of the test.
+Fri Mar 17 16:02:12 2023 - ERROR - failed to execute the case.
+Fri Mar 17 16:02:13 2023 - INFO  - Start to restore the test environment.
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Traceback (most recent call last):
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 145, in <module>
+    exitcode = apt_remove(args.node, args.pkgs, args.tempfile)
+  File "/root/GitRepo/mugen-debian-riscv/libs/locallibs/apt_manage.py", line 116, in apt_remove
+    with open(tmpfile, "r") as f:
+OSError: [Errno 36] File name too long: "\nWARNING: apt does not have a stable CLI interface. Use with caution in scripts.\n\nReading package lists...\nBuilding dependency tree...\nReading state information...\nPackage libmemcached is not available, but is referred to by another package.\nThis may mean that the package is missing, has been obsoleted, or\nis only available from another source\n\nE: Package 'libmemcached' has no installation candidate"
+Fri Mar 17 16:02:16 2023 - INFO  - Finish restoring the test environment.

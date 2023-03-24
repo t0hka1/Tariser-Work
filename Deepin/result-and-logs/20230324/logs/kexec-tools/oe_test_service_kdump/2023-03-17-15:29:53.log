@@ -1,0 +1,44 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 15:29:56 2023 - INFO  - Start testing...
+Failed to restart kdump.service: Unit kdump.service not found.
+Fri Mar 17 15:29:57 2023 - ERROR - kdump.service restart failed
+Fri Mar 17 15:29:57 2023 - ERROR - ../common/common_lib.sh line 34
+Unit kdump.service could not be found.
+Fri Mar 17 15:30:04 2023 - ERROR - kdump.service restart failed
+Fri Mar 17 15:30:04 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop kdump.service: Unit kdump.service not loaded.
+Fri Mar 17 15:30:05 2023 - ERROR - kdump.service stop failed
+Fri Mar 17 15:30:05 2023 - ERROR - ../common/common_lib.sh line 39
+Unit kdump.service could not be found.
+Fri Mar 17 15:30:12 2023 - ERROR - kdump.service stop failed
+Fri Mar 17 15:30:12 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start kdump.service: Unit kdump.service not found.
+Fri Mar 17 15:30:13 2023 - ERROR - kdump.service start failed
+Fri Mar 17 15:30:14 2023 - ERROR - ../common/common_lib.sh line 44
+Unit kdump.service could not be found.
+Fri Mar 17 15:30:20 2023 - ERROR - kdump.service start failed
+Fri Mar 17 15:30:21 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for kdump.service: No such file or directory
+Fri Mar 17 15:30:21 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start kdump.service: Unit kdump.service not found.
+sed: can't read /usr/lib/systemd/system/kdump.service: No such file or directory
+Failed to reload kdump.service: Unit kdump.service not found.
+Fri Mar 17 15:30:29 2023 - ERROR - kdump.service reload failed
+Fri Mar 17 15:30:30 2023 - ERROR - oe_test_service_kdump.sh line 29
+Unit kdump.service could not be found.
+Fri Mar 17 15:30:31 2023 - ERROR - kdump.service reload causes the service status to change
+Fri Mar 17 15:30:32 2023 - ERROR - oe_test_service_kdump.sh line 31
+Fri Mar 17 15:30:32 2023 - INFO  - Finish test!
+Fri Mar 17 15:30:33 2023 - ERROR - failed to execute the case.
+Fri Mar 17 15:30:33 2023 - INFO  - start environment cleanup.
+sed: can't read /usr/lib/systemd/system/kdump.service: No such file or directory
+Failed to reload kdump.service: Unit kdump.service not found.
+Fri Mar 17 15:30:40 2023 - INFO  - Finish environment cleanup!

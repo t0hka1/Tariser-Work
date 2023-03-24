@@ -1,0 +1,59 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Sat Mar 18 01:05:13 2023 - INFO  - Start to prepare the test environment!
+Sat Mar 18 01:05:16 2023 - ERROR - pkgs:(xdelta) not found
+oe_test_xdelta_003.sh: line 32: xdelta3: command not found
+oe_test_xdelta_003.sh: line 33: xdelta3: command not found
+Sat Mar 18 01:05:17 2023 - INFO  - End to prepare the test environment!
+Sat Mar 18 01:05:17 2023 - INFO  - Start to run test.
+oe_test_xdelta_003.sh: line 40: xdelta3: command not found
+Sat Mar 18 01:05:18 2023 - ERROR - failed to test -B
+Sat Mar 18 01:05:19 2023 - ERROR - oe_test_xdelta_003.sh line 41
+oe_test_xdelta_003.sh: line 42: xdelta3: command not found
+Sat Mar 18 01:05:19 2023 - ERROR - failed to test -W
+Sat Mar 18 01:05:20 2023 - ERROR - oe_test_xdelta_003.sh line 43
+oe_test_xdelta_003.sh: line 44: xdelta3: command not found
+Sat Mar 18 01:05:20 2023 - ERROR - failed to test -P
+Sat Mar 18 01:05:21 2023 - ERROR - oe_test_xdelta_003.sh line 45
+oe_test_xdelta_003.sh: line 46: xdelta3: command not found
+Sat Mar 18 01:05:21 2023 - ERROR - failed to test -I
+Sat Mar 18 01:05:22 2023 - ERROR - oe_test_xdelta_003.sh line 47
+oe_test_xdelta_003.sh: line 49: xdelta3: command not found
+Sat Mar 18 01:05:22 2023 - ERROR - failed to test -s
+Sat Mar 18 01:05:23 2023 - ERROR - oe_test_xdelta_003.sh line 50
+oe_test_xdelta_003.sh: line 51: xdelta3: command not found
+Sat Mar 18 01:05:23 2023 - ERROR - failed to test -S
+Sat Mar 18 01:05:24 2023 - ERROR - oe_test_xdelta_003.sh line 52
+oe_test_xdelta_003.sh: line 54: xdelta3: command not found
+Sat Mar 18 01:05:24 2023 - ERROR - failed to test -N
+Sat Mar 18 01:05:25 2023 - ERROR - oe_test_xdelta_003.sh line 55
+oe_test_xdelta_003.sh: line 56: xdelta3: command not found
+Sat Mar 18 01:05:25 2023 - ERROR - failed to test -D
+Sat Mar 18 01:05:26 2023 - ERROR - oe_test_xdelta_003.sh line 57
+oe_test_xdelta_003.sh: line 58: xdelta3: command not found
+grep: input_recover: No such file or directory
+Sat Mar 18 01:05:27 2023 - ERROR - failed to test -R
+Sat Mar 18 01:05:27 2023 - ERROR - oe_test_xdelta_003.sh line 60
+oe_test_xdelta_003.sh: line 61: xdelta3: command not found
+Sat Mar 18 01:05:28 2023 - ERROR - failed to test -n
+Sat Mar 18 01:05:28 2023 - ERROR - oe_test_xdelta_003.sh line 62
+oe_test_xdelta_003.sh: line 63: xdelta3: command not found
+Sat Mar 18 01:05:29 2023 - ERROR - failed to test -C
+Sat Mar 18 01:05:29 2023 - ERROR - oe_test_xdelta_003.sh line 64
+oe_test_xdelta_003.sh: line 65: xdelta3: command not found
+Sat Mar 18 01:05:30 2023 - ERROR - failed to test -A
+Sat Mar 18 01:05:30 2023 - ERROR - oe_test_xdelta_003.sh line 66
+oe_test_xdelta_003.sh: line 69: xdelta3: command not found
+Sat Mar 18 01:05:31 2023 - ERROR - failed to test -m
+Sat Mar 18 01:05:32 2023 - ERROR - oe_test_xdelta_003.sh line 70
+Sat Mar 18 01:05:32 2023 - INFO  - End to run test.
+Sat Mar 18 01:05:33 2023 - ERROR - failed to execute the case.
+Sat Mar 18 01:05:33 2023 - INFO  - start environment cleanup.
+Sat Mar 18 01:05:34 2023 - WARN  - no thing to do.
+Sat Mar 18 01:05:34 2023 - INFO  - Finish environment cleanup!

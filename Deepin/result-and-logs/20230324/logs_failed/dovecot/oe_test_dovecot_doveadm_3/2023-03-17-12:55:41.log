@@ -1,0 +1,53 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:55:44 2023 - INFO  - Start to prepare the database config.
+Fri Mar 17 12:55:47 2023 - ERROR - pkgs:(dovecot) not found
+Failed to restart dovecot.service: Unit dovecot.service not found.
+Fri Mar 17 12:55:49 2023 - INFO  - End to prepare the database config.
+Fri Mar 17 12:55:49 2023 - INFO  - Start to run test.
+oe_test_dovecot_doveadm_3.sh: line 40: doveadm: command not found
+Fri Mar 17 12:55:50 2023 - ERROR - Check doveadm process status failed.
+Fri Mar 17 12:55:50 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 41
+oe_test_dovecot_doveadm_3.sh: line 42: doveadm: command not found
+Fri Mar 17 12:55:51 2023 - ERROR - Check doveadm user failed.
+Fri Mar 17 12:55:51 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 43
+oe_test_dovecot_doveadm_3.sh: line 44: doveadm: command not found
+Fri Mar 17 12:55:52 2023 - ERROR - Check doveadm stats dump failed.
+Fri Mar 17 12:55:52 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 45
+spawn doveadm zlibconnect 127.0.0.1 110
+couldn't execute "doveadm": no such file or directory
+    while executing
+"spawn doveadm zlibconnect 127.0.0.1 110"
+Fri Mar 17 12:55:53 2023 - ERROR - Check doveadm zlibconnect failed.
+Fri Mar 17 12:55:54 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 50
+oe_test_dovecot_doveadm_3.sh: line 51: doveadm: command not found
+Fri Mar 17 12:55:54 2023 - ERROR - Check doveadm service status failed.
+Fri Mar 17 12:55:55 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 52
+oe_test_dovecot_doveadm_3.sh: line 53: doveadm: command not found
+Fri Mar 17 12:55:55 2023 - ERROR - Check doveadm service stop doveadm failed.
+Fri Mar 17 12:55:56 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 54
+oe_test_dovecot_doveadm_3.sh: line 55: doveadm: command not found
+Fri Mar 17 12:55:56 2023 - ERROR - Check doveadm oldstats reset failed.
+Fri Mar 17 12:55:57 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 56
+oe_test_dovecot_doveadm_3.sh: line 57: doveadm: command not found
+Fri Mar 17 12:55:57 2023 - ERROR - Check doveadm penalty failed.
+Fri Mar 17 12:55:58 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 58
+oe_test_dovecot_doveadm_3.sh: line 60: sievec: command not found
+Fri Mar 17 12:55:58 2023 - ERROR - Check doveadm sievec -c failed.
+Fri Mar 17 12:55:59 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 61
+oe_test_dovecot_doveadm_3.sh: line 62: sievec: command not found
+Fri Mar 17 12:55:59 2023 - ERROR - Check doveadm sievec -d -D failed.
+Fri Mar 17 12:56:00 2023 - ERROR - oe_test_dovecot_doveadm_3.sh line 63
+Fri Mar 17 12:56:00 2023 - INFO  - End to run test.
+Fri Mar 17 12:56:01 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:56:01 2023 - INFO  - Start to restore the test environment.
+Failed to stop doveadm.service: Unit doveadm.service not loaded.
+Failed to stop dovecot.service: Unit dovecot.service not loaded.
+Fri Mar 17 12:56:02 2023 - WARN  - no thing to do.
+Fri Mar 17 12:56:03 2023 - INFO  - End to restore the test environment.

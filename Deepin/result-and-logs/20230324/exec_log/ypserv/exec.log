@@ -1,0 +1,12 @@
+Sat Mar 18 01:22:02 2023 - INFO  - start to run testcase:oe_test_service_yppasswdd.
+Sat Mar 18 01:22:42 2023 - ERROR - The case exit by code 7.
+Sat Mar 18 01:22:53 2023 - INFO  - End to run testcase:oe_test_service_yppasswdd.
+Sat Mar 18 01:22:54 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 01:22:58 2023 - INFO  - start to run testcase:oe_test_service_ypserv.
+Sat Mar 18 01:23:35 2023 - ERROR - The case exit by code 7.
+Sat Mar 18 01:23:46 2023 - INFO  - End to run testcase:oe_test_service_ypserv.
+Sat Mar 18 01:23:46 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Sat Mar 18 01:23:50 2023 - INFO  - start to run testcase:oe_test_service_ypxfrd.
+Sat Mar 18 01:24:27 2023 - ERROR - The case exit by code 7.
+Sat Mar 18 01:24:38 2023 - INFO  - End to run testcase:oe_test_service_ypxfrd.
+Sat Mar 18 01:24:38 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

@@ -1,0 +1,117 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 13:58:22 2023 - INFO  - Start to prepare the test environment!
+Failed to stop firewalld.service: Unit firewalld.service not loaded.
+Failed to disable unit: Unit file firewalld.service does not exist.
+./common/common_galera.sh: line 25: setenforce: command not found
+Fri Mar 17 13:58:26 2023 - ERROR - pkgs:(galera) not found
+spawn openssl req -new -x509 -nodes -days 3600 -key galera_zl/ca-key.pem -out galera_zl/ca.pem
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:
+Email Address []:
+spawn openssl req -newkey rsa:2048 -days 3600 -nodes -keyout galera_zl/server-key.pem -out galera_zl/server-req.pem
+Ignoring -days without -x509; not generating a certificate
+.+..................+.....+..........+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*........+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*..+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+..+........+.+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+...........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.......+......+......+.........+....+.........+...+..+.+.........+.................+.+..+.......+...+...+..+.......+...+...+........+....+...+.....+....+.........+......+...+......+.........+.....+.+...........+.+..+......+......+.+............+..+...............+...+.......+...+......+............+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:
+Email Address []:
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+expect: spawn id exp6 not open
+    while executing
+"expect eof"
+writing RSA key
+spawn openssl req -newkey rsa:2048 -days 3600 -nodes -keyout galera_zl/client-key.pem -out galera_zl/client-req.pem
+Ignoring -days without -x509; not generating a certificate
+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*......+.+..+.......+...+........+.+...+..+.+...+...........+...+...+.........+...+.......+........+..........+...+..+.+.....+.+......+..+......+.......+..+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*......+.+...+.................+.........+.+..+.............+.....+.........+....+.........+...........+.+...............+......+..+................+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.+........+......+.........+....+...+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*............+.....+......+.........+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.......+......+.....+....+..+....+...+...+..+.......+...+...+..+............+......+...+....+........+.......+......+...............+......+...+..+..................+.......+......+........+.........+...+...............+....+...+...+.................+.+..+....+.....................+...+..+...+.+...+...+..+.+............+..............+......+....+.........+.........+..+.............+.....+...+............+..........+..+................+.........+..............+.+......+.....+...+......+.+...+..+.............+.....+.+...+.....+............+....+..............+...+.........+...+................+.....+.......+.........+.......................+......+..........+......+......+..+.+..+...+......+...+............+....+..+.............+..+.......+......+..+...+.+..................+..+...+.+.....+.+...........+.......+...+..+..................+...+................+.....+...+..........+...+..+......+.+...+......+..............+...+....+.....+...+.......+...+..+.............+...+..+...+.........+......+...+................+......+...+.....+.+...........+...+....+...+........+..........+.........+..+......+............+.+......+...+......+......+........+......+.......+.....+............+...+....+..............+....+...+.........+...+......+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:
+Email Address []:
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+expect: spawn id exp3 not open
+    while executing
+"expect eof"
+writing RSA key
+Fri Mar 17 13:58:46 2023 - INFO  - End to prepare the test environment!
+Fri Mar 17 13:58:47 2023 - INFO  - Start executing testcase!
+oe_test_galera_garbd.sh: line 31: garbd: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Fri Mar 17 13:58:48 2023 - ERROR - The help message is printed incorrectly
+Fri Mar 17 13:58:48 2023 - ERROR - oe_test_galera_garbd.sh line 36
+oe_test_galera_garbd.sh: line 37: garbd: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_galera_garbd.sh: line 42: garbd: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_galera_garbd.sh: line 46: garbd: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_galera_garbd.sh: line 51: garbd: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+oe_test_galera_garbd.sh: line 56: garbd: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Fri Mar 17 13:59:01 2023 - ERROR - The node_name does not exist
+Fri Mar 17 13:59:01 2023 - ERROR - oe_test_galera_garbd.sh line 60
+oe_test_galera_garbd.sh: line 61: garbd: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Fri Mar 17 13:59:02 2023 - ERROR - The options was not found
+Fri Mar 17 13:59:03 2023 - ERROR - oe_test_galera_garbd.sh line 65
+oe_test_galera_garbd.sh: line 66: garbd: command not found
+Fri Mar 17 13:59:03 2023 - ERROR - The node_name was not found
+Fri Mar 17 13:59:04 2023 - ERROR - oe_test_galera_garbd.sh line 69
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+Fri Mar 17 13:59:04 2023 - ERROR - The version number is printed incorrectly
+Fri Mar 17 13:59:05 2023 - ERROR - oe_test_galera_garbd.sh line 72
+Fri Mar 17 13:59:05 2023 - INFO  - End of testcase execution!
+Fri Mar 17 13:59:06 2023 - ERROR - failed to execute the case.
+Fri Mar 17 13:59:06 2023 - INFO  - Start environment cleanup.
+Fri Mar 17 13:59:07 2023 - WARN  - no thing to do.
+Fri Mar 17 13:59:07 2023 - INFO  - Finish environment cleanup.

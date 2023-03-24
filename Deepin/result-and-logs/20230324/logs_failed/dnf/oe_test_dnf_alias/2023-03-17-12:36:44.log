@@ -1,0 +1,26 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:36:47 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 12:37:08 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 12:37:09 2023 - INFO  - Start to run test.
+oe_test_dnf_alias.sh: line 35: dnf: command not found
+Fri Mar 17 12:37:10 2023 - ERROR - oe_test_dnf_alias.sh line 36
+oe_test_dnf_alias.sh: line 37: dnf: command not found
+Fri Mar 17 12:37:10 2023 - ERROR - oe_test_dnf_alias.sh line 38
+oe_test_dnf_alias.sh: line 39: dnf: command not found
+Fri Mar 17 12:37:11 2023 - ERROR - oe_test_dnf_alias.sh line 40
+oe_test_dnf_alias.sh: line 41: rpm: command not found
+Fri Mar 17 12:37:11 2023 - ERROR - oe_test_dnf_alias.sh line 42
+oe_test_dnf_alias.sh: line 43: dnf: command not found
+Fri Mar 17 12:37:12 2023 - ERROR - oe_test_dnf_alias.sh line 44
+oe_test_dnf_alias.sh: line 45: dnf: command not found
+Fri Mar 17 12:37:13 2023 - INFO  - End of the test.
+Fri Mar 17 12:37:13 2023 - ERROR - failed to execute the case.
+Fri Mar 17 12:37:14 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 12:37:14 2023 - INFO  - End to restore the test environment.

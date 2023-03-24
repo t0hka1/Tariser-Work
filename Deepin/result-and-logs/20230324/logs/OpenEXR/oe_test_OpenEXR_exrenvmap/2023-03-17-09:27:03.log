@@ -1,0 +1,46 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 09:27:06 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 09:27:09 2023 - ERROR - pkgs:(OpenEXR-devel) not found
+Fri Mar 17 09:27:10 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 09:27:11 2023 - INFO  - Start to run test.
+oe_test_OpenEXR_exrenvmap.sh: line 34: exrenvmap: command not found
+Fri Mar 17 09:27:11 2023 - ERROR - Check exrenvmap -o failed.
+Fri Mar 17 09:27:12 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 35
+oe_test_OpenEXR_exrenvmap.sh: line 36: exrenvmap: command not found
+Fri Mar 17 09:27:12 2023 - ERROR - Check exrenvmap -m failed.
+Fri Mar 17 09:27:13 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 37
+oe_test_OpenEXR_exrenvmap.sh: line 38: exrenvmap: command not found
+Fri Mar 17 09:27:13 2023 - ERROR - Check exrenvmap -c failed.
+Fri Mar 17 09:27:14 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 39
+oe_test_OpenEXR_exrenvmap.sh: line 40: exrenvmap: command not found
+Fri Mar 17 09:27:14 2023 - ERROR - Check exrenvmap -l failed.
+Fri Mar 17 09:27:15 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 41
+oe_test_OpenEXR_exrenvmap.sh: line 42: exrenvmap: command not found
+Fri Mar 17 09:27:15 2023 - ERROR - Check exrenvmap -ci failed.
+Fri Mar 17 09:27:16 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 43
+oe_test_OpenEXR_exrenvmap.sh: line 44: exrenvmap: command not found
+Fri Mar 17 09:27:16 2023 - ERROR - Check exrenvmap -li failed.
+Fri Mar 17 09:27:17 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 45
+oe_test_OpenEXR_exrenvmap.sh: line 46: exrenvmap: command not found
+Fri Mar 17 09:27:17 2023 - ERROR - Check exrenvmap -b failed.
+Fri Mar 17 09:27:18 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 47
+Fri Mar 17 09:27:18 2023 - ERROR - Check exrenvmap -h failed.
+Fri Mar 17 09:27:19 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 49
+oe_test_OpenEXR_exrenvmap.sh: line 50: exrenvmap: command not found
+Fri Mar 17 09:27:19 2023 - ERROR - Check exrenvmap -p failed.
+Fri Mar 17 09:27:20 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 51
+oe_test_OpenEXR_exrenvmap.sh: line 52: exrenvmap: command not found
+Fri Mar 17 09:27:20 2023 - ERROR - Check exrenvmap -d failed.
+Fri Mar 17 09:27:21 2023 - ERROR - oe_test_OpenEXR_exrenvmap.sh line 53
+Fri Mar 17 09:27:21 2023 - INFO  - End to run test.
+Fri Mar 17 09:27:22 2023 - ERROR - failed to execute the case.
+Fri Mar 17 09:27:22 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 09:27:23 2023 - WARN  - no thing to do.
+Fri Mar 17 09:27:23 2023 - INFO  - End to restore the test environment.

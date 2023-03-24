@@ -1,0 +1,50 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 20:20:35 2023 - INFO  - Start to prepare the test environment.
+Fri Mar 17 20:20:38 2023 - ERROR - pkgs:(qt5-qttools) not found
+oe_test_qt5-qttools_qtpaths.sh: line 29: rpm: command not found
+Fri Mar 17 20:20:39 2023 - INFO  - End to prepare the test environment.
+Fri Mar 17 20:20:40 2023 - INFO  - Start to run test.
+oe_test_qt5-qttools_qtpaths.sh: line 38: qtpaths: command not found
+Fri Mar 17 20:20:40 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 39
+oe_test_qt5-qttools_qtpaths.sh: line 40: qtpaths: command not found
+Fri Mar 17 20:20:41 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 41
+oe_test_qt5-qttools_qtpaths.sh: line 42: qtpaths: command not found
+Fri Mar 17 20:20:42 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 43
+oe_test_qt5-qttools_qtpaths.sh: line 44: qtpaths: command not found
+Fri Mar 17 20:20:42 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 45
+oe_test_qt5-qttools_qtpaths.sh: line 46: qtpaths: command not found
+Fri Mar 17 20:20:43 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 47
+oe_test_qt5-qttools_qtpaths.sh: line 48: qtpaths: command not found
+Fri Mar 17 20:20:43 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 49
+oe_test_qt5-qttools_qtpaths.sh: line 50: qtpaths: command not found
+Fri Mar 17 20:20:44 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 51
+oe_test_qt5-qttools_qtpaths.sh: line 52: qtpaths: command not found
+Fri Mar 17 20:20:45 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 53
+oe_test_qt5-qttools_qtpaths.sh: line 54: qtpaths: command not found
+Fri Mar 17 20:20:45 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 55
+oe_test_qt5-qttools_qtpaths.sh: line 56: qtpaths: command not found
+Fri Mar 17 20:20:46 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 57
+oe_test_qt5-qttools_qtpaths.sh: line 58: qtpaths: command not found
+Fri Mar 17 20:20:46 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 59
+oe_test_qt5-qttools_qtpaths.sh: line 60: qtpaths: command not found
+Fri Mar 17 20:20:47 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 61
+oe_test_qt5-qttools_qtpaths.sh: line 62: qtpaths: command not found
+Fri Mar 17 20:20:47 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 63
+oe_test_qt5-qttools_qtpaths.sh: line 64: qtpaths: command not found
+Fri Mar 17 20:20:48 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 65
+oe_test_qt5-qttools_qtpaths.sh: line 66: qtpaths: command not found
+Fri Mar 17 20:20:49 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 67
+oe_test_qt5-qttools_qtpaths.sh: line 68: qtpaths: command not found
+Fri Mar 17 20:20:49 2023 - ERROR - oe_test_qt5-qttools_qtpaths.sh line 69
+Fri Mar 17 20:20:50 2023 - INFO  - End to run test.
+Fri Mar 17 20:20:50 2023 - ERROR - failed to execute the case.
+Fri Mar 17 20:20:51 2023 - INFO  - Start to restore the test environment.
+Fri Mar 17 20:20:51 2023 - WARN  - no thing to do.
+Fri Mar 17 20:20:52 2023 - INFO  - End to restore the test environment.

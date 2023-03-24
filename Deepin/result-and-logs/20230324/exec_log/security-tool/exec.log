@@ -1,0 +1,8 @@
+Fri Mar 17 22:38:45 2023 - INFO  - start to run testcase:oe_test_security_tool.
+Fri Mar 17 22:41:28 2023 - ERROR - The case exit by code 5.
+Fri Mar 17 22:41:39 2023 - INFO  - End to run testcase:oe_test_security_tool.
+Fri Mar 17 22:41:40 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.
+Fri Mar 17 22:41:44 2023 - INFO  - start to run testcase:oe_test_service_openEuler-security.
+Fri Mar 17 22:41:53 2023 - ERROR - The case exit by code 2.
+Fri Mar 17 22:42:04 2023 - INFO  - End to run testcase:oe_test_service_openEuler-security.
+Fri Mar 17 22:42:05 2023 - INFO  - A total of 1 use cases were executed, with 0 successes and 1 failures.

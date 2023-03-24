@@ -1,0 +1,44 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 17:39:01 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 17:39:05 2023 - ERROR - pkgs:(netcf) not found
+Fri Mar 17 17:39:06 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 17:39:07 2023 - INFO  - Start testing...
+Failed to restart netcf-transaction.service: Unit netcf-transaction.service not found.
+Fri Mar 17 17:39:07 2023 - ERROR - netcf-transaction.service restart failed
+Fri Mar 17 17:39:08 2023 - ERROR - ../common/common_lib.sh line 34
+Unit netcf-transaction.service could not be found.
+Fri Mar 17 17:39:14 2023 - ERROR - netcf-transaction.service restart failed
+Fri Mar 17 17:39:15 2023 - ERROR - ../common/common_lib.sh line 37
+Failed to stop netcf-transaction.service: Unit netcf-transaction.service not loaded.
+Fri Mar 17 17:39:15 2023 - ERROR - netcf-transaction.service stop failed
+Fri Mar 17 17:39:16 2023 - ERROR - ../common/common_lib.sh line 39
+Unit netcf-transaction.service could not be found.
+Fri Mar 17 17:39:22 2023 - ERROR - netcf-transaction.service stop failed
+Fri Mar 17 17:39:23 2023 - ERROR - ../common/common_lib.sh line 42
+Failed to start netcf-transaction.service: Unit netcf-transaction.service not found.
+Fri Mar 17 17:39:23 2023 - ERROR - netcf-transaction.service start failed
+Fri Mar 17 17:39:24 2023 - ERROR - ../common/common_lib.sh line 44
+Unit netcf-transaction.service could not be found.
+Fri Mar 17 17:39:30 2023 - ERROR - netcf-transaction.service start failed
+Fri Mar 17 17:39:31 2023 - ERROR - ../common/common_lib.sh line 47
+Failed to get unit file state for netcf-transaction.service: No such file or directory
+Fri Mar 17 17:39:31 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to start netcf-transaction.service: Unit netcf-transaction.service not found.
+Fri Mar 17 17:39:32 2023 - ERROR - Job type reload is not applicable for unit netcf-transaction.service
+Fri Mar 17 17:39:33 2023 - ERROR - ../common/common_lib.sh line 91
+Unit netcf-transaction.service could not be found.
+Unit netcf-transaction.service could not be found.
+Fri Mar 17 17:39:34 2023 - INFO  - Finish test!
+Fri Mar 17 17:39:34 2023 - ERROR - failed to execute the case.
+Fri Mar 17 17:39:35 2023 - INFO  - start environment cleanup.
+Failed to stop netcf-transaction.service: Unit netcf-transaction.service not loaded.
+Fri Mar 17 17:39:35 2023 - WARN  - no thing to do.
+Fri Mar 17 17:39:36 2023 - INFO  - Finish environment cleanup!

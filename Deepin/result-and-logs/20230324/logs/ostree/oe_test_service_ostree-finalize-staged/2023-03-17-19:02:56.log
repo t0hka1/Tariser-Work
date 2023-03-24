@@ -1,0 +1,29 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 19:02:59 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 19:03:04 2023 - INFO  - pkgs:(ostree) is already installed
+Fri Mar 17 19:03:05 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 19:03:05 2023 - INFO  - Start testing...
+Unit ostree-finalize-staged.service could not be found.
+Failed to get unit file state for ostree-finalize-staged.service: No such file or directory
+Fri Mar 17 19:03:06 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Unit ostree-prepare-root.service could not be found.
+Failed to get unit file state for ostree-prepare-root.service: No such file or directory
+Fri Mar 17 19:03:07 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Unit ostree-remount.service could not be found.
+Failed to get unit file state for ostree-remount.service: No such file or directory
+Fri Mar 17 19:03:08 2023 - INFO  - Unit is indirect, ignoring.
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Fri Mar 17 19:03:09 2023 - INFO  - Finish test!
+Fri Mar 17 19:03:10 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 19:03:10 2023 - INFO  - start environment cleanup.
+Fri Mar 17 19:03:11 2023 - WARN  - no thing to do.
+Fri Mar 17 19:03:11 2023 - INFO  - Finish environment cleanup!

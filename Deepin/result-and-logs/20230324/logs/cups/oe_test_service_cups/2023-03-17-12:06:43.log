@@ -1,0 +1,35 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 12:06:46 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 12:11:20 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 12:11:21 2023 - INFO  - Start testing...
+     Active: active (running) since Fri 2023-03-17 12:11:22 UTC; 5s ago
+     Active: inactive (dead) since Fri 2023-03-17 12:11:28 UTC; 5s ago
+     Active: active (running) since Fri 2023-03-17 12:11:34 UTC; 5s ago
+find: ‘/etc/systemd/system/multi-user.target.wants/cups.path’: No such file or directory
+find: ‘/etc/systemd/system/multi-user.target.wants/cups.service’: No such file or directory
+find: ‘/etc/systemd/system/sockets.target.wants/cups.socket’: No such file or directory
+find: ‘/etc/systemd/system/printer.target.wants/cups.service’: No such file or directory
+Synchronizing state of cups.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable cups
+Created symlink /etc/systemd/system/printer.target.wants/cups.service → /lib/systemd/system/cups.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/cups.service → /lib/systemd/system/cups.service.
+Created symlink /etc/systemd/system/sockets.target.wants/cups.socket → /lib/systemd/system/cups.socket.
+Created symlink /etc/systemd/system/multi-user.target.wants/cups.path → /lib/systemd/system/cups.path.
+/etc/systemd/system/multi-user.target.wants/cups.path
+/etc/systemd/system/multi-user.target.wants/cups.service
+/etc/systemd/system/sockets.target.wants/cups.socket
+/etc/systemd/system/printer.target.wants/cups.service
+An error was encountered while opening journal file or directory /var/log/journal/1f3b9e9674cf4f089cf921389619d294/system.journal, ignoring file: Is a directory
+Failed to reload cups.service: Job type reload is not applicable for unit cups.service.
+     Active: active (running) since Fri 2023-03-17 12:11:34 UTC; 47s ago
+Fri Mar 17 12:12:22 2023 - INFO  - Finish test!
+Fri Mar 17 12:12:23 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 12:12:23 2023 - INFO  - start environment cleanup.
+Fri Mar 17 12:13:13 2023 - INFO  - Finish environment cleanup!

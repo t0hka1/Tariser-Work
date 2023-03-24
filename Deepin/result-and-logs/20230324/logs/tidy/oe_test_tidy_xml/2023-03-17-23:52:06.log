@@ -1,0 +1,2830 @@
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+expect is already the newest version (5.45.4-2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not upgraded.
+Fri Mar 17 23:52:09 2023 - INFO  - Start environmental preparation.
+Fri Mar 17 23:52:32 2023 - INFO  - End of environmental preparation!
+Fri Mar 17 23:52:32 2023 - INFO  - Start testing...
+  <name>-help</name>
+  <name>-help-config</name>
+  <name>-help-env</name>
+  <name>-help-option &lt;option&gt;</name>
+  <description>set Tidy's output language to &lt;lang&gt;. Specify '-language help' for more help. Use before output-causing arguments to ensure the language takes effect, e.g.,`tidy -lang es -lang help`.</description>
+  <name>-xml-help</name>
+ <option class="TidyDiagnostics">
+  <description>This option specifies what level of accessibility checking, if any, that Tidy should perform. <br/>Level <var>0 (Tidy Classic)</var> is equivalent to Tidy Classic's accessibility checking. <br/>For more information on Tidy's accessibility checking, visit <a href="http://www.html-tidy.org/accessibility/"> Tidy's Accessibility Page</a>. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies the default <code>alt=</code> text Tidy uses for <code>&lt;img&gt;</code> attributes when the <code>alt=</code> attribute is missing. <br/>Use with care, as it is your responsibility to make your documents accessible to people who cannot see the images. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option controls the deletion or addition of the <code>name</code> attribute in elements where it can serve as anchor. <br/>If set to <var>yes</var> a <code>name</code> attribute, if not already existing, is added along an existing <code>id</code> attribute if the DTD allows it. <br/>If set to <var>no</var> any existing name attribute is removed if an <code>id</code> attribute exists or has been added. </description>
+ </option>
+ <option class="TidyMarkupEntities">
+  <description>Can be used to modify behavior of the <code>clean</code> option when set to <var>yes</var>. <br/>If set to <var>yes</var> when using <code>clean</code>, <code>&amp;emdash;</code>, <code>&amp;rdquo;</code>, and other named character entities are downgraded to their closest ASCII equivalents. </description>
+ </option>
+ <option class="TidyMarkupTeach">
+  <description>This option specifies new block-level tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Note you can't change the content model for elements such as <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> and <code>&lt;dl&gt;</code>. <br/>This option is ignored in XML mode. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>This option specifies if Tidy should print only the contents of the body tag as an HTML fragment. <br/>If set to <var>auto</var>, this is performed only if the body tag has been inferred. <br/>Useful for incorporating existing whole pages as a portion of another page. <br/>This option has no effect if XML output is requested. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should output a line break before each <code>&lt;br&gt;</code> element. </description>
+ </option>
+ <option class="TidyEncoding">
+  <description>This option specifies the character encoding Tidy uses for input, and when set, automatically chooses an appropriate character encoding to be used for output. The output encoding Tidy chooses may be different from the input encoding. <br/>For <var>ascii</var>, <var>latin0</var>, <var>ibm858</var>, <var>mac</var>, and <var>win1252</var> input encodings, the <code>output-encoding</code> option will automatically be set to <var>ascii</var>. You can set <code>output-encoding</code> manually to override this. <br/>For other input encodings, the <code>output-encoding</code> option will automatically be set to the the same value. <br/>Regardless of the preset value, you can set <code>output-encoding</code> manually to override this. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should coerce a start tag into an end tag in cases where it looks like an end tag was probably intended; for example, given <br/><code>&lt;span&gt;foo &lt;b&gt;bar&lt;b&gt; baz&lt;/span&gt;</code> <br/>Tidy will output <br/><code>&lt;span&gt;foo &lt;b&gt;bar&lt;/b&gt; baz&lt;/span&gt;</code> </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies the prefix that Tidy uses for styles rules. <br/>By default, <var>c</var> will be used. </description>
+ </option>
+ <option class="TidyMarkupXForm">
+  <description>This option specifies if Tidy should decorate inferred <code>&lt;ul&gt;</code> elements with some CSS markup to avoid indentation to the right. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option specifies the DOCTYPE declaration generated by Tidy. <br/>If set to <var>omit</var> the output won't contain a DOCTYPE declaration. Note this this also implies <code>numeric-entities</code> is set to <var>yes</var>.<br/>If set to <var>html5</var> the DOCTYPE is set to <code>&lt;!DOCTYPE html&gt;</code>.<br/>If set to <var>auto</var> (the default) Tidy will use an educated guess based upon the contents of the document. Note that selecting this option will <em>not</em> change the current document's DOCTYPE on output. <br/>If set to <var>strict</var>, Tidy will set the DOCTYPE to the HTML4 or XHTML1 strict DTD.<br/>If set to <var>loose</var>, the DOCTYPE is set to the HTML4 or XHTML1 loose (transitional) DTD.<br/>Alternatively, you can supply a string for the formal public identifier (FPI).<br/>For example: <br/><code>doctype: "-//ACME//DTD HTML 3.14159//EN"</code><br/>If you specify the FPI for an XHTML document, Tidy will set the system identifier to an empty string. For an HTML document, Tidy adds a system identifier only if one was already present in order to preserve the processing mode of some browsers. Tidy leaves the DOCTYPE for generic XML documents unchanged. <br/>This option does not offer a validation of document conformance. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should discard empty elements. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should discard empty paragraphs. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should strip out proprietary attributes, such as Microsoft data binding attributes. Additionally attributes that aren't permitted in the output version of HTML will be dropped if used with <code>strict-tags-attributes</code>. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should keep the first or last attribute, if an attribute is repeated, e.g. has two <code>align</code> attributes. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>This option specifies if Tidy should change the format for reporting errors and warnings to a format that is more easily parsed by GNU Emacs. </description>
+ </option>
+ <option class="TidyMarkupTeach">
+  <description>This option specifies new empty inline tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Remember to also declare empty tags as either inline or blocklevel. <br/>This option is ignored in XML mode. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should insert a <code>&lt;p&gt;</code> element to enclose any text it finds in any element that allows mixed content for HTML transitional but not HTML strict. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should enclose any text it finds in the body element within a <code>&lt;p&gt;</code> element.<br/>This is useful when you want to take existing HTML and use it with a style sheet. </description>
+ </option>
+ <option class="TidyFileIO">
+  <description>This option specifies the error file Tidy uses for errors and warnings. Normally errors and warnings are output to <code>stderr</code>. </description>
+ </option>
+ <option class="TidyMarkupXForm">
+  <description>This option specifies if Tidy should convert <code>&lt;![CDATA[]]&gt;</code> sections to normal text. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option causes items that look like closing tags, like <code>&lt;/g</code> to be escaped to <code>&lt;\/g</code>. Set this option to <var>no</var> if you do not want this.</description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should replace backslash characters <code>\</code> in URLs with forward slashes <code>/</code>. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should replace unexpected hyphens with <code>=</code> characters when it comes across adjacent hyphens. <br/>The default is <var>auto</var> will which will act as <var>no</var> for HTML5 document types, and <var>yes</var> for all other document types. <br/>HTML has abandonded SGML comment syntax, and allows adjacent hypens for all versions of HTML, although XML and XHTML do not. If you plan to support older browsers that require SGML comment syntax, then consider setting this value to <var>yes</var>.</description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should check attribute values that carry URIs for illegal characters and if such are found, escape them as HTML4 recommends. </description>
+ </option>
+ <option class="TidyDiagnostics">
+  <description>This option specifies if Tidy should produce output even if errors are encountered. <br/>Use this option with care; if Tidy reports an error, this means Tidy was not able to (or is not sure how to) fix the error, so the resulting output may not reflect your intention. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should enable specific behavior for cleaning up HTML exported from Google Docs. </description>
+ </option>
+ <option class="TidyMarkupXForm">
+  <description>This option specifies if Tidy should not print out comments. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option specifies if Tidy should generate pretty printed output, writing it as HTML. </description>
+ </option>
+ <option class="TidyEncoding">
+  <description>This option specifies the character encoding Tidy uses for input. Tidy makes certain assumptions about some of the input encodings. <br/>For <var>ascii</var>, Tidy will accept Latin-1 (ISO-8859-1) character values and convert them to entities as necessary. <br/>For <var>raw</var>, Tidy will make no assumptions about the character values and will pass them unchanged to output. <br/>For <var>mac</var> and <var>win1252</var>, vendor specific characters values will be accepted and converted to entities as necessary. <br/>Asian encodings such as <var>iso2022</var> will be handled appropriately assuming the corresponding <code>output-encoding</code> is also specified. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should begin each attribute on a new line. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should indent <code>&lt;![CDATA[]]&gt;</code> sections. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should indent block-level tags. <br/>If set to <var>auto</var> Tidy will decide whether or not to indent the content of tags such as <code>&lt;title&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;td&gt;</code>, or <code>&lt;p&gt;</code> based on the content including a block-level element. <br/>Setting <code>indent</code> to <var>yes</var> can expose layout bugs in some browsers. <br/>Use the option <code>indent-spaces</code> to control the number of spaces or tabs output per level of indent, and <code>indent-with-tabs</code> to specify whether spaces or tabs are used. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies the number of spaces or tabs that Tidy uses to indent content when <code>indent</code> is enabled. <br/>Note that the default value for this option is dependent upon the value of <code>indent-with-tabs</code> (see also). </description>
+ </option>
+ <option class="TidyMarkupTeach">
+  <description>This option specifies new non-empty inline tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>This option is ignored in XML mode. </description>
+ </option>
+ <option class="TidyMarkupXForm">
+  <description>This option specifies if Tidy should combine class names to generate a single, new class name if multiple class assignments are detected on an element. </description>
+ </option>
+ <option class="TidyMarkupXForm">
+  <description>This option specifies if Tidy should combine styles to generate a single, new style if multiple style values are detected on an element. </description>
+ </option>
+ <option class="TidyFileIO">
+  <description>This option specifies if Tidy should keep the original modification time of files that Tidy modifies in place. <br/>Setting the option to <var>yes</var> allows you to tidy files without changing the file modification date, which may be useful with certain tools that use the modification date for things such as automatic server deployment.<br/>Note this feature is not supported on some platforms. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>With the default <var>no</var> Tidy will replace all source tabs with spaces, controlled by the option <code>tab-size</code>, and the current line offset. Of course, except in the special blocks/elements enumerated below, this will later be reduced to just one space. <br/>If set <var>yes</var> this option specifies Tidy should keep certain tabs found in the source, but only in preformatted blocks like <code>&lt;pre&gt;</code>, and other CDATA elements like <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code>, and other pseudo elements like <code>&lt;?php ... ?&gt;</code>. As always, all other tabs, or sequences of tabs, in the source will continue to be replaced with a space. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies how Tidy deals with whitespace characters within attribute values. <br/>If the value is <var>no</var> Tidy normalizes attribute values by replacing any newline or tab with a single space, and further by replacing any contiguous whitespace with a single space. <br/>To force Tidy to preserve the original, literal values of all attributes and ensure that whitespace within attribute values is passed through unchanged, set this option to <var>yes</var>. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should replace any occurrence of <code>&lt;i&gt;</code> with <code>&lt;em&gt;</code> and any occurrence of <code>&lt;b&gt;</code> with <code>&lt;strong&gt;</code>. Any attributes are preserved unchanged. <br/>This option can be set independently of the <code>clean</code> option. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should convert the value of an attribute that takes a list of predefined values to lower case. <br/>This is required for XHTML documents. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should strip Microsoft specific HTML from Word 2000 documents, and output spaces rather than non-breaking spaces where they exist in the input. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should perform cleaning of some legacy presentational tags (currently <code>&lt;i&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;center&gt;</code> when enclosed within appropriate inline tags, and <code>&lt;font&gt;</code>). If set to <var>yes</var>, then the legacy tags will be replaced with CSS <code>&lt;style&gt;</code> tags and structural markup as appropriate. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should add a <code>meta</code> element to the document head to indicate that the document has been tidied. <br/>Tidy won't add a meta element if one is already present. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option can be used to modify the behavior of <code>clean</code> when set to <var>yes</var>.<br/>This option specifies if Tidy should merge nested <code>&lt;div&gt;</code> such as <code>&lt;div&gt;&lt;div&gt;...&lt;/div&gt;&lt;/div&gt;</code>. <br/>If set to <var>auto</var> the attributes of the inner <code>&lt;div&gt;</code> are moved to the outer one. Nested <code>&lt;div&gt;</code> with <code>id</code> attributes are <em>not</em> merged. <br/>If set to <var>yes</var> the attributes of the inner <code>&lt;div&gt;</code> are discarded with the exception of <code>class</code> and <code>style</code>. </description>
+ </option>
+ <option class="TidyMarkupXForm">
+  <description>This option specifies if Tidy should merge nested <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> elements; for example, for the case <br/><code>&lt;b class="rtop-2"&gt;foo &lt;b class="r2-2"&gt;bar&lt;/b&gt; baz&lt;/b&gt;</code>, <br/>Tidy will output <code>&lt;b class="rtop-2"&gt;foo bar baz&lt;/b&gt;</code>. </description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option can be used to modify the behavior of <code>clean</code> when set to <var>yes</var>.<br/>This option specifies if Tidy should merge nested <code>&lt;span&gt;</code> such as <code>&lt;span&gt;&lt;span&gt;...&lt;/span&gt;&lt;/span&gt;</code>. <br/>The algorithm is identical to the one used by <code>merge-divs</code>. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option, when enabled, adds a <code>&lt;meta&gt;</code> element and sets the <code>charset</code> attribute to the encoding of the document. Set this option to <var>yes</var> to enable it. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>Use this option to prevent Tidy from displaying certain types of report output, for example, for conditions that you wish to ignore. <br/>This option takes a list of one or more keys indicating the message type to mute. You can discover these message keys by using the <code>mute-id</code> configuration option and examining Tidy's output. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>This option indicates whether or not Tidy should display message ID's with each of its error reports. This could be useful if you wanted to use the <code>mute</code> configuration option in order to filter out certain report messages. </description>
+ </option>
+ <option class="TidyMarkupEntities">
+  <description>This option specifies if Tidy should allow numeric character references. </description>
+ </option>
+ <option class="TidyEncoding">
+ </option>
+ <option class="TidyMarkupEntities">
+  <description>This option specifies if Tidy should output entities other than the built-in HTML entities (<code>&amp;amp;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code>, and <code>&amp;quot;</code>) in the numeric rather than the named entity form. <br/>Only entities compatible with the DOCTYPE declaration generated are used. <br/>Entities that can be represented in the output encoding are translated correspondingly. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <name>omit-optional-tags</name>
+  <description>This option specifies if Tidy should omit optional start tags and end tags when generating output. <br/>Setting this option causes all tags for the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> elements to be omitted from output, as well as such end tags as <code>&lt;/p&gt;</code>, <code>&lt;/li&gt;</code>, <code>&lt;/dt&gt;</code>, <code>&lt;/dd&gt;</code>, <code>&lt;/option&gt;</code>, <code>&lt;/tr&gt;</code>, <code>&lt;/td&gt;</code>, and <code>&lt;/th&gt;</code>. <br/>This option is ignored for XML output. </description>
+ </option>
+ <option class="TidyEncoding">
+  <description>This option specifies the character encoding Tidy uses for output. Some of the output encodings affect whether or not some characters are translated to entities, although in all cases, some entities will be written according to other Tidy configuration options. <br/>For <var>ascii</var>, <var>mac</var>, and <var>win1252</var> output encodings, entities will be used for all characters with values over 127. <br/>For <var>raw</var> output, Tidy will write values above 127 without translating them to entities. <br/>Output using <var>latin1</var> will cause Tidy to write character values higher than 255 as entities. <br/>The UTF family such as <var>utf8</var> will write output in the respective UTF encoding. <br/>Asian output encodings such as <var>iso2022</var> will write output in the specified encoding, assuming a corresponding <code>input-encoding</code> was specified. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. </description>
+ </option>
+ <option class="TidyFileIO">
+  <description>This option specifies the output file Tidy uses for markup. Normally markup is written to <code>stdout</code>. </description>
+ </option>
+ <option class="TidyEncoding">
+  <description>This option specifies if Tidy should write a Unicode Byte Order Mark character (BOM; also known as Zero Width No-Break Space; has value of U+FEFF) to the beginning of the output, and only applies to UTF-8 and UTF-16 output encodings. <br/>If set to <var>auto</var> this option causes Tidy to write a BOM to the output only if a BOM was present at the beginning of the input. <br/>A BOM is always written for XML/XHTML output using UTF-16 output encodings. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should indent with tabs instead of spaces, assuming <code>indent</code> is <var>yes</var>. <br/>Set it to <var>yes</var> to indent using tabs instead of the default spaces. <br/>Use the option <code>indent-spaces</code> to control the number of tabs output per level of indent. Note that when <code>indent-with-tabs</code> is enabled the default value of <code>indent-spaces</code> is reset to <var>1</var>. <br/>Note <code>tab-size</code> controls converting input tabs to spaces. Set it to zero to retain input tabs. </description>
+ </option>
+ <option class="TidyMarkupEntities">
+  <description>This option specifies if Tidy should preserve well-formed entities as found in the input. </description>
+ </option>
+ <option class="TidyMarkupTeach">
+  <description>This option specifies new tags that are to be processed in exactly the same way as HTML's <code>&lt;pre&gt;</code> element. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Note you cannot as yet add new CDATA elements. <br/>This option is ignored in XML mode. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option allows prioritizing the writing of attributes in tidied documents, allowing them to written before the other attributes of an element. For example, you might specify that <strong>id</strong> and <strong>name</strong> are written before every other attribute. <br/>This option takes a space or comma separated list of attribute names. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should line wrap after some Unicode or Chinese punctuation characters. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>When enabled, this option limits Tidy's non-document output to report only document warnings and errors. </description>
+ </option>
+ <option class="TidyMarkupEntities">
+  <description>This option specifies if Tidy should output unadorned <code>&amp;</code> characters as <code>&amp;amp;</code>. </description>
+ </option>
+ <option class="TidyMarkupEntities">
+  <description>This option specifies if Tidy should output <code>&quot;</code> characters as <code>&amp;quot;</code> as is preferred by some editing environments. <br/>The apostrophe character <code>'</code> is written out as <code>&amp;#39;</code> since many web browsers don't yet support <code>&amp;apos;</code>. </description>
+ </option>
+ <option class="TidyMarkupEntities">
+  <description>This option specifies if Tidy should output non-breaking space characters as entities, rather than as the Unicode character value 160 (decimal). </description>
+ </option>
+ <option class="TidyMarkupXForm">
+  <description>This option specifies if Tidy should replace numeric values in color attributes with HTML/XHTML color names where defined, e.g. replace <code>#ffffff</code> with <code>white</code>. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>This option specifies the number Tidy uses to determine if further errors should be shown. If set to <var>0</var>, then no errors are shown. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>This option specifies if Tidy should display info-level messages. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>This option specifies if Tidy should generate a pretty printed version of the markup. Note that Tidy won't generate a pretty printed version if it finds significant errors (see <code>force-output</code>). </description>
+ </option>
+ <option class="TidyDiagnostics">
+  <description>This option enables a message whenever Tidy changes the <code>content</code> attribute of a meta charset declaration to match the encoding of the document. Set this option to <var>yes</var> to enable it. </description>
+ </option>
+ <option class="TidyDisplay">
+  <description>This option specifies if Tidy should suppress warnings. This can be useful when a few errors are hidden in a flurry of warnings. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies that Tidy should skip nested tags when parsing script and style data. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies that Tidy should sort attributes within an element using the specified sort algorithm. If set to <var>alpha</var>, the algorithm is an ascending alphabetic sort. <br/>When used while sorting with <code>priority-attributes</code>, any attribute sorting will take place after the priority attributes have been output. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This options ensures that tags and attributes are applicable for the version of HTML that Tidy outputs. When set to <var>yes</var> and the output document type is a strict doctype, then Tidy will report errors. If the output document type is a loose or transitional doctype, then Tidy will report warnings. <br/>Additionally if <code>drop-proprietary-attributes</code> is enabled, then not applicable attributes will be dropped, too. <br/>When set to <var>no</var>, these checks are not performed. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should move all style tags to the head of the document. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies the number of columns that Tidy uses between successive tab stops. It is used to map tabs to spaces when reading the input. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should output attribute names in upper case. <br/>When set to <var>no</var>, attribute names will be written in lower case. Specifying <var>yes</var> will output attribute names in upper case, and <var>preserve</var> can used to leave attribute names untouched. <br/>When using XML input, the original case is always preserved. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should output tag names in upper case. <br/>The default is <var>no</var> which results in lower case tag names, except for XML input where the original case is preserved. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option enables the use of tags for autonomous custom elements, e.g. <code>&lt;flag-icon&gt;</code> with Tidy. Custom tags are disabled if this value is <var>no</var>. Other settings - <var>blocklevel</var>, <var>empty</var>, <var>inline</var>, and <var>pre</var> will treat <em>all</em> detected custom tags accordingly. <br/>The use of <code>new-blocklevel-tags</code>, <code>new-empty-tags</code>, <code>new-inline-tags</code>, or <code>new-pre-tags</code> will override the treatment of custom tags by this configuration option. This may be useful if you have different types of custom tags.<br/>When enabled these tags are determined during the processing of your document using opening tags; matching closing tags will be recognized accordingly, and unknown closing tags will be discarded. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should add some extra empty lines for readability. <br/>The default is <var>no</var>. <br/>If set to <var>auto</var> Tidy will eliminate nearly all newline characters.</description>
+ </option>
+ <option class="TidyDiagnostics">
+  <description>This option specifies if Tidy should warn on proprietary attributes.</description>
+ </option>
+ <option class="TidyMarkupCleanup">
+  <description>This option specifies if Tidy should go to great pains to strip out all the surplus stuff Microsoft Word 2000 inserts when you save Word documents as "Web pages". It doesn't handle embedded images or VML. <br/>You should consider saving using Word's <strong>Save As...</strong>, and choosing <strong>Web Page, Filtered</strong>. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should line wrap text contained within ASP pseudo elements, which look like: <code>&lt;% ... %&gt;</code>. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should line-wrap attribute values, meaning that if the value of an attribute causes a line to exceed the width specified by <code>wrap</code>, Tidy will add one or more line breaks to the value, causing it to be wrapped into multiple lines. <br/>Note that this option can be set independently of <code>wrap-script-literals</code>. By default Tidy replaces any newline or tab with a single space and replaces any sequences of whitespace with a single space. <br/>To force Tidy to preserve the original, literal values of all attributes, and ensure that whitespace characters within attribute values are passed through unchanged, set <code>literal-attributes</code> to <var>yes</var>. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should line wrap text contained within JSTE pseudo elements, which look like: <code>&lt;# ... #&gt;</code>. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies the right margin Tidy uses for line wrapping. <br/>Tidy tries to wrap lines so that they do not exceed this length. <br/>Set <code>wrap</code> to <var>0</var> (zero) if you want to disable line wrapping. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should line wrap text contained within PHP pseudo elements, which look like: <code>&lt;?php ... ?&gt;</code>. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should line wrap string literals that appear in script attributes. <br/>Tidy wraps long script string literals by inserting a backslash character before the line break. </description>
+ </option>
+ <option class="TidyPrettyPrint">
+  <description>This option specifies if Tidy should line wrap text contained within <code>&lt;![ ... ]&gt;</code> section tags. </description>
+ </option>
+ <option class="TidyFileIO">
+  <description>This option specifies if Tidy should write back the tidied markup to the same file it read from. <br/>You are advised to keep copies of important files before tidying them, as on rare occasions the result may not be what you expect. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option specifies if Tidy should generate pretty printed output, writing it as extensible HTML. <br/>This option causes Tidy to set the DOCTYPE and default namespace as appropriate to XHTML, and will use the corrected value in output regardless of other sources. <br/>For XHTML, entities can be written as named or numeric entities according to the setting of <code>numeric-entities</code>. <br/>The original case of tags and attributes will be preserved, regardless of other options. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option specifies if Tidy should add the XML declaration when outputting XML or XHTML. <br/>Note that if the input already includes an <code>&lt;?xml ... ?&gt;</code> declaration then this option will be ignored. <br/>If the encoding for the output is different from <var>ascii</var>, one of the <var>utf*</var> encodings, or <var>raw</var>, then the declaration is always added as required by the XML standard. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option specifies if Tidy should pretty print output, writing it as well-formed XML. <br/>Any entities not defined in XML 1.0 will be written as numeric entities to allow them to be parsed by an XML parser. <br/>The original case of tags and attributes will be preserved, regardless of other options. </description>
+ </option>
+ <option class="TidyMarkupRepair">
+  <description>This option specifies if Tidy should change the parsing of processing instructions to require <code>?&gt;</code> as the terminator rather than <code>&gt;</code>. <br/>This option is automatically set if the input is in XML. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option specifies if Tidy should add <code>xml:space="preserve"</code> to elements such as <code>&lt;pre&gt;</code>, <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> when generating XML. <br/>This is needed if the whitespace in such elements is to be parsed appropriately without having access to the DTD. </description>
+ </option>
+ <option class="TidyDocumentIO">
+  <description>This option specifies if Tidy should use the XML parser rather than the error correcting HTML parser. </description>
+ </option>
+<localized_strings version="5.6.0">
+<localized_string id="400" label="">
+ <string class="en">en</string>
+</localized_string>
+<localized_string id="1" label="">
+ <string class="en">This option specifies what level of accessibility checking, if any, that Tidy should perform. <br/>Level <var>0 (Tidy Classic)</var> is equivalent to Tidy Classic's accessibility checking. <br/>For more information on Tidy's accessibility checking, visit <a href="http://www.html-tidy.org/accessibility/"> Tidy's Accessibility Page</a>. </string>
+</localized_string>
+<localized_string id="2" label="">
+ <string class="en">This option specifies the default <code>alt=</code> text Tidy uses for <code>&lt;img&gt;</code> attributes when the <code>alt=</code> attribute is missing. <br/>Use with care, as it is your responsibility to make your documents accessible to people who cannot see the images. </string>
+</localized_string>
+<localized_string id="3" label="">
+ <string class="en">This option controls the deletion or addition of the <code>name</code> attribute in elements where it can serve as anchor. <br/>If set to <var>yes</var> a <code>name</code> attribute, if not already existing, is added along an existing <code>id</code> attribute if the DTD allows it. <br/>If set to <var>no</var> any existing name attribute is removed if an <code>id</code> attribute exists or has been added. </string>
+</localized_string>
+<localized_string id="4" label="">
+ <string class="en">Can be used to modify behavior of the <code>clean</code> option when set to <var>yes</var>. <br/>If set to <var>yes</var> when using <code>clean</code>, <code>&amp;emdash;</code>, <code>&amp;rdquo;</code>, and other named character entities are downgraded to their closest ASCII equivalents. </string>
+</localized_string>
+<localized_string id="5" label="">
+ <string class="en">This option specifies new block-level tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Note you can't change the content model for elements such as <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> and <code>&lt;dl&gt;</code>. <br/>This option is ignored in XML mode. </string>
+</localized_string>
+<localized_string id="6" label="">
+ <string class="en">This option specifies if Tidy should print only the contents of the body tag as an HTML fragment. <br/>If set to <var>auto</var>, this is performed only if the body tag has been inferred. <br/>Useful for incorporating existing whole pages as a portion of another page. <br/>This option has no effect if XML output is requested. </string>
+</localized_string>
+<localized_string id="7" label="">
+ <string class="en">This option specifies if Tidy should output a line break before each <code>&lt;br&gt;</code> element. </string>
+</localized_string>
+<localized_string id="8" label="">
+ <string class="en">This option specifies the character encoding Tidy uses for input, and when set, automatically chooses an appropriate character encoding to be used for output. The output encoding Tidy chooses may be different from the input encoding. <br/>For <var>ascii</var>, <var>latin0</var>, <var>ibm858</var>, <var>mac</var>, and <var>win1252</var> input encodings, the <code>output-encoding</code> option will automatically be set to <var>ascii</var>. You can set <code>output-encoding</code> manually to override this. <br/>For other input encodings, the <code>output-encoding</code> option will automatically be set to the the same value. <br/>Regardless of the preset value, you can set <code>output-encoding</code> manually to override this. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. </string>
+</localized_string>
+<localized_string id="9" label="">
+ <string class="en">This option specifies if Tidy should coerce a start tag into an end tag in cases where it looks like an end tag was probably intended; for example, given <br/><code>&lt;span&gt;foo &lt;b&gt;bar&lt;b&gt; baz&lt;/span&gt;</code> <br/>Tidy will output <br/><code>&lt;span&gt;foo &lt;b&gt;bar&lt;/b&gt; baz&lt;/span&gt;</code> </string>
+</localized_string>
+<localized_string id="10" label="">
+ <string class="en">This option specifies the prefix that Tidy uses for styles rules. <br/>By default, <var>c</var> will be used. </string>
+</localized_string>
+<localized_string id="12" label="">
+ <string class="en">This option specifies if Tidy should decorate inferred <code>&lt;ul&gt;</code> elements with some CSS markup to avoid indentation to the right. </string>
+</localized_string>
+<localized_string id="13" label="">
+ <string class="en">This option specifies the DOCTYPE declaration generated by Tidy. <br/>If set to <var>omit</var> the output won't contain a DOCTYPE declaration. Note this this also implies <code>numeric-entities</code> is set to <var>yes</var>.<br/>If set to <var>html5</var> the DOCTYPE is set to <code>&lt;!DOCTYPE html&gt;</code>.<br/>If set to <var>auto</var> (the default) Tidy will use an educated guess based upon the contents of the document. Note that selecting this option will <em>not</em> change the current document's DOCTYPE on output. <br/>If set to <var>strict</var>, Tidy will set the DOCTYPE to the HTML4 or XHTML1 strict DTD.<br/>If set to <var>loose</var>, the DOCTYPE is set to the HTML4 or XHTML1 loose (transitional) DTD.<br/>Alternatively, you can supply a string for the formal public identifier (FPI).<br/>For example: <br/><code>doctype: "-//ACME//DTD HTML 3.14159//EN"</code><br/>If you specify the FPI for an XHTML document, Tidy will set the system identifier to an empty string. For an HTML document, Tidy adds a system identifier only if one was already present in order to preserve the processing mode of some browsers. Tidy leaves the DOCTYPE for generic XML documents unchanged. <br/>This option does not offer a validation of document conformance. </string>
+</localized_string>
+<localized_string id="15" label="">
+ <string class="en">This option specifies if Tidy should discard empty elements. </string>
+</localized_string>
+<localized_string id="16" label="">
+ <string class="en">This option specifies if Tidy should discard empty paragraphs. </string>
+</localized_string>
+<localized_string id="17" label="">
+ <string class="en">This option specifies if Tidy should strip out proprietary attributes, such as Microsoft data binding attributes. Additionally attributes that aren't permitted in the output version of HTML will be dropped if used with <code>strict-tags-attributes</code>. </string>
+</localized_string>
+<localized_string id="18" label="">
+ <string class="en">This option specifies if Tidy should keep the first or last attribute, if an attribute is repeated, e.g. has two <code>align</code> attributes. </string>
+</localized_string>
+<localized_string id="19" label="">
+ <string class="en">This option specifies if Tidy should change the format for reporting errors and warnings to a format that is more easily parsed by GNU Emacs. </string>
+</localized_string>
+<localized_string id="21" label="">
+ <string class="en">This option specifies new empty inline tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Remember to also declare empty tags as either inline or blocklevel. <br/>This option is ignored in XML mode. </string>
+</localized_string>
+<localized_string id="22" label="">
+ <string class="en">This option specifies if Tidy should insert a <code>&lt;p&gt;</code> element to enclose any text it finds in any element that allows mixed content for HTML transitional but not HTML strict. </string>
+</localized_string>
+<localized_string id="23" label="">
+ <string class="en">This option specifies if Tidy should enclose any text it finds in the body element within a <code>&lt;p&gt;</code> element.<br/>This is useful when you want to take existing HTML and use it with a style sheet. </string>
+</localized_string>
+<localized_string id="24" label="">
+ <string class="en">This option specifies the error file Tidy uses for errors and warnings. Normally errors and warnings are output to <code>stderr</code>. </string>
+</localized_string>
+<localized_string id="25" label="">
+ <string class="en">This option specifies if Tidy should convert <code>&lt;![CDATA[]]&gt;</code> sections to normal text. </string>
+</localized_string>
+<localized_string id="26" label="">
+ <string class="en">This option causes items that look like closing tags, like <code>&lt;/g</code> to be escaped to <code>&lt;\/g</code>. Set this option to <var>no</var> if you do not want this.</string>
+</localized_string>
+<localized_string id="27" label="">
+ <string class="en">This option specifies if Tidy should replace backslash characters <code>\</code> in URLs with forward slashes <code>/</code>. </string>
+</localized_string>
+<localized_string id="28" label="">
+ <string class="en">This option specifies if Tidy should replace unexpected hyphens with <code>=</code> characters when it comes across adjacent hyphens. <br/>The default is <var>auto</var> will which will act as <var>no</var> for HTML5 document types, and <var>yes</var> for all other document types. <br/>HTML has abandonded SGML comment syntax, and allows adjacent hypens for all versions of HTML, although XML and XHTML do not. If you plan to support older browsers that require SGML comment syntax, then consider setting this value to <var>yes</var>.</string>
+</localized_string>
+<localized_string id="29" label="">
+ <string class="en">This option specifies if Tidy should check attribute values that carry URIs for illegal characters and if such are found, escape them as HTML4 recommends. </string>
+</localized_string>
+<localized_string id="30" label="">
+ <string class="en">This option specifies if Tidy should produce output even if errors are encountered. <br/>Use this option with care; if Tidy reports an error, this means Tidy was not able to (or is not sure how to) fix the error, so the resulting output may not reflect your intention. </string>
+</localized_string>
+<localized_string id="31" label="">
+ <string class="en">This option specifies if Tidy should enable specific behavior for cleaning up HTML exported from Google Docs. </string>
+</localized_string>
+<localized_string id="32" label="">
+ <string class="en">This option specifies if Tidy should not print out comments. </string>
+</localized_string>
+<localized_string id="33" label="">
+ <string class="en">This option specifies if Tidy should generate pretty printed output, writing it as HTML. </string>
+</localized_string>
+<localized_string id="34" label="">
+ <string class="en">This option specifies the character encoding Tidy uses for input. Tidy makes certain assumptions about some of the input encodings. <br/>For <var>ascii</var>, Tidy will accept Latin-1 (ISO-8859-1) character values and convert them to entities as necessary. <br/>For <var>raw</var>, Tidy will make no assumptions about the character values and will pass them unchanged to output. <br/>For <var>mac</var> and <var>win1252</var>, vendor specific characters values will be accepted and converted to entities as necessary. <br/>Asian encodings such as <var>iso2022</var> will be handled appropriately assuming the corresponding <code>output-encoding</code> is also specified. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. </string>
+</localized_string>
+<localized_string id="35" label="">
+ <string class="en">This option specifies if Tidy should begin each attribute on a new line. </string>
+</localized_string>
+<localized_string id="36" label="">
+ <string class="en">This option specifies if Tidy should indent <code>&lt;![CDATA[]]&gt;</code> sections. </string>
+</localized_string>
+<localized_string id="37" label="">
+ <string class="en">This option specifies if Tidy should indent block-level tags. <br/>If set to <var>auto</var> Tidy will decide whether or not to indent the content of tags such as <code>&lt;title&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;td&gt;</code>, or <code>&lt;p&gt;</code> based on the content including a block-level element. <br/>Setting <code>indent</code> to <var>yes</var> can expose layout bugs in some browsers. <br/>Use the option <code>indent-spaces</code> to control the number of spaces or tabs output per level of indent, and <code>indent-with-tabs</code> to specify whether spaces or tabs are used. </string>
+</localized_string>
+<localized_string id="38" label="">
+ <string class="en">This option specifies the number of spaces or tabs that Tidy uses to indent content when <code>indent</code> is enabled. <br/>Note that the default value for this option is dependent upon the value of <code>indent-with-tabs</code> (see also). </string>
+</localized_string>
+<localized_string id="39" label="">
+ <string class="en">This option specifies new non-empty inline tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>This option is ignored in XML mode. </string>
+</localized_string>
+<localized_string id="40" label="">
+ <string class="en">This option specifies if Tidy should combine class names to generate a single, new class name if multiple class assignments are detected on an element. </string>
+</localized_string>
+<localized_string id="41" label="">
+ <string class="en">This option specifies if Tidy should combine styles to generate a single, new style if multiple style values are detected on an element. </string>
+</localized_string>
+<localized_string id="42" label="">
+ <string class="en">This option specifies if Tidy should keep the original modification time of files that Tidy modifies in place. <br/>Setting the option to <var>yes</var> allows you to tidy files without changing the file modification date, which may be useful with certain tools that use the modification date for things such as automatic server deployment.<br/>Note this feature is not supported on some platforms. </string>
+</localized_string>
+<localized_string id="43" label="">
+ <string class="en">With the default <var>no</var> Tidy will replace all source tabs with spaces, controlled by the option <code>tab-size</code>, and the current line offset. Of course, except in the special blocks/elements enumerated below, this will later be reduced to just one space. <br/>If set <var>yes</var> this option specifies Tidy should keep certain tabs found in the source, but only in preformatted blocks like <code>&lt;pre&gt;</code>, and other CDATA elements like <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code>, and other pseudo elements like <code>&lt;?php ... ?&gt;</code>. As always, all other tabs, or sequences of tabs, in the source will continue to be replaced with a space. </string>
+</localized_string>
+<localized_string id="44" label="">
+ <string class="en">This option specifies how Tidy deals with whitespace characters within attribute values. <br/>If the value is <var>no</var> Tidy normalizes attribute values by replacing any newline or tab with a single space, and further by replacing any contiguous whitespace with a single space. <br/>To force Tidy to preserve the original, literal values of all attributes and ensure that whitespace within attribute values is passed through unchanged, set this option to <var>yes</var>. </string>
+</localized_string>
+<localized_string id="45" label="">
+ <string class="en">This option specifies if Tidy should replace any occurrence of <code>&lt;i&gt;</code> with <code>&lt;em&gt;</code> and any occurrence of <code>&lt;b&gt;</code> with <code>&lt;strong&gt;</code>. Any attributes are preserved unchanged. <br/>This option can be set independently of the <code>clean</code> option. </string>
+</localized_string>
+<localized_string id="46" label="">
+ <string class="en">This option specifies if Tidy should convert the value of an attribute that takes a list of predefined values to lower case. <br/>This is required for XHTML documents. </string>
+</localized_string>
+<localized_string id="47" label="">
+ <string class="en">This option specifies if Tidy should strip Microsoft specific HTML from Word 2000 documents, and output spaces rather than non-breaking spaces where they exist in the input. </string>
+</localized_string>
+<localized_string id="48" label="">
+ <string class="en">This option specifies if Tidy should perform cleaning of some legacy presentational tags (currently <code>&lt;i&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;center&gt;</code> when enclosed within appropriate inline tags, and <code>&lt;font&gt;</code>). If set to <var>yes</var>, then the legacy tags will be replaced with CSS <code>&lt;style&gt;</code> tags and structural markup as appropriate. </string>
+</localized_string>
+<localized_string id="49" label="">
+ <string class="en">This option specifies if Tidy should add a <code>meta</code> element to the document head to indicate that the document has been tidied. <br/>Tidy won't add a meta element if one is already present. </string>
+</localized_string>
+<localized_string id="50" label="">
+ <string class="en">This option can be used to modify the behavior of <code>clean</code> when set to <var>yes</var>.<br/>This option specifies if Tidy should merge nested <code>&lt;div&gt;</code> such as <code>&lt;div&gt;&lt;div&gt;...&lt;/div&gt;&lt;/div&gt;</code>. <br/>If set to <var>auto</var> the attributes of the inner <code>&lt;div&gt;</code> are moved to the outer one. Nested <code>&lt;div&gt;</code> with <code>id</code> attributes are <em>not</em> merged. <br/>If set to <var>yes</var> the attributes of the inner <code>&lt;div&gt;</code> are discarded with the exception of <code>class</code> and <code>style</code>. </string>
+</localized_string>
+<localized_string id="51" label="">
+ <string class="en">This option specifies if Tidy should merge nested <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> elements; for example, for the case <br/><code>&lt;b class="rtop-2"&gt;foo &lt;b class="r2-2"&gt;bar&lt;/b&gt; baz&lt;/b&gt;</code>, <br/>Tidy will output <code>&lt;b class="rtop-2"&gt;foo bar baz&lt;/b&gt;</code>. </string>
+</localized_string>
+<localized_string id="52" label="">
+ <string class="en">This option can be used to modify the behavior of <code>clean</code> when set to <var>yes</var>.<br/>This option specifies if Tidy should merge nested <code>&lt;span&gt;</code> such as <code>&lt;span&gt;&lt;span&gt;...&lt;/span&gt;&lt;/span&gt;</code>. <br/>The algorithm is identical to the one used by <code>merge-divs</code>. </string>
+</localized_string>
+<localized_string id="56" label="">
+ <string class="en">This option specifies if Tidy should allow numeric character references. </string>
+</localized_string>
+<localized_string id="57" label="">
+ <string class="en">The default is appropriate to the current platform. <br/>Genrally <var>CRLF</var> on PC-DOS, Windows and OS/2; <var>CR</var> on Classic Mac OS; and <var>LF</var> everywhere else (Linux, macOS, and Unix). </string>
+</localized_string>
+<localized_string id="58" label="">
+ <string class="en">This option specifies if Tidy should output entities other than the built-in HTML entities (<code>&amp;amp;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code>, and <code>&amp;quot;</code>) in the numeric rather than the named entity form. <br/>Only entities compatible with the DOCTYPE declaration generated are used. <br/>Entities that can be represented in the output encoding are translated correspondingly. </string>
+</localized_string>
+<localized_string id="59" label="">
+ <string class="en">This option specifies if Tidy should omit optional start tags and end tags when generating output. <br/>Setting this option causes all tags for the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> elements to be omitted from output, as well as such end tags as <code>&lt;/p&gt;</code>, <code>&lt;/li&gt;</code>, <code>&lt;/dt&gt;</code>, <code>&lt;/dd&gt;</code>, <code>&lt;/option&gt;</code>, <code>&lt;/tr&gt;</code>, <code>&lt;/td&gt;</code>, and <code>&lt;/th&gt;</code>. <br/>This option is ignored for XML output. </string>
+</localized_string>
+<localized_string id="60" label="">
+ <string class="en">This option specifies the character encoding Tidy uses for output. Some of the output encodings affect whether or not some characters are translated to entities, although in all cases, some entities will be written according to other Tidy configuration options. <br/>For <var>ascii</var>, <var>mac</var>, and <var>win1252</var> output encodings, entities will be used for all characters with values over 127. <br/>For <var>raw</var> output, Tidy will write values above 127 without translating them to entities. <br/>Output using <var>latin1</var> will cause Tidy to write character values higher than 255 as entities. <br/>The UTF family such as <var>utf8</var> will write output in the respective UTF encoding. <br/>Asian output encodings such as <var>iso2022</var> will write output in the specified encoding, assuming a corresponding <code>input-encoding</code> was specified. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. </string>
+</localized_string>
+<localized_string id="61" label="">
+ <string class="en">This option specifies the output file Tidy uses for markup. Normally markup is written to <code>stdout</code>. </string>
+</localized_string>
+<localized_string id="62" label="">
+ <string class="en">This option specifies if Tidy should write a Unicode Byte Order Mark character (BOM; also known as Zero Width No-Break Space; has value of U+FEFF) to the beginning of the output, and only applies to UTF-8 and UTF-16 output encodings. <br/>If set to <var>auto</var> this option causes Tidy to write a BOM to the output only if a BOM was present at the beginning of the input. <br/>A BOM is always written for XML/XHTML output using UTF-16 output encodings. </string>
+</localized_string>
+<localized_string id="63" label="">
+ <string class="en">This option specifies if Tidy should indent with tabs instead of spaces, assuming <code>indent</code> is <var>yes</var>. <br/>Set it to <var>yes</var> to indent using tabs instead of the default spaces. <br/>Use the option <code>indent-spaces</code> to control the number of tabs output per level of indent. Note that when <code>indent-with-tabs</code> is enabled the default value of <code>indent-spaces</code> is reset to <var>1</var>. <br/>Note <code>tab-size</code> controls converting input tabs to spaces. Set it to zero to retain input tabs. </string>
+</localized_string>
+<localized_string id="64" label="">
+ <string class="en">This option specifies if Tidy should preserve well-formed entities as found in the input. </string>
+</localized_string>
+<localized_string id="65" label="">
+ <string class="en">This option specifies new tags that are to be processed in exactly the same way as HTML's <code>&lt;pre&gt;</code> element. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Note you cannot as yet add new CDATA elements. <br/>This option is ignored in XML mode. </string>
+</localized_string>
+<localized_string id="66" label="">
+ <string class="en">This option allows prioritizing the writing of attributes in tidied documents, allowing them to written before the other attributes of an element. For example, you might specify that <strong>id</strong> and <strong>name</strong> are written before every other attribute. <br/>This option takes a space or comma separated list of attribute names. </string>
+</localized_string>
+<localized_string id="67" label="">
+ <string class="en">This option specifies if Tidy should line wrap after some Unicode or Chinese punctuation characters. </string>
+</localized_string>
+<localized_string id="68" label="">
+ <string class="en">When enabled, this option limits Tidy's non-document output to report only document warnings and errors. </string>
+</localized_string>
+<localized_string id="69" label="">
+ <string class="en">This option specifies if Tidy should output unadorned <code>&amp;</code> characters as <code>&amp;amp;</code>. </string>
+</localized_string>
+<localized_string id="70" label="">
+ <string class="en">This option specifies if Tidy should output <code>&quot;</code> characters as <code>&amp;quot;</code> as is preferred by some editing environments. <br/>The apostrophe character <code>'</code> is written out as <code>&amp;#39;</code> since many web browsers don't yet support <code>&amp;apos;</code>. </string>
+</localized_string>
+<localized_string id="71" label="">
+ <string class="en">This option specifies if Tidy should output non-breaking space characters as entities, rather than as the Unicode character value 160 (decimal). </string>
+</localized_string>
+<localized_string id="72" label="">
+ <string class="en">This option specifies if Tidy should replace numeric values in color attributes with HTML/XHTML color names where defined, e.g. replace <code>#ffffff</code> with <code>white</code>. </string>
+</localized_string>
+<localized_string id="73" label="">
+ <string class="en">This option specifies the number Tidy uses to determine if further errors should be shown. If set to <var>0</var>, then no errors are shown. </string>
+</localized_string>
+<localized_string id="74" label="">
+ <string class="en">This option specifies if Tidy should display info-level messages. </string>
+</localized_string>
+<localized_string id="75" label="">
+ <string class="en">This option specifies if Tidy should generate a pretty printed version of the markup. Note that Tidy won't generate a pretty printed version if it finds significant errors (see <code>force-output</code>). </string>
+</localized_string>
+<localized_string id="77" label="">
+ <string class="en">This option specifies if Tidy should suppress warnings. This can be useful when a few errors are hidden in a flurry of warnings. </string>
+</localized_string>
+<localized_string id="78" label="">
+ <string class="en">This option specifies that Tidy should skip nested tags when parsing script and style data. </string>
+</localized_string>
+<localized_string id="79" label="">
+ <string class="en">This option specifies that Tidy should sort attributes within an element using the specified sort algorithm. If set to <var>alpha</var>, the algorithm is an ascending alphabetic sort. <br/>When used while sorting with <code>priority-attributes</code>, any attribute sorting will take place after the priority attributes have been output. </string>
+</localized_string>
+<localized_string id="54" label="">
+ <string class="en">Use this option to prevent Tidy from displaying certain types of report output, for example, for conditions that you wish to ignore. <br/>This option takes a list of one or more keys indicating the message type to mute. You can discover these message keys by using the <code>mute-id</code> configuration option and examining Tidy's output. </string>
+</localized_string>
+<localized_string id="55" label="">
+ <string class="en">This option indicates whether or not Tidy should display message ID's with each of its error reports. This could be useful if you wanted to use the <code>mute</code> configuration option in order to filter out certain report messages. </string>
+</localized_string>
+<localized_string id="80" label="">
+ <string class="en">This options ensures that tags and attributes are applicable for the version of HTML that Tidy outputs. When set to <var>yes</var> and the output document type is a strict doctype, then Tidy will report errors. If the output document type is a loose or transitional doctype, then Tidy will report warnings. <br/>Additionally if <code>drop-proprietary-attributes</code> is enabled, then not applicable attributes will be dropped, too. <br/>When set to <var>no</var>, these checks are not performed. </string>
+</localized_string>
+<localized_string id="82" label="">
+ <string class="en">This option specifies the number of columns that Tidy uses between successive tab stops. It is used to map tabs to spaces when reading the input. </string>
+</localized_string>
+<localized_string id="83" label="">
+ <string class="en">This option specifies if Tidy should output attribute names in upper case. <br/>When set to <var>no</var>, attribute names will be written in lower case. Specifying <var>yes</var> will output attribute names in upper case, and <var>preserve</var> can used to leave attribute names untouched. <br/>When using XML input, the original case is always preserved. </string>
+</localized_string>
+<localized_string id="84" label="">
+ <string class="en">This option specifies if Tidy should output tag names in upper case. <br/>The default is <var>no</var> which results in lower case tag names, except for XML input where the original case is preserved. </string>
+</localized_string>
+<localized_string id="85" label="">
+ <string class="en">This option enables the use of tags for autonomous custom elements, e.g. <code>&lt;flag-icon&gt;</code> with Tidy. Custom tags are disabled if this value is <var>no</var>. Other settings - <var>blocklevel</var>, <var>empty</var>, <var>inline</var>, and <var>pre</var> will treat <em>all</em> detected custom tags accordingly. <br/>The use of <code>new-blocklevel-tags</code>, <code>new-empty-tags</code>, <code>new-inline-tags</code>, or <code>new-pre-tags</code> will override the treatment of custom tags by this configuration option. This may be useful if you have different types of custom tags.<br/>When enabled these tags are determined during the processing of your document using opening tags; matching closing tags will be recognized accordingly, and unknown closing tags will be discarded. </string>
+</localized_string>
+<localized_string id="86" label="">
+ <string class="en">This option specifies if Tidy should add some extra empty lines for readability. <br/>The default is <var>no</var>. <br/>If set to <var>auto</var> Tidy will eliminate nearly all newline characters.</string>
+</localized_string>
+<localized_string id="87" label="">
+ <string class="en">This option specifies if Tidy should warn on proprietary attributes.</string>
+</localized_string>
+<localized_string id="88" label="">
+ <string class="en">This option specifies if Tidy should go to great pains to strip out all the surplus stuff Microsoft Word 2000 inserts when you save Word documents as "Web pages". It doesn't handle embedded images or VML. <br/>You should consider saving using Word's <strong>Save As...</strong>, and choosing <strong>Web Page, Filtered</strong>. </string>
+</localized_string>
+<localized_string id="89" label="">
+ <string class="en">This option specifies if Tidy should line wrap text contained within ASP pseudo elements, which look like: <code>&lt;% ... %&gt;</code>. </string>
+</localized_string>
+<localized_string id="90" label="">
+ <string class="en">This option specifies if Tidy should line-wrap attribute values, meaning that if the value of an attribute causes a line to exceed the width specified by <code>wrap</code>, Tidy will add one or more line breaks to the value, causing it to be wrapped into multiple lines. <br/>Note that this option can be set independently of <code>wrap-script-literals</code>. By default Tidy replaces any newline or tab with a single space and replaces any sequences of whitespace with a single space. <br/>To force Tidy to preserve the original, literal values of all attributes, and ensure that whitespace characters within attribute values are passed through unchanged, set <code>literal-attributes</code> to <var>yes</var>. </string>
+</localized_string>
+<localized_string id="91" label="">
+ <string class="en">This option specifies if Tidy should line wrap text contained within JSTE pseudo elements, which look like: <code>&lt;# ... #&gt;</code>. </string>
+</localized_string>
+<localized_string id="92" label="">
+ <string class="en">This option specifies the right margin Tidy uses for line wrapping. <br/>Tidy tries to wrap lines so that they do not exceed this length. <br/>Set <code>wrap</code> to <var>0</var> (zero) if you want to disable line wrapping. </string>
+</localized_string>
+<localized_string id="93" label="">
+ <string class="en">This option specifies if Tidy should line wrap text contained within PHP pseudo elements, which look like: <code>&lt;?php ... ?&gt;</code>. </string>
+</localized_string>
+<localized_string id="94" label="">
+ <string class="en">This option specifies if Tidy should line wrap string literals that appear in script attributes. <br/>Tidy wraps long script string literals by inserting a backslash character before the line break. </string>
+</localized_string>
+<localized_string id="95" label="">
+ <string class="en">This option specifies if Tidy should line wrap text contained within <code>&lt;![ ... ]&gt;</code> section tags. </string>
+</localized_string>
+<localized_string id="96" label="">
+ <string class="en">This option specifies if Tidy should write back the tidied markup to the same file it read from. <br/>You are advised to keep copies of important files before tidying them, as on rare occasions the result may not be what you expect. </string>
+</localized_string>
+<localized_string id="97" label="">
+ <string class="en">This option specifies if Tidy should generate pretty printed output, writing it as extensible HTML. <br/>This option causes Tidy to set the DOCTYPE and default namespace as appropriate to XHTML, and will use the corrected value in output regardless of other sources. <br/>For XHTML, entities can be written as named or numeric entities according to the setting of <code>numeric-entities</code>. <br/>The original case of tags and attributes will be preserved, regardless of other options. </string>
+</localized_string>
+<localized_string id="98" label="">
+ <string class="en">This option specifies if Tidy should add the XML declaration when outputting XML or XHTML. <br/>Note that if the input already includes an <code>&lt;?xml ... ?&gt;</code> declaration then this option will be ignored. <br/>If the encoding for the output is different from <var>ascii</var>, one of the <var>utf*</var> encodings, or <var>raw</var>, then the declaration is always added as required by the XML standard. </string>
+</localized_string>
+<localized_string id="99" label="">
+ <string class="en">This option specifies if Tidy should pretty print output, writing it as well-formed XML. <br/>Any entities not defined in XML 1.0 will be written as numeric entities to allow them to be parsed by an XML parser. <br/>The original case of tags and attributes will be preserved, regardless of other options. </string>
+</localized_string>
+<localized_string id="100" label="">
+ <string class="en">This option specifies if Tidy should change the parsing of processing instructions to require <code>?&gt;</code> as the terminator rather than <code>&gt;</code>. <br/>This option is automatically set if the input is in XML. </string>
+</localized_string>
+<localized_string id="101" label="">
+ <string class="en">This option specifies if Tidy should add <code>xml:space="preserve"</code> to elements such as <code>&lt;pre&gt;</code>, <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> when generating XML. <br/>This is needed if the whitespace in such elements is to be parsed appropriately without having access to the DTD. </string>
+</localized_string>
+<localized_string id="102" label="">
+ <string class="en">This option specifies if Tidy should use the XML parser rather than the error correcting HTML parser. </string>
+</localized_string>
+<localized_string id="53" label="">
+ <string class="en">This option, when enabled, adds a <code>&lt;meta&gt;</code> element and sets the <code>charset</code> attribute to the encoding of the document. Set this option to <var>yes</var> to enable it. </string>
+</localized_string>
+<localized_string id="76" label="">
+ <string class="en">This option enables a message whenever Tidy changes the <code>content</code> attribute of a meta charset declaration to match the encoding of the document. Set this option to <var>yes</var> to enable it. </string>
+</localized_string>
+<localized_string id="81" label="">
+ <string class="en">This option specifies if Tidy should move all style tags to the head of the document. </string>
+</localized_string>
+<localized_string id="350" label="">
+ <string class="en">Info: </string>
+</localized_string>
+<localized_string id="351" label="">
+ <string class="en">Warning: </string>
+</localized_string>
+<localized_string id="352" label="">
+ <string class="en">Config: </string>
+</localized_string>
+<localized_string id="353" label="">
+ <string class="en">Access: </string>
+</localized_string>
+<localized_string id="354" label="">
+ <string class="en">Error: </string>
+</localized_string>
+<localized_string id="355" label="">
+ <string class="en">Document: </string>
+</localized_string>
+<localized_string id="356" label="">
+ <string class="en">Panic: </string>
+</localized_string>
+<localized_string id="357" label="">
+ <string class="en">Summary: </string>
+</localized_string>
+<localized_string id="358" label="">
+ <string class="en">Information: </string>
+</localized_string>
+<localized_string id="359" label="">
+ <string class="en">Footnote: </string>
+</localized_string>
+<localized_string id="501" label="LINE_COLUMN_STRING">
+ <string class="en">line %d column %d - </string>
+</localized_string>
+<localized_string id="502" label="STRING_DISCARDING">
+ <string class="en">discarding</string>
+</localized_string>
+<localized_string id="503" label="STRING_ERROR_COUNT_ERROR">
+ <string class="en">error</string>
+</localized_string>
+<localized_string id="503" label="STRING_ERROR_COUNT_ERROR">
+ <string class="en">error</string>
+</localized_string>
+<localized_string id="504" label="STRING_ERROR_COUNT_WARNING">
+ <string class="en">warning</string>
+</localized_string>
+<localized_string id="504" label="STRING_ERROR_COUNT_WARNING">
+ <string class="en">warning</string>
+</localized_string>
+<localized_string id="505" label="STRING_HELLO_ACCESS">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="506" label="STRING_HTML_PROPRIETARY">
+ <string class="en">HTML Proprietary</string>
+</localized_string>
+<localized_string id="510" label="STRING_XML_DECLARATION">
+ <string class="en">XML declaration</string>
+</localized_string>
+<localized_string id="507" label="STRING_PLAIN_TEXT">
+ <string class="en">plain text</string>
+</localized_string>
+<localized_string id="508" label="STRING_REPLACING">
+ <string class="en">replacing</string>
+</localized_string>
+<localized_string id="509" label="STRING_SPECIFIED">
+ <string class="en">specified</string>
+</localized_string>
+<localized_string id="511" label="TIDYCUSTOMNO_STRING">
+ <string class="en">no</string>
+</localized_string>
+<localized_string id="512" label="TIDYCUSTOMBLOCKLEVEL_STRING">
+ <string class="en">block level</string>
+</localized_string>
+<localized_string id="513" label="TIDYCUSTOMEMPTY_STRING">
+ <string class="en">empty</string>
+</localized_string>
+<localized_string id="514" label="TIDYCUSTOMINLINE_STRING">
+ <string class="en">inline</string>
+</localized_string>
+<localized_string id="515" label="TIDYCUSTOMPRE_STRING">
+ <string class="en">pre</string>
+</localized_string>
+<localized_string id="521" label="TEXT_HTML_T_ALGORITHM">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="536" label="TEXT_VENDOR_CHARS">
+ <string class="en">It is unlikely that vendor-specific, system-dependent encodings
+</string>
+</localized_string>
+<localized_string id="529" label="TEXT_SGML_CHARS">
+ <string class="en">Character codes 128 to 159 (U+0080 to U+009F) are not allowed in HTML;
+</string>
+</localized_string>
+<localized_string id="524" label="TEXT_INVALID_UTF8">
+ <string class="en">Character codes for UTF-8 must be in the range: U+0000 to U+10FFFF.
+</string>
+</localized_string>
+<localized_string id="523" label="TEXT_INVALID_UTF16">
+ <string class="en">Character codes for UTF-16 must be in the range: U+0000 to U+10FFFF.
+</string>
+</localized_string>
+<localized_string id="522" label="TEXT_INVALID_URI">
+ <string class="en">URIs must be properly escaped, they must not contain unescaped
+</string>
+</localized_string>
+<localized_string id="519" label="TEXT_BAD_FORM">
+ <string class="en">You may need to move one or both of the <form> and </form>
+</string>
+</localized_string>
+<localized_string id="520" label="TEXT_BAD_MAIN">
+ <string class="en">Only one <main> element is allowed in a document.
+</string>
+</localized_string>
+<localized_string id="528" label="TEXT_M_SUMMARY">
+ <string class="en">The table summary attribute should be used to describe
+</string>
+</localized_string>
+<localized_string id="525" label="TEXT_M_IMAGE_ALT">
+ <string class="en">The alt attribute should be used to give a short description
+</string>
+</localized_string>
+<localized_string id="526" label="TEXT_M_IMAGE_MAP">
+ <string class="en">Use client-side image maps in preference to server-side image
+</string>
+</localized_string>
+<localized_string id="527" label="TEXT_M_LINK_ALT">
+ <string class="en">For hypertext links defined using a client-side image map, you
+</string>
+</localized_string>
+<localized_string id="532" label="TEXT_USING_FRAMES">
+ <string class="en">Pages designed using frames present problems for
+</string>
+</localized_string>
+<localized_string id="516" label="FOOTNOTE_TRIM_EMPTY_ELEMENT">
+ <string class="en">One or more empty elements were present in the source document but
+</string>
+</localized_string>
+<localized_string id="517" label="TEXT_ACCESS_ADVICE1">
+ <string class="en">For further advice on how to make your pages accessible
+see http://www.w3.org/WAI/GL.</string>
+</localized_string>
+<localized_string id="518" label="TEXT_ACCESS_ADVICE2">
+ <string class="en">For further advice on how to make your pages accessible
+see http://www.w3.org/WAI/GL and http://www.html-tidy.org/accessibility/.</string>
+</localized_string>
+<localized_string id="533" label="TEXT_USING_LAYER">
+ <string class="en">The Cascading Style Sheets (CSS) Positioning mechanism
+</string>
+</localized_string>
+<localized_string id="535" label="TEXT_USING_SPACER">
+ <string class="en">You are recommended to use CSS for controlling white
+</string>
+</localized_string>
+<localized_string id="531" label="TEXT_USING_FONT">
+ <string class="en">You are recommended to use CSS to specify the font and
+</string>
+</localized_string>
+<localized_string id="534" label="TEXT_USING_NOBR">
+ <string class="en">You are recommended to use CSS to control line wrapping.
+</string>
+</localized_string>
+<localized_string id="530" label="TEXT_USING_BODY">
+ <string class="en">You are recommended to use CSS to specify page and link colors</string>
+</localized_string>
+<localized_string id="628" label="STRING_CONTENT_LOOKS">
+ <string class="en">Document content looks like %s</string>
+</localized_string>
+<localized_string id="630" label="STRING_DOCTYPE_GIVEN">
+ <string class="en">Doctype given is "%s"</string>
+</localized_string>
+<localized_string id="538" label="STRING_ERROR_COUNT">
+ <string class="en">Tidy found %u %s and %u %s!
+</string>
+</localized_string>
+<localized_string id="539" label="STRING_NEEDS_INTERVENTION">
+ <string class="en">This document has errors that must be fixed before
+</string>
+</localized_string>
+<localized_string id="540" label="STRING_NO_ERRORS">
+ <string class="en">No warnings or errors were found.
+</string>
+</localized_string>
+<localized_string id="633" label="STRING_NO_SYSID">
+ <string class="en">No system identifier in emitted doctype</string>
+</localized_string>
+<localized_string id="541" label="STRING_NOT_ALL_SHOWN">
+ <string class="en">Tidy found %u %s and %u %s! Not all warnings/errors were shown.
+</string>
+</localized_string>
+<localized_string id="543" label="TEXT_GENERAL_INFO">
+ <string class="en">About HTML Tidy: https://github.com/htacg/tidy-html5
+</string>
+</localized_string>
+<localized_string id="542" label="TEXT_GENERAL_INFO_PLEA">
+ <string class="en">Do you speak a language other than English, or a different variant of 
+https://github.com/htacg/tidy-html5/blob/master/README/LOCALIZE.md</string>
+</localized_string>
+<localized_string id="545" label="ADDED_MISSING_CHARSET">
+ <string class="en">Added appropriate missing <meta charset=...> to %s</string>
+</localized_string>
+<localized_string id="546" label="ANCHOR_NOT_UNIQUE">
+ <string class="en">%s anchor "%s" already defined</string>
+</localized_string>
+<localized_string id="547" label="APOS_UNDEFINED">
+ <string class="en">named entity &apos; only defined in XML/XHTML</string>
+</localized_string>
+<localized_string id="548" label="ATTR_VALUE_NOT_LCASE">
+ <string class="en">%s attribute value "%s" must be lower case for XHTML</string>
+</localized_string>
+<localized_string id="549" label="ATTRIBUTE_IS_NOT_ALLOWED">
+ <string class="en">%s attribute "is" not allowed for autonomous custom tags.</string>
+</localized_string>
+<localized_string id="550" label="ATTRIBUTE_VALUE_REPLACED">
+ <string class="en">%s attribute "%s", incorrect value "%s" replaced</string>
+</localized_string>
+<localized_string id="551" label="BACKSLASH_IN_URI">
+ <string class="en">%s URI reference contains backslash. Typo?</string>
+</localized_string>
+<localized_string id="552" label="BAD_ATTRIBUTE_VALUE_REPLACED">
+ <string class="en">%s attribute "%s" had invalid value "%s" and has been replaced</string>
+</localized_string>
+<localized_string id="553" label="BAD_ATTRIBUTE_VALUE">
+ <string class="en">%s attribute "%s" has invalid value "%s"</string>
+</localized_string>
+<localized_string id="554" label="BAD_CDATA_CONTENT">
+ <string class="en">'<' + '/' + letter not allowed here</string>
+</localized_string>
+<localized_string id="555" label="BAD_SUMMARY_HTML5">
+ <string class="en">The summary attribute on the %s element is obsolete in HTML5</string>
+</localized_string>
+<localized_string id="556" label="BAD_SURROGATE_LEAD">
+ <string class="en">Trailing (Low) surrogate pair U+%04X, with no leading (High) entity, replaced with U+FFFD.</string>
+</localized_string>
+<localized_string id="557" label="BAD_SURROGATE_PAIR">
+ <string class="en">Have out-of-range surrogate pair U+%04X:U+%04X, replaced with U+FFFD value.</string>
+</localized_string>
+<localized_string id="558" label="BAD_SURROGATE_TAIL">
+ <string class="en">Leading (High) surrogate pair U+%04X, with no trailing (Low) entity, replaced with U+FFFD.</string>
+</localized_string>
+<localized_string id="559" label="CANT_BE_NESTED">
+ <string class="en">%s can't be nested</string>
+</localized_string>
+<localized_string id="560" label="COERCE_TO_ENDTAG">
+ <string class="en"><%s> is probably intended as </%s></string>
+</localized_string>
+<localized_string id="561" label="CONTENT_AFTER_BODY">
+ <string class="en">content occurs after end of body</string>
+</localized_string>
+<localized_string id="562" label="CUSTOM_TAG_DETECTED">
+ <string class="en">detected autonomous custom tag %s; will treat as %s</string>
+</localized_string>
+<localized_string id="563" label="DISCARDING_UNEXPECTED">
+ <string class="en">discarding unexpected %s</string>
+</localized_string>
+<localized_string id="564" label="DOCTYPE_AFTER_TAGS">
+ <string class="en"><!DOCTYPE> isn't allowed after elements</string>
+</localized_string>
+<localized_string id="565" label="DUPLICATE_FRAMESET">
+ <string class="en">repeated FRAMESET element</string>
+</localized_string>
+<localized_string id="566" label="ELEMENT_NOT_EMPTY">
+ <string class="en">%s element not empty or not closed</string>
+</localized_string>
+<localized_string id="567" label="ELEMENT_VERS_MISMATCH_ERROR">
+ <string class="en">%s element not available in %s</string>
+</localized_string>
+<localized_string id="568" label="ELEMENT_VERS_MISMATCH_WARN">
+ <string class="en">%s element not available in %s</string>
+</localized_string>
+<localized_string id="569" label="ENCODING_MISMATCH">
+ <string class="en">specified input encoding (%s) does not match actual input encoding (%s)</string>
+</localized_string>
+<localized_string id="570" label="ESCAPED_ILLEGAL_URI">
+ <string class="en">%s escaping malformed URI reference</string>
+</localized_string>
+<localized_string id="571" label="FILE_CANT_OPEN">
+ <string class="en">Can't open "%s"
+</string>
+</localized_string>
+<localized_string id="572" label="FILE_CANT_OPEN_CFG">
+ <string class="en">Can't open configuration file "%s"
+</string>
+</localized_string>
+<localized_string id="573" label="FILE_NOT_FILE">
+ <string class="en">"%s" is not a file!
+</string>
+</localized_string>
+<localized_string id="574" label="FIXED_BACKSLASH">
+ <string class="en">%s converting backslash in URI to slash</string>
+</localized_string>
+<localized_string id="575" label="FOUND_STYLE_IN_BODY">
+ <string class="en">found <style> tag in <body>! fix-style-tags: yes to move.</string>
+</localized_string>
+<localized_string id="576" label="ID_NAME_MISMATCH">
+ <string class="en">%s id and name attribute value mismatch</string>
+</localized_string>
+<localized_string id="577" label="ILLEGAL_NESTING">
+ <string class="en">%s shouldn't be nested</string>
+</localized_string>
+<localized_string id="578" label="ILLEGAL_URI_CODEPOINT">
+ <string class="en">%s illegal characters found in URI</string>
+</localized_string>
+<localized_string id="579" label="ILLEGAL_URI_REFERENCE">
+ <string class="en">%s improperly escaped URI reference</string>
+</localized_string>
+<localized_string id="580" label="INSERTING_AUTO_ATTRIBUTE">
+ <string class="en">%s inserting "%s" attribute using value "%s"</string>
+</localized_string>
+<localized_string id="581" label="INSERTING_TAG">
+ <string class="en">inserting implicit <%s></string>
+</localized_string>
+<localized_string id="582" label="INVALID_ATTRIBUTE">
+ <string class="en">%s attribute name "%s" (value="%s") is invalid</string>
+</localized_string>
+<localized_string id="583" label="INVALID_NCR">
+ <string class="en">%s invalid numeric character reference %s</string>
+</localized_string>
+<localized_string id="584" label="INVALID_SGML_CHARS">
+ <string class="en">%s invalid character code %s</string>
+</localized_string>
+<localized_string id="585" label="INVALID_UTF8">
+ <string class="en">%s invalid UTF-8 bytes (char. code %s)</string>
+</localized_string>
+<localized_string id="586" label="INVALID_UTF16">
+ <string class="en">%s invalid UTF-16 surrogate pair (char. code %s)</string>
+</localized_string>
+<localized_string id="587" label="INVALID_XML_ID">
+ <string class="en">%s cannot copy name attribute to id</string>
+</localized_string>
+<localized_string id="588" label="JOINING_ATTRIBUTE">
+ <string class="en">%s joining values of repeated attribute "%s"</string>
+</localized_string>
+<localized_string id="589" label="MALFORMED_COMMENT">
+ <string class="en">tidy replaced adjacent "-" with "="</string>
+</localized_string>
+<localized_string id="590" label="MALFORMED_COMMENT_DROPPING">
+ <string class="en">dropping a possible comment due to a missing hyphen</string>
+</localized_string>
+<localized_string id="591" label="MALFORMED_COMMENT_EOS">
+ <string class="en">the end of the document was reached before the end of the comment</string>
+</localized_string>
+<localized_string id="592" label="MALFORMED_COMMENT_WARN">
+ <string class="en">detected adjacent hyphens within the comment; consider fix-bad-comments</string>
+</localized_string>
+<localized_string id="593" label="MALFORMED_DOCTYPE">
+ <string class="en">discarding malformed <!DOCTYPE></string>
+</localized_string>
+<localized_string id="594" label="MISMATCHED_ATTRIBUTE_ERROR">
+ <string class="en">%s attribute "%s" not allowed for %s</string>
+</localized_string>
+<localized_string id="595" label="MISMATCHED_ATTRIBUTE_WARN">
+ <string class="en">%s attribute "%s" not allowed for %s</string>
+</localized_string>
+<localized_string id="596" label="MISSING_ATTR_VALUE">
+ <string class="en">%s attribute "%s" lacks value</string>
+</localized_string>
+<localized_string id="597" label="MISSING_ATTRIBUTE">
+ <string class="en">%s lacks "%s" attribute</string>
+</localized_string>
+<localized_string id="598" label="MISSING_DOCTYPE">
+ <string class="en">missing <!DOCTYPE> declaration</string>
+</localized_string>
+<localized_string id="599" label="MISSING_ENDTAG_BEFORE">
+ <string class="en">missing </%s> before %s</string>
+</localized_string>
+<localized_string id="600" label="MISSING_ENDTAG_FOR">
+ <string class="en">missing </%s></string>
+</localized_string>
+<localized_string id="601" label="MISSING_ENDTAG_OPTIONAL">
+ <string class="en">missing optional end tag </%s></string>
+</localized_string>
+<localized_string id="602" label="MISSING_IMAGEMAP">
+ <string class="en">%s should use client-side image map</string>
+</localized_string>
+<localized_string id="603" label="MISSING_QUOTEMARK">
+ <string class="en">%s attribute with missing trailing quote mark</string>
+</localized_string>
+<localized_string id="604" label="MISSING_QUOTEMARK_OPEN">
+ <string class="en">value for attribute "%s" missing quote marks</string>
+</localized_string>
+<localized_string id="605" label="MISSING_SEMICOLON_NCR">
+ <string class="en">numeric character reference "%s" doesn't end in ';'</string>
+</localized_string>
+<localized_string id="606" label="MISSING_SEMICOLON">
+ <string class="en">entity "%s" doesn't end in ';'</string>
+</localized_string>
+<localized_string id="607" label="MISSING_STARTTAG">
+ <string class="en">missing <%s></string>
+</localized_string>
+<localized_string id="608" label="MISSING_TITLE_ELEMENT">
+ <string class="en">inserting missing 'title' element</string>
+</localized_string>
+<localized_string id="609" label="MOVED_STYLE_TO_HEAD">
+ <string class="en">moved <style> tag to <head>! fix-style-tags: no to avoid.</string>
+</localized_string>
+<localized_string id="610" label="NESTED_EMPHASIS">
+ <string class="en">nested emphasis %s</string>
+</localized_string>
+<localized_string id="611" label="NESTED_QUOTATION">
+ <string class="en">nested q elements, possible typo.</string>
+</localized_string>
+<localized_string id="612" label="NEWLINE_IN_URI">
+ <string class="en">%s discarding newline in URI reference</string>
+</localized_string>
+<localized_string id="613" label="NOFRAMES_CONTENT">
+ <string class="en">%s not inside 'noframes' element</string>
+</localized_string>
+<localized_string id="614" label="NON_MATCHING_ENDTAG">
+ <string class="en">replacing unexpected %s with </%s></string>
+</localized_string>
+<localized_string id="615" label="OBSOLETE_ELEMENT">
+ <string class="en">replacing obsolete element %s with %s</string>
+</localized_string>
+<localized_string id="616" label="OPTION_REMOVED">
+ <string class="en">option "%s" no longer exists, and no replacement could be found.</string>
+</localized_string>
+<localized_string id="617" label="OPTION_REMOVED_APPLIED">
+ <string class="en">option "%s" replaced with "%s", which Tidy has set to "%s".</string>
+</localized_string>
+<localized_string id="618" label="OPTION_REMOVED_UNAPPLIED">
+ <string class="en">option "%s" replaced with "%s", but Tidy could not set it for you.</string>
+</localized_string>
+<localized_string id="619" label="PREVIOUS_LOCATION">
+ <string class="en"><%s> previously mentioned</string>
+</localized_string>
+<localized_string id="620" label="PROPRIETARY_ATTR_VALUE">
+ <string class="en">%s proprietary attribute value "%s"</string>
+</localized_string>
+<localized_string id="621" label="PROPRIETARY_ATTRIBUTE">
+ <string class="en">%s proprietary attribute "%s"</string>
+</localized_string>
+<localized_string id="622" label="PROPRIETARY_ELEMENT">
+ <string class="en">%s is not approved by W3C</string>
+</localized_string>
+<localized_string id="623" label="REMOVED_HTML5">
+ <string class="en">%s element removed from HTML5</string>
+</localized_string>
+<localized_string id="624" label="REPEATED_ATTRIBUTE">
+ <string class="en">%s dropping value "%s" for repeated attribute "%s"</string>
+</localized_string>
+<localized_string id="625" label="REPLACING_ELEMENT">
+ <string class="en">replacing %s with %s</string>
+</localized_string>
+<localized_string id="626" label="REPLACING_UNEX_ELEMENT">
+ <string class="en">replacing unexpected %s with %s</string>
+</localized_string>
+<localized_string id="627" label="SPACE_PRECEDING_XMLDECL">
+ <string class="en">removing whitespace preceding XML Declaration</string>
+</localized_string>
+<localized_string id="629" label="STRING_ARGUMENT_BAD">
+ <string class="en">option "%s" given bad argument "%s"</string>
+</localized_string>
+<localized_string id="631" label="STRING_MISSING_MALFORMED">
+ <string class="en">missing or malformed argument for option: %s</string>
+</localized_string>
+<localized_string id="632" label="STRING_MUTING_TYPE">
+ <string class="en">messages of type "%s" will not be output</string>
+</localized_string>
+<localized_string id="634" label="STRING_UNKNOWN_OPTION">
+ <string class="en">unknown option: %s</string>
+</localized_string>
+<localized_string id="635" label="SUSPECTED_MISSING_QUOTE">
+ <string class="en">suspected missing quote mark for attribute value</string>
+</localized_string>
+<localized_string id="636" label="TAG_NOT_ALLOWED_IN">
+ <string class="en">%s isn't allowed in <%s> elements</string>
+</localized_string>
+<localized_string id="637" label="TOO_MANY_ELEMENTS_IN">
+ <string class="en">too many %s elements in <%s></string>
+</localized_string>
+<localized_string id="638" label="TOO_MANY_ELEMENTS">
+ <string class="en">too many %s elements</string>
+</localized_string>
+<localized_string id="639" label="TRIM_EMPTY_ELEMENT">
+ <string class="en">trimming empty %s</string>
+</localized_string>
+<localized_string id="640" label="UNESCAPED_AMPERSAND">
+ <string class="en">unescaped & which should be written as &amp;</string>
+</localized_string>
+<localized_string id="641" label="UNEXPECTED_END_OF_FILE_ATTR">
+ <string class="en">%s end of file while parsing attributes</string>
+</localized_string>
+<localized_string id="642" label="UNEXPECTED_END_OF_FILE">
+ <string class="en">unexpected end of file %s</string>
+</localized_string>
+<localized_string id="643" label="UNEXPECTED_ENDTAG_ERR">
+ <string class="en">unexpected </%s></string>
+</localized_string>
+<localized_string id="644" label="UNEXPECTED_ENDTAG_IN">
+ <string class="en">unexpected </%s> in <%s></string>
+</localized_string>
+<localized_string id="645" label="UNEXPECTED_ENDTAG">
+ <string class="en">unexpected </%s></string>
+</localized_string>
+<localized_string id="646" label="UNEXPECTED_EQUALSIGN">
+ <string class="en">%s unexpected '=', expected attribute name</string>
+</localized_string>
+<localized_string id="647" label="UNEXPECTED_GT">
+ <string class="en">%s missing '>' for end of tag</string>
+</localized_string>
+<localized_string id="648" label="UNEXPECTED_QUOTEMARK">
+ <string class="en">%s unexpected or duplicate quote mark</string>
+</localized_string>
+<localized_string id="649" label="UNKNOWN_ELEMENT_LOOKS_CUSTOM">
+ <string class="en">%s is not recognized! Did you mean to enable the custom-tags option?</string>
+</localized_string>
+<localized_string id="650" label="UNKNOWN_ELEMENT">
+ <string class="en">%s is not recognized!</string>
+</localized_string>
+<localized_string id="651" label="UNKNOWN_ENTITY">
+ <string class="en">unescaped & or unknown entity "%s"</string>
+</localized_string>
+<localized_string id="652" label="USING_BR_INPLACE_OF">
+ <string class="en">using <br> in place of %s</string>
+</localized_string>
+<localized_string id="653" label="VENDOR_SPECIFIC_CHARS">
+ <string class="en">%s invalid character code %s</string>
+</localized_string>
+<localized_string id="654" label="WHITE_IN_URI">
+ <string class="en">%s discarding whitespace in URI reference</string>
+</localized_string>
+<localized_string id="655" label="XML_DECLARATION_DETECTED">
+ <string class="en">An XML declaration was detected. Did you mean to use input-xml?</string>
+</localized_string>
+<localized_string id="656" label="XML_ID_SYNTAX">
+ <string class="en">%s ID "%s" uses XML ID syntax</string>
+</localized_string>
+<localized_string id="658" label="IMG_MISSING_ALT">
+ <string class="en">[1.1.1.1]: <img> missing 'alt' text.</string>
+</localized_string>
+<localized_string id="659" label="IMG_ALT_SUSPICIOUS_FILENAME">
+ <string class="en">[1.1.1.2]: suspicious 'alt' text (filename).</string>
+</localized_string>
+<localized_string id="660" label="IMG_ALT_SUSPICIOUS_FILE_SIZE">
+ <string class="en">[1.1.1.3]: suspicious 'alt' text (file size).</string>
+</localized_string>
+<localized_string id="661" label="IMG_ALT_SUSPICIOUS_PLACEHOLDER">
+ <string class="en">[1.1.1.4]: suspicious 'alt' text (placeholder).</string>
+</localized_string>
+<localized_string id="662" label="IMG_ALT_SUSPICIOUS_TOO_LONG">
+ <string class="en">[1.1.1.10]: suspicious 'alt' text (too long).</string>
+</localized_string>
+<localized_string id="663" label="IMG_MISSING_LONGDESC_DLINK">
+ <string class="en">[1.1.2.1]: <img> missing 'longdesc' and d-link.</string>
+</localized_string>
+<localized_string id="664" label="IMG_MISSING_DLINK">
+ <string class="en">[1.1.2.2]: <img> missing d-link.</string>
+</localized_string>
+<localized_string id="665" label="IMG_MISSING_LONGDESC">
+ <string class="en">[1.1.2.3]: <img> missing 'longdesc'.</string>
+</localized_string>
+<localized_string id="666" label="IMG_BUTTON_MISSING_ALT">
+ <string class="en">[1.1.3.1]: <img> (button) missing 'alt' text.</string>
+</localized_string>
+<localized_string id="667" label="APPLET_MISSING_ALT">
+ <string class="en">[1.1.4.1]: <applet> missing alternate content.</string>
+</localized_string>
+<localized_string id="668" label="OBJECT_MISSING_ALT">
+ <string class="en">[1.1.5.1]: <object> missing alternate content.</string>
+</localized_string>
+<localized_string id="669" label="AUDIO_MISSING_TEXT_WAV">
+ <string class="en">[1.1.6.1]: audio missing text transcript (wav).</string>
+</localized_string>
+<localized_string id="670" label="AUDIO_MISSING_TEXT_AU">
+ <string class="en">[1.1.6.2]: audio missing text transcript (au).</string>
+</localized_string>
+<localized_string id="671" label="AUDIO_MISSING_TEXT_AIFF">
+ <string class="en">[1.1.6.3]: audio missing text transcript (aiff).</string>
+</localized_string>
+<localized_string id="672" label="AUDIO_MISSING_TEXT_SND">
+ <string class="en">[1.1.6.4]: audio missing text transcript (snd).</string>
+</localized_string>
+<localized_string id="673" label="AUDIO_MISSING_TEXT_RA">
+ <string class="en">[1.1.6.5]: audio missing text transcript (ra).</string>
+</localized_string>
+<localized_string id="674" label="AUDIO_MISSING_TEXT_RM">
+ <string class="en">[1.1.6.6]: audio missing text transcript (rm).</string>
+</localized_string>
+<localized_string id="675" label="FRAME_MISSING_LONGDESC">
+ <string class="en">[1.1.8.1]: <frame> may require 'longdesc'.</string>
+</localized_string>
+<localized_string id="676" label="AREA_MISSING_ALT">
+ <string class="en">[1.1.9.1]: <area> missing 'alt' text.</string>
+</localized_string>
+<localized_string id="677" label="SCRIPT_MISSING_NOSCRIPT">
+ <string class="en">[1.1.10.1]: <script> missing <noscript> section.</string>
+</localized_string>
+<localized_string id="678" label="ASCII_REQUIRES_DESCRIPTION">
+ <string class="en">[1.1.12.1]: ascii art requires description.</string>
+</localized_string>
+<localized_string id="679" label="IMG_MAP_SERVER_REQUIRES_TEXT_LINKS">
+ <string class="en">[1.2.1.1]: image map (server-side) requires text links.</string>
+</localized_string>
+<localized_string id="680" label="MULTIMEDIA_REQUIRES_TEXT">
+ <string class="en">[1.4.1.1]: multimedia requires synchronized text equivalents.</string>
+</localized_string>
+<localized_string id="681" label="IMG_MAP_CLIENT_MISSING_TEXT_LINKS">
+ <string class="en">[1.5.1.1]: image map (client-side) missing text links.</string>
+</localized_string>
+<localized_string id="682" label="INFORMATION_NOT_CONVEYED_IMAGE">
+ <string class="en">[2.1.1.1]: ensure information not conveyed through color alone (image).</string>
+</localized_string>
+<localized_string id="683" label="INFORMATION_NOT_CONVEYED_APPLET">
+ <string class="en">[2.1.1.2]: ensure information not conveyed through color alone (applet).</string>
+</localized_string>
+<localized_string id="684" label="INFORMATION_NOT_CONVEYED_OBJECT">
+ <string class="en">[2.1.1.3]: ensure information not conveyed through color alone (object).</string>
+</localized_string>
+<localized_string id="685" label="INFORMATION_NOT_CONVEYED_SCRIPT">
+ <string class="en">[2.1.1.4]: ensure information not conveyed through color alone (script).</string>
+</localized_string>
+<localized_string id="686" label="INFORMATION_NOT_CONVEYED_INPUT">
+ <string class="en">[2.1.1.5]: ensure information not conveyed through color alone (input).</string>
+</localized_string>
+<localized_string id="687" label="COLOR_CONTRAST_TEXT">
+ <string class="en">[2.2.1.1]: poor color contrast (text).</string>
+</localized_string>
+<localized_string id="688" label="COLOR_CONTRAST_LINK">
+ <string class="en">[2.2.1.2]: poor color contrast (link).</string>
+</localized_string>
+<localized_string id="689" label="COLOR_CONTRAST_ACTIVE_LINK">
+ <string class="en">[2.2.1.3]: poor color contrast (active link).</string>
+</localized_string>
+<localized_string id="690" label="COLOR_CONTRAST_VISITED_LINK">
+ <string class="en">[2.2.1.4]: poor color contrast (visited link).</string>
+</localized_string>
+<localized_string id="691" label="DOCTYPE_MISSING">
+ <string class="en">[3.2.1.1]: <doctype> missing.</string>
+</localized_string>
+<localized_string id="692" label="STYLE_SHEET_CONTROL_PRESENTATION">
+ <string class="en">[3.3.1.1]: use style sheets to control presentation.</string>
+</localized_string>
+<localized_string id="693" label="HEADERS_IMPROPERLY_NESTED">
+ <string class="en">[3.5.1.1]: headers improperly nested.</string>
+</localized_string>
+<localized_string id="694" label="POTENTIAL_HEADER_BOLD">
+ <string class="en">[3.5.2.1]: potential header (bold).</string>
+</localized_string>
+<localized_string id="695" label="POTENTIAL_HEADER_ITALICS">
+ <string class="en">[3.5.2.2]: potential header (italics).</string>
+</localized_string>
+<localized_string id="696" label="POTENTIAL_HEADER_UNDERLINE">
+ <string class="en">[3.5.2.3]: potential header (underline).</string>
+</localized_string>
+<localized_string id="697" label="HEADER_USED_FORMAT_TEXT">
+ <string class="en">[3.5.3.1]: header used to format text.</string>
+</localized_string>
+<localized_string id="698" label="LIST_USAGE_INVALID_UL">
+ <string class="en">[3.6.1.1]: list usage invalid <ul>.</string>
+</localized_string>
+<localized_string id="699" label="LIST_USAGE_INVALID_OL">
+ <string class="en">[3.6.1.2]: list usage invalid <ol>.</string>
+</localized_string>
+<localized_string id="700" label="LIST_USAGE_INVALID_LI">
+ <string class="en">[3.6.1.4]: list usage invalid <li>.</string>
+</localized_string>
+<localized_string id="701" label="LANGUAGE_NOT_IDENTIFIED">
+ <string class="en">[4.3.1.1]: language not identified.</string>
+</localized_string>
+<localized_string id="702" label="LANGUAGE_INVALID">
+ <string class="en">[4.3.1.2]: language attribute invalid.</string>
+</localized_string>
+<localized_string id="703" label="DATA_TABLE_MISSING_HEADERS">
+ <string class="en">[5.1.2.1]: data <table> missing row/column headers (all).</string>
+</localized_string>
+<localized_string id="704" label="DATA_TABLE_MISSING_HEADERS_COLUMN">
+ <string class="en">[5.1.2.2]: data <table> missing row/column headers (1 col).</string>
+</localized_string>
+<localized_string id="705" label="DATA_TABLE_MISSING_HEADERS_ROW">
+ <string class="en">[5.1.2.3]: data <table> missing row/column headers (1 row).</string>
+</localized_string>
+<localized_string id="706" label="DATA_TABLE_REQUIRE_MARKUP_COLUMN_HEADERS">
+ <string class="en">[5.2.1.1]: data <table> may require markup (column headers).</string>
+</localized_string>
+<localized_string id="707" label="DATA_TABLE_REQUIRE_MARKUP_ROW_HEADERS">
+ <string class="en">[5.2.1.2]: data <table> may require markup (row headers).</string>
+</localized_string>
+<localized_string id="708" label="LAYOUT_TABLES_LINEARIZE_PROPERLY">
+ <string class="en">[5.3.1.1]: verify layout tables linearize properly.</string>
+</localized_string>
+<localized_string id="709" label="LAYOUT_TABLE_INVALID_MARKUP">
+ <string class="en">[5.4.1.1]: invalid markup used in layout <table>.</string>
+</localized_string>
+<localized_string id="710" label="TABLE_MISSING_SUMMARY">
+ <string class="en">[5.5.1.1]: <table> missing summary.</string>
+</localized_string>
+<localized_string id="711" label="TABLE_SUMMARY_INVALID_NULL">
+ <string class="en">[5.5.1.2]: <table> summary invalid (null).</string>
+</localized_string>
+<localized_string id="712" label="TABLE_SUMMARY_INVALID_SPACES">
+ <string class="en">[5.5.1.3]: <table> summary invalid (spaces).</string>
+</localized_string>
+<localized_string id="713" label="TABLE_SUMMARY_INVALID_PLACEHOLDER">
+ <string class="en">[5.5.1.6]: <table> summary invalid (placeholder text).</string>
+</localized_string>
+<localized_string id="714" label="TABLE_MISSING_CAPTION">
+ <string class="en">[5.5.2.1]: <table> missing <caption>.</string>
+</localized_string>
+<localized_string id="715" label="TABLE_MAY_REQUIRE_HEADER_ABBR">
+ <string class="en">[5.6.1.1]: <table> may require header abbreviations.</string>
+</localized_string>
+<localized_string id="716" label="TABLE_MAY_REQUIRE_HEADER_ABBR_NULL">
+ <string class="en">[5.6.1.2]: <table> header abbreviations invalid (null).</string>
+</localized_string>
+<localized_string id="717" label="TABLE_MAY_REQUIRE_HEADER_ABBR_SPACES">
+ <string class="en">[5.6.1.3]: <table> header abbreviations invalid (spaces).</string>
+</localized_string>
+<localized_string id="718" label="STYLESHEETS_REQUIRE_TESTING_LINK">
+ <string class="en">[6.1.1.1]: style sheets require testing (link).</string>
+</localized_string>
+<localized_string id="719" label="STYLESHEETS_REQUIRE_TESTING_STYLE_ELEMENT">
+ <string class="en">[6.1.1.2]: style sheets require testing (style element).</string>
+</localized_string>
+<localized_string id="720" label="STYLESHEETS_REQUIRE_TESTING_STYLE_ATTR">
+ <string class="en">[6.1.1.3]: style sheets require testing (style attribute).</string>
+</localized_string>
+<localized_string id="721" label="FRAME_SRC_INVALID">
+ <string class="en">[6.2.1.1]: <frame> source invalid.</string>
+</localized_string>
+<localized_string id="722" label="TEXT_EQUIVALENTS_REQUIRE_UPDATING_APPLET">
+ <string class="en">[6.2.2.1]: text equivalents require updating (applet).</string>
+</localized_string>
+<localized_string id="723" label="TEXT_EQUIVALENTS_REQUIRE_UPDATING_SCRIPT">
+ <string class="en">[6.2.2.2]: text equivalents require updating (script).</string>
+</localized_string>
+<localized_string id="724" label="TEXT_EQUIVALENTS_REQUIRE_UPDATING_OBJECT">
+ <string class="en">[6.2.2.3]: text equivalents require updating (object).</string>
+</localized_string>
+<localized_string id="725" label="PROGRAMMATIC_OBJECTS_REQUIRE_TESTING_SCRIPT">
+ <string class="en">[6.3.1.1]: programmatic objects require testing (script).</string>
+</localized_string>
+<localized_string id="726" label="PROGRAMMATIC_OBJECTS_REQUIRE_TESTING_OBJECT">
+ <string class="en">[6.3.1.2]: programmatic objects require testing (object).</string>
+</localized_string>
+<localized_string id="727" label="PROGRAMMATIC_OBJECTS_REQUIRE_TESTING_EMBED">
+ <string class="en">[6.3.1.3]: programmatic objects require testing (embed).</string>
+</localized_string>
+<localized_string id="728" label="PROGRAMMATIC_OBJECTS_REQUIRE_TESTING_APPLET">
+ <string class="en">[6.3.1.4]: programmatic objects require testing (applet).</string>
+</localized_string>
+<localized_string id="729" label="FRAME_MISSING_NOFRAMES">
+ <string class="en">[6.5.1.1]: <frameset> missing <noframes> section.</string>
+</localized_string>
+<localized_string id="730" label="NOFRAMES_INVALID_NO_VALUE">
+ <string class="en">[6.5.1.2]: <noframes> section invalid (no value).</string>
+</localized_string>
+<localized_string id="731" label="NOFRAMES_INVALID_CONTENT">
+ <string class="en">[6.5.1.3]: <noframes> section invalid (content).</string>
+</localized_string>
+<localized_string id="732" label="NOFRAMES_INVALID_LINK">
+ <string class="en">[6.5.1.4]: <noframes> section invalid (link).</string>
+</localized_string>
+<localized_string id="733" label="REMOVE_FLICKER_SCRIPT">
+ <string class="en">[7.1.1.1]: remove flicker (script).</string>
+</localized_string>
+<localized_string id="734" label="REMOVE_FLICKER_OBJECT">
+ <string class="en">[7.1.1.2]: remove flicker (object).</string>
+</localized_string>
+<localized_string id="735" label="REMOVE_FLICKER_EMBED">
+ <string class="en">[7.1.1.3]: remove flicker (embed).</string>
+</localized_string>
+<localized_string id="736" label="REMOVE_FLICKER_APPLET">
+ <string class="en">[7.1.1.4]: remove flicker (applet).</string>
+</localized_string>
+<localized_string id="737" label="REMOVE_FLICKER_ANIMATED_GIF">
+ <string class="en">[7.1.1.5]: remove flicker (animated gif).</string>
+</localized_string>
+<localized_string id="738" label="REMOVE_BLINK_MARQUEE">
+ <string class="en">[7.2.1.1]: remove blink/marquee.</string>
+</localized_string>
+<localized_string id="739" label="REMOVE_AUTO_REFRESH">
+ <string class="en">[7.4.1.1]: remove auto-refresh.</string>
+</localized_string>
+<localized_string id="740" label="REMOVE_AUTO_REDIRECT">
+ <string class="en">[7.5.1.1]: remove auto-redirect.</string>
+</localized_string>
+<localized_string id="741" label="ENSURE_PROGRAMMATIC_OBJECTS_ACCESSIBLE_SCRIPT">
+ <string class="en">[8.1.1.1]: ensure programmatic objects are accessible (script).</string>
+</localized_string>
+<localized_string id="742" label="ENSURE_PROGRAMMATIC_OBJECTS_ACCESSIBLE_OBJECT">
+ <string class="en">[8.1.1.2]: ensure programmatic objects are accessible (object).</string>
+</localized_string>
+<localized_string id="743" label="ENSURE_PROGRAMMATIC_OBJECTS_ACCESSIBLE_APPLET">
+ <string class="en">[8.1.1.3]: ensure programmatic objects are accessible (applet).</string>
+</localized_string>
+<localized_string id="744" label="ENSURE_PROGRAMMATIC_OBJECTS_ACCESSIBLE_EMBED">
+ <string class="en">[8.1.1.4]: ensure programmatic objects are accessible (embed).</string>
+</localized_string>
+<localized_string id="745" label="IMAGE_MAP_SERVER_SIDE_REQUIRES_CONVERSION">
+ <string class="en">[9.1.1.1]: image map (server-side) requires conversion.</string>
+</localized_string>
+<localized_string id="746" label="SCRIPT_NOT_KEYBOARD_ACCESSIBLE_ON_MOUSE_DOWN">
+ <string class="en">[9.3.1.1]: <script> not keyboard accessible (onMouseDown).</string>
+</localized_string>
+<localized_string id="747" label="SCRIPT_NOT_KEYBOARD_ACCESSIBLE_ON_MOUSE_UP">
+ <string class="en">[9.3.1.2]: <script> not keyboard accessible (onMouseUp).</string>
+</localized_string>
+<localized_string id="748" label="SCRIPT_NOT_KEYBOARD_ACCESSIBLE_ON_CLICK">
+ <string class="en">[9.3.1.3]: <script> not keyboard accessible (onClick).</string>
+</localized_string>
+<localized_string id="749" label="SCRIPT_NOT_KEYBOARD_ACCESSIBLE_ON_MOUSE_OVER">
+ <string class="en">[9.3.1.4]: <script> not keyboard accessible (onMouseOver).</string>
+</localized_string>
+<localized_string id="750" label="SCRIPT_NOT_KEYBOARD_ACCESSIBLE_ON_MOUSE_OUT">
+ <string class="en">[9.3.1.5]: <script> not keyboard accessible (onMouseOut).</string>
+</localized_string>
+<localized_string id="751" label="SCRIPT_NOT_KEYBOARD_ACCESSIBLE_ON_MOUSE_MOVE">
+ <string class="en">[9.3.1.6]: <script> not keyboard accessible (onMouseMove).</string>
+</localized_string>
+<localized_string id="752" label="NEW_WINDOWS_REQUIRE_WARNING_NEW">
+ <string class="en">[10.1.1.1]: new windows require warning (_new).</string>
+</localized_string>
+<localized_string id="753" label="NEW_WINDOWS_REQUIRE_WARNING_BLANK">
+ <string class="en">[10.1.1.2]: new windows require warning (_blank).</string>
+</localized_string>
+<localized_string id="754" label="REPLACE_DEPRECATED_HTML_APPLET">
+ <string class="en">[11.2.1.1]: replace deprecated html <applet>.</string>
+</localized_string>
+<localized_string id="755" label="REPLACE_DEPRECATED_HTML_BASEFONT">
+ <string class="en">[11.2.1.2]: replace deprecated html <basefont>.</string>
+</localized_string>
+<localized_string id="756" label="REPLACE_DEPRECATED_HTML_CENTER">
+ <string class="en">[11.2.1.3]: replace deprecated html <center>.</string>
+</localized_string>
+<localized_string id="757" label="REPLACE_DEPRECATED_HTML_DIR">
+ <string class="en">[11.2.1.4]: replace deprecated html <dir>.</string>
+</localized_string>
+<localized_string id="758" label="REPLACE_DEPRECATED_HTML_FONT">
+ <string class="en">[11.2.1.5]: replace deprecated html <font>.</string>
+</localized_string>
+<localized_string id="759" label="REPLACE_DEPRECATED_HTML_ISINDEX">
+ <string class="en">[11.2.1.6]: replace deprecated html <isindex>.</string>
+</localized_string>
+<localized_string id="760" label="REPLACE_DEPRECATED_HTML_MENU">
+ <string class="en">[11.2.1.7]: replace deprecated html <menu>.</string>
+</localized_string>
+<localized_string id="761" label="REPLACE_DEPRECATED_HTML_S">
+ <string class="en">[11.2.1.8]: replace deprecated html <s>.</string>
+</localized_string>
+<localized_string id="762" label="REPLACE_DEPRECATED_HTML_STRIKE">
+ <string class="en">[11.2.1.9]: replace deprecated html <strike>.</string>
+</localized_string>
+<localized_string id="763" label="REPLACE_DEPRECATED_HTML_U">
+ <string class="en">[11.2.1.10]: replace deprecated html <u>.</string>
+</localized_string>
+<localized_string id="764" label="FRAME_MISSING_TITLE">
+ <string class="en">[12.1.1.1]: <frame> missing title.</string>
+</localized_string>
+<localized_string id="765" label="FRAME_TITLE_INVALID_NULL">
+ <string class="en">[12.1.1.2]: <frame> title invalid (null).</string>
+</localized_string>
+<localized_string id="766" label="FRAME_TITLE_INVALID_SPACES">
+ <string class="en">[12.1.1.3]: <frame> title invalid (spaces).</string>
+</localized_string>
+<localized_string id="767" label="ASSOCIATE_LABELS_EXPLICITLY">
+ <string class="en">[12.4.1.1]: associate labels explicitly with form controls.</string>
+</localized_string>
+<localized_string id="768" label="ASSOCIATE_LABELS_EXPLICITLY_FOR">
+ <string class="en">[12.4.1.2]: associate labels explicitly with form controls (for).</string>
+</localized_string>
+<localized_string id="769" label="ASSOCIATE_LABELS_EXPLICITLY_ID">
+ <string class="en">[12.4.1.3]: associate labels explicitly with form controls (id).</string>
+</localized_string>
+<localized_string id="770" label="LINK_TEXT_NOT_MEANINGFUL">
+ <string class="en">[13.1.1.1]: link text not meaningful.</string>
+</localized_string>
+<localized_string id="771" label="LINK_TEXT_MISSING">
+ <string class="en">[13.1.1.2]: link text missing.</string>
+</localized_string>
+<localized_string id="772" label="LINK_TEXT_TOO_LONG">
+ <string class="en">[13.1.1.3]: link text too long.</string>
+</localized_string>
+<localized_string id="773" label="LINK_TEXT_NOT_MEANINGFUL_CLICK_HERE">
+ <string class="en">[13.1.1.4]: link text not meaningful (click here).</string>
+</localized_string>
+<localized_string id="774" label="METADATA_MISSING">
+ <string class="en">[13.2.1.1]: Metadata missing.</string>
+</localized_string>
+<localized_string id="775" label="METADATA_MISSING_REDIRECT_AUTOREFRESH">
+ <string class="en">[13.2.1.3]: Metadata missing (redirect/auto-refresh).</string>
+</localized_string>
+<localized_string id="776" label="SKIPOVER_ASCII_ART">
+ <string class="en">[13.10.1.1]: skip over ascii art.</string>
+</localized_string>
+<localized_string id="777" label="TC_LABEL_COL">
+ <string class="en">column</string>
+</localized_string>
+<localized_string id="778" label="TC_LABEL_FILE">
+ <string class="en">file</string>
+</localized_string>
+<localized_string id="779" label="TC_LABEL_LANG">
+ <string class="en">lang</string>
+</localized_string>
+<localized_string id="780" label="TC_LABEL_LEVL">
+ <string class="en">level</string>
+</localized_string>
+<localized_string id="781" label="TC_LABEL_OPT">
+ <string class="en">option</string>
+</localized_string>
+<localized_string id="782" label="TC_MAIN_ERROR_LOAD_CONFIG">
+ <string class="en">Loading config file "%s" failed, err = %d</string>
+</localized_string>
+<localized_string id="783" label="TC_OPT_ACCESS">
+ <string class="en">do additional accessibility checks (<level> = 0, 1, 2, 3). 0 is assumed if <level> is missing.</string>
+</localized_string>
+<localized_string id="784" label="TC_OPT_ASCII">
+ <string class="en">use ISO-8859-1 for input, US-ASCII for output</string>
+</localized_string>
+<localized_string id="785" label="TC_OPT_ASHTML">
+ <string class="en">force XHTML to well formed HTML</string>
+</localized_string>
+<localized_string id="786" label="TC_OPT_ASXML">
+ <string class="en">convert HTML to well formed XHTML</string>
+</localized_string>
+<localized_string id="787" label="TC_OPT_BARE">
+ <string class="en">strip out smart quotes and em dashes, etc.</string>
+</localized_string>
+<localized_string id="788" label="TC_OPT_BIG5">
+ <string class="en">use Big5 for both input and output</string>
+</localized_string>
+<localized_string id="789" label="TC_OPT_CLEAN">
+ <string class="en">replace FONT, NOBR and CENTER tags with CSS</string>
+</localized_string>
+<localized_string id="790" label="TC_OPT_CONFIG">
+ <string class="en">set configuration options from the specified <file></string>
+</localized_string>
+<localized_string id="791" label="TC_OPT_ERRORS">
+ <string class="en">show only errors and warnings</string>
+</localized_string>
+<localized_string id="792" label="TC_OPT_FILE">
+ <string class="en">write errors and warnings to the specified <file></string>
+</localized_string>
+<localized_string id="793" label="TC_OPT_GDOC">
+ <string class="en">produce clean version of html exported by Google Docs</string>
+</localized_string>
+<localized_string id="794" label="TC_OPT_HELP">
+ <string class="en">list the command line options</string>
+</localized_string>
+<localized_string id="795" label="TC_OPT_HELPCFG">
+ <string class="en">list all configuration options</string>
+</localized_string>
+<localized_string id="796" label="TC_OPT_HELPENV">
+ <string class="en">show information about the environment and runtime configuration</string>
+</localized_string>
+<localized_string id="797" label="TC_OPT_HELPOPT">
+ <string class="en">show a description of the <option></string>
+</localized_string>
+<localized_string id="798" label="TC_OPT_IBM858">
+ <string class="en">use IBM-858 (CP850+Euro) for input, US-ASCII for output</string>
+</localized_string>
+<localized_string id="799" label="TC_OPT_INDENT">
+ <string class="en">indent element content</string>
+</localized_string>
+<localized_string id="800" label="TC_OPT_ISO2022">
+ <string class="en">use ISO-2022 for both input and output</string>
+</localized_string>
+<localized_string id="801" label="TC_OPT_LANGUAGE">
+ <string class="en">set Tidy's output language to <lang>. Specify '-language help' for more help. Use before output-causing arguments to ensure the language takes effect, e.g.,`tidy -lang es -lang help`.</string>
+</localized_string>
+<localized_string id="802" label="TC_OPT_LATIN0">
+ <string class="en">use ISO-8859-15 for input, US-ASCII for output</string>
+</localized_string>
+<localized_string id="803" label="TC_OPT_LATIN1">
+ <string class="en">use ISO-8859-1 for both input and output</string>
+</localized_string>
+<localized_string id="804" label="TC_OPT_MAC">
+ <string class="en">use MacRoman for input, US-ASCII for output</string>
+</localized_string>
+<localized_string id="805" label="TC_OPT_MODIFY">
+ <string class="en">modify the original input files</string>
+</localized_string>
+<localized_string id="806" label="TC_OPT_NUMERIC">
+ <string class="en">output numeric rather than named entities</string>
+</localized_string>
+<localized_string id="807" label="TC_OPT_OMIT">
+ <string class="en">omit optional start tags and end tags</string>
+</localized_string>
+<localized_string id="808" label="TC_OPT_OUTPUT">
+ <string class="en">write output to the specified <file></string>
+</localized_string>
+<localized_string id="809" label="TC_OPT_QUIET">
+ <string class="en">suppress nonessential output</string>
+</localized_string>
+<localized_string id="810" label="TC_OPT_RAW">
+ <string class="en">output values above 127 without conversion to entities</string>
+</localized_string>
+<localized_string id="811" label="TC_OPT_SHIFTJIS">
+ <string class="en">use Shift_JIS for both input and output</string>
+</localized_string>
+<localized_string id="812" label="TC_OPT_SHOWCFG">
+ <string class="en">list the current configuration settings</string>
+</localized_string>
+<localized_string id="813" label="TC_OPT_EXP_CFG">
+ <string class="en">list the current configuration settings, suitable for a config file</string>
+</localized_string>
+<localized_string id="814" label="TC_OPT_EXP_DEF">
+ <string class="en">list the default configuration settings, suitable for a config file</string>
+</localized_string>
+<localized_string id="815" label="TC_OPT_UPPER">
+ <string class="en">force tags to upper case</string>
+</localized_string>
+<localized_string id="816" label="TC_OPT_UTF16">
+ <string class="en">use UTF-16 for both input and output</string>
+</localized_string>
+<localized_string id="817" label="TC_OPT_UTF16BE">
+ <string class="en">use UTF-16BE for both input and output</string>
+</localized_string>
+<localized_string id="818" label="TC_OPT_UTF16LE">
+ <string class="en">use UTF-16LE for both input and output</string>
+</localized_string>
+<localized_string id="819" label="TC_OPT_UTF8">
+ <string class="en">use UTF-8 for both input and output</string>
+</localized_string>
+<localized_string id="820" label="TC_OPT_VERSION">
+ <string class="en">show the version of Tidy</string>
+</localized_string>
+<localized_string id="821" label="TC_OPT_WIN1252">
+ <string class="en">use Windows-1252 for input, US-ASCII for output</string>
+</localized_string>
+<localized_string id="822" label="TC_OPT_WRAP">
+ <string class="en">wrap text at the specified <column>. 0 is assumed if <column> is missing. When this option is omitted, the default of the configuration option 'wrap' applies.</string>
+</localized_string>
+<localized_string id="823" label="TC_OPT_XML">
+ <string class="en">specify the input is well formed XML</string>
+</localized_string>
+<localized_string id="824" label="TC_OPT_XMLCFG">
+ <string class="en">list all configuration options in XML format</string>
+</localized_string>
+<localized_string id="828" label="TC_OPT_XMLHELP">
+ <string class="en">list the command line options in XML format</string>
+</localized_string>
+<localized_string id="825" label="TC_OPT_XMLSTRG">
+ <string class="en">output all of Tidy's strings in XML format</string>
+</localized_string>
+<localized_string id="826" label="TC_OPT_XMLERRS">
+ <string class="en">output error constants and strings in XML format</string>
+</localized_string>
+<localized_string id="827" label="TC_OPT_XMLOPTS">
+ <string class="en">output option descriptions in XML format</string>
+</localized_string>
+<localized_string id="829" label="TC_STRING_CONF_HEADER">
+ <string class="en">Configuration File Settings:</string>
+</localized_string>
+<localized_string id="830" label="TC_STRING_CONF_NAME">
+ <string class="en">Name</string>
+</localized_string>
+<localized_string id="831" label="TC_STRING_CONF_TYPE">
+ <string class="en">Type</string>
+</localized_string>
+<localized_string id="832" label="TC_STRING_CONF_VALUE">
+ <string class="en">Current Value</string>
+</localized_string>
+<localized_string id="834" label="TC_STRING_OPT_NOT_DOCUMENTED">
+ <string class="en">Warning: option `%s' is not documented.</string>
+</localized_string>
+<localized_string id="835" label="TC_STRING_OUT_OF_MEMORY">
+ <string class="en">Out of memory. Bailing out.</string>
+</localized_string>
+<localized_string id="836" label="TC_STRING_FATAL_ERROR">
+ <string class="en">Fatal error: impossible value for id='%d'.</string>
+</localized_string>
+<localized_string id="837" label="TC_STRING_FILE_MANIP">
+ <string class="en">File manipulation</string>
+</localized_string>
+<localized_string id="841" label="TC_STRING_PROCESS_DIRECTIVES">
+ <string class="en">Processing directives</string>
+</localized_string>
+<localized_string id="842" label="TC_STRING_CHAR_ENCODING">
+ <string class="en">Character encodings</string>
+</localized_string>
+<localized_string id="838" label="TC_STRING_LANG_MUST_SPECIFY">
+ <string class="en">A POSIX or Windows locale must be specified.</string>
+</localized_string>
+<localized_string id="839" label="TC_STRING_LANG_NOT_FOUND">
+ <string class="en">Tidy doesn't have language '%s,' will use '%s' instead.</string>
+</localized_string>
+<localized_string id="843" label="TC_STRING_MISC">
+ <string class="en">Miscellaneous</string>
+</localized_string>
+<localized_string id="844" label="TC_STRING_XML">
+ <string class="en">XML</string>
+</localized_string>
+<localized_string id="840" label="TC_STRING_MUST_SPECIFY">
+ <string class="en">A Tidy option name must be specified.</string>
+</localized_string>
+<localized_string id="845" label="TC_STRING_UNKNOWN_OPTION">
+ <string class="en">HTML Tidy: unknown option: %c</string>
+</localized_string>
+<localized_string id="846" label="TC_STRING_UNKNOWN_OPTION_B">
+ <string class="en">HTML Tidy: unknown option.</string>
+</localized_string>
+<localized_string id="847" label="TC_STRING_VERS_A">
+ <string class="en">HTML Tidy for %s version %s</string>
+</localized_string>
+<localized_string id="848" label="TC_STRING_VERS_B">
+ <string class="en">HTML Tidy version %s</string>
+</localized_string>
+<localized_string id="849" label="TC_TXT_HELP_1">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="850" label="TC_TXT_HELP_2A">
+ <string class="en">Command Line Arguments for HTML Tidy for %s:</string>
+</localized_string>
+<localized_string id="851" label="TC_TXT_HELP_2B">
+ <string class="en">Command Line Arguments for HTML Tidy:</string>
+</localized_string>
+<localized_string id="852" label="TC_TXT_HELP_3">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="853" label="TC_TXT_HELP_3A">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="854" label="TC_TXT_HELP_CONFIG">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="855" label="TC_TXT_HELP_CONFIG_NAME">
+ <string class="en">Name</string>
+</localized_string>
+<localized_string id="856" label="TC_TXT_HELP_CONFIG_TYPE">
+ <string class="en">Type</string>
+</localized_string>
+<localized_string id="857" label="TC_TXT_HELP_CONFIG_ALLW">
+ <string class="en">Allowable values</string>
+</localized_string>
+<localized_string id="858" label="TC_TXT_HELP_ENV_1">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="859" label="TC_TXT_HELP_ENV_1A">
+ <string class="en"> - The system runtime configuration file: 
+</string>
+</localized_string>
+<localized_string id="860" label="TC_TXT_HELP_ENV_1B">
+ <string class="en">(not currently set)</string>
+</localized_string>
+<localized_string id="861" label="TC_TXT_HELP_ENV_1C">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="862" label="TC_TXT_HELP_LANG_1">
+ <string class="en">
+</string>
+</localized_string>
+<localized_string id="863" label="TC_TXT_HELP_LANG_2">
+ <string class="en">
+Please report instances of incorrect strings to the Tidy team. 
+</string>
+</localized_string>
+<localized_string id="864" label="TC_TXT_HELP_LANG_3">
+ <string class="en">
+</string>
+</localized_string>
+</localized_strings>
+<error_strings version="5.6.0">
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+ <error_string>
+ </error_string>
+</error_strings>
+<options_strings version="5.6.0">
+ <option>
+  <string class="en"><![CDATA[This option specifies what level of accessibility checking, if any, that Tidy should perform. <br/>Level <var>0 (Tidy Classic)</var> is equivalent to Tidy Classic's accessibility checking. <br/>For more information on Tidy's accessibility checking, visit <a href="http://www.html-tidy.org/accessibility/"> Tidy's Accessibility Page</a>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the default <code>alt=</code> text Tidy uses for <code>&lt;img&gt;</code> attributes when the <code>alt=</code> attribute is missing. <br/>Use with care, as it is your responsibility to make your documents accessible to people who cannot see the images. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option controls the deletion or addition of the <code>name</code> attribute in elements where it can serve as anchor. <br/>If set to <var>yes</var> a <code>name</code> attribute, if not already existing, is added along an existing <code>id</code> attribute if the DTD allows it. <br/>If set to <var>no</var> any existing name attribute is removed if an <code>id</code> attribute exists or has been added. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[Can be used to modify behavior of the <code>clean</code> option when set to <var>yes</var>. <br/>If set to <var>yes</var> when using <code>clean</code>, <code>&amp;emdash;</code>, <code>&amp;rdquo;</code>, and other named character entities are downgraded to their closest ASCII equivalents. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies new block-level tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Note you can't change the content model for elements such as <code>&lt;table&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> and <code>&lt;dl&gt;</code>. <br/>This option is ignored in XML mode. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should print only the contents of the body tag as an HTML fragment. <br/>If set to <var>auto</var>, this is performed only if the body tag has been inferred. <br/>Useful for incorporating existing whole pages as a portion of another page. <br/>This option has no effect if XML output is requested. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should output a line break before each <code>&lt;br&gt;</code> element. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the character encoding Tidy uses for input, and when set, automatically chooses an appropriate character encoding to be used for output. The output encoding Tidy chooses may be different from the input encoding. <br/>For <var>ascii</var>, <var>latin0</var>, <var>ibm858</var>, <var>mac</var>, and <var>win1252</var> input encodings, the <code>output-encoding</code> option will automatically be set to <var>ascii</var>. You can set <code>output-encoding</code> manually to override this. <br/>For other input encodings, the <code>output-encoding</code> option will automatically be set to the the same value. <br/>Regardless of the preset value, you can set <code>output-encoding</code> manually to override this. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should coerce a start tag into an end tag in cases where it looks like an end tag was probably intended; for example, given <br/><code>&lt;span&gt;foo &lt;b&gt;bar&lt;b&gt; baz&lt;/span&gt;</code> <br/>Tidy will output <br/><code>&lt;span&gt;foo &lt;b&gt;bar&lt;/b&gt; baz&lt;/span&gt;</code> ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the prefix that Tidy uses for styles rules. <br/>By default, <var>c</var> will be used. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should decorate inferred <code>&lt;ul&gt;</code> elements with some CSS markup to avoid indentation to the right. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the DOCTYPE declaration generated by Tidy. <br/>If set to <var>omit</var> the output won't contain a DOCTYPE declaration. Note this this also implies <code>numeric-entities</code> is set to <var>yes</var>.<br/>If set to <var>html5</var> the DOCTYPE is set to <code>&lt;!DOCTYPE html&gt;</code>.<br/>If set to <var>auto</var> (the default) Tidy will use an educated guess based upon the contents of the document. Note that selecting this option will <em>not</em> change the current document's DOCTYPE on output. <br/>If set to <var>strict</var>, Tidy will set the DOCTYPE to the HTML4 or XHTML1 strict DTD.<br/>If set to <var>loose</var>, the DOCTYPE is set to the HTML4 or XHTML1 loose (transitional) DTD.<br/>Alternatively, you can supply a string for the formal public identifier (FPI).<br/>For example: <br/><code>doctype: "-//ACME//DTD HTML 3.14159//EN"</code><br/>If you specify the FPI for an XHTML document, Tidy will set the system identifier to an empty string. For an HTML document, Tidy adds a system identifier only if one was already present in order to preserve the processing mode of some browsers. Tidy leaves the DOCTYPE for generic XML documents unchanged. <br/>This option does not offer a validation of document conformance. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should discard empty elements. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should discard empty paragraphs. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should strip out proprietary attributes, such as Microsoft data binding attributes. Additionally attributes that aren't permitted in the output version of HTML will be dropped if used with <code>strict-tags-attributes</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should keep the first or last attribute, if an attribute is repeated, e.g. has two <code>align</code> attributes. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should change the format for reporting errors and warnings to a format that is more easily parsed by GNU Emacs. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies new empty inline tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Remember to also declare empty tags as either inline or blocklevel. <br/>This option is ignored in XML mode. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should insert a <code>&lt;p&gt;</code> element to enclose any text it finds in any element that allows mixed content for HTML transitional but not HTML strict. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should enclose any text it finds in the body element within a <code>&lt;p&gt;</code> element.<br/>This is useful when you want to take existing HTML and use it with a style sheet. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the error file Tidy uses for errors and warnings. Normally errors and warnings are output to <code>stderr</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should convert <code>&lt;![CDATA[]]&gt;</code> sections to normal text. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option causes items that look like closing tags, like <code>&lt;/g</code> to be escaped to <code>&lt;\/g</code>. Set this option to <var>no</var> if you do not want this.]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should replace backslash characters <code>\</code> in URLs with forward slashes <code>/</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should replace unexpected hyphens with <code>=</code> characters when it comes across adjacent hyphens. <br/>The default is <var>auto</var> will which will act as <var>no</var> for HTML5 document types, and <var>yes</var> for all other document types. <br/>HTML has abandonded SGML comment syntax, and allows adjacent hypens for all versions of HTML, although XML and XHTML do not. If you plan to support older browsers that require SGML comment syntax, then consider setting this value to <var>yes</var>.]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should check attribute values that carry URIs for illegal characters and if such are found, escape them as HTML4 recommends. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should produce output even if errors are encountered. <br/>Use this option with care; if Tidy reports an error, this means Tidy was not able to (or is not sure how to) fix the error, so the resulting output may not reflect your intention. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should enable specific behavior for cleaning up HTML exported from Google Docs. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should not print out comments. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should generate pretty printed output, writing it as HTML. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the character encoding Tidy uses for input. Tidy makes certain assumptions about some of the input encodings. <br/>For <var>ascii</var>, Tidy will accept Latin-1 (ISO-8859-1) character values and convert them to entities as necessary. <br/>For <var>raw</var>, Tidy will make no assumptions about the character values and will pass them unchanged to output. <br/>For <var>mac</var> and <var>win1252</var>, vendor specific characters values will be accepted and converted to entities as necessary. <br/>Asian encodings such as <var>iso2022</var> will be handled appropriately assuming the corresponding <code>output-encoding</code> is also specified. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should begin each attribute on a new line. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should indent <code>&lt;![CDATA[]]&gt;</code> sections. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should indent block-level tags. <br/>If set to <var>auto</var> Tidy will decide whether or not to indent the content of tags such as <code>&lt;title&gt;</code>, <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>, <code>&lt;li&gt;</code>, <code>&lt;td&gt;</code>, or <code>&lt;p&gt;</code> based on the content including a block-level element. <br/>Setting <code>indent</code> to <var>yes</var> can expose layout bugs in some browsers. <br/>Use the option <code>indent-spaces</code> to control the number of spaces or tabs output per level of indent, and <code>indent-with-tabs</code> to specify whether spaces or tabs are used. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the number of spaces or tabs that Tidy uses to indent content when <code>indent</code> is enabled. <br/>Note that the default value for this option is dependent upon the value of <code>indent-with-tabs</code> (see also). ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies new non-empty inline tags. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>This option is ignored in XML mode. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should combine class names to generate a single, new class name if multiple class assignments are detected on an element. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should combine styles to generate a single, new style if multiple style values are detected on an element. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should keep the original modification time of files that Tidy modifies in place. <br/>Setting the option to <var>yes</var> allows you to tidy files without changing the file modification date, which may be useful with certain tools that use the modification date for things such as automatic server deployment.<br/>Note this feature is not supported on some platforms. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[With the default <var>no</var> Tidy will replace all source tabs with spaces, controlled by the option <code>tab-size</code>, and the current line offset. Of course, except in the special blocks/elements enumerated below, this will later be reduced to just one space. <br/>If set <var>yes</var> this option specifies Tidy should keep certain tabs found in the source, but only in preformatted blocks like <code>&lt;pre&gt;</code>, and other CDATA elements like <code>&lt;script&gt;</code>, <code>&lt;style&gt;</code>, and other pseudo elements like <code>&lt;?php ... ?&gt;</code>. As always, all other tabs, or sequences of tabs, in the source will continue to be replaced with a space. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies how Tidy deals with whitespace characters within attribute values. <br/>If the value is <var>no</var> Tidy normalizes attribute values by replacing any newline or tab with a single space, and further by replacing any contiguous whitespace with a single space. <br/>To force Tidy to preserve the original, literal values of all attributes and ensure that whitespace within attribute values is passed through unchanged, set this option to <var>yes</var>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should replace any occurrence of <code>&lt;i&gt;</code> with <code>&lt;em&gt;</code> and any occurrence of <code>&lt;b&gt;</code> with <code>&lt;strong&gt;</code>. Any attributes are preserved unchanged. <br/>This option can be set independently of the <code>clean</code> option. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should convert the value of an attribute that takes a list of predefined values to lower case. <br/>This is required for XHTML documents. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should strip Microsoft specific HTML from Word 2000 documents, and output spaces rather than non-breaking spaces where they exist in the input. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should perform cleaning of some legacy presentational tags (currently <code>&lt;i&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;center&gt;</code> when enclosed within appropriate inline tags, and <code>&lt;font&gt;</code>). If set to <var>yes</var>, then the legacy tags will be replaced with CSS <code>&lt;style&gt;</code> tags and structural markup as appropriate. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should add a <code>meta</code> element to the document head to indicate that the document has been tidied. <br/>Tidy won't add a meta element if one is already present. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option can be used to modify the behavior of <code>clean</code> when set to <var>yes</var>.<br/>This option specifies if Tidy should merge nested <code>&lt;div&gt;</code> such as <code>&lt;div&gt;&lt;div&gt;...&lt;/div&gt;&lt;/div&gt;</code>. <br/>If set to <var>auto</var> the attributes of the inner <code>&lt;div&gt;</code> are moved to the outer one. Nested <code>&lt;div&gt;</code> with <code>id</code> attributes are <em>not</em> merged. <br/>If set to <var>yes</var> the attributes of the inner <code>&lt;div&gt;</code> are discarded with the exception of <code>class</code> and <code>style</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should merge nested <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> elements; for example, for the case <br/><code>&lt;b class="rtop-2"&gt;foo &lt;b class="r2-2"&gt;bar&lt;/b&gt; baz&lt;/b&gt;</code>, <br/>Tidy will output <code>&lt;b class="rtop-2"&gt;foo bar baz&lt;/b&gt;</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option can be used to modify the behavior of <code>clean</code> when set to <var>yes</var>.<br/>This option specifies if Tidy should merge nested <code>&lt;span&gt;</code> such as <code>&lt;span&gt;&lt;span&gt;...&lt;/span&gt;&lt;/span&gt;</code>. <br/>The algorithm is identical to the one used by <code>merge-divs</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option, when enabled, adds a <code>&lt;meta&gt;</code> element and sets the <code>charset</code> attribute to the encoding of the document. Set this option to <var>yes</var> to enable it. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[Use this option to prevent Tidy from displaying certain types of report output, for example, for conditions that you wish to ignore. <br/>This option takes a list of one or more keys indicating the message type to mute. You can discover these message keys by using the <code>mute-id</code> configuration option and examining Tidy's output. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option indicates whether or not Tidy should display message ID's with each of its error reports. This could be useful if you wanted to use the <code>mute</code> configuration option in order to filter out certain report messages. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should allow numeric character references. ]]></string>
+ </option>
+ <option>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should output entities other than the built-in HTML entities (<code>&amp;amp;</code>, <code>&amp;lt;</code>, <code>&amp;gt;</code>, and <code>&amp;quot;</code>) in the numeric rather than the named entity form. <br/>Only entities compatible with the DOCTYPE declaration generated are used. <br/>Entities that can be represented in the output encoding are translated correspondingly. ]]></string>
+ </option>
+ <option>
+  <name>omit-optional-tags</name>
+  <string class="en"><![CDATA[This option specifies if Tidy should omit optional start tags and end tags when generating output. <br/>Setting this option causes all tags for the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> elements to be omitted from output, as well as such end tags as <code>&lt;/p&gt;</code>, <code>&lt;/li&gt;</code>, <code>&lt;/dt&gt;</code>, <code>&lt;/dd&gt;</code>, <code>&lt;/option&gt;</code>, <code>&lt;/tr&gt;</code>, <code>&lt;/td&gt;</code>, and <code>&lt;/th&gt;</code>. <br/>This option is ignored for XML output. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the character encoding Tidy uses for output. Some of the output encodings affect whether or not some characters are translated to entities, although in all cases, some entities will be written according to other Tidy configuration options. <br/>For <var>ascii</var>, <var>mac</var>, and <var>win1252</var> output encodings, entities will be used for all characters with values over 127. <br/>For <var>raw</var> output, Tidy will write values above 127 without translating them to entities. <br/>Output using <var>latin1</var> will cause Tidy to write character values higher than 255 as entities. <br/>The UTF family such as <var>utf8</var> will write output in the respective UTF encoding. <br/>Asian output encodings such as <var>iso2022</var> will write output in the specified encoding, assuming a corresponding <code>input-encoding</code> was specified. <br/>Tidy is not an encoding converter. Although the Latin and UTF encodings can be mixed freely, it is not possible to convert Asian encodings to Latin encodings with Tidy. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the output file Tidy uses for markup. Normally markup is written to <code>stdout</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should write a Unicode Byte Order Mark character (BOM; also known as Zero Width No-Break Space; has value of U+FEFF) to the beginning of the output, and only applies to UTF-8 and UTF-16 output encodings. <br/>If set to <var>auto</var> this option causes Tidy to write a BOM to the output only if a BOM was present at the beginning of the input. <br/>A BOM is always written for XML/XHTML output using UTF-16 output encodings. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should indent with tabs instead of spaces, assuming <code>indent</code> is <var>yes</var>. <br/>Set it to <var>yes</var> to indent using tabs instead of the default spaces. <br/>Use the option <code>indent-spaces</code> to control the number of tabs output per level of indent. Note that when <code>indent-with-tabs</code> is enabled the default value of <code>indent-spaces</code> is reset to <var>1</var>. <br/>Note <code>tab-size</code> controls converting input tabs to spaces. Set it to zero to retain input tabs. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should preserve well-formed entities as found in the input. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies new tags that are to be processed in exactly the same way as HTML's <code>&lt;pre&gt;</code> element. This option takes a space or comma separated list of tag names. <br/>Unless you declare new tags, Tidy will refuse to generate a tidied file if the input includes previously unknown tags. <br/>Note you cannot as yet add new CDATA elements. <br/>This option is ignored in XML mode. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option allows prioritizing the writing of attributes in tidied documents, allowing them to written before the other attributes of an element. For example, you might specify that <strong>id</strong> and <strong>name</strong> are written before every other attribute. <br/>This option takes a space or comma separated list of attribute names. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should line wrap after some Unicode or Chinese punctuation characters. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[When enabled, this option limits Tidy's non-document output to report only document warnings and errors. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should output unadorned <code>&amp;</code> characters as <code>&amp;amp;</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should output <code>&quot;</code> characters as <code>&amp;quot;</code> as is preferred by some editing environments. <br/>The apostrophe character <code>'</code> is written out as <code>&amp;#39;</code> since many web browsers don't yet support <code>&amp;apos;</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should output non-breaking space characters as entities, rather than as the Unicode character value 160 (decimal). ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should replace numeric values in color attributes with HTML/XHTML color names where defined, e.g. replace <code>#ffffff</code> with <code>white</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the number Tidy uses to determine if further errors should be shown. If set to <var>0</var>, then no errors are shown. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should display info-level messages. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should generate a pretty printed version of the markup. Note that Tidy won't generate a pretty printed version if it finds significant errors (see <code>force-output</code>). ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option enables a message whenever Tidy changes the <code>content</code> attribute of a meta charset declaration to match the encoding of the document. Set this option to <var>yes</var> to enable it. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should suppress warnings. This can be useful when a few errors are hidden in a flurry of warnings. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies that Tidy should skip nested tags when parsing script and style data. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies that Tidy should sort attributes within an element using the specified sort algorithm. If set to <var>alpha</var>, the algorithm is an ascending alphabetic sort. <br/>When used while sorting with <code>priority-attributes</code>, any attribute sorting will take place after the priority attributes have been output. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This options ensures that tags and attributes are applicable for the version of HTML that Tidy outputs. When set to <var>yes</var> and the output document type is a strict doctype, then Tidy will report errors. If the output document type is a loose or transitional doctype, then Tidy will report warnings. <br/>Additionally if <code>drop-proprietary-attributes</code> is enabled, then not applicable attributes will be dropped, too. <br/>When set to <var>no</var>, these checks are not performed. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should move all style tags to the head of the document. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the number of columns that Tidy uses between successive tab stops. It is used to map tabs to spaces when reading the input. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should output attribute names in upper case. <br/>When set to <var>no</var>, attribute names will be written in lower case. Specifying <var>yes</var> will output attribute names in upper case, and <var>preserve</var> can used to leave attribute names untouched. <br/>When using XML input, the original case is always preserved. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should output tag names in upper case. <br/>The default is <var>no</var> which results in lower case tag names, except for XML input where the original case is preserved. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option enables the use of tags for autonomous custom elements, e.g. <code>&lt;flag-icon&gt;</code> with Tidy. Custom tags are disabled if this value is <var>no</var>. Other settings - <var>blocklevel</var>, <var>empty</var>, <var>inline</var>, and <var>pre</var> will treat <em>all</em> detected custom tags accordingly. <br/>The use of <code>new-blocklevel-tags</code>, <code>new-empty-tags</code>, <code>new-inline-tags</code>, or <code>new-pre-tags</code> will override the treatment of custom tags by this configuration option. This may be useful if you have different types of custom tags.<br/>When enabled these tags are determined during the processing of your document using opening tags; matching closing tags will be recognized accordingly, and unknown closing tags will be discarded. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should add some extra empty lines for readability. <br/>The default is <var>no</var>. <br/>If set to <var>auto</var> Tidy will eliminate nearly all newline characters.]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should warn on proprietary attributes.]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should go to great pains to strip out all the surplus stuff Microsoft Word 2000 inserts when you save Word documents as "Web pages". It doesn't handle embedded images or VML. <br/>You should consider saving using Word's <strong>Save As...</strong>, and choosing <strong>Web Page, Filtered</strong>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should line wrap text contained within ASP pseudo elements, which look like: <code>&lt;% ... %&gt;</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should line-wrap attribute values, meaning that if the value of an attribute causes a line to exceed the width specified by <code>wrap</code>, Tidy will add one or more line breaks to the value, causing it to be wrapped into multiple lines. <br/>Note that this option can be set independently of <code>wrap-script-literals</code>. By default Tidy replaces any newline or tab with a single space and replaces any sequences of whitespace with a single space. <br/>To force Tidy to preserve the original, literal values of all attributes, and ensure that whitespace characters within attribute values are passed through unchanged, set <code>literal-attributes</code> to <var>yes</var>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should line wrap text contained within JSTE pseudo elements, which look like: <code>&lt;# ... #&gt;</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies the right margin Tidy uses for line wrapping. <br/>Tidy tries to wrap lines so that they do not exceed this length. <br/>Set <code>wrap</code> to <var>0</var> (zero) if you want to disable line wrapping. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should line wrap text contained within PHP pseudo elements, which look like: <code>&lt;?php ... ?&gt;</code>. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should line wrap string literals that appear in script attributes. <br/>Tidy wraps long script string literals by inserting a backslash character before the line break. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should line wrap text contained within <code>&lt;![ ... ]&gt;</code> section tags. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should write back the tidied markup to the same file it read from. <br/>You are advised to keep copies of important files before tidying them, as on rare occasions the result may not be what you expect. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should generate pretty printed output, writing it as extensible HTML. <br/>This option causes Tidy to set the DOCTYPE and default namespace as appropriate to XHTML, and will use the corrected value in output regardless of other sources. <br/>For XHTML, entities can be written as named or numeric entities according to the setting of <code>numeric-entities</code>. <br/>The original case of tags and attributes will be preserved, regardless of other options. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should add the XML declaration when outputting XML or XHTML. <br/>Note that if the input already includes an <code>&lt;?xml ... ?&gt;</code> declaration then this option will be ignored. <br/>If the encoding for the output is different from <var>ascii</var>, one of the <var>utf*</var> encodings, or <var>raw</var>, then the declaration is always added as required by the XML standard. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should pretty print output, writing it as well-formed XML. <br/>Any entities not defined in XML 1.0 will be written as numeric entities to allow them to be parsed by an XML parser. <br/>The original case of tags and attributes will be preserved, regardless of other options. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should change the parsing of processing instructions to require <code>?&gt;</code> as the terminator rather than <code>&gt;</code>. <br/>This option is automatically set if the input is in XML. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should add <code>xml:space="preserve"</code> to elements such as <code>&lt;pre&gt;</code>, <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> when generating XML. <br/>This is needed if the whitespace in such elements is to be parsed appropriately without having access to the DTD. ]]></string>
+ </option>
+ <option>
+  <string class="en"><![CDATA[This option specifies if Tidy should use the XML parser rather than the error correcting HTML parser. ]]></string>
+ </option>
+</options_strings>
+Fri Mar 17 23:52:33 2023 - INFO  - Finish test!
+Fri Mar 17 23:52:34 2023 - INFO  - succeed to execute the case.
+Fri Mar 17 23:52:34 2023 - INFO  - start environment cleanup.
+Fri Mar 17 23:52:51 2023 - INFO  - Finish environment cleanup!
